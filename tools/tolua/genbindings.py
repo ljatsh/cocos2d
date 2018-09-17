@@ -158,6 +158,7 @@ def main():
                     'cocos2dx_experimental_webview.ini' : ('cocos2dx_experimental_webview', 'lua_cocos2dx_experimental_webview_auto'), \
                     'cocos2dx_physics3d.ini' : ('cocos2dx_physics3d', 'lua_cocos2dx_physics3d_auto'), \
                     'cocos2dx_navmesh.ini' : ('cocos2dx_navmesh', 'lua_cocos2dx_navmesh_auto'), \
+                    'cocos2dx_fairygui.ini' : ('cocos2dx_fairygui', 'lua_cocos2dx_fairygui_auto'),
                     }
         target = 'lua'
         generator_py = '%s/generator.py' % cxx_generator_root
