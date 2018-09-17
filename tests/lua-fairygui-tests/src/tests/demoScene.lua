@@ -1,7 +1,5 @@
-local demoScene = class('demoScene',
-                        function()
-                          return cc.Scene:create()
-                        end)
+
+local demoScene = class('demoScene', cc.Scene)
 
 function demoScene:ctor()
   self._groot = fgui.GRoot:create(self)
@@ -12,7 +10,7 @@ function demoScene:ctor()
   -- add a closebutton to scene
   local closeButton = fgui.UIPackage:createObject("MainMenu", "CloseButton")
   closeButton:setPosition(self._groot:getWidth() - closeButton:getWidth() - 10, self._groot:getHeight() - closeButton:getHeight() - 10)
-  --closeButton:addRelation(self._groot, RelationType::Right_Right)
+  --closeButton:addRelation(self._groot, RelationType::Right_Right) -- TODO
   --closeButton->addRelation(_groot, RelationType::Bottom_Bottom)
   -- closeButton->setSortingOrder(100000);
   closeButton:addClickListener(handler(self, self.onClose))
@@ -31,6 +29,8 @@ function demoScene:onClose()
   if iskindof(self, 'mainMenu') then
     cc.Director:getInstance():endToLua()
   else
+    local mainMenu = require('mainMenu')
+    cc.Director:getInstance():replaceScene(mainMenu.new())
   end
 end
 

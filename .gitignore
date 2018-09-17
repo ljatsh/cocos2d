@@ -6,3 +6,4 @@ tests/lua-tests/src
 project.xcworkspace
 xcuserdata/
 .objs
+tools/tolua/userconf.ini

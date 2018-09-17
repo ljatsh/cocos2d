@@ -28,5 +28,8 @@
 #include "DragDropManager.h"
 #include "tween/GTween.h"
 #include "FairyGUIMacros.h"
+// for auto bindings
+#include "Controller.h"
+#include "UIObjectFactory.h"
 
 #endif
