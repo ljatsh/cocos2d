@@ -971,6 +971,7 @@ int lua_cocos2dx_fairygui_EventContext_getType(lua_State* tolua_S)
         int ret = cobj->getType();
         tolua_pushnumber(tolua_S,(lua_Number)ret);
         return 1;
+    }
     luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.EventContext:getType",argc, 0);
     return 0;
 
