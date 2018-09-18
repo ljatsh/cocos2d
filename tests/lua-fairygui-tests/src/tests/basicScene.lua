@@ -32,6 +32,13 @@ function basicScene:init()
   self._demoObjects = {}
 end
 
+function basicScene:dispose()
+  for _, v in pairs(self._demoObjects) do
+    v:release()
+  end
+  self._demoObjects = {}
+end
+
 function basicScene:onClickBack(context)
   self._controller:setSelectedIndex(0)
   self._backBtn:setVisible(false)
@@ -44,6 +51,7 @@ function basicScene:runDemo(context)
   if object == nil then
     object = fgui.UIPackage:createObject('Basics', 'Demo_' .. type)
     self._demoObjects[type] = object
+    object:retain()
   end
 
   self._demoContainer:removeChildren()

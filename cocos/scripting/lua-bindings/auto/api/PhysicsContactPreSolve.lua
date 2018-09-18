@@ -1,49 +1,49 @@
 
 --------------------------------
 -- @module PhysicsContactPreSolve
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 --  Get friction between two bodies.
--- @function [parent=#PhysicsContactPreSolve] getFriction 
+-- @function getFriction 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Get restitution between two bodies.
--- @function [parent=#PhysicsContactPreSolve] getRestitution 
+-- @function getRestitution 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Set the friction.
--- @function [parent=#PhysicsContactPreSolve] setFriction 
+-- @function setFriction 
 -- @param self
 -- @param #float friction
 -- @return PhysicsContactPreSolve#PhysicsContactPreSolve self (return value: cc.PhysicsContactPreSolve)
         
 --------------------------------
 --  Ignore the rest of the contact presolve and postsolve callbacks. 
--- @function [parent=#PhysicsContactPreSolve] ignore 
+-- @function ignore 
 -- @param self
 -- @return PhysicsContactPreSolve#PhysicsContactPreSolve self (return value: cc.PhysicsContactPreSolve)
         
 --------------------------------
 --  Get surface velocity between two bodies.
--- @function [parent=#PhysicsContactPreSolve] getSurfaceVelocity 
+-- @function getSurfaceVelocity 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 --  Set the surface velocity.
--- @function [parent=#PhysicsContactPreSolve] setSurfaceVelocity 
+-- @function setSurfaceVelocity 
 -- @param self
 -- @param #vec2_table velocity
 -- @return PhysicsContactPreSolve#PhysicsContactPreSolve self (return value: cc.PhysicsContactPreSolve)
         
 --------------------------------
 --  Set the restitution.
--- @function [parent=#PhysicsContactPreSolve] setRestitution 
+-- @function setRestitution 
 -- @param self
 -- @param #float restitution
 -- @return PhysicsContactPreSolve#PhysicsContactPreSolve self (return value: cc.PhysicsContactPreSolve)

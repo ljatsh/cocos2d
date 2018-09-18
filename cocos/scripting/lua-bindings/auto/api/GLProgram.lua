@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module GLProgram
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 --  returns the fragmentShader error log 
--- @function [parent=#GLProgram] getFragmentShaderLog 
+-- @function getFragmentShaderLog 
 -- @param self
 -- @return string#string ret (return value: string)
         
@@ -14,7 +14,7 @@
 -- @overload self, char, char, string         
 -- @overload self, char, char         
 -- @overload self, char, char, string, string         
--- @function [parent=#GLProgram] initWithByteArrays
+-- @function initWithByteArrays
 -- @param self
 -- @param #char vShaderByteArray
 -- @param #char fShaderByteArray
@@ -26,7 +26,7 @@
 -- @overload self, string, string, string         
 -- @overload self, string, string         
 -- @overload self, string, string, string, string         
--- @function [parent=#GLProgram] initWithFilenames
+-- @function initWithFilenames
 -- @param self
 -- @param #string vShaderFilename
 -- @param #string fShaderFilename
@@ -36,20 +36,20 @@
 
 --------------------------------
 --  it will call glUseProgram() 
--- @function [parent=#GLProgram] use 
+-- @function use 
 -- @param self
 -- @return GLProgram#GLProgram self (return value: cc.GLProgram)
         
 --------------------------------
 --  returns the vertexShader error log 
--- @function [parent=#GLProgram] getVertexShaderLog 
+-- @function getVertexShaderLog 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- @overload self         
 -- @overload self, mat4_table         
--- @function [parent=#GLProgram] setUniformsForBuiltins
+-- @function setUniformsForBuiltins
 -- @param self
 -- @param #mat4_table modelView
 -- @return GLProgram#GLProgram self (return value: cc.GLProgram)
@@ -61,7 +61,7 @@
 -- - kUniformMVPMatrix<br>
 -- - GLProgram::UNIFORM_SAMPLER<br>
 -- And it will bind "GLProgram::UNIFORM_SAMPLER" to 0
--- @function [parent=#GLProgram] updateUniforms 
+-- @function updateUniforms 
 -- @param self
 -- @return GLProgram#GLProgram self (return value: cc.GLProgram)
         
@@ -69,7 +69,7 @@
 --  calls glUniform1i only if the values are different than the previous call for this same shader program.<br>
 -- js setUniformLocationI32<br>
 -- lua setUniformLocationI32
--- @function [parent=#GLProgram] setUniformLocationWith1i 
+-- @function setUniformLocationWith1i 
 -- @param self
 -- @param #int location
 -- @param #int i1
@@ -78,13 +78,13 @@
 --------------------------------
 --  Reload all shaders, this function is designed for android<br>
 -- when opengl context lost, so don't call it.
--- @function [parent=#GLProgram] reset 
+-- @function reset 
 -- @param self
 -- @return GLProgram#GLProgram self (return value: cc.GLProgram)
         
 --------------------------------
 --   It will add a new attribute to the shader by calling glBindAttribLocation. 
--- @function [parent=#GLProgram] bindAttribLocation 
+-- @function bindAttribLocation 
 -- @param self
 -- @param #string attributeName
 -- @param #unsigned int index
@@ -92,14 +92,14 @@
         
 --------------------------------
 --  Calls glGetAttribLocation. 
--- @function [parent=#GLProgram] getAttribLocation 
+-- @function getAttribLocation 
 -- @param self
 -- @param #string attributeName
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  links the glProgram 
--- @function [parent=#GLProgram] link 
+-- @function link 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -107,7 +107,7 @@
 -- @overload self, char, char, string         
 -- @overload self, char, char         
 -- @overload self, char, char, string, string         
--- @function [parent=#GLProgram] createWithByteArrays
+-- @function createWithByteArrays
 -- @param self
 -- @param #char vShaderByteArray
 -- @param #char fShaderByteArray
@@ -119,7 +119,7 @@
 -- @overload self, string, string, string         
 -- @overload self, string, string         
 -- @overload self, string, string, string, string         
--- @function [parent=#GLProgram] createWithFilenames
+-- @function createWithFilenames
 -- @param self
 -- @param #string vShaderFilename
 -- @param #string fShaderFilename
@@ -129,7 +129,7 @@
 
 --------------------------------
 -- Constructor.
--- @function [parent=#GLProgram] GLProgram 
+-- @function GLProgram 
 -- @param self
 -- @return GLProgram#GLProgram self (return value: cc.GLProgram)
         

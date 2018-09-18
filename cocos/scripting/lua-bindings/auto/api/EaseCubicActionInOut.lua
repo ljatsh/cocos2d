@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module EaseCubicActionInOut
--- @extend ActionEase
--- @parent_module cc
+-- @see ActionEase
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EaseCubicActionInOut] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return EaseCubicActionInOut#EaseCubicActionInOut ret (return value: cc.EaseCubicActionInOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseCubicActionInOut] clone 
+-- @function clone 
 -- @param self
 -- @return EaseCubicActionInOut#EaseCubicActionInOut ret (return value: cc.EaseCubicActionInOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseCubicActionInOut] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return EaseCubicActionInOut#EaseCubicActionInOut self (return value: cc.EaseCubicActionInOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseCubicActionInOut] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionEase#ActionEase ret (return value: cc.ActionEase)
         
 --------------------------------
 -- 
--- @function [parent=#EaseCubicActionInOut] EaseCubicActionInOut 
+-- @function EaseCubicActionInOut 
 -- @param self
 -- @return EaseCubicActionInOut#EaseCubicActionInOut self (return value: cc.EaseCubicActionInOut)
         

@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module BezierBy
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- initializes the action with a duration and a bezier configuration<br>
 -- param t in seconds
--- @function [parent=#BezierBy] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float t
 -- @param #cc._ccBezierConfig c
@@ -15,33 +15,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#BezierBy] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return BezierBy#BezierBy self (return value: cc.BezierBy)
         
 --------------------------------
 -- 
--- @function [parent=#BezierBy] clone 
+-- @function clone 
 -- @param self
 -- @return BezierBy#BezierBy ret (return value: cc.BezierBy)
         
 --------------------------------
 -- 
--- @function [parent=#BezierBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return BezierBy#BezierBy ret (return value: cc.BezierBy)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#BezierBy] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return BezierBy#BezierBy self (return value: cc.BezierBy)
         
 --------------------------------
 -- 
--- @function [parent=#BezierBy] BezierBy 
+-- @function BezierBy 
 -- @param self
 -- @return BezierBy#BezierBy self (return value: cc.BezierBy)
         

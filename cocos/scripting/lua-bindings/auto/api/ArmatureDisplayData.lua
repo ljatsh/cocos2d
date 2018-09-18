@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module ArmatureDisplayData
--- @extend DisplayData
--- @parent_module ccs
+-- @see DisplayData
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ArmatureDisplayData] create 
+-- @function create 
 -- @param self
 -- @return ArmatureDisplayData#ArmatureDisplayData ret (return value: ccs.ArmatureDisplayData)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ArmatureDisplayData] ArmatureDisplayData 
+-- @function ArmatureDisplayData 
 -- @param self
 -- @return ArmatureDisplayData#ArmatureDisplayData self (return value: ccs.ArmatureDisplayData)
         

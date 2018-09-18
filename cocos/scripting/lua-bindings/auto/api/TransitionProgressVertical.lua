@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module TransitionProgressVertical
--- @extend TransitionProgress
--- @parent_module cc
+-- @see TransitionProgress
+-- @see cc
 
 --------------------------------
 --  Creates a transition with duration and incoming scene.<br>
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return An autoreleased TransitionProgressVertical object.
--- @function [parent=#TransitionProgressVertical] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -17,7 +17,7 @@
         
 --------------------------------
 -- js ctor
--- @function [parent=#TransitionProgressVertical] TransitionProgressVertical 
+-- @function TransitionProgressVertical 
 -- @param self
 -- @return TransitionProgressVertical#TransitionProgressVertical self (return value: cc.TransitionProgressVertical)
         

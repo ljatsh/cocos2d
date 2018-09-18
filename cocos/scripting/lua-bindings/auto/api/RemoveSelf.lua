@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module RemoveSelf
--- @extend ActionInstant
--- @parent_module cc
+-- @see ActionInstant
+-- @see cc
 
 --------------------------------
 --  init the action 
--- @function [parent=#RemoveSelf] init 
+-- @function init 
 -- @param self
 -- @param #bool isNeedCleanUp
 -- @return bool#bool ret (return value: bool)
@@ -15,32 +15,32 @@
 --  Create the action.<br>
 -- param isNeedCleanUp Is need to clean up, the default value is true.<br>
 -- return An autoreleased RemoveSelf object.
--- @function [parent=#RemoveSelf] create 
+-- @function create 
 -- @param self
 -- @return RemoveSelf#RemoveSelf ret (return value: cc.RemoveSelf)
         
 --------------------------------
 -- 
--- @function [parent=#RemoveSelf] clone 
+-- @function clone 
 -- @param self
 -- @return RemoveSelf#RemoveSelf ret (return value: cc.RemoveSelf)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#RemoveSelf] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return RemoveSelf#RemoveSelf self (return value: cc.RemoveSelf)
         
 --------------------------------
 -- 
--- @function [parent=#RemoveSelf] reverse 
+-- @function reverse 
 -- @param self
 -- @return RemoveSelf#RemoveSelf ret (return value: cc.RemoveSelf)
         
 --------------------------------
 -- 
--- @function [parent=#RemoveSelf] RemoveSelf 
+-- @function RemoveSelf 
 -- @param self
 -- @return RemoveSelf#RemoveSelf self (return value: cc.RemoveSelf)
         

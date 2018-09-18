@@ -3,7 +3,8 @@
 
 --------------------------------------------------------
 -- the ccexp VideoPlayer
--- @field [parent=#ccexp] VideoPlayer#VideoPlayer VideoPlayer preloaded module
+-- @field VideoPlayer preloaded module
+-- @see VideoPlayer
 
 
 return nil

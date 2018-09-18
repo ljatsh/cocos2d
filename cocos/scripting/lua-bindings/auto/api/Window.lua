@@ -1,179 +1,179 @@
 
 --------------------------------
 -- @module Window
--- @extend GComponent
--- @parent_module fgui
+-- @see GComponent
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#Window] getCloseButton 
+-- @function getCloseButton 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#Window] getContentPane 
+-- @function getContentPane 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#Window] show 
+-- @function show 
 -- @param self
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] isTop 
+-- @function isTop 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Window] hideImmediately 
+-- @function hideImmediately 
 -- @param self
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] toggleStatus 
+-- @function toggleStatus 
 -- @param self
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] hide 
+-- @function hide 
 -- @param self
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] getFrame 
+-- @function getFrame 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#Window] isShowing 
+-- @function isShowing 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- @overload self, int         
 -- @overload self         
--- @function [parent=#Window] closeModalWait
+-- @function closeModalWait
 -- @param self
 -- @param #int requestingCmd
 -- @return bool#bool ret (return value: bool)
 
 --------------------------------
 -- 
--- @function [parent=#Window] initWindow 
+-- @function initWindow 
 -- @param self
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] setContentArea 
--- @param self
--- @param #fgui.GObject value
--- @return Window#Window self (return value: fgui.Window)
-        
---------------------------------
--- 
--- @function [parent=#Window] setDragArea 
+-- @function setContentArea 
 -- @param self
 -- @param #fgui.GObject value
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] setContentPane 
+-- @function setDragArea 
+-- @param self
+-- @param #fgui.GObject value
+-- @return Window#Window self (return value: fgui.Window)
+        
+--------------------------------
+-- 
+-- @function setContentPane 
 -- @param self
 -- @param #fgui.GComponent value
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] isModal 
+-- @function isModal 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Window] isBringToFrontOnClick 
+-- @function isBringToFrontOnClick 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Window] getContentArea 
+-- @function getContentArea 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#Window] setBringToFrontOnClick 
+-- @function setBringToFrontOnClick 
 -- @param self
 -- @param #bool value
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] setModal 
+-- @function setModal 
 -- @param self
 -- @param #bool value
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] getModalWaitingPane 
+-- @function getModalWaitingPane 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#Window] getDragArea 
+-- @function getDragArea 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#Window] bringToFront 
+-- @function bringToFront 
 -- @param self
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- @overload self, int         
 -- @overload self         
--- @function [parent=#Window] showModalWait
+-- @function showModalWait
 -- @param self
 -- @param #int requestingCmd
 -- @return Window#Window self (return value: fgui.Window)
 
 --------------------------------
 -- 
--- @function [parent=#Window] setCloseButton 
+-- @function setCloseButton 
 -- @param self
 -- @param #fgui.GObject value
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] addUISource 
+-- @function addUISource 
 -- @param self
 -- @param #fgui.IUISource uiSource
 -- @return Window#Window self (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] create 
+-- @function create 
 -- @param self
 -- @return Window#Window ret (return value: fgui.Window)
         
 --------------------------------
 -- 
--- @function [parent=#Window] Window 
+-- @function Window 
 -- @param self
 -- @return Window#Window self (return value: fgui.Window)
         

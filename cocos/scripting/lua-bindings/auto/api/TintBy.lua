@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module TintBy
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 --  initializes the action with duration and color 
--- @function [parent=#TintBy] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #short deltaRed
@@ -21,7 +21,7 @@
 -- param deltaGreen Delta green color.<br>
 -- param deltaBlue Delta blue color.<br>
 -- return An autoreleased TintBy object.
--- @function [parent=#TintBy] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #short deltaRed
@@ -31,33 +31,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#TintBy] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return TintBy#TintBy self (return value: cc.TintBy)
         
 --------------------------------
 -- 
--- @function [parent=#TintBy] clone 
+-- @function clone 
 -- @param self
 -- @return TintBy#TintBy ret (return value: cc.TintBy)
         
 --------------------------------
 -- 
--- @function [parent=#TintBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return TintBy#TintBy ret (return value: cc.TintBy)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#TintBy] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return TintBy#TintBy self (return value: cc.TintBy)
         
 --------------------------------
 -- 
--- @function [parent=#TintBy] TintBy 
+-- @function TintBy 
 -- @param self
 -- @return TintBy#TintBy self (return value: cc.TintBy)
         

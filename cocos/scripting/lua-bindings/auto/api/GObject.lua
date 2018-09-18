@@ -1,49 +1,49 @@
 
 --------------------------------
 -- @module GObject
--- @extend UIEventDispatcher
--- @parent_module fgui
+-- @see UIEventDispatcher
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GObject] startDrag 
+-- @function startDrag 
 -- @param self
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getXMin 
+-- @function getXMin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setGroup 
+-- @function setGroup 
 -- @param self
 -- @param #fgui.GGroup value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] isDraggable 
+-- @function isDraggable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] relations 
+-- @function relations 
 -- @param self
 -- @return Relations#Relations ret (return value: fgui.Relations)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] isTouchable 
+-- @function isTouchable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setScale 
+-- @function setScale 
 -- @param self
 -- @param #float xv
 -- @param #float yv
@@ -51,75 +51,75 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getWidth 
+-- @function getWidth 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getY 
+-- @function getY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] displayObject 
+-- @function displayObject 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setScaleX 
+-- @function setScaleX 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getRotation 
+-- @function getRotation 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] stopDrag 
+-- @function stopDrag 
 -- @param self
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getSortingOrder 
+-- @function getSortingOrder 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] isGrayed 
+-- @function isGrayed 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setWidth 
+-- @function setWidth 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getScale 
+-- @function getScale 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getResourceURL 
+-- @function getResourceURL 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setTooltips 
+-- @function setTooltips 
 -- @param self
 -- @param #string value
 -- @return GObject#GObject self (return value: fgui.GObject)
@@ -127,44 +127,44 @@
 --------------------------------
 -- @overload self, rect_table         
 -- @overload self, vec2_table         
--- @function [parent=#GObject] localToGlobal
+-- @function localToGlobal
 -- @param self
 -- @param #vec2_table pt
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
 
 --------------------------------
 -- 
--- @function [parent=#GObject] getScaleY 
+-- @function getScaleY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getScaleX 
+-- @function getScaleX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] onStage 
+-- @function onStage 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getPackageItem 
+-- @function getPackageItem 
 -- @param self
 -- @return PackageItem#PackageItem ret (return value: fgui.PackageItem)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getHeight 
+-- @function getHeight 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getGear 
+-- @function getGear 
 -- @param self
 -- @param #int index
 -- @return GearBase#GearBase ret (return value: fgui.GearBase)
@@ -172,84 +172,84 @@
 --------------------------------
 -- @overload self, rect_table         
 -- @overload self, vec2_table         
--- @function [parent=#GObject] globalToLocal
+-- @function globalToLocal
 -- @param self
 -- @param #vec2_table pt
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
 
 --------------------------------
 -- 
--- @function [parent=#GObject] getGroup 
+-- @function getGroup 
 -- @param self
 -- @return GGroup#GGroup ret (return value: fgui.GGroup)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] removeFromParent 
+-- @function removeFromParent 
 -- @param self
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] constructFromResource 
+-- @function constructFromResource 
 -- @param self
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setSortingOrder 
+-- @function setSortingOrder 
 -- @param self
 -- @param #int value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setAlpha 
+-- @function setAlpha 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getSize 
+-- @function getSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getSkewY 
+-- @function getSkewY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setRotation 
+-- @function setRotation 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] addDisplayLock 
+-- @function addDisplayLock 
 -- @param self
 -- @return unsigned int#unsigned int ret (return value: unsigned int)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getData 
+-- @function getData 
 -- @param self
 -- @return void#void ret (return value: void)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setPixelSnapping 
+-- @function setPixelSnapping 
 -- @param self
 -- @param #bool value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] removeRelation 
+-- @function removeRelation 
 -- @param self
 -- @param #fgui.GObject target
 -- @param #int relationType
@@ -257,60 +257,60 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setDraggable 
+-- @function setDraggable 
 -- @param self
 -- @param #bool value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setIcon 
+-- @function setIcon 
 -- @param self
 -- @param #string text
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setScaleY 
+-- @function setScaleY 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] isPixelSnapping 
+-- @function isPixelSnapping 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getSkewX 
+-- @function getSkewX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] releaseDisplayLock 
+-- @function releaseDisplayLock 
 -- @param self
 -- @param #unsigned int token
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setDragBounds 
+-- @function setDragBounds 
 -- @param self
 -- @param #rect_table value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] makeFullScreen 
+-- @function makeFullScreen 
 -- @param self
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] transformRect 
+-- @function transformRect 
 -- @param self
 -- @param #rect_table rect
 -- @param #fgui.GObject targetSpace
@@ -318,52 +318,52 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setTouchable 
+-- @function setTouchable 
 -- @param self
 -- @param #bool value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] isPivotAsAnchor 
+-- @function isPivotAsAnchor 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getAlpha 
+-- @function getAlpha 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setGrayed 
+-- @function setGrayed 
 -- @param self
 -- @param #bool value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getYMin 
+-- @function getYMin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getText 
+-- @function getText 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setYMin 
+-- @function setYMin 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setPosition 
+-- @function setPosition 
 -- @param self
 -- @param #float xv
 -- @param #float yv
@@ -371,111 +371,111 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setXMin 
+-- @function setXMin 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setX 
+-- @function setX 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setY 
+-- @function setY 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getPosition 
+-- @function getPosition 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getParent 
+-- @function getParent 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setHeight 
+-- @function setHeight 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getX 
+-- @function getX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getRoot 
+-- @function getRoot 
 -- @param self
 -- @return GRoot#GRoot ret (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] center 
+-- @function center 
 -- @param self
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setData 
+-- @function setData 
 -- @param self
 -- @param #void value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getIcon 
+-- @function getIcon 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setVisible 
+-- @function setVisible 
 -- @param self
 -- @param #bool value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setText 
+-- @function setText 
 -- @param self
 -- @param #string text
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setCustomData 
+-- @function setCustomData 
 -- @param self
 -- @param #cc.Value value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getDragBounds 
+-- @function getDragBounds 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] isVisible 
+-- @function isVisible 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] hitTest 
+-- @function hitTest 
 -- @param self
 -- @param #vec2_table worldPoint
 -- @param #cc.Camera camera
@@ -483,13 +483,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getCustomData 
+-- @function getCustomData 
 -- @param self
 -- @return Value#Value ret (return value: cc.Value)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] addRelation 
+-- @function addRelation 
 -- @param self
 -- @param #fgui.GObject target
 -- @param #int relationType
@@ -498,7 +498,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setPivot 
+-- @function setPivot 
 -- @param self
 -- @param #float xv
 -- @param #float yv
@@ -507,7 +507,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] checkGearController 
+-- @function checkGearController 
 -- @param self
 -- @param #int index
 -- @param #fgui.GController c
@@ -515,27 +515,27 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getPivot 
+-- @function getPivot 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setSkewX 
+-- @function setSkewX 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setSkewY 
+-- @function setSkewY 
 -- @param self
 -- @param #float value
 -- @return GObject#GObject self (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] setSize 
+-- @function setSize 
 -- @param self
 -- @param #float wv
 -- @param #float hv
@@ -544,25 +544,25 @@
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getTooltips 
+-- @function getTooltips 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] create 
+-- @function create 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] getDraggingObject 
+-- @function getDraggingObject 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GObject] GObject 
+-- @function GObject 
 -- @param self
 -- @return GObject#GObject self (return value: fgui.GObject)
         

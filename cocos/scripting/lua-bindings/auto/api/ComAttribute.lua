@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module ComAttribute
--- @extend Component
--- @parent_module ccs
+-- @see Component
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] getFloat 
+-- @function getFloat 
 -- @param self
 -- @param #string key
 -- @param #float def
@@ -14,7 +14,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] getString 
+-- @function getString 
 -- @param self
 -- @param #string key
 -- @param #string def
@@ -22,7 +22,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] setFloat 
+-- @function setFloat 
 -- @param self
 -- @param #string key
 -- @param #float value
@@ -30,7 +30,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] setString 
+-- @function setString 
 -- @param self
 -- @param #string key
 -- @param #string value
@@ -38,7 +38,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] getBool 
+-- @function getBool 
 -- @param self
 -- @param #string key
 -- @param #bool def
@@ -46,7 +46,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] setInt 
+-- @function setInt 
 -- @param self
 -- @param #string key
 -- @param #int value
@@ -54,14 +54,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] parse 
+-- @function parse 
 -- @param self
 -- @param #string jsonFile
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] getInt 
+-- @function getInt 
 -- @param self
 -- @param #string key
 -- @param #int def
@@ -69,7 +69,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] setBool 
+-- @function setBool 
 -- @param self
 -- @param #string key
 -- @param #bool value
@@ -77,25 +77,25 @@
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] create 
+-- @function create 
 -- @param self
 -- @return ComAttribute#ComAttribute ret (return value: ccs.ComAttribute)
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] createInstance 
+-- @function createInstance 
 -- @param self
 -- @return Ref#Ref ret (return value: cc.Ref)
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ComAttribute] serialize 
+-- @function serialize 
 -- @param self
 -- @param #void r
 -- @return bool#bool ret (return value: bool)

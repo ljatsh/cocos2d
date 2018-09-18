@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module ControlColourPicker
--- @extend Control
--- @parent_module cc
+-- @see Control
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] hueSliderValueChanged 
+-- @function hueSliderValueChanged 
 -- @param self
 -- @param #cc.Ref sender
 -- @param #int controlEvent
@@ -14,33 +14,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] getHuePicker 
+-- @function getHuePicker 
 -- @param self
 -- @return ControlHuePicker#ControlHuePicker ret (return value: cc.ControlHuePicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] getcolourPicker 
+-- @function getcolourPicker 
 -- @param self
 -- @return ControlSaturationBrightnessPicker#ControlSaturationBrightnessPicker ret (return value: cc.ControlSaturationBrightnessPicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] setBackground 
+-- @function setBackground 
 -- @param self
 -- @param #cc.Sprite var
 -- @return ControlColourPicker#ControlColourPicker self (return value: cc.ControlColourPicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] setcolourPicker 
+-- @function setcolourPicker 
 -- @param self
 -- @param #cc.ControlSaturationBrightnessPicker var
 -- @return ControlColourPicker#ControlColourPicker self (return value: cc.ControlColourPicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] colourSliderValueChanged 
+-- @function colourSliderValueChanged 
 -- @param self
 -- @param #cc.Ref sender
 -- @param #int controlEvent
@@ -48,39 +48,39 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] setHuePicker 
+-- @function setHuePicker 
 -- @param self
 -- @param #cc.ControlHuePicker var
 -- @return ControlColourPicker#ControlColourPicker self (return value: cc.ControlColourPicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] getBackground 
+-- @function getBackground 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] create 
+-- @function create 
 -- @param self
 -- @return ControlColourPicker#ControlColourPicker ret (return value: cc.ControlColourPicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool bEnabled
 -- @return ControlColourPicker#ControlColourPicker self (return value: cc.ControlColourPicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ControlColourPicker] setColor 
+-- @function setColor 
 -- @param self
 -- @param #color3b_table colorValue
 -- @return ControlColourPicker#ControlColourPicker self (return value: cc.ControlColourPicker)
@@ -88,7 +88,7 @@
 --------------------------------
 -- js ctor<br>
 -- lua new
--- @function [parent=#ControlColourPicker] ControlColourPicker 
+-- @function ControlColourPicker 
 -- @param self
 -- @return ControlColourPicker#ControlColourPicker self (return value: cc.ControlColourPicker)
         

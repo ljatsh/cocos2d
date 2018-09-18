@@ -1,83 +1,83 @@
 
 --------------------------------
 -- @module MenuItemToggle
--- @extend MenuItem
--- @parent_module cc
+-- @see MenuItem
+-- @see cc
 
 --------------------------------
 --  Sets the array that contains the subitems. 
--- @function [parent=#MenuItemToggle] setSubItems 
+-- @function setSubItems 
 -- @param self
 -- @param #array_table items
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         
 --------------------------------
 --  Initializes a menu item with a item. 
--- @function [parent=#MenuItemToggle] initWithItem 
+-- @function initWithItem 
 -- @param self
 -- @param #cc.MenuItem item
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Gets the index of the selected item. 
--- @function [parent=#MenuItemToggle] getSelectedIndex 
+-- @function getSelectedIndex 
 -- @param self
 -- @return unsigned int#unsigned int ret (return value: unsigned int)
         
 --------------------------------
 --  Add more menu item. 
--- @function [parent=#MenuItemToggle] addSubItem 
+-- @function addSubItem 
 -- @param self
 -- @param #cc.MenuItem item
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         
 --------------------------------
 --  Return the selected item. 
--- @function [parent=#MenuItemToggle] getSelectedItem 
+-- @function getSelectedItem 
 -- @param self
 -- @return MenuItem#MenuItem ret (return value: cc.MenuItem)
         
 --------------------------------
 --  Sets the index of the selected item. 
--- @function [parent=#MenuItemToggle] setSelectedIndex 
+-- @function setSelectedIndex 
 -- @param self
 -- @param #unsigned int index
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         
 --------------------------------
 -- 
--- @function [parent=#MenuItemToggle] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool var
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         
 --------------------------------
 -- 
--- @function [parent=#MenuItemToggle] cleanup 
+-- @function cleanup 
 -- @param self
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         
 --------------------------------
 -- 
--- @function [parent=#MenuItemToggle] activate 
+-- @function activate 
 -- @param self
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         
 --------------------------------
 -- 
--- @function [parent=#MenuItemToggle] unselected 
+-- @function unselected 
 -- @param self
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         
 --------------------------------
 -- 
--- @function [parent=#MenuItemToggle] selected 
+-- @function selected 
 -- @param self
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         
 --------------------------------
 -- js ctor
--- @function [parent=#MenuItemToggle] MenuItemToggle 
+-- @function MenuItemToggle 
 -- @param self
 -- @return MenuItemToggle#MenuItemToggle self (return value: cc.MenuItemToggle)
         

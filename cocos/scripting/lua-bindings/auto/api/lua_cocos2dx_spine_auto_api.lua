@@ -3,12 +3,14 @@
 
 --------------------------------------------------------
 -- the sp SkeletonRenderer
--- @field [parent=#sp] SkeletonRenderer#SkeletonRenderer SkeletonRenderer preloaded module
+-- @field SkeletonRenderer preloaded module
+-- @see SkeletonRenderer
 
 
 --------------------------------------------------------
 -- the sp SkeletonAnimation
--- @field [parent=#sp] SkeletonAnimation#SkeletonAnimation SkeletonAnimation preloaded module
+-- @field SkeletonAnimation preloaded module
+-- @see SkeletonAnimation
 
 
 return nil

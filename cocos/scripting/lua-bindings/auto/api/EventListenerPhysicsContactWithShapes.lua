@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module EventListenerPhysicsContactWithShapes
--- @extend EventListenerPhysicsContact
--- @parent_module cc
+-- @see EventListenerPhysicsContact
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EventListenerPhysicsContactWithShapes] hitTest 
+-- @function hitTest 
 -- @param self
 -- @param #cc.PhysicsShape shapeA
 -- @param #cc.PhysicsShape shapeB
@@ -14,7 +14,7 @@
         
 --------------------------------
 --  Create the listener. 
--- @function [parent=#EventListenerPhysicsContactWithShapes] create 
+-- @function create 
 -- @param self
 -- @param #cc.PhysicsShape shapeA
 -- @param #cc.PhysicsShape shapeB
@@ -22,7 +22,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerPhysicsContactWithShapes] clone 
+-- @function clone 
 -- @param self
 -- @return EventListenerPhysicsContactWithShapes#EventListenerPhysicsContactWithShapes ret (return value: cc.EventListenerPhysicsContactWithShapes)
         

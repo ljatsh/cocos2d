@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module Grid3D
--- @extend GridBase
--- @parent_module cc
+-- @see GridBase
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Grid3D] getNeedDepthTestForBlit 
+-- @function getNeedDepthTestForBlit 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -14,7 +14,7 @@
 -- @{<br>
 -- Getter and Setter for depth test state when blit.<br>
 -- js NA
--- @function [parent=#Grid3D] setNeedDepthTestForBlit 
+-- @function setNeedDepthTestForBlit 
 -- @param self
 -- @param #bool neededDepthTest
 -- @return Grid3D#Grid3D self (return value: cc.Grid3D)
@@ -24,7 +24,7 @@
 -- @overload self, size_table         
 -- @overload self, size_table, cc.Texture2D, bool         
 -- @overload self, size_table, cc.Texture2D, bool, rect_table         
--- @function [parent=#Grid3D] create
+-- @function create
 -- @param self
 -- @param #size_table gridSize
 -- @param #cc.Texture2D texture
@@ -34,39 +34,39 @@
 
 --------------------------------
 -- 
--- @function [parent=#Grid3D] calculateVertexPoints 
+-- @function calculateVertexPoints 
 -- @param self
 -- @return Grid3D#Grid3D self (return value: cc.Grid3D)
         
 --------------------------------
 -- @{<br>
 -- Implementations for interfaces in base class.
--- @function [parent=#Grid3D] beforeBlit 
+-- @function beforeBlit 
 -- @param self
 -- @return Grid3D#Grid3D self (return value: cc.Grid3D)
         
 --------------------------------
 -- 
--- @function [parent=#Grid3D] afterBlit 
+-- @function afterBlit 
 -- @param self
 -- @return Grid3D#Grid3D self (return value: cc.Grid3D)
         
 --------------------------------
 -- 
--- @function [parent=#Grid3D] reuse 
+-- @function reuse 
 -- @param self
 -- @return Grid3D#Grid3D self (return value: cc.Grid3D)
         
 --------------------------------
 -- 
--- @function [parent=#Grid3D] blit 
+-- @function blit 
 -- @param self
 -- @return Grid3D#Grid3D self (return value: cc.Grid3D)
         
 --------------------------------
 -- Constructor.<br>
 -- js ctor
--- @function [parent=#Grid3D] Grid3D 
+-- @function Grid3D 
 -- @param self
 -- @return Grid3D#Grid3D self (return value: cc.Grid3D)
         

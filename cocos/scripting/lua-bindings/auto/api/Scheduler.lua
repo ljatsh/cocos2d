@@ -1,8 +1,8 @@
 
 --------------------------------
 -- @module Scheduler
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 --  Modifies the time of all scheduled callbacks.<br>
@@ -11,7 +11,7 @@
 -- To create a 'fast forward' effect, use values higher than 1.0.<br>
 -- since v0.8<br>
 -- warning It will affect EVERY scheduled selector / action.
--- @function [parent=#Scheduler] setTimeScale 
+-- @function setTimeScale 
 -- @param self
 -- @param #float timeScale
 -- @return Scheduler#Scheduler self (return value: cc.Scheduler)
@@ -22,21 +22,21 @@
 -- This function is thread safe<br>
 -- since v3.14<br>
 -- js NA
--- @function [parent=#Scheduler] removeAllFunctionsToBePerformedInCocosThread 
+-- @function removeAllFunctionsToBePerformedInCocosThread 
 -- @param self
 -- @return Scheduler#Scheduler self (return value: cc.Scheduler)
         
 --------------------------------
 -- Gets the time scale of schedule callbacks.<br>
 -- see Scheduler::setTimeScale()
--- @function [parent=#Scheduler] getTimeScale 
+-- @function getTimeScale 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Constructor<br>
 -- js ctor
--- @function [parent=#Scheduler] Scheduler 
+-- @function Scheduler 
 -- @param self
 -- @return Scheduler#Scheduler self (return value: cc.Scheduler)
         

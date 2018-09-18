@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module TransitionTurnOffTiles
--- @extend TransitionScene,TransitionEaseScene
--- @parent_module cc
+-- @see TransitionScene,TransitionEaseScene
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#TransitionTurnOffTiles] easeActionWithAction 
+-- @function easeActionWithAction 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
@@ -16,7 +16,7 @@
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return A autoreleased TransitionTurnOffTiles object.
--- @function [parent=#TransitionTurnOffTiles] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -24,7 +24,7 @@
         
 --------------------------------
 -- js NA
--- @function [parent=#TransitionTurnOffTiles] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -33,7 +33,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionTurnOffTiles] TransitionTurnOffTiles 
+-- @function TransitionTurnOffTiles 
 -- @param self
 -- @return TransitionTurnOffTiles#TransitionTurnOffTiles self (return value: cc.TransitionTurnOffTiles)
         

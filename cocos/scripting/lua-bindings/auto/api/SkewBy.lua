@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module SkewBy
--- @extend SkewTo
--- @parent_module cc
+-- @see SkewTo
+-- @see cc
 
 --------------------------------
 -- param t In seconds.
--- @function [parent=#SkewBy] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float t
 -- @param #float sx
@@ -19,7 +19,7 @@
 -- param deltaSkewX Skew x delta angle.<br>
 -- param deltaSkewY Skew y delta angle.<br>
 -- return An autoreleased SkewBy object.
--- @function [parent=#SkewBy] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #float deltaSkewX
@@ -28,26 +28,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkewBy] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return SkewBy#SkewBy self (return value: cc.SkewBy)
         
 --------------------------------
 -- 
--- @function [parent=#SkewBy] clone 
+-- @function clone 
 -- @param self
 -- @return SkewBy#SkewBy ret (return value: cc.SkewBy)
         
 --------------------------------
 -- 
--- @function [parent=#SkewBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return SkewBy#SkewBy ret (return value: cc.SkewBy)
         
 --------------------------------
 -- 
--- @function [parent=#SkewBy] SkewBy 
+-- @function SkewBy 
 -- @param self
 -- @return SkewBy#SkewBy self (return value: cc.SkewBy)
         

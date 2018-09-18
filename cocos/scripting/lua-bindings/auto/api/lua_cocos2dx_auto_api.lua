@@ -3,1342 +3,1610 @@
 
 --------------------------------------------------------
 -- the cc Ref
--- @field [parent=#cc] Ref#Ref Ref preloaded module
+-- @field Ref preloaded module
+-- @see Ref
 
 
 --------------------------------------------------------
 -- the cc Console
--- @field [parent=#cc] Console#Console Console preloaded module
+-- @field Console preloaded module
+-- @see Console
 
 
 --------------------------------------------------------
 -- the cc Texture2D
--- @field [parent=#cc] Texture2D#Texture2D Texture2D preloaded module
+-- @field Texture2D preloaded module
+-- @see Texture2D
 
 
 --------------------------------------------------------
 -- the cc Touch
--- @field [parent=#cc] Touch#Touch Touch preloaded module
+-- @field Touch preloaded module
+-- @see Touch
 
 
 --------------------------------------------------------
 -- the cc Event
--- @field [parent=#cc] Event#Event Event preloaded module
+-- @field Event preloaded module
+-- @see Event
 
 
 --------------------------------------------------------
 -- the cc EventTouch
--- @field [parent=#cc] EventTouch#EventTouch EventTouch preloaded module
+-- @field EventTouch preloaded module
+-- @see EventTouch
 
 
 --------------------------------------------------------
 -- the cc EventKeyboard
--- @field [parent=#cc] EventKeyboard#EventKeyboard EventKeyboard preloaded module
+-- @field EventKeyboard preloaded module
+-- @see EventKeyboard
 
 
 --------------------------------------------------------
 -- the cc Component
--- @field [parent=#cc] Component#Component Component preloaded module
+-- @field Component preloaded module
+-- @see Component
 
 
 --------------------------------------------------------
 -- the cc Node
--- @field [parent=#cc] Node#Node Node preloaded module
+-- @field Node preloaded module
+-- @see Node
 
 
 --------------------------------------------------------
 -- the cc Scene
--- @field [parent=#cc] Scene#Scene Scene preloaded module
+-- @field Scene preloaded module
+-- @see Scene
 
 
 --------------------------------------------------------
 -- the cc GLView
--- @field [parent=#cc] GLView#GLView GLView preloaded module
+-- @field GLView preloaded module
+-- @see GLView
 
 
 --------------------------------------------------------
 -- the cc Director
--- @field [parent=#cc] Director#Director Director preloaded module
+-- @field Director preloaded module
+-- @see Director
 
 
 --------------------------------------------------------
 -- the cc Timer
--- @field [parent=#cc] Timer#Timer Timer preloaded module
+-- @field Timer preloaded module
+-- @see Timer
 
 
 --------------------------------------------------------
 -- the cc Scheduler
--- @field [parent=#cc] Scheduler#Scheduler Scheduler preloaded module
+-- @field Scheduler preloaded module
+-- @see Scheduler
 
 
 --------------------------------------------------------
 -- the cc AsyncTaskPool
--- @field [parent=#cc] AsyncTaskPool#AsyncTaskPool AsyncTaskPool preloaded module
+-- @field AsyncTaskPool preloaded module
+-- @see AsyncTaskPool
 
 
 --------------------------------------------------------
 -- the cc Action
--- @field [parent=#cc] Action#Action Action preloaded module
+-- @field Action preloaded module
+-- @see Action
 
 
 --------------------------------------------------------
 -- the cc FiniteTimeAction
--- @field [parent=#cc] FiniteTimeAction#FiniteTimeAction FiniteTimeAction preloaded module
+-- @field FiniteTimeAction preloaded module
+-- @see FiniteTimeAction
 
 
 --------------------------------------------------------
 -- the cc Speed
--- @field [parent=#cc] Speed#Speed Speed preloaded module
+-- @field Speed preloaded module
+-- @see Speed
 
 
 --------------------------------------------------------
 -- the cc Follow
--- @field [parent=#cc] Follow#Follow Follow preloaded module
+-- @field Follow preloaded module
+-- @see Follow
 
 
 --------------------------------------------------------
 -- the cc Image
--- @field [parent=#cc] Image#Image Image preloaded module
+-- @field Image preloaded module
+-- @see Image
 
 
 --------------------------------------------------------
 -- the cc GLProgramState
--- @field [parent=#cc] GLProgramState#GLProgramState GLProgramState preloaded module
+-- @field GLProgramState preloaded module
+-- @see GLProgramState
 
 
 --------------------------------------------------------
 -- the cc PolygonInfo
--- @field [parent=#cc] PolygonInfo#PolygonInfo PolygonInfo preloaded module
+-- @field PolygonInfo preloaded module
+-- @see PolygonInfo
 
 
 --------------------------------------------------------
 -- the cc AutoPolygon
--- @field [parent=#cc] AutoPolygon#AutoPolygon AutoPolygon preloaded module
+-- @field AutoPolygon preloaded module
+-- @see AutoPolygon
 
 
 --------------------------------------------------------
 -- the cc SpriteFrame
--- @field [parent=#cc] SpriteFrame#SpriteFrame SpriteFrame preloaded module
+-- @field SpriteFrame preloaded module
+-- @see SpriteFrame
 
 
 --------------------------------------------------------
 -- the cc AnimationFrame
--- @field [parent=#cc] AnimationFrame#AnimationFrame AnimationFrame preloaded module
+-- @field AnimationFrame preloaded module
+-- @see AnimationFrame
 
 
 --------------------------------------------------------
 -- the cc Animation
--- @field [parent=#cc] Animation#Animation Animation preloaded module
+-- @field Animation preloaded module
+-- @see Animation
 
 
 --------------------------------------------------------
 -- the cc ActionInterval
--- @field [parent=#cc] ActionInterval#ActionInterval ActionInterval preloaded module
+-- @field ActionInterval preloaded module
+-- @see ActionInterval
 
 
 --------------------------------------------------------
 -- the cc Sequence
--- @field [parent=#cc] Sequence#Sequence Sequence preloaded module
+-- @field Sequence preloaded module
+-- @see Sequence
 
 
 --------------------------------------------------------
 -- the cc Repeat
--- @field [parent=#cc] Repeat#Repeat Repeat preloaded module
+-- @field Repeat preloaded module
+-- @see Repeat
 
 
 --------------------------------------------------------
 -- the cc RepeatForever
--- @field [parent=#cc] RepeatForever#RepeatForever RepeatForever preloaded module
+-- @field RepeatForever preloaded module
+-- @see RepeatForever
 
 
 --------------------------------------------------------
 -- the cc Spawn
--- @field [parent=#cc] Spawn#Spawn Spawn preloaded module
+-- @field Spawn preloaded module
+-- @see Spawn
 
 
 --------------------------------------------------------
 -- the cc RotateTo
--- @field [parent=#cc] RotateTo#RotateTo RotateTo preloaded module
+-- @field RotateTo preloaded module
+-- @see RotateTo
 
 
 --------------------------------------------------------
 -- the cc RotateBy
--- @field [parent=#cc] RotateBy#RotateBy RotateBy preloaded module
+-- @field RotateBy preloaded module
+-- @see RotateBy
 
 
 --------------------------------------------------------
 -- the cc MoveBy
--- @field [parent=#cc] MoveBy#MoveBy MoveBy preloaded module
+-- @field MoveBy preloaded module
+-- @see MoveBy
 
 
 --------------------------------------------------------
 -- the cc MoveTo
--- @field [parent=#cc] MoveTo#MoveTo MoveTo preloaded module
+-- @field MoveTo preloaded module
+-- @see MoveTo
 
 
 --------------------------------------------------------
 -- the cc SkewTo
--- @field [parent=#cc] SkewTo#SkewTo SkewTo preloaded module
+-- @field SkewTo preloaded module
+-- @see SkewTo
 
 
 --------------------------------------------------------
 -- the cc SkewBy
--- @field [parent=#cc] SkewBy#SkewBy SkewBy preloaded module
+-- @field SkewBy preloaded module
+-- @see SkewBy
 
 
 --------------------------------------------------------
 -- the cc JumpBy
--- @field [parent=#cc] JumpBy#JumpBy JumpBy preloaded module
+-- @field JumpBy preloaded module
+-- @see JumpBy
 
 
 --------------------------------------------------------
 -- the cc JumpTo
--- @field [parent=#cc] JumpTo#JumpTo JumpTo preloaded module
+-- @field JumpTo preloaded module
+-- @see JumpTo
 
 
 --------------------------------------------------------
 -- the cc BezierBy
--- @field [parent=#cc] BezierBy#BezierBy BezierBy preloaded module
+-- @field BezierBy preloaded module
+-- @see BezierBy
 
 
 --------------------------------------------------------
 -- the cc BezierTo
--- @field [parent=#cc] BezierTo#BezierTo BezierTo preloaded module
+-- @field BezierTo preloaded module
+-- @see BezierTo
 
 
 --------------------------------------------------------
 -- the cc ScaleTo
--- @field [parent=#cc] ScaleTo#ScaleTo ScaleTo preloaded module
+-- @field ScaleTo preloaded module
+-- @see ScaleTo
 
 
 --------------------------------------------------------
 -- the cc ScaleBy
--- @field [parent=#cc] ScaleBy#ScaleBy ScaleBy preloaded module
+-- @field ScaleBy preloaded module
+-- @see ScaleBy
 
 
 --------------------------------------------------------
 -- the cc Blink
--- @field [parent=#cc] Blink#Blink Blink preloaded module
+-- @field Blink preloaded module
+-- @see Blink
 
 
 --------------------------------------------------------
 -- the cc FadeTo
--- @field [parent=#cc] FadeTo#FadeTo FadeTo preloaded module
+-- @field FadeTo preloaded module
+-- @see FadeTo
 
 
 --------------------------------------------------------
 -- the cc FadeIn
--- @field [parent=#cc] FadeIn#FadeIn FadeIn preloaded module
+-- @field FadeIn preloaded module
+-- @see FadeIn
 
 
 --------------------------------------------------------
 -- the cc FadeOut
--- @field [parent=#cc] FadeOut#FadeOut FadeOut preloaded module
+-- @field FadeOut preloaded module
+-- @see FadeOut
 
 
 --------------------------------------------------------
 -- the cc TintTo
--- @field [parent=#cc] TintTo#TintTo TintTo preloaded module
+-- @field TintTo preloaded module
+-- @see TintTo
 
 
 --------------------------------------------------------
 -- the cc TintBy
--- @field [parent=#cc] TintBy#TintBy TintBy preloaded module
+-- @field TintBy preloaded module
+-- @see TintBy
 
 
 --------------------------------------------------------
 -- the cc DelayTime
--- @field [parent=#cc] DelayTime#DelayTime DelayTime preloaded module
+-- @field DelayTime preloaded module
+-- @see DelayTime
 
 
 --------------------------------------------------------
 -- the cc Animate
--- @field [parent=#cc] Animate#Animate Animate preloaded module
+-- @field Animate preloaded module
+-- @see Animate
 
 
 --------------------------------------------------------
 -- the cc TargetedAction
--- @field [parent=#cc] TargetedAction#TargetedAction TargetedAction preloaded module
+-- @field TargetedAction preloaded module
+-- @see TargetedAction
 
 
 --------------------------------------------------------
 -- the cc ActionFloat
--- @field [parent=#cc] ActionFloat#ActionFloat ActionFloat preloaded module
+-- @field ActionFloat preloaded module
+-- @see ActionFloat
 
 
 --------------------------------------------------------
 -- the cc Properties
--- @field [parent=#cc] Properties#Properties Properties preloaded module
+-- @field Properties preloaded module
+-- @see Properties
 
 
 --------------------------------------------------------
 -- the cc UserDefault
--- @field [parent=#cc] UserDefault#UserDefault UserDefault preloaded module
+-- @field UserDefault preloaded module
+-- @see UserDefault
 
 
 --------------------------------------------------------
 -- the cc FileUtils
--- @field [parent=#cc] FileUtils#FileUtils FileUtils preloaded module
+-- @field FileUtils preloaded module
+-- @see FileUtils
 
 
 --------------------------------------------------------
 -- the cc EventAcceleration
--- @field [parent=#cc] EventAcceleration#EventAcceleration EventAcceleration preloaded module
+-- @field EventAcceleration preloaded module
+-- @see EventAcceleration
 
 
 --------------------------------------------------------
 -- the cc EventCustom
--- @field [parent=#cc] EventCustom#EventCustom EventCustom preloaded module
+-- @field EventCustom preloaded module
+-- @see EventCustom
 
 
 --------------------------------------------------------
 -- the cc EventListener
--- @field [parent=#cc] EventListener#EventListener EventListener preloaded module
+-- @field EventListener preloaded module
+-- @see EventListener
 
 
 --------------------------------------------------------
 -- the cc EventDispatcher
--- @field [parent=#cc] EventDispatcher#EventDispatcher EventDispatcher preloaded module
+-- @field EventDispatcher preloaded module
+-- @see EventDispatcher
 
 
 --------------------------------------------------------
 -- the cc EventFocus
--- @field [parent=#cc] EventFocus#EventFocus EventFocus preloaded module
+-- @field EventFocus preloaded module
+-- @see EventFocus
 
 
 --------------------------------------------------------
 -- the cc EventListenerAcceleration
--- @field [parent=#cc] EventListenerAcceleration#EventListenerAcceleration EventListenerAcceleration preloaded module
+-- @field EventListenerAcceleration preloaded module
+-- @see EventListenerAcceleration
 
 
 --------------------------------------------------------
 -- the cc EventListenerCustom
--- @field [parent=#cc] EventListenerCustom#EventListenerCustom EventListenerCustom preloaded module
+-- @field EventListenerCustom preloaded module
+-- @see EventListenerCustom
 
 
 --------------------------------------------------------
 -- the cc EventListenerFocus
--- @field [parent=#cc] EventListenerFocus#EventListenerFocus EventListenerFocus preloaded module
+-- @field EventListenerFocus preloaded module
+-- @see EventListenerFocus
 
 
 --------------------------------------------------------
 -- the cc EventListenerKeyboard
--- @field [parent=#cc] EventListenerKeyboard#EventListenerKeyboard EventListenerKeyboard preloaded module
+-- @field EventListenerKeyboard preloaded module
+-- @see EventListenerKeyboard
 
 
 --------------------------------------------------------
 -- the cc EventMouse
--- @field [parent=#cc] EventMouse#EventMouse EventMouse preloaded module
+-- @field EventMouse preloaded module
+-- @see EventMouse
 
 
 --------------------------------------------------------
 -- the cc EventListenerMouse
--- @field [parent=#cc] EventListenerMouse#EventListenerMouse EventListenerMouse preloaded module
+-- @field EventListenerMouse preloaded module
+-- @see EventListenerMouse
 
 
 --------------------------------------------------------
 -- the cc EventListenerController
--- @field [parent=#cc] EventListenerController#EventListenerController EventListenerController preloaded module
+-- @field EventListenerController preloaded module
+-- @see EventListenerController
 
 
 --------------------------------------------------------
 -- the cc EventListenerTouchOneByOne
--- @field [parent=#cc] EventListenerTouchOneByOne#EventListenerTouchOneByOne EventListenerTouchOneByOne preloaded module
+-- @field EventListenerTouchOneByOne preloaded module
+-- @see EventListenerTouchOneByOne
 
 
 --------------------------------------------------------
 -- the cc EventListenerTouchAllAtOnce
--- @field [parent=#cc] EventListenerTouchAllAtOnce#EventListenerTouchAllAtOnce EventListenerTouchAllAtOnce preloaded module
+-- @field EventListenerTouchAllAtOnce preloaded module
+-- @see EventListenerTouchAllAtOnce
 
 
 --------------------------------------------------------
 -- the cc EventController
--- @field [parent=#cc] EventController#EventController EventController preloaded module
+-- @field EventController preloaded module
+-- @see EventController
 
 
 --------------------------------------------------------
 -- the cc ActionCamera
--- @field [parent=#cc] ActionCamera#ActionCamera ActionCamera preloaded module
+-- @field ActionCamera preloaded module
+-- @see ActionCamera
 
 
 --------------------------------------------------------
 -- the cc OrbitCamera
--- @field [parent=#cc] OrbitCamera#OrbitCamera OrbitCamera preloaded module
+-- @field OrbitCamera preloaded module
+-- @see OrbitCamera
 
 
 --------------------------------------------------------
 -- the cc CardinalSplineTo
--- @field [parent=#cc] CardinalSplineTo#CardinalSplineTo CardinalSplineTo preloaded module
+-- @field CardinalSplineTo preloaded module
+-- @see CardinalSplineTo
 
 
 --------------------------------------------------------
 -- the cc CardinalSplineBy
--- @field [parent=#cc] CardinalSplineBy#CardinalSplineBy CardinalSplineBy preloaded module
+-- @field CardinalSplineBy preloaded module
+-- @see CardinalSplineBy
 
 
 --------------------------------------------------------
 -- the cc CatmullRomTo
--- @field [parent=#cc] CatmullRomTo#CatmullRomTo CatmullRomTo preloaded module
+-- @field CatmullRomTo preloaded module
+-- @see CatmullRomTo
 
 
 --------------------------------------------------------
 -- the cc CatmullRomBy
--- @field [parent=#cc] CatmullRomBy#CatmullRomBy CatmullRomBy preloaded module
+-- @field CatmullRomBy preloaded module
+-- @see CatmullRomBy
 
 
 --------------------------------------------------------
 -- the cc ActionEase
--- @field [parent=#cc] ActionEase#ActionEase ActionEase preloaded module
+-- @field ActionEase preloaded module
+-- @see ActionEase
 
 
 --------------------------------------------------------
 -- the cc EaseRateAction
--- @field [parent=#cc] EaseRateAction#EaseRateAction EaseRateAction preloaded module
+-- @field EaseRateAction preloaded module
+-- @see EaseRateAction
 
 
 --------------------------------------------------------
 -- the cc EaseExponentialIn
--- @field [parent=#cc] EaseExponentialIn#EaseExponentialIn EaseExponentialIn preloaded module
+-- @field EaseExponentialIn preloaded module
+-- @see EaseExponentialIn
 
 
 --------------------------------------------------------
 -- the cc EaseExponentialOut
--- @field [parent=#cc] EaseExponentialOut#EaseExponentialOut EaseExponentialOut preloaded module
+-- @field EaseExponentialOut preloaded module
+-- @see EaseExponentialOut
 
 
 --------------------------------------------------------
 -- the cc EaseExponentialInOut
--- @field [parent=#cc] EaseExponentialInOut#EaseExponentialInOut EaseExponentialInOut preloaded module
+-- @field EaseExponentialInOut preloaded module
+-- @see EaseExponentialInOut
 
 
 --------------------------------------------------------
 -- the cc EaseSineIn
--- @field [parent=#cc] EaseSineIn#EaseSineIn EaseSineIn preloaded module
+-- @field EaseSineIn preloaded module
+-- @see EaseSineIn
 
 
 --------------------------------------------------------
 -- the cc EaseSineOut
--- @field [parent=#cc] EaseSineOut#EaseSineOut EaseSineOut preloaded module
+-- @field EaseSineOut preloaded module
+-- @see EaseSineOut
 
 
 --------------------------------------------------------
 -- the cc EaseSineInOut
--- @field [parent=#cc] EaseSineInOut#EaseSineInOut EaseSineInOut preloaded module
+-- @field EaseSineInOut preloaded module
+-- @see EaseSineInOut
 
 
 --------------------------------------------------------
 -- the cc EaseBounce
--- @field [parent=#cc] EaseBounce#EaseBounce EaseBounce preloaded module
+-- @field EaseBounce preloaded module
+-- @see EaseBounce
 
 
 --------------------------------------------------------
 -- the cc EaseBounceIn
--- @field [parent=#cc] EaseBounceIn#EaseBounceIn EaseBounceIn preloaded module
+-- @field EaseBounceIn preloaded module
+-- @see EaseBounceIn
 
 
 --------------------------------------------------------
 -- the cc EaseBounceOut
--- @field [parent=#cc] EaseBounceOut#EaseBounceOut EaseBounceOut preloaded module
+-- @field EaseBounceOut preloaded module
+-- @see EaseBounceOut
 
 
 --------------------------------------------------------
 -- the cc EaseBounceInOut
--- @field [parent=#cc] EaseBounceInOut#EaseBounceInOut EaseBounceInOut preloaded module
+-- @field EaseBounceInOut preloaded module
+-- @see EaseBounceInOut
 
 
 --------------------------------------------------------
 -- the cc EaseBackIn
--- @field [parent=#cc] EaseBackIn#EaseBackIn EaseBackIn preloaded module
+-- @field EaseBackIn preloaded module
+-- @see EaseBackIn
 
 
 --------------------------------------------------------
 -- the cc EaseBackOut
--- @field [parent=#cc] EaseBackOut#EaseBackOut EaseBackOut preloaded module
+-- @field EaseBackOut preloaded module
+-- @see EaseBackOut
 
 
 --------------------------------------------------------
 -- the cc EaseBackInOut
--- @field [parent=#cc] EaseBackInOut#EaseBackInOut EaseBackInOut preloaded module
+-- @field EaseBackInOut preloaded module
+-- @see EaseBackInOut
 
 
 --------------------------------------------------------
 -- the cc EaseQuadraticActionIn
--- @field [parent=#cc] EaseQuadraticActionIn#EaseQuadraticActionIn EaseQuadraticActionIn preloaded module
+-- @field EaseQuadraticActionIn preloaded module
+-- @see EaseQuadraticActionIn
 
 
 --------------------------------------------------------
 -- the cc EaseQuadraticActionOut
--- @field [parent=#cc] EaseQuadraticActionOut#EaseQuadraticActionOut EaseQuadraticActionOut preloaded module
+-- @field EaseQuadraticActionOut preloaded module
+-- @see EaseQuadraticActionOut
 
 
 --------------------------------------------------------
 -- the cc EaseQuadraticActionInOut
--- @field [parent=#cc] EaseQuadraticActionInOut#EaseQuadraticActionInOut EaseQuadraticActionInOut preloaded module
+-- @field EaseQuadraticActionInOut preloaded module
+-- @see EaseQuadraticActionInOut
 
 
 --------------------------------------------------------
 -- the cc EaseQuarticActionIn
--- @field [parent=#cc] EaseQuarticActionIn#EaseQuarticActionIn EaseQuarticActionIn preloaded module
+-- @field EaseQuarticActionIn preloaded module
+-- @see EaseQuarticActionIn
 
 
 --------------------------------------------------------
 -- the cc EaseQuarticActionOut
--- @field [parent=#cc] EaseQuarticActionOut#EaseQuarticActionOut EaseQuarticActionOut preloaded module
+-- @field EaseQuarticActionOut preloaded module
+-- @see EaseQuarticActionOut
 
 
 --------------------------------------------------------
 -- the cc EaseQuarticActionInOut
--- @field [parent=#cc] EaseQuarticActionInOut#EaseQuarticActionInOut EaseQuarticActionInOut preloaded module
+-- @field EaseQuarticActionInOut preloaded module
+-- @see EaseQuarticActionInOut
 
 
 --------------------------------------------------------
 -- the cc EaseQuinticActionIn
--- @field [parent=#cc] EaseQuinticActionIn#EaseQuinticActionIn EaseQuinticActionIn preloaded module
+-- @field EaseQuinticActionIn preloaded module
+-- @see EaseQuinticActionIn
 
 
 --------------------------------------------------------
 -- the cc EaseQuinticActionOut
--- @field [parent=#cc] EaseQuinticActionOut#EaseQuinticActionOut EaseQuinticActionOut preloaded module
+-- @field EaseQuinticActionOut preloaded module
+-- @see EaseQuinticActionOut
 
 
 --------------------------------------------------------
 -- the cc EaseQuinticActionInOut
--- @field [parent=#cc] EaseQuinticActionInOut#EaseQuinticActionInOut EaseQuinticActionInOut preloaded module
+-- @field EaseQuinticActionInOut preloaded module
+-- @see EaseQuinticActionInOut
 
 
 --------------------------------------------------------
 -- the cc EaseCircleActionIn
--- @field [parent=#cc] EaseCircleActionIn#EaseCircleActionIn EaseCircleActionIn preloaded module
+-- @field EaseCircleActionIn preloaded module
+-- @see EaseCircleActionIn
 
 
 --------------------------------------------------------
 -- the cc EaseCircleActionOut
--- @field [parent=#cc] EaseCircleActionOut#EaseCircleActionOut EaseCircleActionOut preloaded module
+-- @field EaseCircleActionOut preloaded module
+-- @see EaseCircleActionOut
 
 
 --------------------------------------------------------
 -- the cc EaseCircleActionInOut
--- @field [parent=#cc] EaseCircleActionInOut#EaseCircleActionInOut EaseCircleActionInOut preloaded module
+-- @field EaseCircleActionInOut preloaded module
+-- @see EaseCircleActionInOut
 
 
 --------------------------------------------------------
 -- the cc EaseCubicActionIn
--- @field [parent=#cc] EaseCubicActionIn#EaseCubicActionIn EaseCubicActionIn preloaded module
+-- @field EaseCubicActionIn preloaded module
+-- @see EaseCubicActionIn
 
 
 --------------------------------------------------------
 -- the cc EaseCubicActionOut
--- @field [parent=#cc] EaseCubicActionOut#EaseCubicActionOut EaseCubicActionOut preloaded module
+-- @field EaseCubicActionOut preloaded module
+-- @see EaseCubicActionOut
 
 
 --------------------------------------------------------
 -- the cc EaseCubicActionInOut
--- @field [parent=#cc] EaseCubicActionInOut#EaseCubicActionInOut EaseCubicActionInOut preloaded module
+-- @field EaseCubicActionInOut preloaded module
+-- @see EaseCubicActionInOut
 
 
 --------------------------------------------------------
 -- the cc EaseIn
--- @field [parent=#cc] EaseIn#EaseIn EaseIn preloaded module
+-- @field EaseIn preloaded module
+-- @see EaseIn
 
 
 --------------------------------------------------------
 -- the cc EaseOut
--- @field [parent=#cc] EaseOut#EaseOut EaseOut preloaded module
+-- @field EaseOut preloaded module
+-- @see EaseOut
 
 
 --------------------------------------------------------
 -- the cc EaseInOut
--- @field [parent=#cc] EaseInOut#EaseInOut EaseInOut preloaded module
+-- @field EaseInOut preloaded module
+-- @see EaseInOut
 
 
 --------------------------------------------------------
 -- the cc EaseElastic
--- @field [parent=#cc] EaseElastic#EaseElastic EaseElastic preloaded module
+-- @field EaseElastic preloaded module
+-- @see EaseElastic
 
 
 --------------------------------------------------------
 -- the cc EaseElasticIn
--- @field [parent=#cc] EaseElasticIn#EaseElasticIn EaseElasticIn preloaded module
+-- @field EaseElasticIn preloaded module
+-- @see EaseElasticIn
 
 
 --------------------------------------------------------
 -- the cc EaseElasticOut
--- @field [parent=#cc] EaseElasticOut#EaseElasticOut EaseElasticOut preloaded module
+-- @field EaseElasticOut preloaded module
+-- @see EaseElasticOut
 
 
 --------------------------------------------------------
 -- the cc EaseElasticInOut
--- @field [parent=#cc] EaseElasticInOut#EaseElasticInOut EaseElasticInOut preloaded module
+-- @field EaseElasticInOut preloaded module
+-- @see EaseElasticInOut
 
 
 --------------------------------------------------------
 -- the cc EaseBezierAction
--- @field [parent=#cc] EaseBezierAction#EaseBezierAction EaseBezierAction preloaded module
+-- @field EaseBezierAction preloaded module
+-- @see EaseBezierAction
 
 
 --------------------------------------------------------
 -- the cc ActionInstant
--- @field [parent=#cc] ActionInstant#ActionInstant ActionInstant preloaded module
+-- @field ActionInstant preloaded module
+-- @see ActionInstant
 
 
 --------------------------------------------------------
 -- the cc Show
--- @field [parent=#cc] Show#Show Show preloaded module
+-- @field Show preloaded module
+-- @see Show
 
 
 --------------------------------------------------------
 -- the cc Hide
--- @field [parent=#cc] Hide#Hide Hide preloaded module
+-- @field Hide preloaded module
+-- @see Hide
 
 
 --------------------------------------------------------
 -- the cc ToggleVisibility
--- @field [parent=#cc] ToggleVisibility#ToggleVisibility ToggleVisibility preloaded module
+-- @field ToggleVisibility preloaded module
+-- @see ToggleVisibility
 
 
 --------------------------------------------------------
 -- the cc RemoveSelf
--- @field [parent=#cc] RemoveSelf#RemoveSelf RemoveSelf preloaded module
+-- @field RemoveSelf preloaded module
+-- @see RemoveSelf
 
 
 --------------------------------------------------------
 -- the cc FlipX
--- @field [parent=#cc] FlipX#FlipX FlipX preloaded module
+-- @field FlipX preloaded module
+-- @see FlipX
 
 
 --------------------------------------------------------
 -- the cc FlipY
--- @field [parent=#cc] FlipY#FlipY FlipY preloaded module
+-- @field FlipY preloaded module
+-- @see FlipY
 
 
 --------------------------------------------------------
 -- the cc Place
--- @field [parent=#cc] Place#Place Place preloaded module
+-- @field Place preloaded module
+-- @see Place
 
 
 --------------------------------------------------------
 -- the cc CallFunc
--- @field [parent=#cc] CallFunc#CallFunc CallFunc preloaded module
+-- @field CallFunc preloaded module
+-- @see CallFunc
 
 
 --------------------------------------------------------
 -- the cc GridAction
--- @field [parent=#cc] GridAction#GridAction GridAction preloaded module
+-- @field GridAction preloaded module
+-- @see GridAction
 
 
 --------------------------------------------------------
 -- the cc Grid3DAction
--- @field [parent=#cc] Grid3DAction#Grid3DAction Grid3DAction preloaded module
+-- @field Grid3DAction preloaded module
+-- @see Grid3DAction
 
 
 --------------------------------------------------------
 -- the cc TiledGrid3DAction
--- @field [parent=#cc] TiledGrid3DAction#TiledGrid3DAction TiledGrid3DAction preloaded module
+-- @field TiledGrid3DAction preloaded module
+-- @see TiledGrid3DAction
 
 
 --------------------------------------------------------
 -- the cc StopGrid
--- @field [parent=#cc] StopGrid#StopGrid StopGrid preloaded module
+-- @field StopGrid preloaded module
+-- @see StopGrid
 
 
 --------------------------------------------------------
 -- the cc ReuseGrid
--- @field [parent=#cc] ReuseGrid#ReuseGrid ReuseGrid preloaded module
+-- @field ReuseGrid preloaded module
+-- @see ReuseGrid
 
 
 --------------------------------------------------------
 -- the cc Waves3D
--- @field [parent=#cc] Waves3D#Waves3D Waves3D preloaded module
+-- @field Waves3D preloaded module
+-- @see Waves3D
 
 
 --------------------------------------------------------
 -- the cc FlipX3D
--- @field [parent=#cc] FlipX3D#FlipX3D FlipX3D preloaded module
+-- @field FlipX3D preloaded module
+-- @see FlipX3D
 
 
 --------------------------------------------------------
 -- the cc FlipY3D
--- @field [parent=#cc] FlipY3D#FlipY3D FlipY3D preloaded module
+-- @field FlipY3D preloaded module
+-- @see FlipY3D
 
 
 --------------------------------------------------------
 -- the cc Lens3D
--- @field [parent=#cc] Lens3D#Lens3D Lens3D preloaded module
+-- @field Lens3D preloaded module
+-- @see Lens3D
 
 
 --------------------------------------------------------
 -- the cc Ripple3D
--- @field [parent=#cc] Ripple3D#Ripple3D Ripple3D preloaded module
+-- @field Ripple3D preloaded module
+-- @see Ripple3D
 
 
 --------------------------------------------------------
 -- the cc Shaky3D
--- @field [parent=#cc] Shaky3D#Shaky3D Shaky3D preloaded module
+-- @field Shaky3D preloaded module
+-- @see Shaky3D
 
 
 --------------------------------------------------------
 -- the cc Liquid
--- @field [parent=#cc] Liquid#Liquid Liquid preloaded module
+-- @field Liquid preloaded module
+-- @see Liquid
 
 
 --------------------------------------------------------
 -- the cc Waves
--- @field [parent=#cc] Waves#Waves Waves preloaded module
+-- @field Waves preloaded module
+-- @see Waves
 
 
 --------------------------------------------------------
 -- the cc Twirl
--- @field [parent=#cc] Twirl#Twirl Twirl preloaded module
+-- @field Twirl preloaded module
+-- @see Twirl
 
 
 --------------------------------------------------------
 -- the cc ActionManager
--- @field [parent=#cc] ActionManager#ActionManager ActionManager preloaded module
+-- @field ActionManager preloaded module
+-- @see ActionManager
 
 
 --------------------------------------------------------
 -- the cc PageTurn3D
--- @field [parent=#cc] PageTurn3D#PageTurn3D PageTurn3D preloaded module
+-- @field PageTurn3D preloaded module
+-- @see PageTurn3D
 
 
 --------------------------------------------------------
 -- the cc ProgressTo
--- @field [parent=#cc] ProgressTo#ProgressTo ProgressTo preloaded module
+-- @field ProgressTo preloaded module
+-- @see ProgressTo
 
 
 --------------------------------------------------------
 -- the cc ProgressFromTo
--- @field [parent=#cc] ProgressFromTo#ProgressFromTo ProgressFromTo preloaded module
+-- @field ProgressFromTo preloaded module
+-- @see ProgressFromTo
 
 
 --------------------------------------------------------
 -- the cc ShakyTiles3D
--- @field [parent=#cc] ShakyTiles3D#ShakyTiles3D ShakyTiles3D preloaded module
+-- @field ShakyTiles3D preloaded module
+-- @see ShakyTiles3D
 
 
 --------------------------------------------------------
 -- the cc ShatteredTiles3D
--- @field [parent=#cc] ShatteredTiles3D#ShatteredTiles3D ShatteredTiles3D preloaded module
+-- @field ShatteredTiles3D preloaded module
+-- @see ShatteredTiles3D
 
 
 --------------------------------------------------------
 -- the cc ShuffleTiles
--- @field [parent=#cc] ShuffleTiles#ShuffleTiles ShuffleTiles preloaded module
+-- @field ShuffleTiles preloaded module
+-- @see ShuffleTiles
 
 
 --------------------------------------------------------
 -- the cc FadeOutTRTiles
--- @field [parent=#cc] FadeOutTRTiles#FadeOutTRTiles FadeOutTRTiles preloaded module
+-- @field FadeOutTRTiles preloaded module
+-- @see FadeOutTRTiles
 
 
 --------------------------------------------------------
 -- the cc FadeOutBLTiles
--- @field [parent=#cc] FadeOutBLTiles#FadeOutBLTiles FadeOutBLTiles preloaded module
+-- @field FadeOutBLTiles preloaded module
+-- @see FadeOutBLTiles
 
 
 --------------------------------------------------------
 -- the cc FadeOutUpTiles
--- @field [parent=#cc] FadeOutUpTiles#FadeOutUpTiles FadeOutUpTiles preloaded module
+-- @field FadeOutUpTiles preloaded module
+-- @see FadeOutUpTiles
 
 
 --------------------------------------------------------
 -- the cc FadeOutDownTiles
--- @field [parent=#cc] FadeOutDownTiles#FadeOutDownTiles FadeOutDownTiles preloaded module
+-- @field FadeOutDownTiles preloaded module
+-- @see FadeOutDownTiles
 
 
 --------------------------------------------------------
 -- the cc TurnOffTiles
--- @field [parent=#cc] TurnOffTiles#TurnOffTiles TurnOffTiles preloaded module
+-- @field TurnOffTiles preloaded module
+-- @see TurnOffTiles
 
 
 --------------------------------------------------------
 -- the cc WavesTiles3D
--- @field [parent=#cc] WavesTiles3D#WavesTiles3D WavesTiles3D preloaded module
+-- @field WavesTiles3D preloaded module
+-- @see WavesTiles3D
 
 
 --------------------------------------------------------
 -- the cc JumpTiles3D
--- @field [parent=#cc] JumpTiles3D#JumpTiles3D JumpTiles3D preloaded module
+-- @field JumpTiles3D preloaded module
+-- @see JumpTiles3D
 
 
 --------------------------------------------------------
 -- the cc SplitRows
--- @field [parent=#cc] SplitRows#SplitRows SplitRows preloaded module
+-- @field SplitRows preloaded module
+-- @see SplitRows
 
 
 --------------------------------------------------------
 -- the cc SplitCols
--- @field [parent=#cc] SplitCols#SplitCols SplitCols preloaded module
+-- @field SplitCols preloaded module
+-- @see SplitCols
 
 
 --------------------------------------------------------
 -- the cc ActionTween
--- @field [parent=#cc] ActionTween#ActionTween ActionTween preloaded module
+-- @field ActionTween preloaded module
+-- @see ActionTween
 
 
 --------------------------------------------------------
 -- the cc AtlasNode
--- @field [parent=#cc] AtlasNode#AtlasNode AtlasNode preloaded module
+-- @field AtlasNode preloaded module
+-- @see AtlasNode
 
 
 --------------------------------------------------------
 -- the cc ClippingNode
--- @field [parent=#cc] ClippingNode#ClippingNode ClippingNode preloaded module
+-- @field ClippingNode preloaded module
+-- @see ClippingNode
 
 
 --------------------------------------------------------
 -- the cc ClippingRectangleNode
--- @field [parent=#cc] ClippingRectangleNode#ClippingRectangleNode ClippingRectangleNode preloaded module
+-- @field ClippingRectangleNode preloaded module
+-- @see ClippingRectangleNode
 
 
 --------------------------------------------------------
 -- the cc DrawNode
--- @field [parent=#cc] DrawNode#DrawNode DrawNode preloaded module
+-- @field DrawNode preloaded module
+-- @see DrawNode
 
 
 --------------------------------------------------------
 -- the cc Label
--- @field [parent=#cc] Label#Label Label preloaded module
+-- @field Label preloaded module
+-- @see Label
 
 
 --------------------------------------------------------
 -- the cc LabelAtlas
--- @field [parent=#cc] LabelAtlas#LabelAtlas LabelAtlas preloaded module
+-- @field LabelAtlas preloaded module
+-- @see LabelAtlas
 
 
 --------------------------------------------------------
 -- the cc Layer
--- @field [parent=#cc] Layer#Layer Layer preloaded module
+-- @field Layer preloaded module
+-- @see Layer
 
 
 --------------------------------------------------------
 -- the cc LayerColor
--- @field [parent=#cc] LayerColor#LayerColor LayerColor preloaded module
+-- @field LayerColor preloaded module
+-- @see LayerColor
 
 
 --------------------------------------------------------
 -- the cc LayerGradient
--- @field [parent=#cc] LayerGradient#LayerGradient LayerGradient preloaded module
+-- @field LayerGradient preloaded module
+-- @see LayerGradient
 
 
 --------------------------------------------------------
 -- the cc LayerRadialGradient
--- @field [parent=#cc] LayerRadialGradient#LayerRadialGradient LayerRadialGradient preloaded module
+-- @field LayerRadialGradient preloaded module
+-- @see LayerRadialGradient
 
 
 --------------------------------------------------------
 -- the cc LayerMultiplex
--- @field [parent=#cc] LayerMultiplex#LayerMultiplex LayerMultiplex preloaded module
+-- @field LayerMultiplex preloaded module
+-- @see LayerMultiplex
 
 
 --------------------------------------------------------
 -- the cc MenuItem
--- @field [parent=#cc] MenuItem#MenuItem MenuItem preloaded module
+-- @field MenuItem preloaded module
+-- @see MenuItem
 
 
 --------------------------------------------------------
 -- the cc MenuItemLabel
--- @field [parent=#cc] MenuItemLabel#MenuItemLabel MenuItemLabel preloaded module
+-- @field MenuItemLabel preloaded module
+-- @see MenuItemLabel
 
 
 --------------------------------------------------------
 -- the cc MenuItemAtlasFont
--- @field [parent=#cc] MenuItemAtlasFont#MenuItemAtlasFont MenuItemAtlasFont preloaded module
+-- @field MenuItemAtlasFont preloaded module
+-- @see MenuItemAtlasFont
 
 
 --------------------------------------------------------
 -- the cc MenuItemFont
--- @field [parent=#cc] MenuItemFont#MenuItemFont MenuItemFont preloaded module
+-- @field MenuItemFont preloaded module
+-- @see MenuItemFont
 
 
 --------------------------------------------------------
 -- the cc MenuItemSprite
--- @field [parent=#cc] MenuItemSprite#MenuItemSprite MenuItemSprite preloaded module
+-- @field MenuItemSprite preloaded module
+-- @see MenuItemSprite
 
 
 --------------------------------------------------------
 -- the cc MenuItemImage
--- @field [parent=#cc] MenuItemImage#MenuItemImage MenuItemImage preloaded module
+-- @field MenuItemImage preloaded module
+-- @see MenuItemImage
 
 
 --------------------------------------------------------
 -- the cc MenuItemToggle
--- @field [parent=#cc] MenuItemToggle#MenuItemToggle MenuItemToggle preloaded module
+-- @field MenuItemToggle preloaded module
+-- @see MenuItemToggle
 
 
 --------------------------------------------------------
 -- the cc Menu
--- @field [parent=#cc] Menu#Menu Menu preloaded module
+-- @field Menu preloaded module
+-- @see Menu
 
 
 --------------------------------------------------------
 -- the cc MotionStreak
--- @field [parent=#cc] MotionStreak#MotionStreak MotionStreak preloaded module
+-- @field MotionStreak preloaded module
+-- @see MotionStreak
 
 
 --------------------------------------------------------
 -- the cc NodeGrid
--- @field [parent=#cc] NodeGrid#NodeGrid NodeGrid preloaded module
+-- @field NodeGrid preloaded module
+-- @see NodeGrid
 
 
 --------------------------------------------------------
 -- the cc ParticleBatchNode
--- @field [parent=#cc] ParticleBatchNode#ParticleBatchNode ParticleBatchNode preloaded module
+-- @field ParticleBatchNode preloaded module
+-- @see ParticleBatchNode
 
 
 --------------------------------------------------------
 -- the cc ParticleData
--- @field [parent=#cc] ParticleData#ParticleData ParticleData preloaded module
+-- @field ParticleData preloaded module
+-- @see ParticleData
 
 
 --------------------------------------------------------
 -- the cc ParticleSystem
--- @field [parent=#cc] ParticleSystem#ParticleSystem ParticleSystem preloaded module
+-- @field ParticleSystem preloaded module
+-- @see ParticleSystem
 
 
 --------------------------------------------------------
 -- the cc ParticleSystemQuad
--- @field [parent=#cc] ParticleSystemQuad#ParticleSystemQuad ParticleSystemQuad preloaded module
+-- @field ParticleSystemQuad preloaded module
+-- @see ParticleSystemQuad
 
 
 --------------------------------------------------------
 -- the cc ParticleFire
--- @field [parent=#cc] ParticleFire#ParticleFire ParticleFire preloaded module
+-- @field ParticleFire preloaded module
+-- @see ParticleFire
 
 
 --------------------------------------------------------
 -- the cc ParticleFireworks
--- @field [parent=#cc] ParticleFireworks#ParticleFireworks ParticleFireworks preloaded module
+-- @field ParticleFireworks preloaded module
+-- @see ParticleFireworks
 
 
 --------------------------------------------------------
 -- the cc ParticleSun
--- @field [parent=#cc] ParticleSun#ParticleSun ParticleSun preloaded module
+-- @field ParticleSun preloaded module
+-- @see ParticleSun
 
 
 --------------------------------------------------------
 -- the cc ParticleGalaxy
--- @field [parent=#cc] ParticleGalaxy#ParticleGalaxy ParticleGalaxy preloaded module
+-- @field ParticleGalaxy preloaded module
+-- @see ParticleGalaxy
 
 
 --------------------------------------------------------
 -- the cc ParticleFlower
--- @field [parent=#cc] ParticleFlower#ParticleFlower ParticleFlower preloaded module
+-- @field ParticleFlower preloaded module
+-- @see ParticleFlower
 
 
 --------------------------------------------------------
 -- the cc ParticleMeteor
--- @field [parent=#cc] ParticleMeteor#ParticleMeteor ParticleMeteor preloaded module
+-- @field ParticleMeteor preloaded module
+-- @see ParticleMeteor
 
 
 --------------------------------------------------------
 -- the cc ParticleSpiral
--- @field [parent=#cc] ParticleSpiral#ParticleSpiral ParticleSpiral preloaded module
+-- @field ParticleSpiral preloaded module
+-- @see ParticleSpiral
 
 
 --------------------------------------------------------
 -- the cc ParticleExplosion
--- @field [parent=#cc] ParticleExplosion#ParticleExplosion ParticleExplosion preloaded module
+-- @field ParticleExplosion preloaded module
+-- @see ParticleExplosion
 
 
 --------------------------------------------------------
 -- the cc ParticleSmoke
--- @field [parent=#cc] ParticleSmoke#ParticleSmoke ParticleSmoke preloaded module
+-- @field ParticleSmoke preloaded module
+-- @see ParticleSmoke
 
 
 --------------------------------------------------------
 -- the cc ParticleSnow
--- @field [parent=#cc] ParticleSnow#ParticleSnow ParticleSnow preloaded module
+-- @field ParticleSnow preloaded module
+-- @see ParticleSnow
 
 
 --------------------------------------------------------
 -- the cc ParticleRain
--- @field [parent=#cc] ParticleRain#ParticleRain ParticleRain preloaded module
+-- @field ParticleRain preloaded module
+-- @see ParticleRain
 
 
 --------------------------------------------------------
 -- the cc ProgressTimer
--- @field [parent=#cc] ProgressTimer#ProgressTimer ProgressTimer preloaded module
+-- @field ProgressTimer preloaded module
+-- @see ProgressTimer
 
 
 --------------------------------------------------------
 -- the cc ProtectedNode
--- @field [parent=#cc] ProtectedNode#ProtectedNode ProtectedNode preloaded module
+-- @field ProtectedNode preloaded module
+-- @see ProtectedNode
 
 
 --------------------------------------------------------
 -- the cc Sprite
--- @field [parent=#cc] Sprite#Sprite Sprite preloaded module
+-- @field Sprite preloaded module
+-- @see Sprite
 
 
 --------------------------------------------------------
 -- the cc RenderTexture
--- @field [parent=#cc] RenderTexture#RenderTexture RenderTexture preloaded module
+-- @field RenderTexture preloaded module
+-- @see RenderTexture
 
 
 --------------------------------------------------------
 -- the cc TransitionEaseScene
--- @field [parent=#cc] TransitionEaseScene#TransitionEaseScene TransitionEaseScene preloaded module
+-- @field TransitionEaseScene preloaded module
+-- @see TransitionEaseScene
 
 
 --------------------------------------------------------
 -- the cc TransitionScene
--- @field [parent=#cc] TransitionScene#TransitionScene TransitionScene preloaded module
+-- @field TransitionScene preloaded module
+-- @see TransitionScene
 
 
 --------------------------------------------------------
 -- the cc TransitionSceneOriented
--- @field [parent=#cc] TransitionSceneOriented#TransitionSceneOriented TransitionSceneOriented preloaded module
+-- @field TransitionSceneOriented preloaded module
+-- @see TransitionSceneOriented
 
 
 --------------------------------------------------------
 -- the cc TransitionRotoZoom
--- @field [parent=#cc] TransitionRotoZoom#TransitionRotoZoom TransitionRotoZoom preloaded module
+-- @field TransitionRotoZoom preloaded module
+-- @see TransitionRotoZoom
 
 
 --------------------------------------------------------
 -- the cc TransitionJumpZoom
--- @field [parent=#cc] TransitionJumpZoom#TransitionJumpZoom TransitionJumpZoom preloaded module
+-- @field TransitionJumpZoom preloaded module
+-- @see TransitionJumpZoom
 
 
 --------------------------------------------------------
 -- the cc TransitionMoveInL
--- @field [parent=#cc] TransitionMoveInL#TransitionMoveInL TransitionMoveInL preloaded module
+-- @field TransitionMoveInL preloaded module
+-- @see TransitionMoveInL
 
 
 --------------------------------------------------------
 -- the cc TransitionMoveInR
--- @field [parent=#cc] TransitionMoveInR#TransitionMoveInR TransitionMoveInR preloaded module
+-- @field TransitionMoveInR preloaded module
+-- @see TransitionMoveInR
 
 
 --------------------------------------------------------
 -- the cc TransitionMoveInT
--- @field [parent=#cc] TransitionMoveInT#TransitionMoveInT TransitionMoveInT preloaded module
+-- @field TransitionMoveInT preloaded module
+-- @see TransitionMoveInT
 
 
 --------------------------------------------------------
 -- the cc TransitionMoveInB
--- @field [parent=#cc] TransitionMoveInB#TransitionMoveInB TransitionMoveInB preloaded module
+-- @field TransitionMoveInB preloaded module
+-- @see TransitionMoveInB
 
 
 --------------------------------------------------------
 -- the cc TransitionSlideInL
--- @field [parent=#cc] TransitionSlideInL#TransitionSlideInL TransitionSlideInL preloaded module
+-- @field TransitionSlideInL preloaded module
+-- @see TransitionSlideInL
 
 
 --------------------------------------------------------
 -- the cc TransitionSlideInR
--- @field [parent=#cc] TransitionSlideInR#TransitionSlideInR TransitionSlideInR preloaded module
+-- @field TransitionSlideInR preloaded module
+-- @see TransitionSlideInR
 
 
 --------------------------------------------------------
 -- the cc TransitionSlideInB
--- @field [parent=#cc] TransitionSlideInB#TransitionSlideInB TransitionSlideInB preloaded module
+-- @field TransitionSlideInB preloaded module
+-- @see TransitionSlideInB
 
 
 --------------------------------------------------------
 -- the cc TransitionSlideInT
--- @field [parent=#cc] TransitionSlideInT#TransitionSlideInT TransitionSlideInT preloaded module
+-- @field TransitionSlideInT preloaded module
+-- @see TransitionSlideInT
 
 
 --------------------------------------------------------
 -- the cc TransitionShrinkGrow
--- @field [parent=#cc] TransitionShrinkGrow#TransitionShrinkGrow TransitionShrinkGrow preloaded module
+-- @field TransitionShrinkGrow preloaded module
+-- @see TransitionShrinkGrow
 
 
 --------------------------------------------------------
 -- the cc TransitionFlipX
--- @field [parent=#cc] TransitionFlipX#TransitionFlipX TransitionFlipX preloaded module
+-- @field TransitionFlipX preloaded module
+-- @see TransitionFlipX
 
 
 --------------------------------------------------------
 -- the cc TransitionFlipY
--- @field [parent=#cc] TransitionFlipY#TransitionFlipY TransitionFlipY preloaded module
+-- @field TransitionFlipY preloaded module
+-- @see TransitionFlipY
 
 
 --------------------------------------------------------
 -- the cc TransitionFlipAngular
--- @field [parent=#cc] TransitionFlipAngular#TransitionFlipAngular TransitionFlipAngular preloaded module
+-- @field TransitionFlipAngular preloaded module
+-- @see TransitionFlipAngular
 
 
 --------------------------------------------------------
 -- the cc TransitionZoomFlipX
--- @field [parent=#cc] TransitionZoomFlipX#TransitionZoomFlipX TransitionZoomFlipX preloaded module
+-- @field TransitionZoomFlipX preloaded module
+-- @see TransitionZoomFlipX
 
 
 --------------------------------------------------------
 -- the cc TransitionZoomFlipY
--- @field [parent=#cc] TransitionZoomFlipY#TransitionZoomFlipY TransitionZoomFlipY preloaded module
+-- @field TransitionZoomFlipY preloaded module
+-- @see TransitionZoomFlipY
 
 
 --------------------------------------------------------
 -- the cc TransitionZoomFlipAngular
--- @field [parent=#cc] TransitionZoomFlipAngular#TransitionZoomFlipAngular TransitionZoomFlipAngular preloaded module
+-- @field TransitionZoomFlipAngular preloaded module
+-- @see TransitionZoomFlipAngular
 
 
 --------------------------------------------------------
 -- the cc TransitionFade
--- @field [parent=#cc] TransitionFade#TransitionFade TransitionFade preloaded module
+-- @field TransitionFade preloaded module
+-- @see TransitionFade
 
 
 --------------------------------------------------------
 -- the cc TransitionCrossFade
--- @field [parent=#cc] TransitionCrossFade#TransitionCrossFade TransitionCrossFade preloaded module
+-- @field TransitionCrossFade preloaded module
+-- @see TransitionCrossFade
 
 
 --------------------------------------------------------
 -- the cc TransitionTurnOffTiles
--- @field [parent=#cc] TransitionTurnOffTiles#TransitionTurnOffTiles TransitionTurnOffTiles preloaded module
+-- @field TransitionTurnOffTiles preloaded module
+-- @see TransitionTurnOffTiles
 
 
 --------------------------------------------------------
 -- the cc TransitionSplitCols
--- @field [parent=#cc] TransitionSplitCols#TransitionSplitCols TransitionSplitCols preloaded module
+-- @field TransitionSplitCols preloaded module
+-- @see TransitionSplitCols
 
 
 --------------------------------------------------------
 -- the cc TransitionSplitRows
--- @field [parent=#cc] TransitionSplitRows#TransitionSplitRows TransitionSplitRows preloaded module
+-- @field TransitionSplitRows preloaded module
+-- @see TransitionSplitRows
 
 
 --------------------------------------------------------
 -- the cc TransitionFadeTR
--- @field [parent=#cc] TransitionFadeTR#TransitionFadeTR TransitionFadeTR preloaded module
+-- @field TransitionFadeTR preloaded module
+-- @see TransitionFadeTR
 
 
 --------------------------------------------------------
 -- the cc TransitionFadeBL
--- @field [parent=#cc] TransitionFadeBL#TransitionFadeBL TransitionFadeBL preloaded module
+-- @field TransitionFadeBL preloaded module
+-- @see TransitionFadeBL
 
 
 --------------------------------------------------------
 -- the cc TransitionFadeUp
--- @field [parent=#cc] TransitionFadeUp#TransitionFadeUp TransitionFadeUp preloaded module
+-- @field TransitionFadeUp preloaded module
+-- @see TransitionFadeUp
 
 
 --------------------------------------------------------
 -- the cc TransitionFadeDown
--- @field [parent=#cc] TransitionFadeDown#TransitionFadeDown TransitionFadeDown preloaded module
+-- @field TransitionFadeDown preloaded module
+-- @see TransitionFadeDown
 
 
 --------------------------------------------------------
 -- the cc TransitionPageTurn
--- @field [parent=#cc] TransitionPageTurn#TransitionPageTurn TransitionPageTurn preloaded module
+-- @field TransitionPageTurn preloaded module
+-- @see TransitionPageTurn
 
 
 --------------------------------------------------------
 -- the cc TransitionProgress
--- @field [parent=#cc] TransitionProgress#TransitionProgress TransitionProgress preloaded module
+-- @field TransitionProgress preloaded module
+-- @see TransitionProgress
 
 
 --------------------------------------------------------
 -- the cc TransitionProgressRadialCCW
--- @field [parent=#cc] TransitionProgressRadialCCW#TransitionProgressRadialCCW TransitionProgressRadialCCW preloaded module
+-- @field TransitionProgressRadialCCW preloaded module
+-- @see TransitionProgressRadialCCW
 
 
 --------------------------------------------------------
 -- the cc TransitionProgressRadialCW
--- @field [parent=#cc] TransitionProgressRadialCW#TransitionProgressRadialCW TransitionProgressRadialCW preloaded module
+-- @field TransitionProgressRadialCW preloaded module
+-- @see TransitionProgressRadialCW
 
 
 --------------------------------------------------------
 -- the cc TransitionProgressHorizontal
--- @field [parent=#cc] TransitionProgressHorizontal#TransitionProgressHorizontal TransitionProgressHorizontal preloaded module
+-- @field TransitionProgressHorizontal preloaded module
+-- @see TransitionProgressHorizontal
 
 
 --------------------------------------------------------
 -- the cc TransitionProgressVertical
--- @field [parent=#cc] TransitionProgressVertical#TransitionProgressVertical TransitionProgressVertical preloaded module
+-- @field TransitionProgressVertical preloaded module
+-- @see TransitionProgressVertical
 
 
 --------------------------------------------------------
 -- the cc TransitionProgressInOut
--- @field [parent=#cc] TransitionProgressInOut#TransitionProgressInOut TransitionProgressInOut preloaded module
+-- @field TransitionProgressInOut preloaded module
+-- @see TransitionProgressInOut
 
 
 --------------------------------------------------------
 -- the cc TransitionProgressOutIn
--- @field [parent=#cc] TransitionProgressOutIn#TransitionProgressOutIn TransitionProgressOutIn preloaded module
+-- @field TransitionProgressOutIn preloaded module
+-- @see TransitionProgressOutIn
 
 
 --------------------------------------------------------
 -- the cc Camera
--- @field [parent=#cc] Camera#Camera Camera preloaded module
+-- @field Camera preloaded module
+-- @see Camera
 
 
 --------------------------------------------------------
 -- the cc CameraBackgroundBrush
--- @field [parent=#cc] CameraBackgroundBrush#CameraBackgroundBrush CameraBackgroundBrush preloaded module
+-- @field CameraBackgroundBrush preloaded module
+-- @see CameraBackgroundBrush
 
 
 --------------------------------------------------------
 -- the cc CameraBackgroundDepthBrush
--- @field [parent=#cc] CameraBackgroundDepthBrush#CameraBackgroundDepthBrush CameraBackgroundDepthBrush preloaded module
+-- @field CameraBackgroundDepthBrush preloaded module
+-- @see CameraBackgroundDepthBrush
 
 
 --------------------------------------------------------
 -- the cc CameraBackgroundColorBrush
--- @field [parent=#cc] CameraBackgroundColorBrush#CameraBackgroundColorBrush CameraBackgroundColorBrush preloaded module
+-- @field CameraBackgroundColorBrush preloaded module
+-- @see CameraBackgroundColorBrush
 
 
 --------------------------------------------------------
 -- the cc CameraBackgroundSkyBoxBrush
--- @field [parent=#cc] CameraBackgroundSkyBoxBrush#CameraBackgroundSkyBoxBrush CameraBackgroundSkyBoxBrush preloaded module
+-- @field CameraBackgroundSkyBoxBrush preloaded module
+-- @see CameraBackgroundSkyBoxBrush
 
 
 --------------------------------------------------------
 -- the cc GridBase
--- @field [parent=#cc] GridBase#GridBase GridBase preloaded module
+-- @field GridBase preloaded module
+-- @see GridBase
 
 
 --------------------------------------------------------
 -- the cc Grid3D
--- @field [parent=#cc] Grid3D#Grid3D Grid3D preloaded module
+-- @field Grid3D preloaded module
+-- @see Grid3D
 
 
 --------------------------------------------------------
 -- the cc TiledGrid3D
--- @field [parent=#cc] TiledGrid3D#TiledGrid3D TiledGrid3D preloaded module
+-- @field TiledGrid3D preloaded module
+-- @see TiledGrid3D
 
 
 --------------------------------------------------------
 -- the cc BaseLight
--- @field [parent=#cc] BaseLight#BaseLight BaseLight preloaded module
+-- @field BaseLight preloaded module
+-- @see BaseLight
 
 
 --------------------------------------------------------
 -- the cc DirectionLight
--- @field [parent=#cc] DirectionLight#DirectionLight DirectionLight preloaded module
+-- @field DirectionLight preloaded module
+-- @see DirectionLight
 
 
 --------------------------------------------------------
 -- the cc PointLight
--- @field [parent=#cc] PointLight#PointLight PointLight preloaded module
+-- @field PointLight preloaded module
+-- @see PointLight
 
 
 --------------------------------------------------------
 -- the cc SpotLight
--- @field [parent=#cc] SpotLight#SpotLight SpotLight preloaded module
+-- @field SpotLight preloaded module
+-- @see SpotLight
 
 
 --------------------------------------------------------
 -- the cc AmbientLight
--- @field [parent=#cc] AmbientLight#AmbientLight AmbientLight preloaded module
+-- @field AmbientLight preloaded module
+-- @see AmbientLight
 
 
 --------------------------------------------------------
 -- the cc GLProgram
--- @field [parent=#cc] GLProgram#GLProgram GLProgram preloaded module
+-- @field GLProgram preloaded module
+-- @see GLProgram
 
 
 --------------------------------------------------------
 -- the cc GLProgramCache
--- @field [parent=#cc] GLProgramCache#GLProgramCache GLProgramCache preloaded module
+-- @field GLProgramCache preloaded module
+-- @see GLProgramCache
 
 
 --------------------------------------------------------
 -- the cc RenderState
--- @field [parent=#cc] RenderState#RenderState RenderState preloaded module
+-- @field RenderState preloaded module
+-- @see RenderState
 
 
 --------------------------------------------------------
 -- the cc Pass
--- @field [parent=#cc] Pass#Pass Pass preloaded module
+-- @field Pass preloaded module
+-- @see Pass
 
 
 --------------------------------------------------------
 -- the cc Technique
--- @field [parent=#cc] Technique#Technique Technique preloaded module
+-- @field Technique preloaded module
+-- @see Technique
 
 
 --------------------------------------------------------
 -- the cc Material
--- @field [parent=#cc] Material#Material Material preloaded module
+-- @field Material preloaded module
+-- @see Material
 
 
 --------------------------------------------------------
 -- the cc TextureCache
--- @field [parent=#cc] TextureCache#TextureCache TextureCache preloaded module
+-- @field TextureCache preloaded module
+-- @see TextureCache
 
 
 --------------------------------------------------------
 -- the cc Device
--- @field [parent=#cc] Device#Device Device preloaded module
+-- @field Device preloaded module
+-- @see Device
 
 
 --------------------------------------------------------
 -- the cc Application
--- @field [parent=#cc] Application#Application Application preloaded module
+-- @field Application preloaded module
+-- @see Application
 
 
 --------------------------------------------------------
 -- the cc GLViewImpl
--- @field [parent=#cc] GLViewImpl#GLViewImpl GLViewImpl preloaded module
+-- @field GLViewImpl preloaded module
+-- @see GLViewImpl
 
 
 --------------------------------------------------------
 -- the cc AnimationCache
--- @field [parent=#cc] AnimationCache#AnimationCache AnimationCache preloaded module
+-- @field AnimationCache preloaded module
+-- @see AnimationCache
 
 
 --------------------------------------------------------
 -- the cc SpriteBatchNode
--- @field [parent=#cc] SpriteBatchNode#SpriteBatchNode SpriteBatchNode preloaded module
+-- @field SpriteBatchNode preloaded module
+-- @see SpriteBatchNode
 
 
 --------------------------------------------------------
 -- the cc SpriteFrameCache
--- @field [parent=#cc] SpriteFrameCache#SpriteFrameCache SpriteFrameCache preloaded module
+-- @field SpriteFrameCache preloaded module
+-- @see SpriteFrameCache
 
 
 --------------------------------------------------------
 -- the cc ParallaxNode
--- @field [parent=#cc] ParallaxNode#ParallaxNode ParallaxNode preloaded module
+-- @field ParallaxNode preloaded module
+-- @see ParallaxNode
 
 
 --------------------------------------------------------
 -- the cc TMXObjectGroup
--- @field [parent=#cc] TMXObjectGroup#TMXObjectGroup TMXObjectGroup preloaded module
+-- @field TMXObjectGroup preloaded module
+-- @see TMXObjectGroup
 
 
 --------------------------------------------------------
 -- the cc TMXLayerInfo
--- @field [parent=#cc] TMXLayerInfo#TMXLayerInfo TMXLayerInfo preloaded module
+-- @field TMXLayerInfo preloaded module
+-- @see TMXLayerInfo
 
 
 --------------------------------------------------------
 -- the cc TMXTilesetInfo
--- @field [parent=#cc] TMXTilesetInfo#TMXTilesetInfo TMXTilesetInfo preloaded module
+-- @field TMXTilesetInfo preloaded module
+-- @see TMXTilesetInfo
 
 
 --------------------------------------------------------
 -- the cc TMXMapInfo
--- @field [parent=#cc] TMXMapInfo#TMXMapInfo TMXMapInfo preloaded module
+-- @field TMXMapInfo preloaded module
+-- @see TMXMapInfo
 
 
 --------------------------------------------------------
 -- the cc TMXLayer
--- @field [parent=#cc] TMXLayer#TMXLayer TMXLayer preloaded module
+-- @field TMXLayer preloaded module
+-- @see TMXLayer
 
 
 --------------------------------------------------------
 -- the cc TMXTiledMap
--- @field [parent=#cc] TMXTiledMap#TMXTiledMap TMXTiledMap preloaded module
+-- @field TMXTiledMap preloaded module
+-- @see TMXTiledMap
 
 
 --------------------------------------------------------
 -- the cc TileMapAtlas
--- @field [parent=#cc] TileMapAtlas#TileMapAtlas TileMapAtlas preloaded module
+-- @field TileMapAtlas preloaded module
+-- @see TileMapAtlas
 
 
 --------------------------------------------------------
 -- the cc MotionStreak3D
--- @field [parent=#cc] MotionStreak3D#MotionStreak3D MotionStreak3D preloaded module
+-- @field MotionStreak3D preloaded module
+-- @see MotionStreak3D
 
 
 --------------------------------------------------------
 -- the cc ComponentLua
--- @field [parent=#cc] ComponentLua#ComponentLua ComponentLua preloaded module
+-- @field ComponentLua preloaded module
+-- @see ComponentLua
 
 
 return nil

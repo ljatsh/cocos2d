@@ -1,36 +1,36 @@
 
 --------------------------------
 -- @module Skin
--- @extend Sprite
--- @parent_module ccs
+-- @see Sprite
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#Skin] getBone 
+-- @function getBone 
 -- @param self
 -- @return Bone#Bone ret (return value: ccs.Bone)
         
 --------------------------------
 -- 
--- @function [parent=#Skin] getNodeToWorldTransformAR 
+-- @function getNodeToWorldTransformAR 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 -- 
--- @function [parent=#Skin] getDisplayName 
+-- @function getDisplayName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#Skin] updateArmatureTransform 
+-- @function updateArmatureTransform 
 -- @param self
 -- @return Skin#Skin self (return value: ccs.Skin)
         
 --------------------------------
 -- 
--- @function [parent=#Skin] setBone 
+-- @function setBone 
 -- @param self
 -- @param #ccs.Bone bone
 -- @return Skin#Skin self (return value: ccs.Skin)
@@ -38,21 +38,21 @@
 --------------------------------
 -- @overload self, string         
 -- @overload self         
--- @function [parent=#Skin] create
+-- @function create
 -- @param self
 -- @param #string pszFileName
 -- @return Skin#Skin ret (return value: ccs.Skin)
 
 --------------------------------
 -- 
--- @function [parent=#Skin] createWithSpriteFrameName 
+-- @function createWithSpriteFrameName 
 -- @param self
 -- @param #string pszSpriteFrameName
 -- @return Skin#Skin ret (return value: ccs.Skin)
         
 --------------------------------
 -- 
--- @function [parent=#Skin] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -61,33 +61,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#Skin] getNodeToWorldTransform 
+-- @function getNodeToWorldTransform 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 -- 
--- @function [parent=#Skin] initWithSpriteFrameName 
+-- @function initWithSpriteFrameName 
 -- @param self
 -- @param #string spriteFrameName
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Skin] initWithFile 
+-- @function initWithFile 
 -- @param self
 -- @param #string filename
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Skin] updateTransform 
+-- @function updateTransform 
 -- @param self
 -- @return Skin#Skin self (return value: ccs.Skin)
         
 --------------------------------
 -- js ctor
--- @function [parent=#Skin] Skin 
+-- @function Skin 
 -- @param self
 -- @return Skin#Skin self (return value: ccs.Skin)
         

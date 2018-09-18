@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module ControlHuePicker
--- @extend Control
--- @parent_module cc
+-- @see Control
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] initWithTargetAndPos 
+-- @function initWithTargetAndPos 
 -- @param self
 -- @param #cc.Node target
 -- @param #vec2_table pos
@@ -14,65 +14,65 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] setHue 
+-- @function setHue 
 -- @param self
 -- @param #float val
 -- @return ControlHuePicker#ControlHuePicker self (return value: cc.ControlHuePicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] getStartPos 
+-- @function getStartPos 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] getHue 
+-- @function getHue 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] getSlider 
+-- @function getSlider 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] setBackground 
+-- @function setBackground 
 -- @param self
 -- @param #cc.Sprite var
 -- @return ControlHuePicker#ControlHuePicker self (return value: cc.ControlHuePicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] setHuePercentage 
+-- @function setHuePercentage 
 -- @param self
 -- @param #float val
 -- @return ControlHuePicker#ControlHuePicker self (return value: cc.ControlHuePicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] getBackground 
+-- @function getBackground 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] getHuePercentage 
+-- @function getHuePercentage 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] setSlider 
+-- @function setSlider 
 -- @param self
 -- @param #cc.Sprite var
 -- @return ControlHuePicker#ControlHuePicker self (return value: cc.ControlHuePicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] create 
+-- @function create 
 -- @param self
 -- @param #cc.Node target
 -- @param #vec2_table pos
@@ -80,14 +80,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return ControlHuePicker#ControlHuePicker self (return value: cc.ControlHuePicker)
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] onTouchMoved 
+-- @function onTouchMoved 
 -- @param self
 -- @param #cc.Touch pTouch
 -- @param #cc.Event pEvent
@@ -95,7 +95,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlHuePicker] onTouchBegan 
+-- @function onTouchBegan 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event pEvent
@@ -103,7 +103,7 @@
         
 --------------------------------
 -- js ctor
--- @function [parent=#ControlHuePicker] ControlHuePicker 
+-- @function ControlHuePicker 
 -- @param self
 -- @return ControlHuePicker#ControlHuePicker self (return value: cc.ControlHuePicker)
         

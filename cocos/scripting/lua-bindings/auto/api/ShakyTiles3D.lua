@@ -1,8 +1,8 @@
 
 --------------------------------
 -- @module ShakyTiles3D
--- @extend TiledGrid3DAction
--- @parent_module cc
+-- @see TiledGrid3DAction
+-- @see cc
 
 --------------------------------
 -- brief Initializes the action with a range, shake Z vertices, grid size and duration.<br>
@@ -11,7 +11,7 @@
 -- param range Specify the range of the shaky effect.<br>
 -- param shakeZ Specify whether shake on the z axis.<br>
 -- return If the Initialization success, return true; otherwise, return false.
--- @function [parent=#ShakyTiles3D] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -26,7 +26,7 @@
 -- param range Specify the range of the shaky effect.<br>
 -- param shakeZ Specify whether shake on the z axis.<br>
 -- return If the creation success, return a pointer of ShakyTiles3D action; otherwise, return nil.
--- @function [parent=#ShakyTiles3D] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -36,20 +36,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#ShakyTiles3D] clone 
+-- @function clone 
 -- @param self
 -- @return ShakyTiles3D#ShakyTiles3D ret (return value: cc.ShakyTiles3D)
         
 --------------------------------
 -- 
--- @function [parent=#ShakyTiles3D] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return ShakyTiles3D#ShakyTiles3D self (return value: cc.ShakyTiles3D)
         
 --------------------------------
 -- 
--- @function [parent=#ShakyTiles3D] ShakyTiles3D 
+-- @function ShakyTiles3D 
 -- @param self
 -- @return ShakyTiles3D#ShakyTiles3D self (return value: cc.ShakyTiles3D)
         

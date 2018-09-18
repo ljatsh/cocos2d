@@ -3,97 +3,116 @@
 
 --------------------------------------------------------
 -- the cc Control
--- @field [parent=#cc] Control#Control Control preloaded module
+-- @field Control preloaded module
+-- @see Control
 
 
 --------------------------------------------------------
 -- the cc ControlButton
--- @field [parent=#cc] ControlButton#ControlButton ControlButton preloaded module
+-- @field ControlButton preloaded module
+-- @see ControlButton
 
 
 --------------------------------------------------------
 -- the cc ControlHuePicker
--- @field [parent=#cc] ControlHuePicker#ControlHuePicker ControlHuePicker preloaded module
+-- @field ControlHuePicker preloaded module
+-- @see ControlHuePicker
 
 
 --------------------------------------------------------
 -- the cc ControlSaturationBrightnessPicker
--- @field [parent=#cc] ControlSaturationBrightnessPicker#ControlSaturationBrightnessPicker ControlSaturationBrightnessPicker preloaded module
+-- @field ControlSaturationBrightnessPicker preloaded module
+-- @see ControlSaturationBrightnessPicker
 
 
 --------------------------------------------------------
 -- the cc ControlColourPicker
--- @field [parent=#cc] ControlColourPicker#ControlColourPicker ControlColourPicker preloaded module
+-- @field ControlColourPicker preloaded module
+-- @see ControlColourPicker
 
 
 --------------------------------------------------------
 -- the cc ControlPotentiometer
--- @field [parent=#cc] ControlPotentiometer#ControlPotentiometer ControlPotentiometer preloaded module
+-- @field ControlPotentiometer preloaded module
+-- @see ControlPotentiometer
 
 
 --------------------------------------------------------
 -- the cc ControlSlider
--- @field [parent=#cc] ControlSlider#ControlSlider ControlSlider preloaded module
+-- @field ControlSlider preloaded module
+-- @see ControlSlider
 
 
 --------------------------------------------------------
 -- the cc ControlStepper
--- @field [parent=#cc] ControlStepper#ControlStepper ControlStepper preloaded module
+-- @field ControlStepper preloaded module
+-- @see ControlStepper
 
 
 --------------------------------------------------------
 -- the cc ControlSwitch
--- @field [parent=#cc] ControlSwitch#ControlSwitch ControlSwitch preloaded module
+-- @field ControlSwitch preloaded module
+-- @see ControlSwitch
 
 
 --------------------------------------------------------
 -- the cc ScrollView
--- @field [parent=#cc] ScrollView#ScrollView ScrollView preloaded module
+-- @field ScrollView preloaded module
+-- @see ScrollView
 
 
 --------------------------------------------------------
 -- the cc TableViewCell
--- @field [parent=#cc] TableViewCell#TableViewCell TableViewCell preloaded module
+-- @field TableViewCell preloaded module
+-- @see TableViewCell
 
 
 --------------------------------------------------------
 -- the cc TableView
--- @field [parent=#cc] TableView#TableView TableView preloaded module
+-- @field TableView preloaded module
+-- @see TableView
 
 
 --------------------------------------------------------
 -- the cc AssetsManager
--- @field [parent=#cc] AssetsManager#AssetsManager AssetsManager preloaded module
+-- @field AssetsManager preloaded module
+-- @see AssetsManager
 
 
 --------------------------------------------------------
 -- the cc EventAssetsManagerEx
--- @field [parent=#cc] EventAssetsManagerEx#EventAssetsManagerEx EventAssetsManagerEx preloaded module
+-- @field EventAssetsManagerEx preloaded module
+-- @see EventAssetsManagerEx
 
 
 --------------------------------------------------------
 -- the cc Manifest
--- @field [parent=#cc] Manifest#Manifest Manifest preloaded module
+-- @field Manifest preloaded module
+-- @see Manifest
 
 
 --------------------------------------------------------
 -- the cc AssetsManagerEx
--- @field [parent=#cc] AssetsManagerEx#AssetsManagerEx AssetsManagerEx preloaded module
+-- @field AssetsManagerEx preloaded module
+-- @see AssetsManagerEx
 
 
 --------------------------------------------------------
 -- the cc EventListenerAssetsManagerEx
--- @field [parent=#cc] EventListenerAssetsManagerEx#EventListenerAssetsManagerEx EventListenerAssetsManagerEx preloaded module
+-- @field EventListenerAssetsManagerEx preloaded module
+-- @see EventListenerAssetsManagerEx
 
 
 --------------------------------------------------------
 -- the cc ParticleSystem3D
--- @field [parent=#cc] ParticleSystem3D#ParticleSystem3D ParticleSystem3D preloaded module
+-- @field ParticleSystem3D preloaded module
+-- @see ParticleSystem3D
 
 
 --------------------------------------------------------
 -- the cc PUParticleSystem3D
--- @field [parent=#cc] PUParticleSystem3D#PUParticleSystem3D PUParticleSystem3D preloaded module
+-- @field PUParticleSystem3D preloaded module
+-- @see PUParticleSystem3D
 
 
 return nil

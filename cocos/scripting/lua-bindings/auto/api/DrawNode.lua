@@ -1,8 +1,8 @@
 
 --------------------------------
 -- @module DrawNode
--- @extend Node
--- @parent_module cc
+-- @see Node
+-- @see cc
 
 --------------------------------
 --  Draw an line from origin to destination with color. <br>
@@ -10,7 +10,7 @@
 -- param destination The line destination.<br>
 -- param color The line color.<br>
 -- js NA
--- @function [parent=#DrawNode] drawLine 
+-- @function drawLine 
 -- @param self
 -- @param #vec2_table origin
 -- @param #vec2_table destination
@@ -20,7 +20,7 @@
 --------------------------------
 -- @overload self, vec2_table, vec2_table, vec2_table, vec2_table, color4f_table         
 -- @overload self, vec2_table, vec2_table, color4f_table         
--- @function [parent=#DrawNode] drawRect
+-- @function drawRect
 -- @param self
 -- @param #vec2_table p1
 -- @param #vec2_table p2
@@ -32,7 +32,7 @@
 --------------------------------
 -- @overload self, vec2_table, float, float, unsigned int, color4f_table         
 -- @overload self, vec2_table, float, float, unsigned int, float, float, color4f_table         
--- @function [parent=#DrawNode] drawSolidCircle
+-- @function drawSolidCircle
 -- @param self
 -- @param #vec2_table center
 -- @param #float radius
@@ -45,14 +45,14 @@
 
 --------------------------------
 -- 
--- @function [parent=#DrawNode] setLineWidth 
+-- @function setLineWidth 
 -- @param self
 -- @param #float lineWidth
 -- @return DrawNode#DrawNode self (return value: cc.DrawNode)
         
 --------------------------------
 -- js NA
--- @function [parent=#DrawNode] onDrawGLPoint 
+-- @function onDrawGLPoint 
 -- @param self
 -- @param #mat4_table transform
 -- @param #unsigned int flags
@@ -63,7 +63,7 @@
 -- param pos The dot center.<br>
 -- param radius The dot radius.<br>
 -- param color The dot color.
--- @function [parent=#DrawNode] drawDot 
+-- @function drawDot 
 -- @param self
 -- @param #vec2_table pos
 -- @param #float radius
@@ -76,7 +76,7 @@
 -- param to The segment destination.<br>
 -- param radius The segment radius.<br>
 -- param color The segment color.
--- @function [parent=#DrawNode] drawSegment 
+-- @function drawSegment 
 -- @param self
 -- @param #vec2_table from
 -- @param #vec2_table to
@@ -87,13 +87,13 @@
 --------------------------------
 --  Get the color mixed mode.<br>
 -- lua NA
--- @function [parent=#DrawNode] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
 --------------------------------
 -- js NA
--- @function [parent=#DrawNode] onDraw 
+-- @function onDraw 
 -- @param self
 -- @param #mat4_table transform
 -- @param #unsigned int flags
@@ -102,7 +102,7 @@
 --------------------------------
 -- @overload self, vec2_table, float, float, unsigned int, bool, color4f_table         
 -- @overload self, vec2_table, float, float, unsigned int, bool, float, float, color4f_table         
--- @function [parent=#DrawNode] drawCircle
+-- @function drawCircle
 -- @param self
 -- @param #vec2_table center
 -- @param #float radius
@@ -121,7 +121,7 @@
 -- param destination The destination of the bezier path.<br>
 -- param segments The number of segments.<br>
 -- param color Set the quad bezier color.
--- @function [parent=#DrawNode] drawQuadBezier 
+-- @function drawQuadBezier 
 -- @param self
 -- @param #vec2_table origin
 -- @param #vec2_table control
@@ -132,7 +132,7 @@
         
 --------------------------------
 -- js NA
--- @function [parent=#DrawNode] onDrawGLLine 
+-- @function onDrawGLLine 
 -- @param self
 -- @param #mat4_table transform
 -- @param #unsigned int flags
@@ -145,7 +145,7 @@
 -- param p3 The triangle vertex point.<br>
 -- param color The triangle color.<br>
 -- js NA
--- @function [parent=#DrawNode] drawTriangle 
+-- @function drawTriangle 
 -- @param self
 -- @param #vec2_table p1
 -- @param #vec2_table p2
@@ -160,14 +160,14 @@
 -- In js: var setBlendFunc(var src, var dst)<br>
 -- endcode<br>
 -- lua NA
--- @function [parent=#DrawNode] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return DrawNode#DrawNode self (return value: cc.DrawNode)
         
 --------------------------------
 --  Clear the geometry in the node's buffer. 
--- @function [parent=#DrawNode] clear 
+-- @function clear 
 -- @param self
 -- @return DrawNode#DrawNode self (return value: cc.DrawNode)
         
@@ -178,7 +178,7 @@
 -- param destination The rectangle destination.<br>
 -- param color The rectangle color.<br>
 -- js NA
--- @function [parent=#DrawNode] drawSolidRect 
+-- @function drawSolidRect 
 -- @param self
 -- @param #vec2_table origin
 -- @param #vec2_table destination
@@ -187,7 +187,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#DrawNode] getLineWidth 
+-- @function getLineWidth 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -197,7 +197,7 @@
 -- param pointSize The point size.<br>
 -- param color The point color.<br>
 -- js NA
--- @function [parent=#DrawNode] drawPoint 
+-- @function drawPoint 
 -- @param self
 -- @param #vec2_table point
 -- @param #float pointSize
@@ -212,7 +212,7 @@
 -- param destination The destination of the bezier path.<br>
 -- param segments The number of segments.<br>
 -- param color Set the cubic bezier color.
--- @function [parent=#DrawNode] drawCubicBezier 
+-- @function drawCubicBezier 
 -- @param self
 -- @param #vec2_table origin
 -- @param #vec2_table control1
@@ -225,13 +225,13 @@
 --------------------------------
 --  creates and initialize a DrawNode node.<br>
 -- return Return an autorelease object.
--- @function [parent=#DrawNode] create 
+-- @function create 
 -- @param self
 -- @return DrawNode#DrawNode ret (return value: cc.DrawNode)
         
 --------------------------------
 -- 
--- @function [parent=#DrawNode] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -240,13 +240,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#DrawNode] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#DrawNode] DrawNode 
+-- @function DrawNode 
 -- @param self
 -- @return DrawNode#DrawNode self (return value: cc.DrawNode)
         

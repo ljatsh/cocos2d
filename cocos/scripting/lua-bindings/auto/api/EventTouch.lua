@@ -1,20 +1,20 @@
 
 --------------------------------
 -- @module EventTouch
--- @extend Event
--- @parent_module cc
+-- @see Event
+-- @see cc
 
 --------------------------------
 --  Get event code.<br>
 -- return The code of the event.
--- @function [parent=#EventTouch] getEventCode 
+-- @function getEventCode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  Set the event code.<br>
 -- param eventCode A given EventCode.
--- @function [parent=#EventTouch] setEventCode 
+-- @function setEventCode 
 -- @param self
 -- @param #int eventCode
 -- @return EventTouch#EventTouch self (return value: cc.EventTouch)
@@ -22,7 +22,7 @@
 --------------------------------
 -- Constructor.<br>
 -- js NA
--- @function [parent=#EventTouch] EventTouch 
+-- @function EventTouch 
 -- @param self
 -- @return EventTouch#EventTouch self (return value: cc.EventTouch)
         

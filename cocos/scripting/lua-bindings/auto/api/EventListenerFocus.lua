@@ -1,30 +1,30 @@
 
 --------------------------------
 -- @module EventListenerFocus
--- @extend EventListener
--- @parent_module cc
+-- @see EventListener
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EventListenerFocus] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- / Overrides
--- @function [parent=#EventListenerFocus] clone 
+-- @function clone 
 -- @param self
 -- @return EventListenerFocus#EventListenerFocus ret (return value: cc.EventListenerFocus)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerFocus] checkAvailable 
+-- @function checkAvailable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerFocus] EventListenerFocus 
+-- @function EventListenerFocus 
 -- @param self
 -- @return EventListenerFocus#EventListenerFocus self (return value: cc.EventListenerFocus)
         

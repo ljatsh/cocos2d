@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module EventListenerAssetsManagerEx
--- @extend EventListenerCustom
--- @parent_module cc
+-- @see EventListenerCustom
+-- @see cc
 
 --------------------------------
 --  Initializes event with type and callback function 
--- @function [parent=#EventListenerAssetsManagerEx] init 
+-- @function init 
 -- @param self
 -- @param #cc.AssetsManagerEx AssetsManagerEx
 -- @param #function callback
@@ -14,19 +14,19 @@
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerAssetsManagerEx] clone 
+-- @function clone 
 -- @param self
 -- @return EventListenerAssetsManagerEx#EventListenerAssetsManagerEx ret (return value: cc.EventListenerAssetsManagerEx)
         
 --------------------------------
 -- / Overrides
--- @function [parent=#EventListenerAssetsManagerEx] checkAvailable 
+-- @function checkAvailable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Constructor 
--- @function [parent=#EventListenerAssetsManagerEx] EventListenerAssetsManagerEx 
+-- @function EventListenerAssetsManagerEx 
 -- @param self
 -- @return EventListenerAssetsManagerEx#EventListenerAssetsManagerEx self (return value: cc.EventListenerAssetsManagerEx)
         

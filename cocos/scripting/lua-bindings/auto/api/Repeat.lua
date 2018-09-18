@@ -1,20 +1,20 @@
 
 --------------------------------
 -- @module Repeat
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 --  Sets the inner action.<br>
 -- param action The inner action.
--- @function [parent=#Repeat] setInnerAction 
+-- @function setInnerAction 
 -- @param self
 -- @param #cc.FiniteTimeAction action
 -- @return Repeat#Repeat self (return value: cc.Repeat)
         
 --------------------------------
 --  initializes a Repeat action. Times is an unsigned integer between 1 and pow(2,30) 
--- @function [parent=#Repeat] initWithAction 
+-- @function initWithAction 
 -- @param self
 -- @param #cc.FiniteTimeAction pAction
 -- @param #unsigned int times
@@ -23,7 +23,7 @@
 --------------------------------
 --  Gets the inner action.<br>
 -- return The inner action.
--- @function [parent=#Repeat] getInnerAction 
+-- @function getInnerAction 
 -- @param self
 -- @return FiniteTimeAction#FiniteTimeAction ret (return value: cc.FiniteTimeAction)
         
@@ -32,7 +32,7 @@
 -- param action The action needs to repeat.<br>
 -- param times The repeat times.<br>
 -- return An autoreleased Repeat object.
--- @function [parent=#Repeat] create 
+-- @function create 
 -- @param self
 -- @param #cc.FiniteTimeAction action
 -- @param #unsigned int times
@@ -40,45 +40,45 @@
         
 --------------------------------
 -- 
--- @function [parent=#Repeat] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return Repeat#Repeat self (return value: cc.Repeat)
         
 --------------------------------
 -- 
--- @function [parent=#Repeat] reverse 
+-- @function reverse 
 -- @param self
 -- @return Repeat#Repeat ret (return value: cc.Repeat)
         
 --------------------------------
 -- 
--- @function [parent=#Repeat] clone 
+-- @function clone 
 -- @param self
 -- @return Repeat#Repeat ret (return value: cc.Repeat)
         
 --------------------------------
 -- 
--- @function [parent=#Repeat] stop 
+-- @function stop 
 -- @param self
 -- @return Repeat#Repeat self (return value: cc.Repeat)
         
 --------------------------------
 -- param dt In seconds.
--- @function [parent=#Repeat] update 
+-- @function update 
 -- @param self
 -- @param #float dt
 -- @return Repeat#Repeat self (return value: cc.Repeat)
         
 --------------------------------
 -- 
--- @function [parent=#Repeat] isDone 
+-- @function isDone 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Repeat] Repeat 
+-- @function Repeat 
 -- @param self
 -- @return Repeat#Repeat self (return value: cc.Repeat)
         

@@ -3,12 +3,14 @@
 
 --------------------------------------------------------
 -- the ccexp TMXLayer
--- @field [parent=#ccexp] TMXLayer#TMXLayer TMXLayer preloaded module
+-- @field TMXLayer preloaded module
+-- @see TMXLayer
 
 
 --------------------------------------------------------
 -- the ccexp TMXTiledMap
--- @field [parent=#ccexp] TMXTiledMap#TMXTiledMap TMXTiledMap preloaded module
+-- @field TMXTiledMap preloaded module
+-- @see TMXTiledMap
 
 
 return nil

@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module TransitionSceneOriented
--- @extend TransitionScene
--- @parent_module cc
+-- @see TransitionScene
+-- @see cc
 
 --------------------------------
 --  initializes a transition with duration and incoming scene 
--- @function [parent=#TransitionSceneOriented] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -19,7 +19,7 @@
 -- param scene A given scene.<br>
 -- param orientation A given orientation: LeftOver, RightOver, UpOver, DownOver.<br>
 -- return A autoreleased TransitionSceneOriented object.
--- @function [parent=#TransitionSceneOriented] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -28,7 +28,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionSceneOriented] TransitionSceneOriented 
+-- @function TransitionSceneOriented 
 -- @param self
 -- @return TransitionSceneOriented#TransitionSceneOriented self (return value: cc.TransitionSceneOriented)
         

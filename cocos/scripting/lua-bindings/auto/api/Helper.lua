@@ -1,7 +1,7 @@
 
 --------------------------------
 -- @module Helper
--- @parent_module ccui
+-- @see ccui
 
 --------------------------------
 -- brief Get a UTF8 substring from a std::string with a given start position and length<br>
@@ -11,7 +11,7 @@
 -- param length The length of the substring in UTF8 count<br>
 -- return a UTF8 substring<br>
 -- js NA
--- @function [parent=#Helper] getSubStringOfUTF8String 
+-- @function getSubStringOfUTF8String 
 -- @param self
 -- @param #string str
 -- @param #unsigned int start
@@ -22,7 +22,7 @@
 -- brief Convert a node's boundingBox rect into screen coordinates.<br>
 -- param node Any node pointer.<br>
 -- return A Rect in screen coordinates.
--- @function [parent=#Helper] convertBoundingBoxToScreen 
+-- @function convertBoundingBoxToScreen 
 -- @param self
 -- @param #cc.Node node
 -- @return rect_table#rect_table ret (return value: rect_table)
@@ -30,7 +30,7 @@
 --------------------------------
 -- Change the active property of Layout's @see `LayoutComponent`<br>
 -- param active A boolean value.
--- @function [parent=#Helper] changeLayoutSystemActiveState 
+-- @function changeLayoutSystemActiveState 
 -- @param self
 -- @param #bool active
 -- @return Helper#Helper self (return value: ccui.Helper)
@@ -41,7 +41,7 @@
 -- param root The be searched root widget.<br>
 -- param tag The widget action's tag.<br>
 -- return Widget instance pointer.
--- @function [parent=#Helper] seekActionWidgetByActionTag 
+-- @function seekActionWidgetByActionTag 
 -- @param self
 -- @param #ccui.Widget root
 -- @param #int tag
@@ -53,7 +53,7 @@
 -- param root      The be searched root widget.<br>
 -- param name      The widget name.<br>
 -- return Widget instance pointer.
--- @function [parent=#Helper] seekWidgetByName 
+-- @function seekWidgetByName 
 -- @param self
 -- @param #ccui.Widget root
 -- @param #string name
@@ -65,7 +65,7 @@
 -- param root      The be searched root widget.<br>
 -- param tag       The widget tag.<br>
 -- return Widget instance pointer.
--- @function [parent=#Helper] seekWidgetByTag 
+-- @function seekWidgetByTag 
 -- @param self
 -- @param #ccui.Widget root
 -- @param #int tag
@@ -77,7 +77,7 @@
 -- param  capInsets A user defined capInsets.<br>
 -- param  textureSize  The size of a scale9enabled texture<br>
 -- return a restricted capInset.
--- @function [parent=#Helper] restrictCapInsetRect 
+-- @function restrictCapInsetRect 
 -- @param self
 -- @param #rect_table capInsets
 -- @param #size_table textureSize
@@ -86,7 +86,7 @@
 --------------------------------
 -- Refresh object and it's children layout state<br>
 -- param rootNode   A Node* or Node* descendant instance pointer.
--- @function [parent=#Helper] doLayout 
+-- @function doLayout 
 -- @param self
 -- @param #cc.Node rootNode
 -- @return Helper#Helper self (return value: ccui.Helper)

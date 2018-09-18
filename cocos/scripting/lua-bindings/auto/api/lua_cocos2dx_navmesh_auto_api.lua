@@ -3,17 +3,20 @@
 
 --------------------------------------------------------
 -- the cc NavMeshAgent
--- @field [parent=#cc] NavMeshAgent#NavMeshAgent NavMeshAgent preloaded module
+-- @field NavMeshAgent preloaded module
+-- @see NavMeshAgent
 
 
 --------------------------------------------------------
 -- the cc NavMeshObstacle
--- @field [parent=#cc] NavMeshObstacle#NavMeshObstacle NavMeshObstacle preloaded module
+-- @field NavMeshObstacle preloaded module
+-- @see NavMeshObstacle
 
 
 --------------------------------------------------------
 -- the cc NavMesh
--- @field [parent=#cc] NavMesh#NavMesh NavMesh preloaded module
+-- @field NavMesh preloaded module
+-- @see NavMesh
 
 
 return nil

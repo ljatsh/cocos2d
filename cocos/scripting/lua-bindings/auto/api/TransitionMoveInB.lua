@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module TransitionMoveInB
--- @extend TransitionMoveInL
--- @parent_module cc
+-- @see TransitionMoveInL
+-- @see cc
 
 --------------------------------
 --  Creates a transition with duration and incoming scene.<br>
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return A autoreleased TransitionMoveInB object.
--- @function [parent=#TransitionMoveInB] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -17,7 +17,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionMoveInB] TransitionMoveInB 
+-- @function TransitionMoveInB 
 -- @param self
 -- @return TransitionMoveInB#TransitionMoveInB self (return value: cc.TransitionMoveInB)
         

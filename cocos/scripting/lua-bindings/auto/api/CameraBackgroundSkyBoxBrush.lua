@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module CameraBackgroundSkyBoxBrush
--- @extend CameraBackgroundBrush
--- @parent_module cc
+-- @see CameraBackgroundBrush
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#CameraBackgroundSkyBoxBrush] setTextureValid 
+-- @function setTextureValid 
 -- @param self
 -- @param #bool valid
 -- @return CameraBackgroundSkyBoxBrush#CameraBackgroundSkyBoxBrush self (return value: cc.CameraBackgroundSkyBoxBrush)
@@ -14,28 +14,28 @@
 --------------------------------
 -- Set skybox texture <br>
 -- param texture Skybox texture
--- @function [parent=#CameraBackgroundSkyBoxBrush] setTexture 
+-- @function setTexture 
 -- @param self
 -- @param #cc.TextureCube texture
 -- @return CameraBackgroundSkyBoxBrush#CameraBackgroundSkyBoxBrush self (return value: cc.CameraBackgroundSkyBoxBrush)
         
 --------------------------------
 -- 
--- @function [parent=#CameraBackgroundSkyBoxBrush] setActived 
+-- @function setActived 
 -- @param self
 -- @param #bool actived
 -- @return CameraBackgroundSkyBoxBrush#CameraBackgroundSkyBoxBrush self (return value: cc.CameraBackgroundSkyBoxBrush)
         
 --------------------------------
 -- 
--- @function [parent=#CameraBackgroundSkyBoxBrush] isActived 
+-- @function isActived 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- @overload self         
 -- @overload self, string, string, string, string, string, string         
--- @function [parent=#CameraBackgroundSkyBoxBrush] create
+-- @function create
 -- @param self
 -- @param #string positive_x
 -- @param #string negative_x
@@ -48,32 +48,32 @@
 --------------------------------
 -- Get brush type. Should be BrushType::SKYBOX<br>
 -- return brush type
--- @function [parent=#CameraBackgroundSkyBoxBrush] getBrushType 
+-- @function getBrushType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Draw background
--- @function [parent=#CameraBackgroundSkyBoxBrush] drawBackground 
+-- @function drawBackground 
 -- @param self
 -- @param #cc.Camera camera
 -- @return CameraBackgroundSkyBoxBrush#CameraBackgroundSkyBoxBrush self (return value: cc.CameraBackgroundSkyBoxBrush)
         
 --------------------------------
 -- init Skybox.
--- @function [parent=#CameraBackgroundSkyBoxBrush] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#CameraBackgroundSkyBoxBrush] isValid 
+-- @function isValid 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#CameraBackgroundSkyBoxBrush] CameraBackgroundSkyBoxBrush 
+-- @function CameraBackgroundSkyBoxBrush 
 -- @param self
 -- @return CameraBackgroundSkyBoxBrush#CameraBackgroundSkyBoxBrush self (return value: cc.CameraBackgroundSkyBoxBrush)
         

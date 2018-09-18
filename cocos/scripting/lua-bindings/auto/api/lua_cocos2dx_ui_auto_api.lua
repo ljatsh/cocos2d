@@ -3,177 +3,212 @@
 
 --------------------------------------------------------
 -- the ccui LayoutParameter
--- @field [parent=#ccui] LayoutParameter#LayoutParameter LayoutParameter preloaded module
+-- @field LayoutParameter preloaded module
+-- @see LayoutParameter
 
 
 --------------------------------------------------------
 -- the ccui LinearLayoutParameter
--- @field [parent=#ccui] LinearLayoutParameter#LinearLayoutParameter LinearLayoutParameter preloaded module
+-- @field LinearLayoutParameter preloaded module
+-- @see LinearLayoutParameter
 
 
 --------------------------------------------------------
 -- the ccui RelativeLayoutParameter
--- @field [parent=#ccui] RelativeLayoutParameter#RelativeLayoutParameter RelativeLayoutParameter preloaded module
+-- @field RelativeLayoutParameter preloaded module
+-- @see RelativeLayoutParameter
 
 
 --------------------------------------------------------
 -- the ccui Widget
--- @field [parent=#ccui] Widget#Widget Widget preloaded module
+-- @field Widget preloaded module
+-- @see Widget
 
 
 --------------------------------------------------------
 -- the ccui Layout
--- @field [parent=#ccui] Layout#Layout Layout preloaded module
+-- @field Layout preloaded module
+-- @see Layout
 
 
 --------------------------------------------------------
 -- the ccui Button
--- @field [parent=#ccui] Button#Button Button preloaded module
+-- @field Button preloaded module
+-- @see Button
 
 
 --------------------------------------------------------
 -- the ccui AbstractCheckButton
--- @field [parent=#ccui] AbstractCheckButton#AbstractCheckButton AbstractCheckButton preloaded module
+-- @field AbstractCheckButton preloaded module
+-- @see AbstractCheckButton
 
 
 --------------------------------------------------------
 -- the ccui CheckBox
--- @field [parent=#ccui] CheckBox#CheckBox CheckBox preloaded module
+-- @field CheckBox preloaded module
+-- @see CheckBox
 
 
 --------------------------------------------------------
 -- the ccui RadioButton
--- @field [parent=#ccui] RadioButton#RadioButton RadioButton preloaded module
+-- @field RadioButton preloaded module
+-- @see RadioButton
 
 
 --------------------------------------------------------
 -- the ccui RadioButtonGroup
--- @field [parent=#ccui] RadioButtonGroup#RadioButtonGroup RadioButtonGroup preloaded module
+-- @field RadioButtonGroup preloaded module
+-- @see RadioButtonGroup
 
 
 --------------------------------------------------------
 -- the ccui ImageView
--- @field [parent=#ccui] ImageView#ImageView ImageView preloaded module
+-- @field ImageView preloaded module
+-- @see ImageView
 
 
 --------------------------------------------------------
 -- the ccui Text
--- @field [parent=#ccui] Text#Text Text preloaded module
+-- @field Text preloaded module
+-- @see Text
 
 
 --------------------------------------------------------
 -- the ccui TextAtlas
--- @field [parent=#ccui] TextAtlas#TextAtlas TextAtlas preloaded module
+-- @field TextAtlas preloaded module
+-- @see TextAtlas
 
 
 --------------------------------------------------------
 -- the ccui LoadingBar
--- @field [parent=#ccui] LoadingBar#LoadingBar LoadingBar preloaded module
+-- @field LoadingBar preloaded module
+-- @see LoadingBar
 
 
 --------------------------------------------------------
 -- the ccui ScrollView
--- @field [parent=#ccui] ScrollView#ScrollView ScrollView preloaded module
+-- @field ScrollView preloaded module
+-- @see ScrollView
 
 
 --------------------------------------------------------
 -- the ccui ListView
--- @field [parent=#ccui] ListView#ListView ListView preloaded module
+-- @field ListView preloaded module
+-- @see ListView
 
 
 --------------------------------------------------------
 -- the ccui Slider
--- @field [parent=#ccui] Slider#Slider Slider preloaded module
+-- @field Slider preloaded module
+-- @see Slider
 
 
 --------------------------------------------------------
 -- the ccui TextField
--- @field [parent=#ccui] TextField#TextField TextField preloaded module
+-- @field TextField preloaded module
+-- @see TextField
 
 
 --------------------------------------------------------
 -- the ccui TextBMFont
--- @field [parent=#ccui] TextBMFont#TextBMFont TextBMFont preloaded module
+-- @field TextBMFont preloaded module
+-- @see TextBMFont
 
 
 --------------------------------------------------------
 -- the ccui PageView
--- @field [parent=#ccui] PageView#PageView PageView preloaded module
+-- @field PageView preloaded module
+-- @see PageView
 
 
 --------------------------------------------------------
 -- the ccui Helper
--- @field [parent=#ccui] Helper#Helper Helper preloaded module
+-- @field Helper preloaded module
+-- @see Helper
 
 
 --------------------------------------------------------
 -- the ccui RichElement
--- @field [parent=#ccui] RichElement#RichElement RichElement preloaded module
+-- @field RichElement preloaded module
+-- @see RichElement
 
 
 --------------------------------------------------------
 -- the ccui RichElementText
--- @field [parent=#ccui] RichElementText#RichElementText RichElementText preloaded module
+-- @field RichElementText preloaded module
+-- @see RichElementText
 
 
 --------------------------------------------------------
 -- the ccui RichElementImage
--- @field [parent=#ccui] RichElementImage#RichElementImage RichElementImage preloaded module
+-- @field RichElementImage preloaded module
+-- @see RichElementImage
 
 
 --------------------------------------------------------
 -- the ccui RichElementCustomNode
--- @field [parent=#ccui] RichElementCustomNode#RichElementCustomNode RichElementCustomNode preloaded module
+-- @field RichElementCustomNode preloaded module
+-- @see RichElementCustomNode
 
 
 --------------------------------------------------------
 -- the ccui RichElementNewLine
--- @field [parent=#ccui] RichElementNewLine#RichElementNewLine RichElementNewLine preloaded module
+-- @field RichElementNewLine preloaded module
+-- @see RichElementNewLine
 
 
 --------------------------------------------------------
 -- the ccui RichText
--- @field [parent=#ccui] RichText#RichText RichText preloaded module
+-- @field RichText preloaded module
+-- @see RichText
 
 
 --------------------------------------------------------
 -- the ccui HBox
--- @field [parent=#ccui] HBox#HBox HBox preloaded module
+-- @field HBox preloaded module
+-- @see HBox
 
 
 --------------------------------------------------------
 -- the ccui VBox
--- @field [parent=#ccui] VBox#VBox VBox preloaded module
+-- @field VBox preloaded module
+-- @see VBox
 
 
 --------------------------------------------------------
 -- the ccui RelativeBox
--- @field [parent=#ccui] RelativeBox#RelativeBox RelativeBox preloaded module
+-- @field RelativeBox preloaded module
+-- @see RelativeBox
 
 
 --------------------------------------------------------
 -- the ccui Scale9Sprite
--- @field [parent=#ccui] Scale9Sprite#Scale9Sprite Scale9Sprite preloaded module
+-- @field Scale9Sprite preloaded module
+-- @see Scale9Sprite
 
 
 --------------------------------------------------------
 -- the ccui EditBox
--- @field [parent=#ccui] EditBox#EditBox EditBox preloaded module
+-- @field EditBox preloaded module
+-- @see EditBox
 
 
 --------------------------------------------------------
 -- the ccui LayoutComponent
--- @field [parent=#ccui] LayoutComponent#LayoutComponent LayoutComponent preloaded module
+-- @field LayoutComponent preloaded module
+-- @see LayoutComponent
 
 
 --------------------------------------------------------
 -- the ccui TabHeader
--- @field [parent=#ccui] TabHeader#TabHeader TabHeader preloaded module
+-- @field TabHeader preloaded module
+-- @see TabHeader
 
 
 --------------------------------------------------------
 -- the ccui TabControl
--- @field [parent=#ccui] TabControl#TabControl TabControl preloaded module
+-- @field TabControl preloaded module
+-- @see TabControl
 
 
 return nil

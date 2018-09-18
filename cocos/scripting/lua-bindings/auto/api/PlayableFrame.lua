@@ -1,37 +1,37 @@
 
 --------------------------------
 -- @module PlayableFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#PlayableFrame] setPlayableAct 
+-- @function setPlayableAct 
 -- @param self
 -- @param #string playact
 -- @return PlayableFrame#PlayableFrame self (return value: ccs.PlayableFrame)
         
 --------------------------------
 -- 
--- @function [parent=#PlayableFrame] getPlayableAct 
+-- @function getPlayableAct 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#PlayableFrame] create 
+-- @function create 
 -- @param self
 -- @return PlayableFrame#PlayableFrame ret (return value: ccs.PlayableFrame)
         
 --------------------------------
 -- 
--- @function [parent=#PlayableFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#PlayableFrame] PlayableFrame 
+-- @function PlayableFrame 
 -- @param self
 -- @return PlayableFrame#PlayableFrame self (return value: ccs.PlayableFrame)
         

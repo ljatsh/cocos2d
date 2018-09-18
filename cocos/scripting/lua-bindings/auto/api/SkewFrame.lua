@@ -1,50 +1,50 @@
 
 --------------------------------
 -- @module SkewFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#SkewFrame] getSkewY 
+-- @function getSkewY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#SkewFrame] setSkewX 
+-- @function setSkewX 
 -- @param self
 -- @param #float skewx
 -- @return SkewFrame#SkewFrame self (return value: ccs.SkewFrame)
         
 --------------------------------
 -- 
--- @function [parent=#SkewFrame] setSkewY 
+-- @function setSkewY 
 -- @param self
 -- @param #float skewy
 -- @return SkewFrame#SkewFrame self (return value: ccs.SkewFrame)
         
 --------------------------------
 -- 
--- @function [parent=#SkewFrame] getSkewX 
+-- @function getSkewX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#SkewFrame] create 
+-- @function create 
 -- @param self
 -- @return SkewFrame#SkewFrame ret (return value: ccs.SkewFrame)
         
 --------------------------------
 -- 
--- @function [parent=#SkewFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#SkewFrame] SkewFrame 
+-- @function SkewFrame 
 -- @param self
 -- @return SkewFrame#SkewFrame self (return value: ccs.SkewFrame)
         

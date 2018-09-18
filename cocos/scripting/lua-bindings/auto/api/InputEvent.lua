@@ -1,95 +1,95 @@
 
 --------------------------------
 -- @module InputEvent
--- @parent_module fgui
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getTouchId 
+-- @function getTouchId 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getProcessor 
+-- @function getProcessor 
 -- @param self
 -- @return InputProcessor#InputProcessor ret (return value: fgui.InputProcessor)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getButton 
+-- @function getButton 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] isDoubleClick 
+-- @function isDoubleClick 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getTouch 
+-- @function getTouch 
 -- @param self
 -- @return Touch#Touch ret (return value: cc.Touch)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] isAltDown 
+-- @function isAltDown 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getTarget 
+-- @function getTarget 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getX 
+-- @function getX 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getY 
+-- @function getY 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getMouseWheelDelta 
+-- @function getMouseWheelDelta 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] isShiftDown 
+-- @function isShiftDown 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] isCtrlDown 
+-- @function isCtrlDown 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getKeyCode 
+-- @function getKeyCode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] getPosition 
+-- @function getPosition 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#InputEvent] InputEvent 
+-- @function InputEvent 
 -- @param self
 -- @return InputEvent#InputEvent self (return value: fgui.InputEvent)
         

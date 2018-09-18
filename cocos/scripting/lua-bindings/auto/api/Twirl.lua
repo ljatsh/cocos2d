@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module Twirl
--- @extend Grid3DAction
--- @parent_module cc
+-- @see Grid3DAction
+-- @see cc
 
 --------------------------------
 -- brief Set the amplitude rate of the effect.<br>
 -- param amplitudeRate The value of amplitude rate will be set.
--- @function [parent=#Twirl] setAmplitudeRate 
+-- @function setAmplitudeRate 
 -- @param self
 -- @param #float amplitudeRate
 -- @return Twirl#Twirl self (return value: cc.Twirl)
@@ -20,7 +20,7 @@
 -- param twirls Specify the twirls count of the Twirl action.<br>
 -- param amplitude Specify the amplitude of the Twirl action.<br>
 -- return If the initialization success, return true; otherwise, return false.
--- @function [parent=#Twirl] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -32,14 +32,14 @@
 --------------------------------
 -- brief Get the amplitude rate of the effect.<br>
 -- return Return the amplitude rate of the effect.
--- @function [parent=#Twirl] getAmplitudeRate 
+-- @function getAmplitudeRate 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Set the amplitude to the effect.<br>
 -- param amplitude The value of amplitude will be set.
--- @function [parent=#Twirl] setAmplitude 
+-- @function setAmplitude 
 -- @param self
 -- @param #float amplitude
 -- @return Twirl#Twirl self (return value: cc.Twirl)
@@ -47,14 +47,14 @@
 --------------------------------
 -- brief Get the amplitude of the effect.<br>
 -- return Return the amplitude of the effect.
--- @function [parent=#Twirl] getAmplitude 
+-- @function getAmplitude 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Set the center position of twirl action.<br>
 -- param position The center position of twirl action will be set.
--- @function [parent=#Twirl] setPosition 
+-- @function setPosition 
 -- @param self
 -- @param #vec2_table position
 -- @return Twirl#Twirl self (return value: cc.Twirl)
@@ -62,7 +62,7 @@
 --------------------------------
 -- brief Get the center position of twirl action.<br>
 -- return The center position of twirl action.
--- @function [parent=#Twirl] getPosition 
+-- @function getPosition 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
@@ -74,7 +74,7 @@
 -- param twirls Specify the twirls count of the Twirl action.<br>
 -- param amplitude Specify the amplitude of the Twirl action.<br>
 -- return If the creation success, return a pointer of Twirl action; otherwise, return nil.
--- @function [parent=#Twirl] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -85,20 +85,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#Twirl] clone 
+-- @function clone 
 -- @param self
 -- @return Twirl#Twirl ret (return value: cc.Twirl)
         
 --------------------------------
 -- 
--- @function [parent=#Twirl] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return Twirl#Twirl self (return value: cc.Twirl)
         
 --------------------------------
 -- 
--- @function [parent=#Twirl] Twirl 
+-- @function Twirl 
 -- @param self
 -- @return Twirl#Twirl self (return value: cc.Twirl)
         

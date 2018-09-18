@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module ActionRotationFrame
--- @extend ActionFrame
--- @parent_module ccs
+-- @see ActionFrame
+-- @see ccs
 
 --------------------------------
 -- Changes rotate action rotation.<br>
 -- param rotation rotate action rotation.
--- @function [parent=#ActionRotationFrame] setRotation 
+-- @function setRotation 
 -- @param self
 -- @param #float rotation
 -- @return ActionRotationFrame#ActionRotationFrame self (return value: ccs.ActionRotationFrame)
@@ -15,7 +15,7 @@
 --------------------------------
 -- @overload self, float, ccs.ActionFrame         
 -- @overload self, float         
--- @function [parent=#ActionRotationFrame] getAction
+-- @function getAction
 -- @param self
 -- @param #float duration
 -- @param #ccs.ActionFrame srcFrame
@@ -24,13 +24,13 @@
 --------------------------------
 -- Gets the rotate action rotation.<br>
 -- return the rotate action rotation.
--- @function [parent=#ActionRotationFrame] getRotation 
+-- @function getRotation 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Default constructor
--- @function [parent=#ActionRotationFrame] ActionRotationFrame 
+-- @function ActionRotationFrame 
 -- @param self
 -- @return ActionRotationFrame#ActionRotationFrame self (return value: ccs.ActionRotationFrame)
         

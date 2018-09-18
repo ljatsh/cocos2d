@@ -1,8 +1,8 @@
 
 --------------------------------
 -- @module PhysicsShapeEdgeBox
--- @extend PhysicsShapeEdgePolygon
--- @parent_module cc
+-- @see PhysicsShapeEdgePolygon
+-- @see cc
 
 --------------------------------
 -- Creates a PhysicsShapeEdgeBox with specified value.<br>
@@ -11,7 +11,7 @@
 -- param   border It's a edge's border width.<br>
 -- param   offset A Vec2 object, it is the offset from the body's center of gravity in body local coordinates.<br>
 -- return  An autoreleased PhysicsShapeEdgeBox object pointer.
--- @function [parent=#PhysicsShapeEdgeBox] create 
+-- @function create 
 -- @param self
 -- @param #size_table size
 -- @param #cc.PhysicsMaterial material
@@ -22,7 +22,7 @@
 --------------------------------
 -- Get this box's position offset.<br>
 -- return A Vec2 object.
--- @function [parent=#PhysicsShapeEdgeBox] getOffset 
+-- @function getOffset 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         

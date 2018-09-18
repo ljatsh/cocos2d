@@ -1,20 +1,20 @@
 
 --------------------------------
 -- @module RepeatForever
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 --  Sets the inner action.<br>
 -- param action The inner action.
--- @function [parent=#RepeatForever] setInnerAction 
+-- @function setInnerAction 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return RepeatForever#RepeatForever self (return value: cc.RepeatForever)
         
 --------------------------------
 --  initializes the action 
--- @function [parent=#RepeatForever] initWithAction 
+-- @function initWithAction 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return bool#bool ret (return value: bool)
@@ -22,7 +22,7 @@
 --------------------------------
 --  Gets the inner action.<br>
 -- return The inner action.
--- @function [parent=#RepeatForever] getInnerAction 
+-- @function getInnerAction 
 -- @param self
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
         
@@ -30,46 +30,46 @@
 --  Creates the action.<br>
 -- param action The action need to repeat forever.<br>
 -- return An autoreleased RepeatForever object.
--- @function [parent=#RepeatForever] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return RepeatForever#RepeatForever ret (return value: cc.RepeatForever)
         
 --------------------------------
 -- 
--- @function [parent=#RepeatForever] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return RepeatForever#RepeatForever self (return value: cc.RepeatForever)
         
 --------------------------------
 -- 
--- @function [parent=#RepeatForever] clone 
+-- @function clone 
 -- @param self
 -- @return RepeatForever#RepeatForever ret (return value: cc.RepeatForever)
         
 --------------------------------
 -- 
--- @function [parent=#RepeatForever] isDone 
+-- @function isDone 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RepeatForever] reverse 
+-- @function reverse 
 -- @param self
 -- @return RepeatForever#RepeatForever ret (return value: cc.RepeatForever)
         
 --------------------------------
 -- param dt In seconds.
--- @function [parent=#RepeatForever] step 
+-- @function step 
 -- @param self
 -- @param #float dt
 -- @return RepeatForever#RepeatForever self (return value: cc.RepeatForever)
         
 --------------------------------
 -- 
--- @function [parent=#RepeatForever] RepeatForever 
+-- @function RepeatForever 
 -- @param self
 -- @return RepeatForever#RepeatForever self (return value: cc.RepeatForever)
         

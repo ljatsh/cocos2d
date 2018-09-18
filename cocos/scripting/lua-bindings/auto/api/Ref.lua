@@ -1,7 +1,7 @@
 
 --------------------------------
 -- @module Ref
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 -- Releases the ownership immediately.<br>
@@ -10,7 +10,7 @@
 -- destructed.<br>
 -- see retain, autorelease<br>
 -- js NA
--- @function [parent=#Ref] release 
+-- @function release 
 -- @param self
 -- @return Ref#Ref self (return value: cc.Ref)
         
@@ -19,7 +19,7 @@
 -- This increases the Ref's reference count.<br>
 -- see release, autorelease<br>
 -- js NA
--- @function [parent=#Ref] retain 
+-- @function retain 
 -- @param self
 -- @return Ref#Ref self (return value: cc.Ref)
         
@@ -27,7 +27,7 @@
 -- Returns the Ref's current reference count.<br>
 -- returns The Ref's reference count.<br>
 -- js NA
--- @function [parent=#Ref] getReferenceCount 
+-- @function getReferenceCount 
 -- @param self
 -- @return unsigned int#unsigned int ret (return value: unsigned int)
         

@@ -1,31 +1,31 @@
 
 --------------------------------
 -- @module SkeletonRenderer
--- @extend Node,BlendProtocol
--- @parent_module sp
+-- @see Node,BlendProtocol
+-- @see sp
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setTimeScale 
+-- @function setTimeScale 
 -- @param self
 -- @param #float scale
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] getDebugSlotsEnabled 
+-- @function getDebugSlotsEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setBonesToSetupPose 
+-- @function setBonesToSetupPose 
 -- @param self
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] initWithData 
+-- @function initWithData 
 -- @param self
 -- @param #spSkeletonData skeletonData
 -- @param #bool ownsSkeletonData
@@ -33,7 +33,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setDebugSlotsEnabled 
+-- @function setDebugSlotsEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
@@ -41,7 +41,7 @@
 --------------------------------
 -- @overload self, string, string, float         
 -- @overload self, string, spAtlas, float         
--- @function [parent=#SkeletonRenderer] initWithJsonFile
+-- @function initWithJsonFile
 -- @param self
 -- @param #string skeletonDataFile
 -- @param #spAtlas atlas
@@ -50,14 +50,14 @@
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setSlotsToSetupPose 
+-- @function setSlotsToSetupPose 
 -- @param self
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- @overload self, string, string, float         
 -- @overload self, string, spAtlas, float         
--- @function [parent=#SkeletonRenderer] initWithBinaryFile
+-- @function initWithBinaryFile
 -- @param self
 -- @param #string skeletonDataFile
 -- @param #spAtlas atlas
@@ -66,77 +66,77 @@
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setToSetupPose 
+-- @function setToSetupPose 
 -- @param self
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setDebugMeshesEnabled 
+-- @function setDebugMeshesEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] isTwoColorTint 
+-- @function isTwoColorTint 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] initialize 
+-- @function initialize 
 -- @param self
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setDebugBonesEnabled 
+-- @function setDebugBonesEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] getDebugBonesEnabled 
+-- @function getDebugBonesEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] getTimeScale 
+-- @function getTimeScale 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setTwoColorTint 
+-- @function setTwoColorTint 
 -- @param self
 -- @param #bool enabled
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] getDebugMeshesEnabled 
+-- @function getDebugMeshesEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setVertexEffect 
+-- @function setVertexEffect 
 -- @param self
 -- @param #spVertexEffect effect
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
@@ -144,21 +144,21 @@
 --------------------------------
 -- @overload self, char         
 -- @overload self, string         
--- @function [parent=#SkeletonRenderer] setSkin
+-- @function setSkin
 -- @param self
 -- @param #string skinName
 -- @return bool#bool ret (return value: bool)
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] getSkeleton 
+-- @function getSkeleton 
 -- @param self
 -- @return spSkeleton#spSkeleton ret (return value: spSkeleton)
         
 --------------------------------
 -- @overload self, string, string, float         
 -- @overload self, string, spAtlas, float         
--- @function [parent=#SkeletonRenderer] createWithFile
+-- @function createWithFile
 -- @param self
 -- @param #string skeletonDataFile
 -- @param #spAtlas atlas
@@ -167,38 +167,38 @@
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] create 
+-- @function create 
 -- @param self
 -- @return SkeletonRenderer#SkeletonRenderer ret (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] onEnter 
+-- @function onEnter 
 -- @param self
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] onExit 
+-- @function onExit 
 -- @param self
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] setOpacityModifyRGB 
+-- @function setOpacityModifyRGB 
 -- @param self
 -- @param #bool value
 -- @return SkeletonRenderer#SkeletonRenderer self (return value: sp.SkeletonRenderer)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] getBoundingBox 
+-- @function getBoundingBox 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonRenderer] isOpacityModifyRGB 
+-- @function isOpacityModifyRGB 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -207,7 +207,7 @@
 -- @overload self         
 -- @overload self, string, spAtlas, float         
 -- @overload self, string, string, float         
--- @function [parent=#SkeletonRenderer] SkeletonRenderer
+-- @function SkeletonRenderer
 -- @param self
 -- @param #string skeletonDataFile
 -- @param #string atlasFile

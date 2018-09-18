@@ -3,7 +3,8 @@
 
 --------------------------------------------------------
 -- the ccexp WebView
--- @field [parent=#ccexp] WebView#WebView WebView preloaded module
+-- @field WebView preloaded module
+-- @see WebView
 
 
 return nil

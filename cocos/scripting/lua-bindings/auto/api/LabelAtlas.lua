@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module LabelAtlas
--- @extend AtlasNode,LabelProtocol
--- @parent_module cc
+-- @see AtlasNode,LabelProtocol
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#LabelAtlas] setString 
+-- @function setString 
 -- @param self
 -- @param #string label
 -- @return LabelAtlas#LabelAtlas self (return value: cc.LabelAtlas)
@@ -15,7 +15,7 @@
 -- @overload self, string, string         
 -- @overload self, string, string, int, int, int         
 -- @overload self, string, cc.Texture2D, int, int, int         
--- @function [parent=#LabelAtlas] initWithString
+-- @function initWithString
 -- @param self
 -- @param #string string
 -- @param #cc.Texture2D texture
@@ -26,7 +26,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#LabelAtlas] getString 
+-- @function getString 
 -- @param self
 -- @return string#string ret (return value: string)
         
@@ -34,7 +34,7 @@
 -- @overload self, string, string, int, int, int         
 -- @overload self         
 -- @overload self, string, string         
--- @function [parent=#LabelAtlas] create
+-- @function create
 -- @param self
 -- @param #string string
 -- @param #string charMapFile
@@ -45,19 +45,19 @@
 
 --------------------------------
 -- 
--- @function [parent=#LabelAtlas] updateAtlasValues 
+-- @function updateAtlasValues 
 -- @param self
 -- @return LabelAtlas#LabelAtlas self (return value: cc.LabelAtlas)
         
 --------------------------------
 -- js NA
--- @function [parent=#LabelAtlas] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#LabelAtlas] LabelAtlas 
+-- @function LabelAtlas 
 -- @param self
 -- @return LabelAtlas#LabelAtlas self (return value: cc.LabelAtlas)
         

@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module BezierTo
--- @extend BezierBy
--- @parent_module cc
+-- @see BezierBy
+-- @see cc
 
 --------------------------------
 -- param t In seconds.
--- @function [parent=#BezierTo] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float t
 -- @param #cc._ccBezierConfig c
@@ -14,26 +14,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#BezierTo] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return BezierTo#BezierTo self (return value: cc.BezierTo)
         
 --------------------------------
 -- 
--- @function [parent=#BezierTo] clone 
+-- @function clone 
 -- @param self
 -- @return BezierTo#BezierTo ret (return value: cc.BezierTo)
         
 --------------------------------
 -- 
--- @function [parent=#BezierTo] reverse 
+-- @function reverse 
 -- @param self
 -- @return BezierTo#BezierTo ret (return value: cc.BezierTo)
         
 --------------------------------
 -- 
--- @function [parent=#BezierTo] BezierTo 
+-- @function BezierTo 
 -- @param self
 -- @return BezierTo#BezierTo self (return value: cc.BezierTo)
         

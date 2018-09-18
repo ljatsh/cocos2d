@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module SkeletonAnimation
--- @extend SkeletonRenderer
--- @parent_module sp
+-- @see SkeletonRenderer
+-- @see sp
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setTrackCompleteListener 
+-- @function setTrackCompleteListener 
 -- @param self
 -- @param #spTrackEntry entry
 -- @param #function listener
@@ -14,21 +14,21 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] findAnimation 
+-- @function findAnimation 
 -- @param self
 -- @param #string name
 -- @return spAnimation#spAnimation ret (return value: spAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setCompleteListener 
+-- @function setCompleteListener 
 -- @param self
 -- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setMix 
+-- @function setMix 
 -- @param self
 -- @param #string fromAnimation
 -- @param #string toAnimation
@@ -37,7 +37,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setTrackStartListener 
+-- @function setTrackStartListener 
 -- @param self
 -- @param #spTrackEntry entry
 -- @param #function listener
@@ -45,7 +45,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] addEmptyAnimation 
+-- @function addEmptyAnimation 
 -- @param self
 -- @param #int trackIndex
 -- @param #float mixDuration
@@ -54,29 +54,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setDisposeListener 
+-- @function setDisposeListener 
 -- @param self
 -- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setTrackInterruptListener 
--- @param self
--- @param #spTrackEntry entry
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setEndListener 
--- @param self
--- @param #function listener
--- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
-        
---------------------------------
--- 
--- @function [parent=#SkeletonAnimation] setTrackDisposeListener 
+-- @function setTrackInterruptListener 
 -- @param self
 -- @param #spTrackEntry entry
 -- @param #function listener
@@ -84,14 +69,29 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setEventListener 
+-- @function setEndListener 
 -- @param self
 -- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setEmptyAnimation 
+-- @function setTrackDisposeListener 
+-- @param self
+-- @param #spTrackEntry entry
+-- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function setEventListener 
+-- @param self
+-- @param #function listener
+-- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
+        
+--------------------------------
+-- 
+-- @function setEmptyAnimation 
 -- @param self
 -- @param #int trackIndex
 -- @param #float mixDuration
@@ -99,7 +99,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setTrackEventListener 
+-- @function setTrackEventListener 
 -- @param self
 -- @param #spTrackEntry entry
 -- @param #function listener
@@ -107,33 +107,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] clearTrack 
+-- @function clearTrack 
 -- @param self
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setInterruptListener 
+-- @function setInterruptListener 
 -- @param self
 -- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setEmptyAnimations 
+-- @function setEmptyAnimations 
 -- @param self
 -- @param #float mixDuration
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] clearTracks 
+-- @function clearTracks 
 -- @param self
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setTrackEndListener 
+-- @function setTrackEndListener 
 -- @param self
 -- @param #spTrackEntry entry
 -- @param #function listener
@@ -141,7 +141,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] setStartListener 
+-- @function setStartListener 
 -- @param self
 -- @param #function listener
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
@@ -149,7 +149,7 @@
 --------------------------------
 -- @overload self, string, string, float         
 -- @overload self, string, spAtlas, float         
--- @function [parent=#SkeletonAnimation] createWithBinaryFile
+-- @function createWithBinaryFile
 -- @param self
 -- @param #string skeletonBinaryFile
 -- @param #spAtlas atlas
@@ -158,14 +158,14 @@
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] create 
+-- @function create 
 -- @param self
 -- @return SkeletonAnimation#SkeletonAnimation ret (return value: sp.SkeletonAnimation)
         
 --------------------------------
 -- @overload self, string, string, float         
 -- @overload self, string, spAtlas, float         
--- @function [parent=#SkeletonAnimation] createWithJsonFile
+-- @function createWithJsonFile
 -- @param self
 -- @param #string skeletonJsonFile
 -- @param #spAtlas atlas
@@ -174,7 +174,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#SkeletonAnimation] initialize 
+-- @function initialize 
 -- @param self
 -- @return SkeletonAnimation#SkeletonAnimation self (return value: sp.SkeletonAnimation)
         

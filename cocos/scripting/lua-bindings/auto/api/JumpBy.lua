@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module JumpBy
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- initializes the action<br>
 -- param duration in seconds
--- @function [parent=#JumpBy] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #vec2_table position
@@ -22,7 +22,7 @@
 -- param height The jumping height.<br>
 -- param jumps The jumping times.<br>
 -- return An autoreleased JumpBy object.
--- @function [parent=#JumpBy] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #vec2_table position
@@ -32,33 +32,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#JumpBy] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return JumpBy#JumpBy self (return value: cc.JumpBy)
         
 --------------------------------
 -- 
--- @function [parent=#JumpBy] clone 
+-- @function clone 
 -- @param self
 -- @return JumpBy#JumpBy ret (return value: cc.JumpBy)
         
 --------------------------------
 -- 
--- @function [parent=#JumpBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return JumpBy#JumpBy ret (return value: cc.JumpBy)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#JumpBy] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return JumpBy#JumpBy self (return value: cc.JumpBy)
         
 --------------------------------
 -- 
--- @function [parent=#JumpBy] JumpBy 
+-- @function JumpBy 
 -- @param self
 -- @return JumpBy#JumpBy self (return value: cc.JumpBy)
         

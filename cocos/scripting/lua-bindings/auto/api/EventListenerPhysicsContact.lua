@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module EventListenerPhysicsContact
--- @extend EventListenerCustom
--- @parent_module cc
+-- @see EventListenerCustom
+-- @see cc
 
 --------------------------------
 --  Create the listener. 
--- @function [parent=#EventListenerPhysicsContact] create 
+-- @function create 
 -- @param self
 -- @return EventListenerPhysicsContact#EventListenerPhysicsContact ret (return value: cc.EventListenerPhysicsContact)
         
 --------------------------------
 --  Clone an object from this listener.
--- @function [parent=#EventListenerPhysicsContact] clone 
+-- @function clone 
 -- @param self
 -- @return EventListenerPhysicsContact#EventListenerPhysicsContact ret (return value: cc.EventListenerPhysicsContact)
         
 --------------------------------
 --  Check the listener is available.<br>
 -- return True if there's one available callback function at least, false if there's no one.
--- @function [parent=#EventListenerPhysicsContact] checkAvailable 
+-- @function checkAvailable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         

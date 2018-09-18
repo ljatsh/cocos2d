@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module BillBoard
--- @extend Sprite
--- @parent_module cc
+-- @see Sprite
+-- @see cc
 
 --------------------------------
 --  Get the billboard rotation mode. 
--- @function [parent=#BillBoard] getMode 
+-- @function getMode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  Set the billboard rotation mode. 
--- @function [parent=#BillBoard] setMode 
+-- @function setMode 
 -- @param self
 -- @param #int mode
 -- @return BillBoard#BillBoard self (return value: cc.BillBoard)
@@ -21,7 +21,7 @@
 -- @overload self, string, int         
 -- @overload self, int         
 -- @overload self, string, rect_table, int         
--- @function [parent=#BillBoard] create
+-- @function create
 -- @param self
 -- @param #string filename
 -- @param #rect_table rect
@@ -33,7 +33,7 @@
 -- After creation, the rect will be the size of the texture, and the offset will be (0,0).<br>
 -- param   texture    A pointer to a Texture2D object.<br>
 -- return  An autoreleased BillBoard object
--- @function [parent=#BillBoard] createWithTexture 
+-- @function createWithTexture 
 -- @param self
 -- @param #cc.Texture2D texture
 -- @param #int mode
@@ -41,7 +41,7 @@
         
 --------------------------------
 --  update billboard's transform and turn it towards camera 
--- @function [parent=#BillBoard] visit 
+-- @function visit 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table parentTransform
@@ -50,7 +50,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#BillBoard] BillBoard 
+-- @function BillBoard 
 -- @param self
 -- @return BillBoard#BillBoard self (return value: cc.BillBoard)
         

@@ -1,19 +1,19 @@
 
 --------------------------------
 -- @module BatchNode
--- @extend Node
--- @parent_module ccs
+-- @see Node
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#BatchNode] create 
+-- @function create 
 -- @param self
 -- @return BatchNode#BatchNode ret (return value: ccs.BatchNode)
         
 --------------------------------
 -- @overload self, cc.Node, int, string         
 -- @overload self, cc.Node, int, int         
--- @function [parent=#BatchNode] addChild
+-- @function addChild
 -- @param self
 -- @param #cc.Node pChild
 -- @param #int zOrder
@@ -22,13 +22,13 @@
 
 --------------------------------
 -- js NA
--- @function [parent=#BatchNode] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#BatchNode] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -37,7 +37,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#BatchNode] removeChild 
+-- @function removeChild 
 -- @param self
 -- @param #cc.Node child
 -- @param #bool cleanup

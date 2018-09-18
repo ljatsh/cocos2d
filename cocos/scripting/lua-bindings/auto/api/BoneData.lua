@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module BoneData
--- @extend BaseData
--- @parent_module ccs
+-- @see BaseData
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#BoneData] getDisplayData 
+-- @function getDisplayData 
 -- @param self
 -- @param #int index
 -- @return DisplayData#DisplayData ret (return value: ccs.DisplayData)
         
 --------------------------------
 -- 
--- @function [parent=#BoneData] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#BoneData] addDisplayData 
+-- @function addDisplayData 
 -- @param self
 -- @param #ccs.DisplayData displayData
 -- @return BoneData#BoneData self (return value: ccs.BoneData)
         
 --------------------------------
 -- 
--- @function [parent=#BoneData] create 
+-- @function create 
 -- @param self
 -- @return BoneData#BoneData ret (return value: ccs.BoneData)
         
 --------------------------------
 -- js ctor
--- @function [parent=#BoneData] BoneData 
+-- @function BoneData 
 -- @param self
 -- @return BoneData#BoneData self (return value: ccs.BoneData)
         

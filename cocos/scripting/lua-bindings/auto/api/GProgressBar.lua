@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module GProgressBar
--- @extend GComponent
--- @parent_module fgui
+-- @see GComponent
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] setValue 
+-- @function setValue 
 -- @param self
 -- @param #double value
 -- @return GProgressBar#GProgressBar self (return value: fgui.GProgressBar)
         
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] setMax 
+-- @function setMax 
 -- @param self
 -- @param #double value
 -- @return GProgressBar#GProgressBar self (return value: fgui.GProgressBar)
         
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] getValue 
+-- @function getValue 
 -- @param self
 -- @return double#double ret (return value: double)
         
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] getTitleType 
+-- @function getTitleType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] tweenValue 
+-- @function tweenValue 
 -- @param self
 -- @param #double value
 -- @param #float duration
@@ -40,26 +40,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] getMax 
+-- @function getMax 
 -- @param self
 -- @return double#double ret (return value: double)
         
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] setTitleType 
+-- @function setTitleType 
 -- @param self
 -- @param #int value
 -- @return GProgressBar#GProgressBar self (return value: fgui.GProgressBar)
         
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] create 
+-- @function create 
 -- @param self
 -- @return GProgressBar#GProgressBar ret (return value: fgui.GProgressBar)
         
 --------------------------------
 -- 
--- @function [parent=#GProgressBar] GProgressBar 
+-- @function GProgressBar 
 -- @param self
 -- @return GProgressBar#GProgressBar self (return value: fgui.GProgressBar)
         

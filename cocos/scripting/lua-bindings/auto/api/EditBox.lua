@@ -1,20 +1,20 @@
 
 --------------------------------
 -- @module EditBox
--- @extend Widget,IMEDelegate
--- @parent_module ccui
+-- @see Widget,IMEDelegate
+-- @see ccui
 
 --------------------------------
 -- Get the font size.<br>
 -- return The font size.
--- @function [parent=#EditBox] getFontSize 
+-- @function getFontSize 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#EditBox] keyboardDidShow 
+-- @function keyboardDidShow 
 -- @param self
 -- @param #cc.IMEKeyboardNotificationInfo info
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -23,35 +23,35 @@
 -- get a script Handler<br>
 -- js NA<br>
 -- lua NA
--- @function [parent=#EditBox] getScriptEditBoxHandler 
+-- @function getScriptEditBoxHandler 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Get the text entered in the edit box.<br>
 -- return The text entered in the edit box.
--- @function [parent=#EditBox] getText 
+-- @function getText 
 -- @param self
 -- @return char#char ret (return value: char)
         
 --------------------------------
 -- Get the input mode of the edit box.<br>
 -- return One of the EditBox::InputMode constants.
--- @function [parent=#EditBox] getInputMode 
+-- @function getInputMode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Get the placeholder's font name. only system font is allowed.<br>
 -- return The font name.
--- @function [parent=#EditBox] getPlaceholderFontName 
+-- @function getPlaceholderFontName 
 -- @param self
 -- @return char#char ret (return value: char)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#EditBox] keyboardDidHide 
+-- @function keyboardDidHide 
 -- @param self
 -- @param #cc.IMEKeyboardNotificationInfo info
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -59,7 +59,7 @@
 --------------------------------
 -- Set the placeholder's font name. only system font is allowed.<br>
 -- param pFontName The font name.
--- @function [parent=#EditBox] setPlaceholderFontName 
+-- @function setPlaceholderFontName 
 -- @param self
 -- @param #char pFontName
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -67,21 +67,21 @@
 --------------------------------
 -- Get the placeholder's font size.<br>
 -- return The font size.
--- @function [parent=#EditBox] getPlaceholderFontSize 
+-- @function getPlaceholderFontSize 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Get a text in the edit box that acts as a placeholder when an<br>
 -- edit box is empty.
--- @function [parent=#EditBox] getPlaceHolder 
+-- @function getPlaceHolder 
 -- @param self
 -- @return char#char ret (return value: char)
         
 --------------------------------
 -- Set the font name. Only system font is allowed.<br>
 -- param pFontName The font name.
--- @function [parent=#EditBox] setFontName 
+-- @function setFontName 
 -- @param self
 -- @param #char pFontName
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -108,7 +108,7 @@
 -- param handler A number that indicates a lua function.<br>
 -- js NA<br>
 -- lua NA
--- @function [parent=#EditBox] registerScriptEditBoxHandler 
+-- @function registerScriptEditBoxHandler 
 -- @param self
 -- @param #int handler
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -116,7 +116,7 @@
 --------------------------------
 -- Set the placeholder's font size.<br>
 -- param fontSize The font size.
--- @function [parent=#EditBox] setPlaceholderFontSize 
+-- @function setPlaceholderFontSize 
 -- @param self
 -- @param #int fontSize
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -124,7 +124,7 @@
 --------------------------------
 -- Set the input mode of the edit box.<br>
 -- param inputMode One of the EditBox::InputMode constants.
--- @function [parent=#EditBox] setInputMode 
+-- @function setInputMode 
 -- @param self
 -- @param #int inputMode
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -133,14 +133,14 @@
 -- Unregisters a script function that will be called for EditBox events.<br>
 -- js NA<br>
 -- lua NA
--- @function [parent=#EditBox] unregisterScriptEditBoxHandler 
+-- @function unregisterScriptEditBoxHandler 
 -- @param self
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#EditBox] keyboardWillShow 
+-- @function keyboardWillShow 
 -- @param self
 -- @param #cc.IMEKeyboardNotificationInfo info
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -148,7 +148,7 @@
 --------------------------------
 -- @overload self, color4b_table         
 -- @overload self, color3b_table         
--- @function [parent=#EditBox] setPlaceholderFontColor
+-- @function setPlaceholderFontColor
 -- @param self
 -- @param #color3b_table color
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -156,14 +156,14 @@
 --------------------------------
 -- Get the return type that are to be applied to the edit box.<br>
 -- return One of the EditBox::KeyboardReturnType constants.
--- @function [parent=#EditBox] getReturnType 
+-- @function getReturnType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- @overload self, color4b_table         
 -- @overload self, color3b_table         
--- @function [parent=#EditBox] setFontColor
+-- @function setFontColor
 -- @param self
 -- @param #color3b_table color
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -171,21 +171,21 @@
 --------------------------------
 -- Get the font name.<br>
 -- return The font name.
--- @function [parent=#EditBox] getFontName 
+-- @function getFontName 
 -- @param self
 -- @return char#char ret (return value: char)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#EditBox] keyboardWillHide 
+-- @function keyboardWillHide 
 -- @param self
 -- @param #cc.IMEKeyboardNotificationInfo info
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
         
 --------------------------------
 -- 
--- @function [parent=#EditBox] touchDownAction 
+-- @function touchDownAction 
 -- @param self
 -- @param #cc.Ref sender
 -- @param #int controlEvent
@@ -193,20 +193,20 @@
         
 --------------------------------
 -- Get the font color of the widget's text.
--- @function [parent=#EditBox] getFontColor 
+-- @function getFontColor 
 -- @param self
 -- @return color4b_table#color4b_table ret (return value: color4b_table)
         
 --------------------------------
 -- Get the input flags that are to be applied to the edit box.<br>
 -- return One of the EditBox::InputFlag constants.
--- @function [parent=#EditBox] getInputFlag 
+-- @function getInputFlag 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Get the text horizontal alignment.
--- @function [parent=#EditBox] getTextHorizontalAlignment 
+-- @function getTextHorizontalAlignment 
 -- @param self
 -- @return int#int ret (return value: int)
         
@@ -214,7 +214,7 @@
 -- Set the placeholder's font. Only system font is allowed.<br>
 -- param pFontName The font name.<br>
 -- param fontSize The font size.
--- @function [parent=#EditBox] setPlaceholderFont 
+-- @function setPlaceholderFont 
 -- @param self
 -- @param #char pFontName
 -- @param #int fontSize
@@ -223,7 +223,7 @@
 --------------------------------
 -- Set the font size.<br>
 -- param fontSize The font size.
--- @function [parent=#EditBox] setFontSize 
+-- @function setFontSize 
 -- @param self
 -- @param #int fontSize
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -231,7 +231,7 @@
 --------------------------------
 -- @overload self, size_table, ccui.Scale9Sprite         
 -- @overload self, size_table, string, int         
--- @function [parent=#EditBox] initWithSizeAndBackgroundSprite
+-- @function initWithSizeAndBackgroundSprite
 -- @param self
 -- @param #size_table size
 -- @param #string normal9SpriteBg
@@ -242,7 +242,7 @@
 -- Set a text in the edit box that acts as a placeholder when an<br>
 -- edit box is empty.<br>
 -- param pText The given text.
--- @function [parent=#EditBox] setPlaceHolder 
+-- @function setPlaceHolder 
 -- @param self
 -- @param #char pText
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -250,7 +250,7 @@
 --------------------------------
 -- Set the return type that are to be applied to the edit box.<br>
 -- param returnType One of the EditBox::KeyboardReturnType constants.
--- @function [parent=#EditBox] setReturnType 
+-- @function setReturnType 
 -- @param self
 -- @param #int returnType
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -258,7 +258,7 @@
 --------------------------------
 -- Set the input flags that are to be applied to the edit box.<br>
 -- param inputFlag One of the EditBox::InputFlag constants.
--- @function [parent=#EditBox] setInputFlag 
+-- @function setInputFlag 
 -- @param self
 -- @param #int inputFlag
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -266,21 +266,21 @@
 --------------------------------
 -- Gets the maximum input length of the edit box.<br>
 -- return Maximum input length.
--- @function [parent=#EditBox] getMaxLength 
+-- @function getMaxLength 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Set the text entered in the edit box.<br>
 -- param pText The given text.
--- @function [parent=#EditBox] setText 
+-- @function setText 
 -- @param self
 -- @param #char pText
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
         
 --------------------------------
 -- Get the font color of the placeholder text when the edit box is empty.
--- @function [parent=#EditBox] getPlaceholderFontColor 
+-- @function getPlaceholderFontColor 
 -- @param self
 -- @return color4b_table#color4b_table ret (return value: color4b_table)
         
@@ -289,7 +289,7 @@
 -- Setting this value enables multiline input mode by default.<br>
 -- Available on Android, iOS and Windows Phone.<br>
 -- param maxLength The maximum length.
--- @function [parent=#EditBox] setMaxLength 
+-- @function setMaxLength 
 -- @param self
 -- @param #int maxLength
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -298,7 +298,7 @@
 -- Set the font. Only system font is allowed.<br>
 -- param pFontName The font name.<br>
 -- param fontSize The font size.
--- @function [parent=#EditBox] setFont 
+-- @function setFont 
 -- @param self
 -- @param #char pFontName
 -- @param #int fontSize
@@ -306,7 +306,7 @@
         
 --------------------------------
 -- Set the text horizontal alignment.
--- @function [parent=#EditBox] setTextHorizontalAlignment 
+-- @function setTextHorizontalAlignment 
 -- @param self
 -- @param #int alignment
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -314,7 +314,7 @@
 --------------------------------
 -- @overload self, size_table, string, int         
 -- @overload self, size_table, ccui.Scale9Sprite, ccui.Scale9Sprite, ccui.Scale9Sprite         
--- @function [parent=#EditBox] create
+-- @function create
 -- @param self
 -- @param #size_table size
 -- @param #ccui.Scale9Sprite normalSprite
@@ -324,7 +324,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#EditBox] setAnchorPoint 
+-- @function setAnchorPoint 
 -- @param self
 -- @param #vec2_table anchorPoint
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -332,7 +332,7 @@
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#EditBox] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table parentTransform
@@ -341,27 +341,27 @@
         
 --------------------------------
 -- Returns the "class name" of widget.
--- @function [parent=#EditBox] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#EditBox] setPosition 
+-- @function setPosition 
 -- @param self
 -- @param #vec2_table pos
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
         
 --------------------------------
 -- 
--- @function [parent=#EditBox] setVisible 
+-- @function setVisible 
 -- @param self
 -- @param #bool visible
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
         
 --------------------------------
 -- 
--- @function [parent=#EditBox] setContentSize 
+-- @function setContentSize 
 -- @param self
 -- @param #size_table size
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
@@ -370,7 +370,7 @@
 -- Constructor.<br>
 -- js ctor<br>
 -- lua new
--- @function [parent=#EditBox] EditBox 
+-- @function EditBox 
 -- @param self
 -- @return EditBox#EditBox self (return value: ccui.EditBox)
         

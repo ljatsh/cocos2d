@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module MenuItemAtlasFont
--- @extend MenuItemLabel
--- @parent_module cc
+-- @see MenuItemLabel
+-- @see cc
 
 --------------------------------
 --  Initializes a menu item from a string and atlas with a target/selector. 
--- @function [parent=#MenuItemAtlasFont] initWithString 
+-- @function initWithString 
 -- @param self
 -- @param #string value
 -- @param #string charMapFile
@@ -18,7 +18,7 @@
         
 --------------------------------
 -- js ctor
--- @function [parent=#MenuItemAtlasFont] MenuItemAtlasFont 
+-- @function MenuItemAtlasFont 
 -- @param self
 -- @return MenuItemAtlasFont#MenuItemAtlasFont self (return value: cc.MenuItemAtlasFont)
         

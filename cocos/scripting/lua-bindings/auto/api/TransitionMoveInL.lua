@@ -1,19 +1,19 @@
 
 --------------------------------
 -- @module TransitionMoveInL
--- @extend TransitionScene,TransitionEaseScene
--- @parent_module cc
+-- @see TransitionScene,TransitionEaseScene
+-- @see cc
 
 --------------------------------
 --  Returns the action that will be performed. <br>
 -- return The action that will be performed.
--- @function [parent=#TransitionMoveInL] action 
+-- @function action 
 -- @param self
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
         
 --------------------------------
 -- 
--- @function [parent=#TransitionMoveInL] easeActionWithAction 
+-- @function easeActionWithAction 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
@@ -23,7 +23,7 @@
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return A autoreleased TransitionMoveInL object.
--- @function [parent=#TransitionMoveInL] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -31,7 +31,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionMoveInL] TransitionMoveInL 
+-- @function TransitionMoveInL 
 -- @param self
 -- @return TransitionMoveInL#TransitionMoveInL self (return value: cc.TransitionMoveInL)
         

@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module ControlButton
--- @extend Control
--- @parent_module cc
+-- @see Control
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ControlButton] isPushed 
+-- @function isPushed 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -17,7 +17,7 @@
 -- param label The title label to use for the specified state.<br>
 -- param state The state that uses the specified title. The values are described<br>
 -- in "CCControlState".
--- @function [parent=#ControlButton] setTitleLabelForState 
+-- @function setTitleLabelForState 
 -- @param self
 -- @param #cc.Node label
 -- @param #int state
@@ -25,7 +25,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setAdjustBackgroundImage 
+-- @function setAdjustBackgroundImage 
 -- @param self
 -- @param #bool adjustBackgroundImage
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
@@ -37,7 +37,7 @@
 -- param title The title string to use for the specified state.<br>
 -- param state The state that uses the specified title. The values are described<br>
 -- in "CCControlState".
--- @function [parent=#ControlButton] setTitleForState 
+-- @function setTitleForState 
 -- @param self
 -- @param #string title
 -- @param #int state
@@ -45,34 +45,34 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setLabelAnchorPoint 
+-- @function setLabelAnchorPoint 
 -- @param self
 -- @param #vec2_table var
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getLabelAnchorPoint 
+-- @function getLabelAnchorPoint 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] initWithBackgroundSprite 
+-- @function initWithBackgroundSprite 
 -- @param self
 -- @param #ccui.Scale9Sprite sprite
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getTitleTTFSizeForState 
+-- @function getTitleTTFSizeForState 
 -- @param self
 -- @param #int state
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setTitleTTFForState 
+-- @function setTitleTTFForState 
 -- @param self
 -- @param #string fntFile
 -- @param #int state
@@ -80,7 +80,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setTitleTTFSizeForState 
+-- @function setTitleTTFSizeForState 
 -- @param self
 -- @param #float size
 -- @param #int state
@@ -88,34 +88,34 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setTitleLabel 
+-- @function setTitleLabel 
 -- @param self
 -- @param #cc.Node var
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setPreferredSize 
+-- @function setPreferredSize 
 -- @param self
 -- @param #size_table var
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getCurrentTitleColor 
+-- @function getCurrentTitleColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setZoomOnTouchDown 
+-- @function setZoomOnTouchDown 
 -- @param self
 -- @param #bool var
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setBackgroundSprite 
+-- @function setBackgroundSprite 
 -- @param self
 -- @param #ccui.Scale9Sprite var
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
@@ -124,20 +124,20 @@
 -- Returns the background sprite used for a state.<br>
 -- param state The state that uses the background sprite. Possible values are<br>
 -- described in "CCControlState".
--- @function [parent=#ControlButton] getBackgroundSpriteForState 
+-- @function getBackgroundSpriteForState 
 -- @param self
 -- @param #int state
 -- @return Scale9Sprite#Scale9Sprite ret (return value: ccui.Scale9Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getHorizontalOrigin 
+-- @function getHorizontalOrigin 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] initWithTitleAndFontNameAndFontSize 
+-- @function initWithTitleAndFontNameAndFontSize 
 -- @param self
 -- @param #string title
 -- @param #string fontName
@@ -149,7 +149,7 @@
 -- param fntFile The name of the font to change to<br>
 -- param state The state that uses the specified fntFile. The values are described<br>
 -- in "CCControlState".
--- @function [parent=#ControlButton] setTitleBMFontForState 
+-- @function setTitleBMFontForState 
 -- @param self
 -- @param #string fntFile
 -- @param #int state
@@ -157,20 +157,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getScaleRatio 
+-- @function getScaleRatio 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getTitleTTFForState 
+-- @function getTitleTTFForState 
 -- @param self
 -- @param #int state
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getBackgroundSprite 
+-- @function getBackgroundSprite 
 -- @param self
 -- @return Scale9Sprite#Scale9Sprite ret (return value: ccui.Scale9Sprite)
         
@@ -179,7 +179,7 @@
 -- param state The state that uses the specified color. The values are described<br>
 -- in "CCControlState".<br>
 -- return The color of the title for the specified state.
--- @function [parent=#ControlButton] getTitleColorForState 
+-- @function getTitleColorForState 
 -- @param self
 -- @param #int state
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
@@ -189,7 +189,7 @@
 -- param color The color of the title to use for the specified state.<br>
 -- param state The state that uses the specified color. The values are described<br>
 -- in "CCControlState".
--- @function [parent=#ControlButton] setTitleColorForState 
+-- @function setTitleColorForState 
 -- @param self
 -- @param #color3b_table color
 -- @param #int state
@@ -198,7 +198,7 @@
 --------------------------------
 --  Adjust the background image. YES by default. If the property is set to NO, the<br>
 -- background will use the preferred size of the background image. 
--- @function [parent=#ControlButton] doesAdjustBackgroundImage 
+-- @function doesAdjustBackgroundImage 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -207,7 +207,7 @@
 -- param spriteFrame The background spriteFrame to use for the specified state.<br>
 -- param state The state that uses the specified image. The values are described<br>
 -- in "CCControlState".
--- @function [parent=#ControlButton] setBackgroundSpriteFrameForState 
+-- @function setBackgroundSpriteFrameForState 
 -- @param self
 -- @param #cc.SpriteFrame spriteFrame
 -- @param #int state
@@ -218,7 +218,7 @@
 -- param sprite The background sprite to use for the specified state.<br>
 -- param state The state that uses the specified image. The values are described<br>
 -- in "CCControlState".
--- @function [parent=#ControlButton] setBackgroundSpriteForState 
+-- @function setBackgroundSpriteForState 
 -- @param self
 -- @param #ccui.Scale9Sprite sprite
 -- @param #int state
@@ -226,33 +226,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setScaleRatio 
+-- @function setScaleRatio 
 -- @param self
 -- @param #float var
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getTitleBMFontForState 
+-- @function getTitleBMFontForState 
 -- @param self
 -- @param #int state
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getTitleLabel 
+-- @function getTitleLabel 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getPreferredSize 
+-- @function getPreferredSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getVerticalMargin 
+-- @function getVerticalMargin 
 -- @param self
 -- @return int#int ret (return value: int)
         
@@ -260,14 +260,14 @@
 -- Returns the title label used for a state.<br>
 -- param state The state that uses the title label. Possible values are described<br>
 -- in "CCControlState".
--- @function [parent=#ControlButton] getTitleLabelForState 
+-- @function getTitleLabelForState 
 -- @param self
 -- @param #int state
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setMargins 
+-- @function setMargins 
 -- @param self
 -- @param #int marginH
 -- @param #int marginV
@@ -276,13 +276,13 @@
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#ControlButton] getCurrentTitle
+-- @function getCurrentTitle
 -- @param self
 -- @return string#string ret (return value: string)
 
 --------------------------------
 -- 
--- @function [parent=#ControlButton] initWithLabelAndBackgroundSprite 
+-- @function initWithLabelAndBackgroundSprite 
 -- @param self
 -- @param #cc.Node label
 -- @param #ccui.Scale9Sprite backgroundSprite
@@ -291,7 +291,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] getZoomOnTouchDown 
+-- @function getZoomOnTouchDown 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -300,7 +300,7 @@
 -- param state The state that uses the title. Possible values are described in<br>
 -- "CCControlState".<br>
 -- return The title for the specified state.
--- @function [parent=#ControlButton] getTitleForState 
+-- @function getTitleForState 
 -- @param self
 -- @param #int state
 -- @return string#string ret (return value: string)
@@ -311,7 +311,7 @@
 -- @overload self, cc.Node, ccui.Scale9Sprite         
 -- @overload self, string, string, float         
 -- @overload self, cc.Node, ccui.Scale9Sprite, bool         
--- @function [parent=#ControlButton] create
+-- @function create
 -- @param self
 -- @param #cc.Node label
 -- @param #ccui.Scale9Sprite backgroundSprite
@@ -320,14 +320,14 @@
 
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] onTouchEnded 
+-- @function onTouchEnded 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event event
@@ -335,14 +335,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setColor 
+-- @function setColor 
 -- @param self
 -- @param #color3b_table 
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] onTouchMoved 
+-- @function onTouchMoved 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event event
@@ -350,14 +350,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setSelected 
+-- @function setSelected 
 -- @param self
 -- @param #bool enabled
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] onTouchCancelled 
+-- @function onTouchCancelled 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event event
@@ -365,13 +365,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] needsLayout 
+-- @function needsLayout 
 -- @param self
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] onTouchBegan 
+-- @function onTouchBegan 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event event
@@ -379,41 +379,41 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] updateDisplayedOpacity 
+-- @function updateDisplayedOpacity 
 -- @param self
 -- @param #unsigned char parentOpacity
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setHighlighted 
+-- @function setHighlighted 
 -- @param self
 -- @param #bool enabled
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] updateDisplayedColor 
+-- @function updateDisplayedColor 
 -- @param self
 -- @param #color3b_table parentColor
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- 
--- @function [parent=#ControlButton] setOpacity 
+-- @function setOpacity 
 -- @param self
 -- @param #unsigned char var
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ControlButton] ControlButton 
+-- @function ControlButton 
 -- @param self
 -- @return ControlButton#ControlButton self (return value: cc.ControlButton)
         

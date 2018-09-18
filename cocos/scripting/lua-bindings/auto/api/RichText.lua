@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module RichText
--- @extend Widget
--- @parent_module ccui
+-- @see Widget
+-- @see ccui
 
 --------------------------------
 -- brief Insert a RichElement at a given index.<br>
 -- param element A RichElement type.<br>
 -- param index A given index.
--- @function [parent=#RichText] insertElement 
+-- @function insertElement 
 -- @param self
 -- @param #ccui.RichElement element
 -- @param #int index
@@ -16,7 +16,7 @@
         
 --------------------------------
 --  @brief enable the outline of a-tag 
--- @function [parent=#RichText] setAnchorTextOutline 
+-- @function setAnchorTextOutline 
 -- @param self
 -- @param #bool enable
 -- @param #color3b_table outlineColor
@@ -25,40 +25,40 @@
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getFontSize 
+-- @function getFontSize 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Add a RichElement at the end of RichText.<br>
 -- param element A RichElement instance.
--- @function [parent=#RichText] pushBackElement 
+-- @function pushBackElement 
 -- @param self
 -- @param #ccui.RichElement element
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setAnchorTextBold 
+-- @function setAnchorTextBold 
 -- @param self
 -- @param #bool enable
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getAnchorFontColor 
+-- @function getAnchorFontColor 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getAnchorTextShadowBlurRadius 
+-- @function getAnchorTextShadowBlurRadius 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  @brief enable the shadow of a-tag 
--- @function [parent=#RichText] setAnchorTextShadow 
+-- @function setAnchorTextShadow 
 -- @param self
 -- @param #bool enable
 -- @param #color3b_table shadowColor
@@ -68,27 +68,27 @@
         
 --------------------------------
 -- 
--- @function [parent=#RichText] isAnchorTextItalicEnabled 
+-- @function isAnchorTextItalicEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setAnchorFontColor 
+-- @function setAnchorFontColor 
 -- @param self
 -- @param #string color
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setFontFace 
+-- @function setFontFace 
 -- @param self
 -- @param #string face
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setAnchorTextGlow 
+-- @function setAnchorTextGlow 
 -- @param self
 -- @param #bool enable
 -- @param #color3b_table glowColor
@@ -96,40 +96,40 @@
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getHorizontalAlignment 
+-- @function getHorizontalAlignment 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setHorizontalAlignment 
+-- @function setHorizontalAlignment 
 -- @param self
 -- @param #int a
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setAnchorTextDel 
+-- @function setAnchorTextDel 
 -- @param self
 -- @param #bool enable
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getAnchorTextOutlineColor3B 
+-- @function getAnchorTextOutlineColor3B 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] stringWithColor4B 
+-- @function stringWithColor4B 
 -- @param self
 -- @param #color4b_table color4b
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] initWithXML 
+-- @function initWithXML 
 -- @param self
 -- @param #string xml
 -- @param #map_table defaults
@@ -138,110 +138,110 @@
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getAnchorFontColor3B 
+-- @function getAnchorFontColor3B 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- brief Rearrange all RichElement in the RichText.<br>
 -- It's usually called internally.
--- @function [parent=#RichText] formatText 
+-- @function formatText 
 -- @param self
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getAnchorTextGlowColor3B 
+-- @function getAnchorTextGlowColor3B 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] openUrl 
+-- @function openUrl 
 -- @param self
 -- @param #string url
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getFontFace 
+-- @function getFontFace 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setFontColor 
+-- @function setFontColor 
 -- @param self
 -- @param #string color
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] isAnchorTextGlowEnabled 
+-- @function isAnchorTextGlowEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getDefaults 
+-- @function getDefaults 
 -- @param self
 -- @return map_table#map_table ret (return value: map_table)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] isAnchorTextUnderlineEnabled 
+-- @function isAnchorTextUnderlineEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getFontColor 
+-- @function getFontColor 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] isAnchorTextShadowEnabled 
+-- @function isAnchorTextShadowEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getAnchorTextOutlineSize 
+-- @function getAnchorTextOutlineSize 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- brief Set vertical space between each RichElement.<br>
 -- param space Point in float.
--- @function [parent=#RichText] setVerticalSpace 
+-- @function setVerticalSpace 
 -- @param self
 -- @param #float space
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] isAnchorTextDelEnabled 
+-- @function isAnchorTextDelEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setDefaults 
+-- @function setDefaults 
 -- @param self
 -- @param #map_table defaults
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setWrapMode 
+-- @function setWrapMode 
 -- @param self
 -- @param #int wrapMode
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setFontSize 
+-- @function setFontSize 
 -- @param self
 -- @param #float size
 -- @return RichText#RichText self (return value: ccui.RichText)
@@ -249,71 +249,71 @@
 --------------------------------
 -- @overload self, ccui.RichElement         
 -- @overload self, int         
--- @function [parent=#RichText] removeElement
+-- @function removeElement
 -- @param self
 -- @param #int index
 -- @return RichText#RichText self (return value: ccui.RichText)
 
 --------------------------------
 -- 
--- @function [parent=#RichText] setAnchorTextItalic 
+-- @function setAnchorTextItalic 
 -- @param self
 -- @param #bool enable
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getAnchorTextShadowOffset 
+-- @function getAnchorTextShadowOffset 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] isAnchorTextBoldEnabled 
+-- @function isAnchorTextBoldEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getAnchorTextShadowColor3B 
+-- @function getAnchorTextShadowColor3B 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] stringWithColor3B 
+-- @function stringWithColor3B 
 -- @param self
 -- @param #color3b_table color3b
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] isAnchorTextOutlineEnabled 
+-- @function isAnchorTextOutlineEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getFontColor3B 
+-- @function getFontColor3B 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getWrapMode 
+-- @function getWrapMode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] setAnchorTextUnderline 
+-- @function setAnchorTextUnderline 
 -- @param self
 -- @param #bool enable
 -- @return RichText#RichText self (return value: ccui.RichText)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] color3BWithString 
+-- @function color3BWithString 
 -- @param self
 -- @param #string color
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
@@ -321,14 +321,14 @@
 --------------------------------
 -- brief Create a empty RichText.<br>
 -- return RichText instance.
--- @function [parent=#RichText] create 
+-- @function create 
 -- @param self
 -- @return RichText#RichText ret (return value: ccui.RichText)
         
 --------------------------------
 -- brief Create a RichText from an XML<br>
 -- return RichText instance.
--- @function [parent=#RichText] createWithXML 
+-- @function createWithXML 
 -- @param self
 -- @param #string xml
 -- @param #map_table defaults
@@ -337,19 +337,19 @@
         
 --------------------------------
 -- 
--- @function [parent=#RichText] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#RichText] ignoreContentAdaptWithSize 
+-- @function ignoreContentAdaptWithSize 
 -- @param self
 -- @param #bool ignore
 -- @return RichText#RichText self (return value: ccui.RichText)
@@ -358,7 +358,7 @@
 -- brief Default constructor.<br>
 -- js ctor<br>
 -- lua new
--- @function [parent=#RichText] RichText 
+-- @function RichText 
 -- @param self
 -- @return RichText#RichText self (return value: ccui.RichText)
         

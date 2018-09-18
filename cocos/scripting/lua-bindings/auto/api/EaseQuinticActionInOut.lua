@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module EaseQuinticActionInOut
--- @extend ActionEase
--- @parent_module cc
+-- @see ActionEase
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EaseQuinticActionInOut] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return EaseQuinticActionInOut#EaseQuinticActionInOut ret (return value: cc.EaseQuinticActionInOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseQuinticActionInOut] clone 
+-- @function clone 
 -- @param self
 -- @return EaseQuinticActionInOut#EaseQuinticActionInOut ret (return value: cc.EaseQuinticActionInOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseQuinticActionInOut] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return EaseQuinticActionInOut#EaseQuinticActionInOut self (return value: cc.EaseQuinticActionInOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseQuinticActionInOut] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionEase#ActionEase ret (return value: cc.ActionEase)
         
 --------------------------------
 -- 
--- @function [parent=#EaseQuinticActionInOut] EaseQuinticActionInOut 
+-- @function EaseQuinticActionInOut 
 -- @param self
 -- @return EaseQuinticActionInOut#EaseQuinticActionInOut self (return value: cc.EaseQuinticActionInOut)
         

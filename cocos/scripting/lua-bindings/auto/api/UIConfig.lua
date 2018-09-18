@@ -1,11 +1,11 @@
 
 --------------------------------
 -- @module UIConfig
--- @parent_module fgui
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#UIConfig] registerFont 
+-- @function registerFont 
 -- @param self
 -- @param #string aliasName
 -- @param #string realName
@@ -13,7 +13,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#UIConfig] getRealFontName 
+-- @function getRealFontName 
 -- @param self
 -- @param #string aliasName
 -- @param #bool isTTF

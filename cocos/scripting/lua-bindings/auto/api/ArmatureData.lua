@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module ArmatureData
--- @extend Ref
--- @parent_module ccs
+-- @see Ref
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ArmatureData] addBoneData 
+-- @function addBoneData 
 -- @param self
 -- @param #ccs.BoneData boneData
 -- @return ArmatureData#ArmatureData self (return value: ccs.ArmatureData)
         
 --------------------------------
 -- 
--- @function [parent=#ArmatureData] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ArmatureData] getBoneData 
+-- @function getBoneData 
 -- @param self
 -- @param #string boneName
 -- @return BoneData#BoneData ret (return value: ccs.BoneData)
         
 --------------------------------
 -- 
--- @function [parent=#ArmatureData] create 
+-- @function create 
 -- @param self
 -- @return ArmatureData#ArmatureData ret (return value: ccs.ArmatureData)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ArmatureData] ArmatureData 
+-- @function ArmatureData 
 -- @param self
 -- @return ArmatureData#ArmatureData self (return value: ccs.ArmatureData)
         

@@ -1,31 +1,31 @@
 
 --------------------------------
 -- @module ActionTimelineNode
--- @extend Node
--- @parent_module ccs
+-- @see Node
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineNode] getRoot 
+-- @function getRoot 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineNode] getActionTimeline 
+-- @function getActionTimeline 
 -- @param self
 -- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineNode] setActionTimeline 
+-- @function setActionTimeline 
 -- @param self
 -- @param #ccs.ActionTimeline action
 -- @return ActionTimelineNode#ActionTimelineNode self (return value: ccs.ActionTimelineNode)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineNode] init 
+-- @function init 
 -- @param self
 -- @param #cc.Node root
 -- @param #ccs.ActionTimeline action
@@ -33,14 +33,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineNode] setRoot 
+-- @function setRoot 
 -- @param self
 -- @param #cc.Node root
 -- @return ActionTimelineNode#ActionTimelineNode self (return value: ccs.ActionTimelineNode)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineNode] create 
+-- @function create 
 -- @param self
 -- @param #cc.Node root
 -- @param #ccs.ActionTimeline action
@@ -48,13 +48,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineNode] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineNode] ActionTimelineNode 
+-- @function ActionTimelineNode 
 -- @param self
 -- @return ActionTimelineNode#ActionTimelineNode self (return value: ccs.ActionTimelineNode)
         

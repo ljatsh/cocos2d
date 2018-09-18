@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module Scene
--- @extend Node
--- @parent_module cc
+-- @see Node
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Scene] initWithPhysics 
+-- @function initWithPhysics 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Scene] setCameraOrderDirty 
+-- @function setCameraOrderDirty 
 -- @param self
 -- @return Scene#Scene self (return value: cc.Scene)
         
 --------------------------------
 -- @overload self, cc.Renderer, mat4_table, mat4_table, unsigned int         
 -- @overload self, cc.Renderer, mat4_table, mat4_table         
--- @function [parent=#Scene] render
+-- @function render
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table eyeTransforms
@@ -29,14 +29,14 @@
 
 --------------------------------
 -- 
--- @function [parent=#Scene] stepPhysicsAndNavigation 
+-- @function stepPhysicsAndNavigation 
 -- @param self
 -- @param #float deltaTime
 -- @return Scene#Scene self (return value: cc.Scene)
         
 --------------------------------
 -- 
--- @function [parent=#Scene] onProjectionChanged 
+-- @function onProjectionChanged 
 -- @param self
 -- @param #cc.EventCustom event
 -- @return Scene#Scene self (return value: cc.Scene)
@@ -45,13 +45,13 @@
 --  Get the physics world of the scene.<br>
 -- return The physics world of the scene.<br>
 -- js NA
--- @function [parent=#Scene] getPhysicsWorld 
+-- @function getPhysicsWorld 
 -- @param self
 -- @return PhysicsWorld#PhysicsWorld ret (return value: cc.PhysicsWorld)
         
 --------------------------------
 -- 
--- @function [parent=#Scene] initWithSize 
+-- @function initWithSize 
 -- @param self
 -- @param #size_table size
 -- @return bool#bool ret (return value: bool)
@@ -60,7 +60,7 @@
 --  Get the default camera.<br>
 -- js NA<br>
 -- return The default camera of scene.
--- @function [parent=#Scene] getDefaultCamera 
+-- @function getDefaultCamera 
 -- @param self
 -- @return Camera#Camera ret (return value: cc.Camera)
         
@@ -69,7 +69,7 @@
 -- param size The predefined size of scene.<br>
 -- return An autoreleased Scene object.<br>
 -- js NA
--- @function [parent=#Scene] createWithSize 
+-- @function createWithSize 
 -- @param self
 -- @param #size_table size
 -- @return Scene#Scene ret (return value: cc.Scene)
@@ -77,7 +77,7 @@
 --------------------------------
 --  Creates a new Scene object. <br>
 -- return An autoreleased Scene object.
--- @function [parent=#Scene] create 
+-- @function create 
 -- @param self
 -- @return Scene#Scene ret (return value: cc.Scene)
         
@@ -85,31 +85,31 @@
 --  Create a scene with physics.<br>
 -- return An autoreleased Scene object with physics.<br>
 -- js NA
--- @function [parent=#Scene] createWithPhysics 
+-- @function createWithPhysics 
 -- @param self
 -- @return Scene#Scene ret (return value: cc.Scene)
         
 --------------------------------
 -- 
--- @function [parent=#Scene] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Scene] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 --  override function 
--- @function [parent=#Scene] removeAllChildren 
+-- @function removeAllChildren 
 -- @param self
 -- @return Scene#Scene self (return value: cc.Scene)
         
 --------------------------------
 -- 
--- @function [parent=#Scene] Scene 
+-- @function Scene 
 -- @param self
 -- @return Scene#Scene self (return value: cc.Scene)
         

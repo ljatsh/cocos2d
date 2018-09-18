@@ -1,64 +1,64 @@
 
 --------------------------------
 -- @module BoneNode
--- @extend Node,BlendProtocol
--- @parent_module ccs
+-- @see Node,BlendProtocol
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#BoneNode] getDebugDrawWidth 
+-- @function getDebugDrawWidth 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#BoneNode] getChildBones
+-- @function getChildBones
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
 
 --------------------------------
 -- 
--- @function [parent=#BoneNode] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
 --------------------------------
 -- brief: get all bones in this bone tree
--- @function [parent=#BoneNode] getAllSubBones 
+-- @function getAllSubBones 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setDebugDrawEnabled 
+-- @function setDebugDrawEnabled 
 -- @param self
 -- @param #bool isDebugDraw
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- get displayings rect in self transform
--- @function [parent=#BoneNode] getVisibleSkinsRect 
+-- @function getVisibleSkinsRect 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- brief: get all skins in this bone tree
--- @function [parent=#BoneNode] getAllSubSkins 
+-- @function getAllSubSkins 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- @overload self, string, bool         
 -- @overload self, cc.Node, bool         
--- @function [parent=#BoneNode] displaySkin
+-- @function displaySkin
 -- @param self
 -- @param #cc.Node skin
 -- @param #bool hideOthers
@@ -66,14 +66,14 @@
 
 --------------------------------
 -- 
--- @function [parent=#BoneNode] isDebugDrawEnabled 
+-- @function isDebugDrawEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- @overload self, cc.Node, bool, bool         
 -- @overload self, cc.Node, bool         
--- @function [parent=#BoneNode] addSkin
+-- @function addSkin
 -- @param self
 -- @param #cc.Node skin
 -- @param #bool display
@@ -82,13 +82,13 @@
 
 --------------------------------
 -- 
--- @function [parent=#BoneNode] getRootSkeletonNode 
+-- @function getRootSkeletonNode 
 -- @param self
 -- @return SkeletonNode#SkeletonNode ret (return value: ccs.SkeletonNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setDebugDrawLength 
+-- @function setDebugDrawLength 
 -- @param self
 -- @param #float length
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
@@ -96,46 +96,46 @@
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#BoneNode] getSkins
+-- @function getSkins
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
 
 --------------------------------
 -- 
--- @function [parent=#BoneNode] getVisibleSkins 
+-- @function getVisibleSkins 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setDebugDrawWidth 
+-- @function setDebugDrawWidth 
 -- @param self
 -- @param #float width
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] getDebugDrawLength 
+-- @function getDebugDrawLength 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setDebugDrawColor 
+-- @function setDebugDrawColor 
 -- @param self
 -- @param #color4f_table color
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] getDebugDrawColor 
+-- @function getDebugDrawColor 
 -- @param self
 -- @return color4f_table#color4f_table ret (return value: color4f_table)
         
 --------------------------------
 -- @overload self, int         
 -- @overload self         
--- @function [parent=#BoneNode] create
+-- @function create
 -- @param self
 -- @param #int length
 -- @return BoneNode#BoneNode ret (return value: ccs.BoneNode)
@@ -143,7 +143,7 @@
 --------------------------------
 -- @overload self, cc.Node, int, int         
 -- @overload self, cc.Node, int, string         
--- @function [parent=#BoneNode] addChild
+-- @function addChild
 -- @param self
 -- @param #cc.Node child
 -- @param #int localZOrder
@@ -152,7 +152,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#BoneNode] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -161,28 +161,28 @@
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setName 
+-- @function setName 
 -- @param self
 -- @param #string name
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setAnchorPoint 
+-- @function setAnchorPoint 
 -- @param self
 -- @param #vec2_table anchorPoint
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setLocalZOrder 
+-- @function setLocalZOrder 
 -- @param self
 -- @param #int localZOrder
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] removeChild 
+-- @function removeChild 
 -- @param self
 -- @param #cc.Node child
 -- @param #bool cleanup
@@ -190,33 +190,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] getBoundingBox 
+-- @function getBoundingBox 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setContentSize 
+-- @function setContentSize 
 -- @param self
 -- @param #size_table contentSize
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] setVisible 
+-- @function setVisible 
 -- @param self
 -- @param #bool visible
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         
 --------------------------------
 -- 
--- @function [parent=#BoneNode] BoneNode 
+-- @function BoneNode 
 -- @param self
 -- @return BoneNode#BoneNode self (return value: ccs.BoneNode)
         

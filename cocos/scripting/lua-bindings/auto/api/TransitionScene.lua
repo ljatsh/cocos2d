@@ -1,24 +1,24 @@
 
 --------------------------------
 -- @module TransitionScene
--- @extend Scene
--- @parent_module cc
+-- @see Scene
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#TransitionScene] getInScene 
+-- @function getInScene 
 -- @param self
 -- @return Scene#Scene ret (return value: cc.Scene)
         
 --------------------------------
 --  Called after the transition finishes.
--- @function [parent=#TransitionScene] finish 
+-- @function finish 
 -- @param self
 -- @return TransitionScene#TransitionScene self (return value: cc.TransitionScene)
         
 --------------------------------
 --  initializes a transition with duration and incoming scene 
--- @function [parent=#TransitionScene] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -26,13 +26,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionScene] getDuration 
+-- @function getDuration 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Used by some transitions to hide the outer scene.
--- @function [parent=#TransitionScene] hideOutShowIn 
+-- @function hideOutShowIn 
 -- @param self
 -- @return TransitionScene#TransitionScene self (return value: cc.TransitionScene)
         
@@ -41,7 +41,7 @@
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return A autoreleased TransitionScene object.
--- @function [parent=#TransitionScene] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -49,7 +49,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionScene] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -58,13 +58,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionScene] cleanup 
+-- @function cleanup 
 -- @param self
 -- @return TransitionScene#TransitionScene self (return value: cc.TransitionScene)
         
 --------------------------------
 -- 
--- @function [parent=#TransitionScene] TransitionScene 
+-- @function TransitionScene 
 -- @param self
 -- @return TransitionScene#TransitionScene self (return value: cc.TransitionScene)
         

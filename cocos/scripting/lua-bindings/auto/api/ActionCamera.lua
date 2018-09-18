@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module ActionCamera
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- @overload self, float, float, float         
 -- @overload self, vec3_table         
--- @function [parent=#ActionCamera] setEye
+-- @function setEye
 -- @param self
 -- @param #float x
 -- @param #float y
@@ -16,59 +16,59 @@
 
 --------------------------------
 -- 
--- @function [parent=#ActionCamera] getEye 
+-- @function getEye 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- 
--- @function [parent=#ActionCamera] setUp 
+-- @function setUp 
 -- @param self
 -- @param #vec3_table up
 -- @return ActionCamera#ActionCamera self (return value: cc.ActionCamera)
         
 --------------------------------
 -- 
--- @function [parent=#ActionCamera] getCenter 
+-- @function getCenter 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- 
--- @function [parent=#ActionCamera] setCenter 
+-- @function setCenter 
 -- @param self
 -- @param #vec3_table center
 -- @return ActionCamera#ActionCamera self (return value: cc.ActionCamera)
         
 --------------------------------
 -- 
--- @function [parent=#ActionCamera] getUp 
+-- @function getUp 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- 
--- @function [parent=#ActionCamera] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return ActionCamera#ActionCamera self (return value: cc.ActionCamera)
         
 --------------------------------
 -- 
--- @function [parent=#ActionCamera] clone 
+-- @function clone 
 -- @param self
 -- @return ActionCamera#ActionCamera ret (return value: cc.ActionCamera)
         
 --------------------------------
 -- 
--- @function [parent=#ActionCamera] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionCamera#ActionCamera ret (return value: cc.ActionCamera)
         
 --------------------------------
 -- js ctor<br>
 -- lua new
--- @function [parent=#ActionCamera] ActionCamera 
+-- @function ActionCamera 
 -- @param self
 -- @return ActionCamera#ActionCamera self (return value: cc.ActionCamera)
         

@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module Animation3D
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 -- init Animation3D with file name and animation name
--- @function [parent=#Animation3D] initWithFile 
+-- @function initWithFile 
 -- @param self
 -- @param #string filename
 -- @param #string animationName
@@ -14,20 +14,20 @@
         
 --------------------------------
 -- init Animation3D from bundle data
--- @function [parent=#Animation3D] init 
+-- @function init 
 -- @param self
 -- @param #cc.Animation3DData data
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- get duration
--- @function [parent=#Animation3D] getDuration 
+-- @function getDuration 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- read all animation or only the animation with given animationName? animationName == "" read the first.
--- @function [parent=#Animation3D] create 
+-- @function create 
 -- @param self
 -- @param #string filename
 -- @param #string animationName
@@ -35,7 +35,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Animation3D] Animation3D 
+-- @function Animation3D 
 -- @param self
 -- @return Animation3D#Animation3D self (return value: cc.Animation3D)
         

@@ -1,180 +1,180 @@
 
 --------------------------------
 -- @module GLoader
--- @extend GObject,IColorGear,IAnimationGear
--- @parent_module fgui
+-- @see GObject,IColorGear,IAnimationGear
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GLoader] getURL 
+-- @function getURL 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setTimeScale 
+-- @function setTimeScale 
 -- @param self
 -- @param #float value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setVerticalAlign 
+-- @function setVerticalAlign 
 -- @param self
 -- @param #int value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getAlign 
+-- @function getAlign 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getFrame 
+-- @function getFrame 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getComponent 
+-- @function getComponent 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getContentSize 
+-- @function getContentSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] advance 
+-- @function advance 
 -- @param self
 -- @param #float time
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getVerticalAlign 
+-- @function getVerticalAlign 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setAlign 
+-- @function setAlign 
 -- @param self
 -- @param #int value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getColor 
+-- @function getColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setURL 
+-- @function setURL 
 -- @param self
 -- @param #string value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setPlaying 
+-- @function setPlaying 
 -- @param self
 -- @param #bool value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] isPlaying 
+-- @function isPlaying 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] isShrinkOnly 
+-- @function isShrinkOnly 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getTimeScale 
+-- @function getTimeScale 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setAutoSize 
+-- @function setAutoSize 
 -- @param self
 -- @param #bool value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setShrinkOnly 
+-- @function setShrinkOnly 
 -- @param self
 -- @param #bool value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setColor 
+-- @function setColor 
 -- @param self
 -- @param #color3b_table value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setFrame 
+-- @function setFrame 
 -- @param self
 -- @param #int value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getFill 
+-- @function getFill 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getAutoSize 
+-- @function getAutoSize 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setFill 
+-- @function setFill 
 -- @param self
 -- @param #int value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] create 
+-- @function create 
 -- @param self
 -- @return GLoader#GLoader ret (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] getIcon 
+-- @function getIcon 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] setIcon 
+-- @function setIcon 
 -- @param self
 -- @param #string value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#GLoader] GLoader 
+-- @function GLoader 
 -- @param self
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
         

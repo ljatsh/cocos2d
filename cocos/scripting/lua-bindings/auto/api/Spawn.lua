@@ -1,19 +1,19 @@
 
 --------------------------------
 -- @module Spawn
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Spawn] init 
+-- @function init 
 -- @param self
 -- @param #array_table arrayOfActions
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  initializes the Spawn action with the 2 actions to spawn 
--- @function [parent=#Spawn] initWithTwoActions 
+-- @function initWithTwoActions 
 -- @param self
 -- @param #cc.FiniteTimeAction action1
 -- @param #cc.FiniteTimeAction action2
@@ -21,39 +21,39 @@
         
 --------------------------------
 -- 
--- @function [parent=#Spawn] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return Spawn#Spawn self (return value: cc.Spawn)
         
 --------------------------------
 -- 
--- @function [parent=#Spawn] clone 
+-- @function clone 
 -- @param self
 -- @return Spawn#Spawn ret (return value: cc.Spawn)
         
 --------------------------------
 -- 
--- @function [parent=#Spawn] stop 
+-- @function stop 
 -- @param self
 -- @return Spawn#Spawn self (return value: cc.Spawn)
         
 --------------------------------
 -- 
--- @function [parent=#Spawn] reverse 
+-- @function reverse 
 -- @param self
 -- @return Spawn#Spawn ret (return value: cc.Spawn)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#Spawn] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return Spawn#Spawn self (return value: cc.Spawn)
         
 --------------------------------
 -- 
--- @function [parent=#Spawn] Spawn 
+-- @function Spawn 
 -- @param self
 -- @return Spawn#Spawn self (return value: cc.Spawn)
         

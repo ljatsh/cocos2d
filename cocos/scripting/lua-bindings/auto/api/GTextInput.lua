@@ -1,84 +1,84 @@
 
 --------------------------------
 -- @module GTextInput
--- @extend GTextField
--- @parent_module fgui
+-- @see GTextField
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GTextInput] setKeyboardType 
+-- @function setKeyboardType 
 -- @param self
 -- @param #int value
 -- @return GTextInput#GTextInput self (return value: fgui.GTextInput)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] setPrompt 
+-- @function setPrompt 
 -- @param self
 -- @param #string value
 -- @return GTextInput#GTextInput self (return value: fgui.GTextInput)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] setMaxLength 
+-- @function setMaxLength 
 -- @param self
 -- @param #int value
 -- @return GTextInput#GTextInput self (return value: fgui.GTextInput)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] setRestrict 
+-- @function setRestrict 
 -- @param self
 -- @param #string value
 -- @return GTextInput#GTextInput self (return value: fgui.GTextInput)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] setPassword 
+-- @function setPassword 
 -- @param self
 -- @param #bool value
 -- @return GTextInput#GTextInput self (return value: fgui.GTextInput)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] create 
+-- @function create 
 -- @param self
 -- @return GTextInput#GTextInput ret (return value: fgui.GTextInput)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] getTextFormat 
+-- @function getTextFormat 
 -- @param self
 -- @return TextFormat#TextFormat ret (return value: fgui.TextFormat)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] applyTextFormat 
+-- @function applyTextFormat 
 -- @param self
 -- @return GTextInput#GTextInput self (return value: fgui.GTextInput)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] isSingleLine 
+-- @function isSingleLine 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] getText 
+-- @function getText 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] setSingleLine 
+-- @function setSingleLine 
 -- @param self
 -- @param #bool value
 -- @return GTextInput#GTextInput self (return value: fgui.GTextInput)
         
 --------------------------------
 -- 
--- @function [parent=#GTextInput] GTextInput 
+-- @function GTextInput 
 -- @param self
 -- @return GTextInput#GTextInput self (return value: fgui.GTextInput)
         

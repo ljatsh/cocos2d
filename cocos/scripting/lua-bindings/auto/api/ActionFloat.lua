@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module ActionFloat
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ActionFloat] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #float from
@@ -22,7 +22,7 @@
 -- param to value to be at the end of the action<br>
 -- param callback to report back result<br>
 -- return An autoreleased ActionFloat object
--- @function [parent=#ActionFloat] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #float from
@@ -32,33 +32,33 @@
         
 --------------------------------
 -- Overridden ActionInterval methods
--- @function [parent=#ActionFloat] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return ActionFloat#ActionFloat self (return value: cc.ActionFloat)
         
 --------------------------------
 -- 
--- @function [parent=#ActionFloat] clone 
+-- @function clone 
 -- @param self
 -- @return ActionFloat#ActionFloat ret (return value: cc.ActionFloat)
         
 --------------------------------
 -- 
--- @function [parent=#ActionFloat] update 
+-- @function update 
 -- @param self
 -- @param #float delta
 -- @return ActionFloat#ActionFloat self (return value: cc.ActionFloat)
         
 --------------------------------
 -- 
--- @function [parent=#ActionFloat] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionFloat#ActionFloat ret (return value: cc.ActionFloat)
         
 --------------------------------
 -- 
--- @function [parent=#ActionFloat] ActionFloat 
+-- @function ActionFloat 
 -- @param self
 -- @return ActionFloat#ActionFloat self (return value: cc.ActionFloat)
         

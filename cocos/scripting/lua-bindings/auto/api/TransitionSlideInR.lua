@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module TransitionSlideInR
--- @extend TransitionSlideInL
--- @parent_module cc
+-- @see TransitionSlideInL
+-- @see cc
 
 --------------------------------
 --  Creates a transition with duration and incoming scene.<br>
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return A autoreleased TransitionSlideInR object.
--- @function [parent=#TransitionSlideInR] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -17,13 +17,13 @@
         
 --------------------------------
 --  Returns the action that will be performed by the incoming and outgoing scene. 
--- @function [parent=#TransitionSlideInR] action 
+-- @function action 
 -- @param self
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
         
 --------------------------------
 -- 
--- @function [parent=#TransitionSlideInR] TransitionSlideInR 
+-- @function TransitionSlideInR 
 -- @param self
 -- @return TransitionSlideInR#TransitionSlideInR self (return value: cc.TransitionSlideInR)
         

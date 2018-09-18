@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module Hide
--- @extend ActionInstant
--- @parent_module cc
+-- @see ActionInstant
+-- @see cc
 
 --------------------------------
 --  Allocates and initializes the action.<br>
 -- return An autoreleased Hide object.
--- @function [parent=#Hide] create 
+-- @function create 
 -- @param self
 -- @return Hide#Hide ret (return value: cc.Hide)
         
 --------------------------------
 -- 
--- @function [parent=#Hide] clone 
+-- @function clone 
 -- @param self
 -- @return Hide#Hide ret (return value: cc.Hide)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#Hide] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return Hide#Hide self (return value: cc.Hide)
         
 --------------------------------
 -- 
--- @function [parent=#Hide] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionInstant#ActionInstant ret (return value: cc.ActionInstant)
         
 --------------------------------
 -- 
--- @function [parent=#Hide] Hide 
+-- @function Hide 
 -- @param self
 -- @return Hide#Hide self (return value: cc.Hide)
         

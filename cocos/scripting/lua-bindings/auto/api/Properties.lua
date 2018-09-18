@@ -1,7 +1,7 @@
 
 --------------------------------
 -- @module Properties
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 -- Returns the value of a variable that is set in this Properties object.<br>
@@ -9,7 +9,7 @@
 -- param name Name of the variable to get.<br>
 -- param defaultValue Value to return if the variable is not found.<br>
 -- return The value of the specified variable, or defaultValue if not found.
--- @function [parent=#Properties] getVariable 
+-- @function getVariable 
 -- @param self
 -- @param #char name
 -- @param #char defaultValue
@@ -21,7 +21,7 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- param defaultValue The default value to return if the specified property does not exist.<br>
 -- return The value of the given property as a string, or the empty string if no property with that name exists.
--- @function [parent=#Properties] getString 
+-- @function getString 
 -- @param self
 -- @return char#char ret (return value: char)
         
@@ -32,14 +32,14 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- return The value of the given property interpreted as a long.<br>
 -- Zero if the property does not exist or could not be scanned.
--- @function [parent=#Properties] getLong 
+-- @function getLong 
 -- @param self
 -- @return long#long ret (return value: long)
         
 --------------------------------
 -- @overload self         
 -- @overload self, char, bool, bool         
--- @function [parent=#Properties] getNamespace
+-- @function getNamespace
 -- @param self
 -- @param #char id
 -- @param #bool searchNames
@@ -54,7 +54,7 @@
 -- param path The string to copy the path to if the file exists.<br>
 -- return True if the property exists and the file exists, false otherwise.<br>
 -- script{ignore}
--- @function [parent=#Properties] getPath 
+-- @function getPath 
 -- @param self
 -- @param #char name
 -- @param #string path
@@ -68,7 +68,7 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- param out The matrix to set to this property's interpreted value.<br>
 -- return True on success, false if the property does not exist or could not be scanned.
--- @function [parent=#Properties] getMat4 
+-- @function getMat4 
 -- @param self
 -- @param #char name
 -- @param #mat4_table out
@@ -78,7 +78,7 @@
 -- Check if a property with the given name is specified in this Properties object.<br>
 -- param name The name of the property to query.<br>
 -- return True if the property exists, false otherwise.
--- @function [parent=#Properties] exists 
+-- @function exists 
 -- @param self
 -- @param #char name
 -- @return bool#bool ret (return value: bool)
@@ -94,7 +94,7 @@
 -- param name The name of the property to set.<br>
 -- param value The property value.<br>
 -- return True if the property was set, false otherwise.
--- @function [parent=#Properties] setString 
+-- @function setString 
 -- @param self
 -- @param #char name
 -- @param #char value
@@ -104,14 +104,14 @@
 -- Get the ID of this Property's namespace. The ID should be a unique identifier,<br>
 -- but its uniqueness is not enforced.<br>
 -- return The ID of this Property's namespace.
--- @function [parent=#Properties] getId 
+-- @function getId 
 -- @param self
 -- @return char#char ret (return value: char)
         
 --------------------------------
 -- Rewind the getNextProperty() and getNextNamespace() iterators<br>
 -- to the beginning of the file.
--- @function [parent=#Properties] rewind 
+-- @function rewind 
 -- @param self
 -- @return Properties#Properties self (return value: cc.Properties)
         
@@ -119,7 +119,7 @@
 -- Sets the value of the specified variable.<br>
 -- param name Name of the variable to set.<br>
 -- param value The value to set.
--- @function [parent=#Properties] setVariable 
+-- @function setVariable 
 -- @param self
 -- @param #char name
 -- @param #char value
@@ -130,14 +130,14 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- param defaultValue the default value to return if the specified property does not exist within the properties file.<br>
 -- return true if the property exists and its value is "true", otherwise false.
--- @function [parent=#Properties] getBool 
+-- @function getBool 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- @overload self, char, vec4_table         
 -- @overload self, char, vec3_table         
--- @function [parent=#Properties] getColor
+-- @function getColor
 -- @param self
 -- @param #char name
 -- @param #vec3_table out
@@ -147,13 +147,13 @@
 -- Returns the type of a property.<br>
 -- param name The name of the property to interpret, or NULL to return the current property's type.<br>
 -- return The type of the property.
--- @function [parent=#Properties] getType 
+-- @function getType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Get the next namespace.
--- @function [parent=#Properties] getNextNamespace 
+-- @function getNextNamespace 
 -- @param self
 -- @return Properties#Properties ret (return value: cc.Properties)
         
@@ -164,7 +164,7 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- return The value of the given property interpreted as an integer.<br>
 -- Zero if the property does not exist or could not be scanned.
--- @function [parent=#Properties] getInt 
+-- @function getInt 
 -- @param self
 -- @return int#int ret (return value: int)
         
@@ -176,7 +176,7 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- param out The vector to set to this property's interpreted value.<br>
 -- return True on success, false if the property does not exist or could not be scanned.
--- @function [parent=#Properties] getVec3 
+-- @function getVec3 
 -- @param self
 -- @param #char name
 -- @param #vec3_table out
@@ -190,7 +190,7 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- param out The vector to set to this property's interpreted value.<br>
 -- return True on success, false if the property does not exist or could not be scanned.
--- @function [parent=#Properties] getVec2 
+-- @function getVec2 
 -- @param self
 -- @param #char name
 -- @param #vec2_table out
@@ -204,7 +204,7 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- param out The vector to set to this property's interpreted value.<br>
 -- return True on success, false if the property does not exist or could not be scanned.
--- @function [parent=#Properties] getVec4 
+-- @function getVec4 
 -- @param self
 -- @param #char name
 -- @param #vec4_table out
@@ -215,7 +215,7 @@
 -- If a valid next property is returned, the value of the property can be<br>
 -- retrieved using any of the get methods in this class, passing NULL for the property name.<br>
 -- return The name of the next property, or NULL if there are no properties remaining.
--- @function [parent=#Properties] getNextProperty 
+-- @function getNextProperty 
 -- @param self
 -- @return char#char ret (return value: char)
         
@@ -226,7 +226,7 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- return The value of the given property interpreted as a float.<br>
 -- Zero if the property does not exist or could not be scanned.
--- @function [parent=#Properties] getFloat 
+-- @function getFloat 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -238,7 +238,7 @@
 -- param name The name of the property to interpret, or NULL to return the current property's value.<br>
 -- param out The quaternion to set to this property's interpreted value.<br>
 -- return True on success, false if the property does not exist or could not be scanned.
--- @function [parent=#Properties] getQuaternionFromAxisAngle 
+-- @function getQuaternionFromAxisAngle 
 -- @param self
 -- @param #char name
 -- @param #cc.Quaternion out
@@ -247,7 +247,7 @@
 --------------------------------
 -- @overload self, char, vec4_table         
 -- @overload self, char, vec3_table         
--- @function [parent=#Properties] parseColor
+-- @function parseColor
 -- @param self
 -- @param #char str
 -- @param #vec3_table out
@@ -259,7 +259,7 @@
 -- param str The string to parse.<br>
 -- param out The value to populate if successful.<br>
 -- return True if a valid Vector3 was parsed, false otherwise.
--- @function [parent=#Properties] parseVec3 
+-- @function parseVec3 
 -- @param self
 -- @param #char str
 -- @param #vec3_table out
@@ -274,7 +274,7 @@
 -- param str The string to parse.<br>
 -- param out A Quaternion populated with the orientation of the axis-angle, if successful.<br>
 -- return True if a valid axis-angle was parsed, false otherwise.
--- @function [parent=#Properties] parseAxisAngle 
+-- @function parseAxisAngle 
 -- @param self
 -- @param #char str
 -- @param #cc.Quaternion out
@@ -286,7 +286,7 @@
 -- param str The string to parse.<br>
 -- param out The value to populate if successful.<br>
 -- return True if a valid Vector2 was parsed, false otherwise.
--- @function [parent=#Properties] parseVec2 
+-- @function parseVec2 
 -- @param self
 -- @param #char str
 -- @param #vec2_table out
@@ -298,7 +298,7 @@
 -- param str The string to parse.<br>
 -- param out The value to populate if successful.<br>
 -- return True if a valid Vector4 was parsed, false otherwise.
--- @function [parent=#Properties] parseVec4 
+-- @function parseVec4 
 -- @param self
 -- @param #char str
 -- @param #vec4_table out

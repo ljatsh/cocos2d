@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module SimpleAudioEngine
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 -- Preload background music.<br>
 -- param filePath The path of the background music file.<br>
 -- js NA<br>
 -- lua preloadMusic
--- @function [parent=#SimpleAudioEngine] preloadBackgroundMusic 
+-- @function preloadBackgroundMusic 
 -- @param self
 -- @param #char filePath
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
@@ -18,13 +18,13 @@
 -- param releaseData If release the background music data or not.As default value is false.<br>
 -- js stopMusic<br>
 -- lua stopMusic
--- @function [parent=#SimpleAudioEngine] stopBackgroundMusic 
+-- @function stopBackgroundMusic 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
         
 --------------------------------
 -- Stop all playing sound effects.
--- @function [parent=#SimpleAudioEngine] stopAllEffects 
+-- @function stopAllEffects 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
         
@@ -32,7 +32,7 @@
 -- The volume of the background music within the range of 0.0 as the minimum and 1.0 as the maximum.<br>
 -- js getMusicVolume<br>
 -- lua getMusicVolume
--- @function [parent=#SimpleAudioEngine] getBackgroundMusicVolume 
+-- @function getBackgroundMusicVolume 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -40,7 +40,7 @@
 -- Resume playing background music.<br>
 -- js resumeMusic<br>
 -- lua resumeMusic
--- @function [parent=#SimpleAudioEngine] resumeBackgroundMusic 
+-- @function resumeBackgroundMusic 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
         
@@ -49,7 +49,7 @@
 -- param volume must be within the range of 0.0 as the minimum and 1.0 as the maximum.<br>
 -- js setMusicVolume<br>
 -- lua setMusicVolume
--- @function [parent=#SimpleAudioEngine] setBackgroundMusicVolume 
+-- @function setBackgroundMusicVolume 
 -- @param self
 -- @param #float volume
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
@@ -59,7 +59,7 @@
 -- The compressed audio will be decoded to wave, then written into an internal buffer in SimpleAudioEngine.<br>
 -- param filePath The path of the effect file.<br>
 -- js NA
--- @function [parent=#SimpleAudioEngine] preloadEffect 
+-- @function preloadEffect 
 -- @param self
 -- @param #char filePath
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
@@ -69,13 +69,13 @@
 -- return <i>true</i> if the background music is playing, otherwise <i>false</i>.<br>
 -- js isMusicPlaying<br>
 -- lua isMusicPlaying
--- @function [parent=#SimpleAudioEngine] isBackgroundMusicPlaying 
+-- @function isBackgroundMusicPlaying 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- The volume of the effects within the range of 0.0 as the minimum and 1.0 as the maximum.
--- @function [parent=#SimpleAudioEngine] getEffectsVolume 
+-- @function getEffectsVolume 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -84,14 +84,14 @@
 -- return <i>true</i> if background music can be played, otherwise <i>false</i>.<br>
 -- js willPlayMusic<br>
 -- lua willPlayMusic
--- @function [parent=#SimpleAudioEngine] willPlayBackgroundMusic 
+-- @function willPlayBackgroundMusic 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Pause playing sound effect.<br>
 -- param soundId The return value of function playEffect.
--- @function [parent=#SimpleAudioEngine] pauseEffect 
+-- @function pauseEffect 
 -- @param self
 -- @param #unsigned int soundId
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
@@ -107,7 +107,7 @@
 -- note Full support is under development, now there are limitations:<br>
 -- - no pitch effect on Samsung Galaxy S2 with OpenSL backend enabled;<br>
 -- - no pitch/pan/gain on win32.
--- @function [parent=#SimpleAudioEngine] playEffect 
+-- @function playEffect 
 -- @param self
 -- @param #char filePath
 -- @param #bool loop
@@ -120,7 +120,7 @@
 -- Rewind playing background music.<br>
 -- js rewindMusic<br>
 -- lua rewindMusic
--- @function [parent=#SimpleAudioEngine] rewindBackgroundMusic 
+-- @function rewindBackgroundMusic 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
         
@@ -130,7 +130,7 @@
 -- param loop Whether the background music loop or not.<br>
 -- js playMusic<br>
 -- lua playMusic
--- @function [parent=#SimpleAudioEngine] playBackgroundMusic 
+-- @function playBackgroundMusic 
 -- @param self
 -- @param #char filePath
 -- @param #bool loop
@@ -138,14 +138,14 @@
         
 --------------------------------
 -- Resume all playing sound effect.
--- @function [parent=#SimpleAudioEngine] resumeAllEffects 
+-- @function resumeAllEffects 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
         
 --------------------------------
 -- Set the volume of sound effects.<br>
 -- param volume must be within the range of 0.0 as the minimum and 1.0 as the maximum.
--- @function [parent=#SimpleAudioEngine] setEffectsVolume 
+-- @function setEffectsVolume 
 -- @param self
 -- @param #float volume
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
@@ -153,7 +153,7 @@
 --------------------------------
 -- Stop playing sound effect.<br>
 -- param soundId The return value of function playEffect.
--- @function [parent=#SimpleAudioEngine] stopEffect 
+-- @function stopEffect 
 -- @param self
 -- @param #unsigned int soundId
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
@@ -162,20 +162,20 @@
 -- Pause playing background music.<br>
 -- js pauseMusic<br>
 -- lua pauseMusic
--- @function [parent=#SimpleAudioEngine] pauseBackgroundMusic 
+-- @function pauseBackgroundMusic 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
         
 --------------------------------
 -- Pause all playing sound effect.
--- @function [parent=#SimpleAudioEngine] pauseAllEffects 
+-- @function pauseAllEffects 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
         
 --------------------------------
 -- Unload the preloaded effect from internal buffer.<br>
 -- param filePath The path of the effect file.
--- @function [parent=#SimpleAudioEngine] unloadEffect 
+-- @function unloadEffect 
 -- @param self
 -- @param #char filePath
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
@@ -183,7 +183,7 @@
 --------------------------------
 -- Resume playing sound effect.<br>
 -- param soundId The return value of function playEffect.
--- @function [parent=#SimpleAudioEngine] resumeEffect 
+-- @function resumeEffect 
 -- @param self
 -- @param #unsigned int soundId
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
@@ -192,14 +192,14 @@
 -- Release the shared Engine object.<br>
 -- warning It must be called before the application exit, or it will lead to memory leaks.<br>
 -- lua destroyInstance
--- @function [parent=#SimpleAudioEngine] end 
+-- @function end 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine self (return value: cc.SimpleAudioEngine)
         
 --------------------------------
 -- Returns a shared instance of the SimpleAudioEngine.<br>
 -- js NA
--- @function [parent=#SimpleAudioEngine] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return SimpleAudioEngine#SimpleAudioEngine ret (return value: cc.SimpleAudioEngine)
         

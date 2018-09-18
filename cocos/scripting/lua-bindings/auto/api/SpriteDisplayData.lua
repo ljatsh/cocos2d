@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module SpriteDisplayData
--- @extend DisplayData
--- @parent_module ccs
+-- @see DisplayData
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#SpriteDisplayData] copy 
+-- @function copy 
 -- @param self
 -- @param #ccs.DisplayData displayData
 -- @return SpriteDisplayData#SpriteDisplayData self (return value: ccs.SpriteDisplayData)
         
 --------------------------------
 -- 
--- @function [parent=#SpriteDisplayData] create 
+-- @function create 
 -- @param self
 -- @return SpriteDisplayData#SpriteDisplayData ret (return value: ccs.SpriteDisplayData)
         
 --------------------------------
 -- js ctor
--- @function [parent=#SpriteDisplayData] SpriteDisplayData 
+-- @function SpriteDisplayData 
 -- @param self
 -- @return SpriteDisplayData#SpriteDisplayData self (return value: ccs.SpriteDisplayData)
         

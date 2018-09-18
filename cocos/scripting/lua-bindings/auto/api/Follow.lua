@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module Follow
--- @extend Action
--- @parent_module cc
+-- @see Action
+-- @see cc
 
 --------------------------------
 --  Alter behavior - turn on/off boundary. <br>
 -- param value Turn on/off boundary.
--- @function [parent=#Follow] setBoundarySet 
+-- @function setBoundarySet 
 -- @param self
 -- @param #bool value
 -- @return Follow#Follow self (return value: cc.Follow)
@@ -17,7 +17,7 @@
 -- param followedNode  The node to be followed.<br>
 -- param rect  The boundary. If \p rect is equal to Rect::ZERO, it'll work<br>
 -- with no boundary.
--- @function [parent=#Follow] initWithTarget 
+-- @function initWithTarget 
 -- @param self
 -- @param #cc.Node followedNode
 -- @param #rect_table rect
@@ -35,7 +35,7 @@
 -- node is to be followed.It can be positive,negative or zero.<br>
 -- If set to zero the node will be vertically centered followed.<br>
 -- If both xOffset and yOffset are set to zero,then the node will be horizontally and vertically centered followed.
--- @function [parent=#Follow] initWithTargetAndOffset 
+-- @function initWithTargetAndOffset 
 -- @param self
 -- @param #cc.Node followedNode
 -- @param #float xOffset
@@ -46,7 +46,7 @@
 --------------------------------
 --  Return boundarySet.<br>
 -- return Return boundarySet.
--- @function [parent=#Follow] isBoundarySet 
+-- @function isBoundarySet 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -55,7 +55,7 @@
 -- param followedNode  The node to be followed.<br>
 -- param rect  The boundary. If \p rect is equal to Rect::ZERO, it'll work<br>
 -- with no boundary.
--- @function [parent=#Follow] create 
+-- @function create 
 -- @param self
 -- @param #cc.Node followedNode
 -- @param #rect_table rect
@@ -73,7 +73,7 @@
 -- node is to be followed.It can be positive,negative or zero.<br>
 -- If set to zero the node will be vertically centered followed.<br>
 -- If both xOffset and yOffset are set to zero,then the node will be horizontally and vertically centered followed.
--- @function [parent=#Follow] createWithOffset 
+-- @function createWithOffset 
 -- @param self
 -- @param #cc.Node followedNode
 -- @param #float xOffset
@@ -84,38 +84,38 @@
 --------------------------------
 -- param dt in seconds.<br>
 -- js NA
--- @function [parent=#Follow] step 
+-- @function step 
 -- @param self
 -- @param #float dt
 -- @return Follow#Follow self (return value: cc.Follow)
         
 --------------------------------
 -- 
--- @function [parent=#Follow] clone 
+-- @function clone 
 -- @param self
 -- @return Follow#Follow ret (return value: cc.Follow)
         
 --------------------------------
 -- 
--- @function [parent=#Follow] stop 
+-- @function stop 
 -- @param self
 -- @return Follow#Follow self (return value: cc.Follow)
         
 --------------------------------
 -- 
--- @function [parent=#Follow] reverse 
+-- @function reverse 
 -- @param self
 -- @return Follow#Follow ret (return value: cc.Follow)
         
 --------------------------------
 -- 
--- @function [parent=#Follow] isDone 
+-- @function isDone 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- js ctor
--- @function [parent=#Follow] Follow 
+-- @function Follow 
 -- @param self
 -- @return Follow#Follow self (return value: cc.Follow)
         

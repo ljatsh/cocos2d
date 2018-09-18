@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module GGraph
--- @extend GObject,IColorGear
--- @parent_module fgui
+-- @see GObject,IColorGear
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GGraph] drawEllipse 
+-- @function drawEllipse 
 -- @param self
 -- @param #float aWidth
 -- @param #float aHeight
@@ -17,26 +17,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#GGraph] setColor 
+-- @function setColor 
 -- @param self
 -- @param #color3b_table value
 -- @return GGraph#GGraph self (return value: fgui.GGraph)
         
 --------------------------------
 -- 
--- @function [parent=#GGraph] getColor 
+-- @function getColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#GGraph] isEmpty 
+-- @function isEmpty 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GGraph] drawRect 
+-- @function drawRect 
 -- @param self
 -- @param #float aWidth
 -- @param #float aHeight
@@ -47,13 +47,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#GGraph] create 
+-- @function create 
 -- @param self
 -- @return GGraph#GGraph ret (return value: fgui.GGraph)
         
 --------------------------------
 -- 
--- @function [parent=#GGraph] GGraph 
+-- @function GGraph 
 -- @param self
 -- @return GGraph#GGraph self (return value: fgui.GGraph)
         

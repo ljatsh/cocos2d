@@ -1,19 +1,19 @@
 
 --------------------------------
 -- @module TextureCube
--- @extend Texture2D
--- @parent_module cc
+-- @see Texture2D
+-- @see cc
 
 --------------------------------
 --  reload texture cube after GLESContext reconstructed.
--- @function [parent=#TextureCube] reloadTexture 
+-- @function reloadTexture 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Sets the min filter, mag filter, wrap s and wrap t texture parameters.<br>
 -- If the texture size is NPOT (non power of 2), then in can only use GL_CLAMP_TO_EDGE in GL_TEXTURE_WRAP_{S,T}.
--- @function [parent=#TextureCube] setTexParameters 
+-- @function setTexParameters 
 -- @param self
 -- @param #cc.Texture2D::_TexParams 
 -- @return TextureCube#TextureCube self (return value: cc.TextureCube)
@@ -27,7 +27,7 @@
 -- param positive_z texture for the forward side of the texture cube face.<br>
 -- param negative_z texture for the rear side of the texture cube face.<br>
 -- return  A new texture cube inited with given parameters.
--- @function [parent=#TextureCube] create 
+-- @function create 
 -- @param self
 -- @param #string positive_x
 -- @param #string negative_x
@@ -39,7 +39,7 @@
         
 --------------------------------
 -- Constructor.
--- @function [parent=#TextureCube] TextureCube 
+-- @function TextureCube 
 -- @param self
 -- @return TextureCube#TextureCube self (return value: cc.TextureCube)
         

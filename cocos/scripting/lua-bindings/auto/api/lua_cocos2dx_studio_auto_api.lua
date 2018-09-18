@@ -3,297 +3,356 @@
 
 --------------------------------------------------------
 -- the ccs ActionFrame
--- @field [parent=#ccs] ActionFrame#ActionFrame ActionFrame preloaded module
+-- @field ActionFrame preloaded module
+-- @see ActionFrame
 
 
 --------------------------------------------------------
 -- the ccs ActionMoveFrame
--- @field [parent=#ccs] ActionMoveFrame#ActionMoveFrame ActionMoveFrame preloaded module
+-- @field ActionMoveFrame preloaded module
+-- @see ActionMoveFrame
 
 
 --------------------------------------------------------
 -- the ccs ActionScaleFrame
--- @field [parent=#ccs] ActionScaleFrame#ActionScaleFrame ActionScaleFrame preloaded module
+-- @field ActionScaleFrame preloaded module
+-- @see ActionScaleFrame
 
 
 --------------------------------------------------------
 -- the ccs ActionRotationFrame
--- @field [parent=#ccs] ActionRotationFrame#ActionRotationFrame ActionRotationFrame preloaded module
+-- @field ActionRotationFrame preloaded module
+-- @see ActionRotationFrame
 
 
 --------------------------------------------------------
 -- the ccs ActionFadeFrame
--- @field [parent=#ccs] ActionFadeFrame#ActionFadeFrame ActionFadeFrame preloaded module
+-- @field ActionFadeFrame preloaded module
+-- @see ActionFadeFrame
 
 
 --------------------------------------------------------
 -- the ccs ActionTintFrame
--- @field [parent=#ccs] ActionTintFrame#ActionTintFrame ActionTintFrame preloaded module
+-- @field ActionTintFrame preloaded module
+-- @see ActionTintFrame
 
 
 --------------------------------------------------------
 -- the ccs ActionObject
--- @field [parent=#ccs] ActionObject#ActionObject ActionObject preloaded module
+-- @field ActionObject preloaded module
+-- @see ActionObject
 
 
 --------------------------------------------------------
 -- the ccs ActionManagerEx
--- @field [parent=#ccs] ActionManagerEx#ActionManagerEx ActionManagerEx preloaded module
+-- @field ActionManagerEx preloaded module
+-- @see ActionManagerEx
 
 
 --------------------------------------------------------
 -- the ccs BaseData
--- @field [parent=#ccs] BaseData#BaseData BaseData preloaded module
+-- @field BaseData preloaded module
+-- @see BaseData
 
 
 --------------------------------------------------------
 -- the ccs DisplayData
--- @field [parent=#ccs] DisplayData#DisplayData DisplayData preloaded module
+-- @field DisplayData preloaded module
+-- @see DisplayData
 
 
 --------------------------------------------------------
 -- the ccs SpriteDisplayData
--- @field [parent=#ccs] SpriteDisplayData#SpriteDisplayData SpriteDisplayData preloaded module
+-- @field SpriteDisplayData preloaded module
+-- @see SpriteDisplayData
 
 
 --------------------------------------------------------
 -- the ccs ArmatureDisplayData
--- @field [parent=#ccs] ArmatureDisplayData#ArmatureDisplayData ArmatureDisplayData preloaded module
+-- @field ArmatureDisplayData preloaded module
+-- @see ArmatureDisplayData
 
 
 --------------------------------------------------------
 -- the ccs ParticleDisplayData
--- @field [parent=#ccs] ParticleDisplayData#ParticleDisplayData ParticleDisplayData preloaded module
+-- @field ParticleDisplayData preloaded module
+-- @see ParticleDisplayData
 
 
 --------------------------------------------------------
 -- the ccs BoneData
--- @field [parent=#ccs] BoneData#BoneData BoneData preloaded module
+-- @field BoneData preloaded module
+-- @see BoneData
 
 
 --------------------------------------------------------
 -- the ccs ArmatureData
--- @field [parent=#ccs] ArmatureData#ArmatureData ArmatureData preloaded module
+-- @field ArmatureData preloaded module
+-- @see ArmatureData
 
 
 --------------------------------------------------------
 -- the ccs FrameData
--- @field [parent=#ccs] FrameData#FrameData FrameData preloaded module
+-- @field FrameData preloaded module
+-- @see FrameData
 
 
 --------------------------------------------------------
 -- the ccs MovementBoneData
--- @field [parent=#ccs] MovementBoneData#MovementBoneData MovementBoneData preloaded module
+-- @field MovementBoneData preloaded module
+-- @see MovementBoneData
 
 
 --------------------------------------------------------
 -- the ccs MovementData
--- @field [parent=#ccs] MovementData#MovementData MovementData preloaded module
+-- @field MovementData preloaded module
+-- @see MovementData
 
 
 --------------------------------------------------------
 -- the ccs AnimationData
--- @field [parent=#ccs] AnimationData#AnimationData AnimationData preloaded module
+-- @field AnimationData preloaded module
+-- @see AnimationData
 
 
 --------------------------------------------------------
 -- the ccs ContourData
--- @field [parent=#ccs] ContourData#ContourData ContourData preloaded module
+-- @field ContourData preloaded module
+-- @see ContourData
 
 
 --------------------------------------------------------
 -- the ccs TextureData
--- @field [parent=#ccs] TextureData#TextureData TextureData preloaded module
+-- @field TextureData preloaded module
+-- @see TextureData
 
 
 --------------------------------------------------------
 -- the ccs Tween
--- @field [parent=#ccs] Tween#Tween Tween preloaded module
+-- @field Tween preloaded module
+-- @see Tween
 
 
 --------------------------------------------------------
 -- the ccs DisplayManager
--- @field [parent=#ccs] DisplayManager#DisplayManager DisplayManager preloaded module
+-- @field DisplayManager preloaded module
+-- @see DisplayManager
 
 
 --------------------------------------------------------
 -- the ccs Bone
--- @field [parent=#ccs] Bone#Bone Bone preloaded module
+-- @field Bone preloaded module
+-- @see Bone
 
 
 --------------------------------------------------------
 -- the ccs BatchNode
--- @field [parent=#ccs] BatchNode#BatchNode BatchNode preloaded module
+-- @field BatchNode preloaded module
+-- @see BatchNode
 
 
 --------------------------------------------------------
 -- the ccs ArmatureAnimation
--- @field [parent=#ccs] ArmatureAnimation#ArmatureAnimation ArmatureAnimation preloaded module
+-- @field ArmatureAnimation preloaded module
+-- @see ArmatureAnimation
 
 
 --------------------------------------------------------
 -- the ccs ArmatureDataManager
--- @field [parent=#ccs] ArmatureDataManager#ArmatureDataManager ArmatureDataManager preloaded module
+-- @field ArmatureDataManager preloaded module
+-- @see ArmatureDataManager
 
 
 --------------------------------------------------------
 -- the ccs Armature
--- @field [parent=#ccs] Armature#Armature Armature preloaded module
+-- @field Armature preloaded module
+-- @see Armature
 
 
 --------------------------------------------------------
 -- the ccs Skin
--- @field [parent=#ccs] Skin#Skin Skin preloaded module
+-- @field Skin preloaded module
+-- @see Skin
 
 
 --------------------------------------------------------
 -- the ccs ComAttribute
--- @field [parent=#ccs] ComAttribute#ComAttribute ComAttribute preloaded module
+-- @field ComAttribute preloaded module
+-- @see ComAttribute
 
 
 --------------------------------------------------------
 -- the ccs ComAudio
--- @field [parent=#ccs] ComAudio#ComAudio ComAudio preloaded module
+-- @field ComAudio preloaded module
+-- @see ComAudio
 
 
 --------------------------------------------------------
 -- the ccs ComController
--- @field [parent=#ccs] ComController#ComController ComController preloaded module
+-- @field ComController preloaded module
+-- @see ComController
 
 
 --------------------------------------------------------
 -- the ccs ComRender
--- @field [parent=#ccs] ComRender#ComRender ComRender preloaded module
+-- @field ComRender preloaded module
+-- @see ComRender
 
 
 --------------------------------------------------------
 -- the ccs GUIReader
--- @field [parent=#ccs] GUIReader#GUIReader GUIReader preloaded module
+-- @field GUIReader preloaded module
+-- @see GUIReader
 
 
 --------------------------------------------------------
 -- the ccs SceneReader
--- @field [parent=#ccs] SceneReader#SceneReader SceneReader preloaded module
+-- @field SceneReader preloaded module
+-- @see SceneReader
 
 
 --------------------------------------------------------
 -- the ccs ActionTimelineCache
--- @field [parent=#ccs] ActionTimelineCache#ActionTimelineCache ActionTimelineCache preloaded module
+-- @field ActionTimelineCache preloaded module
+-- @see ActionTimelineCache
 
 
 --------------------------------------------------------
 -- the ccs Frame
--- @field [parent=#ccs] Frame#Frame Frame preloaded module
+-- @field Frame preloaded module
+-- @see Frame
 
 
 --------------------------------------------------------
 -- the ccs VisibleFrame
--- @field [parent=#ccs] VisibleFrame#VisibleFrame VisibleFrame preloaded module
+-- @field VisibleFrame preloaded module
+-- @see VisibleFrame
 
 
 --------------------------------------------------------
 -- the ccs TextureFrame
--- @field [parent=#ccs] TextureFrame#TextureFrame TextureFrame preloaded module
+-- @field TextureFrame preloaded module
+-- @see TextureFrame
 
 
 --------------------------------------------------------
 -- the ccs RotationFrame
--- @field [parent=#ccs] RotationFrame#RotationFrame RotationFrame preloaded module
+-- @field RotationFrame preloaded module
+-- @see RotationFrame
 
 
 --------------------------------------------------------
 -- the ccs SkewFrame
--- @field [parent=#ccs] SkewFrame#SkewFrame SkewFrame preloaded module
+-- @field SkewFrame preloaded module
+-- @see SkewFrame
 
 
 --------------------------------------------------------
 -- the ccs RotationSkewFrame
--- @field [parent=#ccs] RotationSkewFrame#RotationSkewFrame RotationSkewFrame preloaded module
+-- @field RotationSkewFrame preloaded module
+-- @see RotationSkewFrame
 
 
 --------------------------------------------------------
 -- the ccs PositionFrame
--- @field [parent=#ccs] PositionFrame#PositionFrame PositionFrame preloaded module
+-- @field PositionFrame preloaded module
+-- @see PositionFrame
 
 
 --------------------------------------------------------
 -- the ccs ScaleFrame
--- @field [parent=#ccs] ScaleFrame#ScaleFrame ScaleFrame preloaded module
+-- @field ScaleFrame preloaded module
+-- @see ScaleFrame
 
 
 --------------------------------------------------------
 -- the ccs AnchorPointFrame
--- @field [parent=#ccs] AnchorPointFrame#AnchorPointFrame AnchorPointFrame preloaded module
+-- @field AnchorPointFrame preloaded module
+-- @see AnchorPointFrame
 
 
 --------------------------------------------------------
 -- the ccs InnerActionFrame
--- @field [parent=#ccs] InnerActionFrame#InnerActionFrame InnerActionFrame preloaded module
+-- @field InnerActionFrame preloaded module
+-- @see InnerActionFrame
 
 
 --------------------------------------------------------
 -- the ccs ColorFrame
--- @field [parent=#ccs] ColorFrame#ColorFrame ColorFrame preloaded module
+-- @field ColorFrame preloaded module
+-- @see ColorFrame
 
 
 --------------------------------------------------------
 -- the ccs AlphaFrame
--- @field [parent=#ccs] AlphaFrame#AlphaFrame AlphaFrame preloaded module
+-- @field AlphaFrame preloaded module
+-- @see AlphaFrame
 
 
 --------------------------------------------------------
 -- the ccs EventFrame
--- @field [parent=#ccs] EventFrame#EventFrame EventFrame preloaded module
+-- @field EventFrame preloaded module
+-- @see EventFrame
 
 
 --------------------------------------------------------
 -- the ccs ZOrderFrame
--- @field [parent=#ccs] ZOrderFrame#ZOrderFrame ZOrderFrame preloaded module
+-- @field ZOrderFrame preloaded module
+-- @see ZOrderFrame
 
 
 --------------------------------------------------------
 -- the ccs BlendFuncFrame
--- @field [parent=#ccs] BlendFuncFrame#BlendFuncFrame BlendFuncFrame preloaded module
+-- @field BlendFuncFrame preloaded module
+-- @see BlendFuncFrame
 
 
 --------------------------------------------------------
 -- the ccs PlayableFrame
--- @field [parent=#ccs] PlayableFrame#PlayableFrame PlayableFrame preloaded module
+-- @field PlayableFrame preloaded module
+-- @see PlayableFrame
 
 
 --------------------------------------------------------
 -- the ccs Timeline
--- @field [parent=#ccs] Timeline#Timeline Timeline preloaded module
+-- @field Timeline preloaded module
+-- @see Timeline
 
 
 --------------------------------------------------------
 -- the ccs ActionTimelineData
--- @field [parent=#ccs] ActionTimelineData#ActionTimelineData ActionTimelineData preloaded module
+-- @field ActionTimelineData preloaded module
+-- @see ActionTimelineData
 
 
 --------------------------------------------------------
 -- the ccs ActionTimeline
--- @field [parent=#ccs] ActionTimeline#ActionTimeline ActionTimeline preloaded module
+-- @field ActionTimeline preloaded module
+-- @see ActionTimeline
 
 
 --------------------------------------------------------
 -- the ccs ActionTimelineNode
--- @field [parent=#ccs] ActionTimelineNode#ActionTimelineNode ActionTimelineNode preloaded module
+-- @field ActionTimelineNode preloaded module
+-- @see ActionTimelineNode
 
 
 --------------------------------------------------------
 -- the ccs BoneNode
--- @field [parent=#ccs] BoneNode#BoneNode BoneNode preloaded module
+-- @field BoneNode preloaded module
+-- @see BoneNode
 
 
 --------------------------------------------------------
 -- the ccs SkeletonNode
--- @field [parent=#ccs] SkeletonNode#SkeletonNode SkeletonNode preloaded module
+-- @field SkeletonNode preloaded module
+-- @see SkeletonNode
 
 
 --------------------------------------------------------
 -- the ccs ComExtensionData
--- @field [parent=#ccs] ComExtensionData#ComExtensionData ComExtensionData preloaded module
+-- @field ComExtensionData preloaded module
+-- @see ComExtensionData
 
 
 return nil

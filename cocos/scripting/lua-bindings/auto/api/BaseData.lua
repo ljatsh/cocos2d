@@ -1,31 +1,31 @@
 
 --------------------------------
 -- @module BaseData
--- @extend Ref
--- @parent_module ccs
+-- @see Ref
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#BaseData] getColor 
+-- @function getColor 
 -- @param self
 -- @return color4b_table#color4b_table ret (return value: color4b_table)
         
 --------------------------------
 -- 
--- @function [parent=#BaseData] setColor 
+-- @function setColor 
 -- @param self
 -- @param #color4b_table color
 -- @return BaseData#BaseData self (return value: ccs.BaseData)
         
 --------------------------------
 -- 
--- @function [parent=#BaseData] create 
+-- @function create 
 -- @param self
 -- @return BaseData#BaseData ret (return value: ccs.BaseData)
         
 --------------------------------
 -- js ctor
--- @function [parent=#BaseData] BaseData 
+-- @function BaseData 
 -- @param self
 -- @return BaseData#BaseData self (return value: ccs.BaseData)
         

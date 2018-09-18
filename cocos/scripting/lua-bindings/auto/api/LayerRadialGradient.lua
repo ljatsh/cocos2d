@@ -1,82 +1,82 @@
 
 --------------------------------
 -- @module LayerRadialGradient
--- @extend Layer
--- @parent_module cc
+-- @see Layer
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getStartColor 
+-- @function getStartColor 
 -- @param self
 -- @return color4b_table#color4b_table ret (return value: color4b_table)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getStartColor3B 
+-- @function getStartColor3B 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getStartOpacity 
+-- @function getStartOpacity 
 -- @param self
 -- @return unsigned char#unsigned char ret (return value: unsigned char)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] setCenter 
+-- @function setCenter 
 -- @param self
 -- @param #vec2_table center
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getEndColor 
+-- @function getEndColor 
 -- @param self
 -- @return color4b_table#color4b_table ret (return value: color4b_table)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] setStartOpacity 
+-- @function setStartOpacity 
 -- @param self
 -- @param #unsigned char opacity
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getCenter 
+-- @function getCenter 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] setEndOpacity 
+-- @function setEndOpacity 
 -- @param self
 -- @param #unsigned char opacity
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] setExpand 
+-- @function setExpand 
 -- @param self
 -- @param #float expand
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getEndOpacity 
+-- @function getEndOpacity 
 -- @param self
 -- @return unsigned char#unsigned char ret (return value: unsigned char)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] initWithColor 
+-- @function initWithColor 
 -- @param self
 -- @param #color4b_table startColor
 -- @param #color4b_table endColor
@@ -88,20 +88,20 @@
 --------------------------------
 -- @overload self, color4b_table         
 -- @overload self, color3b_table         
--- @function [parent=#LayerRadialGradient] setEndColor
+-- @function setEndColor
 -- @param self
 -- @param #color3b_table color
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
 
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getEndColor3B 
+-- @function getEndColor3B 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] setRadius 
+-- @function setRadius 
 -- @param self
 -- @param #float radius
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
@@ -109,34 +109,34 @@
 --------------------------------
 -- @overload self, color4b_table         
 -- @overload self, color3b_table         
--- @function [parent=#LayerRadialGradient] setStartColor
+-- @function setStartColor
 -- @param self
 -- @param #color3b_table color
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
 
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getExpand 
+-- @function getExpand 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] getRadius 
+-- @function getRadius 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- @overload self         
 -- @overload self, color4b_table, color4b_table, float, vec2_table, float         
--- @function [parent=#LayerRadialGradient] create
+-- @function create
 -- @param self
 -- @param #color4b_table startColor
 -- @param #color4b_table endColor
@@ -147,7 +147,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -156,14 +156,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] setContentSize 
+-- @function setContentSize 
 -- @param self
 -- @param #size_table size
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
         
 --------------------------------
 -- 
--- @function [parent=#LayerRadialGradient] LayerRadialGradient 
+-- @function LayerRadialGradient 
 -- @param self
 -- @return LayerRadialGradient#LayerRadialGradient self (return value: cc.LayerRadialGradient)
         

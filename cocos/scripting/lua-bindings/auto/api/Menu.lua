@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module Menu
--- @extend Layer
--- @parent_module cc
+-- @see Layer
+-- @see cc
 
 --------------------------------
 --  initializes a Menu with a NSArray of MenuItem objects 
--- @function [parent=#Menu] initWithArray 
+-- @function initWithArray 
 -- @param self
 -- @param #array_table arrayOfItems
 -- @return bool#bool ret (return value: bool)
@@ -16,14 +16,14 @@
 -- will have no effect.<br>
 -- The default value is true, a menu is default to visible.<br>
 -- param value true if menu is to be enabled, false if menu is to be disabled.
--- @function [parent=#Menu] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool value
 -- @return Menu#Menu self (return value: cc.Menu)
         
 --------------------------------
 --  Align items vertically. 
--- @function [parent=#Menu] alignItemsVertically 
+-- @function alignItemsVertically 
 -- @param self
 -- @return Menu#Menu self (return value: cc.Menu)
         
@@ -31,20 +31,20 @@
 -- Determines if the menu is enabled.<br>
 -- see `setEnabled(bool)`.<br>
 -- return whether the menu is enabled or not.
--- @function [parent=#Menu] isEnabled 
+-- @function isEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Align items horizontally. 
--- @function [parent=#Menu] alignItemsHorizontally 
+-- @function alignItemsHorizontally 
 -- @param self
 -- @return Menu#Menu self (return value: cc.Menu)
         
 --------------------------------
 --  Align items horizontally with padding.<br>
 -- since v0.7.2
--- @function [parent=#Menu] alignItemsHorizontallyWithPadding 
+-- @function alignItemsHorizontallyWithPadding 
 -- @param self
 -- @param #float padding
 -- @return Menu#Menu self (return value: cc.Menu)
@@ -52,7 +52,7 @@
 --------------------------------
 --  Align items vertically with padding.<br>
 -- since v0.7.2
--- @function [parent=#Menu] alignItemsVerticallyWithPadding 
+-- @function alignItemsVerticallyWithPadding 
 -- @param self
 -- @param #float padding
 -- @return Menu#Menu self (return value: cc.Menu)
@@ -62,7 +62,7 @@
 -- @overload self, cc.Node         
 -- @overload self, cc.Node, int, int         
 -- @overload self, cc.Node, int, string         
--- @function [parent=#Menu] addChild
+-- @function addChild
 -- @param self
 -- @param #cc.Node child
 -- @param #int zOrder
@@ -71,13 +71,13 @@
 
 --------------------------------
 -- 
--- @function [parent=#Menu] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#Menu] removeChild 
+-- @function removeChild 
 -- @param self
 -- @param #cc.Node child
 -- @param #bool cleanup
@@ -85,26 +85,26 @@
         
 --------------------------------
 --  initializes an empty Menu 
--- @function [parent=#Menu] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Menu] setOpacityModifyRGB 
+-- @function setOpacityModifyRGB 
 -- @param self
 -- @param #bool value
 -- @return Menu#Menu self (return value: cc.Menu)
         
 --------------------------------
 -- 
--- @function [parent=#Menu] isOpacityModifyRGB 
+-- @function isOpacityModifyRGB 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- js ctor
--- @function [parent=#Menu] Menu 
+-- @function Menu 
 -- @param self
 -- @return Menu#Menu self (return value: cc.Menu)
         

@@ -1,102 +1,102 @@
 
 --------------------------------
 -- @module GMovieClip
--- @extend GObject,IColorGear,IAnimationGear
--- @parent_module fgui
+-- @see GObject,IColorGear,IAnimationGear
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] advance 
+-- @function advance 
 -- @param self
 -- @param #float time
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] setTimeScale 
+-- @function setTimeScale 
 -- @param self
 -- @param #float value
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] setColor 
+-- @function setColor 
 -- @param self
 -- @param #color3b_table value
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] setFrame 
+-- @function setFrame 
 -- @param self
 -- @param #int value
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] getColor 
+-- @function getColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] getFlip 
+-- @function getFlip 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] getFrame 
+-- @function getFrame 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] setFlip 
+-- @function setFlip 
 -- @param self
 -- @param #int value
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] setPlaying 
+-- @function setPlaying 
 -- @param self
 -- @param #bool value
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] setPlaySettings 
+-- @function setPlaySettings 
 -- @param self
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] isPlaying 
+-- @function isPlaying 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] getTimeScale 
+-- @function getTimeScale 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] create 
+-- @function create 
 -- @param self
 -- @return GMovieClip#GMovieClip ret (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] constructFromResource 
+-- @function constructFromResource 
 -- @param self
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         
 --------------------------------
 -- 
--- @function [parent=#GMovieClip] GMovieClip 
+-- @function GMovieClip 
 -- @param self
 -- @return GMovieClip#GMovieClip self (return value: fgui.GMovieClip)
         

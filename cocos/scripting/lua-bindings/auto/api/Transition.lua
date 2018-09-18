@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module Transition
--- @extend Ref
--- @parent_module fgui
+-- @see Ref
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#Transition] setup 
+-- @function setup 
 -- @param self
 -- @param #fgui.ByteBuffer buffer
 -- @return Transition#Transition self (return value: fgui.Transition)
@@ -15,7 +15,7 @@
 -- @overload self, int, float, function         
 -- @overload self, function         
 -- @overload self, int, float, float, float, function         
--- @function [parent=#Transition] play
+-- @function play
 -- @param self
 -- @param #int times
 -- @param #float delay
@@ -26,41 +26,41 @@
 
 --------------------------------
 -- 
--- @function [parent=#Transition] setPaused 
+-- @function setPaused 
 -- @param self
 -- @param #bool paused
 -- @return Transition#Transition self (return value: fgui.Transition)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] setTimeScale 
+-- @function setTimeScale 
 -- @param self
 -- @param #float value
 -- @return Transition#Transition self (return value: fgui.Transition)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] getLabelTime 
+-- @function getLabelTime 
 -- @param self
 -- @param #string label
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] changePlayTimes 
+-- @function changePlayTimes 
 -- @param self
 -- @param #int value
 -- @return Transition#Transition self (return value: fgui.Transition)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] onOwnerRemovedFromStage 
+-- @function onOwnerRemovedFromStage 
 -- @param self
 -- @return Transition#Transition self (return value: fgui.Transition)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] setTarget 
+-- @function setTarget 
 -- @param self
 -- @param #string label
 -- @param #fgui.GObject newTarget
@@ -68,14 +68,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#Transition] clearHooks 
+-- @function clearHooks 
 -- @param self
 -- @return Transition#Transition self (return value: fgui.Transition)
         
 --------------------------------
 -- @overload self, bool, bool         
 -- @overload self         
--- @function [parent=#Transition] stop
+-- @function stop
 -- @param self
 -- @param #bool setToComplete
 -- @param #bool processCallback
@@ -83,7 +83,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#Transition] setDuration 
+-- @function setDuration 
 -- @param self
 -- @param #string label
 -- @param #float value
@@ -91,19 +91,19 @@
         
 --------------------------------
 -- 
--- @function [parent=#Transition] getTimeScale 
+-- @function getTimeScale 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] getOwner 
+-- @function getOwner 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] setHook 
+-- @function setHook 
 -- @param self
 -- @param #string label
 -- @param #function callback
@@ -111,7 +111,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Transition] setValue 
+-- @function setValue 
 -- @param self
 -- @param #string label
 -- @param #array_table values
@@ -119,19 +119,19 @@
         
 --------------------------------
 -- 
--- @function [parent=#Transition] onOwnerAddedToStage 
+-- @function onOwnerAddedToStage 
 -- @param self
 -- @return Transition#Transition self (return value: fgui.Transition)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] isPlaying 
+-- @function isPlaying 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Transition] setAutoPlay 
+-- @function setAutoPlay 
 -- @param self
 -- @param #bool autoPlay
 -- @param #int times
@@ -140,7 +140,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Transition] updateFromRelations 
+-- @function updateFromRelations 
 -- @param self
 -- @param #string targetId
 -- @param #float dx
@@ -150,7 +150,7 @@
 --------------------------------
 -- @overload self, int, float, function         
 -- @overload self, function         
--- @function [parent=#Transition] playReverse
+-- @function playReverse
 -- @param self
 -- @param #int times
 -- @param #float delay
@@ -159,7 +159,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#Transition] Transition 
+-- @function Transition 
 -- @param self
 -- @param #fgui.GComponent owner
 -- @return Transition#Transition self (return value: fgui.Transition)

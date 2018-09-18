@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module Animate
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 --  initializes the action with an Animation and will restore the original frame when the animation is over 
--- @function [parent=#Animate] initWithAnimation 
+-- @function initWithAnimation 
 -- @param self
 -- @param #cc.Animation animation
 -- @return bool#bool ret (return value: bool)
@@ -14,21 +14,21 @@
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#Animate] getAnimation
+-- @function getAnimation
 -- @param self
 -- @return Animation#Animation ret (return value: cc.Animation)
 
 --------------------------------
 -- Gets the index of sprite frame currently displayed.<br>
 -- return int  the index of sprite frame currently displayed.
--- @function [parent=#Animate] getCurrentFrameIndex 
+-- @function getCurrentFrameIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  Sets the Animation object to be animated <br>
 -- param animation certain animation.
--- @function [parent=#Animate] setAnimation 
+-- @function setAnimation 
 -- @param self
 -- @param #cc.Animation animation
 -- @return Animate#Animate self (return value: cc.Animate)
@@ -37,46 +37,46 @@
 --  Creates the action with an Animation and will restore the original frame when the animation is over.<br>
 -- param animation A certain animation.<br>
 -- return An autoreleased Animate object.
--- @function [parent=#Animate] create 
+-- @function create 
 -- @param self
 -- @param #cc.Animation animation
 -- @return Animate#Animate ret (return value: cc.Animate)
         
 --------------------------------
 -- 
--- @function [parent=#Animate] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return Animate#Animate self (return value: cc.Animate)
         
 --------------------------------
 -- 
--- @function [parent=#Animate] clone 
+-- @function clone 
 -- @param self
 -- @return Animate#Animate ret (return value: cc.Animate)
         
 --------------------------------
 -- 
--- @function [parent=#Animate] stop 
+-- @function stop 
 -- @param self
 -- @return Animate#Animate self (return value: cc.Animate)
         
 --------------------------------
 -- 
--- @function [parent=#Animate] reverse 
+-- @function reverse 
 -- @param self
 -- @return Animate#Animate ret (return value: cc.Animate)
         
 --------------------------------
 -- param t In seconds.
--- @function [parent=#Animate] update 
+-- @function update 
 -- @param self
 -- @param #float t
 -- @return Animate#Animate self (return value: cc.Animate)
         
 --------------------------------
 -- 
--- @function [parent=#Animate] Animate 
+-- @function Animate 
 -- @param self
 -- @return Animate#Animate self (return value: cc.Animate)
         

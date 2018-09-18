@@ -1,32 +1,32 @@
 
 --------------------------------
 -- @module ControlStepper
--- @extend Control
--- @parent_module cc
+-- @see Control
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] getMinusSprite 
+-- @function getMinusSprite 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setValue 
+-- @function setValue 
 -- @param self
 -- @param #double value
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setStepValue 
+-- @function setStepValue 
 -- @param self
 -- @param #double stepValue
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] initWithMinusSpriteAndPlusSprite 
+-- @function initWithMinusSpriteAndPlusSprite 
 -- @param self
 -- @param #cc.Sprite minusSprite
 -- @param #cc.Sprite plusSprite
@@ -34,7 +34,7 @@
         
 --------------------------------
 --  Set the numeric value of the stepper. If send is true, the Control::EventType::VALUE_CHANGED is sent. 
--- @function [parent=#ControlStepper] setValueWithSendingEvent 
+-- @function setValueWithSendingEvent 
 -- @param self
 -- @param #double value
 -- @param #bool send
@@ -42,105 +42,105 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setMaximumValue 
+-- @function setMaximumValue 
 -- @param self
 -- @param #double maximumValue
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] getMinusLabel 
+-- @function getMinusLabel 
 -- @param self
 -- @return Label#Label ret (return value: cc.Label)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] getPlusLabel 
+-- @function getPlusLabel 
 -- @param self
 -- @return Label#Label ret (return value: cc.Label)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setWraps 
+-- @function setWraps 
 -- @param self
 -- @param #bool wraps
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setMinusLabel 
+-- @function setMinusLabel 
 -- @param self
 -- @param #cc.Label var
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 --  Start the autorepeat increment/decrement. 
--- @function [parent=#ControlStepper] startAutorepeat 
+-- @function startAutorepeat 
 -- @param self
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 --  Update the layout of the stepper with the given touch location. 
--- @function [parent=#ControlStepper] updateLayoutUsingTouchLocation 
+-- @function updateLayoutUsingTouchLocation 
 -- @param self
 -- @param #vec2_table location
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] isContinuous 
+-- @function isContinuous 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Stop the autorepeat. 
--- @function [parent=#ControlStepper] stopAutorepeat 
+-- @function stopAutorepeat 
 -- @param self
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setMinimumValue 
+-- @function setMinimumValue 
 -- @param self
 -- @param #double minimumValue
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setPlusLabel 
+-- @function setPlusLabel 
 -- @param self
 -- @param #cc.Label var
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] getValue 
+-- @function getValue 
 -- @param self
 -- @return double#double ret (return value: double)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] getPlusSprite 
+-- @function getPlusSprite 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setPlusSprite 
+-- @function setPlusSprite 
 -- @param self
 -- @param #cc.Sprite var
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] setMinusSprite 
+-- @function setMinusSprite 
 -- @param self
 -- @param #cc.Sprite var
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] create 
+-- @function create 
 -- @param self
 -- @param #cc.Sprite minusSprite
 -- @param #cc.Sprite plusSprite
@@ -148,7 +148,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] onTouchMoved 
+-- @function onTouchMoved 
 -- @param self
 -- @param #cc.Touch pTouch
 -- @param #cc.Event pEvent
@@ -156,7 +156,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] onTouchEnded 
+-- @function onTouchEnded 
 -- @param self
 -- @param #cc.Touch pTouch
 -- @param #cc.Event pEvent
@@ -164,14 +164,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] update 
+-- @function update 
 -- @param self
 -- @param #float dt
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         
 --------------------------------
 -- 
--- @function [parent=#ControlStepper] onTouchBegan 
+-- @function onTouchBegan 
 -- @param self
 -- @param #cc.Touch pTouch
 -- @param #cc.Event pEvent
@@ -180,7 +180,7 @@
 --------------------------------
 -- js ctor<br>
 -- lua new
--- @function [parent=#ControlStepper] ControlStepper 
+-- @function ControlStepper 
 -- @param self
 -- @return ControlStepper#ControlStepper self (return value: cc.ControlStepper)
         

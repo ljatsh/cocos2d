@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module DirectionLight
--- @extend BaseLight
--- @parent_module cc
+-- @see BaseLight
+-- @see cc
 
 --------------------------------
 -- Returns the Direction in parent.
--- @function [parent=#DirectionLight] getDirection 
+-- @function getDirection 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- Returns direction in world.
--- @function [parent=#DirectionLight] getDirectionInWorld 
+-- @function getDirectionInWorld 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- Sets the Direction in parent.<br>
 -- param dir The Direction in parent.
--- @function [parent=#DirectionLight] setDirection 
+-- @function setDirection 
 -- @param self
 -- @param #vec3_table dir
 -- @return DirectionLight#DirectionLight self (return value: cc.DirectionLight)
@@ -29,7 +29,7 @@
 -- param direction The light's direction<br>
 -- param color The light's color.<br>
 -- return The new direction light.
--- @function [parent=#DirectionLight] create 
+-- @function create 
 -- @param self
 -- @param #vec3_table direction
 -- @param #color3b_table color
@@ -37,13 +37,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#DirectionLight] getLightType 
+-- @function getLightType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#DirectionLight] DirectionLight 
+-- @function DirectionLight 
 -- @param self
 -- @return DirectionLight#DirectionLight self (return value: cc.DirectionLight)
         

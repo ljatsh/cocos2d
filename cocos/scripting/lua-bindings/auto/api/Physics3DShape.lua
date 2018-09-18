@@ -1,32 +1,32 @@
 
 --------------------------------
 -- @module Physics3DShape
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Physics3DShape] getbtShape 
+-- @function getbtShape 
 -- @param self
 -- @return btCollisionShape#btCollisionShape ret (return value: btCollisionShape)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DShape] initSphere 
+-- @function initSphere 
 -- @param self
 -- @param #float radius
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DShape] initBox 
+-- @function initBox 
 -- @param self
 -- @param #vec3_table ext
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DShape] initCapsule 
+-- @function initCapsule 
 -- @param self
 -- @param #float radius
 -- @param #float height
@@ -34,7 +34,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DShape] initCylinder 
+-- @function initCylinder 
 -- @param self
 -- @param #float radius
 -- @param #float height
@@ -42,14 +42,14 @@
         
 --------------------------------
 -- get shape type
--- @function [parent=#Physics3DShape] getShapeType 
+-- @function getShapeType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- create box shape<br>
 -- param extent The extent of sphere.
--- @function [parent=#Physics3DShape] createBox 
+-- @function createBox 
 -- @param self
 -- @param #vec3_table extent
 -- @return Physics3DShape#Physics3DShape ret (return value: cc.Physics3DShape)
@@ -58,7 +58,7 @@
 -- create cylinder shape<br>
 -- param radius The radius of cylinder.<br>
 -- param height The height.
--- @function [parent=#Physics3DShape] createCylinder 
+-- @function createCylinder 
 -- @param self
 -- @param #float radius
 -- @param #float height
@@ -68,7 +68,7 @@
 -- create convex hull<br>
 -- param points The vertices of convex hull<br>
 -- param numPoints The number of vertices.
--- @function [parent=#Physics3DShape] createConvexHull 
+-- @function createConvexHull 
 -- @param self
 -- @param #vec3_table points
 -- @param #int numPoints
@@ -78,7 +78,7 @@
 -- create capsule shape<br>
 -- param radius The radius of capsule.<br>
 -- param height The height (cylinder part).
--- @function [parent=#Physics3DShape] createCapsule 
+-- @function createCapsule 
 -- @param self
 -- @param #float radius
 -- @param #float height
@@ -87,14 +87,14 @@
 --------------------------------
 -- create sphere shape<br>
 -- param radius The radius of sphere.
--- @function [parent=#Physics3DShape] createSphere 
+-- @function createSphere 
 -- @param self
 -- @param #float radius
 -- @return Physics3DShape#Physics3DShape ret (return value: cc.Physics3DShape)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DShape] Physics3DShape 
+-- @function Physics3DShape 
 -- @param self
 -- @return Physics3DShape#Physics3DShape self (return value: cc.Physics3DShape)
         

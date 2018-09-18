@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module ParticleMeteor
--- @extend ParticleSystemQuad
--- @parent_module cc
+-- @see ParticleSystemQuad
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ParticleMeteor] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ParticleMeteor] initWithTotalParticles 
+-- @function initWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return bool#bool ret (return value: bool)
@@ -20,7 +20,7 @@
 --------------------------------
 --  Create a meteor particle system.<br>
 -- return An autoreleased ParticleMeteor object.
--- @function [parent=#ParticleMeteor] create 
+-- @function create 
 -- @param self
 -- @return ParticleMeteor#ParticleMeteor ret (return value: cc.ParticleMeteor)
         
@@ -29,14 +29,14 @@
 -- param numberOfParticles A given number of particles.<br>
 -- return An autoreleased ParticleMeteor object.<br>
 -- js NA
--- @function [parent=#ParticleMeteor] createWithTotalParticles 
+-- @function createWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return ParticleMeteor#ParticleMeteor ret (return value: cc.ParticleMeteor)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ParticleMeteor] ParticleMeteor 
+-- @function ParticleMeteor 
 -- @param self
 -- @return ParticleMeteor#ParticleMeteor self (return value: cc.ParticleMeteor)
         

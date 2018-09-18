@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module PhysicsJointGear
--- @extend PhysicsJoint
--- @parent_module cc
+-- @see PhysicsJoint
+-- @see cc
 
 --------------------------------
 --  Set the ratio.
--- @function [parent=#PhysicsJointGear] setRatio 
+-- @function setRatio 
 -- @param self
 -- @param #float ratchet
 -- @return PhysicsJointGear#PhysicsJointGear self (return value: cc.PhysicsJointGear)
         
 --------------------------------
 --  Get the angular offset of the two bodies.
--- @function [parent=#PhysicsJointGear] getPhase 
+-- @function getPhase 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Set the angular offset of the two bodies.
--- @function [parent=#PhysicsJointGear] setPhase 
+-- @function setPhase 
 -- @param self
 -- @param #float phase
 -- @return PhysicsJointGear#PhysicsJointGear self (return value: cc.PhysicsJointGear)
         
 --------------------------------
 -- 
--- @function [parent=#PhysicsJointGear] createConstraints 
+-- @function createConstraints 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Get the ratio.
--- @function [parent=#PhysicsJointGear] getRatio 
+-- @function getRatio 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -43,7 +43,7 @@
 -- param phase Phase is the initial angular offset of the two bodies.<br>
 -- param ratio Ratio is always measured in absolute terms.<br>
 -- return A object pointer.
--- @function [parent=#PhysicsJointGear] construct 
+-- @function construct 
 -- @param self
 -- @param #cc.PhysicsBody a
 -- @param #cc.PhysicsBody b

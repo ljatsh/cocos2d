@@ -1,24 +1,24 @@
 
 --------------------------------
 -- @module RotationSkewFrame
--- @extend SkewFrame
--- @parent_module ccs
+-- @see SkewFrame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#RotationSkewFrame] create 
+-- @function create 
 -- @param self
 -- @return RotationSkewFrame#RotationSkewFrame ret (return value: ccs.RotationSkewFrame)
         
 --------------------------------
 -- 
--- @function [parent=#RotationSkewFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#RotationSkewFrame] RotationSkewFrame 
+-- @function RotationSkewFrame 
 -- @param self
 -- @return RotationSkewFrame#RotationSkewFrame self (return value: ccs.RotationSkewFrame)
         

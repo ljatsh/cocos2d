@@ -3,67 +3,80 @@
 
 --------------------------------------------------------
 -- the cc Animation3D
--- @field [parent=#cc] Animation3D#Animation3D Animation3D preloaded module
+-- @field Animation3D preloaded module
+-- @see Animation3D
 
 
 --------------------------------------------------------
 -- the cc Animate3D
--- @field [parent=#cc] Animate3D#Animate3D Animate3D preloaded module
+-- @field Animate3D preloaded module
+-- @see Animate3D
 
 
 --------------------------------------------------------
 -- the cc TextureCube
--- @field [parent=#cc] TextureCube#TextureCube TextureCube preloaded module
+-- @field TextureCube preloaded module
+-- @see TextureCube
 
 
 --------------------------------------------------------
 -- the cc AttachNode
--- @field [parent=#cc] AttachNode#AttachNode AttachNode preloaded module
+-- @field AttachNode preloaded module
+-- @see AttachNode
 
 
 --------------------------------------------------------
 -- the cc BillBoard
--- @field [parent=#cc] BillBoard#BillBoard BillBoard preloaded module
+-- @field BillBoard preloaded module
+-- @see BillBoard
 
 
 --------------------------------------------------------
 -- the cc Mesh
--- @field [parent=#cc] Mesh#Mesh Mesh preloaded module
+-- @field Mesh preloaded module
+-- @see Mesh
 
 
 --------------------------------------------------------
 -- the cc Skeleton3D
--- @field [parent=#cc] Skeleton3D#Skeleton3D Skeleton3D preloaded module
+-- @field Skeleton3D preloaded module
+-- @see Skeleton3D
 
 
 --------------------------------------------------------
 -- the cc Skybox
--- @field [parent=#cc] Skybox#Skybox Skybox preloaded module
+-- @field Skybox preloaded module
+-- @see Skybox
 
 
 --------------------------------------------------------
 -- the cc Sprite3D
--- @field [parent=#cc] Sprite3D#Sprite3D Sprite3D preloaded module
+-- @field Sprite3D preloaded module
+-- @see Sprite3D
 
 
 --------------------------------------------------------
 -- the cc Sprite3DCache
--- @field [parent=#cc] Sprite3DCache#Sprite3DCache Sprite3DCache preloaded module
+-- @field Sprite3DCache preloaded module
+-- @see Sprite3DCache
 
 
 --------------------------------------------------------
 -- the cc Sprite3DMaterial
--- @field [parent=#cc] Sprite3DMaterial#Sprite3DMaterial Sprite3DMaterial preloaded module
+-- @field Sprite3DMaterial preloaded module
+-- @see Sprite3DMaterial
 
 
 --------------------------------------------------------
 -- the cc Terrain
--- @field [parent=#cc] Terrain#Terrain Terrain preloaded module
+-- @field Terrain preloaded module
+-- @see Terrain
 
 
 --------------------------------------------------------
 -- the cc Bundle3D
--- @field [parent=#cc] Bundle3D#Bundle3D Bundle3D preloaded module
+-- @field Bundle3D preloaded module
+-- @see Bundle3D
 
 
 return nil

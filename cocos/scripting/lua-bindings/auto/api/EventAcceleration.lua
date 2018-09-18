@@ -1,7 +1,7 @@
 
 --------------------------------
 -- @module EventAcceleration
--- @extend Event
--- @parent_module cc
+-- @see Event
+-- @see cc
 
 return nil

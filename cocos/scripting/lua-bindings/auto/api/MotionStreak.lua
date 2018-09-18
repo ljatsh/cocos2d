@@ -1,32 +1,32 @@
 
 --------------------------------
 -- @module MotionStreak
--- @extend Node,TextureProtocol
--- @parent_module cc
+-- @see Node,TextureProtocol
+-- @see cc
 
 --------------------------------
 --  Remove all living segments of the ribbon.
--- @function [parent=#MotionStreak] reset 
+-- @function reset 
 -- @param self
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] setTexture 
+-- @function setTexture 
 -- @param self
 -- @param #cc.Texture2D texture
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] getTexture 
+-- @function getTexture 
 -- @param self
 -- @return Texture2D#Texture2D ret (return value: cc.Texture2D)
         
 --------------------------------
 --  Color used for the tint.<br>
 -- param colors The color used for the tint.
--- @function [parent=#MotionStreak] tintWithColor 
+-- @function tintWithColor 
 -- @param self
 -- @param #color3b_table colors
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
@@ -34,7 +34,7 @@
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#MotionStreak] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
@@ -42,7 +42,7 @@
 --------------------------------
 --  Sets the starting position initialized or not.<br>
 -- param bStartingPositionInitialized True if initialized the starting position.
--- @function [parent=#MotionStreak] setStartingPositionInitialized 
+-- @function setStartingPositionInitialized 
 -- @param self
 -- @param #bool bStartingPositionInitialized
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
@@ -50,35 +50,35 @@
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#MotionStreak] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
 --------------------------------
 --  Is the starting position initialized or not.<br>
 -- return True if the starting position is initialized.
--- @function [parent=#MotionStreak] isStartingPositionInitialized 
+-- @function isStartingPositionInitialized 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  When fast mode is enabled, new points are added faster but with lower precision. <br>
 -- return True if fast mode is enabled.
--- @function [parent=#MotionStreak] isFastMode 
+-- @function isFastMode 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Get stroke.<br>
 -- return float stroke.
--- @function [parent=#MotionStreak] getStroke 
+-- @function getStroke 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- @overload self, float, float, float, color3b_table, cc.Texture2D         
 -- @overload self, float, float, float, color3b_table, string         
--- @function [parent=#MotionStreak] initWithFade
+-- @function initWithFade
 -- @param self
 -- @param #float fade
 -- @param #float minSeg
@@ -90,7 +90,7 @@
 --------------------------------
 --  Sets fast mode or not.<br>
 -- param bFastMode True if enabled fast mode.
--- @function [parent=#MotionStreak] setFastMode 
+-- @function setFastMode 
 -- @param self
 -- @param #bool bFastMode
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
@@ -98,7 +98,7 @@
 --------------------------------
 --  Set stroke.<br>
 -- param stroke The width of stroke.
--- @function [parent=#MotionStreak] setStroke 
+-- @function setStroke 
 -- @param self
 -- @param #float stroke
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
@@ -106,7 +106,7 @@
 --------------------------------
 -- @overload self, float, float, float, color3b_table, cc.Texture2D         
 -- @overload self, float, float, float, color3b_table, string         
--- @function [parent=#MotionStreak] create
+-- @function create
 -- @param self
 -- @param #float timeToFade
 -- @param #float minSeg
@@ -117,66 +117,66 @@
 
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] isOpacityModifyRGB 
+-- @function isOpacityModifyRGB 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] setOpacity 
+-- @function setOpacity 
 -- @param self
 -- @param #unsigned char opacity
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] setPositionY 
+-- @function setPositionY 
 -- @param self
 -- @param #float y
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] setPositionX 
+-- @function setPositionX 
 -- @param self
 -- @param #float x
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] getPositionY 
+-- @function getPositionY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] getPositionX 
+-- @function getPositionX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] getPosition3D 
+-- @function getPosition3D 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] setOpacityModifyRGB 
+-- @function setOpacityModifyRGB 
 -- @param self
 -- @param #bool value
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
         
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] getOpacity 
+-- @function getOpacity 
 -- @param self
 -- @return unsigned char#unsigned char ret (return value: unsigned char)
         
 --------------------------------
 -- @overload self, float, float         
 -- @overload self, vec2_table         
--- @function [parent=#MotionStreak] setPosition
+-- @function setPosition
 -- @param self
 -- @param #float x
 -- @param #float y
@@ -185,7 +185,7 @@
 --------------------------------
 -- @overload self, float, float         
 -- @overload self         
--- @function [parent=#MotionStreak] getPosition
+-- @function getPosition
 -- @param self
 -- @param #float x
 -- @param #float y
@@ -193,7 +193,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#MotionStreak] MotionStreak 
+-- @function MotionStreak 
 -- @param self
 -- @return MotionStreak#MotionStreak self (return value: cc.MotionStreak)
         

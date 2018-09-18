@@ -1,51 +1,51 @@
 
 --------------------------------
 -- @module PhysicsJointRotarySpring
--- @extend PhysicsJoint
--- @parent_module cc
+-- @see PhysicsJoint
+-- @see cc
 
 --------------------------------
 --  Get the spring soft constant.
--- @function [parent=#PhysicsJointRotarySpring] getDamping 
+-- @function getDamping 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Set the relative angle in radians from the body a to b.
--- @function [parent=#PhysicsJointRotarySpring] setRestAngle 
+-- @function setRestAngle 
 -- @param self
 -- @param #float restAngle
 -- @return PhysicsJointRotarySpring#PhysicsJointRotarySpring self (return value: cc.PhysicsJointRotarySpring)
         
 --------------------------------
 --  Get the spring constant.
--- @function [parent=#PhysicsJointRotarySpring] getStiffness 
+-- @function getStiffness 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PhysicsJointRotarySpring] createConstraints 
+-- @function createConstraints 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Set the spring constant.
--- @function [parent=#PhysicsJointRotarySpring] setStiffness 
+-- @function setStiffness 
 -- @param self
 -- @param #float stiffness
 -- @return PhysicsJointRotarySpring#PhysicsJointRotarySpring self (return value: cc.PhysicsJointRotarySpring)
         
 --------------------------------
 --  Set the spring soft constant.
--- @function [parent=#PhysicsJointRotarySpring] setDamping 
+-- @function setDamping 
 -- @param self
 -- @param #float damping
 -- @return PhysicsJointRotarySpring#PhysicsJointRotarySpring self (return value: cc.PhysicsJointRotarySpring)
         
 --------------------------------
 --  Get the relative angle in radians from the body a to b.
--- @function [parent=#PhysicsJointRotarySpring] getRestAngle 
+-- @function getRestAngle 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -56,7 +56,7 @@
 -- param stiffness It's the spring constant.<br>
 -- param damping It's how soft to make the damping of the spring.<br>
 -- return A object pointer.
--- @function [parent=#PhysicsJointRotarySpring] construct 
+-- @function construct 
 -- @param self
 -- @param #cc.PhysicsBody a
 -- @param #cc.PhysicsBody b

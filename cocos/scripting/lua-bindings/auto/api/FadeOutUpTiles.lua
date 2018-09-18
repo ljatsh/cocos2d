@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module FadeOutUpTiles
--- @extend FadeOutTRTiles
--- @parent_module cc
+-- @see FadeOutTRTiles
+-- @see cc
 
 --------------------------------
 -- brief Create the action with the grid size and the duration.<br>
 -- param duration Specify the duration of the FadeOutUpTiles action. It's a value in seconds.<br>
 -- param gridSize Specify the size of the grid.<br>
 -- return If the creation success, return a pointer of FadeOutUpTiles action; otherwise, return nil.
--- @function [parent=#FadeOutUpTiles] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -17,13 +17,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#FadeOutUpTiles] clone 
+-- @function clone 
 -- @param self
 -- @return FadeOutUpTiles#FadeOutUpTiles ret (return value: cc.FadeOutUpTiles)
         
 --------------------------------
 -- 
--- @function [parent=#FadeOutUpTiles] transformTile 
+-- @function transformTile 
 -- @param self
 -- @param #vec2_table pos
 -- @param #float distance
@@ -31,7 +31,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#FadeOutUpTiles] testFunc 
+-- @function testFunc 
 -- @param self
 -- @param #size_table pos
 -- @param #float time
@@ -39,7 +39,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#FadeOutUpTiles] FadeOutUpTiles 
+-- @function FadeOutUpTiles 
 -- @param self
 -- @return FadeOutUpTiles#FadeOutUpTiles self (return value: cc.FadeOutUpTiles)
         

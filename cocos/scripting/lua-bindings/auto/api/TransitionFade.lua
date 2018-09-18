@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module TransitionFade
--- @extend TransitionScene
--- @parent_module cc
+-- @see TransitionScene
+-- @see cc
 
 --------------------------------
 -- @overload self, float, cc.Scene         
 -- @overload self, float, cc.Scene, color3b_table         
--- @function [parent=#TransitionFade] initWithDuration
+-- @function initWithDuration
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -17,7 +17,7 @@
 --------------------------------
 -- @overload self, float, cc.Scene         
 -- @overload self, float, cc.Scene, color3b_table         
--- @function [parent=#TransitionFade] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #cc.Scene scene
@@ -26,7 +26,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#TransitionFade] TransitionFade 
+-- @function TransitionFade 
 -- @param self
 -- @return TransitionFade#TransitionFade self (return value: cc.TransitionFade)
         

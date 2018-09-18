@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module Skybox
--- @extend Node
--- @parent_module cc
+-- @see Node
+-- @see cc
 
 --------------------------------
 --  reload sky box after GLESContext reconstructed.
--- @function [parent=#Skybox] reload 
+-- @function reload 
 -- @param self
 -- @return Skybox#Skybox self (return value: cc.Skybox)
         
 --------------------------------
 -- initialize with texture path
--- @function [parent=#Skybox] init 
+-- @function init 
 -- @param self
 -- @param #string positive_x
 -- @param #string negative_x
@@ -24,7 +24,7 @@
         
 --------------------------------
 -- texture getter and setter
--- @function [parent=#Skybox] setTexture 
+-- @function setTexture 
 -- @param self
 -- @param #cc.TextureCube 
 -- @return Skybox#Skybox self (return value: cc.Skybox)
@@ -32,7 +32,7 @@
 --------------------------------
 -- @overload self, string, string, string, string, string, string         
 -- @overload self         
--- @function [parent=#Skybox] create
+-- @function create
 -- @param self
 -- @param #string positive_x
 -- @param #string negative_x
@@ -44,7 +44,7 @@
 
 --------------------------------
 --  draw Skybox object 
--- @function [parent=#Skybox] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -53,13 +53,13 @@
         
 --------------------------------
 -- init Skybox.
--- @function [parent=#Skybox] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Constructor.
--- @function [parent=#Skybox] Skybox 
+-- @function Skybox 
 -- @param self
 -- @return Skybox#Skybox self (return value: cc.Skybox)
         

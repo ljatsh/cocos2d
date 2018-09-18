@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module MoveTo
--- @extend MoveBy
--- @parent_module cc
+-- @see MoveBy
+-- @see cc
 
 --------------------------------
 -- @overload self, float, vec3_table         
 -- @overload self, float, vec2_table         
--- @function [parent=#MoveTo] initWithDuration
+-- @function initWithDuration
 -- @param self
 -- @param #float duration
 -- @param #vec2_table position
@@ -16,7 +16,7 @@
 --------------------------------
 -- @overload self, float, vec3_table         
 -- @overload self, float, vec2_table         
--- @function [parent=#MoveTo] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #vec2_table position
@@ -24,26 +24,26 @@
 
 --------------------------------
 -- 
--- @function [parent=#MoveTo] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return MoveTo#MoveTo self (return value: cc.MoveTo)
         
 --------------------------------
 -- 
--- @function [parent=#MoveTo] clone 
+-- @function clone 
 -- @param self
 -- @return MoveTo#MoveTo ret (return value: cc.MoveTo)
         
 --------------------------------
 -- 
--- @function [parent=#MoveTo] reverse 
+-- @function reverse 
 -- @param self
 -- @return MoveTo#MoveTo ret (return value: cc.MoveTo)
         
 --------------------------------
 -- 
--- @function [parent=#MoveTo] MoveTo 
+-- @function MoveTo 
 -- @param self
 -- @return MoveTo#MoveTo self (return value: cc.MoveTo)
         

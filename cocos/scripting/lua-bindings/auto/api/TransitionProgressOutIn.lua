@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module TransitionProgressOutIn
--- @extend TransitionProgress
--- @parent_module cc
+-- @see TransitionProgress
+-- @see cc
 
 --------------------------------
 --  Creates a transition with duration and incoming scene.<br>
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return An autoreleased TransitionProgressOutIn object.
--- @function [parent=#TransitionProgressOutIn] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -17,7 +17,7 @@
         
 --------------------------------
 -- js ctor
--- @function [parent=#TransitionProgressOutIn] TransitionProgressOutIn 
+-- @function TransitionProgressOutIn 
 -- @param self
 -- @return TransitionProgressOutIn#TransitionProgressOutIn self (return value: cc.TransitionProgressOutIn)
         

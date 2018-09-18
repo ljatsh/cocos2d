@@ -1,31 +1,31 @@
 
 --------------------------------
 -- @module Layer
--- @extend Node
--- @parent_module cc
+-- @see Node
+-- @see cc
 
 --------------------------------
 --  Creates a fullscreen black layer.<br>
 -- return An autoreleased Layer object.
--- @function [parent=#Layer] create 
+-- @function create 
 -- @param self
 -- @return Layer#Layer ret (return value: cc.Layer)
         
 --------------------------------
 -- 
--- @function [parent=#Layer] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Layer] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#Layer] Layer 
+-- @function Layer 
 -- @param self
 -- @return Layer#Layer self (return value: cc.Layer)
         

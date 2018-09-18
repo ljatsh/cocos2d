@@ -1,70 +1,70 @@
 
 --------------------------------
 -- @module ComExtensionData
--- @extend Component
--- @parent_module ccs
+-- @see Component
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ComExtensionData] setActionTag 
+-- @function setActionTag 
 -- @param self
 -- @param #int actionTag
 -- @return ComExtensionData#ComExtensionData self (return value: ccs.ComExtensionData)
         
 --------------------------------
 -- 
--- @function [parent=#ComExtensionData] getCustomProperty 
+-- @function getCustomProperty 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#ComExtensionData] getActionTag 
+-- @function getActionTag 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#ComExtensionData] setCustomProperty 
+-- @function setCustomProperty 
 -- @param self
 -- @param #string customProperty
 -- @return ComExtensionData#ComExtensionData self (return value: ccs.ComExtensionData)
         
 --------------------------------
 -- 
--- @function [parent=#ComExtensionData] create 
+-- @function create 
 -- @param self
 -- @return ComExtensionData#ComExtensionData ret (return value: ccs.ComExtensionData)
         
 --------------------------------
 -- 
--- @function [parent=#ComExtensionData] createInstance 
+-- @function createInstance 
 -- @param self
 -- @return Ref#Ref ret (return value: cc.Ref)
         
 --------------------------------
 -- 
--- @function [parent=#ComExtensionData] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#ComExtensionData] onRemove 
+-- @function onRemove 
 -- @param self
 -- @return ComExtensionData#ComExtensionData self (return value: ccs.ComExtensionData)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#ComExtensionData] onAdd 
+-- @function onAdd 
 -- @param self
 -- @return ComExtensionData#ComExtensionData self (return value: ccs.ComExtensionData)
         
 --------------------------------
 -- 
--- @function [parent=#ComExtensionData] ComExtensionData 
+-- @function ComExtensionData 
 -- @param self
 -- @return ComExtensionData#ComExtensionData self (return value: ccs.ComExtensionData)
         

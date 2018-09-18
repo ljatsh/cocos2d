@@ -1,34 +1,34 @@
 
 --------------------------------
 -- @module FlipY3D
--- @extend FlipX3D
--- @parent_module cc
+-- @see FlipX3D
+-- @see cc
 
 --------------------------------
 -- brief Create the action with duration.<br>
 -- param duration Specify the duration of the FlipY3D action. It's a value in seconds.<br>
 -- return If the creation success, return a pointer of FlipY3D action; otherwise, return nil.
--- @function [parent=#FlipY3D] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @return FlipY3D#FlipY3D ret (return value: cc.FlipY3D)
         
 --------------------------------
 -- 
--- @function [parent=#FlipY3D] clone 
+-- @function clone 
 -- @param self
 -- @return FlipY3D#FlipY3D ret (return value: cc.FlipY3D)
         
 --------------------------------
 -- 
--- @function [parent=#FlipY3D] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return FlipY3D#FlipY3D self (return value: cc.FlipY3D)
         
 --------------------------------
 -- 
--- @function [parent=#FlipY3D] FlipY3D 
+-- @function FlipY3D 
 -- @param self
 -- @return FlipY3D#FlipY3D self (return value: cc.FlipY3D)
         

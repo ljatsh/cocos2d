@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module ScaleTo
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- @overload self, float, float, float         
 -- @overload self, float, float         
 -- @overload self, float, float, float, float         
--- @function [parent=#ScaleTo] initWithDuration
+-- @function initWithDuration
 -- @param self
 -- @param #float duration
 -- @param #float sx
@@ -20,7 +20,7 @@
 -- @overload self, float, float, float         
 -- @overload self, float, float         
 -- @overload self, float, float, float, float         
--- @function [parent=#ScaleTo] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #float sx
@@ -30,33 +30,33 @@
 
 --------------------------------
 -- 
--- @function [parent=#ScaleTo] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return ScaleTo#ScaleTo self (return value: cc.ScaleTo)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleTo] clone 
+-- @function clone 
 -- @param self
 -- @return ScaleTo#ScaleTo ret (return value: cc.ScaleTo)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleTo] reverse 
+-- @function reverse 
 -- @param self
 -- @return ScaleTo#ScaleTo ret (return value: cc.ScaleTo)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#ScaleTo] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return ScaleTo#ScaleTo self (return value: cc.ScaleTo)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleTo] ScaleTo 
+-- @function ScaleTo 
 -- @param self
 -- @return ScaleTo#ScaleTo self (return value: cc.ScaleTo)
         

@@ -1,7 +1,7 @@
 
 --------------------------------
 -- @module FileUtils
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 --  Returns the fullpath for a given filename.<br>
@@ -38,7 +38,7 @@
 -- This method was added to simplify multiplatform support. Whether you are using cocos2d-js or any cross-compilation toolchain like StellaSDK or Apportable,<br>
 -- you might need to load different resources for a given file in the different platforms.<br>
 -- since v2.1
--- @function [parent=#FileUtils] fullPathForFilename 
+-- @function fullPathForFilename 
 -- @param self
 -- @param #string filename
 -- @return string#string ret (return value: string)
@@ -46,7 +46,7 @@
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#FileUtils] getStringFromFile
+-- @function getStringFromFile
 -- @param self
 -- @param #string path
 -- @param #function callback
@@ -56,7 +56,7 @@
 -- Sets the filenameLookup dictionary.<br>
 -- param filenameLookupDict The dictionary for replacing filename.<br>
 -- since v2.1
--- @function [parent=#FileUtils] setFilenameLookupDictionary 
+-- @function setFilenameLookupDictionary 
 -- @param self
 -- @param #map_table filenameLookupDict
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
@@ -64,7 +64,7 @@
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#FileUtils] removeFile
+-- @function removeFile
 -- @param self
 -- @param #string filepath
 -- @param #function callback
@@ -77,7 +77,7 @@
 -- Will be called on the main cocos thread.<br>
 -- js NA<br>
 -- lua NA
--- @function [parent=#FileUtils] listFilesRecursivelyAsync 
+-- @function listFilesRecursivelyAsync 
 -- @param self
 -- @param #string dirPath
 -- @param #function callback
@@ -89,7 +89,7 @@
 -- Also on Blackberry, path starts with "app/native/Resources/" is treated as an absolute path.<br>
 -- param path The path that needs to be checked.<br>
 -- return True if it's an absolute path, false if not.
--- @function [parent=#FileUtils] isAbsolutePath 
+-- @function isAbsolutePath 
 -- @param self
 -- @param #string path
 -- @return bool#bool ret (return value: bool)
@@ -99,7 +99,7 @@
 -- @overload self, string, string, string         
 -- @overload self, string, string         
 -- @overload self, string, string, function         
--- @function [parent=#FileUtils] renameFile
+-- @function renameFile
 -- @param self
 -- @param #string path
 -- @param #string oldname
@@ -109,7 +109,7 @@
 
 --------------------------------
 -- Get default resource root path.
--- @function [parent=#FileUtils] getDefaultResourceRootPath 
+-- @function getDefaultResourceRootPath 
 -- @param self
 -- @return string#string ret (return value: string)
         
@@ -142,7 +142,7 @@
 -- since v2.1<br>
 -- js loadFilenameLookup<br>
 -- lua loadFilenameLookup
--- @function [parent=#FileUtils] loadFilenameLookupDictionaryFromFile 
+-- @function loadFilenameLookupDictionaryFromFile 
 -- @param self
 -- @param #string filename
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
@@ -150,13 +150,13 @@
 --------------------------------
 --  Checks whether to pop up a message box when failed to load an image.<br>
 -- return True if pop up a message box when failed to load an image, false if not.
--- @function [parent=#FileUtils] isPopupNotify 
+-- @function isPopupNotify 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#FileUtils] getValueVectorFromFile 
+-- @function getValueVectorFromFile 
 -- @param self
 -- @param #string filename
 -- @return array_table#array_table ret (return value: array_table)
@@ -169,7 +169,7 @@
 -- Therefore, If you want to get the original search paths, please call 'getOriginalSearchPaths()' instead.<br>
 -- see fullPathForFilename(const char*).<br>
 -- lua NA
--- @function [parent=#FileUtils] getSearchPaths 
+-- @function getSearchPaths 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
@@ -178,7 +178,7 @@
 -- param dict the ValueMap want to save<br>
 -- param fullPath The full path to the file you want to save a string<br>
 -- return bool
--- @function [parent=#FileUtils] writeToFile 
+-- @function writeToFile 
 -- @param self
 -- @param #map_table dict
 -- @param #string fullPath
@@ -187,7 +187,7 @@
 --------------------------------
 -- Gets the original search path array set by 'setSearchPaths' or 'addSearchPath'.<br>
 -- return The array of the original search paths
--- @function [parent=#FileUtils] getOriginalSearchPaths 
+-- @function getOriginalSearchPaths 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
@@ -197,7 +197,7 @@
 -- param filename The original filename.<br>
 -- return The new filename after searching in the filename lookup dictionary.<br>
 -- If the original filename wasn't in the dictionary, it will return the original filename.
--- @function [parent=#FileUtils] getNewFilename 
+-- @function getNewFilename 
 -- @param self
 -- @param #string filename
 -- @return string#string ret (return value: string)
@@ -206,7 +206,7 @@
 -- List all files in a directory.<br>
 -- param dirPath The path of the directory, it could be a relative or an absolute path.<br>
 -- return File paths in a string vector
--- @function [parent=#FileUtils] listFiles 
+-- @function listFiles 
 -- @param self
 -- @param #string dirPath
 -- @return array_table#array_table ret (return value: array_table)
@@ -216,7 +216,7 @@
 -- param filename The filename of the file to gets content.<br>
 -- return ValueMap of the file contents.<br>
 -- note This method is used internally.
--- @function [parent=#FileUtils] getValueMapFromFile 
+-- @function getValueMapFromFile 
 -- @param self
 -- @param #string filename
 -- @return map_table#map_table ret (return value: map_table)
@@ -224,7 +224,7 @@
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#FileUtils] getFileSize
+-- @function getFileSize
 -- @param self
 -- @param #string filepath
 -- @param #function callback
@@ -233,7 +233,7 @@
 --------------------------------
 --  Converts the contents of a file to a ValueMap.<br>
 -- This method is used internally.
--- @function [parent=#FileUtils] getValueMapFromData 
+-- @function getValueMapFromData 
 -- @param self
 -- @param #char filedata
 -- @param #int filesize
@@ -242,7 +242,7 @@
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#FileUtils] removeDirectory
+-- @function removeDirectory
 -- @param self
 -- @param #string dirPath
 -- @param #function callback
@@ -263,7 +263,7 @@
 -- since v2.1<br>
 -- In js:var setSearchPaths(var jsval);<br>
 -- lua NA
--- @function [parent=#FileUtils] setSearchPaths 
+-- @function setSearchPaths 
 -- @param self
 -- @param #array_table searchPaths
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
@@ -271,7 +271,7 @@
 --------------------------------
 -- @overload self, string, string, function         
 -- @overload self, string, string         
--- @function [parent=#FileUtils] writeStringToFile
+-- @function writeStringToFile
 -- @param self
 -- @param #string dataStr
 -- @param #string fullPath
@@ -285,7 +285,7 @@
 -- since v2.1<br>
 -- In js:var setSearchResolutionsOrder(var jsval)<br>
 -- lua NA
--- @function [parent=#FileUtils] setSearchResolutionsOrder 
+-- @function setSearchResolutionsOrder 
 -- @param self
 -- @param #array_table searchResolutionsOrder
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
@@ -294,7 +294,7 @@
 -- Append search order of the resources.<br>
 -- see setSearchResolutionsOrder(), fullPathForFilename().<br>
 -- since v2.1
--- @function [parent=#FileUtils] addSearchResolutionsOrder 
+-- @function addSearchResolutionsOrder 
 -- @param self
 -- @param #string order
 -- @param #bool front
@@ -303,7 +303,7 @@
 --------------------------------
 -- Add search path.<br>
 -- since v2.1
--- @function [parent=#FileUtils] addSearchPath 
+-- @function addSearchPath 
 -- @param self
 -- @param #string path
 -- @param #bool front
@@ -312,7 +312,7 @@
 --------------------------------
 -- @overload self, array_table, string, function         
 -- @overload self, array_table, string         
--- @function [parent=#FileUtils] writeValueVectorToFile
+-- @function writeValueVectorToFile
 -- @param self
 -- @param #array_table vecData
 -- @param #string fullPath
@@ -322,7 +322,7 @@
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#FileUtils] isFileExist
+-- @function isFileExist
 -- @param self
 -- @param #string filename
 -- @param #function callback
@@ -330,7 +330,7 @@
 
 --------------------------------
 -- Purges full path caches.
--- @function [parent=#FileUtils] purgeCachedEntries 
+-- @function purgeCachedEntries 
 -- @param self
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
         
@@ -341,7 +341,7 @@
 -- return The full path.<br>
 -- e.g. filename: hello.png, pszRelativeFile: /User/path1/path2/hello.plist<br>
 -- Return: /User/path1/path2/hello.pvr (If there a a key(hello.png)-value(hello.pvr) in FilenameLookup dictionary. )
--- @function [parent=#FileUtils] fullPathFromRelativeFile 
+-- @function fullPathFromRelativeFile 
 -- @param self
 -- @param #string filename
 -- @param #string relativeFile
@@ -352,7 +352,7 @@
 -- Need convert all parameters fopen and other 3rd-party libs<br>
 -- param filenameUtf8 std::string name file for conversion from utf-8<br>
 -- return std::string ansi filename in current locale
--- @function [parent=#FileUtils] getSuitableFOpen 
+-- @function getSuitableFOpen 
 -- @param self
 -- @param #string filenameUtf8
 -- @return string#string ret (return value: string)
@@ -360,7 +360,7 @@
 --------------------------------
 -- @overload self, map_table, string, function         
 -- @overload self, map_table, string         
--- @function [parent=#FileUtils] writeValueMapToFile
+-- @function writeValueMapToFile
 -- @param self
 -- @param #map_table dict
 -- @param #string fullPath
@@ -372,21 +372,21 @@
 -- Examples of filename extensions are .png, .jpeg, .exe, .dmg and .txt.<br>
 -- param filePath The path of the file, it could be a relative or absolute path.<br>
 -- return suffix for filename in lower case or empty if a dot not found.
--- @function [parent=#FileUtils] getFileExtension 
+-- @function getFileExtension 
 -- @param self
 -- @param #string filePath
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- Sets writable path.
--- @function [parent=#FileUtils] setWritablePath 
+-- @function setWritablePath 
 -- @param self
 -- @param #string writablePath
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
         
 --------------------------------
 -- Sets whether to pop-up a message box when failed to load an image.
--- @function [parent=#FileUtils] setPopupNotify 
+-- @function setPopupNotify 
 -- @param self
 -- @param #bool notify
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
@@ -394,7 +394,7 @@
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#FileUtils] isDirectoryExist
+-- @function isDirectoryExist
 -- @param self
 -- @param #string fullPath
 -- @param #function callback
@@ -402,7 +402,7 @@
 
 --------------------------------
 -- Set default resource root path.
--- @function [parent=#FileUtils] setDefaultResourceRootPath 
+-- @function setDefaultResourceRootPath 
 -- @param self
 -- @param #string path
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
@@ -412,14 +412,14 @@
 -- see setSearchResolutionsOrder(const std::vector<std::string>&), fullPathForFilename(const char*).<br>
 -- since v2.1<br>
 -- lua NA
--- @function [parent=#FileUtils] getSearchResolutionsOrder 
+-- @function getSearchResolutionsOrder 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#FileUtils] createDirectory
+-- @function createDirectory
 -- @param self
 -- @param #string dirPath
 -- @param #function callback
@@ -431,7 +431,7 @@
 -- param callback The callback to be called once the list operation is complete. Will be called on the main cocos thread.<br>
 -- js NA<br>
 -- lua NA
--- @function [parent=#FileUtils] listFilesAsync 
+-- @function listFilesAsync 
 -- @param self
 -- @param #string dirPath
 -- @param #function callback
@@ -440,7 +440,7 @@
 --------------------------------
 -- Gets the writable path.<br>
 -- return  The path that can be write/read a file in
--- @function [parent=#FileUtils] getWritablePath 
+-- @function getWritablePath 
 -- @param self
 -- @return string#string ret (return value: string)
         
@@ -448,7 +448,7 @@
 -- List all files recursively in a directory.<br>
 -- param dirPath The path of the directory, it could be a relative or an absolute path.<br>
 -- return File paths in a string vector
--- @function [parent=#FileUtils] listFilesRecursively 
+-- @function listFilesRecursively 
 -- @param self
 -- @param #string dirPath
 -- @param #array_table files
@@ -456,13 +456,13 @@
         
 --------------------------------
 -- Destroys the instance of FileUtils.
--- @function [parent=#FileUtils] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return FileUtils#FileUtils self (return value: cc.FileUtils)
         
 --------------------------------
 -- Gets the instance of FileUtils.
--- @function [parent=#FileUtils] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return FileUtils#FileUtils ret (return value: cc.FileUtils)
         

@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module TransitionFadeTR
--- @extend TransitionScene,TransitionEaseScene
--- @parent_module cc
+-- @see TransitionScene,TransitionEaseScene
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#TransitionFadeTR] easeActionWithAction 
+-- @function easeActionWithAction 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
@@ -15,7 +15,7 @@
 --  Returns the action that will be performed with size.<br>
 -- param size A given size.<br>
 -- return The action that will be performed.
--- @function [parent=#TransitionFadeTR] actionWithSize 
+-- @function actionWithSize 
 -- @param self
 -- @param #size_table size
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
@@ -25,7 +25,7 @@
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return A autoreleased TransitionFadeTR object.
--- @function [parent=#TransitionFadeTR] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -33,7 +33,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionFadeTR] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -42,7 +42,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionFadeTR] TransitionFadeTR 
+-- @function TransitionFadeTR 
 -- @param self
 -- @return TransitionFadeTR#TransitionFadeTR self (return value: cc.TransitionFadeTR)
         

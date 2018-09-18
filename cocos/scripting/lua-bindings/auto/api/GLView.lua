@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module GLView
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 -- Set the frame size of EGL view.<br>
 -- param width The width of the fram size.<br>
 -- param height The height of the fram size.
--- @function [parent=#GLView] setFrameSize 
+-- @function setFrameSize 
 -- @param self
 -- @param #float width
 -- @param #float height
@@ -17,40 +17,40 @@
 --------------------------------
 -- Get the opengl view port rectangle.<br>
 -- return Return the opengl view port rectangle.
--- @function [parent=#GLView] getViewPortRect 
+-- @function getViewPortRect 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 --  Only works on ios platform. Set Content Scale of the Factor. 
--- @function [parent=#GLView] setContentScaleFactor 
+-- @function setContentScaleFactor 
 -- @param self
 -- @param #float 
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Only works on ios platform. Get Content Scale of the Factor. 
--- @function [parent=#GLView] getContentScaleFactor 
+-- @function getContentScaleFactor 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Open or close IME keyboard , subclass must implement this method. <br>
 -- param open Open or close IME keyboard.
--- @function [parent=#GLView] setIMEKeyboardState 
+-- @function setIMEKeyboardState 
 -- @param self
 -- @param #bool open
 -- @return GLView#GLView self (return value: cc.GLView)
         
 --------------------------------
 -- Gets safe area rectangle
--- @function [parent=#GLView] getSafeAreaRect 
+-- @function getSafeAreaRect 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- 
--- @function [parent=#GLView] getVR 
+-- @function getVR 
 -- @param self
 -- @return VRIRenderer#VRIRenderer ret (return value: cc.VRIRenderer)
         
@@ -60,7 +60,7 @@
 -- param y Set the points of y.<br>
 -- param w Set the width of  the view port<br>
 -- param h Set the Height of the view port.
--- @function [parent=#GLView] setScissorInPoints 
+-- @function setScissorInPoints 
 -- @param self
 -- @param #float x
 -- @param #float y
@@ -71,20 +71,20 @@
 --------------------------------
 --  Get the view name.<br>
 -- return The view name.
--- @function [parent=#GLView] getViewName 
+-- @function getViewName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 --  Get whether opengl render system is ready, subclass must implement this method. 
--- @function [parent=#GLView] isOpenGLReady 
+-- @function isOpenGLReady 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Hide or Show the mouse cursor if there is one.<br>
 -- param isVisible Hide or Show the mouse cursor if there is one.
--- @function [parent=#GLView] setCursorVisible 
+-- @function setCursorVisible 
 -- @param self
 -- @param #bool 
 -- @return GLView#GLView self (return value: cc.GLView)
@@ -93,28 +93,28 @@
 -- Get the frame size of EGL view.<br>
 -- In general, it returns the screen size since the EGL view is a fullscreen view.<br>
 -- return The frame size of EGL view.
--- @function [parent=#GLView] getFrameSize 
+-- @function getFrameSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- Get scale factor of the vertical direction.<br>
 -- return Scale factor of the vertical direction.
--- @function [parent=#GLView] getScaleY 
+-- @function getScaleY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Get scale factor of the horizontal direction.<br>
 -- return Scale factor of the horizontal direction.
--- @function [parent=#GLView] getScaleX 
+-- @function getScaleX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Get the visible origin point of opengl viewport.<br>
 -- return The visible origin point of opengl viewport.
--- @function [parent=#GLView] getVisibleOrigin 
+-- @function getVisibleOrigin 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
@@ -122,7 +122,7 @@
 --  Set zoom factor for frame. This methods are for<br>
 -- debugging big resolution (e.g.new ipad) app on desktop.<br>
 -- param zoomFactor The zoom factor for frame.
--- @function [parent=#GLView] setFrameZoomFactor 
+-- @function setFrameZoomFactor 
 -- @param self
 -- @param #float 
 -- @return GLView#GLView self (return value: cc.GLView)
@@ -131,7 +131,7 @@
 --  Get zoom factor for frame. This methods are for<br>
 -- debugging big resolution (e.g.new ipad) app on desktop.<br>
 -- return The zoom factor for frame.
--- @function [parent=#GLView] getFrameZoomFactor 
+-- @function getFrameZoomFactor 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -139,7 +139,7 @@
 --  Get design resolution size.<br>
 -- Default resolution size is the same as 'getFrameSize'.<br>
 -- return The design resolution size.
--- @function [parent=#GLView] getDesignResolutionSize 
+-- @function getDesignResolutionSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
@@ -147,13 +147,13 @@
 --  When the window is closed, it will return false if the platforms is Ios or Android.<br>
 -- If the platforms is windows or Mac,it will return true.<br>
 -- return In ios and android it will return false,if in windows or Mac it will return true.
--- @function [parent=#GLView] windowShouldClose 
+-- @function windowShouldClose 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Exchanges the front and back buffers, subclass must implement this method. 
--- @function [parent=#GLView] swapBuffers 
+-- @function swapBuffers 
 -- @param self
 -- @return GLView#GLView self (return value: cc.GLView)
         
@@ -165,7 +165,7 @@
 -- [1] EXACT_FIT Fill screen by stretch-to-fit: if the design resolution ratio of width to height is different from the screen resolution ratio, your game view will be stretched.<br>
 -- [2] NO_BORDER Full screen without black border: if the design resolution ratio of width to height is different from the screen resolution ratio, two areas of your game view will be cut.<br>
 -- [3] SHOW_ALL  Full screen with black border: if the design resolution ratio of width to height is different from the screen resolution ratio, two black borders will be shown.
--- @function [parent=#GLView] setDesignResolutionSize 
+-- @function setDesignResolutionSize 
 -- @param self
 -- @param #float width
 -- @param #float height
@@ -175,28 +175,28 @@
 --------------------------------
 --  Returns the current Resolution policy.<br>
 -- return The current Resolution policy.
--- @function [parent=#GLView] getResolutionPolicy 
+-- @function getResolutionPolicy 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  Force destroying EGL view, subclass must implement this method. <br>
 -- lua endToLua
--- @function [parent=#GLView] end 
+-- @function end 
 -- @param self
 -- @return GLView#GLView self (return value: cc.GLView)
         
 --------------------------------
 --  Returns whether or not the view is in Retina Display mode.<br>
 -- return Returns whether or not the view is in Retina Display mode.
--- @function [parent=#GLView] isRetinaDisplay 
+-- @function isRetinaDisplay 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Renders a Scene with a Renderer<br>
 -- This method is called directly by the Director
--- @function [parent=#GLView] renderScene 
+-- @function renderScene 
 -- @param self
 -- @param #cc.Scene scene
 -- @param #cc.Renderer renderer
@@ -205,7 +205,7 @@
 --------------------------------
 -- Sets a VR renderer. <br>
 -- if `vrrenderer` is `nullptr` VR will be disabled
--- @function [parent=#GLView] setVR 
+-- @function setVR 
 -- @param self
 -- @param #cc.VRIRenderer vrrenderer
 -- @return GLView#GLView self (return value: cc.GLView)
@@ -216,7 +216,7 @@
 -- param y Set the points of y.<br>
 -- param w Set the width of  the view port<br>
 -- param h Set the Height of the view port.
--- @function [parent=#GLView] setViewPortInPoints 
+-- @function setViewPortInPoints 
 -- @param self
 -- @param #float x
 -- @param #float y
@@ -227,21 +227,21 @@
 --------------------------------
 -- Get the current scissor rectangle.<br>
 -- return The current scissor rectangle.
--- @function [parent=#GLView] getScissorRect 
+-- @function getScissorRect 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 --  Get retina factor.<br>
 -- return The retina factor.
--- @function [parent=#GLView] getRetinaFactor 
+-- @function getRetinaFactor 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  Set the view name. <br>
 -- param viewname A string will be set to the view as name.
--- @function [parent=#GLView] setViewName 
+-- @function setViewName 
 -- @param self
 -- @param #string viewname
 -- @return GLView#GLView self (return value: cc.GLView)
@@ -249,34 +249,34 @@
 --------------------------------
 -- Get the visible rectangle of opengl viewport.<br>
 -- return The visible rectangle of opengl viewport.
--- @function [parent=#GLView] getVisibleRect 
+-- @function getVisibleRect 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- Get the visible area size of opengl viewport.<br>
 -- return The visible area size of opengl viewport.
--- @function [parent=#GLView] getVisibleSize 
+-- @function getVisibleSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- Get whether GL_SCISSOR_TEST is enable.<br>
 -- return Whether GL_SCISSOR_TEST is enable.
--- @function [parent=#GLView] isScissorEnabled 
+-- @function isScissorEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Polls the events. 
--- @function [parent=#GLView] pollEvents 
+-- @function pollEvents 
 -- @param self
 -- @return GLView#GLView self (return value: cc.GLView)
         
 --------------------------------
 --  Static method and member so that we can modify it on all platforms before create OpenGL context. <br>
 -- param glContextAttrs The OpenGL context attrs.
--- @function [parent=#GLView] setGLContextAttrs 
+-- @function setGLContextAttrs 
 -- @param self
 -- @param #GLContextAttrs glContextAttrs
 -- @return GLView#GLView self (return value: cc.GLView)
@@ -284,7 +284,7 @@
 --------------------------------
 --  Return the OpenGL context attrs. <br>
 -- return Return the OpenGL context attrs.
--- @function [parent=#GLView] getGLContextAttrs 
+-- @function getGLContextAttrs 
 -- @param self
 -- @return GLContextAttrs#GLContextAttrs ret (return value: GLContextAttrs)
         

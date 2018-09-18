@@ -1,44 +1,44 @@
 
 --------------------------------
 -- @module TextureFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#TextureFrame] getTextureName 
+-- @function getTextureName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#TextureFrame] setTextureName 
+-- @function setTextureName 
 -- @param self
 -- @param #string textureName
 -- @return TextureFrame#TextureFrame self (return value: ccs.TextureFrame)
         
 --------------------------------
 -- 
--- @function [parent=#TextureFrame] create 
+-- @function create 
 -- @param self
 -- @return TextureFrame#TextureFrame ret (return value: ccs.TextureFrame)
         
 --------------------------------
 -- 
--- @function [parent=#TextureFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#TextureFrame] setNode 
+-- @function setNode 
 -- @param self
 -- @param #cc.Node node
 -- @return TextureFrame#TextureFrame self (return value: ccs.TextureFrame)
         
 --------------------------------
 -- 
--- @function [parent=#TextureFrame] TextureFrame 
+-- @function TextureFrame 
 -- @param self
 -- @return TextureFrame#TextureFrame self (return value: ccs.TextureFrame)
         

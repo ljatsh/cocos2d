@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module AsyncTaskPool
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 -- @overload self, int, function         
 -- @overload self, int, function, void, function         
--- @function [parent=#AsyncTaskPool] enqueue
+-- @function enqueue
 -- @param self
 -- @param #int type
 -- @param #function callback
@@ -17,26 +17,26 @@
 --------------------------------
 -- Stop tasks.<br>
 -- param type Task type you want to stop.
--- @function [parent=#AsyncTaskPool] stopTasks 
+-- @function stopTasks 
 -- @param self
 -- @param #int type
 -- @return AsyncTaskPool#AsyncTaskPool self (return value: cc.AsyncTaskPool)
         
 --------------------------------
 -- Destroys the async task pool.
--- @function [parent=#AsyncTaskPool] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return AsyncTaskPool#AsyncTaskPool self (return value: cc.AsyncTaskPool)
         
 --------------------------------
 -- Returns the shared instance of the async task pool.
--- @function [parent=#AsyncTaskPool] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return AsyncTaskPool#AsyncTaskPool ret (return value: cc.AsyncTaskPool)
         
 --------------------------------
 -- 
--- @function [parent=#AsyncTaskPool] AsyncTaskPool 
+-- @function AsyncTaskPool 
 -- @param self
 -- @return AsyncTaskPool#AsyncTaskPool self (return value: cc.AsyncTaskPool)
         

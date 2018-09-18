@@ -1,30 +1,30 @@
 
 --------------------------------
 -- @module EventListenerTouchAllAtOnce
--- @extend EventListener
--- @parent_module cc
+-- @see EventListener
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EventListenerTouchAllAtOnce] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- / Overrides
--- @function [parent=#EventListenerTouchAllAtOnce] clone 
+-- @function clone 
 -- @param self
 -- @return EventListenerTouchAllAtOnce#EventListenerTouchAllAtOnce ret (return value: cc.EventListenerTouchAllAtOnce)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerTouchAllAtOnce] checkAvailable 
+-- @function checkAvailable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerTouchAllAtOnce] EventListenerTouchAllAtOnce 
+-- @function EventListenerTouchAllAtOnce 
 -- @param self
 -- @return EventListenerTouchAllAtOnce#EventListenerTouchAllAtOnce self (return value: cc.EventListenerTouchAllAtOnce)
         

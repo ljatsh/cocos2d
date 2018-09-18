@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module EaseElastic
--- @extend ActionEase
--- @parent_module cc
+-- @see ActionEase
+-- @see cc
 
 --------------------------------
 -- brief Set period of the wave in radians.<br>
 -- param fPeriod The value will be set.
--- @function [parent=#EaseElastic] setPeriod 
+-- @function setPeriod 
 -- @param self
 -- @param #float fPeriod
 -- @return EaseElastic#EaseElastic self (return value: cc.EaseElastic)
@@ -17,7 +17,7 @@
 -- param action The pointer of the inner action.<br>
 -- param period Period of the wave in radians. Default is 0.3.<br>
 -- return Return true when the initialization success, otherwise return false.
--- @function [parent=#EaseElastic] initWithAction 
+-- @function initWithAction 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @param #float period
@@ -26,7 +26,7 @@
 --------------------------------
 -- brief Get period of the wave in radians. Default value is 0.3.<br>
 -- return Return the period of the wave in radians.
--- @function [parent=#EaseElastic] getPeriod 
+-- @function getPeriod 
 -- @param self
 -- @return float#float ret (return value: float)
         

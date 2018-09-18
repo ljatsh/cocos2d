@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module GScrollBar
--- @extend GComponent
--- @parent_module fgui
+-- @see GComponent
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GScrollBar] setScrollPane 
+-- @function setScrollPane 
 -- @param self
 -- @param #fgui.ScrollPane target
 -- @param #bool vertical
@@ -14,33 +14,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#GScrollBar] setDisplayPerc 
+-- @function setDisplayPerc 
 -- @param self
 -- @param #float value
 -- @return GScrollBar#GScrollBar self (return value: fgui.GScrollBar)
         
 --------------------------------
 -- 
--- @function [parent=#GScrollBar] getMinSize 
+-- @function getMinSize 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GScrollBar] setScrollPerc 
+-- @function setScrollPerc 
 -- @param self
 -- @param #float value
 -- @return GScrollBar#GScrollBar self (return value: fgui.GScrollBar)
         
 --------------------------------
 -- 
--- @function [parent=#GScrollBar] create 
+-- @function create 
 -- @param self
 -- @return GScrollBar#GScrollBar ret (return value: fgui.GScrollBar)
         
 --------------------------------
 -- 
--- @function [parent=#GScrollBar] GScrollBar 
+-- @function GScrollBar 
 -- @param self
 -- @return GScrollBar#GScrollBar self (return value: fgui.GScrollBar)
         

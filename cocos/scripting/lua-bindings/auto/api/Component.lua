@@ -1,76 +1,76 @@
 
 --------------------------------
 -- @module Component
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Component] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return Component#Component self (return value: cc.Component)
         
 --------------------------------
 -- 
--- @function [parent=#Component] onRemove 
+-- @function onRemove 
 -- @param self
 -- @return Component#Component self (return value: cc.Component)
         
 --------------------------------
 -- 
--- @function [parent=#Component] setName 
+-- @function setName 
 -- @param self
 -- @param #string name
 -- @return Component#Component self (return value: cc.Component)
         
 --------------------------------
 -- 
--- @function [parent=#Component] isEnabled 
+-- @function isEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Component] update 
+-- @function update 
 -- @param self
 -- @param #float delta
 -- @return Component#Component self (return value: cc.Component)
         
 --------------------------------
 -- 
--- @function [parent=#Component] getOwner 
+-- @function getOwner 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#Component] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Component] setOwner 
+-- @function setOwner 
 -- @param self
 -- @param #cc.Node owner
 -- @return Component#Component self (return value: cc.Component)
         
 --------------------------------
 -- 
--- @function [parent=#Component] getName 
+-- @function getName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#Component] onAdd 
+-- @function onAdd 
 -- @param self
 -- @return Component#Component self (return value: cc.Component)
         
 --------------------------------
 -- 
--- @function [parent=#Component] create 
+-- @function create 
 -- @param self
 -- @return Component#Component ret (return value: cc.Component)
         

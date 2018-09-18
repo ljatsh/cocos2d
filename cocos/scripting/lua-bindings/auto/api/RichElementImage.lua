@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module RichElementImage
--- @extend RichElement
--- @parent_module ccui
+-- @see RichElement
+-- @see ccui
 
 --------------------------------
 -- 
--- @function [parent=#RichElementImage] setHeight 
+-- @function setHeight 
 -- @param self
 -- @param #int height
 -- @return RichElementImage#RichElementImage self (return value: ccui.RichElementImage)
@@ -20,7 +20,7 @@
 -- param url uniform resource locator<br>
 -- param texType texture type, may be a valid file path, or a sprite frame name<br>
 -- return True if initialize success, false otherwise.
--- @function [parent=#RichElementImage] init 
+-- @function init 
 -- @param self
 -- @param #int tag
 -- @param #color3b_table color
@@ -32,14 +32,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#RichElementImage] setWidth 
+-- @function setWidth 
 -- @param self
 -- @param #int width
 -- @return RichElementImage#RichElementImage self (return value: ccui.RichElementImage)
         
 --------------------------------
 -- 
--- @function [parent=#RichElementImage] setUrl 
+-- @function setUrl 
 -- @param self
 -- @param #string url
 -- @return RichElementImage#RichElementImage self (return value: ccui.RichElementImage)
@@ -53,7 +53,7 @@
 -- param url uniform resource locator<br>
 -- param texType texture type, may be a valid file path, or a sprite frame name<br>
 -- return A RichElementImage instance.
--- @function [parent=#RichElementImage] create 
+-- @function create 
 -- @param self
 -- @param #int tag
 -- @param #color3b_table color
@@ -67,7 +67,7 @@
 -- brief Default constructor.<br>
 -- js ctor<br>
 -- lua new
--- @function [parent=#RichElementImage] RichElementImage 
+-- @function RichElementImage 
 -- @param self
 -- @return RichElementImage#RichElementImage self (return value: ccui.RichElementImage)
         

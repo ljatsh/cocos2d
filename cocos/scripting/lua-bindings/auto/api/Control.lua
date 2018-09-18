@@ -1,19 +1,19 @@
 
 --------------------------------
 -- @module Control
--- @extend Layer
--- @parent_module cc
+-- @see Layer
+-- @see cc
 
 --------------------------------
 --  Tells whether the control is enabled. 
--- @function [parent=#Control] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool bEnabled
 -- @return Control#Control self (return value: cc.Control)
         
 --------------------------------
 -- 
--- @function [parent=#Control] getState 
+-- @function getState 
 -- @param self
 -- @return int#int ret (return value: int)
         
@@ -21,39 +21,39 @@
 -- Sends action messages for the given control events.<br>
 -- param controlEvents A bitmask whose set flags specify the control events for<br>
 -- which action messages are sent. See "CCControlEvent" for bitmask constants.
--- @function [parent=#Control] sendActionsForControlEvents 
+-- @function sendActionsForControlEvents 
 -- @param self
 -- @param #int controlEvents
 -- @return Control#Control self (return value: cc.Control)
         
 --------------------------------
 --  A Boolean value that determines the control selected state. 
--- @function [parent=#Control] setSelected 
+-- @function setSelected 
 -- @param self
 -- @param #bool bSelected
 -- @return Control#Control self (return value: cc.Control)
         
 --------------------------------
 -- 
--- @function [parent=#Control] isEnabled 
+-- @function isEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Updates the control layout using its current internal state.
--- @function [parent=#Control] needsLayout 
+-- @function needsLayout 
 -- @param self
 -- @return Control#Control self (return value: cc.Control)
         
 --------------------------------
 -- 
--- @function [parent=#Control] hasVisibleParents 
+-- @function hasVisibleParents 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Control] isSelected 
+-- @function isSelected 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -62,14 +62,14 @@
 -- of the receiver. The given touch must be relative to the world.<br>
 -- param touch A Touch object that represents a touch.<br>
 -- return Whether a touch is inside the receiver's rect.
--- @function [parent=#Control] isTouchInside 
+-- @function isTouchInside 
 -- @param self
 -- @param #cc.Touch touch
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  A Boolean value that determines whether the control is highlighted. 
--- @function [parent=#Control] setHighlighted 
+-- @function setHighlighted 
 -- @param self
 -- @param #bool bHighlighted
 -- @return Control#Control self (return value: cc.Control)
@@ -78,26 +78,26 @@
 -- Returns a point corresponding to the touch location converted into the<br>
 -- control space coordinates.<br>
 -- param touch A Touch object that represents a touch.
--- @function [parent=#Control] getTouchLocation 
+-- @function getTouchLocation 
 -- @param self
 -- @param #cc.Touch touch
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#Control] isHighlighted 
+-- @function isHighlighted 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Creates a Control object 
--- @function [parent=#Control] create 
+-- @function create 
 -- @param self
 -- @return Control#Control ret (return value: cc.Control)
         
 --------------------------------
 -- 
--- @function [parent=#Control] onTouchMoved 
+-- @function onTouchMoved 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event event
@@ -105,20 +105,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#Control] isOpacityModifyRGB 
+-- @function isOpacityModifyRGB 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Control] setOpacityModifyRGB 
+-- @function setOpacityModifyRGB 
 -- @param self
 -- @param #bool bOpacityModifyRGB
 -- @return Control#Control self (return value: cc.Control)
         
 --------------------------------
 -- 
--- @function [parent=#Control] onTouchCancelled 
+-- @function onTouchCancelled 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event event
@@ -126,13 +126,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#Control] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Control] onTouchEnded 
+-- @function onTouchEnded 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event event
@@ -140,7 +140,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Control] onTouchBegan 
+-- @function onTouchBegan 
 -- @param self
 -- @param #cc.Touch touch
 -- @param #cc.Event event
@@ -148,7 +148,7 @@
         
 --------------------------------
 -- js ctor
--- @function [parent=#Control] Control 
+-- @function Control 
 -- @param self
 -- @return Control#Control self (return value: cc.Control)
         

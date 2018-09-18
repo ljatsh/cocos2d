@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module ScaleBy
--- @extend ScaleTo
--- @parent_module cc
+-- @see ScaleTo
+-- @see cc
 
 --------------------------------
 -- @overload self, float, float, float         
 -- @overload self, float, float         
 -- @overload self, float, float, float, float         
--- @function [parent=#ScaleBy] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #float sx
@@ -18,26 +18,26 @@
 
 --------------------------------
 -- 
--- @function [parent=#ScaleBy] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return ScaleBy#ScaleBy self (return value: cc.ScaleBy)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleBy] clone 
+-- @function clone 
 -- @param self
 -- @return ScaleBy#ScaleBy ret (return value: cc.ScaleBy)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return ScaleBy#ScaleBy ret (return value: cc.ScaleBy)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleBy] ScaleBy 
+-- @function ScaleBy 
 -- @param self
 -- @return ScaleBy#ScaleBy self (return value: cc.ScaleBy)
         

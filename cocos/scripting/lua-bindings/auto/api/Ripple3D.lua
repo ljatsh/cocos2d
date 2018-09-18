@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module Ripple3D
--- @extend Grid3DAction
--- @parent_module cc
+-- @see Grid3DAction
+-- @see cc
 
 --------------------------------
 -- brief Set the amplitude rate of ripple effect.<br>
 -- param fAmplitudeRate The amplitude rate of ripple effect.
--- @function [parent=#Ripple3D] setAmplitudeRate 
+-- @function setAmplitudeRate 
 -- @param self
 -- @param #float fAmplitudeRate
 -- @return Ripple3D#Ripple3D self (return value: cc.Ripple3D)
@@ -21,7 +21,7 @@
 -- param waves Specify the waves count of the ripple effect.<br>
 -- param amplitude Specify the amplitude of the ripple effect.<br>
 -- return If the initialization success, return true; otherwise, return false.
--- @function [parent=#Ripple3D] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -34,14 +34,14 @@
 --------------------------------
 -- brief Get the amplitude rate of ripple effect.<br>
 -- return The amplitude rate of ripple effect.
--- @function [parent=#Ripple3D] getAmplitudeRate 
+-- @function getAmplitudeRate 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Set the amplitude of ripple effect.<br>
 -- param fAmplitude The amplitude of ripple effect.
--- @function [parent=#Ripple3D] setAmplitude 
+-- @function setAmplitude 
 -- @param self
 -- @param #float fAmplitude
 -- @return Ripple3D#Ripple3D self (return value: cc.Ripple3D)
@@ -49,14 +49,14 @@
 --------------------------------
 -- brief Get the amplitude of ripple effect.<br>
 -- return The amplitude of ripple effect.
--- @function [parent=#Ripple3D] getAmplitude 
+-- @function getAmplitude 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Set the center position of ripple effect.<br>
 -- param position The center position of ripple effect will be set.
--- @function [parent=#Ripple3D] setPosition 
+-- @function setPosition 
 -- @param self
 -- @param #vec2_table position
 -- @return Ripple3D#Ripple3D self (return value: cc.Ripple3D)
@@ -64,7 +64,7 @@
 --------------------------------
 -- brief Get the center position of ripple effect.<br>
 -- return The center position of ripple effect.
--- @function [parent=#Ripple3D] getPosition 
+-- @function getPosition 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
@@ -77,7 +77,7 @@
 -- param waves Specify the waves count of the ripple effect.<br>
 -- param amplitude Specify the amplitude of the ripple effect.<br>
 -- return If the creation success, return a pointer of Ripple3D action; otherwise, return nil.
--- @function [parent=#Ripple3D] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -89,20 +89,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#Ripple3D] clone 
+-- @function clone 
 -- @param self
 -- @return Ripple3D#Ripple3D ret (return value: cc.Ripple3D)
         
 --------------------------------
 -- 
--- @function [parent=#Ripple3D] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return Ripple3D#Ripple3D self (return value: cc.Ripple3D)
         
 --------------------------------
 -- 
--- @function [parent=#Ripple3D] Ripple3D 
+-- @function Ripple3D 
 -- @param self
 -- @return Ripple3D#Ripple3D self (return value: cc.Ripple3D)
         

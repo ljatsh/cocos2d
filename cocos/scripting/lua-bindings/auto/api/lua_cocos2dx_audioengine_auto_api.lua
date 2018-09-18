@@ -3,12 +3,14 @@
 
 --------------------------------------------------------
 -- the ccexp AudioProfile
--- @field [parent=#ccexp] AudioProfile#AudioProfile AudioProfile preloaded module
+-- @field AudioProfile preloaded module
+-- @see AudioProfile
 
 
 --------------------------------------------------------
 -- the ccexp AudioEngine
--- @field [parent=#ccexp] AudioEngine#AudioEngine AudioEngine preloaded module
+-- @field AudioEngine preloaded module
+-- @see AudioEngine
 
 
 return nil

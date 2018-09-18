@@ -1,94 +1,94 @@
 
 --------------------------------
 -- @module GComponent
--- @extend GObject
--- @parent_module fgui
+-- @see GObject
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GComponent] addChild 
+-- @function addChild 
 -- @param self
 -- @param #fgui.GObject child
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getHitArea 
+-- @function getHitArea 
 -- @param self
 -- @return IHitTest#IHitTest ret (return value: fgui.IHitTest)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] applyAllControllers 
+-- @function applyAllControllers 
 -- @param self
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getOpaque 
+-- @function getOpaque 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setChildrenRenderOrder 
+-- @function setChildrenRenderOrder 
 -- @param self
 -- @param #int value
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setOpaque 
+-- @function setOpaque 
 -- @param self
 -- @param #bool value
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getViewWidth 
+-- @function getViewWidth 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getTransitions 
+-- @function getTransitions 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getViewHeight 
+-- @function getViewHeight 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] ensureBoundsCorrect 
+-- @function ensureBoundsCorrect 
 -- @param self
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] isAncestorOf 
+-- @function isAncestorOf 
 -- @param self
 -- @param #fgui.GObject obj
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getChildren 
+-- @function getChildren 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getMask 
+-- @function getMask 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] adjustRadioGroupDepth 
+-- @function adjustRadioGroupDepth 
 -- @param self
 -- @param #fgui.GObject obj
 -- @param #fgui.GController c
@@ -96,47 +96,47 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getController 
+-- @function getController 
 -- @param self
 -- @param #string name
 -- @return GController#GController ret (return value: fgui.GController)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setApexIndex 
+-- @function setApexIndex 
 -- @param self
 -- @param #int value
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getTransition 
+-- @function getTransition 
 -- @param self
 -- @param #string name
 -- @return Transition#Transition ret (return value: fgui.Transition)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getFirstChildInView 
+-- @function getFirstChildInView 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] isChildInView 
+-- @function isChildInView 
 -- @param self
 -- @param #fgui.GObject child
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setBoundsChangedFlag 
+-- @function setBoundsChangedFlag 
 -- @param self
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] addChildAt 
+-- @function addChildAt 
 -- @param self
 -- @param #fgui.GObject child
 -- @param #int index
@@ -145,7 +145,7 @@
 --------------------------------
 -- @overload self, int, int         
 -- @overload self         
--- @function [parent=#GComponent] removeChildren
+-- @function removeChildren
 -- @param self
 -- @param #int beginIndex
 -- @param #int endIndex
@@ -153,28 +153,28 @@
 
 --------------------------------
 -- 
--- @function [parent=#GComponent] removeChildAt 
+-- @function removeChildAt 
 -- @param self
 -- @param #int index
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getChild 
+-- @function getChild 
 -- @param self
 -- @param #string name
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] addController 
+-- @function addController 
 -- @param self
 -- @param #fgui.GController c
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] childSortingOrderChanged 
+-- @function childSortingOrderChanged 
 -- @param self
 -- @param #fgui.GObject child
 -- @param #int oldValue
@@ -183,20 +183,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] applyController 
+-- @function applyController 
 -- @param self
 -- @param #fgui.GController c
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getControllers 
+-- @function getControllers 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setMask 
+-- @function setMask 
 -- @param self
 -- @param #cc.Node value
 -- @param #bool inverted
@@ -204,7 +204,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setChildIndex 
+-- @function setChildIndex 
 -- @param self
 -- @param #fgui.GObject child
 -- @param #int index
@@ -212,61 +212,61 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setViewWidth 
+-- @function setViewWidth 
 -- @param self
 -- @param #float value
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getChildById 
+-- @function getChildById 
 -- @param self
 -- @param #string id
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getChildIndex 
+-- @function getChildIndex 
 -- @param self
 -- @param #fgui.GObject child
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getControllerAt 
+-- @function getControllerAt 
 -- @param self
 -- @param #int index
 -- @return GController#GController ret (return value: fgui.GController)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getChildAt 
+-- @function getChildAt 
 -- @param self
 -- @param #int index
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getApexIndex 
+-- @function getApexIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getScrollPane 
+-- @function getScrollPane 
 -- @param self
 -- @return ScrollPane#ScrollPane ret (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getTransitionAt 
+-- @function getTransitionAt 
 -- @param self
 -- @param #int index
 -- @return Transition#Transition ret (return value: fgui.Transition)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getChildInGroup 
+-- @function getChildInGroup 
 -- @param self
 -- @param #fgui.GGroup group
 -- @param #string name
@@ -274,21 +274,21 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] removeController 
+-- @function removeController 
 -- @param self
 -- @param #fgui.GController c
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getSnappingPosition 
+-- @function getSnappingPosition 
 -- @param self
 -- @param #vec2_table pt
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setChildIndexBefore 
+-- @function setChildIndexBefore 
 -- @param self
 -- @param #fgui.GObject child
 -- @param #int index
@@ -296,14 +296,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setHitArea 
+-- @function setHitArea 
 -- @param self
 -- @param #fgui.IHitTest value
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] swapChildrenAt 
+-- @function swapChildrenAt 
 -- @param self
 -- @param #int index1
 -- @param #int index2
@@ -311,20 +311,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] numChildren 
+-- @function numChildren 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] removeChild 
+-- @function removeChild 
 -- @param self
 -- @param #fgui.GObject child
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] swapChildren 
+-- @function swapChildren 
 -- @param self
 -- @param #fgui.GObject child1
 -- @param #fgui.GObject child2
@@ -332,33 +332,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] childStateChanged 
+-- @function childStateChanged 
 -- @param self
 -- @param #fgui.GObject child
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] getChildrenRenderOrder 
+-- @function getChildrenRenderOrder 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] setViewHeight 
+-- @function setViewHeight 
 -- @param self
 -- @param #float value
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] create 
+-- @function create 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] hitTest 
+-- @function hitTest 
 -- @param self
 -- @param #vec2_table worldPoint
 -- @param #cc.Camera camera
@@ -366,7 +366,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#GComponent] GComponent 
+-- @function GComponent 
 -- @param self
 -- @return GComponent#GComponent self (return value: fgui.GComponent)
         

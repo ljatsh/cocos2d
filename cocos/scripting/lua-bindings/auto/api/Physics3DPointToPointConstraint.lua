@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module Physics3DPointToPointConstraint
--- @extend Physics3DConstraint
--- @parent_module cc
+-- @see Physics3DConstraint
+-- @see cc
 
 --------------------------------
 -- get pivot point in A's local space
--- @function [parent=#Physics3DPointToPointConstraint] getPivotPointInA 
+-- @function getPivotPointInA 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- get pivot point in B's local space
--- @function [parent=#Physics3DPointToPointConstraint] getPivotPointInB 
+-- @function getPivotPointInB 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- @overload self, cc.Physics3DRigidBody, cc.Physics3DRigidBody, vec3_table, vec3_table         
 -- @overload self, cc.Physics3DRigidBody, vec3_table         
--- @function [parent=#Physics3DPointToPointConstraint] init
+-- @function init
 -- @param self
 -- @param #cc.Physics3DRigidBody rbA
 -- @param #cc.Physics3DRigidBody rbB
@@ -29,14 +29,14 @@
 
 --------------------------------
 -- set pivot point in A's local space
--- @function [parent=#Physics3DPointToPointConstraint] setPivotPointInA 
+-- @function setPivotPointInA 
 -- @param self
 -- @param #vec3_table pivotA
 -- @return Physics3DPointToPointConstraint#Physics3DPointToPointConstraint self (return value: cc.Physics3DPointToPointConstraint)
         
 --------------------------------
 -- set pivot point in B's local space
--- @function [parent=#Physics3DPointToPointConstraint] setPivotPointInB 
+-- @function setPivotPointInB 
 -- @param self
 -- @param #vec3_table pivotB
 -- @return Physics3DPointToPointConstraint#Physics3DPointToPointConstraint self (return value: cc.Physics3DPointToPointConstraint)
@@ -44,7 +44,7 @@
 --------------------------------
 -- @overload self, cc.Physics3DRigidBody, cc.Physics3DRigidBody, vec3_table, vec3_table         
 -- @overload self, cc.Physics3DRigidBody, vec3_table         
--- @function [parent=#Physics3DPointToPointConstraint] create
+-- @function create
 -- @param self
 -- @param #cc.Physics3DRigidBody rbA
 -- @param #cc.Physics3DRigidBody rbB
@@ -54,7 +54,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#Physics3DPointToPointConstraint] Physics3DPointToPointConstraint 
+-- @function Physics3DPointToPointConstraint 
 -- @param self
 -- @return Physics3DPointToPointConstraint#Physics3DPointToPointConstraint self (return value: cc.Physics3DPointToPointConstraint)
         

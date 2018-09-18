@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module FrameData
--- @extend BaseData
--- @parent_module ccs
+-- @see BaseData
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#FrameData] copy 
+-- @function copy 
 -- @param self
 -- @param #ccs.BaseData baseData
 -- @return FrameData#FrameData self (return value: ccs.FrameData)
         
 --------------------------------
 -- 
--- @function [parent=#FrameData] create 
+-- @function create 
 -- @param self
 -- @return FrameData#FrameData ret (return value: ccs.FrameData)
         
 --------------------------------
 -- js ctor
--- @function [parent=#FrameData] FrameData 
+-- @function FrameData 
 -- @param self
 -- @return FrameData#FrameData self (return value: ccs.FrameData)
         

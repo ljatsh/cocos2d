@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module AudioProfile
--- @parent_module ccexp
+-- @see ccexp
 
 --------------------------------
 -- Default constructor<br>
 -- lua new
--- @function [parent=#AudioProfile] AudioProfile 
+-- @function AudioProfile 
 -- @param self
 -- @return experimental::AudioProfile#experimental::AudioProfile self (return value: cc.experimental::AudioProfile)
         

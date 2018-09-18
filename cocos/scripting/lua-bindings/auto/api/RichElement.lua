@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module RichElement
--- @extend Ref
--- @parent_module ccui
+-- @see Ref
+-- @see ccui
 
 --------------------------------
 -- 
--- @function [parent=#RichElement] equalType 
+-- @function equalType 
 -- @param self
 -- @param #int type
 -- @return bool#bool ret (return value: bool)
@@ -17,7 +17,7 @@
 -- param color A color in @see `Color3B`.<br>
 -- param opacity A opacity value in `GLubyte`.<br>
 -- return True if initialize success, false otherwise.
--- @function [parent=#RichElement] init 
+-- @function init 
 -- @param self
 -- @param #int tag
 -- @param #color3b_table color
@@ -26,7 +26,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#RichElement] setColor 
+-- @function setColor 
 -- @param self
 -- @param #color3b_table color
 -- @return RichElement#RichElement self (return value: ccui.RichElement)
@@ -35,7 +35,7 @@
 -- brief Default constructor.<br>
 -- js ctor<br>
 -- lua new
--- @function [parent=#RichElement] RichElement 
+-- @function RichElement 
 -- @param self
 -- @return RichElement#RichElement self (return value: ccui.RichElement)
         

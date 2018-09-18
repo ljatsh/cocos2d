@@ -1,40 +1,40 @@
 
 --------------------------------
 -- @module DelayTime
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- Creates the action.<br>
 -- param d Duration time, in seconds.<br>
 -- return An autoreleased DelayTime object.
--- @function [parent=#DelayTime] create 
+-- @function create 
 -- @param self
 -- @param #float d
 -- @return DelayTime#DelayTime ret (return value: cc.DelayTime)
         
 --------------------------------
 -- 
--- @function [parent=#DelayTime] clone 
+-- @function clone 
 -- @param self
 -- @return DelayTime#DelayTime ret (return value: cc.DelayTime)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#DelayTime] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return DelayTime#DelayTime self (return value: cc.DelayTime)
         
 --------------------------------
 -- 
--- @function [parent=#DelayTime] reverse 
+-- @function reverse 
 -- @param self
 -- @return DelayTime#DelayTime ret (return value: cc.DelayTime)
         
 --------------------------------
 -- 
--- @function [parent=#DelayTime] DelayTime 
+-- @function DelayTime 
 -- @param self
 -- @return DelayTime#DelayTime self (return value: cc.DelayTime)
         

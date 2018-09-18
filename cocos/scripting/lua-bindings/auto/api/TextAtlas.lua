@@ -1,34 +1,34 @@
 
 --------------------------------
 -- @module TextAtlas
--- @extend Widget
--- @parent_module ccui
+-- @see Widget
+-- @see ccui
 
 --------------------------------
 -- Gets the string length of the label.<br>
 -- Note: This length will be larger than the raw string length,<br>
 -- if you want to get the raw string length, you should call this->getString().size() instead<br>
 -- return  string length.
--- @function [parent=#TextAtlas] getStringLength 
+-- @function getStringLength 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#TextAtlas] getString 
+-- @function getString 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#TextAtlas] setString 
+-- @function setString 
 -- @param self
 -- @param #string value
 -- @return TextAtlas#TextAtlas self (return value: ccui.TextAtlas)
         
 --------------------------------
 -- 
--- @function [parent=#TextAtlas] getRenderFile 
+-- @function getRenderFile 
 -- @param self
 -- @return ResourceData#ResourceData ret (return value: cc.ResourceData)
         
@@ -39,7 +39,7 @@
 -- param itemWidth The element width.<br>
 -- param itemHeight The element height.<br>
 -- param startCharMap The starting char of the atlas.
--- @function [parent=#TextAtlas] setProperty 
+-- @function setProperty 
 -- @param self
 -- @param #string stringValue
 -- @param #string charMapFile
@@ -50,14 +50,14 @@
         
 --------------------------------
 -- js NA
--- @function [parent=#TextAtlas] adaptRenderers 
+-- @function adaptRenderers 
 -- @param self
 -- @return TextAtlas#TextAtlas self (return value: ccui.TextAtlas)
         
 --------------------------------
 -- @overload self, string, string, int, int, string         
 -- @overload self         
--- @function [parent=#TextAtlas] create
+-- @function create
 -- @param self
 -- @param #string stringValue
 -- @param #string charMapFile
@@ -68,32 +68,32 @@
 
 --------------------------------
 -- 
--- @function [parent=#TextAtlas] createInstance 
+-- @function createInstance 
 -- @param self
 -- @return Ref#Ref ret (return value: cc.Ref)
         
 --------------------------------
 -- 
--- @function [parent=#TextAtlas] getVirtualRenderer 
+-- @function getVirtualRenderer 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- Returns the "class name" of widget.
--- @function [parent=#TextAtlas] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#TextAtlas] getVirtualRendererSize 
+-- @function getVirtualRendererSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- Default constructor.<br>
 -- lua new
--- @function [parent=#TextAtlas] TextAtlas 
+-- @function TextAtlas 
 -- @param self
 -- @return TextAtlas#TextAtlas self (return value: ccui.TextAtlas)
         

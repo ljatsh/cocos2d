@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module RotateBy
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- @overload self, float, float, float         
 -- @overload self, float, float         
 -- @overload self, float, vec3_table         
--- @function [parent=#RotateBy] initWithDuration
+-- @function initWithDuration
 -- @param self
 -- @param #float duration
 -- @param #float deltaAngleZ_X
@@ -19,7 +19,7 @@
 -- @overload self, float, float, float         
 -- @overload self, float, float         
 -- @overload self, float, vec3_table         
--- @function [parent=#RotateBy] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #float deltaAngleZ_X
@@ -28,33 +28,33 @@
 
 --------------------------------
 -- 
--- @function [parent=#RotateBy] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return RotateBy#RotateBy self (return value: cc.RotateBy)
         
 --------------------------------
 -- 
--- @function [parent=#RotateBy] clone 
+-- @function clone 
 -- @param self
 -- @return RotateBy#RotateBy ret (return value: cc.RotateBy)
         
 --------------------------------
 -- 
--- @function [parent=#RotateBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return RotateBy#RotateBy ret (return value: cc.RotateBy)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#RotateBy] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return RotateBy#RotateBy self (return value: cc.RotateBy)
         
 --------------------------------
 -- 
--- @function [parent=#RotateBy] RotateBy 
+-- @function RotateBy 
 -- @param self
 -- @return RotateBy#RotateBy self (return value: cc.RotateBy)
         

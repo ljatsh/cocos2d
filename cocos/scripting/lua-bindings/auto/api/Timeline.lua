@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module Timeline
--- @extend Ref
--- @parent_module ccs
+-- @see Ref
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#Timeline] clone 
+-- @function clone 
 -- @param self
 -- @return Timeline#Timeline ret (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] gotoFrame 
+-- @function gotoFrame 
 -- @param self
 -- @param #int frameIndex
 -- @return Timeline#Timeline self (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] setNode 
+-- @function setNode 
 -- @param self
 -- @param #cc.Node node
 -- @return Timeline#Timeline self (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] getActionTimeline 
+-- @function getActionTimeline 
 -- @param self
 -- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] insertFrame 
+-- @function insertFrame 
 -- @param self
 -- @param #ccs.Frame frame
 -- @param #int index
@@ -40,66 +40,66 @@
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] setActionTag 
+-- @function setActionTag 
 -- @param self
 -- @param #int tag
 -- @return Timeline#Timeline self (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] addFrame 
+-- @function addFrame 
 -- @param self
 -- @param #ccs.Frame frame
 -- @return Timeline#Timeline self (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] getFrames 
+-- @function getFrames 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] getActionTag 
+-- @function getActionTag 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] getNode 
+-- @function getNode 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] removeFrame 
+-- @function removeFrame 
 -- @param self
 -- @param #ccs.Frame frame
 -- @return Timeline#Timeline self (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] setActionTimeline 
+-- @function setActionTimeline 
 -- @param self
 -- @param #ccs.ActionTimeline action
 -- @return Timeline#Timeline self (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] stepToFrame 
+-- @function stepToFrame 
 -- @param self
 -- @param #int frameIndex
 -- @return Timeline#Timeline self (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] create 
+-- @function create 
 -- @param self
 -- @return Timeline#Timeline ret (return value: ccs.Timeline)
         
 --------------------------------
 -- 
--- @function [parent=#Timeline] Timeline 
+-- @function Timeline 
 -- @param self
 -- @return Timeline#Timeline self (return value: ccs.Timeline)
         

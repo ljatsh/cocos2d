@@ -1,52 +1,52 @@
 
 --------------------------------
 -- @module BaseLight
--- @extend Node
--- @parent_module cc
+-- @see Node
+-- @see cc
 
 --------------------------------
 -- light enabled getter and setter.
--- @function [parent=#BaseLight] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return BaseLight#BaseLight self (return value: cc.BaseLight)
         
 --------------------------------
 --  intensity getter and setter 
--- @function [parent=#BaseLight] getIntensity 
+-- @function getIntensity 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#BaseLight] isEnabled 
+-- @function isEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Get the light type,light type MUST be one of LightType::DIRECTIONAL ,<br>
 -- LightType::POINT, LightType::SPOT, LightType::AMBIENT.
--- @function [parent=#BaseLight] getLightType 
+-- @function getLightType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#BaseLight] setLightFlag 
+-- @function setLightFlag 
 -- @param self
 -- @param #int flag
 -- @return BaseLight#BaseLight self (return value: cc.BaseLight)
         
 --------------------------------
 -- 
--- @function [parent=#BaseLight] setIntensity 
+-- @function setIntensity 
 -- @param self
 -- @param #float intensity
 -- @return BaseLight#BaseLight self (return value: cc.BaseLight)
         
 --------------------------------
 -- light flag getter and setter
--- @function [parent=#BaseLight] getLightFlag 
+-- @function getLightFlag 
 -- @param self
 -- @return int#int ret (return value: int)
         

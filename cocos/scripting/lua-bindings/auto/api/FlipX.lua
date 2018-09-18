@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module FlipX
--- @extend ActionInstant
--- @parent_module cc
+-- @see ActionInstant
+-- @see cc
 
 --------------------------------
 --  init the action 
--- @function [parent=#FlipX] initWithFlipX 
+-- @function initWithFlipX 
 -- @param self
 -- @param #bool x
 -- @return bool#bool ret (return value: bool)
@@ -15,33 +15,33 @@
 --  Create the action.<br>
 -- param x Flips the sprite horizontally if true.<br>
 -- return  An autoreleased FlipX object.
--- @function [parent=#FlipX] create 
+-- @function create 
 -- @param self
 -- @param #bool x
 -- @return FlipX#FlipX ret (return value: cc.FlipX)
         
 --------------------------------
 -- 
--- @function [parent=#FlipX] clone 
+-- @function clone 
 -- @param self
 -- @return FlipX#FlipX ret (return value: cc.FlipX)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#FlipX] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return FlipX#FlipX self (return value: cc.FlipX)
         
 --------------------------------
 -- 
--- @function [parent=#FlipX] reverse 
+-- @function reverse 
 -- @param self
 -- @return FlipX#FlipX ret (return value: cc.FlipX)
         
 --------------------------------
 -- 
--- @function [parent=#FlipX] FlipX 
+-- @function FlipX 
 -- @param self
 -- @return FlipX#FlipX self (return value: cc.FlipX)
         

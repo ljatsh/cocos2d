@@ -1,7 +1,7 @@
 
 --------------------------------
 -- @module EaseBounce
--- @extend ActionEase
--- @parent_module cc
+-- @see ActionEase
+-- @see cc
 
 return nil

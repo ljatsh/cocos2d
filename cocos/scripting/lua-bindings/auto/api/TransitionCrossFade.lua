@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module TransitionCrossFade
--- @extend TransitionScene
--- @parent_module cc
+-- @see TransitionScene
+-- @see cc
 
 --------------------------------
 --  Creates a transition with duration and incoming scene.<br>
 -- param t Duration time, in seconds.<br>
 -- param scene A given scene.<br>
 -- return A autoreleased TransitionCrossFade object.
--- @function [parent=#TransitionCrossFade] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -17,7 +17,7 @@
         
 --------------------------------
 -- lua NA
--- @function [parent=#TransitionCrossFade] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -26,7 +26,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionCrossFade] TransitionCrossFade 
+-- @function TransitionCrossFade 
 -- @param self
 -- @return TransitionCrossFade#TransitionCrossFade self (return value: cc.TransitionCrossFade)
         

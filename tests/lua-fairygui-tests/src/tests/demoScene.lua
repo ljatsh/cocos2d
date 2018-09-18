@@ -30,6 +30,7 @@ function demoScene:onClose()
     cc.Director:getInstance():endToLua()
   else
     local mainMenu = require('mainMenu')
+    cc.Director:getInstance():getRunningScene():dispose()
     cc.Director:getInstance():replaceScene(mainMenu.new())
   end
 end

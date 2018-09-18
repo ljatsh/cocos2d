@@ -1,57 +1,57 @@
 
 --------------------------------
 -- @module GSlider
--- @extend GComponent
--- @parent_module fgui
+-- @see GComponent
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GSlider] setValue 
+-- @function setValue 
 -- @param self
 -- @param #double value
 -- @return GSlider#GSlider self (return value: fgui.GSlider)
         
 --------------------------------
 -- 
--- @function [parent=#GSlider] setMax 
+-- @function setMax 
 -- @param self
 -- @param #double value
 -- @return GSlider#GSlider self (return value: fgui.GSlider)
         
 --------------------------------
 -- 
--- @function [parent=#GSlider] getValue 
+-- @function getValue 
 -- @param self
 -- @return double#double ret (return value: double)
         
 --------------------------------
 -- 
--- @function [parent=#GSlider] getTitleType 
+-- @function getTitleType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GSlider] getMax 
+-- @function getMax 
 -- @param self
 -- @return double#double ret (return value: double)
         
 --------------------------------
 -- 
--- @function [parent=#GSlider] setTitleType 
+-- @function setTitleType 
 -- @param self
 -- @param #int value
 -- @return GSlider#GSlider self (return value: fgui.GSlider)
         
 --------------------------------
 -- 
--- @function [parent=#GSlider] create 
+-- @function create 
 -- @param self
 -- @return GSlider#GSlider ret (return value: fgui.GSlider)
         
 --------------------------------
 -- 
--- @function [parent=#GSlider] GSlider 
+-- @function GSlider 
 -- @param self
 -- @return GSlider#GSlider self (return value: fgui.GSlider)
         

@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module Show
--- @extend ActionInstant
--- @parent_module cc
+-- @see ActionInstant
+-- @see cc
 
 --------------------------------
 --  Allocates and initializes the action.<br>
 -- return  An autoreleased Show object.
--- @function [parent=#Show] create 
+-- @function create 
 -- @param self
 -- @return Show#Show ret (return value: cc.Show)
         
 --------------------------------
 -- 
--- @function [parent=#Show] clone 
+-- @function clone 
 -- @param self
 -- @return Show#Show ret (return value: cc.Show)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#Show] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return Show#Show self (return value: cc.Show)
         
 --------------------------------
 -- 
--- @function [parent=#Show] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionInstant#ActionInstant ret (return value: cc.ActionInstant)
         
 --------------------------------
 -- 
--- @function [parent=#Show] Show 
+-- @function Show 
 -- @param self
 -- @return Show#Show self (return value: cc.Show)
         

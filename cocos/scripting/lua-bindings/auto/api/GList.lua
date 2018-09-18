@@ -1,82 +1,82 @@
 
 --------------------------------
 -- @module GList
--- @extend GComponent
--- @parent_module fgui
+-- @see GComponent
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GList] selectAll 
+-- @function selectAll 
 -- @param self
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getColumnGap 
+-- @function getColumnGap 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getLineCount 
+-- @function getLineCount 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setVirtualAndLoop 
+-- @function setVirtualAndLoop 
 -- @param self
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setLayout 
+-- @function setLayout 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] refreshVirtualList 
+-- @function refreshVirtualList 
 -- @param self
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] removeSelection 
+-- @function removeSelection 
 -- @param self
 -- @param #int index
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setColumnGap 
+-- @function setColumnGap 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getColumnCount 
+-- @function getColumnCount 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setVirtual 
+-- @function setVirtual 
 -- @param self
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setNumItems 
+-- @function setNumItems 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setVerticalAlign 
+-- @function setVerticalAlign 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
@@ -84,7 +84,7 @@
 --------------------------------
 -- @overload self, int, int         
 -- @overload self, int         
--- @function [parent=#GList] resizeToFit
+-- @function resizeToFit
 -- @param self
 -- @param #int itemCount
 -- @param #int minSize
@@ -92,40 +92,40 @@
 
 --------------------------------
 -- 
--- @function [parent=#GList] setSelectionController 
+-- @function setSelectionController 
 -- @param self
 -- @param #fgui.GController value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] returnToPool 
+-- @function returnToPool 
 -- @param self
 -- @param #fgui.GObject obj
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] clearSelection 
+-- @function clearSelection 
 -- @param self
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getNumItems 
+-- @function getNumItems 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setColumnCount 
+-- @function setColumnCount 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] removeChildToPoolAt 
+-- @function removeChildToPoolAt 
 -- @param self
 -- @param #int index
 -- @return GList#GList self (return value: fgui.GList)
@@ -133,41 +133,41 @@
 --------------------------------
 -- @overload self, string         
 -- @overload self         
--- @function [parent=#GList] addItemFromPool
+-- @function addItemFromPool
 -- @param self
 -- @param #string url
 -- @return GObject#GObject ret (return value: fgui.GObject)
 
 --------------------------------
 -- 
--- @function [parent=#GList] selectReverse 
+-- @function selectReverse 
 -- @param self
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setLineCount 
+-- @function setLineCount 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setAutoResizeItem 
+-- @function setAutoResizeItem 
 -- @param self
 -- @param #bool value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getVerticalAlign 
+-- @function getVerticalAlign 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- @overload self, int, int         
 -- @overload self         
--- @function [parent=#GList] removeChildrenToPool
+-- @function removeChildrenToPool
 -- @param self
 -- @param #int beginIndex
 -- @param #int endIndex
@@ -175,58 +175,58 @@
 
 --------------------------------
 -- 
--- @function [parent=#GList] setAlign 
+-- @function setAlign 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] isVirtual 
+-- @function isVirtual 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getSelectedIndex 
+-- @function getSelectedIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getSelection 
+-- @function getSelection 
 -- @param self
 -- @param #array_table result
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] itemIndexToChildIndex 
+-- @function itemIndexToChildIndex 
 -- @param self
 -- @param #int index
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getItemPool 
+-- @function getItemPool 
 -- @param self
 -- @return GObjectPool#GObjectPool ret (return value: fgui.GObjectPool)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getSelectionController 
+-- @function getSelectionController 
 -- @param self
 -- @return GController#GController ret (return value: fgui.GController)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getLineGap 
+-- @function getLineGap 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] scrollToView 
+-- @function scrollToView 
 -- @param self
 -- @param #int index
 -- @param #bool ani
@@ -235,61 +235,61 @@
         
 --------------------------------
 -- 
--- @function [parent=#GList] handleArrowKey 
+-- @function handleArrowKey 
 -- @param self
 -- @param #int dir
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getAlign 
+-- @function getAlign 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- @overload self, string         
 -- @overload self         
--- @function [parent=#GList] getFromPool
+-- @function getFromPool
 -- @param self
 -- @param #string url
 -- @return GObject#GObject ret (return value: fgui.GObject)
 
 --------------------------------
 -- 
--- @function [parent=#GList] getDefaultItem 
+-- @function getDefaultItem 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getSelectionMode 
+-- @function getSelectionMode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setDefaultItem 
+-- @function setDefaultItem 
 -- @param self
 -- @param #string value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setSelectedIndex 
+-- @function setSelectedIndex 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setSelectionMode 
+-- @function setSelectionMode 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] addSelection 
+-- @function addSelection 
 -- @param self
 -- @param #int index
 -- @param #bool scrollItToView
@@ -297,46 +297,46 @@
         
 --------------------------------
 -- 
--- @function [parent=#GList] childIndexToItemIndex 
+-- @function childIndexToItemIndex 
 -- @param self
 -- @param #int index
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getAutoResizeItem 
+-- @function getAutoResizeItem 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GList] setLineGap 
+-- @function setLineGap 
 -- @param self
 -- @param #int value
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] removeChildToPool 
+-- @function removeChildToPool 
 -- @param self
 -- @param #fgui.GObject child
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getLayout 
+-- @function getLayout 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] create 
+-- @function create 
 -- @param self
 -- @return GList#GList ret (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] addChildAt 
+-- @function addChildAt 
 -- @param self
 -- @param #fgui.GObject child
 -- @param #int index
@@ -344,27 +344,27 @@
         
 --------------------------------
 -- 
--- @function [parent=#GList] getSnappingPosition 
+-- @function getSnappingPosition 
 -- @param self
 -- @param #vec2_table pt
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#GList] removeChildAt 
+-- @function removeChildAt 
 -- @param self
 -- @param #int index
 -- @return GList#GList self (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#GList] getFirstChildInView 
+-- @function getFirstChildInView 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GList] GList 
+-- @function GList 
 -- @param self
 -- @return GList#GList self (return value: fgui.GList)
         

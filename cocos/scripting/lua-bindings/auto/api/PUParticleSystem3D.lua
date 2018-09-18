@@ -1,44 +1,44 @@
 
 --------------------------------
 -- @module PUParticleSystem3D
--- @extend ParticleSystem3D
--- @parent_module cc
+-- @see ParticleSystem3D
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] initWithFilePath 
+-- @function initWithFilePath 
 -- @param self
 -- @param #string filePath
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Returns the velocity scale, defined in the particle system, but passed to the technique for convenience.
--- @function [parent=#PUParticleSystem3D] getParticleSystemScaleVelocity 
+-- @function getParticleSystemScaleVelocity 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] setEmittedSystemQuota 
+-- @function setEmittedSystemQuota 
 -- @param self
 -- @param #unsigned int quota
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- default particle depth
--- @function [parent=#PUParticleSystem3D] getDefaultDepth 
+-- @function getDefaultDepth 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] getEmittedSystemQuota 
+-- @function getEmittedSystemQuota 
 -- @param self
 -- @return unsigned int#unsigned int ret (return value: unsigned int)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] initWithFilePathAndMaterialPath 
+-- @function initWithFilePathAndMaterialPath 
 -- @param self
 -- @param #string filePath
 -- @param #string materialPath
@@ -46,57 +46,57 @@
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] clearAllParticles 
+-- @function clearAllParticles 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] getMaterialName 
+-- @function getMaterialName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] calulateRotationOffset 
+-- @function calulateRotationOffset 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- Return the maximum velocity a particle can have, even if the velocity of the particle has been set higher (either by initialisation of the particle or by means of an affector).
--- @function [parent=#PUParticleSystem3D] getMaxVelocity 
+-- @function getMaxVelocity 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] forceUpdate 
+-- @function forceUpdate 
 -- @param self
 -- @param #float delta
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] getTimeElapsedSinceStart 
+-- @function getTimeElapsedSinceStart 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] removeAllBehaviourTemplate 
+-- @function removeAllBehaviourTemplate 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] getEmittedEmitterQuota 
+-- @function getEmittedEmitterQuota 
 -- @param self
 -- @return unsigned int#unsigned int ret (return value: unsigned int)
         
 --------------------------------
 --  Forces emission of particles.<br>
 -- remarks The number of requested particles are the exact number that are emitted. No down-scaling is applied.
--- @function [parent=#PUParticleSystem3D] forceEmission 
+-- @function forceEmission 
 -- @param self
 -- @param #cc.PUEmitter emitter
 -- @param #unsigned int requested
@@ -104,179 +104,179 @@
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] addListener 
+-- @function addListener 
 -- @param self
 -- @param #cc.PUListener listener
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] isMarkedForEmission 
+-- @function isMarkedForEmission 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- default particle width
--- @function [parent=#PUParticleSystem3D] getDefaultWidth 
+-- @function getDefaultWidth 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] setEmittedEmitterQuota 
+-- @function setEmittedEmitterQuota 
 -- @param self
 -- @param #unsigned int quota
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] setMarkedForEmission 
+-- @function setMarkedForEmission 
 -- @param self
 -- @param #bool isMarked
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] clone 
+-- @function clone 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D ret (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- add particle affector
--- @function [parent=#PUParticleSystem3D] addEmitter 
+-- @function addEmitter 
 -- @param self
 -- @param #cc.PUEmitter emitter
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] addBehaviourTemplate 
+-- @function addBehaviourTemplate 
 -- @param self
 -- @param #cc.PUBehaviour behaviour
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] setDefaultWidth 
+-- @function setDefaultWidth 
 -- @param self
 -- @param #float width
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] copyAttributesTo 
+-- @function copyAttributesTo 
 -- @param self
 -- @param #cc.PUParticleSystem3D system
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] setMaterialName 
+-- @function setMaterialName 
 -- @param self
 -- @param #string name
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] getParentParticleSystem 
+-- @function getParentParticleSystem 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D ret (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] removeListener 
+-- @function removeListener 
 -- @param self
 -- @param #cc.PUListener listener
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- Set the maximum velocity a particle can have.
--- @function [parent=#PUParticleSystem3D] setMaxVelocity 
+-- @function setMaxVelocity 
 -- @param self
 -- @param #float maxVelocity
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- default particle height
--- @function [parent=#PUParticleSystem3D] getDefaultHeight 
+-- @function getDefaultHeight 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] getDerivedPosition 
+-- @function getDerivedPosition 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- If the orientation of the particle system has been changed since the last update, the passed vector is rotated accordingly.
--- @function [parent=#PUParticleSystem3D] rotationOffset 
+-- @function rotationOffset 
 -- @param self
 -- @param #vec3_table pos
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] removeAllEmitter 
+-- @function removeAllEmitter 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] setParticleSystemScaleVelocity 
+-- @function setParticleSystemScaleVelocity 
 -- @param self
 -- @param #float scaleVelocity
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] getDerivedScale 
+-- @function getDerivedScale 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] setDefaultHeight 
+-- @function setDefaultHeight 
 -- @param self
 -- @param #float height
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] removeAllListener 
+-- @function removeAllListener 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] initSystem 
+-- @function initSystem 
 -- @param self
 -- @param #string filePath
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] makeParticleLocal 
+-- @function makeParticleLocal 
 -- @param self
 -- @param #cc.PUParticle3D particle
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] removerAllObserver 
+-- @function removerAllObserver 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] setDefaultDepth 
+-- @function setDefaultDepth 
 -- @param self
 -- @param #float depth
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] addObserver 
+-- @function addObserver 
 -- @param self
 -- @param #cc.PUObserver observer
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
@@ -285,7 +285,7 @@
 -- @overload self, string         
 -- @overload self         
 -- @overload self, string, string         
--- @function [parent=#PUParticleSystem3D] create
+-- @function create
 -- @param self
 -- @param #string filePath
 -- @param #string materialPath
@@ -293,7 +293,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -302,44 +302,44 @@
         
 --------------------------------
 -- particle system play control
--- @function [parent=#PUParticleSystem3D] startParticleSystem 
+-- @function startParticleSystem 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- stop particle
--- @function [parent=#PUParticleSystem3D] stopParticleSystem 
+-- @function stopParticleSystem 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] update 
+-- @function update 
 -- @param self
 -- @param #float delta
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- pause particle
--- @function [parent=#PUParticleSystem3D] pauseParticleSystem 
+-- @function pauseParticleSystem 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- resume particle
--- @function [parent=#PUParticleSystem3D] resumeParticleSystem 
+-- @function resumeParticleSystem 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] getAliveParticleCount 
+-- @function getAliveParticleCount 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#PUParticleSystem3D] PUParticleSystem3D 
+-- @function PUParticleSystem3D 
 -- @param self
 -- @return PUParticleSystem3D#PUParticleSystem3D self (return value: cc.PUParticleSystem3D)
         

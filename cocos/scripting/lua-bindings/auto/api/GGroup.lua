@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module GGroup
--- @extend GObject
--- @parent_module fgui
+-- @see GObject
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GGroup] getColumnGap 
+-- @function getColumnGap 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] resizeChildren 
+-- @function resizeChildren 
 -- @param self
 -- @param #float dw
 -- @param #float dh
@@ -20,27 +20,27 @@
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] setLayout 
+-- @function setLayout 
 -- @param self
 -- @param #int value
 -- @return GGroup#GGroup self (return value: fgui.GGroup)
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] setColumnGap 
+-- @function setColumnGap 
 -- @param self
 -- @param #int value
 -- @return GGroup#GGroup self (return value: fgui.GGroup)
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] setBoundsChangedFlag 
+-- @function setBoundsChangedFlag 
 -- @param self
 -- @return GGroup#GGroup self (return value: fgui.GGroup)
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] moveChildren 
+-- @function moveChildren 
 -- @param self
 -- @param #float dx
 -- @param #float dy
@@ -48,32 +48,32 @@
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] getLineGap 
+-- @function getLineGap 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] setLineGap 
+-- @function setLineGap 
 -- @param self
 -- @param #int value
 -- @return GGroup#GGroup self (return value: fgui.GGroup)
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] getLayout 
+-- @function getLayout 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] create 
+-- @function create 
 -- @param self
 -- @return GGroup#GGroup ret (return value: fgui.GGroup)
         
 --------------------------------
 -- 
--- @function [parent=#GGroup] GGroup 
+-- @function GGroup 
 -- @param self
 -- @return GGroup#GGroup self (return value: fgui.GGroup)
         

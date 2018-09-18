@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module ControlSaturationBrightnessPicker
--- @extend Control
--- @parent_module cc
+-- @see Control
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] getShadow 
+-- @function getShadow 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] initWithTargetAndPos 
+-- @function initWithTargetAndPos 
 -- @param self
 -- @param #cc.Node target
 -- @param #vec2_table pos
@@ -20,43 +20,43 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] getStartPos 
+-- @function getStartPos 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] getOverlay 
+-- @function getOverlay 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] getSlider 
+-- @function getSlider 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] getBackground 
+-- @function getBackground 
 -- @param self
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] getSaturation 
+-- @function getSaturation 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] getBrightness 
+-- @function getBrightness 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] create 
+-- @function create 
 -- @param self
 -- @param #cc.Node target
 -- @param #vec2_table pos
@@ -64,14 +64,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#ControlSaturationBrightnessPicker] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return ControlSaturationBrightnessPicker#ControlSaturationBrightnessPicker self (return value: cc.ControlSaturationBrightnessPicker)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ControlSaturationBrightnessPicker] ControlSaturationBrightnessPicker 
+-- @function ControlSaturationBrightnessPicker 
 -- @param self
 -- @return ControlSaturationBrightnessPicker#ControlSaturationBrightnessPicker self (return value: cc.ControlSaturationBrightnessPicker)
         

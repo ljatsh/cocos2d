@@ -1,32 +1,32 @@
 
 --------------------------------
 -- @module DisplayData
--- @extend Ref
--- @parent_module ccs
+-- @see Ref
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#DisplayData] copy 
+-- @function copy 
 -- @param self
 -- @param #ccs.DisplayData displayData
 -- @return DisplayData#DisplayData self (return value: ccs.DisplayData)
         
 --------------------------------
 -- 
--- @function [parent=#DisplayData] changeDisplayToTexture 
+-- @function changeDisplayToTexture 
 -- @param self
 -- @param #string displayName
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#DisplayData] create 
+-- @function create 
 -- @param self
 -- @return DisplayData#DisplayData ret (return value: ccs.DisplayData)
         
 --------------------------------
 -- js ctor
--- @function [parent=#DisplayData] DisplayData 
+-- @function DisplayData 
 -- @param self
 -- @return DisplayData#DisplayData self (return value: ccs.DisplayData)
         

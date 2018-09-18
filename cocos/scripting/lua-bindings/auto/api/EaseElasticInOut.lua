@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module EaseElasticInOut
--- @extend EaseElastic
--- @parent_module cc
+-- @see EaseElastic
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EaseElasticInOut] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @param #float rate
@@ -14,26 +14,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#EaseElasticInOut] clone 
+-- @function clone 
 -- @param self
 -- @return EaseElasticInOut#EaseElasticInOut ret (return value: cc.EaseElasticInOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseElasticInOut] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return EaseElasticInOut#EaseElasticInOut self (return value: cc.EaseElasticInOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseElasticInOut] reverse 
+-- @function reverse 
 -- @param self
 -- @return EaseElastic#EaseElastic ret (return value: cc.EaseElastic)
         
 --------------------------------
 -- 
--- @function [parent=#EaseElasticInOut] EaseElasticInOut 
+-- @function EaseElasticInOut 
 -- @param self
 -- @return EaseElasticInOut#EaseElasticInOut self (return value: cc.EaseElasticInOut)
         

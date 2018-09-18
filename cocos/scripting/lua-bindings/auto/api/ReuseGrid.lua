@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module ReuseGrid
--- @extend ActionInstant
--- @parent_module cc
+-- @see ActionInstant
+-- @see cc
 
 --------------------------------
 -- brief Initializes an action with the number of times that the current grid will be reused.<br>
 -- param times Specify times the grid will be reused.<br>
 -- return If the initialization success, return true; otherwise, return false.
--- @function [parent=#ReuseGrid] initWithTimes 
+-- @function initWithTimes 
 -- @param self
 -- @param #int times
 -- @return bool#bool ret (return value: bool)
@@ -17,33 +17,33 @@
 -- brief Create an action with the number of times that the current grid will be reused.<br>
 -- param times Specify times the grid will be reused.<br>
 -- return Return a pointer of ReuseGrid. When the creation failed, return nil.
--- @function [parent=#ReuseGrid] create 
+-- @function create 
 -- @param self
 -- @param #int times
 -- @return ReuseGrid#ReuseGrid ret (return value: cc.ReuseGrid)
         
 --------------------------------
 -- 
--- @function [parent=#ReuseGrid] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return ReuseGrid#ReuseGrid self (return value: cc.ReuseGrid)
         
 --------------------------------
 -- 
--- @function [parent=#ReuseGrid] clone 
+-- @function clone 
 -- @param self
 -- @return ReuseGrid#ReuseGrid ret (return value: cc.ReuseGrid)
         
 --------------------------------
 -- 
--- @function [parent=#ReuseGrid] reverse 
+-- @function reverse 
 -- @param self
 -- @return ReuseGrid#ReuseGrid ret (return value: cc.ReuseGrid)
         
 --------------------------------
 -- 
--- @function [parent=#ReuseGrid] ReuseGrid 
+-- @function ReuseGrid 
 -- @param self
 -- @return ReuseGrid#ReuseGrid self (return value: cc.ReuseGrid)
         

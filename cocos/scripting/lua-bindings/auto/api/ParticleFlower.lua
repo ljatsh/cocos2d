@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module ParticleFlower
--- @extend ParticleSystemQuad
--- @parent_module cc
+-- @see ParticleSystemQuad
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ParticleFlower] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ParticleFlower] initWithTotalParticles 
+-- @function initWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return bool#bool ret (return value: bool)
@@ -20,7 +20,7 @@
 --------------------------------
 --  Create a flower particle system.<br>
 -- return An autoreleased ParticleFlower object.
--- @function [parent=#ParticleFlower] create 
+-- @function create 
 -- @param self
 -- @return ParticleFlower#ParticleFlower ret (return value: cc.ParticleFlower)
         
@@ -29,14 +29,14 @@
 -- param numberOfParticles A given number of particles.<br>
 -- return An autoreleased ParticleFlower object.<br>
 -- js NA
--- @function [parent=#ParticleFlower] createWithTotalParticles 
+-- @function createWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return ParticleFlower#ParticleFlower ret (return value: cc.ParticleFlower)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ParticleFlower] ParticleFlower 
+-- @function ParticleFlower 
 -- @param self
 -- @return ParticleFlower#ParticleFlower self (return value: cc.ParticleFlower)
         

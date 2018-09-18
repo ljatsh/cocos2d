@@ -1,52 +1,52 @@
 
 --------------------------------
 -- @module GUIReader
--- @extend Ref
--- @parent_module ccs
+-- @see Ref
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#GUIReader] setFilePath 
+-- @function setFilePath 
 -- @param self
 -- @param #string strFilePath
 -- @return GUIReader#GUIReader self (return value: ccs.GUIReader)
         
 --------------------------------
 -- 
--- @function [parent=#GUIReader] widgetFromJsonFile 
+-- @function widgetFromJsonFile 
 -- @param self
 -- @param #char fileName
 -- @return Widget#Widget ret (return value: ccui.Widget)
         
 --------------------------------
 -- 
--- @function [parent=#GUIReader] getFilePath 
+-- @function getFilePath 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GUIReader] widgetFromBinaryFile 
+-- @function widgetFromBinaryFile 
 -- @param self
 -- @param #char fileName
 -- @return Widget#Widget ret (return value: ccui.Widget)
         
 --------------------------------
 -- 
--- @function [parent=#GUIReader] getVersionInteger 
+-- @function getVersionInteger 
 -- @param self
 -- @param #char str
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GUIReader] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return GUIReader#GUIReader self (return value: ccs.GUIReader)
         
 --------------------------------
 -- 
--- @function [parent=#GUIReader] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return GUIReader#GUIReader ret (return value: ccs.GUIReader)
         

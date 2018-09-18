@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module ParticleSnow
--- @extend ParticleSystemQuad
--- @parent_module cc
+-- @see ParticleSystemQuad
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ParticleSnow] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ParticleSnow] initWithTotalParticles 
+-- @function initWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return bool#bool ret (return value: bool)
@@ -20,7 +20,7 @@
 --------------------------------
 --  Create a snow particle system.<br>
 -- return An autoreleased ParticleSnow object.
--- @function [parent=#ParticleSnow] create 
+-- @function create 
 -- @param self
 -- @return ParticleSnow#ParticleSnow ret (return value: cc.ParticleSnow)
         
@@ -29,14 +29,14 @@
 -- param numberOfParticles A given number of particles.<br>
 -- return An autoreleased ParticleSnow object.<br>
 -- js NA
--- @function [parent=#ParticleSnow] createWithTotalParticles 
+-- @function createWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return ParticleSnow#ParticleSnow ret (return value: cc.ParticleSnow)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ParticleSnow] ParticleSnow 
+-- @function ParticleSnow 
 -- @param self
 -- @return ParticleSnow#ParticleSnow self (return value: cc.ParticleSnow)
         

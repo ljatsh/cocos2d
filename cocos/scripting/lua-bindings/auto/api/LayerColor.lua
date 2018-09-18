@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module LayerColor
--- @extend Layer,BlendProtocol
--- @parent_module cc
+-- @see Layer,BlendProtocol
+-- @see cc
 
 --------------------------------
 --  Change width and height in Points.<br>
 -- param w The width of layer.<br>
 -- param h The Height of layer.<br>
 -- since v0.8
--- @function [parent=#LayerColor] changeWidthAndHeight 
+-- @function changeWidthAndHeight 
 -- @param self
 -- @param #float w
 -- @param #float h
@@ -18,7 +18,7 @@
 --------------------------------
 --  BlendFunction. Conforms to BlendProtocol protocol <br>
 -- lua NA
--- @function [parent=#LayerColor] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
@@ -28,7 +28,7 @@
 -- In js: var setBlendFunc(var src, var dst)<br>
 -- In lua: local setBlendFunc(local src, local dst)<br>
 -- endcode
--- @function [parent=#LayerColor] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return LayerColor#LayerColor self (return value: cc.LayerColor)
@@ -36,7 +36,7 @@
 --------------------------------
 --  Change width in Points.<br>
 -- param w The width of layer.
--- @function [parent=#LayerColor] changeWidth 
+-- @function changeWidth 
 -- @param self
 -- @param #float w
 -- @return LayerColor#LayerColor self (return value: cc.LayerColor)
@@ -44,7 +44,7 @@
 --------------------------------
 -- @overload self, color4b_table         
 -- @overload self, color4b_table, float, float         
--- @function [parent=#LayerColor] initWithColor
+-- @function initWithColor
 -- @param self
 -- @param #color4b_table color
 -- @param #float width
@@ -54,7 +54,7 @@
 --------------------------------
 --  Change height in Points.<br>
 -- param h The height of layer.
--- @function [parent=#LayerColor] changeHeight 
+-- @function changeHeight 
 -- @param self
 -- @param #float h
 -- @return LayerColor#LayerColor self (return value: cc.LayerColor)
@@ -63,7 +63,7 @@
 -- @overload self, color4b_table, float, float         
 -- @overload self         
 -- @overload self, color4b_table         
--- @function [parent=#LayerColor] create
+-- @function create
 -- @param self
 -- @param #color4b_table color
 -- @param #float width
@@ -72,7 +72,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#LayerColor] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -81,26 +81,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#LayerColor] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#LayerColor] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#LayerColor] setContentSize 
+-- @function setContentSize 
 -- @param self
 -- @param #size_table var
 -- @return LayerColor#LayerColor self (return value: cc.LayerColor)
         
 --------------------------------
 -- 
--- @function [parent=#LayerColor] LayerColor 
+-- @function LayerColor 
 -- @param self
 -- @return LayerColor#LayerColor self (return value: cc.LayerColor)
         

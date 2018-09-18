@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module MoveBy
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- @overload self, float, vec3_table         
 -- @overload self, float, vec2_table         
--- @function [parent=#MoveBy] initWithDuration
+-- @function initWithDuration
 -- @param self
 -- @param #float duration
 -- @param #vec2_table deltaPosition
@@ -16,7 +16,7 @@
 --------------------------------
 -- @overload self, float, vec3_table         
 -- @overload self, float, vec2_table         
--- @function [parent=#MoveBy] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #vec2_table deltaPosition
@@ -24,33 +24,33 @@
 
 --------------------------------
 -- 
--- @function [parent=#MoveBy] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return MoveBy#MoveBy self (return value: cc.MoveBy)
         
 --------------------------------
 -- 
--- @function [parent=#MoveBy] clone 
+-- @function clone 
 -- @param self
 -- @return MoveBy#MoveBy ret (return value: cc.MoveBy)
         
 --------------------------------
 -- 
--- @function [parent=#MoveBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return MoveBy#MoveBy ret (return value: cc.MoveBy)
         
 --------------------------------
 -- param time in seconds
--- @function [parent=#MoveBy] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return MoveBy#MoveBy self (return value: cc.MoveBy)
         
 --------------------------------
 -- 
--- @function [parent=#MoveBy] MoveBy 
+-- @function MoveBy 
 -- @param self
 -- @return MoveBy#MoveBy self (return value: cc.MoveBy)
         

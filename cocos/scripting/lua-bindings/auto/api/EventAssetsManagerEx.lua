@@ -1,60 +1,60 @@
 
 --------------------------------
 -- @module EventAssetsManagerEx
--- @extend EventCustom
--- @parent_module cc
+-- @see EventCustom
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EventAssetsManagerEx] getAssetsManagerEx 
+-- @function getAssetsManagerEx 
 -- @param self
 -- @return AssetsManagerEx#AssetsManagerEx ret (return value: cc.AssetsManagerEx)
         
 --------------------------------
 -- 
--- @function [parent=#EventAssetsManagerEx] getAssetId 
+-- @function getAssetId 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#EventAssetsManagerEx] getCURLECode 
+-- @function getCURLECode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#EventAssetsManagerEx] getMessage 
+-- @function getMessage 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#EventAssetsManagerEx] getCURLMCode 
+-- @function getCURLMCode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#EventAssetsManagerEx] getPercentByFile 
+-- @function getPercentByFile 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#EventAssetsManagerEx] getEventCode 
+-- @function getEventCode 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#EventAssetsManagerEx] getPercent 
+-- @function getPercent 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Constructor 
--- @function [parent=#EventAssetsManagerEx] EventAssetsManagerEx 
+-- @function EventAssetsManagerEx 
 -- @param self
 -- @param #string eventName
 -- @param #cc.AssetsManagerEx manager

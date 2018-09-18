@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module CatmullRomBy
--- @extend CardinalSplineBy
--- @parent_module cc
+-- @see CardinalSplineBy
+-- @see cc
 
 --------------------------------
 --  Initializes the action with a duration and an array of points.<br>
 -- param dt In seconds.<br>
 -- param points An PointArray.
--- @function [parent=#CatmullRomBy] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float dt
 -- @param #point_table points
@@ -16,13 +16,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#CatmullRomBy] clone 
+-- @function clone 
 -- @param self
 -- @return CatmullRomBy#CatmullRomBy ret (return value: cc.CatmullRomBy)
         
 --------------------------------
 -- 
--- @function [parent=#CatmullRomBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return CatmullRomBy#CatmullRomBy ret (return value: cc.CatmullRomBy)
         

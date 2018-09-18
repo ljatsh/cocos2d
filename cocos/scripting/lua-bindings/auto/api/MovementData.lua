@@ -1,32 +1,32 @@
 
 --------------------------------
 -- @module MovementData
--- @extend Ref
--- @parent_module ccs
+-- @see Ref
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#MovementData] getMovementBoneData 
+-- @function getMovementBoneData 
 -- @param self
 -- @param #string boneName
 -- @return MovementBoneData#MovementBoneData ret (return value: ccs.MovementBoneData)
         
 --------------------------------
 -- 
--- @function [parent=#MovementData] addMovementBoneData 
+-- @function addMovementBoneData 
 -- @param self
 -- @param #ccs.MovementBoneData movBoneData
 -- @return MovementData#MovementData self (return value: ccs.MovementData)
         
 --------------------------------
 -- 
--- @function [parent=#MovementData] create 
+-- @function create 
 -- @param self
 -- @return MovementData#MovementData ret (return value: ccs.MovementData)
         
 --------------------------------
 -- js ctor
--- @function [parent=#MovementData] MovementData 
+-- @function MovementData 
 -- @param self
 -- @return MovementData#MovementData self (return value: ccs.MovementData)
         

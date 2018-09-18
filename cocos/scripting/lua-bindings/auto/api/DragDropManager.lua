@@ -1,29 +1,29 @@
 
 --------------------------------
 -- @module DragDropManager
--- @parent_module fgui
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#DragDropManager] cancel 
+-- @function cancel 
 -- @param self
 -- @return DragDropManager#DragDropManager self (return value: fgui.DragDropManager)
         
 --------------------------------
 -- 
--- @function [parent=#DragDropManager] isDragging 
+-- @function isDragging 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#DragDropManager] getAgent 
+-- @function getAgent 
 -- @param self
 -- @return GLoader#GLoader ret (return value: fgui.GLoader)
         
 --------------------------------
 -- 
--- @function [parent=#DragDropManager] startDrag 
+-- @function startDrag 
 -- @param self
 -- @param #string icon
 -- @param #cc.Value sourceData
@@ -32,13 +32,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#DragDropManager] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return DragDropManager#DragDropManager ret (return value: fgui.DragDropManager)
         
 --------------------------------
 -- 
--- @function [parent=#DragDropManager] DragDropManager 
+-- @function DragDropManager 
 -- @param self
 -- @return DragDropManager#DragDropManager self (return value: fgui.DragDropManager)
         

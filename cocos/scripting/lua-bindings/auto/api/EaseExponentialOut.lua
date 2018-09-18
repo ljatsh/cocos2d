@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module EaseExponentialOut
--- @extend ActionEase
--- @parent_module cc
+-- @see ActionEase
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EaseExponentialOut] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return EaseExponentialOut#EaseExponentialOut ret (return value: cc.EaseExponentialOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseExponentialOut] clone 
+-- @function clone 
 -- @param self
 -- @return EaseExponentialOut#EaseExponentialOut ret (return value: cc.EaseExponentialOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseExponentialOut] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return EaseExponentialOut#EaseExponentialOut self (return value: cc.EaseExponentialOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseExponentialOut] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionEase#ActionEase ret (return value: cc.ActionEase)
         
 --------------------------------
 -- 
--- @function [parent=#EaseExponentialOut] EaseExponentialOut 
+-- @function EaseExponentialOut 
 -- @param self
 -- @return EaseExponentialOut#EaseExponentialOut self (return value: cc.EaseExponentialOut)
         

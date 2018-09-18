@@ -1,37 +1,37 @@
 
 --------------------------------
 -- @module AlphaFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#AlphaFrame] getAlpha 
+-- @function getAlpha 
 -- @param self
 -- @return unsigned char#unsigned char ret (return value: unsigned char)
         
 --------------------------------
 -- 
--- @function [parent=#AlphaFrame] setAlpha 
+-- @function setAlpha 
 -- @param self
 -- @param #unsigned char alpha
 -- @return AlphaFrame#AlphaFrame self (return value: ccs.AlphaFrame)
         
 --------------------------------
 -- 
--- @function [parent=#AlphaFrame] create 
+-- @function create 
 -- @param self
 -- @return AlphaFrame#AlphaFrame ret (return value: ccs.AlphaFrame)
         
 --------------------------------
 -- 
--- @function [parent=#AlphaFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#AlphaFrame] AlphaFrame 
+-- @function AlphaFrame 
 -- @param self
 -- @return AlphaFrame#AlphaFrame self (return value: ccs.AlphaFrame)
         

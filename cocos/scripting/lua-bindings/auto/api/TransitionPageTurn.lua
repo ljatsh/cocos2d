@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module TransitionPageTurn
--- @extend TransitionScene
--- @parent_module cc
+-- @see TransitionScene
+-- @see cc
 
 --------------------------------
 --  Returns the action that will be performed with size.<br>
 -- param vector A given size.<br>
 -- return The action that will be performed.
--- @function [parent=#TransitionPageTurn] actionWithSize 
+-- @function actionWithSize 
 -- @param self
 -- @param #size_table vector
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
@@ -21,7 +21,7 @@
 -- param scene A given scene.<br>
 -- param backwards If back is true then the effect is reversed to appear as if the incoming scene is being turned from left over the outgoing scene.<br>
 -- return True if initialize success.
--- @function [parent=#TransitionPageTurn] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -36,7 +36,7 @@
 -- param scene A given scene.<br>
 -- param backwards If back is true then the effect is reversed to appear as if the incoming scene is being turned from left over the outgoing scene.<br>
 -- return An autoreleased TransitionPageTurn object.
--- @function [parent=#TransitionPageTurn] create 
+-- @function create 
 -- @param self
 -- @param #float t
 -- @param #cc.Scene scene
@@ -45,7 +45,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#TransitionPageTurn] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -54,7 +54,7 @@
         
 --------------------------------
 -- js ctor
--- @function [parent=#TransitionPageTurn] TransitionPageTurn 
+-- @function TransitionPageTurn 
 -- @param self
 -- @return TransitionPageTurn#TransitionPageTurn self (return value: cc.TransitionPageTurn)
         

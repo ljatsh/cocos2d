@@ -3,7 +3,8 @@
 
 --------------------------------------------------------
 -- the cc SimpleAudioEngine
--- @field [parent=#cc] SimpleAudioEngine#SimpleAudioEngine SimpleAudioEngine preloaded module
+-- @field SimpleAudioEngine preloaded module
+-- @see SimpleAudioEngine
 
 
 return nil

@@ -1,39 +1,39 @@
 
 --------------------------------
 -- @module ActionTimelineData
--- @extend Ref
--- @parent_module ccs
+-- @see Ref
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineData] setActionTag 
+-- @function setActionTag 
 -- @param self
 -- @param #int actionTag
 -- @return ActionTimelineData#ActionTimelineData self (return value: ccs.ActionTimelineData)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineData] init 
+-- @function init 
 -- @param self
 -- @param #int actionTag
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineData] getActionTag 
+-- @function getActionTag 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineData] create 
+-- @function create 
 -- @param self
 -- @param #int actionTag
 -- @return ActionTimelineData#ActionTimelineData ret (return value: ccs.ActionTimelineData)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineData] ActionTimelineData 
+-- @function ActionTimelineData 
 -- @param self
 -- @return ActionTimelineData#ActionTimelineData self (return value: ccs.ActionTimelineData)
         

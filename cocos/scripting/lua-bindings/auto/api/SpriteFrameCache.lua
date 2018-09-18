@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module SpriteFrameCache
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#SpriteFrameCache] reloadTexture 
+-- @function reloadTexture 
 -- @param self
 -- @param #string plist
 -- @return bool#bool ret (return value: bool)
@@ -17,7 +17,7 @@
 -- lua addSpriteFrames<br>
 -- param plist_content Plist file content string.<br>
 -- param texture Texture pointer.
--- @function [parent=#SpriteFrameCache] addSpriteFramesWithFileContent 
+-- @function addSpriteFramesWithFileContent 
 -- @param self
 -- @param #string plist_content
 -- @param #cc.Texture2D texture
@@ -28,7 +28,7 @@
 -- If the name already exists, then the contents of the old name will be replaced with the new one.<br>
 -- param frame A certain sprite frame.<br>
 -- param frameName The name of the sprite frame.
--- @function [parent=#SpriteFrameCache] addSpriteFrame 
+-- @function addSpriteFrame 
 -- @param self
 -- @param #cc.SpriteFrame frame
 -- @param #string frameName
@@ -38,7 +38,7 @@
 -- @overload self, string, string         
 -- @overload self, string         
 -- @overload self, string, cc.Texture2D         
--- @function [parent=#SpriteFrameCache] addSpriteFramesWithFile
+-- @function addSpriteFramesWithFile
 -- @param self
 -- @param #string plist
 -- @param #cc.Texture2D texture
@@ -52,7 +52,7 @@
 -- lua getSpriteFrame<br>
 -- param name A certain sprite frame name.<br>
 -- return The sprite frame.
--- @function [parent=#SpriteFrameCache] getSpriteFrameByName 
+-- @function getSpriteFrameByName 
 -- @param self
 -- @param #string name
 -- @return SpriteFrame#SpriteFrame ret (return value: cc.SpriteFrame)
@@ -63,7 +63,7 @@
 -- It is convenient to call this method when a specific texture needs to be removed.<br>
 -- since v0.99.5<br>
 -- param plist The name of the plist that needs to removed.
--- @function [parent=#SpriteFrameCache] removeSpriteFramesFromFile 
+-- @function removeSpriteFramesFromFile 
 -- @param self
 -- @param #string plist
 -- @return SpriteFrameCache#SpriteFrameCache self (return value: cc.SpriteFrameCache)
@@ -71,7 +71,7 @@
 --------------------------------
 --  Initialize method.<br>
 -- return if success return true.
--- @function [parent=#SpriteFrameCache] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -81,7 +81,7 @@
 -- In the short term: it will free some resources preventing your app from being killed.<br>
 -- In the medium term: it will allocate more resources.<br>
 -- In the long term: it will be the same.
--- @function [parent=#SpriteFrameCache] removeSpriteFrames 
+-- @function removeSpriteFrames 
 -- @param self
 -- @return SpriteFrameCache#SpriteFrameCache self (return value: cc.SpriteFrameCache)
         
@@ -90,7 +90,7 @@
 -- Sprite Frames that have a retain count of 1 will be deleted.<br>
 -- It is convenient to call this method after when starting a new Scene.<br>
 -- js NA
--- @function [parent=#SpriteFrameCache] removeUnusedSpriteFrames 
+-- @function removeUnusedSpriteFrames 
 -- @param self
 -- @return SpriteFrameCache#SpriteFrameCache self (return value: cc.SpriteFrameCache)
         
@@ -100,7 +100,7 @@
 -- It is convenient to call this method when a specific texture needs to be removed.<br>
 -- param plist_content The string of the plist content that needs to removed.<br>
 -- js NA
--- @function [parent=#SpriteFrameCache] removeSpriteFramesFromFileContent 
+-- @function removeSpriteFramesFromFileContent 
 -- @param self
 -- @param #string plist_content
 -- @return SpriteFrameCache#SpriteFrameCache self (return value: cc.SpriteFrameCache)
@@ -108,7 +108,7 @@
 --------------------------------
 --  Deletes an sprite frame from the sprite frame cache. <br>
 -- param name The name of the sprite frame that needs to removed.
--- @function [parent=#SpriteFrameCache] removeSpriteFrameByName 
+-- @function removeSpriteFrameByName 
 -- @param self
 -- @param #string name
 -- @return SpriteFrameCache#SpriteFrameCache self (return value: cc.SpriteFrameCache)
@@ -119,7 +119,7 @@
 -- lua NA<br>
 -- param plist Plist file name.<br>
 -- return True if the file is loaded.
--- @function [parent=#SpriteFrameCache] isSpriteFramesWithFileLoaded 
+-- @function isSpriteFramesWithFileLoaded 
 -- @param self
 -- @param #string plist
 -- @return bool#bool ret (return value: bool)
@@ -129,7 +129,7 @@
 -- It is convenient to call this method when a specific texture needs to be removed.<br>
 -- since v0.995.<br>
 -- param texture The texture that needs to removed.
--- @function [parent=#SpriteFrameCache] removeSpriteFramesFromTexture 
+-- @function removeSpriteFramesFromTexture 
 -- @param self
 -- @param #cc.Texture2D texture
 -- @return SpriteFrameCache#SpriteFrameCache self (return value: cc.SpriteFrameCache)
@@ -137,7 +137,7 @@
 --------------------------------
 --  Destroys the cache. It releases all the Sprite Frames and the retained instance.<br>
 -- js NA
--- @function [parent=#SpriteFrameCache] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return SpriteFrameCache#SpriteFrameCache self (return value: cc.SpriteFrameCache)
         
@@ -145,7 +145,7 @@
 --  Returns the shared instance of the Sprite Frame cache.<br>
 -- return The instance of the Sprite Frame Cache.<br>
 -- js NA
--- @function [parent=#SpriteFrameCache] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return SpriteFrameCache#SpriteFrameCache ret (return value: cc.SpriteFrameCache)
         

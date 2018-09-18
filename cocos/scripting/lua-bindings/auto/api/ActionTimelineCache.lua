@@ -1,52 +1,32 @@
 
 --------------------------------
 -- @module ActionTimelineCache
--- @parent_module ccs
+-- @see ccs
 
 --------------------------------
 --  Clone a action with the specified name from the container. 
--- @function [parent=#ActionTimelineCache] createActionFromJson 
+-- @function createActionFromJson 
 -- @param self
 -- @param #string fileName
 -- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineCache] createActionWithFlatBuffersFile 
+-- @function createActionWithFlatBuffersFile 
 -- @param self
 -- @param #string fileName
 -- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineCache] loadAnimationActionWithFlatBuffersFile 
+-- @function loadAnimationActionWithFlatBuffersFile 
 -- @param self
 -- @param #string fileName
 -- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineCache] createActionFromContent 
--- @param self
--- @param #string fileName
--- @param #string content
--- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
-        
---------------------------------
--- 
--- @function [parent=#ActionTimelineCache] purge 
--- @param self
--- @return ActionTimelineCache#ActionTimelineCache self (return value: ccs.ActionTimelineCache)
-        
---------------------------------
--- 
--- @function [parent=#ActionTimelineCache] init 
--- @param self
--- @return ActionTimelineCache#ActionTimelineCache self (return value: ccs.ActionTimelineCache)
-        
---------------------------------
--- 
--- @function [parent=#ActionTimelineCache] loadAnimationActionWithContent 
+-- @function createActionFromContent 
 -- @param self
 -- @param #string fileName
 -- @param #string content
@@ -54,34 +34,54 @@
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineCache] loadAnimationActionWithFile 
+-- @function purge 
+-- @param self
+-- @return ActionTimelineCache#ActionTimelineCache self (return value: ccs.ActionTimelineCache)
+        
+--------------------------------
+-- 
+-- @function init 
+-- @param self
+-- @return ActionTimelineCache#ActionTimelineCache self (return value: ccs.ActionTimelineCache)
+        
+--------------------------------
+-- 
+-- @function loadAnimationActionWithContent 
+-- @param self
+-- @param #string fileName
+-- @param #string content
+-- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
+        
+--------------------------------
+-- 
+-- @function loadAnimationActionWithFile 
 -- @param self
 -- @param #string fileName
 -- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
         
 --------------------------------
 --  Remove action with filename, and also remove other resource relate with this file 
--- @function [parent=#ActionTimelineCache] removeAction 
+-- @function removeAction 
 -- @param self
 -- @param #string fileName
 -- @return ActionTimelineCache#ActionTimelineCache self (return value: ccs.ActionTimelineCache)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineCache] createActionWithFlatBuffersForSimulator 
+-- @function createActionWithFlatBuffersForSimulator 
 -- @param self
 -- @param #string fileName
 -- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)
         
 --------------------------------
 --  Destroys the singleton 
--- @function [parent=#ActionTimelineCache] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return ActionTimelineCache#ActionTimelineCache self (return value: ccs.ActionTimelineCache)
         
 --------------------------------
 -- 
--- @function [parent=#ActionTimelineCache] createAction 
+-- @function createAction 
 -- @param self
 -- @param #string fileName
 -- @return ActionTimeline#ActionTimeline ret (return value: ccs.ActionTimeline)

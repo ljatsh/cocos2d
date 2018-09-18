@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module SplitCols
--- @extend TiledGrid3DAction
--- @parent_module cc
+-- @see TiledGrid3DAction
+-- @see cc
 
 --------------------------------
 -- brief Initializes the action with the number columns and the duration.<br>
 -- param duration Specify the duration of the SplitCols action. It's a value in seconds.<br>
 -- param cols Specify the columns count should be split.<br>
 -- return If the creation success, return true; otherwise, return false.
--- @function [parent=#SplitCols] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #unsigned int cols
@@ -20,7 +20,7 @@
 -- param duration Specify the duration of the SplitCols action. It's a value in seconds.<br>
 -- param cols Specify the columns count should be split.<br>
 -- return If the creation success, return a pointer of SplitCols action; otherwise, return nil.
--- @function [parent=#SplitCols] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #unsigned int cols
@@ -28,27 +28,27 @@
         
 --------------------------------
 -- 
--- @function [parent=#SplitCols] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return SplitCols#SplitCols self (return value: cc.SplitCols)
         
 --------------------------------
 -- 
--- @function [parent=#SplitCols] clone 
+-- @function clone 
 -- @param self
 -- @return SplitCols#SplitCols ret (return value: cc.SplitCols)
         
 --------------------------------
 -- param time in seconds
--- @function [parent=#SplitCols] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return SplitCols#SplitCols self (return value: cc.SplitCols)
         
 --------------------------------
 -- 
--- @function [parent=#SplitCols] SplitCols 
+-- @function SplitCols 
 -- @param self
 -- @return SplitCols#SplitCols self (return value: cc.SplitCols)
         

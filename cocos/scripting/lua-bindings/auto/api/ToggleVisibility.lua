@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module ToggleVisibility
--- @extend ActionInstant
--- @parent_module cc
+-- @see ActionInstant
+-- @see cc
 
 --------------------------------
 --  Allocates and initializes the action.<br>
 -- return An autoreleased ToggleVisibility object.
--- @function [parent=#ToggleVisibility] create 
+-- @function create 
 -- @param self
 -- @return ToggleVisibility#ToggleVisibility ret (return value: cc.ToggleVisibility)
         
 --------------------------------
 -- 
--- @function [parent=#ToggleVisibility] clone 
+-- @function clone 
 -- @param self
 -- @return ToggleVisibility#ToggleVisibility ret (return value: cc.ToggleVisibility)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#ToggleVisibility] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return ToggleVisibility#ToggleVisibility self (return value: cc.ToggleVisibility)
         
 --------------------------------
 -- 
--- @function [parent=#ToggleVisibility] reverse 
+-- @function reverse 
 -- @param self
 -- @return ToggleVisibility#ToggleVisibility ret (return value: cc.ToggleVisibility)
         
 --------------------------------
 -- 
--- @function [parent=#ToggleVisibility] ToggleVisibility 
+-- @function ToggleVisibility 
 -- @param self
 -- @return ToggleVisibility#ToggleVisibility self (return value: cc.ToggleVisibility)
         

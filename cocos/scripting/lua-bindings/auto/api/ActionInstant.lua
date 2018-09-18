@@ -1,45 +1,45 @@
 
 --------------------------------
 -- @module ActionInstant
--- @extend FiniteTimeAction
--- @parent_module cc
+-- @see FiniteTimeAction
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ActionInstant] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return ActionInstant#ActionInstant self (return value: cc.ActionInstant)
         
 --------------------------------
 -- 
--- @function [parent=#ActionInstant] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionInstant#ActionInstant ret (return value: cc.ActionInstant)
         
 --------------------------------
 -- 
--- @function [parent=#ActionInstant] clone 
+-- @function clone 
 -- @param self
 -- @return ActionInstant#ActionInstant ret (return value: cc.ActionInstant)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#ActionInstant] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return ActionInstant#ActionInstant self (return value: cc.ActionInstant)
         
 --------------------------------
 -- param dt In seconds.
--- @function [parent=#ActionInstant] step 
+-- @function step 
 -- @param self
 -- @param #float dt
 -- @return ActionInstant#ActionInstant self (return value: cc.ActionInstant)
         
 --------------------------------
 -- 
--- @function [parent=#ActionInstant] isDone 
+-- @function isDone 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         

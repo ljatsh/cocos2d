@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module Tween
--- @extend ProcessBase
--- @parent_module ccs
+-- @see ProcessBase
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#Tween] getAnimation 
+-- @function getAnimation 
 -- @param self
 -- @return ArmatureAnimation#ArmatureAnimation ret (return value: ccs.ArmatureAnimation)
         
 --------------------------------
 -- 
--- @function [parent=#Tween] gotoAndPause 
+-- @function gotoAndPause 
 -- @param self
 -- @param #int frameIndex
 -- @return Tween#Tween self (return value: ccs.Tween)
@@ -32,7 +32,7 @@
 -- 0  : line<br>
 -- 1  : fade in<br>
 -- 2  : fade in and out
--- @function [parent=#Tween] play 
+-- @function play 
 -- @param self
 -- @param #ccs.MovementBoneData movementBoneData
 -- @param #int durationTo
@@ -43,7 +43,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Tween] gotoAndPlay 
+-- @function gotoAndPlay 
 -- @param self
 -- @param #int frameIndex
 -- @return Tween#Tween self (return value: ccs.Tween)
@@ -51,14 +51,14 @@
 --------------------------------
 -- Init with a Bone<br>
 -- param bone the Bone Tween will bind to
--- @function [parent=#Tween] init 
+-- @function init 
 -- @param self
 -- @param #ccs.Bone bone
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Tween] setAnimation 
+-- @function setAnimation 
 -- @param self
 -- @param #ccs.ArmatureAnimation animation
 -- @return Tween#Tween self (return value: ccs.Tween)
@@ -66,14 +66,14 @@
 --------------------------------
 -- Create with a Bone<br>
 -- param bone the Bone Tween will bind to
--- @function [parent=#Tween] create 
+-- @function create 
 -- @param self
 -- @param #ccs.Bone bone
 -- @return Tween#Tween ret (return value: ccs.Tween)
         
 --------------------------------
 -- 
--- @function [parent=#Tween] Tween 
+-- @function Tween 
 -- @param self
 -- @return Tween#Tween self (return value: ccs.Tween)
         

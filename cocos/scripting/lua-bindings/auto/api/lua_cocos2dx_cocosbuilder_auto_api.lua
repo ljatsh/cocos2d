@@ -3,12 +3,14 @@
 
 --------------------------------------------------------
 -- the cc CCBAnimationManager
--- @field [parent=#cc] CCBAnimationManager#CCBAnimationManager CCBAnimationManager preloaded module
+-- @field CCBAnimationManager preloaded module
+-- @see CCBAnimationManager
 
 
 --------------------------------------------------------
 -- the cc CCBReader
--- @field [parent=#cc] CCBReader#CCBReader CCBReader preloaded module
+-- @field CCBReader preloaded module
+-- @see CCBReader
 
 
 return nil

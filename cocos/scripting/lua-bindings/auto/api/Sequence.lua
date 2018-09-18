@@ -1,19 +1,19 @@
 
 --------------------------------
 -- @module Sequence
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Sequence] init 
+-- @function init 
 -- @param self
 -- @param #array_table arrayOfActions
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  initializes the action 
--- @function [parent=#Sequence] initWithTwoActions 
+-- @function initWithTwoActions 
 -- @param self
 -- @param #cc.FiniteTimeAction pActionOne
 -- @param #cc.FiniteTimeAction pActionTwo
@@ -21,45 +21,45 @@
         
 --------------------------------
 -- 
--- @function [parent=#Sequence] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return Sequence#Sequence self (return value: cc.Sequence)
         
 --------------------------------
 -- 
--- @function [parent=#Sequence] reverse 
+-- @function reverse 
 -- @param self
 -- @return Sequence#Sequence ret (return value: cc.Sequence)
         
 --------------------------------
 -- 
--- @function [parent=#Sequence] clone 
+-- @function clone 
 -- @param self
 -- @return Sequence#Sequence ret (return value: cc.Sequence)
         
 --------------------------------
 -- 
--- @function [parent=#Sequence] stop 
+-- @function stop 
 -- @param self
 -- @return Sequence#Sequence self (return value: cc.Sequence)
         
 --------------------------------
 -- param t In seconds.
--- @function [parent=#Sequence] update 
+-- @function update 
 -- @param self
 -- @param #float t
 -- @return Sequence#Sequence self (return value: cc.Sequence)
         
 --------------------------------
 -- 
--- @function [parent=#Sequence] isDone 
+-- @function isDone 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Sequence] Sequence 
+-- @function Sequence 
 -- @param self
 -- @return Sequence#Sequence self (return value: cc.Sequence)
         

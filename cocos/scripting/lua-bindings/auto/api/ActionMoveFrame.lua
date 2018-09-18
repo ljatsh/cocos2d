@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module ActionMoveFrame
--- @extend ActionFrame
--- @parent_module ccs
+-- @see ActionFrame
+-- @see ccs
 
 --------------------------------
 -- Changes the move action position.<br>
 -- param the move action position.
--- @function [parent=#ActionMoveFrame] setPosition 
+-- @function setPosition 
 -- @param self
 -- @param #vec2_table pos
 -- @return ActionMoveFrame#ActionMoveFrame self (return value: ccs.ActionMoveFrame)
@@ -16,7 +16,7 @@
 -- Gets the ActionInterval of ActionFrame.<br>
 -- param duration   the duration time of ActionFrame<br>
 -- return ActionInterval
--- @function [parent=#ActionMoveFrame] getAction 
+-- @function getAction 
 -- @param self
 -- @param #float duration
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
@@ -24,13 +24,13 @@
 --------------------------------
 -- Gets the move action position.<br>
 -- return the move action position.
--- @function [parent=#ActionMoveFrame] getPosition 
+-- @function getPosition 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- Default constructor
--- @function [parent=#ActionMoveFrame] ActionMoveFrame 
+-- @function ActionMoveFrame 
 -- @param self
 -- @return ActionMoveFrame#ActionMoveFrame self (return value: ccs.ActionMoveFrame)
         

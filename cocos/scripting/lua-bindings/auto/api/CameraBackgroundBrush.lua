@@ -1,32 +1,32 @@
 
 --------------------------------
 -- @module CameraBackgroundBrush
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 -- get brush type<br>
 -- return BrushType
--- @function [parent=#CameraBackgroundBrush] getBrushType 
+-- @function getBrushType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- draw the background
--- @function [parent=#CameraBackgroundBrush] drawBackground 
+-- @function drawBackground 
 -- @param self
 -- @param #cc.Camera 
 -- @return CameraBackgroundBrush#CameraBackgroundBrush self (return value: cc.CameraBackgroundBrush)
         
 --------------------------------
 -- 
--- @function [parent=#CameraBackgroundBrush] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#CameraBackgroundBrush] isValid 
+-- @function isValid 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -39,7 +39,7 @@
 -- param positive_z texture for the forward side of the texture cube face.<br>
 -- param negative_z texture for the rear side of the texture cube face.<br>
 -- return  A new brush inited with given parameters.
--- @function [parent=#CameraBackgroundBrush] createSkyboxBrush 
+-- @function createSkyboxBrush 
 -- @param self
 -- @param #string positive_x
 -- @param #string negative_x
@@ -54,7 +54,7 @@
 -- param color Color of brush<br>
 -- param depth Depth used to clear depth buffer<br>
 -- return Created brush
--- @function [parent=#CameraBackgroundBrush] createColorBrush 
+-- @function createColorBrush 
 -- @param self
 -- @param #color4f_table color
 -- @param #float depth
@@ -63,7 +63,7 @@
 --------------------------------
 -- Creates a none brush, it does nothing when clear the background<br>
 -- return Created brush.
--- @function [parent=#CameraBackgroundBrush] createNoneBrush 
+-- @function createNoneBrush 
 -- @param self
 -- @return CameraBackgroundBrush#CameraBackgroundBrush ret (return value: cc.CameraBackgroundBrush)
         
@@ -71,13 +71,13 @@
 -- Creates a depth brush, which clears depth buffer with a given depth.<br>
 -- param depth Depth used to clear depth buffer<br>
 -- return Created brush
--- @function [parent=#CameraBackgroundBrush] createDepthBrush 
+-- @function createDepthBrush 
 -- @param self
 -- @return CameraBackgroundDepthBrush#CameraBackgroundDepthBrush ret (return value: cc.CameraBackgroundDepthBrush)
         
 --------------------------------
 -- 
--- @function [parent=#CameraBackgroundBrush] CameraBackgroundBrush 
+-- @function CameraBackgroundBrush 
 -- @param self
 -- @return CameraBackgroundBrush#CameraBackgroundBrush self (return value: cc.CameraBackgroundBrush)
         

@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module UserDefault
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 -- Set integer value by key.<br>
 -- param key The key to set.<br>
 -- param value A integer value to set to the key.<br>
 -- js NA
--- @function [parent=#UserDefault] setIntegerForKey 
+-- @function setIntegerForKey 
 -- @param self
 -- @param #char key
 -- @param #int value
@@ -18,7 +18,7 @@
 -- delete any value by key,<br>
 -- param key The key to delete value.<br>
 -- js NA
--- @function [parent=#UserDefault] deleteValueForKey 
+-- @function deleteValueForKey 
 -- @param self
 -- @param #char key
 -- @return UserDefault#UserDefault self (return value: cc.UserDefault)
@@ -26,7 +26,7 @@
 --------------------------------
 -- @overload self, char, float         
 -- @overload self, char         
--- @function [parent=#UserDefault] getFloatForKey
+-- @function getFloatForKey
 -- @param self
 -- @param #char key
 -- @param #float defaultValue
@@ -35,7 +35,7 @@
 --------------------------------
 -- @overload self, char, bool         
 -- @overload self, char         
--- @function [parent=#UserDefault] getBoolForKey
+-- @function getBoolForKey
 -- @param self
 -- @param #char key
 -- @param #bool defaultValue
@@ -46,7 +46,7 @@
 -- param key The key to set.<br>
 -- param value A double value to set to the key.<br>
 -- js NA
--- @function [parent=#UserDefault] setDoubleForKey 
+-- @function setDoubleForKey 
 -- @param self
 -- @param #char key
 -- @param #double value
@@ -57,7 +57,7 @@
 -- param key The key to set.<br>
 -- param value A float value to set to the key.<br>
 -- js NA
--- @function [parent=#UserDefault] setFloatForKey 
+-- @function setFloatForKey 
 -- @param self
 -- @param #char key
 -- @param #float value
@@ -66,7 +66,7 @@
 --------------------------------
 -- @overload self, char, string         
 -- @overload self, char         
--- @function [parent=#UserDefault] getStringForKey
+-- @function getStringForKey
 -- @param self
 -- @param #char key
 -- @param #string defaultValue
@@ -77,7 +77,7 @@
 -- param key The key to set.<br>
 -- param value A string value to set to the key.<br>
 -- js NA
--- @function [parent=#UserDefault] setStringForKey 
+-- @function setStringForKey 
 -- @param self
 -- @param #char key
 -- @param #string value
@@ -86,14 +86,14 @@
 --------------------------------
 -- You should invoke this function to save values set by setXXXForKey().<br>
 -- js NA
--- @function [parent=#UserDefault] flush 
+-- @function flush 
 -- @param self
 -- @return UserDefault#UserDefault self (return value: cc.UserDefault)
         
 --------------------------------
 -- @overload self, char, int         
 -- @overload self, char         
--- @function [parent=#UserDefault] getIntegerForKey
+-- @function getIntegerForKey
 -- @param self
 -- @param #char key
 -- @param #int defaultValue
@@ -102,7 +102,7 @@
 --------------------------------
 -- @overload self, char, double         
 -- @overload self, char         
--- @function [parent=#UserDefault] getDoubleForKey
+-- @function getDoubleForKey
 -- @param self
 -- @param #char key
 -- @param #double defaultValue
@@ -113,7 +113,7 @@
 -- param key The key to set.<br>
 -- param value A bool value to set to the key.<br>
 -- js NA
--- @function [parent=#UserDefault] setBoolForKey 
+-- @function setBoolForKey 
 -- @param self
 -- @param #char key
 -- @param #bool value
@@ -121,14 +121,14 @@
         
 --------------------------------
 -- js NA
--- @function [parent=#UserDefault] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return UserDefault#UserDefault self (return value: cc.UserDefault)
         
 --------------------------------
 --  All supported platforms other iOS & Android use xml file to save values. This function is return the file path of the xml path.<br>
 -- js NA
--- @function [parent=#UserDefault] getXMLFilePath 
+-- @function getXMLFilePath 
 -- @param self
 -- @return string#string ret (return value: string)
         
@@ -136,7 +136,7 @@
 --  All supported platforms other iOS & Android and CC_PLATFORM_WINRT use xml file to save values. This function checks whether the xml file exists or not.<br>
 -- return True if the xml file exists, false if not.<br>
 -- js NA
--- @function [parent=#UserDefault] isXMLFileExist 
+-- @function isXMLFileExist 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         

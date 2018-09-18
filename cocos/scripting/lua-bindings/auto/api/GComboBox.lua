@@ -1,152 +1,152 @@
 
 --------------------------------
 -- @module GComboBox
--- @extend GComponent
--- @parent_module fgui
+-- @see GComponent
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GComboBox] refresh 
+-- @function refresh 
 -- @param self
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] setValue 
+-- @function setValue 
 -- @param self
 -- @param #string value
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] setSelectedIndex 
+-- @function setSelectedIndex 
 -- @param self
 -- @param #int value
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getItems 
+-- @function getItems 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getSelectedIndex 
+-- @function getSelectedIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] setTitle 
+-- @function setTitle 
 -- @param self
 -- @param #string value
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getTitleFontSize 
+-- @function getTitleFontSize 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getValue 
+-- @function getValue 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getTitleColor 
+-- @function getTitleColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getIcons 
+-- @function getIcons 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getTitle 
+-- @function getTitle 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getSelectionController 
+-- @function getSelectionController 
 -- @param self
 -- @return GController#GController ret (return value: fgui.GController)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getValues 
+-- @function getValues 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] setSelectionController 
+-- @function setSelectionController 
 -- @param self
 -- @param #fgui.GController value
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] setTitleFontSize 
+-- @function setTitleFontSize 
 -- @param self
 -- @param #int value
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] setTitleColor 
+-- @function setTitleColor 
 -- @param self
 -- @param #color3b_table value
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getTextField 
+-- @function getTextField 
 -- @param self
 -- @return GTextField#GTextField ret (return value: fgui.GTextField)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] create 
+-- @function create 
 -- @param self
 -- @return GComboBox#GComboBox ret (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getIcon 
+-- @function getIcon 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] setText 
+-- @function setText 
 -- @param self
 -- @param #string value
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] setIcon 
+-- @function setIcon 
 -- @param self
 -- @param #string value
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] getText 
+-- @function getText 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GComboBox] GComboBox 
+-- @function GComboBox 
 -- @param self
 -- @return GComboBox#GComboBox self (return value: fgui.GComboBox)
         

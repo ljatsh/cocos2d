@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module GLViewImpl
--- @extend GLView
--- @parent_module cc
+-- @see GLView
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#GLViewImpl] createWithRect 
+-- @function createWithRect 
 -- @param self
 -- @param #string viewName
 -- @param #rect_table rect
@@ -15,28 +15,28 @@
         
 --------------------------------
 -- 
--- @function [parent=#GLViewImpl] create 
+-- @function create 
 -- @param self
 -- @param #string viewname
 -- @return GLViewImpl#GLViewImpl ret (return value: cc.GLViewImpl)
         
 --------------------------------
 -- 
--- @function [parent=#GLViewImpl] createWithFullScreen 
+-- @function createWithFullScreen 
 -- @param self
 -- @param #string viewName
 -- @return GLViewImpl#GLViewImpl ret (return value: cc.GLViewImpl)
         
 --------------------------------
 -- 
--- @function [parent=#GLViewImpl] setIMEKeyboardState 
+-- @function setIMEKeyboardState 
 -- @param self
 -- @param #bool bOpen
 -- @return GLViewImpl#GLViewImpl self (return value: cc.GLViewImpl)
         
 --------------------------------
 -- 
--- @function [parent=#GLViewImpl] isOpenGLReady 
+-- @function isOpenGLReady 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         

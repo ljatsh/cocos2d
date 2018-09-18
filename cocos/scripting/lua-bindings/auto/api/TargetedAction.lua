@@ -1,19 +1,19 @@
 
 --------------------------------
 -- @module TargetedAction
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#TargetedAction] getForcedTarget
+-- @function getForcedTarget
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
 
 --------------------------------
 --  Init an action with the specified action and forced target 
--- @function [parent=#TargetedAction] initWithTarget 
+-- @function initWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @param #cc.FiniteTimeAction action
@@ -22,7 +22,7 @@
 --------------------------------
 --  Sets the target that the action will be forced to run with.<br>
 -- param forcedTarget The target that the action will be forced to run with.
--- @function [parent=#TargetedAction] setForcedTarget 
+-- @function setForcedTarget 
 -- @param self
 -- @param #cc.Node forcedTarget
 -- @return TargetedAction#TargetedAction self (return value: cc.TargetedAction)
@@ -32,7 +32,7 @@
 -- param target The target needs to override.<br>
 -- param action The action needs to override.<br>
 -- return An autoreleased TargetedAction object.
--- @function [parent=#TargetedAction] create 
+-- @function create 
 -- @param self
 -- @param #cc.Node target
 -- @param #cc.FiniteTimeAction action
@@ -40,39 +40,39 @@
         
 --------------------------------
 -- 
--- @function [parent=#TargetedAction] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return TargetedAction#TargetedAction self (return value: cc.TargetedAction)
         
 --------------------------------
 -- 
--- @function [parent=#TargetedAction] clone 
+-- @function clone 
 -- @param self
 -- @return TargetedAction#TargetedAction ret (return value: cc.TargetedAction)
         
 --------------------------------
 -- 
--- @function [parent=#TargetedAction] stop 
+-- @function stop 
 -- @param self
 -- @return TargetedAction#TargetedAction self (return value: cc.TargetedAction)
         
 --------------------------------
 -- 
--- @function [parent=#TargetedAction] reverse 
+-- @function reverse 
 -- @param self
 -- @return TargetedAction#TargetedAction ret (return value: cc.TargetedAction)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#TargetedAction] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return TargetedAction#TargetedAction self (return value: cc.TargetedAction)
         
 --------------------------------
 -- 
--- @function [parent=#TargetedAction] TargetedAction 
+-- @function TargetedAction 
 -- @param self
 -- @return TargetedAction#TargetedAction self (return value: cc.TargetedAction)
         

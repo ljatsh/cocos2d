@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module CardinalSplineBy
--- @extend CardinalSplineTo
--- @parent_module cc
+-- @see CardinalSplineTo
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#CardinalSplineBy] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return CardinalSplineBy#CardinalSplineBy self (return value: cc.CardinalSplineBy)
         
 --------------------------------
 -- 
--- @function [parent=#CardinalSplineBy] clone 
+-- @function clone 
 -- @param self
 -- @return CardinalSplineBy#CardinalSplineBy ret (return value: cc.CardinalSplineBy)
         
 --------------------------------
 -- 
--- @function [parent=#CardinalSplineBy] updatePosition 
+-- @function updatePosition 
 -- @param self
 -- @param #vec2_table newPos
 -- @return CardinalSplineBy#CardinalSplineBy self (return value: cc.CardinalSplineBy)
         
 --------------------------------
 -- 
--- @function [parent=#CardinalSplineBy] reverse 
+-- @function reverse 
 -- @param self
 -- @return CardinalSplineBy#CardinalSplineBy ret (return value: cc.CardinalSplineBy)
         
 --------------------------------
 -- 
--- @function [parent=#CardinalSplineBy] CardinalSplineBy 
+-- @function CardinalSplineBy 
 -- @param self
 -- @return CardinalSplineBy#CardinalSplineBy self (return value: cc.CardinalSplineBy)
         

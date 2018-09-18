@@ -1,66 +1,66 @@
 
 --------------------------------
 -- @module Physics3DRigidBody
--- @extend Physics3DObject
--- @parent_module cc
+-- @see Physics3DObject
+-- @see cc
 
 --------------------------------
 --  Set the acceleration. 
--- @function [parent=#Physics3DRigidBody] setGravity 
+-- @function setGravity 
 -- @param self
 -- @param #vec3_table acceleration
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Get friction. 
--- @function [parent=#Physics3DRigidBody] getFriction 
+-- @function getFriction 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- @overload self, float         
 -- @overload self, vec3_table         
--- @function [parent=#Physics3DRigidBody] setAngularFactor
+-- @function setAngularFactor
 -- @param self
 -- @param #vec3_table angFac
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
 
 --------------------------------
 -- 
--- @function [parent=#Physics3DRigidBody] addConstraint 
+-- @function addConstraint 
 -- @param self
 -- @param #cc.Physics3DConstraint constraint
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Get the pointer of btRigidBody. 
--- @function [parent=#Physics3DRigidBody] getRigidBody 
+-- @function getRigidBody 
 -- @param self
 -- @return btRigidBody#btRigidBody ret (return value: btRigidBody)
         
 --------------------------------
 --  Get total force. 
--- @function [parent=#Physics3DRigidBody] getTotalForce 
+-- @function getTotalForce 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 --  Get the total number of constraints. 
--- @function [parent=#Physics3DRigidBody] getConstraintCount 
+-- @function getConstraintCount 
 -- @param self
 -- @return unsigned int#unsigned int ret (return value: unsigned int)
         
 --------------------------------
 -- Apply a central force.<br>
 -- param   force the value of the force
--- @function [parent=#Physics3DRigidBody] applyCentralForce 
+-- @function applyCentralForce 
 -- @param self
 -- @param #vec3_table force
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set mass and inertia. 
--- @function [parent=#Physics3DRigidBody] setMassProps 
+-- @function setMassProps 
 -- @param self
 -- @param #float mass
 -- @param #vec3_table inertia
@@ -68,21 +68,21 @@
         
 --------------------------------
 --  Set friction. 
--- @function [parent=#Physics3DRigidBody] setFriction 
+-- @function setFriction 
 -- @param self
 -- @param #float frict
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set kinematic object. 
--- @function [parent=#Physics3DRigidBody] setKinematic 
+-- @function setKinematic 
 -- @param self
 -- @param #bool kinematic
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set linear damping and angular damping. 
--- @function [parent=#Physics3DRigidBody] setDamping 
+-- @function setDamping 
 -- @param self
 -- @param #float lin_damping
 -- @param #float ang_damping
@@ -92,7 +92,7 @@
 -- Apply a impulse.<br>
 -- param   impulse the value of the impulse<br>
 -- param   rel_pos the position of the impulse
--- @function [parent=#Physics3DRigidBody] applyImpulse 
+-- @function applyImpulse 
 -- @param self
 -- @param #vec3_table impulse
 -- @param #vec3_table rel_pos
@@ -100,60 +100,60 @@
         
 --------------------------------
 --  Check rigid body is kinematic object. 
--- @function [parent=#Physics3DRigidBody] isKinematic 
+-- @function isKinematic 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Apply a torque.<br>
 -- param   torque the value of the torque
--- @function [parent=#Physics3DRigidBody] applyTorque 
+-- @function applyTorque 
 -- @param self
 -- @param #vec3_table torque
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set motion threshold, don't do continuous collision detection if the motion (in one step) is less then ccdMotionThreshold 
--- @function [parent=#Physics3DRigidBody] setCcdMotionThreshold 
+-- @function setCcdMotionThreshold 
 -- @param self
 -- @param #float ccdMotionThreshold
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set rolling friction. 
--- @function [parent=#Physics3DRigidBody] setRollingFriction 
+-- @function setRollingFriction 
 -- @param self
 -- @param #float frict
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Get motion threshold. 
--- @function [parent=#Physics3DRigidBody] getCcdMotionThreshold 
+-- @function getCcdMotionThreshold 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Get the linear factor. 
--- @function [parent=#Physics3DRigidBody] getLinearFactor 
+-- @function getLinearFactor 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 --  Damps the velocity, using the given linearDamping and angularDamping. 
--- @function [parent=#Physics3DRigidBody] applyDamping 
+-- @function applyDamping 
 -- @param self
 -- @param #float timeStep
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Get the angular velocity. 
--- @function [parent=#Physics3DRigidBody] getAngularVelocity 
+-- @function getAngularVelocity 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DRigidBody] init 
+-- @function init 
 -- @param self
 -- @param #cc.Physics3DRigidBodyDes info
 -- @return bool#bool ret (return value: bool)
@@ -161,41 +161,41 @@
 --------------------------------
 -- Apply a torque impulse.<br>
 -- param   torque the value of the torque
--- @function [parent=#Physics3DRigidBody] applyTorqueImpulse 
+-- @function applyTorqueImpulse 
 -- @param self
 -- @param #vec3_table torque
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Active or inactive. 
--- @function [parent=#Physics3DRigidBody] setActive 
+-- @function setActive 
 -- @param self
 -- @param #bool active
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set the linear factor. 
--- @function [parent=#Physics3DRigidBody] setLinearFactor 
+-- @function setLinearFactor 
 -- @param self
 -- @param #vec3_table linearFactor
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set the linear velocity. 
--- @function [parent=#Physics3DRigidBody] setLinearVelocity 
+-- @function setLinearVelocity 
 -- @param self
 -- @param #vec3_table lin_vel
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Get the linear velocity. 
--- @function [parent=#Physics3DRigidBody] getLinearVelocity 
+-- @function getLinearVelocity 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 --  Set swept sphere radius. 
--- @function [parent=#Physics3DRigidBody] setCcdSweptSphereRadius 
+-- @function setCcdSweptSphereRadius 
 -- @param self
 -- @param #float radius
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
@@ -204,7 +204,7 @@
 -- Apply a force.<br>
 -- param   force the value of the force<br>
 -- param   rel_pos the position of the force
--- @function [parent=#Physics3DRigidBody] applyForce 
+-- @function applyForce 
 -- @param self
 -- @param #vec3_table force
 -- @param #vec3_table rel_pos
@@ -212,7 +212,7 @@
         
 --------------------------------
 --  Set the angular velocity. 
--- @function [parent=#Physics3DRigidBody] setAngularVelocity 
+-- @function setAngularVelocity 
 -- @param self
 -- @param #vec3_table ang_vel
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
@@ -220,33 +220,33 @@
 --------------------------------
 -- Apply a central impulse.<br>
 -- param   impulse the value of the impulse
--- @function [parent=#Physics3DRigidBody] applyCentralImpulse 
+-- @function applyCentralImpulse 
 -- @param self
 -- @param #vec3_table impulse
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Get the acceleration. 
--- @function [parent=#Physics3DRigidBody] getGravity 
+-- @function getGravity 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 --  Get rolling friction. 
--- @function [parent=#Physics3DRigidBody] getRollingFriction 
+-- @function getRollingFriction 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Set the center of mass. 
--- @function [parent=#Physics3DRigidBody] setCenterOfMassTransform 
+-- @function setCenterOfMassTransform 
 -- @param self
 -- @param #mat4_table xform
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set the inverse of local inertia. 
--- @function [parent=#Physics3DRigidBody] setInvInertiaDiagLocal 
+-- @function setInvInertiaDiagLocal 
 -- @param self
 -- @param #vec3_table diagInvInertia
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
@@ -254,101 +254,101 @@
 --------------------------------
 -- @overload self, unsigned int         
 -- @overload self, cc.Physics3DConstraint         
--- @function [parent=#Physics3DRigidBody] removeConstraint
+-- @function removeConstraint
 -- @param self
 -- @param #cc.Physics3DConstraint constraint
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
 
 --------------------------------
 --  Get total torque. 
--- @function [parent=#Physics3DRigidBody] getTotalTorque 
+-- @function getTotalTorque 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 --  Get inverse of mass. 
--- @function [parent=#Physics3DRigidBody] getInvMass 
+-- @function getInvMass 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Get constraint by index. 
--- @function [parent=#Physics3DRigidBody] getConstraint 
+-- @function getConstraint 
 -- @param self
 -- @param #unsigned int idx
 -- @return Physics3DConstraint#Physics3DConstraint ret (return value: cc.Physics3DConstraint)
         
 --------------------------------
 --  Get restitution. 
--- @function [parent=#Physics3DRigidBody] getRestitution 
+-- @function getRestitution 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Get swept sphere radius. 
--- @function [parent=#Physics3DRigidBody] getCcdSweptSphereRadius 
+-- @function getCcdSweptSphereRadius 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Get hit friction. 
--- @function [parent=#Physics3DRigidBody] getHitFraction 
+-- @function getHitFraction 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Get angular damping. 
--- @function [parent=#Physics3DRigidBody] getAngularDamping 
+-- @function getAngularDamping 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Get the inverse of local inertia. 
--- @function [parent=#Physics3DRigidBody] getInvInertiaDiagLocal 
+-- @function getInvInertiaDiagLocal 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 --  Get the center of mass. 
--- @function [parent=#Physics3DRigidBody] getCenterOfMassTransform 
+-- @function getCenterOfMassTransform 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 --  Get the angular factor. 
--- @function [parent=#Physics3DRigidBody] getAngularFactor 
+-- @function getAngularFactor 
 -- @param self
 -- @return vec3_table#vec3_table ret (return value: vec3_table)
         
 --------------------------------
 --  Set restitution. 
--- @function [parent=#Physics3DRigidBody] setRestitution 
+-- @function setRestitution 
 -- @param self
 -- @param #float rest
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Set hit friction. 
--- @function [parent=#Physics3DRigidBody] setHitFraction 
+-- @function setHitFraction 
 -- @param self
 -- @param #float hitFraction
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         
 --------------------------------
 --  Get linear damping. 
--- @function [parent=#Physics3DRigidBody] getLinearDamping 
+-- @function getLinearDamping 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  override. 
--- @function [parent=#Physics3DRigidBody] getWorldTransform 
+-- @function getWorldTransform 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DRigidBody] Physics3DRigidBody 
+-- @function Physics3DRigidBody 
 -- @param self
 -- @return Physics3DRigidBody#Physics3DRigidBody self (return value: cc.Physics3DRigidBody)
         

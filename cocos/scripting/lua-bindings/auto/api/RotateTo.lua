@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module RotateTo
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 -- @overload self, float, vec3_table         
 -- @overload self, float, float, float         
--- @function [parent=#RotateTo] initWithDuration
+-- @function initWithDuration
 -- @param self
 -- @param #float duration
 -- @param #float dstAngleX
@@ -18,7 +18,7 @@
 -- @overload self, float, float         
 -- @overload self, float, float, float         
 -- @overload self, float, vec3_table         
--- @function [parent=#RotateTo] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #float dstAngleX
@@ -27,33 +27,33 @@
 
 --------------------------------
 -- 
--- @function [parent=#RotateTo] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return RotateTo#RotateTo self (return value: cc.RotateTo)
         
 --------------------------------
 -- 
--- @function [parent=#RotateTo] clone 
+-- @function clone 
 -- @param self
 -- @return RotateTo#RotateTo ret (return value: cc.RotateTo)
         
 --------------------------------
 -- 
--- @function [parent=#RotateTo] reverse 
+-- @function reverse 
 -- @param self
 -- @return RotateTo#RotateTo ret (return value: cc.RotateTo)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#RotateTo] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return RotateTo#RotateTo self (return value: cc.RotateTo)
         
 --------------------------------
 -- 
--- @function [parent=#RotateTo] RotateTo 
+-- @function RotateTo 
 -- @param self
 -- @return RotateTo#RotateTo self (return value: cc.RotateTo)
         

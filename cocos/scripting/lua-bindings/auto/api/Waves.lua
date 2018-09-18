@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module Waves
--- @extend Grid3DAction
--- @parent_module cc
+-- @see Grid3DAction
+-- @see cc
 
 --------------------------------
 -- brief Set the amplitude rate of the effect.<br>
 -- param amplitudeRate The value of amplitude rate will be set.
--- @function [parent=#Waves] setAmplitudeRate 
+-- @function setAmplitudeRate 
 -- @param self
 -- @param #float amplitudeRate
 -- @return Waves#Waves self (return value: cc.Waves)
@@ -21,7 +21,7 @@
 -- param horizontal Specify whether waves on horizontal.<br>
 -- param vertical Specify whether waves on vertical.<br>
 -- return If the initialization success, return true; otherwise, return false.
--- @function [parent=#Waves] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -34,21 +34,21 @@
 --------------------------------
 -- brief Get the amplitude of the effect.<br>
 -- return Return the amplitude of the effect.
--- @function [parent=#Waves] getAmplitude 
+-- @function getAmplitude 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Get the amplitude rate of the effect.<br>
 -- return Return the amplitude rate of the effect.
--- @function [parent=#Waves] getAmplitudeRate 
+-- @function getAmplitudeRate 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Set the amplitude to the effect.<br>
 -- param amplitude The value of amplitude will be set.
--- @function [parent=#Waves] setAmplitude 
+-- @function setAmplitude 
 -- @param self
 -- @param #float amplitude
 -- @return Waves#Waves self (return value: cc.Waves)
@@ -62,7 +62,7 @@
 -- param horizontal Specify whether waves on horizontal.<br>
 -- param vertical Specify whether waves on vertical.<br>
 -- return If the creation success, return a pointer of Waves action; otherwise, return nil.
--- @function [parent=#Waves] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -74,20 +74,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#Waves] clone 
+-- @function clone 
 -- @param self
 -- @return Waves#Waves ret (return value: cc.Waves)
         
 --------------------------------
 -- 
--- @function [parent=#Waves] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return Waves#Waves self (return value: cc.Waves)
         
 --------------------------------
 -- 
--- @function [parent=#Waves] Waves 
+-- @function Waves 
 -- @param self
 -- @return Waves#Waves self (return value: cc.Waves)
         

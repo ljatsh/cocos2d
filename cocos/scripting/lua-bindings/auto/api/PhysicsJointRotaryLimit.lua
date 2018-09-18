@@ -1,45 +1,45 @@
 
 --------------------------------
 -- @module PhysicsJointRotaryLimit
--- @extend PhysicsJoint
--- @parent_module cc
+-- @see PhysicsJoint
+-- @see cc
 
 --------------------------------
 --  Get the max rotation limit.
--- @function [parent=#PhysicsJointRotaryLimit] getMax 
+-- @function getMax 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PhysicsJointRotaryLimit] createConstraints 
+-- @function createConstraints 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Set the min rotation limit.
--- @function [parent=#PhysicsJointRotaryLimit] setMin 
+-- @function setMin 
 -- @param self
 -- @param #float min
 -- @return PhysicsJointRotaryLimit#PhysicsJointRotaryLimit self (return value: cc.PhysicsJointRotaryLimit)
         
 --------------------------------
 --  Set the max rotation limit.
--- @function [parent=#PhysicsJointRotaryLimit] setMax 
+-- @function setMax 
 -- @param self
 -- @param #float max
 -- @return PhysicsJointRotaryLimit#PhysicsJointRotaryLimit self (return value: cc.PhysicsJointRotaryLimit)
         
 --------------------------------
 --  Get the min rotation limit.
--- @function [parent=#PhysicsJointRotaryLimit] getMin 
+-- @function getMin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- @overload self, cc.PhysicsBody, cc.PhysicsBody         
 -- @overload self, cc.PhysicsBody, cc.PhysicsBody, float, float         
--- @function [parent=#PhysicsJointRotaryLimit] construct
+-- @function construct
 -- @param self
 -- @param #cc.PhysicsBody a
 -- @param #cc.PhysicsBody b

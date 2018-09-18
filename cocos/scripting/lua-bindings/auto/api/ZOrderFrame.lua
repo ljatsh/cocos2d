@@ -1,37 +1,37 @@
 
 --------------------------------
 -- @module ZOrderFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ZOrderFrame] getZOrder 
+-- @function getZOrder 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#ZOrderFrame] setZOrder 
+-- @function setZOrder 
 -- @param self
 -- @param #int zorder
 -- @return ZOrderFrame#ZOrderFrame self (return value: ccs.ZOrderFrame)
         
 --------------------------------
 -- 
--- @function [parent=#ZOrderFrame] create 
+-- @function create 
 -- @param self
 -- @return ZOrderFrame#ZOrderFrame ret (return value: ccs.ZOrderFrame)
         
 --------------------------------
 -- 
--- @function [parent=#ZOrderFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#ZOrderFrame] ZOrderFrame 
+-- @function ZOrderFrame 
 -- @param self
 -- @return ZOrderFrame#ZOrderFrame self (return value: ccs.ZOrderFrame)
         

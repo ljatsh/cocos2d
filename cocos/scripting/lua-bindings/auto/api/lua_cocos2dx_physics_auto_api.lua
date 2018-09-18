@@ -3,147 +3,176 @@
 
 --------------------------------------------------------
 -- the cc PhysicsShape
--- @field [parent=#cc] PhysicsShape#PhysicsShape PhysicsShape preloaded module
+-- @field PhysicsShape preloaded module
+-- @see PhysicsShape
 
 
 --------------------------------------------------------
 -- the cc PhysicsShapeCircle
--- @field [parent=#cc] PhysicsShapeCircle#PhysicsShapeCircle PhysicsShapeCircle preloaded module
+-- @field PhysicsShapeCircle preloaded module
+-- @see PhysicsShapeCircle
 
 
 --------------------------------------------------------
 -- the cc PhysicsShapePolygon
--- @field [parent=#cc] PhysicsShapePolygon#PhysicsShapePolygon PhysicsShapePolygon preloaded module
+-- @field PhysicsShapePolygon preloaded module
+-- @see PhysicsShapePolygon
 
 
 --------------------------------------------------------
 -- the cc PhysicsShapeBox
--- @field [parent=#cc] PhysicsShapeBox#PhysicsShapeBox PhysicsShapeBox preloaded module
+-- @field PhysicsShapeBox preloaded module
+-- @see PhysicsShapeBox
 
 
 --------------------------------------------------------
 -- the cc PhysicsShapeEdgeSegment
--- @field [parent=#cc] PhysicsShapeEdgeSegment#PhysicsShapeEdgeSegment PhysicsShapeEdgeSegment preloaded module
+-- @field PhysicsShapeEdgeSegment preloaded module
+-- @see PhysicsShapeEdgeSegment
 
 
 --------------------------------------------------------
 -- the cc PhysicsShapeEdgePolygon
--- @field [parent=#cc] PhysicsShapeEdgePolygon#PhysicsShapeEdgePolygon PhysicsShapeEdgePolygon preloaded module
+-- @field PhysicsShapeEdgePolygon preloaded module
+-- @see PhysicsShapeEdgePolygon
 
 
 --------------------------------------------------------
 -- the cc PhysicsShapeEdgeBox
--- @field [parent=#cc] PhysicsShapeEdgeBox#PhysicsShapeEdgeBox PhysicsShapeEdgeBox preloaded module
+-- @field PhysicsShapeEdgeBox preloaded module
+-- @see PhysicsShapeEdgeBox
 
 
 --------------------------------------------------------
 -- the cc PhysicsShapeEdgeChain
--- @field [parent=#cc] PhysicsShapeEdgeChain#PhysicsShapeEdgeChain PhysicsShapeEdgeChain preloaded module
+-- @field PhysicsShapeEdgeChain preloaded module
+-- @see PhysicsShapeEdgeChain
 
 
 --------------------------------------------------------
 -- the cc PhysicsBody
--- @field [parent=#cc] PhysicsBody#PhysicsBody PhysicsBody preloaded module
+-- @field PhysicsBody preloaded module
+-- @see PhysicsBody
 
 
 --------------------------------------------------------
 -- the cc PhysicsContact
--- @field [parent=#cc] PhysicsContact#PhysicsContact PhysicsContact preloaded module
+-- @field PhysicsContact preloaded module
+-- @see PhysicsContact
 
 
 --------------------------------------------------------
 -- the cc PhysicsContactPreSolve
--- @field [parent=#cc] PhysicsContactPreSolve#PhysicsContactPreSolve PhysicsContactPreSolve preloaded module
+-- @field PhysicsContactPreSolve preloaded module
+-- @see PhysicsContactPreSolve
 
 
 --------------------------------------------------------
 -- the cc PhysicsContactPostSolve
--- @field [parent=#cc] PhysicsContactPostSolve#PhysicsContactPostSolve PhysicsContactPostSolve preloaded module
+-- @field PhysicsContactPostSolve preloaded module
+-- @see PhysicsContactPostSolve
 
 
 --------------------------------------------------------
 -- the cc EventListenerPhysicsContact
--- @field [parent=#cc] EventListenerPhysicsContact#EventListenerPhysicsContact EventListenerPhysicsContact preloaded module
+-- @field EventListenerPhysicsContact preloaded module
+-- @see EventListenerPhysicsContact
 
 
 --------------------------------------------------------
 -- the cc EventListenerPhysicsContactWithBodies
--- @field [parent=#cc] EventListenerPhysicsContactWithBodies#EventListenerPhysicsContactWithBodies EventListenerPhysicsContactWithBodies preloaded module
+-- @field EventListenerPhysicsContactWithBodies preloaded module
+-- @see EventListenerPhysicsContactWithBodies
 
 
 --------------------------------------------------------
 -- the cc EventListenerPhysicsContactWithShapes
--- @field [parent=#cc] EventListenerPhysicsContactWithShapes#EventListenerPhysicsContactWithShapes EventListenerPhysicsContactWithShapes preloaded module
+-- @field EventListenerPhysicsContactWithShapes preloaded module
+-- @see EventListenerPhysicsContactWithShapes
 
 
 --------------------------------------------------------
 -- the cc EventListenerPhysicsContactWithGroup
--- @field [parent=#cc] EventListenerPhysicsContactWithGroup#EventListenerPhysicsContactWithGroup EventListenerPhysicsContactWithGroup preloaded module
+-- @field EventListenerPhysicsContactWithGroup preloaded module
+-- @see EventListenerPhysicsContactWithGroup
 
 
 --------------------------------------------------------
 -- the cc PhysicsJoint
--- @field [parent=#cc] PhysicsJoint#PhysicsJoint PhysicsJoint preloaded module
+-- @field PhysicsJoint preloaded module
+-- @see PhysicsJoint
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointFixed
--- @field [parent=#cc] PhysicsJointFixed#PhysicsJointFixed PhysicsJointFixed preloaded module
+-- @field PhysicsJointFixed preloaded module
+-- @see PhysicsJointFixed
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointLimit
--- @field [parent=#cc] PhysicsJointLimit#PhysicsJointLimit PhysicsJointLimit preloaded module
+-- @field PhysicsJointLimit preloaded module
+-- @see PhysicsJointLimit
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointPin
--- @field [parent=#cc] PhysicsJointPin#PhysicsJointPin PhysicsJointPin preloaded module
+-- @field PhysicsJointPin preloaded module
+-- @see PhysicsJointPin
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointDistance
--- @field [parent=#cc] PhysicsJointDistance#PhysicsJointDistance PhysicsJointDistance preloaded module
+-- @field PhysicsJointDistance preloaded module
+-- @see PhysicsJointDistance
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointSpring
--- @field [parent=#cc] PhysicsJointSpring#PhysicsJointSpring PhysicsJointSpring preloaded module
+-- @field PhysicsJointSpring preloaded module
+-- @see PhysicsJointSpring
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointGroove
--- @field [parent=#cc] PhysicsJointGroove#PhysicsJointGroove PhysicsJointGroove preloaded module
+-- @field PhysicsJointGroove preloaded module
+-- @see PhysicsJointGroove
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointRotarySpring
--- @field [parent=#cc] PhysicsJointRotarySpring#PhysicsJointRotarySpring PhysicsJointRotarySpring preloaded module
+-- @field PhysicsJointRotarySpring preloaded module
+-- @see PhysicsJointRotarySpring
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointRotaryLimit
--- @field [parent=#cc] PhysicsJointRotaryLimit#PhysicsJointRotaryLimit PhysicsJointRotaryLimit preloaded module
+-- @field PhysicsJointRotaryLimit preloaded module
+-- @see PhysicsJointRotaryLimit
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointRatchet
--- @field [parent=#cc] PhysicsJointRatchet#PhysicsJointRatchet PhysicsJointRatchet preloaded module
+-- @field PhysicsJointRatchet preloaded module
+-- @see PhysicsJointRatchet
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointGear
--- @field [parent=#cc] PhysicsJointGear#PhysicsJointGear PhysicsJointGear preloaded module
+-- @field PhysicsJointGear preloaded module
+-- @see PhysicsJointGear
 
 
 --------------------------------------------------------
 -- the cc PhysicsJointMotor
--- @field [parent=#cc] PhysicsJointMotor#PhysicsJointMotor PhysicsJointMotor preloaded module
+-- @field PhysicsJointMotor preloaded module
+-- @see PhysicsJointMotor
 
 
 --------------------------------------------------------
 -- the cc PhysicsWorld
--- @field [parent=#cc] PhysicsWorld#PhysicsWorld PhysicsWorld preloaded module
+-- @field PhysicsWorld preloaded module
+-- @see PhysicsWorld
 
 
 return nil

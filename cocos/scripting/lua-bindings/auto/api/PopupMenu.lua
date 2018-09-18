@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module PopupMenu
--- @extend Ref
--- @parent_module fgui
+-- @see Ref
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] setItemGrayed 
+-- @function setItemGrayed 
 -- @param self
 -- @param #string name
 -- @param #bool grayed
@@ -14,33 +14,33 @@
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] getItemName 
+-- @function getItemName 
 -- @param self
 -- @param #int index
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] clearItems 
+-- @function clearItems 
 -- @param self
 -- @return PopupMenu#PopupMenu self (return value: fgui.PopupMenu)
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] getList 
+-- @function getList 
 -- @param self
 -- @return GList#GList ret (return value: fgui.GList)
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] removeItem 
+-- @function removeItem 
 -- @param self
 -- @param #string name
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] addItem 
+-- @function addItem 
 -- @param self
 -- @param #string caption
 -- @param #function callback
@@ -48,13 +48,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] addSeperator 
+-- @function addSeperator 
 -- @param self
 -- @return PopupMenu#PopupMenu self (return value: fgui.PopupMenu)
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] addItemAt 
+-- @function addItemAt 
 -- @param self
 -- @param #string caption
 -- @param #int index
@@ -63,7 +63,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] setItemText 
+-- @function setItemText 
 -- @param self
 -- @param #string name
 -- @param #string caption
@@ -71,7 +71,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] setItemChecked 
+-- @function setItemChecked 
 -- @param self
 -- @param #string name
 -- @param #bool check
@@ -80,7 +80,7 @@
 --------------------------------
 -- @overload self, fgui.GObject, int         
 -- @overload self         
--- @function [parent=#PopupMenu] show
+-- @function show
 -- @param self
 -- @param #fgui.GObject target
 -- @param #int dir
@@ -88,19 +88,19 @@
 
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] getContentPane 
+-- @function getContentPane 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] getItemCount 
+-- @function getItemCount 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] setItemCheckable 
+-- @function setItemCheckable 
 -- @param self
 -- @param #string name
 -- @param #bool checkable
@@ -108,14 +108,14 @@
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] isItemChecked 
+-- @function isItemChecked 
 -- @param self
 -- @param #string name
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] setItemVisible 
+-- @function setItemVisible 
 -- @param self
 -- @param #string name
 -- @param #bool visible
@@ -124,14 +124,14 @@
 --------------------------------
 -- @overload self         
 -- @overload self, string         
--- @function [parent=#PopupMenu] create
+-- @function create
 -- @param self
 -- @param #string resourceURL
 -- @return PopupMenu#PopupMenu ret (return value: fgui.PopupMenu)
 
 --------------------------------
 -- 
--- @function [parent=#PopupMenu] PopupMenu 
+-- @function PopupMenu 
 -- @param self
 -- @return PopupMenu#PopupMenu self (return value: fgui.PopupMenu)
         

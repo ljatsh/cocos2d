@@ -1,154 +1,154 @@
 
 --------------------------------
 -- @module GButton
--- @extend GComponent
--- @parent_module fgui
+-- @see GComponent
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GButton] getRelatedController 
+-- @function getRelatedController 
 -- @param self
 -- @return GController#GController ret (return value: fgui.GController)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setChangeStateOnClick 
+-- @function setChangeStateOnClick 
 -- @param self
 -- @param #bool value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setSelectedTitle 
+-- @function setSelectedTitle 
 -- @param self
 -- @param #string value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setSelected 
+-- @function setSelected 
 -- @param self
 -- @param #bool value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setRelatedController 
+-- @function setRelatedController 
 -- @param self
 -- @param #fgui.GController c
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setTitle 
+-- @function setTitle 
 -- @param self
 -- @param #string value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] getTitleFontSize 
+-- @function getTitleFontSize 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] getSelectedIcon 
+-- @function getSelectedIcon 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] isSelected 
+-- @function isSelected 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] getTitleColor 
+-- @function getTitleColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] getSelectedTitle 
+-- @function getSelectedTitle 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] getTitle 
+-- @function getTitle 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setSelectedIcon 
+-- @function setSelectedIcon 
 -- @param self
 -- @param #string value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] getTextField 
+-- @function getTextField 
 -- @param self
 -- @return GTextField#GTextField ret (return value: fgui.GTextField)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] isChangeStateOnClick 
+-- @function isChangeStateOnClick 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setTitleFontSize 
+-- @function setTitleFontSize 
 -- @param self
 -- @param #int value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setTitleColor 
+-- @function setTitleColor 
 -- @param self
 -- @param #color3b_table value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] create 
+-- @function create 
 -- @param self
 -- @return GButton#GButton ret (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] getIcon 
+-- @function getIcon 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setText 
+-- @function setText 
 -- @param self
 -- @param #string value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] setIcon 
+-- @function setIcon 
 -- @param self
 -- @param #string value
 -- @return GButton#GButton self (return value: fgui.GButton)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] getText 
+-- @function getText 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#GButton] GButton 
+-- @function GButton 
 -- @param self
 -- @return GButton#GButton self (return value: fgui.GButton)
         

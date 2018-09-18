@@ -1,51 +1,51 @@
 
 --------------------------------
 -- @module ComController
--- @extend Component,InputDelegate
--- @parent_module ccs
+-- @see Component,InputDelegate
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ComController] create 
+-- @function create 
 -- @param self
 -- @return ComController#ComController ret (return value: ccs.ComController)
         
 --------------------------------
 -- 
--- @function [parent=#ComController] createInstance 
+-- @function createInstance 
 -- @param self
 -- @return Ref#Ref ret (return value: cc.Ref)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#ComController] onRemove 
+-- @function onRemove 
 -- @param self
 -- @return ComController#ComController self (return value: ccs.ComController)
         
 --------------------------------
 -- 
--- @function [parent=#ComController] update 
+-- @function update 
 -- @param self
 -- @param #float delta
 -- @return ComController#ComController self (return value: ccs.ComController)
         
 --------------------------------
 -- 
--- @function [parent=#ComController] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#ComController] onAdd 
+-- @function onAdd 
 -- @param self
 -- @return ComController#ComController self (return value: ccs.ComController)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ComController] ComController 
+-- @function ComController 
 -- @param self
 -- @return ComController#ComController self (return value: ccs.ComController)
         

@@ -1,90 +1,90 @@
 
 --------------------------------
 -- @module InnerActionFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] getEndFrameIndex 
+-- @function getEndFrameIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] getStartFrameIndex 
+-- @function getStartFrameIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] getInnerActionType 
+-- @function getInnerActionType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] setEndFrameIndex 
+-- @function setEndFrameIndex 
 -- @param self
 -- @param #int frameIndex
 -- @return InnerActionFrame#InnerActionFrame self (return value: ccs.InnerActionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] setEnterWithName 
+-- @function setEnterWithName 
 -- @param self
 -- @param #bool isEnterWithName
 -- @return InnerActionFrame#InnerActionFrame self (return value: ccs.InnerActionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] setSingleFrameIndex 
+-- @function setSingleFrameIndex 
 -- @param self
 -- @param #int frameIndex
 -- @return InnerActionFrame#InnerActionFrame self (return value: ccs.InnerActionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] setStartFrameIndex 
+-- @function setStartFrameIndex 
 -- @param self
 -- @param #int frameIndex
 -- @return InnerActionFrame#InnerActionFrame self (return value: ccs.InnerActionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] getSingleFrameIndex 
+-- @function getSingleFrameIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] setInnerActionType 
+-- @function setInnerActionType 
 -- @param self
 -- @param #int type
 -- @return InnerActionFrame#InnerActionFrame self (return value: ccs.InnerActionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] setAnimationName 
+-- @function setAnimationName 
 -- @param self
 -- @param #string animationNamed
 -- @return InnerActionFrame#InnerActionFrame self (return value: ccs.InnerActionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] create 
+-- @function create 
 -- @param self
 -- @return InnerActionFrame#InnerActionFrame ret (return value: ccs.InnerActionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#InnerActionFrame] InnerActionFrame 
+-- @function InnerActionFrame 
 -- @param self
 -- @return InnerActionFrame#InnerActionFrame self (return value: ccs.InnerActionFrame)
         

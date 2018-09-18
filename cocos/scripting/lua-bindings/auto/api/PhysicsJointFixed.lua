@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module PhysicsJointFixed
--- @extend PhysicsJoint
--- @parent_module cc
+-- @see PhysicsJoint
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#PhysicsJointFixed] createConstraints 
+-- @function createConstraints 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -16,7 +16,7 @@
 -- param b B is the body to connect.<br>
 -- param anchr It's the pivot position.<br>
 -- return A object pointer.
--- @function [parent=#PhysicsJointFixed] construct 
+-- @function construct 
 -- @param self
 -- @param #cc.PhysicsBody a
 -- @param #cc.PhysicsBody b

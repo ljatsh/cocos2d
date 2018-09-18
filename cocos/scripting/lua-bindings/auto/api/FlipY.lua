@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module FlipY
--- @extend ActionInstant
--- @parent_module cc
+-- @see ActionInstant
+-- @see cc
 
 --------------------------------
 --  init the action 
--- @function [parent=#FlipY] initWithFlipY 
+-- @function initWithFlipY 
 -- @param self
 -- @param #bool y
 -- @return bool#bool ret (return value: bool)
@@ -15,33 +15,33 @@
 --  Create the action.<br>
 -- param y Flips the sprite vertically if true.<br>
 -- return An autoreleased FlipY object.
--- @function [parent=#FlipY] create 
+-- @function create 
 -- @param self
 -- @param #bool y
 -- @return FlipY#FlipY ret (return value: cc.FlipY)
         
 --------------------------------
 -- 
--- @function [parent=#FlipY] clone 
+-- @function clone 
 -- @param self
 -- @return FlipY#FlipY ret (return value: cc.FlipY)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#FlipY] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return FlipY#FlipY self (return value: cc.FlipY)
         
 --------------------------------
 -- 
--- @function [parent=#FlipY] reverse 
+-- @function reverse 
 -- @param self
 -- @return FlipY#FlipY ret (return value: cc.FlipY)
         
 --------------------------------
 -- 
--- @function [parent=#FlipY] FlipY 
+-- @function FlipY 
 -- @param self
 -- @return FlipY#FlipY self (return value: cc.FlipY)
         

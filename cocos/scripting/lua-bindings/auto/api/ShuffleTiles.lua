@@ -1,8 +1,8 @@
 
 --------------------------------
 -- @module ShuffleTiles
--- @extend TiledGrid3DAction
--- @parent_module cc
+-- @see TiledGrid3DAction
+-- @see cc
 
 --------------------------------
 -- brief Initializes the action with grid size, random seed and duration.<br>
@@ -10,7 +10,7 @@
 -- param gridSize Specify the size of the grid.<br>
 -- param seed Specify the random seed.<br>
 -- return If the Initialization success, return true; otherwise, return false.
--- @function [parent=#ShuffleTiles] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -19,7 +19,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ShuffleTiles] getDelta 
+-- @function getDelta 
 -- @param self
 -- @param #size_table pos
 -- @return size_table#size_table ret (return value: size_table)
@@ -30,7 +30,7 @@
 -- param gridSize Specify the size of the grid.<br>
 -- param seed Specify the random seed.<br>
 -- return If the creation success, return a pointer of ShuffleTiles action; otherwise, return nil.
--- @function [parent=#ShuffleTiles] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -39,27 +39,27 @@
         
 --------------------------------
 -- 
--- @function [parent=#ShuffleTiles] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return ShuffleTiles#ShuffleTiles self (return value: cc.ShuffleTiles)
         
 --------------------------------
 -- 
--- @function [parent=#ShuffleTiles] clone 
+-- @function clone 
 -- @param self
 -- @return ShuffleTiles#ShuffleTiles ret (return value: cc.ShuffleTiles)
         
 --------------------------------
 -- 
--- @function [parent=#ShuffleTiles] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return ShuffleTiles#ShuffleTiles self (return value: cc.ShuffleTiles)
         
 --------------------------------
 -- 
--- @function [parent=#ShuffleTiles] ShuffleTiles 
+-- @function ShuffleTiles 
 -- @param self
 -- @return ShuffleTiles#ShuffleTiles self (return value: cc.ShuffleTiles)
         

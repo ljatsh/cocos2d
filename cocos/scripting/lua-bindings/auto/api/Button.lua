@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module Button
--- @extend Widget
--- @parent_module ccui
+-- @see Widget
+-- @see ccui
 
 --------------------------------
 -- 
--- @function [parent=#Button] getNormalTextureSize 
+-- @function getNormalTextureSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- Query the button title content.<br>
 -- return Get the button's title content.
--- @function [parent=#Button] getTitleText 
+-- @function getTitleText 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 --  replaces the current Label node with a new one 
--- @function [parent=#Button] setTitleLabel 
+-- @function setTitleLabel 
 -- @param self
 -- @param #cc.Label label
 -- @return Button#Button self (return value: ccui.Button)
@@ -27,28 +27,28 @@
 --------------------------------
 -- Change the font size of button's title<br>
 -- param size Title font size in float.
--- @function [parent=#Button] setTitleFontSize 
+-- @function setTitleFontSize 
 -- @param self
 -- @param #float size
 -- @return Button#Button self (return value: ccui.Button)
         
 --------------------------------
 -- 
--- @function [parent=#Button] resetPressedRender 
+-- @function resetPressedRender 
 -- @param self
 -- @return Button#Button self (return value: ccui.Button)
         
 --------------------------------
 -- Enable scale9 renderer.<br>
 -- param enable Set to true will use scale9 renderer, false otherwise.
--- @function [parent=#Button] setScale9Enabled 
+-- @function setScale9Enabled 
 -- @param self
 -- @param #bool enable
 -- @return Button#Button self (return value: ccui.Button)
         
 --------------------------------
 -- 
--- @function [parent=#Button] resetDisabledRender 
+-- @function resetDisabledRender 
 -- @param self
 -- @return Button#Button self (return value: ccui.Button)
         
@@ -56,7 +56,7 @@
 -- Return the inner title renderer of Button.<br>
 -- return The button title.<br>
 -- since v3.3
--- @function [parent=#Button] getTitleRenderer 
+-- @function getTitleRenderer 
 -- @param self
 -- @return Label#Label ret (return value: cc.Label)
         
@@ -64,13 +64,13 @@
 -- brief Return the nine-patch sprite of clicked state<br>
 -- return the nine-patch sprite of clicked state<br>
 -- since v3.9
--- @function [parent=#Button] getRendererClicked 
+-- @function getRendererClicked 
 -- @param self
 -- @return Scale9Sprite#Scale9Sprite ret (return value: ccui.Scale9Sprite)
         
 --------------------------------
 -- 
--- @function [parent=#Button] getDisabledFile 
+-- @function getDisabledFile 
 -- @param self
 -- @return ResourceData#ResourceData ret (return value: cc.ResourceData)
         
@@ -78,34 +78,34 @@
 -- brief Return a zoom scale<br>
 -- return the zoom scale in float<br>
 -- since v3.3
--- @function [parent=#Button] getZoomScale 
+-- @function getZoomScale 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Return the capInsets of disabled state scale9sprite.<br>
 -- return The disabled scale9 renderer capInsets.
--- @function [parent=#Button] getCapInsetsDisabledRenderer 
+-- @function getCapInsetsDisabledRenderer 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- Change the color of button's title.<br>
 -- param color The title color in Color3B.
--- @function [parent=#Button] setTitleColor 
+-- @function setTitleColor 
 -- @param self
 -- @param #color3b_table color
 -- @return Button#Button self (return value: ccui.Button)
         
 --------------------------------
 -- 
--- @function [parent=#Button] getNormalFile 
+-- @function getNormalFile 
 -- @param self
 -- @return ResourceData#ResourceData ret (return value: cc.ResourceData)
         
 --------------------------------
 -- 
--- @function [parent=#Button] resetNormalRender 
+-- @function resetNormalRender 
 -- @param self
 -- @return Button#Button self (return value: ccui.Button)
         
@@ -113,14 +113,14 @@
 -- brief Return the nine-patch sprite of disabled state<br>
 -- return the nine-patch sprite of disabled state<br>
 -- since v3.9
--- @function [parent=#Button] getRendererDisabled 
+-- @function getRendererDisabled 
 -- @param self
 -- @return Scale9Sprite#Scale9Sprite ret (return value: ccui.Scale9Sprite)
         
 --------------------------------
 -- Sets capInsets for button, only the disabled state scale9 renderer will be affected.<br>
 -- param capInsets  capInsets in Rect.
--- @function [parent=#Button] setCapInsetsDisabledRenderer 
+-- @function setCapInsetsDisabledRenderer 
 -- @param self
 -- @param #rect_table capInsets
 -- @return Button#Button self (return value: ccui.Button)
@@ -129,7 +129,7 @@
 -- Sets capInsets for button.<br>
 -- The capInset affects  all button scale9 renderer only if `setScale9Enabled(true)` is called<br>
 -- param capInsets    capInset in Rect.
--- @function [parent=#Button] setCapInsets 
+-- @function setCapInsets 
 -- @param self
 -- @param #rect_table capInsets
 -- @return Button#Button self (return value: ccui.Button)
@@ -138,7 +138,7 @@
 -- Load disabled state texture for button.<br>
 -- param disabled    dark state texture.<br>
 -- param texType    @see `TextureResType`
--- @function [parent=#Button] loadTextureDisabled 
+-- @function loadTextureDisabled 
 -- @param self
 -- @param #string disabled
 -- @param #int texType
@@ -146,7 +146,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Button] init 
+-- @function init 
 -- @param self
 -- @param #string normalImage
 -- @param #string selectedImage
@@ -157,7 +157,7 @@
 --------------------------------
 -- Change the content of button's title.<br>
 -- param text The title in std::string.
--- @function [parent=#Button] setTitleText 
+-- @function setTitleText 
 -- @param self
 -- @param #string text
 -- @return Button#Button self (return value: ccui.Button)
@@ -165,7 +165,7 @@
 --------------------------------
 -- Sets capInsets for button, only the normal state scale9 renderer will be affected.<br>
 -- param capInsets    capInsets in Rect.
--- @function [parent=#Button] setCapInsetsNormalRenderer 
+-- @function setCapInsetsNormalRenderer 
 -- @param self
 -- @param #rect_table capInsets
 -- @return Button#Button self (return value: ccui.Button)
@@ -174,7 +174,7 @@
 -- Load selected state texture for button.<br>
 -- param selected    selected state texture.<br>
 -- param texType    @see `TextureResType`
--- @function [parent=#Button] loadTexturePressed 
+-- @function loadTexturePressed 
 -- @param self
 -- @param #string selected
 -- @param #int texType
@@ -183,7 +183,7 @@
 --------------------------------
 -- Change the font name of button's title<br>
 -- param fontName a font name string.
--- @function [parent=#Button] setTitleFontName 
+-- @function setTitleFontName 
 -- @param self
 -- @param #string fontName
 -- @return Button#Button self (return value: ccui.Button)
@@ -191,14 +191,14 @@
 --------------------------------
 -- Return the capInsets of normal state scale9sprite.<br>
 -- return The normal scale9 renderer capInsets.
--- @function [parent=#Button] getCapInsetsNormalRenderer 
+-- @function getCapInsetsNormalRenderer 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- @overload self, int, int         
 -- @overload self, int         
--- @function [parent=#Button] setTitleAlignment
+-- @function setTitleAlignment
 -- @param self
 -- @param #int hAlignment
 -- @param #int vAlignment
@@ -207,7 +207,7 @@
 --------------------------------
 -- Return the capInsets of pressed state scale9sprite.<br>
 -- return The pressed scale9 renderer capInsets.
--- @function [parent=#Button] getCapInsetsPressedRenderer 
+-- @function getCapInsetsPressedRenderer 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
@@ -217,7 +217,7 @@
 -- param selected    selected state texture name.<br>
 -- param disabled    disabled state texture name.<br>
 -- param texType    @see `TextureResType`
--- @function [parent=#Button] loadTextures 
+-- @function loadTextures 
 -- @param self
 -- @param #string normal
 -- @param #string selected
@@ -228,7 +228,7 @@
 --------------------------------
 -- Query whether button is using scale9 renderer or not.<br>
 -- return whether button use scale9 renderer or not.
--- @function [parent=#Button] isScale9Enabled 
+-- @function isScale9Enabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -236,7 +236,7 @@
 -- Load normal state texture for button.<br>
 -- param normal    normal state texture.<br>
 -- param texType    @see `TextureResType`
--- @function [parent=#Button] loadTextureNormal 
+-- @function loadTextureNormal 
 -- @param self
 -- @param #string normal
 -- @param #int texType
@@ -245,27 +245,27 @@
 --------------------------------
 -- Sets capInsets for button, only the pressed state scale9 renderer will be affected.<br>
 -- param capInsets    capInsets in Rect
--- @function [parent=#Button] setCapInsetsPressedRenderer 
+-- @function setCapInsetsPressedRenderer 
 -- @param self
 -- @param #rect_table capInsets
 -- @return Button#Button self (return value: ccui.Button)
         
 --------------------------------
 -- 
--- @function [parent=#Button] getPressedFile 
+-- @function getPressedFile 
 -- @param self
 -- @return ResourceData#ResourceData ret (return value: cc.ResourceData)
         
 --------------------------------
 --  returns the current Label being used 
--- @function [parent=#Button] getTitleLabel 
+-- @function getTitleLabel 
 -- @param self
 -- @return Label#Label ret (return value: cc.Label)
         
 --------------------------------
 -- Query the font size of button title<br>
 -- return font size in float.
--- @function [parent=#Button] getTitleFontSize 
+-- @function getTitleFontSize 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -273,28 +273,28 @@
 -- brief Return the nine-patch sprite of normal state<br>
 -- return the nine-patch sprite of normal state<br>
 -- since v3.9
--- @function [parent=#Button] getRendererNormal 
+-- @function getRendererNormal 
 -- @param self
 -- @return Scale9Sprite#Scale9Sprite ret (return value: ccui.Scale9Sprite)
         
 --------------------------------
 -- Query the font name of button's title<br>
 -- return font name in std::string
--- @function [parent=#Button] getTitleFontName 
+-- @function getTitleFontName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- Query the button title color.<br>
 -- return Color3B of button title.
--- @function [parent=#Button] getTitleColor 
+-- @function getTitleColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
 --------------------------------
 -- Enable zooming action when button is pressed.<br>
 -- param enabled Set to true will enable zoom effect, false otherwise.
--- @function [parent=#Button] setPressedActionEnabled 
+-- @function setPressedActionEnabled 
 -- @param self
 -- @param #bool enabled
 -- @return Button#Button self (return value: ccui.Button)
@@ -303,7 +303,7 @@
 --  @brief When user pressed the button, the button will zoom to a scale.<br>
 -- The final scale of the button  equals (button original scale + _zoomScale)<br>
 -- since v3.3
--- @function [parent=#Button] setZoomScale 
+-- @function setZoomScale 
 -- @param self
 -- @param #float scale
 -- @return Button#Button self (return value: ccui.Button)
@@ -311,7 +311,7 @@
 --------------------------------
 -- @overload self, string, string, string, int         
 -- @overload self         
--- @function [parent=#Button] create
+-- @function create
 -- @param self
 -- @param #string normalImage
 -- @param #string selectedImage
@@ -321,44 +321,44 @@
 
 --------------------------------
 -- 
--- @function [parent=#Button] createInstance 
+-- @function createInstance 
 -- @param self
 -- @return Ref#Ref ret (return value: cc.Ref)
         
 --------------------------------
 -- 
--- @function [parent=#Button] getVirtualRenderer 
+-- @function getVirtualRenderer 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#Button] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Button] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#Button] getVirtualRendererSize 
+-- @function getVirtualRendererSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#Button] ignoreContentAdaptWithSize 
+-- @function ignoreContentAdaptWithSize 
 -- @param self
 -- @param #bool ignore
 -- @return Button#Button self (return value: ccui.Button)
         
 --------------------------------
 -- Default constructor.
--- @function [parent=#Button] Button 
+-- @function Button 
 -- @param self
 -- @return Button#Button self (return value: ccui.Button)
         

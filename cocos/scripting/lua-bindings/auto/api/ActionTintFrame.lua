@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module ActionTintFrame
--- @extend ActionFrame
--- @parent_module ccs
+-- @see ActionFrame
+-- @see ccs
 
 --------------------------------
 -- Gets the tint action color.<br>
 -- return the tint action color.
--- @function [parent=#ActionTintFrame] getColor 
+-- @function getColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
         
@@ -15,7 +15,7 @@
 -- Gets the ActionInterval of ActionFrame.<br>
 -- param duration   the duration time of ActionFrame<br>
 -- return ActionInterval
--- @function [parent=#ActionTintFrame] getAction 
+-- @function getAction 
 -- @param self
 -- @param #float duration
 -- @return ActionInterval#ActionInterval ret (return value: cc.ActionInterval)
@@ -23,14 +23,14 @@
 --------------------------------
 -- Changes the tint action color.<br>
 -- param ccolor the tint action color
--- @function [parent=#ActionTintFrame] setColor 
+-- @function setColor 
 -- @param self
 -- @param #color3b_table ccolor
 -- @return ActionTintFrame#ActionTintFrame self (return value: ccs.ActionTintFrame)
         
 --------------------------------
 -- Default constructor
--- @function [parent=#ActionTintFrame] ActionTintFrame 
+-- @function ActionTintFrame 
 -- @param self
 -- @return ActionTintFrame#ActionTintFrame self (return value: ccs.ActionTintFrame)
         

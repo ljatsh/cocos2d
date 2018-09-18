@@ -1,94 +1,94 @@
 
 --------------------------------
 -- @module ComAudio
--- @extend Component,PlayableProtocol
--- @parent_module ccs
+-- @see Component,PlayableProtocol
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ComAudio] stopAllEffects 
+-- @function stopAllEffects 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] getEffectsVolume 
+-- @function getEffectsVolume 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] stopEffect 
+-- @function stopEffect 
 -- @param self
 -- @param #unsigned int nSoundId
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] getBackgroundMusicVolume 
+-- @function getBackgroundMusicVolume 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] willPlayBackgroundMusic 
+-- @function willPlayBackgroundMusic 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] setBackgroundMusicVolume 
+-- @function setBackgroundMusicVolume 
 -- @param self
 -- @param #float volume
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- / @{/ @name implement Playable Protocol
--- @function [parent=#ComAudio] start 
+-- @function start 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- @overload self         
 -- @overload self, bool         
--- @function [parent=#ComAudio] stopBackgroundMusic
+-- @function stopBackgroundMusic
 -- @param self
 -- @param #bool bReleaseData
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
 
 --------------------------------
 -- 
--- @function [parent=#ComAudio] pauseBackgroundMusic 
+-- @function pauseBackgroundMusic 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] isBackgroundMusicPlaying 
+-- @function isBackgroundMusicPlaying 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] isLoop 
+-- @function isLoop 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] resumeAllEffects 
+-- @function resumeAllEffects 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] pauseAllEffects 
+-- @function pauseAllEffects 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] preloadBackgroundMusic 
+-- @function preloadBackgroundMusic 
 -- @param self
 -- @param #char pszFilePath
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
@@ -97,7 +97,7 @@
 -- @overload self, char         
 -- @overload self, char, bool         
 -- @overload self         
--- @function [parent=#ComAudio] playBackgroundMusic
+-- @function playBackgroundMusic
 -- @param self
 -- @param #char pszFilePath
 -- @param #bool bLoop
@@ -105,13 +105,13 @@
 
 --------------------------------
 -- 
--- @function [parent=#ComAudio] stop 
+-- @function stop 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- lua endToLua
--- @function [parent=#ComAudio] end 
+-- @function end 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
@@ -119,7 +119,7 @@
 -- @overload self, char         
 -- @overload self, char, bool         
 -- @overload self         
--- @function [parent=#ComAudio] playEffect
+-- @function playEffect
 -- @param self
 -- @param #char pszFilePath
 -- @param #bool bLoop
@@ -127,107 +127,107 @@
 
 --------------------------------
 -- 
--- @function [parent=#ComAudio] preloadEffect 
+-- @function preloadEffect 
 -- @param self
 -- @param #char pszFilePath
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] setLoop 
+-- @function setLoop 
 -- @param self
 -- @param #bool bLoop
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] unloadEffect 
+-- @function unloadEffect 
 -- @param self
 -- @param #char pszFilePath
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] rewindBackgroundMusic 
+-- @function rewindBackgroundMusic 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] pauseEffect 
+-- @function pauseEffect 
 -- @param self
 -- @param #unsigned int nSoundId
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] resumeBackgroundMusic 
+-- @function resumeBackgroundMusic 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] setFile 
+-- @function setFile 
 -- @param self
 -- @param #char pszFilePath
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] setEffectsVolume 
+-- @function setEffectsVolume 
 -- @param self
 -- @param #float volume
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] getFile 
+-- @function getFile 
 -- @param self
 -- @return char#char ret (return value: char)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] resumeEffect 
+-- @function resumeEffect 
 -- @param self
 -- @param #unsigned int nSoundId
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] create 
+-- @function create 
 -- @param self
 -- @return ComAudio#ComAudio ret (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] createInstance 
+-- @function createInstance 
 -- @param self
 -- @return Ref#Ref ret (return value: cc.Ref)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#ComAudio] onRemove 
+-- @function onRemove 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] serialize 
+-- @function serialize 
 -- @param self
 -- @param #void r
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ComAudio] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- js NA<br>
 -- lua NA
--- @function [parent=#ComAudio] onAdd 
+-- @function onAdd 
 -- @param self
 -- @return ComAudio#ComAudio self (return value: ccs.ComAudio)
         

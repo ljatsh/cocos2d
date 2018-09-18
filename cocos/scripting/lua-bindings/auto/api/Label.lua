@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module Label
--- @extend Node,LabelProtocol,BlendProtocol
--- @parent_module cc
+-- @see Node,LabelProtocol,BlendProtocol
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Label] isClipMarginEnabled 
+-- @function isClipMarginEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Enable shadow effect to Label.<br>
 -- todo Support blur for shadow effect.
--- @function [parent=#Label] enableShadow 
+-- @function enableShadow 
 -- @param self
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 --  Sets the untransformed size of the Label in a more efficient way. 
--- @function [parent=#Label] setDimensions 
+-- @function setDimensions 
 -- @param self
 -- @param #float width
 -- @param #float height
@@ -27,26 +27,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#Label] getWidth 
+-- @function getWidth 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Return the text the Label is currently displaying.
--- @function [parent=#Label] getString 
+-- @function getString 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#Label] getHeight 
+-- @function getHeight 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- @overload self, int         
 -- @overload self         
--- @function [parent=#Label] disableEffect
+-- @function disableEffect
 -- @param self
 -- @param #int effect
 -- @return Label#Label self (return value: cc.Label)
@@ -54,20 +54,20 @@
 --------------------------------
 -- Sets a new TTF configuration to Label.<br>
 -- see `TTFConfig`
--- @function [parent=#Label] setTTFConfig 
+-- @function setTTFConfig 
 -- @param self
 -- @param #cc._ttfConfig ttfConfig
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Returns the text color of the Label.
--- @function [parent=#Label] getTextColor 
+-- @function getTextColor 
 -- @param self
 -- @return color4b_table#color4b_table ret (return value: color4b_table)
         
 --------------------------------
 -- 
--- @function [parent=#Label] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
@@ -75,7 +75,7 @@
 -- Toggle wrap option of the label.<br>
 -- Note: System font doesn't support manually toggle wrap.<br>
 -- param enable Set true to enable wrap and false to disable wrap.
--- @function [parent=#Label] enableWrap 
+-- @function enableWrap 
 -- @param self
 -- @param #bool enable
 -- @return Label#Label self (return value: cc.Label)
@@ -83,7 +83,7 @@
 --------------------------------
 -- Makes the Label exactly this untransformed width.<br>
 -- The Label's width be used for text align if the value not equal zero.
--- @function [parent=#Label] setWidth 
+-- @function setWidth 
 -- @param self
 -- @param #float width
 -- @return Label#Label self (return value: cc.Label)
@@ -92,51 +92,51 @@
 -- Returns the additional kerning of the Label.<br>
 -- warning Not support system font.<br>
 -- since v3.2.0
--- @function [parent=#Label] getAdditionalKerning 
+-- @function getAdditionalKerning 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Return the user define BMFont size.<br>
 -- return The BMFont size in float value.
--- @function [parent=#Label] getBMFontSize 
+-- @function getBMFontSize 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Label] getMaxLineWidth 
+-- @function getMaxLineWidth 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Returns the Label's text horizontal alignment.
--- @function [parent=#Label] getHorizontalAlignment 
+-- @function getHorizontalAlignment 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Return shadow effect offset value.
--- @function [parent=#Label] getShadowOffset 
+-- @function getShadowOffset 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#Label] getLineSpacing 
+-- @function getLineSpacing 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Clips upper and lower margin to reduce height of Label.
--- @function [parent=#Label] setClipMarginEnabled 
+-- @function setClipMarginEnabled 
 -- @param self
 -- @param #bool clipEnabled
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 --  Sets the text that this Label is to display.
--- @function [parent=#Label] setString 
+-- @function setString 
 -- @param self
 -- @param #string text
 -- @return Label#Label self (return value: cc.Label)
@@ -145,7 +145,7 @@
 -- Sets a new system font to Label.<br>
 -- param font A font file or a font family name.<br>
 -- warning
--- @function [parent=#Label] setSystemFontName 
+-- @function setSystemFontName 
 -- @param self
 -- @param #string font
 -- @return Label#Label self (return value: cc.Label)
@@ -153,19 +153,19 @@
 --------------------------------
 -- Query the wrap is enabled or not.<br>
 -- Note: System font will always return true.
--- @function [parent=#Label] isWrapEnabled 
+-- @function isWrapEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Return the outline effect size value.
--- @function [parent=#Label] getOutlineSize 
+-- @function getOutlineSize 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Sets a new bitmap font to Label 
--- @function [parent=#Label] setBMFontFilePath 
+-- @function setBMFontFilePath 
 -- @param self
 -- @param #string bmfontFilePath
 -- @param #vec2_table imageOffset
@@ -175,7 +175,7 @@
 --------------------------------
 -- @overload self, cc._ttfConfig, string, int, int         
 -- @overload self, string, string, float, size_table, int, int         
--- @function [parent=#Label] initWithTTF
+-- @function initWithTTF
 -- @param self
 -- @param #string text
 -- @param #string fontFilePath
@@ -187,7 +187,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#Label] getFontAtlas 
+-- @function getFontAtlas 
 -- @param self
 -- @return FontAtlas#FontAtlas ret (return value: cc.FontAtlas)
         
@@ -195,14 +195,14 @@
 --  Sets the line height of the Label.<br>
 -- warning Not support system font.<br>
 -- since v3.2.0
--- @function [parent=#Label] setLineHeight 
+-- @function setLineHeight 
 -- @param self
 -- @param #float height
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- 
--- @function [parent=#Label] setSystemFontSize 
+-- @function setSystemFontSize 
 -- @param self
 -- @param #float fontSize
 -- @return Label#Label self (return value: cc.Label)
@@ -212,7 +212,7 @@
 -- Char Map font supports all the Overflow type except for SHRINK, because we can't measure it's font size.<br>
 -- System font only support Overflow::Normal and Overflow::RESIZE_HEIGHT.<br>
 -- param overflow   see `Overflow`
--- @function [parent=#Label] setOverflow 
+-- @function setOverflow 
 -- @param self
 -- @param #int overflow
 -- @return Label#Label self (return value: cc.Label)
@@ -221,40 +221,40 @@
 -- Enables strikethrough.<br>
 -- Underline and Strikethrough cannot be enabled at the same time.<br>
 -- Strikethrough is like an underline but at the middle of the glyph
--- @function [parent=#Label] enableStrikethrough 
+-- @function enableStrikethrough 
 -- @param self
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 --  Update content immediately.
--- @function [parent=#Label] updateContent 
+-- @function updateContent 
 -- @param self
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- Return length of string.
--- @function [parent=#Label] getStringLength 
+-- @function getStringLength 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Specify what happens when a line is too long for Label.<br>
 -- param breakWithoutSpace Lines are automatically broken between words if this value is false.
--- @function [parent=#Label] setLineBreakWithoutSpace 
+-- @function setLineBreakWithoutSpace 
 -- @param self
 -- @param #bool breakWithoutSpace
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- Return the number of lines of text.
--- @function [parent=#Label] getStringNumLines 
+-- @function getStringNumLines 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Enable outline effect to Label.<br>
 -- warning Limiting use to only when the Label created with true type font or system font.
--- @function [parent=#Label] enableOutline 
+-- @function enableOutline 
 -- @param self
 -- @param #color4b_table outlineColor
 -- @param #int outlineSize
@@ -262,19 +262,19 @@
         
 --------------------------------
 -- Return the shadow effect blur radius.
--- @function [parent=#Label] getShadowBlurRadius 
+-- @function getShadowBlurRadius 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Return current effect color value.
--- @function [parent=#Label] getEffectColor 
+-- @function getEffectColor 
 -- @param self
 -- @return color4f_table#color4f_table ret (return value: color4f_table)
         
 --------------------------------
 -- 
--- @function [parent=#Label] removeAllChildrenWithCleanup 
+-- @function removeAllChildrenWithCleanup 
 -- @param self
 -- @param #bool cleanup
 -- @return Label#Label self (return value: cc.Label)
@@ -283,7 +283,7 @@
 -- @overload self, cc.Texture2D, int, int, int         
 -- @overload self, string, int, int, int         
 -- @overload self, string         
--- @function [parent=#Label] setCharMap
+-- @function setCharMap
 -- @param self
 -- @param #string charMapFile
 -- @param #int itemWidth
@@ -293,34 +293,34 @@
 
 --------------------------------
 -- 
--- @function [parent=#Label] getDimensions 
+-- @function getDimensions 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- Makes the Label at most this line untransformed width.<br>
 -- The Label's max line width be used for force line breaks if the value not equal zero.
--- @function [parent=#Label] setMaxLineWidth 
+-- @function setMaxLineWidth 
 -- @param self
 -- @param #float maxLineWidth
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 --  Returns the system font used by the Label.
--- @function [parent=#Label] getSystemFontName 
+-- @function getSystemFontName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 --  Sets the Label's text vertical alignment.
--- @function [parent=#Label] setVerticalAlignment 
+-- @function setVerticalAlignment 
 -- @param self
 -- @param #int vAlignment
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- 
--- @function [parent=#Label] setLineSpacing 
+-- @function setLineSpacing 
 -- @param self
 -- @param #float height
 -- @return Label#Label self (return value: cc.Label)
@@ -329,26 +329,26 @@
 -- Returns the line height of this Label.<br>
 -- warning Not support system font.<br>
 -- since v3.2.0
--- @function [parent=#Label] getLineHeight 
+-- @function getLineHeight 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Return the shadow effect color value.
--- @function [parent=#Label] getShadowColor 
+-- @function getShadowColor 
 -- @param self
 -- @return color4f_table#color4f_table ret (return value: color4f_table)
         
 --------------------------------
 -- Returns the TTF configuration object used by the Label.<br>
 -- see `TTFConfig`
--- @function [parent=#Label] getTTFConfig 
+-- @function getTTFConfig 
 -- @param self
 -- @return _ttfConfig#_ttfConfig ret (return value: cc._ttfConfig)
         
 --------------------------------
 -- Enable italics rendering
--- @function [parent=#Label] enableItalics 
+-- @function enableItalics 
 -- @param self
 -- @return Label#Label self (return value: cc.Label)
         
@@ -356,7 +356,7 @@
 -- Sets the text color of Label.<br>
 -- The text color is different from the color of Node.<br>
 -- warning Limiting use to only when the Label created with true type font or system font.
--- @function [parent=#Label] setTextColor 
+-- @function setTextColor 
 -- @param self
 -- @param #color4b_table color
 -- @return Label#Label self (return value: cc.Label)
@@ -364,7 +364,7 @@
 --------------------------------
 -- Provides a way to treat each character like a Sprite.<br>
 -- warning No support system font.
--- @function [parent=#Label] getLetter 
+-- @function getLetter 
 -- @param self
 -- @param #int lettetIndex
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
@@ -373,21 +373,21 @@
 -- Makes the Label exactly this untransformed height.<br>
 -- The Label's height be used for text align if the value not equal zero.<br>
 -- The text will display incomplete if the size of Label is not large enough to display all text.
--- @function [parent=#Label] setHeight 
+-- @function setHeight 
 -- @param self
 -- @param #float height
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- Return whether the shadow effect is enabled.
--- @function [parent=#Label] isShadowEnabled 
+-- @function isShadowEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- Enable glow effect to Label.<br>
 -- warning Limiting use to only when the Label created with true type font.
--- @function [parent=#Label] enableGlow 
+-- @function enableGlow 
 -- @param self
 -- @param #color4b_table glowColor
 -- @return Label#Label self (return value: cc.Label)
@@ -395,13 +395,13 @@
 --------------------------------
 -- Query the label's Overflow type.<br>
 -- return see `Overflow`
--- @function [parent=#Label] getOverflow 
+-- @function getOverflow 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  Returns the Label's text vertical alignment.
--- @function [parent=#Label] getVerticalAlignment 
+-- @function getVerticalAlignment 
 -- @param self
 -- @return int#int ret (return value: int)
         
@@ -409,65 +409,65 @@
 -- Sets the additional kerning of the Label.<br>
 -- warning Not support system font.<br>
 -- since v3.2.0
--- @function [parent=#Label] setAdditionalKerning 
+-- @function setAdditionalKerning 
 -- @param self
 -- @param #float space
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 --  Returns the bitmap font path used by the Label.
--- @function [parent=#Label] getSystemFontSize 
+-- @function getSystemFontSize 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Label] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 --  Returns the Label's text horizontal alignment.
--- @function [parent=#Label] getTextAlignment 
+-- @function getTextAlignment 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  Returns the bitmap font used by the Label.
--- @function [parent=#Label] getBMFontFilePath 
+-- @function getBMFontFilePath 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 --  Sets the Label's text horizontal alignment.
--- @function [parent=#Label] setHorizontalAlignment 
+-- @function setHorizontalAlignment 
 -- @param self
 -- @param #int hAlignment
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- Enable bold rendering
--- @function [parent=#Label] enableBold 
+-- @function enableBold 
 -- @param self
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- Enable underline
--- @function [parent=#Label] enableUnderline 
+-- @function enableUnderline 
 -- @param self
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- Return current effect type.
--- @function [parent=#Label] getLabelEffectType 
+-- @function getLabelEffectType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- @overload self, int, int         
 -- @overload self, int         
--- @function [parent=#Label] setAlignment
+-- @function setAlignment
 -- @param self
 -- @param #int hAlignment
 -- @param #int vAlignment
@@ -475,7 +475,7 @@
 
 --------------------------------
 -- warning This method is not recommended for game developers.
--- @function [parent=#Label] requestSystemFontRefresh 
+-- @function requestSystemFontRefresh 
 -- @param self
 -- @return Label#Label self (return value: cc.Label)
         
@@ -483,7 +483,7 @@
 -- Change font size of label type BMFONT<br>
 -- Note: This function only scale the BMFONT letter to mimic the font size change effect.<br>
 -- param fontSize The desired font size in float.
--- @function [parent=#Label] setBMFontSize 
+-- @function setBMFontSize 
 -- @param self
 -- @param #float fontSize
 -- @return Label#Label self (return value: cc.Label)
@@ -497,7 +497,7 @@
 -- param imageOffset<br>
 -- return An automatically released Label object.<br>
 -- see setBMFontFilePath setMaxLineWidth
--- @function [parent=#Label] createWithBMFont 
+-- @function createWithBMFont 
 -- @param self
 -- @param #string bmfontPath
 -- @param #string text
@@ -509,7 +509,7 @@
 --------------------------------
 -- Allocates and initializes a Label, with default settings.<br>
 -- return An automatically released Label object.
--- @function [parent=#Label] create 
+-- @function create 
 -- @param self
 -- @return Label#Label ret (return value: cc.Label)
         
@@ -517,7 +517,7 @@
 -- @overload self, cc.Texture2D, int, int, int         
 -- @overload self, string, int, int, int         
 -- @overload self, string         
--- @function [parent=#Label] createWithCharMap
+-- @function createWithCharMap
 -- @param self
 -- @param #string charMapFile
 -- @param #int itemWidth
@@ -535,7 +535,7 @@
 -- param vAlignment The text vertical alignment.<br>
 -- warning It will generate texture by the platform-dependent code.<br>
 -- return An automatically released Label object.
--- @function [parent=#Label] createWithSystemFont 
+-- @function createWithSystemFont 
 -- @param self
 -- @param #string text
 -- @param #string font
@@ -547,7 +547,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Label] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table transform
@@ -556,13 +556,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#Label] isOpacityModifyRGB 
+-- @function isOpacityModifyRGB 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Label] setCameraMask 
+-- @function setCameraMask 
 -- @param self
 -- @param #unsigned short mask
 -- @param #bool applyChildren
@@ -570,7 +570,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Label] removeChild 
+-- @function removeChild 
 -- @param self
 -- @param #cc.Node child
 -- @param #bool cleanup
@@ -578,7 +578,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Label] visit 
+-- @function visit 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table parentTransform
@@ -587,46 +587,46 @@
         
 --------------------------------
 -- 
--- @function [parent=#Label] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#Label] setOpacityModifyRGB 
+-- @function setOpacityModifyRGB 
 -- @param self
 -- @param #bool isOpacityModifyRGB
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- 
--- @function [parent=#Label] updateDisplayedOpacity 
+-- @function updateDisplayedOpacity 
 -- @param self
 -- @param #unsigned char parentOpacity
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- 
--- @function [parent=#Label] getContentSize 
+-- @function getContentSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#Label] getBoundingBox 
+-- @function getBoundingBox 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- 
--- @function [parent=#Label] updateDisplayedColor 
+-- @function updateDisplayedColor 
 -- @param self
 -- @param #color3b_table parentColor
 -- @return Label#Label self (return value: cc.Label)
         
 --------------------------------
 -- 
--- @function [parent=#Label] setGlobalZOrder 
+-- @function setGlobalZOrder 
 -- @param self
 -- @param #float globalZOrder
 -- @return Label#Label self (return value: cc.Label)

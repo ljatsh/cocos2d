@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module PhysicsJointDistance
--- @extend PhysicsJoint
--- @parent_module cc
+-- @see PhysicsJoint
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#PhysicsJointDistance] createConstraints 
+-- @function createConstraints 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Set the distance of the anchor points.
--- @function [parent=#PhysicsJointDistance] setDistance 
+-- @function setDistance 
 -- @param self
 -- @param #float distance
 -- @return PhysicsJointDistance#PhysicsJointDistance self (return value: cc.PhysicsJointDistance)
         
 --------------------------------
 --  Get the distance of the anchor points.
--- @function [parent=#PhysicsJointDistance] getDistance 
+-- @function getDistance 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -30,7 +30,7 @@
 -- param anchr1 Anchr1 is the anchor point on body a.<br>
 -- param anchr2 Anchr2 is the anchor point on body b.<br>
 -- return A object pointer.
--- @function [parent=#PhysicsJointDistance] construct 
+-- @function construct 
 -- @param self
 -- @param #cc.PhysicsBody a
 -- @param #cc.PhysicsBody b

@@ -1,8 +1,8 @@
 
 --------------------------------
 -- @module ParallaxNode
--- @extend Node
--- @parent_module cc
+-- @see Node
+-- @see cc
 
 --------------------------------
 --  Adds a child to the container with a local z-order, parallax ratio and position offset.<br>
@@ -10,7 +10,7 @@
 -- param z Z order for drawing priority.<br>
 -- param parallaxRatio A given parallax ratio.<br>
 -- param positionOffset A given position offset.
--- @function [parent=#ParallaxNode] addChild 
+-- @function addChild 
 -- @param self
 -- @param #cc.Node child
 -- @param #int z
@@ -20,7 +20,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ParallaxNode] removeAllChildrenWithCleanup 
+-- @function removeAllChildrenWithCleanup 
 -- @param self
 -- @param #bool cleanup
 -- @return ParallaxNode#ParallaxNode self (return value: cc.ParallaxNode)
@@ -28,14 +28,14 @@
 --------------------------------
 --  Create a Parallax node. <br>
 -- return An autoreleased ParallaxNode object.
--- @function [parent=#ParallaxNode] create 
+-- @function create 
 -- @param self
 -- @return ParallaxNode#ParallaxNode ret (return value: cc.ParallaxNode)
         
 --------------------------------
 -- @overload self, cc.Node, int, string         
 -- @overload self, cc.Node, int, int         
--- @function [parent=#ParallaxNode] addChild
+-- @function addChild
 -- @param self
 -- @param #cc.Node child
 -- @param #int zOrder
@@ -44,7 +44,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#ParallaxNode] visit 
+-- @function visit 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table parentTransform
@@ -53,7 +53,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ParallaxNode] removeChild 
+-- @function removeChild 
 -- @param self
 -- @param #cc.Node child
 -- @param #bool cleanup
@@ -64,7 +64,7 @@
 -- It returns self, so you can chain several addChilds.<br>
 -- since v0.8<br>
 -- js ctor
--- @function [parent=#ParallaxNode] ParallaxNode 
+-- @function ParallaxNode 
 -- @param self
 -- @return ParallaxNode#ParallaxNode self (return value: cc.ParallaxNode)
         

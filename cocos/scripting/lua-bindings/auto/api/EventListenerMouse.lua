@@ -1,30 +1,30 @@
 
 --------------------------------
 -- @module EventListenerMouse
--- @extend EventListener
--- @parent_module cc
+-- @see EventListener
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EventListenerMouse] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- / Overrides
--- @function [parent=#EventListenerMouse] clone 
+-- @function clone 
 -- @param self
 -- @return EventListenerMouse#EventListenerMouse ret (return value: cc.EventListenerMouse)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerMouse] checkAvailable 
+-- @function checkAvailable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerMouse] EventListenerMouse 
+-- @function EventListenerMouse 
 -- @param self
 -- @return EventListenerMouse#EventListenerMouse self (return value: cc.EventListenerMouse)
         

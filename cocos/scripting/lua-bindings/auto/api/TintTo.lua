@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module TintTo
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 --  initializes the action with duration and color 
--- @function [parent=#TintTo] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #unsigned char red
@@ -17,7 +17,7 @@
 --------------------------------
 -- @overload self, float, color3b_table         
 -- @overload self, float, unsigned char, unsigned char, unsigned char         
--- @function [parent=#TintTo] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #unsigned char red
@@ -27,33 +27,33 @@
 
 --------------------------------
 -- 
--- @function [parent=#TintTo] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return TintTo#TintTo self (return value: cc.TintTo)
         
 --------------------------------
 -- 
--- @function [parent=#TintTo] clone 
+-- @function clone 
 -- @param self
 -- @return TintTo#TintTo ret (return value: cc.TintTo)
         
 --------------------------------
 -- 
--- @function [parent=#TintTo] reverse 
+-- @function reverse 
 -- @param self
 -- @return TintTo#TintTo ret (return value: cc.TintTo)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#TintTo] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return TintTo#TintTo self (return value: cc.TintTo)
         
 --------------------------------
 -- 
--- @function [parent=#TintTo] TintTo 
+-- @function TintTo 
 -- @param self
 -- @return TintTo#TintTo self (return value: cc.TintTo)
         

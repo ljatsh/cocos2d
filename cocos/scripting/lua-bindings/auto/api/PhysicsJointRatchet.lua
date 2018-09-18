@@ -1,51 +1,51 @@
 
 --------------------------------
 -- @module PhysicsJointRatchet
--- @extend PhysicsJoint
--- @parent_module cc
+-- @see PhysicsJoint
+-- @see cc
 
 --------------------------------
 --  Get the ratchet angle.
--- @function [parent=#PhysicsJointRatchet] getAngle 
+-- @function getAngle 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Set the ratchet angle.
--- @function [parent=#PhysicsJointRatchet] setAngle 
+-- @function setAngle 
 -- @param self
 -- @param #float angle
 -- @return PhysicsJointRatchet#PhysicsJointRatchet self (return value: cc.PhysicsJointRatchet)
         
 --------------------------------
 -- 
--- @function [parent=#PhysicsJointRatchet] createConstraints 
+-- @function createConstraints 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Set the initial offset.
--- @function [parent=#PhysicsJointRatchet] setPhase 
+-- @function setPhase 
 -- @param self
 -- @param #float phase
 -- @return PhysicsJointRatchet#PhysicsJointRatchet self (return value: cc.PhysicsJointRatchet)
         
 --------------------------------
 --  Get the initial offset.
--- @function [parent=#PhysicsJointRatchet] getPhase 
+-- @function getPhase 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  Set the distance between "clicks".
--- @function [parent=#PhysicsJointRatchet] setRatchet 
+-- @function setRatchet 
 -- @param self
 -- @param #float ratchet
 -- @return PhysicsJointRatchet#PhysicsJointRatchet self (return value: cc.PhysicsJointRatchet)
         
 --------------------------------
 --  Get the distance between "clicks".
--- @function [parent=#PhysicsJointRatchet] getRatchet 
+-- @function getRatchet 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -56,7 +56,7 @@
 -- param phase Phase is the initial offset to use when deciding where the ratchet angles are.<br>
 -- param ratchet Ratchet is the distance between "clicks".<br>
 -- return A object pointer.
--- @function [parent=#PhysicsJointRatchet] construct 
+-- @function construct 
 -- @param self
 -- @param #cc.PhysicsBody a
 -- @param #cc.PhysicsBody b

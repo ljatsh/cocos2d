@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module EaseOut
--- @extend EaseRateAction
--- @parent_module cc
+-- @see EaseRateAction
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EaseOut] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @param #float rate
@@ -14,26 +14,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#EaseOut] clone 
+-- @function clone 
 -- @param self
 -- @return EaseOut#EaseOut ret (return value: cc.EaseOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseOut] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return EaseOut#EaseOut self (return value: cc.EaseOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseOut] reverse 
+-- @function reverse 
 -- @param self
 -- @return EaseRateAction#EaseRateAction ret (return value: cc.EaseRateAction)
         
 --------------------------------
 -- 
--- @function [parent=#EaseOut] EaseOut 
+-- @function EaseOut 
 -- @param self
 -- @return EaseOut#EaseOut self (return value: cc.EaseOut)
         

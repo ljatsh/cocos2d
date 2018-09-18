@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module TurnOffTiles
--- @extend TiledGrid3DAction
--- @parent_module cc
+-- @see TiledGrid3DAction
+-- @see cc
 
 --------------------------------
 -- brief Show the tile at specified position.<br>
 -- param pos The position index of the tile should be shown.
--- @function [parent=#TurnOffTiles] turnOnTile 
+-- @function turnOnTile 
 -- @param self
 -- @param #vec2_table pos
 -- @return TurnOffTiles#TurnOffTiles self (return value: cc.TurnOffTiles)
@@ -15,7 +15,7 @@
 --------------------------------
 -- brief Hide the tile at specified position.<br>
 -- param pos The position index of the tile should be hide.
--- @function [parent=#TurnOffTiles] turnOffTile 
+-- @function turnOffTile 
 -- @param self
 -- @param #vec2_table pos
 -- @return TurnOffTiles#TurnOffTiles self (return value: cc.TurnOffTiles)
@@ -26,7 +26,7 @@
 -- param gridSize Specify the size of the grid.<br>
 -- param seed Specify the random seed.<br>
 -- return If the Initialization success, return true; otherwise, return false.
--- @function [parent=#TurnOffTiles] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -36,7 +36,7 @@
 --------------------------------
 -- @overload self, float, size_table, unsigned int         
 -- @overload self, float, size_table         
--- @function [parent=#TurnOffTiles] create
+-- @function create
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -45,27 +45,27 @@
 
 --------------------------------
 -- 
--- @function [parent=#TurnOffTiles] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return TurnOffTiles#TurnOffTiles self (return value: cc.TurnOffTiles)
         
 --------------------------------
 -- 
--- @function [parent=#TurnOffTiles] clone 
+-- @function clone 
 -- @param self
 -- @return TurnOffTiles#TurnOffTiles ret (return value: cc.TurnOffTiles)
         
 --------------------------------
 -- 
--- @function [parent=#TurnOffTiles] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return TurnOffTiles#TurnOffTiles self (return value: cc.TurnOffTiles)
         
 --------------------------------
 -- 
--- @function [parent=#TurnOffTiles] TurnOffTiles 
+-- @function TurnOffTiles 
 -- @param self
 -- @return TurnOffTiles#TurnOffTiles self (return value: cc.TurnOffTiles)
         

@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module PointLight
--- @extend BaseLight
--- @parent_module cc
+-- @see BaseLight
+-- @see cc
 
 --------------------------------
 --  get or set range 
--- @function [parent=#PointLight] getRange 
+-- @function getRange 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PointLight] setRange 
+-- @function setRange 
 -- @param self
 -- @param #float range
 -- @return point_table#point_table self (return value: point_table)
@@ -23,7 +23,7 @@
 -- param color The light's color.<br>
 -- param range The light's range.<br>
 -- return The new point light.
--- @function [parent=#PointLight] create 
+-- @function create 
 -- @param self
 -- @param #vec3_table position
 -- @param #color3b_table color
@@ -32,13 +32,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#PointLight] getLightType 
+-- @function getLightType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#PointLight] PointLight 
+-- @function PointLight 
 -- @param self
 -- @return point_table#point_table self (return value: point_table)
         

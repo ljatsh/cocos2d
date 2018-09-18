@@ -1,30 +1,30 @@
 
 --------------------------------
 -- @module EventListenerKeyboard
--- @extend EventListener
--- @parent_module cc
+-- @see EventListener
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EventListenerKeyboard] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- / Overrides
--- @function [parent=#EventListenerKeyboard] clone 
+-- @function clone 
 -- @param self
 -- @return EventListenerKeyboard#EventListenerKeyboard ret (return value: cc.EventListenerKeyboard)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerKeyboard] checkAvailable 
+-- @function checkAvailable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerKeyboard] EventListenerKeyboard 
+-- @function EventListenerKeyboard 
 -- @param self
 -- @return EventListenerKeyboard#EventListenerKeyboard self (return value: cc.EventListenerKeyboard)
         

@@ -1,37 +1,37 @@
 
 --------------------------------
 -- @module Mesh
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 --  Returns the Material being used by the Mesh 
--- @function [parent=#Mesh] getMaterial 
+-- @function getMaterial 
 -- @param self
 -- @return Material#Material ret (return value: cc.Material)
         
 --------------------------------
 -- get per vertex size in bytes
--- @function [parent=#Mesh] getVertexSizeInBytes 
+-- @function getVertexSizeInBytes 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 --  Sets a new Material to the Mesh 
--- @function [parent=#Mesh] setMaterial 
+-- @function setMaterial 
 -- @param self
 -- @param #cc.Material material
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- name getter 
--- @function [parent=#Mesh] getName 
+-- @function getName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- get MeshVertexAttribute by index
--- @function [parent=#Mesh] getMeshVertexAttribute 
+-- @function getMeshVertexAttribute 
 -- @param self
 -- @param #int idx
 -- @return MeshVertexAttrib#MeshVertexAttrib ret (return value: cc.MeshVertexAttrib)
@@ -39,13 +39,13 @@
 --------------------------------
 -- calculate the AABB of the mesh<br>
 -- note the AABB is in the local space, not the world space
--- @function [parent=#Mesh] calculateAABB 
+-- @function calculateAABB 
 -- @param self
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- 
--- @function [parent=#Mesh] draw 
+-- @function draw 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #float globalZ
@@ -58,75 +58,75 @@
         
 --------------------------------
 -- 
--- @function [parent=#Mesh] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
 --------------------------------
 -- name setter
--- @function [parent=#Mesh] setName 
+-- @function setName 
 -- @param self
 -- @param #string name
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- Mesh index data setter
--- @function [parent=#Mesh] setMeshIndexData 
+-- @function setMeshIndexData 
 -- @param self
 -- @param #cc.MeshIndexData indexdata
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- get mesh vertex attribute count
--- @function [parent=#Mesh] getMeshVertexAttribCount 
+-- @function getMeshVertexAttribCount 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#Mesh] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- force set this Sprite3D to 2D render queue
--- @function [parent=#Mesh] setForce2DQueue 
+-- @function setForce2DQueue 
 -- @param self
 -- @param #bool force2D
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- skin setter
--- @function [parent=#Mesh] setSkin 
+-- @function setSkin 
 -- @param self
 -- @param #cc.MeshSkin skin
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- 
--- @function [parent=#Mesh] isVisible 
+-- @function isVisible 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --   Sets a new GLProgramState for the Mesh<br>
 -- A new Material will be created for it
--- @function [parent=#Mesh] setGLProgramState 
+-- @function setGLProgramState 
 -- @param self
 -- @param #cc.GLProgramState glProgramState
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- visible getter and setter
--- @function [parent=#Mesh] setVisible 
+-- @function setVisible 
 -- @param self
 -- @param #bool visible
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         
 --------------------------------
 -- 
--- @function [parent=#Mesh] Mesh 
+-- @function Mesh 
 -- @param self
 -- @return Mesh#Mesh self (return value: cc.Mesh)
         

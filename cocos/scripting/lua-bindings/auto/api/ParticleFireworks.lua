@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module ParticleFireworks
--- @extend ParticleSystemQuad
--- @parent_module cc
+-- @see ParticleSystemQuad
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ParticleFireworks] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ParticleFireworks] initWithTotalParticles 
+-- @function initWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return bool#bool ret (return value: bool)
@@ -20,7 +20,7 @@
 --------------------------------
 --  Create a fireworks particle system.<br>
 -- return An autoreleased ParticleFireworks object.
--- @function [parent=#ParticleFireworks] create 
+-- @function create 
 -- @param self
 -- @return ParticleFireworks#ParticleFireworks ret (return value: cc.ParticleFireworks)
         
@@ -29,14 +29,14 @@
 -- param numberOfParticles A given number of particles.<br>
 -- return An autoreleased ParticleFireworks object.<br>
 -- js NA
--- @function [parent=#ParticleFireworks] createWithTotalParticles 
+-- @function createWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return ParticleFireworks#ParticleFireworks ret (return value: cc.ParticleFireworks)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ParticleFireworks] ParticleFireworks 
+-- @function ParticleFireworks 
 -- @param self
 -- @return ParticleFireworks#ParticleFireworks self (return value: cc.ParticleFireworks)
         

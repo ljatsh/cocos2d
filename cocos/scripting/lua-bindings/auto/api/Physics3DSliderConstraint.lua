@@ -1,271 +1,271 @@
 
 --------------------------------
 -- @module Physics3DSliderConstraint
--- @extend Physics3DConstraint
--- @parent_module cc
+-- @see Physics3DConstraint
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setPoweredAngMotor 
+-- @function setPoweredAngMotor 
 -- @param self
 -- @param #bool onOff
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getDampingLimAng 
+-- @function getDampingLimAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setRestitutionOrthoLin 
+-- @function setRestitutionOrthoLin 
 -- @param self
 -- @param #float restitutionOrthoLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setRestitutionDirLin 
+-- @function setRestitutionDirLin 
 -- @param self
 -- @param #float restitutionDirLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getLinearPos 
+-- @function getLinearPos 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- get A's frame offset
--- @function [parent=#Physics3DSliderConstraint] getFrameOffsetA 
+-- @function getFrameOffsetA 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 -- get B's frame offset
--- @function [parent=#Physics3DSliderConstraint] getFrameOffsetB 
+-- @function getFrameOffsetB 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setPoweredLinMotor 
+-- @function setPoweredLinMotor 
 -- @param self
 -- @param #bool onOff
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getDampingDirAng 
+-- @function getDampingDirAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getRestitutionLimLin 
+-- @function getRestitutionLimLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getSoftnessOrthoAng 
+-- @function getSoftnessOrthoAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setSoftnessOrthoLin 
+-- @function setSoftnessOrthoLin 
 -- @param self
 -- @param #float softnessOrthoLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setSoftnessLimLin 
+-- @function setSoftnessLimLin 
 -- @param self
 -- @param #float softnessLimLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getAngularPos 
+-- @function getAngularPos 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setRestitutionLimAng 
+-- @function setRestitutionLimAng 
 -- @param self
 -- @param #float restitutionLimAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- set upper linear limit
--- @function [parent=#Physics3DSliderConstraint] setUpperLinLimit 
+-- @function setUpperLinLimit 
 -- @param self
 -- @param #float upperLimit
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setDampingDirLin 
+-- @function setDampingDirLin 
 -- @param self
 -- @param #float dampingDirLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- get upper angular limit
--- @function [parent=#Physics3DSliderConstraint] getUpperAngLimit 
+-- @function getUpperAngLimit 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getDampingDirLin 
+-- @function getDampingDirLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getSoftnessDirAng 
+-- @function getSoftnessDirAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getPoweredAngMotor 
+-- @function getPoweredAngMotor 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- set lower angular limit
--- @function [parent=#Physics3DSliderConstraint] setLowerAngLimit 
+-- @function setLowerAngLimit 
 -- @param self
 -- @param #float lowerLimit
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- set upper angular limit
--- @function [parent=#Physics3DSliderConstraint] setUpperAngLimit 
+-- @function setUpperAngLimit 
 -- @param self
 -- @param #float upperLimit
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setTargetLinMotorVelocity 
+-- @function setTargetLinMotorVelocity 
 -- @param self
 -- @param #float targetLinMotorVelocity
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setDampingLimAng 
+-- @function setDampingLimAng 
 -- @param self
 -- @param #float dampingLimAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getRestitutionLimAng 
+-- @function getRestitutionLimAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 --  access for UseFrameOffset
--- @function [parent=#Physics3DSliderConstraint] getUseFrameOffset 
+-- @function getUseFrameOffset 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getSoftnessOrthoLin 
+-- @function getSoftnessOrthoLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getDampingOrthoAng 
+-- @function getDampingOrthoAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- set use frame offset
--- @function [parent=#Physics3DSliderConstraint] setUseFrameOffset 
+-- @function setUseFrameOffset 
 -- @param self
 -- @param #bool frameOffsetOnOff
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- set lower linear limit
--- @function [parent=#Physics3DSliderConstraint] setLowerLinLimit 
+-- @function setLowerLinLimit 
 -- @param self
 -- @param #float lowerLimit
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getRestitutionDirLin 
+-- @function getRestitutionDirLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getTargetLinMotorVelocity 
+-- @function getTargetLinMotorVelocity 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- get lower linear limit
--- @function [parent=#Physics3DSliderConstraint] getLowerLinLimit 
+-- @function getLowerLinLimit 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getSoftnessLimLin 
+-- @function getSoftnessLimLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setDampingOrthoAng 
+-- @function setDampingOrthoAng 
 -- @param self
 -- @param #float dampingOrthoAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setSoftnessDirAng 
+-- @function setSoftnessDirAng 
 -- @param self
 -- @param #float softnessDirAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getPoweredLinMotor 
+-- @function getPoweredLinMotor 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setRestitutionOrthoAng 
+-- @function setRestitutionOrthoAng 
 -- @param self
 -- @param #float restitutionOrthoAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setDampingDirAng 
+-- @function setDampingDirAng 
 -- @param self
 -- @param #float dampingDirAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- set frames for rigid body A and B
--- @function [parent=#Physics3DSliderConstraint] setFrames 
+-- @function setFrames 
 -- @param self
 -- @param #mat4_table frameA
 -- @param #mat4_table frameB
@@ -273,149 +273,149 @@
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getRestitutionOrthoAng 
+-- @function getRestitutionOrthoAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getMaxAngMotorForce 
+-- @function getMaxAngMotorForce 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getDampingOrthoLin 
+-- @function getDampingOrthoLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- get upper linear limit
--- @function [parent=#Physics3DSliderConstraint] getUpperLinLimit 
+-- @function getUpperLinLimit 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setMaxLinMotorForce 
+-- @function setMaxLinMotorForce 
 -- @param self
 -- @param #float maxLinMotorForce
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getRestitutionOrthoLin 
+-- @function getRestitutionOrthoLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setTargetAngMotorVelocity 
+-- @function setTargetAngMotorVelocity 
 -- @param self
 -- @param #float targetAngMotorVelocity
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getSoftnessLimAng 
+-- @function getSoftnessLimAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setRestitutionDirAng 
+-- @function setRestitutionDirAng 
 -- @param self
 -- @param #float restitutionDirAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getDampingLimLin 
+-- @function getDampingLimLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- get lower angular limit
--- @function [parent=#Physics3DSliderConstraint] getLowerAngLimit 
+-- @function getLowerAngLimit 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getRestitutionDirAng 
+-- @function getRestitutionDirAng 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getTargetAngMotorVelocity 
+-- @function getTargetAngMotorVelocity 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setRestitutionLimLin 
+-- @function setRestitutionLimLin 
 -- @param self
 -- @param #float restitutionLimLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getMaxLinMotorForce 
+-- @function getMaxLinMotorForce 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setDampingOrthoLin 
+-- @function setDampingOrthoLin 
 -- @param self
 -- @param #float dampingOrthoLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setSoftnessOrthoAng 
+-- @function setSoftnessOrthoAng 
 -- @param self
 -- @param #float softnessOrthoAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setDampingLimLin 
+-- @function setDampingLimLin 
 -- @param self
 -- @param #float dampingLimLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setSoftnessDirLin 
+-- @function setSoftnessDirLin 
 -- @param self
 -- @param #float softnessDirLin
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setMaxAngMotorForce 
+-- @function setMaxAngMotorForce 
 -- @param self
 -- @param #float maxAngMotorForce
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] getSoftnessDirLin 
+-- @function getSoftnessDirLin 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] setSoftnessLimAng 
+-- @function setSoftnessLimAng 
 -- @param self
 -- @param #float softnessLimAng
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         
 --------------------------------
 -- use A's frame as linear reference
--- @function [parent=#Physics3DSliderConstraint] getUseLinearReferenceFrameA 
+-- @function getUseLinearReferenceFrameA 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -426,7 +426,7 @@
 -- param frameInA frame in A's local space<br>
 -- param frameInB frame in B's local space<br>
 -- param useLinearReferenceFrameA use fixed frame A for linear limits
--- @function [parent=#Physics3DSliderConstraint] create 
+-- @function create 
 -- @param self
 -- @param #cc.Physics3DRigidBody rbA
 -- @param #cc.Physics3DRigidBody rbB
@@ -437,7 +437,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#Physics3DSliderConstraint] Physics3DSliderConstraint 
+-- @function Physics3DSliderConstraint 
 -- @param self
 -- @return Physics3DSliderConstraint#Physics3DSliderConstraint self (return value: cc.Physics3DSliderConstraint)
         

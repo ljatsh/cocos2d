@@ -1,61 +1,61 @@
 
 --------------------------------
 -- @module MenuItem
--- @extend Node
--- @parent_module cc
+-- @see Node
+-- @see cc
 
 --------------------------------
 --  Enables or disables the item. 
--- @function [parent=#MenuItem] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool value
 -- @return MenuItem#MenuItem self (return value: cc.MenuItem)
         
 --------------------------------
 --  Activate the item. 
--- @function [parent=#MenuItem] activate 
+-- @function activate 
 -- @param self
 -- @return MenuItem#MenuItem self (return value: cc.MenuItem)
         
 --------------------------------
 --  Returns whether or not the item is enabled. 
--- @function [parent=#MenuItem] isEnabled 
+-- @function isEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  The item was selected (not activated), similar to "mouse-over". 
--- @function [parent=#MenuItem] selected 
+-- @function selected 
 -- @param self
 -- @return MenuItem#MenuItem self (return value: cc.MenuItem)
         
 --------------------------------
 --  Returns whether or not the item is selected. 
--- @function [parent=#MenuItem] isSelected 
+-- @function isSelected 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  The item was unselected. 
--- @function [parent=#MenuItem] unselected 
+-- @function unselected 
 -- @param self
 -- @return MenuItem#MenuItem self (return value: cc.MenuItem)
         
 --------------------------------
 --  Returns the outside box. 
--- @function [parent=#MenuItem] rect 
+-- @function rect 
 -- @param self
 -- @return rect_table#rect_table ret (return value: rect_table)
         
 --------------------------------
 -- js NA
--- @function [parent=#MenuItem] getDescription 
+-- @function getDescription 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- js ctor
--- @function [parent=#MenuItem] MenuItem 
+-- @function MenuItem 
 -- @param self
 -- @return MenuItem#MenuItem self (return value: cc.MenuItem)
         

@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module PhysicsShapeCircle
--- @extend PhysicsShape
--- @parent_module cc
+-- @see PhysicsShape
+-- @see cc
 
 --------------------------------
 -- Get the circle's radius.<br>
 -- return A float number.
--- @function [parent=#PhysicsShapeCircle] getRadius 
+-- @function getRadius 
 -- @param self
 -- @return float#float ret (return value: float)
         
@@ -17,7 +17,7 @@
 -- param   material A PhysicsMaterial object, the default value is PHYSICSSHAPE_MATERIAL_DEFAULT.<br>
 -- param   offset A Vec2 object, it is the offset from the body's center of gravity in body local coordinates.<br>
 -- return  An autoreleased PhysicsShapeCircle object pointer.
--- @function [parent=#PhysicsShapeCircle] create 
+-- @function create 
 -- @param self
 -- @param #float radius
 -- @param #cc.PhysicsMaterial material
@@ -28,7 +28,7 @@
 -- Calculate the area of a circle with specified radius.<br>
 -- param radius A float number<br>
 -- return A float number
--- @function [parent=#PhysicsShapeCircle] calculateArea 
+-- @function calculateArea 
 -- @param self
 -- @param #float radius
 -- @return float#float ret (return value: float)
@@ -39,7 +39,7 @@
 -- param radius A float number<br>
 -- param offset A Vec2 object, it is the offset from the body's center of gravity in body local coordinates.<br>
 -- return A float number
--- @function [parent=#PhysicsShapeCircle] calculateMoment 
+-- @function calculateMoment 
 -- @param self
 -- @param #float mass
 -- @param #float radius
@@ -49,14 +49,14 @@
 --------------------------------
 -- Get this circle's position offset.<br>
 -- return A Vec2 object.
--- @function [parent=#PhysicsShapeCircle] getOffset 
+-- @function getOffset 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- Calculate the moment for a circle.<br>
 -- return A float number.
--- @function [parent=#PhysicsShapeCircle] calculateDefaultMoment 
+-- @function calculateDefaultMoment 
 -- @param self
 -- @return float#float ret (return value: float)
         

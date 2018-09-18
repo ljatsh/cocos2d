@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module EaseSineIn
--- @extend ActionEase
--- @parent_module cc
+-- @see ActionEase
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EaseSineIn] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return EaseSineIn#EaseSineIn ret (return value: cc.EaseSineIn)
         
 --------------------------------
 -- 
--- @function [parent=#EaseSineIn] clone 
+-- @function clone 
 -- @param self
 -- @return EaseSineIn#EaseSineIn ret (return value: cc.EaseSineIn)
         
 --------------------------------
 -- 
--- @function [parent=#EaseSineIn] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return EaseSineIn#EaseSineIn self (return value: cc.EaseSineIn)
         
 --------------------------------
 -- 
--- @function [parent=#EaseSineIn] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionEase#ActionEase ret (return value: cc.ActionEase)
         
 --------------------------------
 -- 
--- @function [parent=#EaseSineIn] EaseSineIn 
+-- @function EaseSineIn 
 -- @param self
 -- @return EaseSineIn#EaseSineIn self (return value: cc.EaseSineIn)
         

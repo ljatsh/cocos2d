@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module ParticleGalaxy
--- @extend ParticleSystemQuad
--- @parent_module cc
+-- @see ParticleSystemQuad
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#ParticleGalaxy] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ParticleGalaxy] initWithTotalParticles 
+-- @function initWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return bool#bool ret (return value: bool)
@@ -20,7 +20,7 @@
 --------------------------------
 --  Create a galaxy particle system.<br>
 -- return An autoreleased ParticleGalaxy object.
--- @function [parent=#ParticleGalaxy] create 
+-- @function create 
 -- @param self
 -- @return ParticleGalaxy#ParticleGalaxy ret (return value: cc.ParticleGalaxy)
         
@@ -29,14 +29,14 @@
 -- param numberOfParticles A given number of particles.<br>
 -- return An autoreleased ParticleGalaxy object.<br>
 -- js NA
--- @function [parent=#ParticleGalaxy] createWithTotalParticles 
+-- @function createWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return ParticleGalaxy#ParticleGalaxy ret (return value: cc.ParticleGalaxy)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ParticleGalaxy] ParticleGalaxy 
+-- @function ParticleGalaxy 
 -- @param self
 -- @return ParticleGalaxy#ParticleGalaxy self (return value: cc.ParticleGalaxy)
         

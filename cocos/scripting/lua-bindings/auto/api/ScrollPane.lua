@@ -1,26 +1,26 @@
 
 --------------------------------
 -- @module ScrollPane
--- @extend Ref
--- @parent_module fgui
+-- @see Ref
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setBouncebackEffect 
+-- @function setBouncebackEffect 
 -- @param self
 -- @param #bool value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getHzScrollBar 
+-- @function getHzScrollBar 
 -- @param self
 -- @return GScrollBar#GScrollBar ret (return value: fgui.GScrollBar)
         
 --------------------------------
 -- @overload self, rect_table, bool, bool         
 -- @overload self, fgui.GObject, bool, bool         
--- @function [parent=#ScrollPane] scrollToView
+-- @function scrollToView
 -- @param self
 -- @param #fgui.GObject obj
 -- @param #bool ani
@@ -29,31 +29,31 @@
 
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getDecelerationRate 
+-- @function getDecelerationRate 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getPercX 
+-- @function getPercX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getPosY 
+-- @function getPosY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getFooter 
+-- @function getFooter 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setPosX 
+-- @function setPosX 
 -- @param self
 -- @param #float value
 -- @param #bool ani
@@ -61,13 +61,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getPosX 
+-- @function getPosX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setPageY 
+-- @function setPageY 
 -- @param self
 -- @param #int value
 -- @param #bool ani
@@ -75,153 +75,153 @@
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] scrollTop 
+-- @function scrollTop 
 -- @param self
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isSnapToItem 
+-- @function isSnapToItem 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isTouchEffect 
+-- @function isTouchEffect 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setScrollStep 
+-- @function setScrollStep 
 -- @param self
 -- @param #float value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] scrollBottom 
+-- @function scrollBottom 
 -- @param self
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isChildInView 
+-- @function isChildInView 
 -- @param self
 -- @param #fgui.GObject obj
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isPageMode 
+-- @function isPageMode 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setDecelerationRate 
+-- @function setDecelerationRate 
 -- @param self
 -- @param #float value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getScrollingPosY 
+-- @function getScrollingPosY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getScrollingPosX 
+-- @function getScrollingPosX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getContentSize 
+-- @function getContentSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isRightMost 
+-- @function isRightMost 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setPageController 
+-- @function setPageController 
 -- @param self
 -- @param #fgui.GController value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] lockHeader 
+-- @function lockHeader 
 -- @param self
 -- @param #int size
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] lockFooter 
+-- @function lockFooter 
 -- @param self
 -- @param #int size
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] scrollDown 
+-- @function scrollDown 
 -- @param self
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setSnapToItem 
+-- @function setSnapToItem 
 -- @param self
 -- @param #bool value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getScrollStep 
+-- @function getScrollStep 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getPageX 
+-- @function getPageX 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] scrollLeft 
+-- @function scrollLeft 
 -- @param self
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getViewSize 
+-- @function getViewSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setInertiaDisabled 
+-- @function setInertiaDisabled 
 -- @param self
 -- @param #bool value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getPageController 
+-- @function getPageController 
 -- @param self
 -- @return GController#GController ret (return value: fgui.GController)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setPageX 
+-- @function setPageX 
 -- @param self
 -- @param #int value
 -- @param #bool ani
@@ -229,46 +229,46 @@
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] scrollUp 
+-- @function scrollUp 
 -- @param self
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isMouseWheelEnabled 
+-- @function isMouseWheelEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setPageMode 
+-- @function setPageMode 
 -- @param self
 -- @param #bool value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setTouchEffect 
+-- @function setTouchEffect 
 -- @param self
 -- @param #bool value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setMouseWheelEnabled 
+-- @function setMouseWheelEnabled 
 -- @param self
 -- @param #bool value
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isInertiaDisabled 
+-- @function isInertiaDisabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setPercX 
+-- @function setPercX 
 -- @param self
 -- @param #float value
 -- @param #bool ani
@@ -276,7 +276,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setPercY 
+-- @function setPercY 
 -- @param self
 -- @param #float value
 -- @param #bool ani
@@ -284,62 +284,62 @@
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] cancelDragging 
+-- @function cancelDragging 
 -- @param self
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getPercY 
+-- @function getPercY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] scrollRight 
+-- @function scrollRight 
 -- @param self
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setup 
+-- @function setup 
 -- @param self
 -- @param #fgui.ByteBuffer buffer
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getVtScrollBar 
+-- @function getVtScrollBar 
 -- @param self
 -- @return GScrollBar#GScrollBar ret (return value: fgui.GScrollBar)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getOwner 
+-- @function getOwner 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isBottomMost 
+-- @function isBottomMost 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getPageY 
+-- @function getPageY 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] isBouncebackEffect 
+-- @function isBouncebackEffect 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] setPosY 
+-- @function setPosY 
 -- @param self
 -- @param #float value
 -- @param #bool ani
@@ -347,19 +347,19 @@
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getHeader 
+-- @function getHeader 
 -- @param self
 -- @return GComponent#GComponent ret (return value: fgui.GComponent)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] getDraggingPane 
+-- @function getDraggingPane 
 -- @param self
 -- @return ScrollPane#ScrollPane ret (return value: fgui.ScrollPane)
         
 --------------------------------
 -- 
--- @function [parent=#ScrollPane] ScrollPane 
+-- @function ScrollPane 
 -- @param self
 -- @param #fgui.GComponent owner
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)

@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module TransitionZoomFlipY
--- @extend TransitionSceneOriented
--- @parent_module cc
+-- @see TransitionSceneOriented
+-- @see cc
 
 --------------------------------
 -- @overload self, float, cc.Scene         
 -- @overload self, float, cc.Scene, int         
--- @function [parent=#TransitionZoomFlipY] create
+-- @function create
 -- @param self
 -- @param #float t
 -- @param #cc.Scene s
@@ -16,7 +16,7 @@
 
 --------------------------------
 -- 
--- @function [parent=#TransitionZoomFlipY] TransitionZoomFlipY 
+-- @function TransitionZoomFlipY 
 -- @param self
 -- @return TransitionZoomFlipY#TransitionZoomFlipY self (return value: cc.TransitionZoomFlipY)
         

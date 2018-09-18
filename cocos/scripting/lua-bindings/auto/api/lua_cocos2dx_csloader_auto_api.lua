@@ -3,7 +3,8 @@
 
 --------------------------------------------------------
 -- the cc CSLoader
--- @field [parent=#cc] CSLoader#CSLoader CSLoader preloaded module
+-- @field CSLoader preloaded module
+-- @see CSLoader
 
 
 return nil

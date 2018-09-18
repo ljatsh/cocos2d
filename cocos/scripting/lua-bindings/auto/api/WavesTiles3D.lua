@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module WavesTiles3D
--- @extend TiledGrid3DAction
--- @parent_module cc
+-- @see TiledGrid3DAction
+-- @see cc
 
 --------------------------------
 -- brief Set the amplitude rate of the effect.<br>
 -- param amplitudeRate The value of amplitude rate will be set.
--- @function [parent=#WavesTiles3D] setAmplitudeRate 
+-- @function setAmplitudeRate 
 -- @param self
 -- @param #float amplitudeRate
 -- @return WavesTiles3D#WavesTiles3D self (return value: cc.WavesTiles3D)
@@ -19,7 +19,7 @@
 -- param waves Specify the waves count of the WavesTiles3D action.<br>
 -- param amplitude Specify the amplitude of the WavesTiles3D action.<br>
 -- return If the initialization success, return true; otherwise, return false.
--- @function [parent=#WavesTiles3D] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -30,21 +30,21 @@
 --------------------------------
 -- brief Get the amplitude of the effect.<br>
 -- return Return the amplitude of the effect.
--- @function [parent=#WavesTiles3D] getAmplitude 
+-- @function getAmplitude 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Get the amplitude rate of the effect.<br>
 -- return Return the amplitude rate of the effect.
--- @function [parent=#WavesTiles3D] getAmplitudeRate 
+-- @function getAmplitudeRate 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- brief Set the amplitude to the effect.<br>
 -- param amplitude The value of amplitude will be set.
--- @function [parent=#WavesTiles3D] setAmplitude 
+-- @function setAmplitude 
 -- @param self
 -- @param #float amplitude
 -- @return WavesTiles3D#WavesTiles3D self (return value: cc.WavesTiles3D)
@@ -56,7 +56,7 @@
 -- param waves Specify the waves count of the WavesTiles3D action.<br>
 -- param amplitude Specify the amplitude of the WavesTiles3D action.<br>
 -- return If the creation success, return a pointer of WavesTiles3D action; otherwise, return nil.
--- @function [parent=#WavesTiles3D] create 
+-- @function create 
 -- @param self
 -- @param #float duration
 -- @param #size_table gridSize
@@ -66,20 +66,20 @@
         
 --------------------------------
 -- 
--- @function [parent=#WavesTiles3D] clone 
+-- @function clone 
 -- @param self
 -- @return WavesTiles3D#WavesTiles3D ret (return value: cc.WavesTiles3D)
         
 --------------------------------
 -- 
--- @function [parent=#WavesTiles3D] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return WavesTiles3D#WavesTiles3D self (return value: cc.WavesTiles3D)
         
 --------------------------------
 -- 
--- @function [parent=#WavesTiles3D] WavesTiles3D 
+-- @function WavesTiles3D 
 -- @param self
 -- @return WavesTiles3D#WavesTiles3D self (return value: cc.WavesTiles3D)
         

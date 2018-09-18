@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module EaseQuadraticActionOut
--- @extend ActionEase
--- @parent_module cc
+-- @see ActionEase
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EaseQuadraticActionOut] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return EaseQuadraticActionOut#EaseQuadraticActionOut ret (return value: cc.EaseQuadraticActionOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseQuadraticActionOut] clone 
+-- @function clone 
 -- @param self
 -- @return EaseQuadraticActionOut#EaseQuadraticActionOut ret (return value: cc.EaseQuadraticActionOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseQuadraticActionOut] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return EaseQuadraticActionOut#EaseQuadraticActionOut self (return value: cc.EaseQuadraticActionOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseQuadraticActionOut] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionEase#ActionEase ret (return value: cc.ActionEase)
         
 --------------------------------
 -- 
--- @function [parent=#EaseQuadraticActionOut] EaseQuadraticActionOut 
+-- @function EaseQuadraticActionOut 
 -- @param self
 -- @return EaseQuadraticActionOut#EaseQuadraticActionOut self (return value: cc.EaseQuadraticActionOut)
         

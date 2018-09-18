@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module ParticleFire
--- @extend ParticleSystemQuad
--- @parent_module cc
+-- @see ParticleSystemQuad
+-- @see cc
 
 --------------------------------
 --  Create a fire particle system.<br>
 -- return An autoreleased ParticleFire object.
--- @function [parent=#ParticleFire] create 
+-- @function create 
 -- @param self
 -- @return ParticleFire#ParticleFire ret (return value: cc.ParticleFire)
         
@@ -16,27 +16,27 @@
 -- param numberOfParticles A given number of particles.<br>
 -- return An autoreleased ParticleFire object.<br>
 -- js NA
--- @function [parent=#ParticleFire] createWithTotalParticles 
+-- @function createWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return ParticleFire#ParticleFire ret (return value: cc.ParticleFire)
         
 --------------------------------
 -- 
--- @function [parent=#ParticleFire] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#ParticleFire] initWithTotalParticles 
+-- @function initWithTotalParticles 
 -- @param self
 -- @param #int numberOfParticles
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- js ctor
--- @function [parent=#ParticleFire] ParticleFire 
+-- @function ParticleFire 
 -- @param self
 -- @return ParticleFire#ParticleFire self (return value: cc.ParticleFire)
         

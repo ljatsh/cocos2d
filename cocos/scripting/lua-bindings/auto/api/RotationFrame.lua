@@ -1,37 +1,37 @@
 
 --------------------------------
 -- @module RotationFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#RotationFrame] setRotation 
+-- @function setRotation 
 -- @param self
 -- @param #float rotation
 -- @return RotationFrame#RotationFrame self (return value: ccs.RotationFrame)
         
 --------------------------------
 -- 
--- @function [parent=#RotationFrame] getRotation 
+-- @function getRotation 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#RotationFrame] create 
+-- @function create 
 -- @param self
 -- @return RotationFrame#RotationFrame ret (return value: ccs.RotationFrame)
         
 --------------------------------
 -- 
--- @function [parent=#RotationFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#RotationFrame] RotationFrame 
+-- @function RotationFrame 
 -- @param self
 -- @return RotationFrame#RotationFrame self (return value: ccs.RotationFrame)
         

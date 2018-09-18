@@ -1,15 +1,15 @@
 
 --------------------------------
 -- @module AnimationCache
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 --  Returns a Animation that was previously added.<br>
 -- If the name is not found it will return nil.<br>
 -- You should retain the returned copy if you are going to use it.<br>
 -- return A Animation that was previously added. If the name is not found it will return nil.
--- @function [parent=#AnimationCache] getAnimation 
+-- @function getAnimation 
 -- @param self
 -- @param #string name
 -- @return Animation#Animation ret (return value: cc.Animation)
@@ -18,7 +18,7 @@
 --  Adds a Animation with a name.<br>
 -- param animation An animation.<br>
 -- param name The name of animation.
--- @function [parent=#AnimationCache] addAnimation 
+-- @function addAnimation 
 -- @param self
 -- @param #cc.Animation animation
 -- @param #string name
@@ -26,7 +26,7 @@
         
 --------------------------------
 -- 
--- @function [parent=#AnimationCache] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -37,7 +37,7 @@
 -- param plist The path of the relative file,it use to find the plist path for load SpriteFrames.<br>
 -- since v1.1<br>
 -- js NA
--- @function [parent=#AnimationCache] addAnimationsWithDictionary 
+-- @function addAnimationsWithDictionary 
 -- @param self
 -- @param #map_table dictionary
 -- @param #string plist
@@ -46,7 +46,7 @@
 --------------------------------
 --  Deletes a Animation from the cache.<br>
 -- param name The name of animation.
--- @function [parent=#AnimationCache] removeAnimation 
+-- @function removeAnimation 
 -- @param self
 -- @param #string name
 -- @return AnimationCache#AnimationCache self (return value: cc.AnimationCache)
@@ -58,7 +58,7 @@
 -- js addAnimations<br>
 -- lua addAnimations<br>
 -- param plist An animation from a plist file.
--- @function [parent=#AnimationCache] addAnimationsWithFile 
+-- @function addAnimationsWithFile 
 -- @param self
 -- @param #string plist
 -- @return AnimationCache#AnimationCache self (return value: cc.AnimationCache)
@@ -66,20 +66,20 @@
 --------------------------------
 --  Purges the cache. It releases all the Animation objects and the shared instance.<br>
 -- js NA
--- @function [parent=#AnimationCache] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return AnimationCache#AnimationCache self (return value: cc.AnimationCache)
         
 --------------------------------
 --  Returns the shared instance of the Animation cache <br>
 -- js NA
--- @function [parent=#AnimationCache] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return AnimationCache#AnimationCache ret (return value: cc.AnimationCache)
         
 --------------------------------
 -- js ctor
--- @function [parent=#AnimationCache] AnimationCache 
+-- @function AnimationCache 
 -- @param self
 -- @return AnimationCache#AnimationCache self (return value: cc.AnimationCache)
         

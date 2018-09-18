@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module TileMapAtlas
--- @extend AtlasNode
--- @parent_module cc
+-- @see AtlasNode
+-- @see cc
 
 --------------------------------
 --  initializes a TileMap with a tile file (atlas) with a map file and the width and height of each tile in points.<br>
 -- The file will be loaded using the TextureMgr.
--- @function [parent=#TileMapAtlas] initWithTileFile 
+-- @function initWithTileFile 
 -- @param self
 -- @param #string tile
 -- @param #string mapFile
@@ -17,14 +17,14 @@
         
 --------------------------------
 --  dealloc the map from memory 
--- @function [parent=#TileMapAtlas] releaseMap 
+-- @function releaseMap 
 -- @param self
 -- @return TileMapAtlas#TileMapAtlas self (return value: cc.TileMapAtlas)
         
 --------------------------------
 -- Returns a tile from position x,y.<br>
 -- For the moment only channel R is used
--- @function [parent=#TileMapAtlas] getTileAt 
+-- @function getTileAt 
 -- @param self
 -- @param #vec2_table position
 -- @return color3b_table#color3b_table ret (return value: color3b_table)
@@ -32,7 +32,7 @@
 --------------------------------
 --  sets a tile at position x,y.<br>
 -- For the moment only channel R is used
--- @function [parent=#TileMapAtlas] setTile 
+-- @function setTile 
 -- @param self
 -- @param #color3b_table tile
 -- @param #vec2_table position
@@ -41,7 +41,7 @@
 --------------------------------
 --  creates a TileMap with a tile file (atlas) with a map file and the width and height of each tile in points.<br>
 -- The tile file will be loaded using the TextureMgr.
--- @function [parent=#TileMapAtlas] create 
+-- @function create 
 -- @param self
 -- @param #string tile
 -- @param #string mapFile
@@ -51,7 +51,7 @@
         
 --------------------------------
 -- js ctor
--- @function [parent=#TileMapAtlas] TileMapAtlas 
+-- @function TileMapAtlas 
 -- @param self
 -- @return TileMapAtlas#TileMapAtlas self (return value: cc.TileMapAtlas)
         

@@ -1,8 +1,8 @@
 
 --------------------------------
 -- @module RichElementCustomNode
--- @extend RichElement
--- @parent_module ccui
+-- @see RichElement
+-- @see ccui
 
 --------------------------------
 -- brief Initialize a RichElementCustomNode with various arguments.<br>
@@ -11,7 +11,7 @@
 -- param opacity A opacity in GLubyte.<br>
 -- param customNode A custom node pointer.<br>
 -- return True if initialize success, false otherwise.
--- @function [parent=#RichElementCustomNode] init 
+-- @function init 
 -- @param self
 -- @param #int tag
 -- @param #color3b_table color
@@ -26,7 +26,7 @@
 -- param opacity A opacity in GLubyte.<br>
 -- param customNode A custom node pointer.<br>
 -- return A RichElementCustomNode instance.
--- @function [parent=#RichElementCustomNode] create 
+-- @function create 
 -- @param self
 -- @param #int tag
 -- @param #color3b_table color
@@ -38,7 +38,7 @@
 -- brief Default constructor.<br>
 -- js ctor<br>
 -- lua new
--- @function [parent=#RichElementCustomNode] RichElementCustomNode 
+-- @function RichElementCustomNode 
 -- @param self
 -- @return RichElementCustomNode#RichElementCustomNode self (return value: ccui.RichElementCustomNode)
         

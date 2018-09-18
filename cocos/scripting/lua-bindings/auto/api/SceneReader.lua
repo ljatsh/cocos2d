@@ -1,18 +1,18 @@
 
 --------------------------------
 -- @module SceneReader
--- @parent_module ccs
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#SceneReader] setTarget 
+-- @function setTarget 
 -- @param self
 -- @param #function selector
 -- @return SceneReader#SceneReader self (return value: ccs.SceneReader)
         
 --------------------------------
 -- 
--- @function [parent=#SceneReader] createNodeWithSceneFile 
+-- @function createNodeWithSceneFile 
 -- @param self
 -- @param #string fileName
 -- @param #int attachComponent
@@ -20,13 +20,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#SceneReader] getAttachComponentType 
+-- @function getAttachComponentType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#SceneReader] getNodeByTag 
+-- @function getNodeByTag 
 -- @param self
 -- @param #int nTag
 -- @return Node#Node ret (return value: cc.Node)
@@ -34,19 +34,19 @@
 --------------------------------
 -- js purge<br>
 -- lua destroySceneReader
--- @function [parent=#SceneReader] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return SceneReader#SceneReader self (return value: ccs.SceneReader)
         
 --------------------------------
 -- 
--- @function [parent=#SceneReader] sceneReaderVersion 
+-- @function sceneReaderVersion 
 -- @param self
 -- @return char#char ret (return value: char)
         
 --------------------------------
 -- 
--- @function [parent=#SceneReader] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return SceneReader#SceneReader ret (return value: ccs.SceneReader)
         

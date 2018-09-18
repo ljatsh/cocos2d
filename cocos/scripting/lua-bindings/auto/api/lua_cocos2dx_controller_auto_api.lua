@@ -3,17 +3,20 @@
 
 --------------------------------------------------------
 -- the cc Controller
--- @field [parent=#cc] Controller#Controller Controller preloaded module
+-- @field Controller preloaded module
+-- @see Controller
 
 
 --------------------------------------------------------
 -- the cc EventController
--- @field [parent=#cc] EventController#EventController EventController preloaded module
+-- @field EventController preloaded module
+-- @see EventController
 
 
 --------------------------------------------------------
 -- the cc EventListenerController
--- @field [parent=#cc] EventListenerController#EventListenerController EventListenerController preloaded module
+-- @field EventListenerController preloaded module
+-- @see EventListenerController
 
 
 return nil

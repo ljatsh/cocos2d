@@ -1,20 +1,20 @@
 
 --------------------------------
 -- @module CardinalSplineTo
--- @extend ActionInterval
--- @parent_module cc
+-- @see ActionInterval
+-- @see cc
 
 --------------------------------
 --  Return a PointArray.<br>
 -- return A PointArray.
--- @function [parent=#CardinalSplineTo] getPoints 
+-- @function getPoints 
 -- @param self
 -- @return point_table#point_table ret (return value: point_table)
         
 --------------------------------
 --  It will update the target position and change the _previousPosition to newPos<br>
 -- param newPos The new position.
--- @function [parent=#CardinalSplineTo] updatePosition 
+-- @function updatePosition 
 -- @param self
 -- @param #vec2_table newPos
 -- @return CardinalSplineTo#CardinalSplineTo self (return value: cc.CardinalSplineTo)
@@ -24,7 +24,7 @@
 -- param duration In seconds.<br>
 -- param points An PointArray.<br>
 -- param tension Goodness of fit.
--- @function [parent=#CardinalSplineTo] initWithDuration 
+-- @function initWithDuration 
 -- @param self
 -- @param #float duration
 -- @param #point_table points
@@ -33,26 +33,26 @@
         
 --------------------------------
 -- 
--- @function [parent=#CardinalSplineTo] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return CardinalSplineTo#CardinalSplineTo self (return value: cc.CardinalSplineTo)
         
 --------------------------------
 -- 
--- @function [parent=#CardinalSplineTo] clone 
+-- @function clone 
 -- @param self
 -- @return CardinalSplineTo#CardinalSplineTo ret (return value: cc.CardinalSplineTo)
         
 --------------------------------
 -- 
--- @function [parent=#CardinalSplineTo] reverse 
+-- @function reverse 
 -- @param self
 -- @return CardinalSplineTo#CardinalSplineTo ret (return value: cc.CardinalSplineTo)
         
 --------------------------------
 -- param time In seconds.
--- @function [parent=#CardinalSplineTo] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return CardinalSplineTo#CardinalSplineTo self (return value: cc.CardinalSplineTo)
@@ -60,7 +60,7 @@
 --------------------------------
 -- js ctor<br>
 -- lua NA
--- @function [parent=#CardinalSplineTo] CardinalSplineTo 
+-- @function CardinalSplineTo 
 -- @param self
 -- @return CardinalSplineTo#CardinalSplineTo self (return value: cc.CardinalSplineTo)
         

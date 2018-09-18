@@ -1,50 +1,50 @@
 
 --------------------------------
 -- @module EventFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#EventFrame] setEvent 
+-- @function setEvent 
 -- @param self
 -- @param #string event
 -- @return EventFrame#EventFrame self (return value: ccs.EventFrame)
         
 --------------------------------
 -- 
--- @function [parent=#EventFrame] init 
+-- @function init 
 -- @param self
 -- @return EventFrame#EventFrame self (return value: ccs.EventFrame)
         
 --------------------------------
 -- 
--- @function [parent=#EventFrame] getEvent 
+-- @function getEvent 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#EventFrame] create 
+-- @function create 
 -- @param self
 -- @return EventFrame#EventFrame ret (return value: ccs.EventFrame)
         
 --------------------------------
 -- 
--- @function [parent=#EventFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#EventFrame] setNode 
+-- @function setNode 
 -- @param self
 -- @param #cc.Node node
 -- @return EventFrame#EventFrame self (return value: ccs.EventFrame)
         
 --------------------------------
 -- 
--- @function [parent=#EventFrame] EventFrame 
+-- @function EventFrame 
 -- @param self
 -- @return EventFrame#EventFrame self (return value: ccs.EventFrame)
         

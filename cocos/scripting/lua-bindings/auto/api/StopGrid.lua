@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module StopGrid
--- @extend ActionInstant
--- @parent_module cc
+-- @see ActionInstant
+-- @see cc
 
 --------------------------------
 -- brief Create a StopGrid Action.<br>
 -- return Return a pointer of StopGrid. When the creation failed, return nil.
--- @function [parent=#StopGrid] create 
+-- @function create 
 -- @param self
 -- @return StopGrid#StopGrid ret (return value: cc.StopGrid)
         
 --------------------------------
 -- 
--- @function [parent=#StopGrid] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return StopGrid#StopGrid self (return value: cc.StopGrid)
         
 --------------------------------
 -- 
--- @function [parent=#StopGrid] clone 
+-- @function clone 
 -- @param self
 -- @return StopGrid#StopGrid ret (return value: cc.StopGrid)
         
 --------------------------------
 -- 
--- @function [parent=#StopGrid] reverse 
+-- @function reverse 
 -- @param self
 -- @return StopGrid#StopGrid ret (return value: cc.StopGrid)
         
 --------------------------------
 -- 
--- @function [parent=#StopGrid] StopGrid 
+-- @function StopGrid 
 -- @param self
 -- @return StopGrid#StopGrid self (return value: cc.StopGrid)
         

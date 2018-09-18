@@ -1,20 +1,20 @@
 
 --------------------------------
 -- @module AttachNode
--- @extend Node
--- @parent_module cc
+-- @see Node
+-- @see cc
 
 --------------------------------
 -- creates an AttachNode<br>
 -- param attachBone The bone to which the AttachNode is going to attach, the attacheBone must be a bone of the AttachNode's parent
--- @function [parent=#AttachNode] create 
+-- @function create 
 -- @param self
 -- @param #cc.Bone3D attachBone
 -- @return AttachNode#AttachNode ret (return value: cc.AttachNode)
         
 --------------------------------
 -- 
--- @function [parent=#AttachNode] visit 
+-- @function visit 
 -- @param self
 -- @param #cc.Renderer renderer
 -- @param #mat4_table parentTransform
@@ -23,25 +23,25 @@
         
 --------------------------------
 -- 
--- @function [parent=#AttachNode] getWorldToNodeTransform 
+-- @function getWorldToNodeTransform 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 -- 
--- @function [parent=#AttachNode] getNodeToWorldTransform 
+-- @function getNodeToWorldTransform 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 -- 
--- @function [parent=#AttachNode] getNodeToParentTransform 
+-- @function getNodeToParentTransform 
 -- @param self
 -- @return mat4_table#mat4_table ret (return value: mat4_table)
         
 --------------------------------
 -- 
--- @function [parent=#AttachNode] AttachNode 
+-- @function AttachNode 
 -- @param self
 -- @return AttachNode#AttachNode self (return value: cc.AttachNode)
         

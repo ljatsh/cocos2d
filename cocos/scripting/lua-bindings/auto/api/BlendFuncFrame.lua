@@ -1,37 +1,37 @@
 
 --------------------------------
 -- @module BlendFuncFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#BlendFuncFrame] getBlendFunc 
+-- @function getBlendFunc 
 -- @param self
 -- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
         
 --------------------------------
 -- 
--- @function [parent=#BlendFuncFrame] setBlendFunc 
+-- @function setBlendFunc 
 -- @param self
 -- @param #cc.BlendFunc blendFunc
 -- @return BlendFuncFrame#BlendFuncFrame self (return value: ccs.BlendFuncFrame)
         
 --------------------------------
 -- 
--- @function [parent=#BlendFuncFrame] create 
+-- @function create 
 -- @param self
 -- @return BlendFuncFrame#BlendFuncFrame ret (return value: ccs.BlendFuncFrame)
         
 --------------------------------
 -- 
--- @function [parent=#BlendFuncFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#BlendFuncFrame] BlendFuncFrame 
+-- @function BlendFuncFrame 
 -- @param self
 -- @return BlendFuncFrame#BlendFuncFrame self (return value: ccs.BlendFuncFrame)
         

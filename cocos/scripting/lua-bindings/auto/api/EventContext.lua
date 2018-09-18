@@ -1,71 +1,71 @@
 
 --------------------------------
 -- @module EventContext
--- @parent_module fgui
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#EventContext] preventDefault 
+-- @function preventDefault 
 -- @param self
 -- @return EventContext#EventContext self (return value: fgui.EventContext)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] isDefaultPrevented 
+-- @function isDefaultPrevented 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] getType 
+-- @function getType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] getSender 
+-- @function getSender 
 -- @param self
 -- @return Ref#Ref ret (return value: cc.Ref)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] uncaptureTouch 
+-- @function uncaptureTouch 
 -- @param self
 -- @return EventContext#EventContext self (return value: fgui.EventContext)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] getDataValue 
+-- @function getDataValue 
 -- @param self
 -- @return Value#Value ret (return value: cc.Value)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] getInput 
+-- @function getInput 
 -- @param self
 -- @return InputEvent#InputEvent ret (return value: fgui.InputEvent)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] captureTouch 
+-- @function captureTouch 
 -- @param self
 -- @return EventContext#EventContext self (return value: fgui.EventContext)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] getData 
+-- @function getData 
 -- @param self
 -- @return void#void ret (return value: void)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] stopPropagation 
+-- @function stopPropagation 
 -- @param self
 -- @return EventContext#EventContext self (return value: fgui.EventContext)
         
 --------------------------------
 -- 
--- @function [parent=#EventContext] EventContext 
+-- @function EventContext 
 -- @param self
 -- @return EventContext#EventContext self (return value: fgui.EventContext)
         

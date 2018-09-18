@@ -1,8 +1,8 @@
 
 --------------------------------
 -- @module RichElementText
--- @extend RichElement
--- @parent_module ccui
+-- @see RichElement
+-- @see ccui
 
 --------------------------------
 -- brief Initialize a RichElementText with various arguments.<br>
@@ -21,7 +21,7 @@
 -- param shadowBlurRadius the shadow effect blur radius<br>
 -- param glowColor glow color<br>
 -- return True if initialize success, false otherwise.
--- @function [parent=#RichElementText] init 
+-- @function init 
 -- @param self
 -- @param #int tag
 -- @param #color3b_table color
@@ -56,7 +56,7 @@
 -- param shadowBlurRadius the shadow effect blur radius<br>
 -- param glowColor glow color<br>
 -- return RichElementText instance.
--- @function [parent=#RichElementText] create 
+-- @function create 
 -- @param self
 -- @param #int tag
 -- @param #color3b_table color
@@ -78,7 +78,7 @@
 -- brief Default constructor.<br>
 -- js ctor<br>
 -- lua new
--- @function [parent=#RichElementText] RichElementText 
+-- @function RichElementText 
 -- @param self
 -- @return RichElementText#RichElementText self (return value: ccui.RichElementText)
         

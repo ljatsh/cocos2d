@@ -1,57 +1,57 @@
 
 --------------------------------
 -- @module ScaleFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#ScaleFrame] setScaleY 
+-- @function setScaleY 
 -- @param self
 -- @param #float scaleY
 -- @return ScaleFrame#ScaleFrame self (return value: ccs.ScaleFrame)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleFrame] setScaleX 
+-- @function setScaleX 
 -- @param self
 -- @param #float scaleX
 -- @return ScaleFrame#ScaleFrame self (return value: ccs.ScaleFrame)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleFrame] getScaleY 
+-- @function getScaleY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleFrame] getScaleX 
+-- @function getScaleX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleFrame] setScale 
+-- @function setScale 
 -- @param self
 -- @param #float scale
 -- @return ScaleFrame#ScaleFrame self (return value: ccs.ScaleFrame)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleFrame] create 
+-- @function create 
 -- @param self
 -- @return ScaleFrame#ScaleFrame ret (return value: ccs.ScaleFrame)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#ScaleFrame] ScaleFrame 
+-- @function ScaleFrame 
 -- @param self
 -- @return ScaleFrame#ScaleFrame self (return value: ccs.ScaleFrame)
         

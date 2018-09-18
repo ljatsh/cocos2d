@@ -1,32 +1,32 @@
 
 --------------------------------
 -- @module CSLoader
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#CSLoader] createNodeFromJson 
+-- @function createNodeFromJson 
 -- @param self
 -- @param #string filename
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] createNodeWithFlatBuffersFile 
+-- @function createNodeWithFlatBuffersFile 
 -- @param self
 -- @param #string filename
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] loadNodeWithFile 
+-- @function loadNodeWithFile 
 -- @param self
 -- @param #string fileName
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] bindCallback 
+-- @function bindCallback 
 -- @param self
 -- @param #string callbackName
 -- @param #string callbackType
@@ -36,60 +36,60 @@
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] setJsonPath 
+-- @function setJsonPath 
 -- @param self
 -- @param #string jsonPath
 -- @return CSLoader#CSLoader self (return value: cc.CSLoader)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] init 
+-- @function init 
 -- @param self
 -- @return CSLoader#CSLoader self (return value: cc.CSLoader)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] loadNodeWithContent 
+-- @function loadNodeWithContent 
 -- @param self
 -- @param #string content
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] isRecordJsonPath 
+-- @function isRecordJsonPath 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] getJsonPath 
+-- @function getJsonPath 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] setRecordJsonPath 
+-- @function setRecordJsonPath 
 -- @param self
 -- @param #bool record
 -- @return CSLoader#CSLoader self (return value: cc.CSLoader)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] createNodeWithFlatBuffersForSimulator 
+-- @function createNodeWithFlatBuffersForSimulator 
 -- @param self
 -- @param #string filename
 -- @return Node#Node ret (return value: cc.Node)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] destroyInstance 
+-- @function destroyInstance 
 -- @param self
 -- @return CSLoader#CSLoader self (return value: cc.CSLoader)
         
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#CSLoader] createNodeWithVisibleSize
+-- @function createNodeWithVisibleSize
 -- @param self
 -- @param #string filename
 -- @param #function callback
@@ -97,13 +97,13 @@
 
 --------------------------------
 -- 
--- @function [parent=#CSLoader] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return CSLoader#CSLoader ret (return value: cc.CSLoader)
         
 --------------------------------
 -- 
--- @function [parent=#CSLoader] CSLoader 
+-- @function CSLoader 
 -- @param self
 -- @return CSLoader#CSLoader self (return value: cc.CSLoader)
         

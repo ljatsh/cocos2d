@@ -1,51 +1,51 @@
 
 --------------------------------
 -- @module GRoot
--- @extend GComponent
--- @parent_module fgui
+-- @see GComponent
+-- @see fgui
 
 --------------------------------
 -- 
--- @function [parent=#GRoot] closeAllWindows 
+-- @function closeAllWindows 
 -- @param self
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] hideTooltips 
+-- @function hideTooltips 
 -- @param self
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] hasAnyPopup 
+-- @function hasAnyPopup 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getTopWindow 
+-- @function getTopWindow 
 -- @param self
 -- @return Window#Window ret (return value: fgui.Window)
         
 --------------------------------
 -- @overload self, fgui.GObject         
 -- @overload self         
--- @function [parent=#GRoot] hidePopup
+-- @function hidePopup
 -- @param self
 -- @param #fgui.GObject popup
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
 
 --------------------------------
 -- 
--- @function [parent=#GRoot] closeAllExceptModals 
+-- @function closeAllExceptModals 
 -- @param self
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- @overload self, fgui.GObject, fgui.GObject, int         
 -- @overload self, fgui.GObject         
--- @function [parent=#GRoot] showPopup
+-- @function showPopup
 -- @param self
 -- @param #fgui.GObject popup
 -- @param #fgui.GObject target
@@ -54,33 +54,33 @@
 
 --------------------------------
 -- 
--- @function [parent=#GRoot] showTooltipsWin 
+-- @function showTooltipsWin 
 -- @param self
 -- @param #fgui.GObject tooltipWin
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] closeModalWait 
+-- @function closeModalWait 
 -- @param self
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getInputProcessor 
+-- @function getInputProcessor 
 -- @param self
 -- @return InputProcessor#InputProcessor ret (return value: fgui.InputProcessor)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getSoundVolumeScale 
+-- @function getSoundVolumeScale 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- @overload self, fgui.GObject, fgui.GObject, int         
 -- @overload self, fgui.GObject         
--- @function [parent=#GRoot] togglePopup
+-- @function togglePopup
 -- @param self
 -- @param #fgui.GObject popup
 -- @param #fgui.GObject target
@@ -89,39 +89,39 @@
 
 --------------------------------
 -- 
--- @function [parent=#GRoot] isSoundEnabled 
+-- @function isSoundEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] setSoundVolumeScale 
+-- @function setSoundVolumeScale 
 -- @param self
 -- @param #float value
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getTouchTarget 
+-- @function getTouchTarget 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] hideWindowImmediately 
+-- @function hideWindowImmediately 
 -- @param self
 -- @param #fgui.Window win
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getModalLayer 
+-- @function getModalLayer 
 -- @param self
 -- @return GGraph#GGraph ret (return value: fgui.GGraph)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] playSound 
+-- @function playSound 
 -- @param self
 -- @param #string url
 -- @param #float volumeScale
@@ -129,52 +129,52 @@
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getModalWaitingPane 
+-- @function getModalWaitingPane 
 -- @param self
 -- @return GObject#GObject ret (return value: fgui.GObject)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] setSoundEnabled 
+-- @function setSoundEnabled 
 -- @param self
 -- @param #bool value
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] bringToFront 
+-- @function bringToFront 
 -- @param self
 -- @param #fgui.Window win
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] hasModalWindow 
+-- @function hasModalWindow 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] showModalWait 
+-- @function showModalWait 
 -- @param self
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] isModalWaiting 
+-- @function isModalWaiting 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getTouchPosition 
+-- @function getTouchPosition 
 -- @param self
 -- @param #int touchId
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getPoupPosition 
+-- @function getPoupPosition 
 -- @param self
 -- @param #fgui.GObject popup
 -- @param #fgui.GObject target
@@ -183,28 +183,28 @@
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] showWindow 
+-- @function showWindow 
 -- @param self
 -- @param #fgui.Window win
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] showTooltips 
+-- @function showTooltips 
 -- @param self
 -- @param #string msg
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] hideWindow 
+-- @function hideWindow 
 -- @param self
 -- @param #fgui.Window win
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] create 
+-- @function create 
 -- @param self
 -- @param #cc.Scene scene
 -- @param #int zOrder
@@ -212,13 +212,13 @@
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] getInstance 
+-- @function getInstance 
 -- @param self
 -- @return GRoot#GRoot ret (return value: fgui.GRoot)
         
 --------------------------------
 -- 
--- @function [parent=#GRoot] GRoot 
+-- @function GRoot 
 -- @param self
 -- @return GRoot#GRoot self (return value: fgui.GRoot)
         

@@ -1,78 +1,78 @@
 
 --------------------------------
 -- @module TMXMapInfo
--- @parent_module cc
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setCurrentString 
+-- @function setCurrentString 
 -- @param self
 -- @param #string currentString
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- / map hexsidelength
--- @function [parent=#TMXMapInfo] getHexSideLength 
+-- @function getHexSideLength 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setTileSize 
+-- @function setTileSize 
 -- @param self
 -- @param #size_table tileSize
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 --  initializes a TMX format with a  tmx file 
--- @function [parent=#TMXMapInfo] initWithTMXFile 
+-- @function initWithTMXFile 
 -- @param self
 -- @param #string tmxFile
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- / map orientation
--- @function [parent=#TMXMapInfo] getOrientation 
+-- @function getOrientation 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setObjectGroups 
+-- @function setObjectGroups 
 -- @param self
 -- @param #array_table groups
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setLayers 
+-- @function setLayers 
 -- @param self
 -- @param #array_table layers
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 --  initializes parsing of an XML file, either a tmx (Map) file or tsx (Tileset) file 
--- @function [parent=#TMXMapInfo] parseXMLFile 
+-- @function parseXMLFile 
 -- @param self
 -- @param #string xmlFilename
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- / parent element
--- @function [parent=#TMXMapInfo] getParentElement 
+-- @function getParentElement 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setTMXFileName 
+-- @function setTMXFileName 
 -- @param self
 -- @param #string fileName
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] parseXMLString 
+-- @function parseXMLString 
 -- @param self
 -- @param #string xmlString
 -- @return bool#bool ret (return value: bool)
@@ -80,19 +80,19 @@
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#TMXMapInfo] getLayers
+-- @function getLayers
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
 
 --------------------------------
 -- / map staggeraxis
--- @function [parent=#TMXMapInfo] getStaggerAxis 
+-- @function getStaggerAxis 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setHexSideLength 
+-- @function setHexSideLength 
 -- @param self
 -- @param #int hexSideLength
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
@@ -100,26 +100,26 @@
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#TMXMapInfo] getTilesets
+-- @function getTilesets
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
 
 --------------------------------
 -- / parent GID
--- @function [parent=#TMXMapInfo] getParentGID 
+-- @function getParentGID 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setParentElement 
+-- @function setParentElement 
 -- @param self
 -- @param #int element
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 --  initializes a TMX format with an XML string and a TMX resource path 
--- @function [parent=#TMXMapInfo] initWithXML 
+-- @function initWithXML 
 -- @param self
 -- @param #string tmxString
 -- @param #string resourcePath
@@ -127,118 +127,118 @@
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setParentGID 
+-- @function setParentGID 
 -- @param self
 -- @param #int gid
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- / layer attribs
--- @function [parent=#TMXMapInfo] getLayerAttribs 
+-- @function getLayerAttribs 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- / tiles width & height
--- @function [parent=#TMXMapInfo] getTileSize 
+-- @function getTileSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] getTileProperties 
+-- @function getTileProperties 
 -- @param self
 -- @return map_table#map_table ret (return value: map_table)
         
 --------------------------------
 -- / is storing characters?
--- @function [parent=#TMXMapInfo] isStoringCharacters 
+-- @function isStoringCharacters 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] getExternalTilesetFileName 
+-- @function getExternalTilesetFileName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#TMXMapInfo] getObjectGroups
+-- @function getObjectGroups
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
 
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] getTMXFileName 
+-- @function getTMXFileName 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setStaggerIndex 
+-- @function setStaggerIndex 
 -- @param self
 -- @param #int staggerIndex
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setProperties 
+-- @function setProperties 
 -- @param self
 -- @param #map_table properties
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setOrientation 
+-- @function setOrientation 
 -- @param self
 -- @param #int orientation
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setTileProperties 
+-- @function setTileProperties 
 -- @param self
 -- @param #map_table tileProperties
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setMapSize 
+-- @function setMapSize 
 -- @param self
 -- @param #size_table mapSize
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] getCurrentString 
+-- @function getCurrentString 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setStoringCharacters 
+-- @function setStoringCharacters 
 -- @param self
 -- @param #bool storingCharacters
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setStaggerAxis 
+-- @function setStaggerAxis 
 -- @param self
 -- @param #int staggerAxis
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 -- / map width & height
--- @function [parent=#TMXMapInfo] getMapSize 
+-- @function getMapSize 
 -- @param self
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setTilesets 
+-- @function setTilesets 
 -- @param self
 -- @param #array_table tilesets
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
@@ -246,33 +246,33 @@
 --------------------------------
 -- @overload self         
 -- @overload self         
--- @function [parent=#TMXMapInfo] getProperties
+-- @function getProperties
 -- @param self
 -- @return map_table#map_table ret (return value: map_table)
 
 --------------------------------
 -- / map stagger index
--- @function [parent=#TMXMapInfo] getStaggerIndex 
+-- @function getStaggerIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
--- @function [parent=#TMXMapInfo] setLayerAttribs 
+-- @function setLayerAttribs 
 -- @param self
 -- @param #int layerAttribs
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         
 --------------------------------
 --  creates a TMX Format with a tmx file 
--- @function [parent=#TMXMapInfo] create 
+-- @function create 
 -- @param self
 -- @param #string tmxFile
 -- @return TMXMapInfo#TMXMapInfo ret (return value: cc.TMXMapInfo)
         
 --------------------------------
 --  creates a TMX Format with an XML string and a TMX resource path 
--- @function [parent=#TMXMapInfo] createWithXML 
+-- @function createWithXML 
 -- @param self
 -- @param #string tmxString
 -- @param #string resourcePath
@@ -280,7 +280,7 @@
         
 --------------------------------
 -- js ctor
--- @function [parent=#TMXMapInfo] TMXMapInfo 
+-- @function TMXMapInfo 
 -- @param self
 -- @return TMXMapInfo#TMXMapInfo self (return value: cc.TMXMapInfo)
         

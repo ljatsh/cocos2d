@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module FadeOut
--- @extend FadeTo
--- @parent_module cc
+-- @see FadeTo
+-- @see cc
 
 --------------------------------
 -- js NA
--- @function [parent=#FadeOut] setReverseAction 
+-- @function setReverseAction 
 -- @param self
 -- @param #cc.FadeTo ac
 -- @return FadeOut#FadeOut self (return value: cc.FadeOut)
@@ -14,33 +14,33 @@
 --------------------------------
 -- Creates the action.<br>
 -- param d Duration time, in seconds.
--- @function [parent=#FadeOut] create 
+-- @function create 
 -- @param self
 -- @param #float d
 -- @return FadeOut#FadeOut ret (return value: cc.FadeOut)
         
 --------------------------------
 -- 
--- @function [parent=#FadeOut] startWithTarget 
+-- @function startWithTarget 
 -- @param self
 -- @param #cc.Node target
 -- @return FadeOut#FadeOut self (return value: cc.FadeOut)
         
 --------------------------------
 -- 
--- @function [parent=#FadeOut] clone 
+-- @function clone 
 -- @param self
 -- @return FadeOut#FadeOut ret (return value: cc.FadeOut)
         
 --------------------------------
 -- 
--- @function [parent=#FadeOut] reverse 
+-- @function reverse 
 -- @param self
 -- @return FadeTo#FadeTo ret (return value: cc.FadeTo)
         
 --------------------------------
 -- 
--- @function [parent=#FadeOut] FadeOut 
+-- @function FadeOut 
 -- @param self
 -- @return FadeOut#FadeOut self (return value: cc.FadeOut)
         

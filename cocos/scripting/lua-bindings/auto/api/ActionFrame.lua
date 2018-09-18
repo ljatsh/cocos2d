@@ -1,13 +1,13 @@
 
 --------------------------------
 -- @module ActionFrame
--- @extend Ref
--- @parent_module ccs
+-- @see Ref
+-- @see ccs
 
 --------------------------------
 -- @overload self, float, ccs.ActionFrame         
 -- @overload self, float         
--- @function [parent=#ActionFrame] getAction
+-- @function getAction
 -- @param self
 -- @param #float duration
 -- @param #ccs.ActionFrame srcFrame
@@ -16,14 +16,14 @@
 --------------------------------
 -- Gets the type of action frame<br>
 -- return the type of action frame
--- @function [parent=#ActionFrame] getFrameType 
+-- @function getFrameType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Changes the time of action frame<br>
 -- param fTime  the time of action frame
--- @function [parent=#ActionFrame] setFrameTime 
+-- @function setFrameTime 
 -- @param self
 -- @param #float fTime
 -- @return ActionFrame#ActionFrame self (return value: ccs.ActionFrame)
@@ -31,7 +31,7 @@
 --------------------------------
 -- Changes the easing type.<br>
 -- param easingType the easing type.
--- @function [parent=#ActionFrame] setEasingType 
+-- @function setEasingType 
 -- @param self
 -- @param #int easingType
 -- @return ActionFrame#ActionFrame self (return value: ccs.ActionFrame)
@@ -39,21 +39,21 @@
 --------------------------------
 -- Gets the time of action frame<br>
 -- return fTime  the time of action frame
--- @function [parent=#ActionFrame] getFrameTime 
+-- @function getFrameTime 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- Gets the index of action frame<br>
 -- return the index of action frame
--- @function [parent=#ActionFrame] getFrameIndex 
+-- @function getFrameIndex 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Changes the type of action frame<br>
 -- param frameType   the type of action frame
--- @function [parent=#ActionFrame] setFrameType 
+-- @function setFrameType 
 -- @param self
 -- @param #int frameType
 -- @return ActionFrame#ActionFrame self (return value: ccs.ActionFrame)
@@ -61,7 +61,7 @@
 --------------------------------
 -- Changes the index of action frame<br>
 -- param index   the index of action frame
--- @function [parent=#ActionFrame] setFrameIndex 
+-- @function setFrameIndex 
 -- @param self
 -- @param #int index
 -- @return ActionFrame#ActionFrame self (return value: ccs.ActionFrame)
@@ -69,7 +69,7 @@
 --------------------------------
 -- Set the ActionInterval easing parameter.<br>
 -- param parameter   the parameter for frame ease
--- @function [parent=#ActionFrame] setEasingParameter 
+-- @function setEasingParameter 
 -- @param self
 -- @param #array_table parameter
 -- @return ActionFrame#ActionFrame self (return value: ccs.ActionFrame)
@@ -77,13 +77,13 @@
 --------------------------------
 -- Gets the easing type.<br>
 -- return the easing type.
--- @function [parent=#ActionFrame] getEasingType 
+-- @function getEasingType 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Default constructor
--- @function [parent=#ActionFrame] ActionFrame 
+-- @function ActionFrame 
 -- @param self
 -- @return ActionFrame#ActionFrame self (return value: ccs.ActionFrame)
         

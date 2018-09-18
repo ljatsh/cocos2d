@@ -1,25 +1,25 @@
 
 --------------------------------
 -- @module EventListenerController
--- @extend EventListener
--- @parent_module cc
+-- @see EventListener
+-- @see cc
 
 --------------------------------
 --  Create a controller event listener.<br>
 -- return An autoreleased EventListenerController object.
--- @function [parent=#EventListenerController] create 
+-- @function create 
 -- @param self
 -- @return EventListenerController#EventListenerController ret (return value: cc.EventListenerController)
         
 --------------------------------
 -- 
--- @function [parent=#EventListenerController] clone 
+-- @function clone 
 -- @param self
 -- @return EventListenerController#EventListenerController ret (return value: cc.EventListenerController)
         
 --------------------------------
 -- / Overrides
--- @function [parent=#EventListenerController] checkAvailable 
+-- @function checkAvailable 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         

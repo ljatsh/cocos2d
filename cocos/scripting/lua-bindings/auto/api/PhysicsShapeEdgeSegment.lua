@@ -1,20 +1,20 @@
 
 --------------------------------
 -- @module PhysicsShapeEdgeSegment
--- @extend PhysicsShape
--- @parent_module cc
+-- @see PhysicsShape
+-- @see cc
 
 --------------------------------
 -- Get this edge's end position.<br>
 -- return A Vec2 object.
--- @function [parent=#PhysicsShapeEdgeSegment] getPointB 
+-- @function getPointB 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- Get this edge's begin position.<br>
 -- return A Vec2 object.
--- @function [parent=#PhysicsShapeEdgeSegment] getPointA 
+-- @function getPointA 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
@@ -25,7 +25,7 @@
 -- param   material A PhysicsMaterial object, the default value is PHYSICSSHAPE_MATERIAL_DEFAULT.<br>
 -- param   border It's a edge's border width.<br>
 -- return  An autoreleased PhysicsShapeEdgeSegment object pointer.
--- @function [parent=#PhysicsShapeEdgeSegment] create 
+-- @function create 
 -- @param self
 -- @param #vec2_table a
 -- @param #vec2_table b
@@ -36,7 +36,7 @@
 --------------------------------
 -- Get this edge's center position.<br>
 -- return A Vec2 object.
--- @function [parent=#PhysicsShapeEdgeSegment] getCenter 
+-- @function getCenter 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         

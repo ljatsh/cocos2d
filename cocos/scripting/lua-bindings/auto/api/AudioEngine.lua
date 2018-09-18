@@ -1,11 +1,11 @@
 
 --------------------------------
 -- @module AudioEngine
--- @parent_module ccexp
+-- @see ccexp
 
 --------------------------------
 -- 
--- @function [parent=#AudioEngine] lazyInit 
+-- @function lazyInit 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -14,7 +14,7 @@
 -- param audioID   An audioID returned by the play2d function.<br>
 -- param sec       The offset in seconds from the start to seek to.<br>
 -- return 
--- @function [parent=#AudioEngine] setCurrentTime 
+-- @function setCurrentTime 
 -- @param self
 -- @param #int audioID
 -- @param #float sec
@@ -24,7 +24,7 @@
 -- Gets the volume value of an audio instance.<br>
 -- param audioID An audioID returned by the play2d function.<br>
 -- return Volume value (range from 0.0 to 1.0).
--- @function [parent=#AudioEngine] getVolume 
+-- @function getVolume 
 -- @param self
 -- @param #int audioID
 -- @return float#float ret (return value: float)
@@ -34,40 +34,40 @@
 -- AudioEngine cache audio data on ios,mac, and win32 platform.<br>
 -- warning This can lead to stop related audio first.<br>
 -- param filePath Audio file path.
--- @function [parent=#AudioEngine] uncache 
+-- @function uncache 
 -- @param self
 -- @param #string filePath
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
         
 --------------------------------
 --  Resume all suspended audio instances. 
--- @function [parent=#AudioEngine] resumeAll 
+-- @function resumeAll 
 -- @param self
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
         
 --------------------------------
 --  Stop all audio instances. 
--- @function [parent=#AudioEngine] stopAll 
+-- @function stopAll 
 -- @param self
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
         
 --------------------------------
 -- Pause an audio instance.<br>
 -- param audioID An audioID returned by the play2d function.
--- @function [parent=#AudioEngine] pause 
+-- @function pause 
 -- @param self
 -- @param #int audioID
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
         
 --------------------------------
 -- Gets the maximum number of simultaneous audio instance of AudioEngine.
--- @function [parent=#AudioEngine] getMaxAudioInstance 
+-- @function getMaxAudioInstance 
 -- @param self
 -- @return int#int ret (return value: int)
         
 --------------------------------
 -- Check whether AudioEngine is enabled.
--- @function [parent=#AudioEngine] isEnabled 
+-- @function isEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -75,7 +75,7 @@
 -- Gets the current playback position of an audio instance.<br>
 -- param audioID An audioID returned by the play2d function.<br>
 -- return The current playback position of an audio instance.
--- @function [parent=#AudioEngine] getCurrentTime 
+-- @function getCurrentTime 
 -- @param self
 -- @param #int audioID
 -- @return float#float ret (return value: float)
@@ -83,7 +83,7 @@
 --------------------------------
 -- Sets the maximum number of simultaneous audio instance for AudioEngine.<br>
 -- param maxInstances The maximum number of simultaneous audio instance.
--- @function [parent=#AudioEngine] setMaxAudioInstance 
+-- @function setMaxAudioInstance 
 -- @param self
 -- @param #int maxInstances
 -- @return bool#bool ret (return value: bool)
@@ -92,21 +92,21 @@
 -- Checks whether an audio instance is loop.<br>
 -- param audioID An audioID returned by the play2d function.<br>
 -- return Whether or not an audio instance is loop.
--- @function [parent=#AudioEngine] isLoop 
+-- @function isLoop 
 -- @param self
 -- @param #int audioID
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 --  Pause all playing audio instances. 
--- @function [parent=#AudioEngine] pauseAll 
+-- @function pauseAll 
 -- @param self
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
         
 --------------------------------
 -- Uncache all audio data from internal buffer.<br>
 -- warning All audio will be stopped first.
--- @function [parent=#AudioEngine] uncacheAll 
+-- @function uncacheAll 
 -- @param self
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
         
@@ -114,7 +114,7 @@
 -- Sets volume for an audio instance.<br>
 -- param audioID An audioID returned by the play2d function.<br>
 -- param volume Volume value (range from 0.0 to 1.0).
--- @function [parent=#AudioEngine] setVolume 
+-- @function setVolume 
 -- @param self
 -- @param #int audioID
 -- @param #float volume
@@ -123,7 +123,7 @@
 --------------------------------
 -- @overload self, string, function         
 -- @overload self, string         
--- @function [parent=#AudioEngine] preload
+-- @function preload
 -- @param self
 -- @param #string filePath
 -- @param #function callback
@@ -132,7 +132,7 @@
 --------------------------------
 -- Whether to enable playing audios<br>
 -- note If it's disabled, current playing audios will be stopped and the later 'preload', 'play2d' methods will take no effects.
--- @function [parent=#AudioEngine] setEnabled 
+-- @function setEnabled 
 -- @param self
 -- @param #bool isEnabled
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
@@ -145,7 +145,7 @@
 -- param profile A profile for audio instance. When profile is not specified, default profile will be used.<br>
 -- return An audio ID. It allows you to dynamically change the behavior of an audio instance on the fly.<br>
 -- see `AudioProfile`
--- @function [parent=#AudioEngine] play2d 
+-- @function play2d 
 -- @param self
 -- @param #string filePath
 -- @param #bool loop
@@ -157,7 +157,7 @@
 -- Returns the state of an audio instance.<br>
 -- param audioID An audioID returned by the play2d function.<br>
 -- return The status of an audio instance.
--- @function [parent=#AudioEngine] getState 
+-- @function getState 
 -- @param self
 -- @param #int audioID
 -- @return int#int ret (return value: int)
@@ -165,7 +165,7 @@
 --------------------------------
 -- Resume an audio instance.<br>
 -- param audioID An audioID returned by the play2d function.
--- @function [parent=#AudioEngine] resume 
+-- @function resume 
 -- @param self
 -- @param #int audioID
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
@@ -173,7 +173,7 @@
 --------------------------------
 -- Stop an audio instance.<br>
 -- param audioID An audioID returned by the play2d function.
--- @function [parent=#AudioEngine] stop 
+-- @function stop 
 -- @param self
 -- @param #int audioID
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
@@ -182,7 +182,7 @@
 -- Release objects relating to AudioEngine.<br>
 -- warning It must be called before the application exit.<br>
 -- lua endToLua
--- @function [parent=#AudioEngine] end 
+-- @function end 
 -- @param self
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
         
@@ -190,7 +190,7 @@
 -- Gets the duration of an audio instance.<br>
 -- param audioID An audioID returned by the play2d function.<br>
 -- return The duration of an audio instance.
--- @function [parent=#AudioEngine] getDuration 
+-- @function getDuration 
 -- @param self
 -- @param #int audioID
 -- @return float#float ret (return value: float)
@@ -199,7 +199,7 @@
 -- Sets whether an audio instance loop or not.<br>
 -- param audioID An audioID returned by the play2d function.<br>
 -- param loop Whether audio instance loop or not.
--- @function [parent=#AudioEngine] setLoop 
+-- @function setLoop 
 -- @param self
 -- @param #int audioID
 -- @param #bool loop
@@ -208,21 +208,21 @@
 --------------------------------
 -- Gets the default profile of audio instances.<br>
 -- return The default profile of audio instances.
--- @function [parent=#AudioEngine] getDefaultProfile 
+-- @function getDefaultProfile 
 -- @param self
 -- @return experimental::AudioProfile#experimental::AudioProfile ret (return value: cc.experimental::AudioProfile)
         
 --------------------------------
 -- @overload self, string         
 -- @overload self, int         
--- @function [parent=#AudioEngine] getProfile
+-- @function getProfile
 -- @param self
 -- @param #int audioID
 -- @return experimental::AudioProfile#experimental::AudioProfile ret (return value: cc.experimental::AudioProfile)
 
 --------------------------------
 -- Gets playing audio count.
--- @function [parent=#AudioEngine] getPlayingAudioCount 
+-- @function getPlayingAudioCount 
 -- @param self
 -- @return int#int ret (return value: int)
         

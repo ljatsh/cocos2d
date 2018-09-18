@@ -1,38 +1,38 @@
 
 --------------------------------
 -- @module EaseCircleActionOut
--- @extend ActionEase
--- @parent_module cc
+-- @see ActionEase
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#EaseCircleActionOut] create 
+-- @function create 
 -- @param self
 -- @param #cc.ActionInterval action
 -- @return EaseCircleActionOut#EaseCircleActionOut ret (return value: cc.EaseCircleActionOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseCircleActionOut] clone 
+-- @function clone 
 -- @param self
 -- @return EaseCircleActionOut#EaseCircleActionOut ret (return value: cc.EaseCircleActionOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseCircleActionOut] update 
+-- @function update 
 -- @param self
 -- @param #float time
 -- @return EaseCircleActionOut#EaseCircleActionOut self (return value: cc.EaseCircleActionOut)
         
 --------------------------------
 -- 
--- @function [parent=#EaseCircleActionOut] reverse 
+-- @function reverse 
 -- @param self
 -- @return ActionEase#ActionEase ret (return value: cc.ActionEase)
         
 --------------------------------
 -- 
--- @function [parent=#EaseCircleActionOut] EaseCircleActionOut 
+-- @function EaseCircleActionOut 
 -- @param self
 -- @return EaseCircleActionOut#EaseCircleActionOut self (return value: cc.EaseCircleActionOut)
         

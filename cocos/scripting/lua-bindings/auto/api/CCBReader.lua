@@ -1,130 +1,130 @@
 
 --------------------------------
 -- @module CCBReader
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#CCBReader] addOwnerOutletName 
+-- @function addOwnerOutletName 
 -- @param self
 -- @param #string name
 -- @return CCBReader#CCBReader self (return value: cc.CCBReader)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] getOwnerCallbackNames 
+-- @function getOwnerCallbackNames 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] addDocumentCallbackControlEvents 
+-- @function addDocumentCallbackControlEvents 
 -- @param self
 -- @param #int eventType
 -- @return CCBReader#CCBReader self (return value: cc.CCBReader)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] setCCBRootPath 
+-- @function setCCBRootPath 
 -- @param self
 -- @param #char ccbRootPath
 -- @return CCBReader#CCBReader self (return value: cc.CCBReader)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] addOwnerOutletNode 
+-- @function addOwnerOutletNode 
 -- @param self
 -- @param #cc.Node node
 -- @return CCBReader#CCBReader self (return value: cc.CCBReader)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] getOwnerCallbackNodes 
+-- @function getOwnerCallbackNodes 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] readSoundKeyframesForSeq 
+-- @function readSoundKeyframesForSeq 
 -- @param self
 -- @param #cc.CCBSequence seq
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] getCCBRootPath 
+-- @function getCCBRootPath 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] getOwnerCallbackControlEvents 
+-- @function getOwnerCallbackControlEvents 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] getOwnerOutletNodes 
+-- @function getOwnerOutletNodes 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] readUTF8 
+-- @function readUTF8 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] addOwnerCallbackControlEvents 
+-- @function addOwnerCallbackControlEvents 
 -- @param self
 -- @param #int type
 -- @return CCBReader#CCBReader self (return value: cc.CCBReader)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] getOwnerOutletNames 
+-- @function getOwnerOutletNames 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- js setActionManager<br>
 -- lua setActionManager
--- @function [parent=#CCBReader] setAnimationManager 
+-- @function setAnimationManager 
 -- @param self
 -- @param #cc.CCBAnimationManager pAnimationManager
 -- @return CCBReader#CCBReader self (return value: cc.CCBReader)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] readCallbackKeyframesForSeq 
+-- @function readCallbackKeyframesForSeq 
 -- @param self
 -- @param #cc.CCBSequence seq
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] getAnimationManagersForNodes 
+-- @function getAnimationManagersForNodes 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] getNodesWithAnimationManagers 
+-- @function getNodesWithAnimationManagers 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
 -- js getActionManager<br>
 -- lua getActionManager
--- @function [parent=#CCBReader] getAnimationManager 
+-- @function getAnimationManager 
 -- @param self
 -- @return CCBAnimationManager#CCBAnimationManager ret (return value: cc.CCBAnimationManager)
         
 --------------------------------
 -- 
--- @function [parent=#CCBReader] setResolutionScale 
+-- @function setResolutionScale 
 -- @param self
 -- @param #float scale
 -- @return CCBReader#CCBReader self (return value: cc.CCBReader)
@@ -133,7 +133,7 @@
 -- @overload self, cc.CCBReader         
 -- @overload self, cc.NodeLoaderLibrary, cc.CCBMemberVariableAssigner, cc.CCBSelectorResolver, cc.NodeLoaderListener         
 -- @overload self         
--- @function [parent=#CCBReader] CCBReader
+-- @function CCBReader
 -- @param self
 -- @param #cc.NodeLoaderLibrary pNodeLoaderLibrary
 -- @param #cc.CCBMemberVariableAssigner pCCBMemberVariableAssigner

@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module RelativeBox
--- @extend Layout
--- @parent_module ccui
+-- @see Layout
+-- @see ccui
 
 --------------------------------
 -- 
--- @function [parent=#RelativeBox] initWithSize 
+-- @function initWithSize 
 -- @param self
 -- @param #size_table size
 -- @return bool#bool ret (return value: bool)
@@ -14,14 +14,14 @@
 --------------------------------
 -- @overload self, size_table         
 -- @overload self         
--- @function [parent=#RelativeBox] create
+-- @function create
 -- @param self
 -- @param #size_table size
 -- @return RelativeBox#RelativeBox ret (return value: ccui.RelativeBox)
 
 --------------------------------
 -- 
--- @function [parent=#RelativeBox] init 
+-- @function init 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
@@ -29,7 +29,7 @@
 -- Default constructor.<br>
 -- js ctor<br>
 -- lua new
--- @function [parent=#RelativeBox] RelativeBox 
+-- @function RelativeBox 
 -- @param self
 -- @return RelativeBox#RelativeBox self (return value: ccui.RelativeBox)
         

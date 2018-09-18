@@ -1,63 +1,63 @@
 
 --------------------------------
 -- @module PositionFrame
--- @extend Frame
--- @parent_module ccs
+-- @see Frame
+-- @see ccs
 
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] getX 
+-- @function getX 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] getY 
+-- @function getY 
 -- @param self
 -- @return float#float ret (return value: float)
         
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] setPosition 
+-- @function setPosition 
 -- @param self
 -- @param #vec2_table position
 -- @return PositionFrame#PositionFrame self (return value: ccs.PositionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] setX 
+-- @function setX 
 -- @param self
 -- @param #float x
 -- @return PositionFrame#PositionFrame self (return value: ccs.PositionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] setY 
+-- @function setY 
 -- @param self
 -- @param #float y
 -- @return PositionFrame#PositionFrame self (return value: ccs.PositionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] getPosition 
+-- @function getPosition 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] create 
+-- @function create 
 -- @param self
 -- @return PositionFrame#PositionFrame ret (return value: ccs.PositionFrame)
         
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] clone 
+-- @function clone 
 -- @param self
 -- @return Frame#Frame ret (return value: ccs.Frame)
         
 --------------------------------
 -- 
--- @function [parent=#PositionFrame] PositionFrame 
+-- @function PositionFrame 
 -- @param self
 -- @return PositionFrame#PositionFrame self (return value: ccs.PositionFrame)
         

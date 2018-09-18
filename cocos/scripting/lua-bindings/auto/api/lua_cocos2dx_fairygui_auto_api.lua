@@ -3,127 +3,176 @@
 
 --------------------------------------------------------
 -- the fgui UIConfig
--- @field [parent=#fgui] UIConfig#UIConfig UIConfig preloaded module
+-- @field UIConfig preloaded module
+-- @see UIConfig
 
 
 --------------------------------------------------------
 -- the fgui InputEvent
--- @field [parent=#fgui] InputEvent#InputEvent InputEvent preloaded module
+-- @field InputEvent preloaded module
+-- @see InputEvent
 
 
 --------------------------------------------------------
 -- the fgui EventContext
--- @field [parent=#fgui] EventContext#EventContext EventContext preloaded module
+-- @field EventContext preloaded module
+-- @see EventContext
 
 
 --------------------------------------------------------
 -- the fgui UIEventDispatcher
--- @field [parent=#fgui] UIEventDispatcher#UIEventDispatcher UIEventDispatcher preloaded module
+-- @field UIEventDispatcher preloaded module
+-- @see UIEventDispatcher
+
+
+--------------------------------------------------------
+-- the fgui GController
+-- @field GController preloaded module
+-- @see GController
 
 
 --------------------------------------------------------
 -- the fgui GObject
--- @field [parent=#fgui] GObject#GObject GObject preloaded module
+-- @field GObject preloaded module
+-- @see GObject
 
 
 --------------------------------------------------------
 -- the fgui UIPackage
--- @field [parent=#fgui] UIPackage#UIPackage UIPackage preloaded module
+-- @field UIPackage preloaded module
+-- @see UIPackage
 
 
 --------------------------------------------------------
 -- the fgui GImage
--- @field [parent=#fgui] GImage#GImage GImage preloaded module
+-- @field GImage preloaded module
+-- @see GImage
 
 
 --------------------------------------------------------
 -- the fgui GMovieClip
--- @field [parent=#fgui] GMovieClip#GMovieClip GMovieClip preloaded module
+-- @field GMovieClip preloaded module
+-- @see GMovieClip
+
+
+--------------------------------------------------------
+-- the fgui GTextField
+-- @field GTextField preloaded module
+-- @see GTextField
+
+
+--------------------------------------------------------
+-- the fgui GRichTextField
+-- @field GRichTextField preloaded module
+-- @see GRichTextField
 
 
 --------------------------------------------------------
 -- the fgui GTextInput
--- @field [parent=#fgui] GTextInput#GTextInput GTextInput preloaded module
+-- @field GTextInput preloaded module
+-- @see GTextInput
 
 
 --------------------------------------------------------
 -- the fgui GGraph
--- @field [parent=#fgui] GGraph#GGraph GGraph preloaded module
+-- @field GGraph preloaded module
+-- @see GGraph
 
 
 --------------------------------------------------------
 -- the fgui GLoader
--- @field [parent=#fgui] GLoader#GLoader GLoader preloaded module
+-- @field GLoader preloaded module
+-- @see GLoader
 
 
 --------------------------------------------------------
 -- the fgui GGroup
--- @field [parent=#fgui] GGroup#GGroup GGroup preloaded module
+-- @field GGroup preloaded module
+-- @see GGroup
 
 
 --------------------------------------------------------
 -- the fgui Transition
--- @field [parent=#fgui] Transition#Transition Transition preloaded module
+-- @field Transition preloaded module
+-- @see Transition
 
 
 --------------------------------------------------------
 -- the fgui ScrollPane
--- @field [parent=#fgui] ScrollPane#ScrollPane ScrollPane preloaded module
+-- @field ScrollPane preloaded module
+-- @see ScrollPane
 
 
 --------------------------------------------------------
 -- the fgui GComponent
--- @field [parent=#fgui] GComponent#GComponent GComponent preloaded module
+-- @field GComponent preloaded module
+-- @see GComponent
 
 
 --------------------------------------------------------
 -- the fgui GButton
--- @field [parent=#fgui] GButton#GButton GButton preloaded module
+-- @field GButton preloaded module
+-- @see GButton
 
 
 --------------------------------------------------------
 -- the fgui GList
--- @field [parent=#fgui] GList#GList GList preloaded module
+-- @field GList preloaded module
+-- @see GList
 
 
 --------------------------------------------------------
 -- the fgui GComboBox
--- @field [parent=#fgui] GComboBox#GComboBox GComboBox preloaded module
+-- @field GComboBox preloaded module
+-- @see GComboBox
 
 
 --------------------------------------------------------
 -- the fgui GProgressBar
--- @field [parent=#fgui] GProgressBar#GProgressBar GProgressBar preloaded module
+-- @field GProgressBar preloaded module
+-- @see GProgressBar
 
 
 --------------------------------------------------------
 -- the fgui GSlider
--- @field [parent=#fgui] GSlider#GSlider GSlider preloaded module
+-- @field GSlider preloaded module
+-- @see GSlider
 
 
 --------------------------------------------------------
 -- the fgui GScrollBar
--- @field [parent=#fgui] GScrollBar#GScrollBar GScrollBar preloaded module
+-- @field GScrollBar preloaded module
+-- @see GScrollBar
 
 
 --------------------------------------------------------
 -- the fgui Window
--- @field [parent=#fgui] Window#Window Window preloaded module
+-- @field Window preloaded module
+-- @see Window
 
 
 --------------------------------------------------------
 -- the fgui GRoot
--- @field [parent=#fgui] GRoot#GRoot GRoot preloaded module
+-- @field GRoot preloaded module
+-- @see GRoot
 
 
 --------------------------------------------------------
 -- the fgui PopupMenu
--- @field [parent=#fgui] PopupMenu#PopupMenu PopupMenu preloaded module
+-- @field PopupMenu preloaded module
+-- @see PopupMenu
+
+
+--------------------------------------------------------
+-- the fgui UIObjectFactory
+-- @field UIObjectFactory preloaded module
+-- @see UIObjectFactory
 
 
 --------------------------------------------------------
 -- the fgui DragDropManager
--- @field [parent=#fgui] DragDropManager#DragDropManager DragDropManager preloaded module
+-- @field DragDropManager preloaded module
+-- @see DragDropManager
 
 
 return nil

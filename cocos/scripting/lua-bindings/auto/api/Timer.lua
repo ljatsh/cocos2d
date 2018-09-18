@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module Timer
--- @extend Ref
--- @parent_module cc
+-- @see Ref
+-- @see cc
 
 --------------------------------
 -- 
--- @function [parent=#Timer] setupTimerWithInterval 
+-- @function setupTimerWithInterval 
 -- @param self
 -- @param #float seconds
 -- @param #unsigned int repeat
@@ -15,39 +15,39 @@
         
 --------------------------------
 --  triggers the timer 
--- @function [parent=#Timer] update 
+-- @function update 
 -- @param self
 -- @param #float dt
 -- @return Timer#Timer self (return value: cc.Timer)
         
 --------------------------------
 -- 
--- @function [parent=#Timer] isAborted 
+-- @function isAborted 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Timer] isExhausted 
+-- @function isExhausted 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
--- @function [parent=#Timer] trigger 
+-- @function trigger 
 -- @param self
 -- @param #float dt
 -- @return Timer#Timer self (return value: cc.Timer)
         
 --------------------------------
 -- 
--- @function [parent=#Timer] cancel 
+-- @function cancel 
 -- @param self
 -- @return Timer#Timer self (return value: cc.Timer)
         
 --------------------------------
 -- 
--- @function [parent=#Timer] setAborted 
+-- @function setAborted 
 -- @param self
 -- @return Timer#Timer self (return value: cc.Timer)
         
