@@ -1,6 +1,7 @@
 
 local demoScene = require('demoScene')
 local basicScene = require('basicScene')
+local hittestScene = require('hittestScene')
 
 local mainMenu = class('mainMenu', demoScene)
 
@@ -12,6 +13,9 @@ function mainMenu:init()
   local director = cc.Director:getInstance()
   self._view:getChild("n1"):addClickListener(function(context)
     director:replaceScene(basicScene.new())
+  end)
+  self._view:getChild('n6'):addClickListener(function(context)
+    director:replaceScene(hittestScene.new())
   end)
 end
 
