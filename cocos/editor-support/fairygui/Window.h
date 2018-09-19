@@ -60,9 +60,9 @@ public:
 
 protected:
     virtual void handleInit() override;
-    virtual void onInit() {};
-    virtual void onShown() {};
-    virtual void onHide() {};
+    virtual void onInit();
+    virtual void onShown();
+    virtual void onHide();
     virtual void doShowAnimation();
     virtual void doHideAnimation();
 

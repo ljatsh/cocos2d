@@ -35,6 +35,8 @@ void Window::handleInit()
     GComponent::handleInit();
 
     addEventListener(UIEventType::TouchBegin, CC_CALLBACK_1(Window::onTouchBegin, this));
+
+    dispatchEvent(UIEventType::Window_OnHandleInit);
 }
 
 void Window::setContentPane(GComponent* value)
@@ -112,17 +114,25 @@ void Window::setDragArea(GObject * value)
 void Window::show()
 {
     UIRoot->showWindow(this);
+
+    dispatchEvent(UIEventType::Window_OnShown);
 }
 
 void Window::hide()
 {
     if (isShowing())
+    {
         doHideAnimation();
+    }
+
+    dispatchEvent(UIEventType::Window_OnHide);
 }
 
 void Window::hideImmediately()
 {
     UIRoot->hideWindowImmediately(this);
+
+    dispatchEvent(UIEventType::Window_OnHide);
 }
 
 void Window::toggleStatus()

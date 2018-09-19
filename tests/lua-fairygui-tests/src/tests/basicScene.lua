@@ -1,5 +1,28 @@
 
 local demoScene = require('demoScene')
+local window = require('fairygui.window')
+
+local window1 = class('window1', window)
+
+function window1:onInit(eventContext)
+  print('onInit')
+  self:setContentPane(fgui.UIPackage.createObject('Basics', 'WindowsA'))
+  self:enter()
+end
+
+function window1:onShown(eventContext)
+  print('onShown')
+
+  local list = self:getContentPane():getChild('n6')
+  list:removeChildrenToPool()
+
+  for i=0, 5 do
+    local item = list:addItemFromPool()
+    item:setTitle(tostring(i))
+    item:setIcon('ui://Basics/r4')
+  end
+end
+
 local basicScene = class("basicScene", demoScene)
 
 function basicScene:init()
@@ -59,16 +82,45 @@ function basicScene:runDemo(context)
   self._controller:setSelectedIndex(1)
   self._backBtn:setVisible(true)
 
-  -- if (type == "Text")
-  --     playText();
-  -- else if (type == "Depth")
-  --     playDepth();
-  -- else if (type == "Window")
-  --     playWindow();
-  -- else if (type == "Drag&Drop")
-  --     playDragDrop();
-  -- else if (type == "Popup")
-  --     playPopup();
+  if type == 'Text' then
+      self:playText()
+  elseif type == 'Depth' then
+      self:playDepth()
+  elseif type == 'Window' then
+      self:playWindow()
+  elseif type == 'Drag&Drop' then
+      self:playDragDrop()
+  elseif type == 'Popup' then
+      self:playPopup()
+  end
+end
+
+function basicScene:playText()
+end
+
+function basicScene:playDepth()
+end
+
+function basicScene:playWindow()
+  local object = self._demoObjects['Window']
+
+  if self._winA == nil then
+    self._winA = window1.new()
+    self._winA:retain()
+
+    print('self._winA was created')
+
+    object:getChild('n0'):addClickListener(function(eventContext)
+      print('show')
+      self._winA:show()
+    end)
+  end
+end
+
+function basicScene:playDragDrop()
+end
+
+function basicScene:playPopup()
 end
 
 return basicScene

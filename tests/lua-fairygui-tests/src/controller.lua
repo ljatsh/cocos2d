@@ -4,6 +4,7 @@
 -- run
 CC_USE_DEPRECATED_API = true
 require "cocos.init"
+require "fairygui.consts"
 
 local director = cc.Director:getInstance()
 local glView   = director:getOpenGLView()

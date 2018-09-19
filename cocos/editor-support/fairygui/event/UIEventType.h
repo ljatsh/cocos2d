@@ -45,6 +45,15 @@ public:
     static const int Drop = 63;
 
     static const int GearStop = 70;
+
+    static const int Window_OnHandleInit = 80;
+    static const int Window_OnInit = 81;
+    static const int Window_OnShown = 82;
+    static const int Window_OnHide = 83;
+    static const int Window_DoShowAnim = 84;
+    static const int Window_DoHideAnim = 85;
+    static const int Window_OnEnter = 86;
+    static const int Window_OnExit = 87;
 };
 
 NS_FGUI_END
