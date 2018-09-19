@@ -100,6 +100,13 @@ function basicScene:dispose()
     self._winB:dispose()
     self._winB = nil
   end
+
+  if self._pm ~= nil then
+    self._pm:release()
+    self._pm = nil
+    self._popupCom:release()
+    self._popupCom = nil
+  end
 end
 
 function basicScene:onClickBack(context)
@@ -162,9 +169,68 @@ function basicScene:playWindow()
 end
 
 function basicScene:playDragDrop()
+  local object = self._demoObjects['Drag&Drop']
+
+  object:getChild('a'):setDraggable(true)
+
+  local b = object:getChild('b')
+  b:setDraggable(true)
+  b:addEventListener(fgui.UIEvent.DragStart, function(eventContext)
+    -- Cancel the original dragging, and start a new one with a agent.
+    eventContext:preventDefault()
+
+    fgui.DragDropManager:getInstance():startDrag(b:getIcon(), b:getIcon(), eventContext:getInput():getTouchId())
+  end)
+
+  local c = object:getChild('c')
+  c:setIcon('')
+  c:addEventListener(fgui.UIEvent.Drop, function(eventContext)
+    c:setIcon(eventContext:getDataValue())
+  end)
+
+  local d = object:getChild('d')
+  d:setDraggable(true)
+
+  d:addEventListener(fgui.UIEvent.DragStart, function(eventContext)
+    local bounds = object:getChild('n7')
+    local size = bounds:getSize()
+    local rect = bounds:transformRect(cc.rect(0, 0, size.width, size.height), self._groot)
+    print(rect.x, rect.y, rect.width, rect.height)
+    d:setDragBounds(rect)
+  end)
 end
 
 function basicScene:playPopup()
+  if self._pm == nil then
+    self._pm = fgui.PopupMenu:create()
+    self._pm:retain()
+    -- self._pm:addItem('Item 1', handler(self, self.onClickMenu))
+    -- self._pm:addItem('Item 2', handler(self, self.onClickMenu))
+    -- self._pm:addItem('Item 3', handler(self, self.onClickMenu))
+    -- self._pm:addItem('Item 4', handler(self, self.onClickMenu))
+  end
+
+  if self._popupCom == nil then
+    self._popupCom = fgui.UIPackage:createObject('Basics', 'Component12')
+    self._popupCom:retain()
+    self._popupCom:center()
+  end
+
+  local object = self._demoObjects['Popup']
+  object:getChild('n0'):addClickListener(function(eventContext)
+    self._pm:show(eventContext:getSender(), fgui.PopupDirection.DOWN)
+  end)
+
+  object:getChild('n1'):addClickListener(function(eventContenxt)
+    self._groot:showPopup(self._popupCom)
+  end)
+
+  object:addEventListener(fgui.UIEvent.RightClick, function(eventContext)
+    self._pm:show()
+  end)
+end
+
+function basicScene:onClickMenu()
 end
 
 return basicScene
