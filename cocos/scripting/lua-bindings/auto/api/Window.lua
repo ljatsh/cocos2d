@@ -30,6 +30,12 @@
         
 --------------------------------
 -- 
+-- @function setCustomizedFlow 
+-- @param self
+-- @return Window#Window self (return value: fgui.Window)
+        
+--------------------------------
+-- 
 -- @function hideImmediately 
 -- @param self
 -- @return Window#Window self (return value: fgui.Window)

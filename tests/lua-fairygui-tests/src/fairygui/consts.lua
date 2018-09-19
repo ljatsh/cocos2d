@@ -38,12 +38,27 @@ fgui.UIEvent = {
 
   GearStop = 70,
 
-  Window_OnHandleInit = 80,
-  Window_OnInit = 81,
-  Window_OnShown = 82,
-  Window_OnHide = 83,
-  Window_DoShowAnim = 84,
-  Window_DoHideAnim = 85,
-  Window_OnEnter = 86,
-  Window_OnExit = 87
+  Window_OnInit = 80,
+  Window_OnShown = 81,
+  Window_OnHide = 82,
+  Window_DoShowAnim = 83,
+  Window_DoHideAnim = 84,
+  Window_OnEnter = 85,
+  Window_OnExit = 86
 }
+
+fgui.TweenPropType = {
+    None = 0,
+    X = 1,
+    Y = 2,
+    Position = 3,
+    Width = 4,
+    Height = 5,
+    Size = 6,
+    ScaleX = 7,
+    ScaleY = 8,
+    Scale = 9,
+    Rotation = 10,
+    Alpha = 11,
+    Progress = 12
+};

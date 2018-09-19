@@ -5,14 +5,11 @@ local window = require('fairygui.window')
 local window1 = class('window1', window)
 
 function window1:onInit(eventContext)
-  print('onInit')
-  self:setContentPane(fgui.UIPackage.createObject('Basics', 'WindowsA'))
-  self:enter()
+  self:setContentPane(fgui.UIPackage:createObject('Basics', 'WindowA'))
+  self:center()
 end
 
 function window1:onShown(eventContext)
-  print('onShown')
-
   local list = self:getContentPane():getChild('n6')
   list:removeChildrenToPool()
 
@@ -22,6 +19,41 @@ function window1:onShown(eventContext)
     item:setIcon('ui://Basics/r4')
   end
 end
+
+local window2 = class('window2', window)
+
+function window2:ctor()
+  -- super constructor should be called
+  window2.super.ctor(self)
+  self:setCustomizedFlow()
+end
+
+function window2:onInit(eventContext)
+  self:setContentPane(fgui.UIPackage:createObject('Basics', 'WindowB'))
+  self:center()
+end
+
+function window2:doShowAnim()
+  self:setScale(0.1, 0.1)
+  self:setPivot(0.5, 0.5)
+
+  local tweener = fgui.GTween:to(self:getScale(), cc.p(1, 1), 0.3)
+  tweener:setTarget(self, fgui.TweenPropType.Scale):onComplete(handler(self, self.onShown))
+end
+
+function window2:doHideAnim()
+  local tweener = fgui.GTween:to(self:getScale(), cc.p(0.1, 0.1), 0.3)
+  tweener:setTarget(self, fgui.TweenPropType.Scale):onComplete(handler(self, self.hideImmediately))
+end
+
+function window2:onShown()
+  self:getContentPane():getTransition('t1'):play()
+end
+
+function window2:onHide()
+  self:getContentPane():getTransition('t1'):stop()
+end
+
 
 local basicScene = class("basicScene", demoScene)
 
@@ -60,6 +92,14 @@ function basicScene:dispose()
     v:release()
   end
   self._demoObjects = {}
+
+  if self._winA ~= nil then
+    self._winA:dispose()
+    self._winA = nil
+
+    self._winB:dispose()
+    self._winB = nil
+  end
 end
 
 function basicScene:onClickBack(context)
@@ -108,11 +148,15 @@ function basicScene:playWindow()
     self._winA = window1.new()
     self._winA:retain()
 
-    print('self._winA was created')
-
     object:getChild('n0'):addClickListener(function(eventContext)
-      print('show')
       self._winA:show()
+    end)
+
+    self._winB = window2.new()
+    self._winB:retain()
+
+    object:getChild('n1'):addClickListener(function(eventContext)
+      self._winB:show()
     end)
   end
 end

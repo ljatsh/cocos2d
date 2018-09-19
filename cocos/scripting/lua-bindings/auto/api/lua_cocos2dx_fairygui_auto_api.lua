@@ -175,4 +175,16 @@
 -- @see DragDropManager
 
 
+--------------------------------------------------------
+-- the fgui GTweener
+-- @field GTweener preloaded module
+-- @see GTweener
+
+
+--------------------------------------------------------
+-- the fgui GTween
+-- @field GTween preloaded module
+-- @see GTween
+
+
 return nil

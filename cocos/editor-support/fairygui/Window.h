@@ -58,6 +58,8 @@ public:
 
     GObject* getModalWaitingPane() const { return _modalWaitPane; }
 
+    void setCustomizedFlow() { _customized_flow = true; }
+
 protected:
     virtual void handleInit() override;
     virtual void onInit();
@@ -92,6 +94,7 @@ private:
     cocos2d::Vector<IUISource*> _uiSources;
     bool _inited;
     bool _loading;
+    bool _customized_flow;
 };
 
 NS_FGUI_END

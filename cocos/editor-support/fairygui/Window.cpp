@@ -16,7 +16,8 @@ Window::Window() :
     _contentArea(nullptr),
     _modal(false),
     _inited(false),
-    _loading(false)
+    _loading(false),
+    _customized_flow(false)
 {
     _bringToFontOnClick = UIConfig::bringWindowToFrontOnClick;
 }
@@ -35,8 +36,6 @@ void Window::handleInit()
     GComponent::handleInit();
 
     addEventListener(UIEventType::TouchBegin, CC_CALLBACK_1(Window::onTouchBegin, this));
-
-    dispatchEvent(UIEventType::Window_OnHandleInit);
 }
 
 void Window::setContentPane(GComponent* value)
@@ -114,8 +113,6 @@ void Window::setDragArea(GObject * value)
 void Window::show()
 {
     UIRoot->showWindow(this);
-
-    dispatchEvent(UIEventType::Window_OnShown);
 }
 
 void Window::hide()
@@ -124,15 +121,11 @@ void Window::hide()
     {
         doHideAnimation();
     }
-
-    dispatchEvent(UIEventType::Window_OnHide);
 }
 
 void Window::hideImmediately()
 {
     UIRoot->hideWindowImmediately(this);
-
-    dispatchEvent(UIEventType::Window_OnHide);
 }
 
 void Window::toggleStatus()
@@ -240,14 +233,35 @@ void Window::addUISource(IUISource * uiSource)
     _uiSources.pushBack(uiSource);
 }
 
+void Window::onInit()
+{
+  dispatchEvent(UIEventType::Window_OnInit);
+}
+
+void Window::onShown()
+{
+  dispatchEvent(UIEventType::Window_OnShown);
+}
+
+void Window::onHide()
+{
+  dispatchEvent(UIEventType::Window_OnHide);
+}
+
 void Window::doShowAnimation()
 {
-    onShown();
+    dispatchEvent(UIEventType::Window_DoShowAnim);
+
+    if (!_customized_flow)
+      onShown();
 }
 
 void Window::doHideAnimation()
 {
-    hideImmediately();
+    dispatchEvent(UIEventType::Window_DoHideAnim);
+
+    if (!_customized_flow)
+      hideImmediately();
 }
 
 void Window::closeEventHandler(EventContext * context)
@@ -277,6 +291,8 @@ void Window::onEnter()
         initWindow();
     else
         doShowAnimation();
+
+    dispatchEvent(UIEventType::Window_OnEnter);
 }
 
 void Window::onExit()
@@ -285,6 +301,8 @@ void Window::onExit()
 
     closeModalWait();
     onHide();
+
+    dispatchEvent(UIEventType::Window_OnExit);
 }
 
 void Window::onTouchBegin(EventContext * context)
