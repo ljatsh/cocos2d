@@ -12,19 +12,6 @@
 -- @return Transition#Transition self (return value: fgui.Transition)
         
 --------------------------------
--- @overload self, int, float, function         
--- @overload self, function         
--- @overload self, int, float, float, float, function         
--- @function play
--- @param self
--- @param #int times
--- @param #float delay
--- @param #float startTime
--- @param #float endTime
--- @param #function callback
--- @return Transition#Transition self (return value: fgui.Transition)
-
---------------------------------
 -- 
 -- @function setPaused 
 -- @param self
@@ -103,14 +90,6 @@
         
 --------------------------------
 -- 
--- @function setHook 
--- @param self
--- @param #string label
--- @param #function callback
--- @return Transition#Transition self (return value: fgui.Transition)
-        
---------------------------------
--- 
 -- @function setValue 
 -- @param self
 -- @param #string label
@@ -147,16 +126,6 @@
 -- @param #float dy
 -- @return Transition#Transition self (return value: fgui.Transition)
         
---------------------------------
--- @overload self, int, float, function         
--- @overload self, function         
--- @function playReverse
--- @param self
--- @param #int times
--- @param #float delay
--- @param #function callback
--- @return Transition#Transition self (return value: fgui.Transition)
-
 --------------------------------
 -- 
 -- @function Transition 

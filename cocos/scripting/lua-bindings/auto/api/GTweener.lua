@@ -126,13 +126,6 @@
         
 --------------------------------
 -- 
--- @function onUpdate 
--- @param self
--- @param #function callback
--- @return GTweener#GTweener ret (return value: fgui.GTweener)
-        
---------------------------------
--- 
 -- @function onStart 
 -- @param self
 -- @param #function callback

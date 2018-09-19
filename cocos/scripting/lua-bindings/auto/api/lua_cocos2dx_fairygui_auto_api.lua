@@ -176,6 +176,12 @@
 
 
 --------------------------------------------------------
+-- the fgui TweenValue
+-- @field TweenValue preloaded module
+-- @see TweenValue
+
+
+--------------------------------------------------------
 -- the fgui GTweener
 -- @field GTweener preloaded module
 -- @see GTweener
