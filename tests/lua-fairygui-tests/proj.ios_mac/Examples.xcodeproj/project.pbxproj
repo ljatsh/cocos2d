@@ -14,6 +14,8 @@
 		06331897214FA7EA0055804B /* res in Resources */ = {isa = PBXBuildFile; fileRef = 06331893214FA7EA0055804B /* res */; };
 		06CB5E95214F43D500857941 /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB5E90214F43C100857941 /* libcocos2d iOS.a */; };
 		06CB5E98214F43E000857941 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB5E8E214F43C100857941 /* libcocos2d Mac.a */; };
+		06D64E5C215A60AA0061709B /* libluacocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB5F2A214FA78400857941 /* libluacocos2d iOS.a */; };
+		06D64E5E215A60E90061709B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D64E5D215A60E90061709B /* MediaPlayer.framework */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -129,6 +131,13 @@
 			remoteGlobalIDString = 507B43531C31FA0C0067B53E;
 			remoteInfo = "libluacocos2d tvOS";
 		};
+		06D64E5A215A609E0061709B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CB5F20214FA78400857941 /* cocos2d_lua_bindings.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 15EFA59E198B2DAA000C57D3;
+			remoteInfo = "libluacocos2d iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +145,7 @@
 		06331893214FA7EA0055804B /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; name = res; path = ../res; sourceTree = "<group>"; };
 		06CB5E87214F43C100857941 /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../../../build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		06CB5F20214FA78400857941 /* cocos2d_lua_bindings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_lua_bindings.xcodeproj; path = "../../../cocos/scripting/lua-bindings/proj.ios_mac/cocos2d_lua_bindings.xcodeproj"; sourceTree = "<group>"; };
+		06D64E5D215A60E90061709B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* Examples-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Examples-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +207,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D64E5E215A60E90061709B /* MediaPlayer.framework in Frameworks */,
+				06D64E5C215A60AA0061709B /* libluacocos2d iOS.a in Frameworks */,
 				06CB5E95214F43D500857941 /* libcocos2d iOS.a in Frameworks */,
 				294D0D641D0D56D500F7F5D4 /* CoreText.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
@@ -298,6 +310,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06D64E5D215A60E90061709B /* MediaPlayer.framework */,
 				445403DD1FB481C600869375 /* libfairygui iOS.a */,
 				445403DB1FB457AA00869375 /* libfairygui Mac.a */,
 				445403AD1FB419AA00869375 /* libfairygui MAC.a */,
@@ -405,6 +418,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				06D64E5B215A609E0061709B /* PBXTargetDependency */,
 				06CB5E94214F43CC00857941 /* PBXTargetDependency */,
 			);
 			name = "Examples-mobile";
@@ -440,7 +454,8 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = X3HKBC92DN;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -598,6 +613,11 @@
 			name = "libcocos2d Mac";
 			targetProxy = 06CB5E96214F43DB00857941 /* PBXContainerItemProxy */;
 		};
+		06D64E5B215A609E0061709B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libluacocos2d iOS";
+			targetProxy = 06D64E5A215A609E0061709B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -606,9 +626,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X3HKBC92DN;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -628,6 +648,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.gyp.tp-ios";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
@@ -642,9 +663,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X3HKBC92DN;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -663,6 +684,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.gyp.tp-ios";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;

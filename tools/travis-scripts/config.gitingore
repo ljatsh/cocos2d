@@ -123,3 +123,5 @@ tags
 
 v*-deps-*.zip
 v*-lua-runtime-*.zip
+
+.vscode
