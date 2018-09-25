@@ -1,6 +1,5 @@
 
 .DS_Store
-external
 tools/fbx-conv
 tests/lua-tests/src
 project.xcworkspace

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062AE723215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6C6215A0933009FA3C6 /* libuv_a.a */; };
+		062AE726215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6C8215A0933009FA3C6 /* libuv_a.a */; };
+		062AE729215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CA215A0933009FA3C6 /* libuv_a.a */; };
+		062AE72C215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CB215A0933009FA3C6 /* libuv_a.a */; };
+		062AE72F215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CD215A0933009FA3C6 /* libuv_a.a */; };
+		062AE732215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CF215A0933009FA3C6 /* libuv_a.a */; };
+		062AE735215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6D1215A0933009FA3C6 /* libuv_a.a */; };
+		062AE758215A09D5009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CF215A0933009FA3C6 /* libuv_a.a */; };
+		062AE762215A0A2F009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE75C215A0A1E009FA3C6 /* libuv_a.a */; };
 		069C1EB8214CA776000CE1BE /* GTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 069C1E1F214CA775000CE1BE /* GTextField.h */; };
 		069C1EB9214CA776000CE1BE /* GTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 069C1E1F214CA775000CE1BE /* GTextField.h */; };
 		069C1EBA214CA776000CE1BE /* GTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 069C1E1F214CA775000CE1BE /* GTextField.h */; };
@@ -4895,6 +4904,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		062AE6C6215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE6C8215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE6CA215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE6CB215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE6CD215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE6CF215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE6D1215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE75B215A0A1E009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE75C215A0A1E009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
+		062AE75E215A0A1E009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
 		0634A4C5194B19E400E608AF /* CCActionTimeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionTimeline.cpp; sourceTree = "<group>"; };
 		0634A4C6194B19E400E608AF /* CCActionTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionTimeline.h; sourceTree = "<group>"; };
 		0634A4C7194B19E400E608AF /* CCActionTimelineCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionTimelineCache.cpp; sourceTree = "<group>"; };
@@ -6657,6 +6676,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062AE758215A09D5009FA3C6 /* libuv_a.a in Frameworks */,
 				46BDE4A81FA32D3400104C05 /* libbox2d.a in Frameworks */,
 				46270FA41E1CC6A200AAA098 /* libcrypto.a in Frameworks */,
 				468A197D1EF3BA6500ECA675 /* libMiniCL.a in Frameworks */,
@@ -6685,6 +6705,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062AE762215A0A2F009FA3C6 /* libuv_a.a in Frameworks */,
 				507B3D071C31BDD30067B53E /* libwebsockets.a in Frameworks */,
 				507B3D081C31BDD30067B53E /* libssl.a in Frameworks */,
 				507B3D091C31BDD30067B53E /* Foundation.framework in Frameworks */,
@@ -6702,11 +6723,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062AE72C215A0934009FA3C6 /* libuv_a.a in Frameworks */,
 				46BDE4AA1FA3316A00104C05 /* libbox2d.a in Frameworks */,
 				466F05251EF7659300B80080 /* libBulletCollision.a in Frameworks */,
+				062AE732215A0934009FA3C6 /* libuv_a.a in Frameworks */,
+				062AE726215A0934009FA3C6 /* libuv_a.a in Frameworks */,
+				062AE723215A0934009FA3C6 /* libuv_a.a in Frameworks */,
+				062AE729215A0934009FA3C6 /* libuv_a.a in Frameworks */,
 				466F05261EF7659300B80080 /* libBulletDynamics.a in Frameworks */,
 				466F05271EF7659300B80080 /* libBulletMultiThreaded.a in Frameworks */,
 				466F05281EF7659300B80080 /* libLinearMath.a in Frameworks */,
+				062AE735215A0934009FA3C6 /* libuv_a.a in Frameworks */,
+				062AE72F215A0934009FA3C6 /* libuv_a.a in Frameworks */,
 				466F05291EF7659300B80080 /* libMiniCL.a in Frameworks */,
 				46270FA81E1CC84500AAA098 /* libcrypto.a in Frameworks */,
 				46270FA91E1CC84500AAA098 /* libssl.a in Frameworks */,
@@ -6724,6 +6752,112 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062AE6AE215A0933009FA3C6 /* uv */ = {
+			isa = PBXGroup;
+			children = (
+				062AE6C3215A0933009FA3C6 /* prebuilt */,
+			);
+			name = uv;
+			path = ../external/uv;
+			sourceTree = "<group>";
+		};
+		062AE6C3215A0933009FA3C6 /* prebuilt */ = {
+			isa = PBXGroup;
+			children = (
+				062AE759215A0A1E009FA3C6 /* tvos */,
+				062AE6C4215A0933009FA3C6 /* ios */,
+				062AE6CE215A0933009FA3C6 /* mac */,
+			);
+			path = prebuilt;
+			sourceTree = "<group>";
+		};
+		062AE6C4215A0933009FA3C6 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				062AE6C5215A0933009FA3C6 /* i386 */,
+				062AE6C7215A0933009FA3C6 /* armv7 */,
+				062AE6C9215A0933009FA3C6 /* arm64 */,
+				062AE6CB215A0933009FA3C6 /* libuv_a.a */,
+				062AE6CC215A0933009FA3C6 /* x86_64 */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		062AE6C5215A0933009FA3C6 /* i386 */ = {
+			isa = PBXGroup;
+			children = (
+				062AE6C6215A0933009FA3C6 /* libuv_a.a */,
+			);
+			path = i386;
+			sourceTree = "<group>";
+		};
+		062AE6C7215A0933009FA3C6 /* armv7 */ = {
+			isa = PBXGroup;
+			children = (
+				062AE6C8215A0933009FA3C6 /* libuv_a.a */,
+			);
+			path = armv7;
+			sourceTree = "<group>";
+		};
+		062AE6C9215A0933009FA3C6 /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				062AE6CA215A0933009FA3C6 /* libuv_a.a */,
+			);
+			path = arm64;
+			sourceTree = "<group>";
+		};
+		062AE6CC215A0933009FA3C6 /* x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				062AE6CD215A0933009FA3C6 /* libuv_a.a */,
+			);
+			path = x86_64;
+			sourceTree = "<group>";
+		};
+		062AE6CE215A0933009FA3C6 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				062AE6CF215A0933009FA3C6 /* libuv_a.a */,
+				062AE6D0215A0933009FA3C6 /* x86_64 */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		062AE6D0215A0933009FA3C6 /* x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				062AE6D1215A0933009FA3C6 /* libuv_a.a */,
+			);
+			path = x86_64;
+			sourceTree = "<group>";
+		};
+		062AE759215A0A1E009FA3C6 /* tvos */ = {
+			isa = PBXGroup;
+			children = (
+				062AE75A215A0A1E009FA3C6 /* arm64 */,
+				062AE75C215A0A1E009FA3C6 /* libuv_a.a */,
+				062AE75D215A0A1E009FA3C6 /* x86_64 */,
+			);
+			path = tvos;
+			sourceTree = "<group>";
+		};
+		062AE75A215A0A1E009FA3C6 /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				062AE75B215A0A1E009FA3C6 /* libuv_a.a */,
+			);
+			path = arm64;
+			sourceTree = "<group>";
+		};
+		062AE75D215A0A1E009FA3C6 /* x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				062AE75E215A0A1E009FA3C6 /* libuv_a.a */,
+			);
+			path = x86_64;
+			sourceTree = "<group>";
+		};
 		0634A4C4194B19E400E608AF /* ActionTimeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -7535,6 +7669,7 @@
 		1A57033E180BD0490088DEC7 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				062AE6AE215A0933009FA3C6 /* uv */,
 				1A40D0D91E8E4C76002E363A /* md5 */,
 				68B39B391B1C5C670084F72C /* clipper */,
 				B6DD2F731B04820C00E47F5F /* recast */,
@@ -14852,7 +14987,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/.. $(SRCROOT)/../cocos $(SRCROOT)/../cocos/editor-support $(SRCROOT)/../external/chipmunk/include $(SRCROOT)/../external $(SRCROOT)/../extensions $(SRCROOT)/../external/poly2tri $(SRCROOT)/../external/poly2tri/common $(SRCROOT)/../external/poly2tri/sweep $(SRCROOT)/../external/bullet/include $(SRCROOT)/../external/bullet/include/bullet $(SRCROOT)/../external/Box2D/include";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/.. $(SRCROOT)/../cocos $(SRCROOT)/../cocos/editor-support $(SRCROOT)/../external/chipmunk/include $(SRCROOT)/../external $(SRCROOT)/../extensions $(SRCROOT)/../external/poly2tri $(SRCROOT)/../external/poly2tri/common $(SRCROOT)/../external/poly2tri/sweep $(SRCROOT)/../external/bullet/include $(SRCROOT)/../external/bullet/include/bullet $(SRCROOT)/../external/Box2D/include $(SRCROOT)/../external/uv/include";
 			};
 			name = Debug;
 		};
@@ -14896,7 +15031,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/.. $(SRCROOT)/../cocos $(SRCROOT)/../cocos/editor-support $(SRCROOT)/../external/chipmunk/include $(SRCROOT)/../external $(SRCROOT)/../extensions $(SRCROOT)/../external/poly2tri $(SRCROOT)/../external/poly2tri/common $(SRCROOT)/../external/poly2tri/sweep $(SRCROOT)/../external/bullet/include $(SRCROOT)/../external/bullet/include/bullet $(SRCROOT)/../external/Box2D/include";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/.. $(SRCROOT)/../cocos $(SRCROOT)/../cocos/editor-support $(SRCROOT)/../external/chipmunk/include $(SRCROOT)/../external $(SRCROOT)/../extensions $(SRCROOT)/../external/poly2tri $(SRCROOT)/../external/poly2tri/common $(SRCROOT)/../external/poly2tri/sweep $(SRCROOT)/../external/bullet/include $(SRCROOT)/../external/bullet/include/bullet $(SRCROOT)/../external/Box2D/include $(SRCROOT)/../external/uv/include";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -14933,6 +15068,7 @@
 					"$(SRCROOT)/../external/openssl/prebuilt/mac",
 					"$(SRCROOT)/../external/bullet/prebuilt/mac",
 					"$(SRCROOT)/../external/Box2D/prebuilt/mac",
+					"\"$(SRCROOT)/../external/uv/prebuilt/mac\"",
 				);
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "-llibsql3";
@@ -14973,6 +15109,7 @@
 					"$(SRCROOT)/../external/openssl/prebuilt/mac",
 					"$(SRCROOT)/../external/bullet/prebuilt/mac",
 					"$(SRCROOT)/../external/Box2D/prebuilt/mac",
+					"\"$(SRCROOT)/../external/uv/prebuilt/mac\"",
 				);
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "-llibsql3";
@@ -15004,6 +15141,7 @@
 					"\"$(SRCROOT)/../external/websockets/prebuilt/tvos\"",
 					"\"$(SRCROOT)/../external/chipmunk/prebuilt/tvos\"",
 					"\"$(SRCROOT)/../external/openssl/prebuilt/tvos\"",
+					"\"$(SRCROOT)/../external/uv/prebuilt/tvos\"",
 				);
 				OTHER_LDFLAGS = "-llibsql3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -15038,6 +15176,7 @@
 					"\"$(SRCROOT)/../external/websockets/prebuilt/tvos\"",
 					"\"$(SRCROOT)/../external/chipmunk/prebuilt/tvos\"",
 					"\"$(SRCROOT)/../external/openssl/prebuilt/tvos\"",
+					"\"$(SRCROOT)/../external/uv/prebuilt/tvos\"",
 				);
 				OTHER_LDFLAGS = "-llibsql3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -15074,6 +15213,7 @@
 					"\"$(SRCROOT)/../external/openssl/prebuilt/ios\"",
 					"\"$(SRCROOT)/../external/bullet/prebuilt/ios\"",
 					"\"$(SRCROOT)/../external/Box2D/prebuilt/ios\"",
+					"\"$(SRCROOT)/../external/uv/prebuilt/ios\"",
 				);
 				OTHER_LDFLAGS = "-llibsql3";
 				SDKROOT = iphoneos;
@@ -15111,6 +15251,7 @@
 					"\"$(SRCROOT)/../external/openssl/prebuilt/ios\"",
 					"\"$(SRCROOT)/../external/bullet/prebuilt/ios\"",
 					"\"$(SRCROOT)/../external/Box2D/prebuilt/ios\"",
+					"\"$(SRCROOT)/../external/uv/prebuilt/ios\"",
 				);
 				OTHER_LDFLAGS = "-llibsql3";
 				SDKROOT = iphoneos;
