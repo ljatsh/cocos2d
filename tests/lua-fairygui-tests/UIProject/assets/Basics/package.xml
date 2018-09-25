@@ -134,7 +134,7 @@
     <image id="t9fj54" name="k17.png" path="/images/" scale="9grid" scale9grid="27,9,54,2"/>
     <image id="t9fj55" name="k16.jpg" path="/images/" scale="9grid" scale9grid="8,5,16,2"/>
     <image id="t9fj56" name="k7.png" path="/images/"/>
-    <component id="t9fj57" name="ProgressBar3.xml" path="/components/"/>
+    <component id="t9fj57" name="ProgressBar3.xml" path="/components/" exported="true"/>
     <image id="t9fj58" name="caiji.png" path="/images/"/>
     <component id="t9fj59" name="ProgressBar1.xml" path="/components/"/>
     <image id="t9fj5a" name="caiji2.png" path="/images/"/>

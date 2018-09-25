@@ -3,6 +3,7 @@ local demoScene = require('demoScene')
 local basicScene = require('basicScene')
 local hittestScene = require('hittestScene')
 local transitionScene = require('transitionScene')
+local luaGameScene = require('luaGameScene')
 
 local mainMenu = class('mainMenu', demoScene)
 
@@ -20,6 +21,9 @@ function mainMenu:init()
   end)
   self._view:getChild('n6'):addClickListener(function(context)
     director:replaceScene(hittestScene.new())
+  end)
+  self._view:getChild('n15'):addClickListener(function(context)
+    director:replaceScene(luaGameScene.new())
   end)
 end
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640">
+  <displayList>
+    <component id="n1_ogwr" name="n1" src="t9fj57" fileName="components/ProgressBar3.xml" pkg="9leh0eyf" xy="94,94">
+      <ProgressBar max="100"/>
+    </component>
+  </displayList>
+</component>

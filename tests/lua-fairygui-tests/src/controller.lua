@@ -3,6 +3,8 @@
 ----------------
 -- run
 CC_USE_DEPRECATED_API = true
+cc.FileUtils:getInstance():setPopupNotify(false)
+
 require "cocos.init"
 require "fairygui.consts"
 
