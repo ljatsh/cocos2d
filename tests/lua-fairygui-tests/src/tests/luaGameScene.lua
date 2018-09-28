@@ -19,6 +19,10 @@ function luaGameScene:init()
 
   -- print('---------------------------- Download http://www.monogame.net/releases/v3.6/MonoGame.pkg --------------------------')
   -- download:join()
+
+  local zlib = require('zlib')
+  print(zlib.version())
+  print(zlib.inflate()(zlib.deflate()('hello, zlib', 'finish')))
 end
 
 function luaGameScene:dispose()
