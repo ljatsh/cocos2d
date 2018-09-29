@@ -23,6 +23,13 @@ function luaGameScene:init()
   local zlib = require('zlib')
   print(zlib.version())
   print(zlib.inflate()(zlib.deflate()('hello, zlib', 'finish')))
+
+  local f = luv.fiber.create(function()
+    local f2 = function() error('f2 error') end
+    local f3 = function() f2() end
+    f3()
+  end)
+  f:join()
 end
 
 function luaGameScene:dispose()
