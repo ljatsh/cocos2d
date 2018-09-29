@@ -25,7 +25,7 @@ function luaGameScene:init()
   print(zlib.inflate()(zlib.deflate()('hello, zlib', 'finish')))
 
   local f = luv.fiber.create(function()
-    local f2 = function() error('f2 error') end
+    local f2 = function() x.y = 1 end
     local f3 = function() f2() end
     f3()
   end)
