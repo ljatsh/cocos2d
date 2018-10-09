@@ -110,6 +110,12 @@
 
 
 --------------------------------------------------------
+-- the fgui GLabel
+-- @field GLabel preloaded module
+-- @see GLabel
+
+
+--------------------------------------------------------
 -- the fgui GButton
 -- @field GButton preloaded module
 -- @see GButton

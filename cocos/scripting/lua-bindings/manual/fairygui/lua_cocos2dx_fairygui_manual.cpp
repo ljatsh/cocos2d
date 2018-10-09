@@ -1150,6 +1150,48 @@ tolua_lerror:
 #endif
 }
 
+static int lua_cocos2dx_fairygui_UIConfig_get_modalLayerColor(lua_State *L)
+{
+    color4f_to_luaval(L, fairygui::UIConfig::modalLayerColor);
+    return 1;
+}
+
+static int lua_cocos2dx_fairygui_UIConfig_set_modalLayerColor(lua_State *L)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+    if (!tolua_isusertable(L, 1, "fgui.UIConfig", 0, &tolua_err))
+        goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(L) - 1;
+
+    if (argc == 1)
+    {
+        cocos2d::Color4F arg0;
+        ok &= luaval_to_color4f(L, 2, &arg0, "fgui.UIConfig.modalLayerColor");
+        if(!ok)
+        {
+            tolua_error(L, "invalid arguments in function 'lua_cocos2dx_fairygui_UIConfig_set_modalLayerColor'", nullptr);
+            return 0;
+        }
+        fairygui::UIConfig::modalLayerColor = arg0;
+        return 0;
+    }
+
+    luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d\n ", "lua_cocos2dx_fairygui_UIConfig_set_modalLayerColor", argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+tolua_lerror:
+    tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_UIConfig_set_modalLayerColor'.", &tolua_err);
+    return 0;
+#endif
+}
+
 int lua_cocos2dx_fairygui_GTweener_onComplete(lua_State* L)
 {
     int argc = 0;
@@ -1659,6 +1701,7 @@ static void extendUIConfig(lua_State *L)
         tolua_variable(L, "horizontalScrollBar", lua_cocos2dx_fairygui_UIConfig_get_horizontalScrollBar, lua_cocos2dx_fairygui_UIConfig_set_horizontalScrollBar);
         tolua_variable(L, "tooltipsWin", lua_cocos2dx_fairygui_UIConfig_get_tooltipsWin, lua_cocos2dx_fairygui_UIConfig_set_tooltipsWin);
         tolua_variable(L, "popupMenu", lua_cocos2dx_fairygui_UIConfig_get_popupMenu, lua_cocos2dx_fairygui_UIConfig_set_popupMenu);
+        tolua_variable(L, "modalLayerColor", lua_cocos2dx_fairygui_UIConfig_get_modalLayerColor, lua_cocos2dx_fairygui_UIConfig_set_modalLayerColor);
     }
     lua_pop(L, 1);
 }

@@ -18864,6 +18864,443 @@ int lua_register_cocos2dx_fairygui_GComponent(lua_State* tolua_S)
     return 1;
 }
 
+int lua_cocos2dx_fairygui_GLabel_setTitle(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLabel* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLabel",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLabel*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLabel_setTitle'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "fgui.GLabel:setTitle");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_setTitle'", nullptr);
+            return 0;
+        }
+        cobj->setTitle(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLabel:setTitle",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_setTitle'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLabel_getTitleFontSize(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLabel* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLabel",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLabel*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLabel_getTitleFontSize'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_getTitleFontSize'", nullptr);
+            return 0;
+        }
+        int ret = cobj->getTitleFontSize();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLabel:getTitleFontSize",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_getTitleFontSize'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLabel_getTitleColor(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLabel* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLabel",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLabel*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLabel_getTitleColor'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_getTitleColor'", nullptr);
+            return 0;
+        }
+        cocos2d::Color3B ret = cobj->getTitleColor();
+        color3b_to_luaval(tolua_S, ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLabel:getTitleColor",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_getTitleColor'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLabel_getTitle(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLabel* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLabel",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLabel*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLabel_getTitle'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_getTitle'", nullptr);
+            return 0;
+        }
+        const std::string& ret = cobj->getTitle();
+        lua_pushlstring(tolua_S,ret.c_str(),ret.length());
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLabel:getTitle",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_getTitle'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLabel_getTextField(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLabel* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLabel",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLabel*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLabel_getTextField'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_getTextField'", nullptr);
+            return 0;
+        }
+        fairygui::GTextField* ret = cobj->getTextField();
+        object_to_luaval<fairygui::GTextField>(tolua_S, "fgui.GTextField",(fairygui::GTextField*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLabel:getTextField",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_getTextField'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLabel_setTitleFontSize(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLabel* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLabel",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLabel*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLabel_setTitleFontSize'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        int arg0;
+
+        ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0, "fgui.GLabel:setTitleFontSize");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_setTitleFontSize'", nullptr);
+            return 0;
+        }
+        cobj->setTitleFontSize(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLabel:setTitleFontSize",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_setTitleFontSize'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLabel_setTitleColor(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLabel* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLabel",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLabel*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLabel_setTitleColor'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        cocos2d::Color3B arg0;
+
+        ok &= luaval_to_color3b(tolua_S, 2, &arg0, "fgui.GLabel:setTitleColor");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_setTitleColor'", nullptr);
+            return 0;
+        }
+        cobj->setTitleColor(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLabel:setTitleColor",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_setTitleColor'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLabel_create(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"fgui.GLabel",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 0)
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_create'", nullptr);
+            return 0;
+        }
+        fairygui::GLabel* ret = fairygui::GLabel::create();
+        object_to_luaval<fairygui::GLabel>(tolua_S, "fgui.GLabel",(fairygui::GLabel*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "fgui.GLabel:create",argc, 0);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_create'.",&tolua_err);
+#endif
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLabel_constructor(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLabel* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLabel_constructor'", nullptr);
+            return 0;
+        }
+        cobj = new fairygui::GLabel();
+        cobj->autorelease();
+        int ID =  (int)cobj->_ID ;
+        int* luaID =  &cobj->_luaID ;
+        toluafix_pushusertype_ccobject(tolua_S, ID, luaID, (void*)cobj,"fgui.GLabel");
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLabel:GLabel",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLabel_constructor'.",&tolua_err);
+#endif
+
+    return 0;
+}
+
+static int lua_cocos2dx_fairygui_GLabel_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (GLabel)");
+    return 0;
+}
+
+int lua_register_cocos2dx_fairygui_GLabel(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"fgui.GLabel");
+    tolua_cclass(tolua_S,"GLabel","fgui.GLabel","fgui.GComponent",nullptr);
+
+    tolua_beginmodule(tolua_S,"GLabel");
+        tolua_function(tolua_S,"new",lua_cocos2dx_fairygui_GLabel_constructor);
+        tolua_function(tolua_S,"setTitle",lua_cocos2dx_fairygui_GLabel_setTitle);
+        tolua_function(tolua_S,"getTitleFontSize",lua_cocos2dx_fairygui_GLabel_getTitleFontSize);
+        tolua_function(tolua_S,"getTitleColor",lua_cocos2dx_fairygui_GLabel_getTitleColor);
+        tolua_function(tolua_S,"getTitle",lua_cocos2dx_fairygui_GLabel_getTitle);
+        tolua_function(tolua_S,"getTextField",lua_cocos2dx_fairygui_GLabel_getTextField);
+        tolua_function(tolua_S,"setTitleFontSize",lua_cocos2dx_fairygui_GLabel_setTitleFontSize);
+        tolua_function(tolua_S,"setTitleColor",lua_cocos2dx_fairygui_GLabel_setTitleColor);
+        tolua_function(tolua_S,"create", lua_cocos2dx_fairygui_GLabel_create);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(fairygui::GLabel).name();
+    g_luaType[typeName] = "fgui.GLabel";
+    g_typeCast["GLabel"] = "fgui.GLabel";
+    return 1;
+}
+
 int lua_cocos2dx_fairygui_GButton_getRelatedController(lua_State* tolua_S)
 {
     int argc = 0;
@@ -31069,14 +31506,16 @@ TOLUA_API int register_all_cocos2dx_fairygui(lua_State* tolua_S)
 	lua_register_cocos2dx_fairygui_GComponent(tolua_S);
 	lua_register_cocos2dx_fairygui_GScrollBar(tolua_S);
 	lua_register_cocos2dx_fairygui_GList(tolua_S);
+	lua_register_cocos2dx_fairygui_Window(tolua_S);
 	lua_register_cocos2dx_fairygui_GComboBox(tolua_S);
-	lua_register_cocos2dx_fairygui_GButton(tolua_S);
 	lua_register_cocos2dx_fairygui_GGroup(tolua_S);
 	lua_register_cocos2dx_fairygui_GMovieClip(tolua_S);
 	lua_register_cocos2dx_fairygui_GTextField(tolua_S);
 	lua_register_cocos2dx_fairygui_GRichTextField(tolua_S);
 	lua_register_cocos2dx_fairygui_UIConfig(tolua_S);
 	lua_register_cocos2dx_fairygui_GRoot(tolua_S);
+	lua_register_cocos2dx_fairygui_GLabel(tolua_S);
+	lua_register_cocos2dx_fairygui_GButton(tolua_S);
 	lua_register_cocos2dx_fairygui_GTweener(tolua_S);
 	lua_register_cocos2dx_fairygui_GTween(tolua_S);
 	lua_register_cocos2dx_fairygui_GGraph(tolua_S);
@@ -31090,7 +31529,6 @@ TOLUA_API int register_all_cocos2dx_fairygui(lua_State* tolua_S)
 	lua_register_cocos2dx_fairygui_TweenValue(tolua_S);
 	lua_register_cocos2dx_fairygui_GSlider(tolua_S);
 	lua_register_cocos2dx_fairygui_GTextInput(tolua_S);
-	lua_register_cocos2dx_fairygui_Window(tolua_S);
 	lua_register_cocos2dx_fairygui_GLoader(tolua_S);
 	lua_register_cocos2dx_fairygui_ScrollPane(tolua_S);
 	lua_register_cocos2dx_fairygui_GProgressBar(tolua_S);
