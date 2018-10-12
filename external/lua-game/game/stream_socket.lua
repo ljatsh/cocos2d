@@ -48,7 +48,12 @@ function socket:write_impl(data)
 end
 
 function socket:read_impl()
-  return self.s:read()
+  local count, data = self.s:read()
+  if count == self.s then
+    return false, 'stream closed'
+  end
+
+  return count, data
 end
 
 return socket
