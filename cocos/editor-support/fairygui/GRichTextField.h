@@ -8,7 +8,7 @@
 
 NS_FGUI_BEGIN
 
-class GRichTextField : public GTextField
+class CC_DLL GRichTextField : public GTextField
 {
 public:
     GRichTextField();

@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 
 class GObject;
 
-class GearIcon : public GearBase
+class CC_DLL GearIcon : public GearBase
 {
 public:
     GearIcon(GObject* owner);

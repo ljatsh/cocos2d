@@ -8,7 +8,7 @@ NS_FGUI_BEGIN
 
 class PackageItem;
 
-class TranslationHelper
+class CC_DLL TranslationHelper
 {
 public:
     static std::unordered_map<std::string, std::unordered_map<std::string, std::string>> strings;

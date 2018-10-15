@@ -10,7 +10,7 @@ NS_FGUI_BEGIN
 class GObject;
 class ByteBuffer;
 
-class Relations
+class CC_DLL Relations
 {
 public:
     Relations(GObject* owner);

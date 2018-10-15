@@ -7,7 +7,7 @@
 
 NS_FGUI_BEGIN
 
-class DragDropManager
+class CC_DLL DragDropManager
 {
 public:
     DragDropManager();

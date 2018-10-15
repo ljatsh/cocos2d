@@ -11,7 +11,7 @@ class GComponent;
 class ControllerAction;
 class ByteBuffer;
 
-class GController : public UIEventDispatcher
+class CC_DLL GController : public UIEventDispatcher
 {
 public:
     GController();

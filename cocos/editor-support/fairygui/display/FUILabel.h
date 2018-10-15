@@ -7,7 +7,7 @@
 
 NS_FGUI_BEGIN
 
-class FUILabel : public cocos2d::Label
+class CC_DLL FUILabel : public cocos2d::Label
 {
 public:
     FUILabel();

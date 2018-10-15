@@ -12,7 +12,7 @@ NS_FGUI_BEGIN
 
 class WeakPtr;
 
-class GRoot : public GComponent
+class CC_DLL GRoot : public GComponent
 {
 public:
     GRoot();

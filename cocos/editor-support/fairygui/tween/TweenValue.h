@@ -6,7 +6,7 @@
 
 NS_FGUI_BEGIN
 
-class TweenValue
+class CC_DLL TweenValue
 {
 public:
     float x;

@@ -7,7 +7,7 @@
 
 NS_FGUI_BEGIN
 
-class GProgressBar : public GComponent
+class CC_DLL GProgressBar : public GComponent
 {
 public:
     GProgressBar();

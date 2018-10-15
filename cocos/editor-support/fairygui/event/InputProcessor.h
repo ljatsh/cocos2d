@@ -11,7 +11,7 @@ NS_FGUI_BEGIN
 class GComponent;
 class TouchInfo;
 
-class InputProcessor
+class CC_DLL InputProcessor
 {
 public:
     typedef std::function<void(int eventType)> CaptureEventCallback;

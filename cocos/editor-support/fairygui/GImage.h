@@ -8,7 +8,7 @@
 
 NS_FGUI_BEGIN
 
-class GImage : public GObject, public IColorGear
+class CC_DLL GImage : public GObject, public IColorGear
 {
 public:
     GImage();

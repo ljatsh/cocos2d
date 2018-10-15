@@ -10,7 +10,7 @@ NS_FGUI_BEGIN
 
 class GTextField;
 
-class GComboBox : public GComponent
+class CC_DLL GComboBox : public GComponent
 {
 public:
     GComboBox();

@@ -7,7 +7,7 @@
 
 NS_FGUI_BEGIN
 
-class IAnimationGear
+class CC_DLL IAnimationGear
 {
 public:
     virtual bool isPlaying() const = 0;
@@ -24,7 +24,7 @@ public:
 
 class GObject;
 
-class GearAnimation : public GearBase
+class CC_DLL GearAnimation : public GearBase
 {
 public:
     GearAnimation(GObject* owner);

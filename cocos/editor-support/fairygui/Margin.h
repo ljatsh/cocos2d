@@ -6,7 +6,7 @@
 NS_FGUI_BEGIN
 
 //copy from cocos2d::ui::Margin
-class Margin
+class CC_DLL Margin
 {
 public:
     /**

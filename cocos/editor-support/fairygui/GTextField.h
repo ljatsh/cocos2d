@@ -8,7 +8,7 @@
 
 NS_FGUI_BEGIN
 
-class GTextField : public GObject, public IColorGear
+class CC_DLL GTextField : public GObject, public IColorGear
 {
 public:
     GTextField();

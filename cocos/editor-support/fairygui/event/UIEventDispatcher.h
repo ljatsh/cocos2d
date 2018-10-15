@@ -10,7 +10,7 @@ NS_FGUI_BEGIN
 
 typedef std::function<void(EventContext* context)> EventCallback;
 
-class EventTag
+class CC_DLL EventTag
 {
 public:
     static const EventTag None;
@@ -40,7 +40,7 @@ private:
 
 class InputProcessor;
 
-class UIEventDispatcher : public cocos2d::Ref
+class CC_DLL UIEventDispatcher : public cocos2d::Ref
 {
 public:
     UIEventDispatcher();

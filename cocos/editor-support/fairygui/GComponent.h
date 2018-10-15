@@ -12,7 +12,7 @@
 
 NS_FGUI_BEGIN
 
-class GComponent : public GObject
+class CC_DLL GComponent : public GObject
 {
 public:
     GComponent();

@@ -10,7 +10,7 @@
 
 NS_FGUI_BEGIN
 
-class GTween
+class CC_DLL GTween
 {
 public:
     static GTweener* to(float startValue, float endValue, float duration);

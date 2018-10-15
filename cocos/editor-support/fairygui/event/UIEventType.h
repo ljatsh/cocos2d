@@ -5,7 +5,7 @@
 
 NS_FGUI_BEGIN
 
-class UIEventType
+class CC_DLL UIEventType
 {
 public:
     static const int Enter = 0;

@@ -7,7 +7,7 @@ NS_FGUI_BEGIN
 
 class Transition;
 
-class PlayTransitionAction : public ControllerAction
+class CC_DLL PlayTransitionAction : public ControllerAction
 {
 public:
     PlayTransitionAction();

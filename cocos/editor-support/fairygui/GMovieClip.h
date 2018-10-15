@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 
 class ActionMovieClip;
 
-class GMovieClip : public GObject, public IColorGear, public IAnimationGear
+class CC_DLL GMovieClip : public GObject, public IColorGear, public IAnimationGear
 {
 public:
     GMovieClip();
@@ -34,7 +34,7 @@ public:
     cocos2d::Color3B getColor() const override { return _content->getColor(); }
     void setColor(const cocos2d::Color3B& value) override;
 
-    //from start to end(-1 means ending)£¬repeat times(0 means infinite loop)£¬when all is over, stopping at endAt(-1 means same value of end)
+    //from start to end(-1 means ending)ï¿½ï¿½repeat times(0 means infinite loop)ï¿½ï¿½when all is over, stopping at endAt(-1 means same value of end)
     void setPlaySettings(int start = 0, int end = -1, int times = 0, int endAt = -1, std::function<void()> completeCallback = nullptr);
 
     virtual void constructFromResource() override;

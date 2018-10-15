@@ -26,7 +26,7 @@ enum class TweenPropType
     Progress
 };
 
-class TweenPropTypeUtils
+class CC_DLL TweenPropTypeUtils
 {
 public:
     static void setProps(GObject* target, TweenPropType propType, const TweenValue& value);

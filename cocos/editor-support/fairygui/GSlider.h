@@ -7,7 +7,7 @@
 
 NS_FGUI_BEGIN
 
-class GSlider : public GComponent
+class CC_DLL GSlider : public GComponent
 {
 public:
     GSlider();

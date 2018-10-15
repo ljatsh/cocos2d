@@ -7,7 +7,7 @@
 
 NS_FGUI_BEGIN
 
-class GGroup : public GObject
+class CC_DLL GGroup : public GObject
 {
 public:
     GGroup();

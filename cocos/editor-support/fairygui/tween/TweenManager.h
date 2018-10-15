@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 
 class GTweener;
 
-class TweenManager
+class CC_DLL TweenManager
 {
 public:
     static GTweener* createTween();

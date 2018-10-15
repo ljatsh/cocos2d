@@ -10,7 +10,7 @@ NS_FGUI_BEGIN
 class GObject;
 class InputProcessor;
 
-class EventContext
+class CC_DLL EventContext
 {
 public:
     EventContext();

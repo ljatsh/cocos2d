@@ -6,7 +6,7 @@
 
 NS_FGUI_BEGIN
 
-class TextFormat
+class CC_DLL TextFormat
 {
 public:
     TextFormat();

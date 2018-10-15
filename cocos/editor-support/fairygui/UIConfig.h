@@ -6,7 +6,7 @@
 
 NS_FGUI_BEGIN
 
-class UIConfig
+class CC_DLL UIConfig
 {
 public:
     static std::string defaultFont;

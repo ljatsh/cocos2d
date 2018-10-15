@@ -10,7 +10,7 @@ NS_FGUI_BEGIN
 class GObject;
 class GTweener;
 
-class GearSize : public GearBase
+class CC_DLL GearSize : public GearBase
 {
 public:
     GearSize(GObject* owner);

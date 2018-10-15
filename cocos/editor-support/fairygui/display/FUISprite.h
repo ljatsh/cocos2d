@@ -6,7 +6,7 @@
 
 NS_FGUI_BEGIN
 
-class FUISprite : public cocos2d::Sprite
+class CC_DLL FUISprite : public cocos2d::Sprite
 {
 public:
     FUISprite();

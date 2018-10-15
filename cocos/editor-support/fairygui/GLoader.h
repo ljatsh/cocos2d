@@ -10,7 +10,7 @@ NS_FGUI_BEGIN
 class GComponent;
 class ActionMovieClip;
 
-class GLoader : public GObject, public IColorGear, public IAnimationGear
+class CC_DLL GLoader : public GObject, public IColorGear, public IAnimationGear
 {
 public:
     GLoader();

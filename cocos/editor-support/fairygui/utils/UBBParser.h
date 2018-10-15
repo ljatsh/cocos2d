@@ -8,7 +8,7 @@ NS_FGUI_BEGIN
 
 #define UBB_TAG_HANDLER(__selector__,__target__, ...) std::bind(&__selector__,__target__, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, ##__VA_ARGS__)
 
-class UBBParser
+class CC_DLL UBBParser
 {
 public:
     UBBParser();

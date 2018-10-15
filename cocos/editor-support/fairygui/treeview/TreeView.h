@@ -11,7 +11,7 @@ NS_FGUI_BEGIN
 class GList;
 class GComponent;
 
-class TreeView : public UIEventDispatcher
+class CC_DLL TreeView : public UIEventDispatcher
 {
 public:
     typedef std::function<GComponent*(TreeNode* node)> TreeNodeCreateCellFunction;

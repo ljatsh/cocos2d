@@ -8,7 +8,7 @@
 
 NS_FGUI_BEGIN
 
-class GTextInput : public GTextField
+class CC_DLL GTextInput : public GTextField
 {
 public:
     GTextInput();

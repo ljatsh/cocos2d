@@ -43,7 +43,7 @@ enum class RelationType
     Size
 };
 
-class RelationDef
+class CC_DLL RelationDef
 {
 public:
     bool percent;
@@ -60,7 +60,7 @@ public:
     }
 };
 
-class RelationItem
+class CC_DLL RelationItem
 {
 public:
     RelationItem(GObject* owner);

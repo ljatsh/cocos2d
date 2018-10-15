@@ -7,7 +7,7 @@
 
 NS_FGUI_BEGIN
 
-class GScrollBar : public GComponent
+class CC_DLL GScrollBar : public GComponent
 {
 public:
     GScrollBar();

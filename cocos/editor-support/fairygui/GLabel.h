@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 
 class GTextField;
 
-class GLabel : public GComponent
+class CC_DLL GLabel : public GComponent
 {
 public:
     GLabel();

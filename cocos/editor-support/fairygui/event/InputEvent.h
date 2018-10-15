@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 class GObject;
 class InputProcessor;
 
-class InputEvent
+class CC_DLL InputEvent
 {
 public:
     InputEvent();

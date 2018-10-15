@@ -6,7 +6,7 @@
 
 NS_FGUI_BEGIN
 
-class ByteBuffer
+class CC_DLL ByteBuffer
 {
 public:
     ByteBuffer(char* buffer, int offset, int len, bool transferOwnerShip);

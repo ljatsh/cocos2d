@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 class GComponent;
 class ByteBuffer;
 
-class IHitTest
+class CC_DLL IHitTest
 {
 public:
     virtual bool hitTest(GComponent* obj, const cocos2d::Vec2& localPoint)
@@ -18,7 +18,7 @@ public:
     }
 };
 
-class PixelHitTestData
+class CC_DLL PixelHitTestData
 {
 public:
     int pixelWidth;

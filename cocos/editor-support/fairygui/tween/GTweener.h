@@ -9,7 +9,7 @@
 
 NS_FGUI_BEGIN
 
-class GTweener
+class CC_DLL GTweener
 {
 public:
     typedef std::function<void(GTweener* tweener)> GTweenCallback;

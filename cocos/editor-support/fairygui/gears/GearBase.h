@@ -12,7 +12,7 @@ class GController;
 class GTweener;
 class ByteBuffer;
 
-class GearTweenConfig
+class CC_DLL GearTweenConfig
 {
 public:
     GearTweenConfig();
@@ -26,7 +26,7 @@ public:
     GTweener* _tweener;
 };
 
-class GearBase
+class CC_DLL GearBase
 {
 public:
     GearBase(GObject* owner);

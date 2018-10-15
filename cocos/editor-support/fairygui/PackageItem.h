@@ -13,7 +13,7 @@ class BitmapFont;
 class PixelHitTestData;
 class ByteBuffer;
 
-class PackageItem
+class CC_DLL PackageItem
 {
 public:
     PackageItem();

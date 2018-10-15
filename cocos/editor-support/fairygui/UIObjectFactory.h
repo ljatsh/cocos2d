@@ -9,7 +9,7 @@
 
 NS_FGUI_BEGIN
 
-class UIObjectFactory
+class CC_DLL UIObjectFactory
 {
 public:
     typedef std::function<GComponent*()> GComponentCreator;

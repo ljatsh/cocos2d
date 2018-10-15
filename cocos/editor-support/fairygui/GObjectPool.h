@@ -8,7 +8,7 @@ NS_FGUI_BEGIN
 
 class GObject;
 
-class GObjectPool
+class CC_DLL GObjectPool
 {
 public:
     GObjectPool();

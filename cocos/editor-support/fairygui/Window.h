@@ -7,7 +7,7 @@
 
 NS_FGUI_BEGIN
 
-class IUISource : public cocos2d::Ref
+class CC_DLL IUISource : public cocos2d::Ref
 {
 public:
     virtual const std::string& getFileName() = 0;
@@ -16,7 +16,7 @@ public:
     virtual void load(std::function<void()> callback) = 0;
 };
 
-class Window : public GComponent
+class CC_DLL Window : public GComponent
 {
 public:
     Window();

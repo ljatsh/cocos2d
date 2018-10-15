@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 class TreeView;
 class GComponent;
 
-class TreeNode : public cocos2d::Ref
+class CC_DLL TreeNode : public cocos2d::Ref
 {
 public:
     static TreeNode* create(bool isFolder = false);

@@ -8,7 +8,7 @@ NS_FGUI_BEGIN
 
 class GObject;
 
-class WeakPtr
+class CC_DLL WeakPtr
 {
 public:
     WeakPtr();

@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 class GController;
 class ByteBuffer;
 
-class ControllerAction
+class CC_DLL ControllerAction
 {
 public:
     static ControllerAction* createAction(int types);

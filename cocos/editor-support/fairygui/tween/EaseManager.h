@@ -6,7 +6,7 @@
 
 NS_FGUI_BEGIN
 
-class EaseManager
+class CC_DLL EaseManager
 {
 public:
     static float evaluate(EaseType easeType, float time, float duration, float overshootOrAmplitude, float period);

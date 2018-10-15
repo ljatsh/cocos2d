@@ -6,7 +6,7 @@
 
 NS_FGUI_BEGIN
 
-class RectClippingSupport
+class CC_DLL RectClippingSupport
 {
 public:
     RectClippingSupport();
@@ -22,7 +22,7 @@ public:
     cocos2d::CustomCommand _afterVisitCmdScissor;
 };
 
-class StencilClippingSupport
+class CC_DLL StencilClippingSupport
 {
 public:
     StencilClippingSupport();
@@ -36,7 +36,7 @@ public:
     cocos2d::CustomCommand _afterVisitCmd;
 };
 
-class FUIContainer : public cocos2d::Node
+class CC_DLL FUIContainer : public cocos2d::Node
 {
 public:
     FUIContainer();
@@ -75,7 +75,7 @@ private:
 };
 
 //internal use
-class FUIInnerContainer : public cocos2d::Node
+class CC_DLL FUIInnerContainer : public cocos2d::Node
 {
 public:
     CREATE_FUNC(FUIInnerContainer);

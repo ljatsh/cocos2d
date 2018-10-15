@@ -15,6 +15,7 @@
     <ProjectGuid>{98A51BA8-FC3A-415B-AC8F-8C7BD464E93E}</ProjectGuid>
     <RootNamespace>cocos2d-x.win32</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -79,7 +80,7 @@
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(EngineRoot)external\Box2D\include;$(EngineRoot)external\sqlite3\include;$(EngineRoot)external\unzip;$(EngineRoot)external\edtaa3func;$(EngineRoot)external\tinyxml2;$(EngineRoot)external\png\include\win32;$(EngineRoot)external\jpeg\include\win32;$(EngineRoot)external\tiff\include\win32;$(EngineRoot)external\webp\include\win32;$(EngineRoot)external\freetype2\include\win32;$(EngineRoot)external\win32-specific\OpenalSoft\include;$(EngineRoot)external\win32-specific\MP3Decoder\include;$(EngineRoot)external\win32-specific\OggDecoder\include;$(EngineRoot)external\win32-specific\icon\include;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)external\chipmunk\include;$(EngineRoot)external\xxhash;$(EngineRoot)external\ConvertUTF;$(EngineRoot)external\curl\include\win32;$(EngineRoot)external\websockets\include\win32;$(EngineRoot)external\poly2tri\common;$(EngineRoot)external\poly2tri\sweep;$(EngineRoot)external\poly2tri;$(EngineRoot)external;$(EngineRoot)cocos;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos\platform\win8.1-universal;$(EngineRoot)extensions;$(EngineRoot);$(EngineRoot)external/bullet/include/bullet;$(EngineRoot)external/bullet/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(EngineRoot)external\Box2D\include;$(EngineRoot)external\sqlite3\include;$(EngineRoot)external\unzip;$(EngineRoot)external\edtaa3func;$(EngineRoot)external\tinyxml2;$(EngineRoot)external\png\include\win32;$(EngineRoot)external\jpeg\include\win32;$(EngineRoot)external\tiff\include\win32;$(EngineRoot)external\webp\include\win32;$(EngineRoot)external\freetype2\include\win32;$(EngineRoot)external\win32-specific\OpenalSoft\include;$(EngineRoot)external\win32-specific\MP3Decoder\include;$(EngineRoot)external\win32-specific\OggDecoder\include;$(EngineRoot)external\win32-specific\icon\include;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)external\chipmunk\include;$(EngineRoot)external\xxhash;$(EngineRoot)external\ConvertUTF;$(EngineRoot)external\curl\include\win32;$(EngineRoot)external\websockets\include\win32;$(EngineRoot)external\poly2tri\common;$(EngineRoot)external\poly2tri\sweep;$(EngineRoot)external\poly2tri;$(EngineRoot)external;$(EngineRoot)cocos;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos\audio\include;$(EngineRoot)cocos\platform\win8.1-universal;$(EngineRoot)extensions;$(EngineRoot);$(EngineRoot)external/bullet/include/bullet;$(EngineRoot)external/bullet/include;$(EngineRoot)external/uv/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_USRDLL;_DEBUG;_WINDOWS;_LIB;LWS_DLL;COCOS2DXWIN32_EXPORTS;GL_GLEXT_PROTOTYPES;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_USE3DDLL;_EXPORT_DLL_;_USRSTUDIODLL;_USREXDLL;_USEGUIDLL;CC_ENABLE_CHIPMUNK_INTEGRATION=1;PROTOBUF_USE_DLLS;LIBPROTOBUF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -113,7 +114,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\sqlite3\libraries\win32\*.*" "$(OutDir)
 xcopy /Y /Q "$(ProjectDir)..\..\external\chipmunk\prebuilt\win32\release-lib\*.*" "$(OutDir)"
 xcopy /Y /Q "$(ProjectDir)..\..\external\bullet\prebuilt\win32\debug\*.*" "$(OutDir)"
 xcopy /Y /Q "$(ProjectDir)..\..\external\Box2D\prebuilt\win32\debug\*.*" "$(OutDir)"
-xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"</Command>
+xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Command>
     </PreLinkEvent>
     <Link>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
@@ -138,7 +140,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
       </Command>
     </PreBuildEvent>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(EngineRoot)external\sqlite3\include;$(EngineRoot)external\unzip;$(EngineRoot)external\edtaa3func;$(EngineRoot)external\tinyxml2;$(EngineRoot)external\png\include\win32;$(EngineRoot)external\jpeg\include\win32;$(EngineRoot)external\tiff\include\win32;$(EngineRoot)external\webp\include\win32;$(EngineRoot)external\freetype2\include\win32;$(EngineRoot)external\win32-specific\MP3Decoder\include;$(EngineRoot)external\win32-specific\OggDecoder\include;$(EngineRoot)external\win32-specific\OpenalSoft\include;$(EngineRoot)external\win32-specific\icon\include;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)external\chipmunk\include;$(EngineRoot)external\xxhash;$(EngineRoot)external\ConvertUTF;$(EngineRoot)external\Box2D\include;$(EngineRoot)external\curl\include\win32;$(EngineRoot)external\websockets\include\win32\;$(EngineRoot)external\poly2tri\common;$(EngineRoot)external\poly2tri\sweep;$(EngineRoot)external\poly2tri;$(EngineRoot)external;$(EngineRoot)cocos;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos\platform\win8.1-universal;$(EngineRoot)extensions;$(EngineRoot);$(EngineRoot)external/bullet/include;$(EngineRoot)external/bullet/include/bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(EngineRoot)external\sqlite3\include;$(EngineRoot)external\unzip;$(EngineRoot)external\edtaa3func;$(EngineRoot)external\tinyxml2;$(EngineRoot)external\png\include\win32;$(EngineRoot)external\jpeg\include\win32;$(EngineRoot)external\tiff\include\win32;$(EngineRoot)external\webp\include\win32;$(EngineRoot)external\freetype2\include\win32;$(EngineRoot)external\win32-specific\MP3Decoder\include;$(EngineRoot)external\win32-specific\OggDecoder\include;$(EngineRoot)external\win32-specific\OpenalSoft\include;$(EngineRoot)external\win32-specific\icon\include;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)external\chipmunk\include;$(EngineRoot)external\xxhash;$(EngineRoot)external\ConvertUTF;$(EngineRoot)external\Box2D\include;$(EngineRoot)external\curl\include\win32;$(EngineRoot)external\websockets\include\win32\;$(EngineRoot)external\poly2tri\common;$(EngineRoot)external\poly2tri\sweep;$(EngineRoot)external\poly2tri;$(EngineRoot)external;$(EngineRoot)cocos;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos\audio\include;$(EngineRoot)cocos\platform\win8.1-universal;$(EngineRoot)extensions;$(EngineRoot);$(EngineRoot)external/bullet/include;$(EngineRoot)external/bullet/include/bullet;$(EngineRoot)external/uv/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_USRDLL;NDEBUG;_WINDOWS;_LIB;LWS_DLL;COCOS2DXWIN32_EXPORTS;GL_GLEXT_PROTOTYPES;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_USE3DDLL;_EXPORT_DLL_;_USRSTUDIODLL;_USREXDLL;_USEGUIDLL;CC_ENABLE_CHIPMUNK_INTEGRATION=1;PROTOBUF_USE_DLLS;LIBPROTOBUF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -172,7 +174,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\sqlite3\libraries\win32\*.*" "$(OutDir)
 xcopy /Y /Q "$(ProjectDir)..\..\external\chipmunk\prebuilt\win32\release-lib\*.*" "$(OutDir)"
 xcopy /Y /Q "$(ProjectDir)..\..\external\bullet\prebuilt\win32\release\*.*" "$(OutDir)"
 xcopy /Y /Q "$(ProjectDir)..\..\external\Box2D\prebuilt\win32\release\*.*" "$(OutDir)"
-xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"</Command>
+xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>sqlite3.lib;libcurl.lib;websockets.lib;libcrypto.lib;libssl.lib;libmpg123.lib;libogg.lib;libvorbis.lib;libvorbisfile.lib;OpenAL32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -583,6 +586,75 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\UserCameraReader\UserCameraReader.cpp" />
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\Particle3DReader\Particle3DReader.cpp" />
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\WidgetReader.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\Controller.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\controller_action\ChangePageAction.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\controller_action\ControllerAction.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\controller_action\PlayTransitionAction.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\display\BitmapFont.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\display\FUIContainer.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\display\FUIInput.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\display\FUILabel.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\display\FUIRichText.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\display\FUISprite.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\display\TextFormat.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\DragDropManager.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\event\EventContext.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\event\HitTest.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\event\InputEvent.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\event\InputProcessor.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\event\UIEventDispatcher.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GButton.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GComboBox.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GComponent.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearAnimation.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearBase.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearColor.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearDisplay.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearIcon.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearLook.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearSize.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearText.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\gears\GearXY.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GGraph.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GGroup.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GImage.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GLabel.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GList.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GLoader.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GMovieClip.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GObject.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GObjectPool.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GProgressBar.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GRichTextField.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GRoot.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GScrollBar.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GSlider.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GTextField.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\GTextInput.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\Margin.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\PackageItem.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\PopupMenu.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\RelationItem.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\Relations.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\ScrollPane.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\Transition.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\TranslationHelper.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\treeview\TreeNode.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\treeview\TreeView.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\tween\EaseManager.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\tween\GTween.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\tween\GTweener.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\tween\TweenManager.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\tween\TweenPropType.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\tween\TweenValue.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\UIConfig.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\UIObjectFactory.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\UIPackage.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\utils\ByteBuffer.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\utils\ToolSet.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\utils\UBBParser.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\utils\WeakPtr.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\Window.cpp" />
     <ClCompile Include="..\math\CCAffineTransform.cpp" />
     <ClCompile Include="..\math\CCGeometry.cpp" />
     <ClCompile Include="..\math\CCVertex.cpp" />
@@ -1217,8 +1289,81 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\Particle3DReader\Particle3DReader.h" />
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\WidgetReader.h" />
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\WidgetReaderProtocol.h" />
+    <ClInclude Include="..\editor-support\fairygui\Controller.h" />
+    <ClInclude Include="..\editor-support\fairygui\controller_action\ChangePageAction.h" />
+    <ClInclude Include="..\editor-support\fairygui\controller_action\ControllerAction.h" />
+    <ClInclude Include="..\editor-support\fairygui\controller_action\PlayTransitionAction.h" />
+    <ClInclude Include="..\editor-support\fairygui\display\BitmapFont.h" />
+    <ClInclude Include="..\editor-support\fairygui\display\FUIContainer.h" />
+    <ClInclude Include="..\editor-support\fairygui\display\FUIInput.h" />
+    <ClInclude Include="..\editor-support\fairygui\display\FUILabel.h" />
+    <ClInclude Include="..\editor-support\fairygui\display\FUIRichText.h" />
+    <ClInclude Include="..\editor-support\fairygui\display\FUISprite.h" />
+    <ClInclude Include="..\editor-support\fairygui\display\TextFormat.h" />
+    <ClInclude Include="..\editor-support\fairygui\DragDropManager.h" />
+    <ClInclude Include="..\editor-support\fairygui\event\EventContext.h" />
+    <ClInclude Include="..\editor-support\fairygui\event\HitTest.h" />
+    <ClInclude Include="..\editor-support\fairygui\event\InputEvent.h" />
+    <ClInclude Include="..\editor-support\fairygui\event\InputProcessor.h" />
+    <ClInclude Include="..\editor-support\fairygui\event\UIEventDispatcher.h" />
+    <ClInclude Include="..\editor-support\fairygui\event\UIEventType.h" />
+    <ClInclude Include="..\editor-support\fairygui\FairyGUI.h" />
+    <ClInclude Include="..\editor-support\fairygui\FairyGUIMacros.h" />
+    <ClInclude Include="..\editor-support\fairygui\FieldTypes.h" />
+    <ClInclude Include="..\editor-support\fairygui\GButton.h" />
+    <ClInclude Include="..\editor-support\fairygui\GComboBox.h" />
+    <ClInclude Include="..\editor-support\fairygui\GComponent.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearAnimation.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearBase.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearColor.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearDisplay.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearIcon.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearLook.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearSize.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearText.h" />
+    <ClInclude Include="..\editor-support\fairygui\gears\GearXY.h" />
+    <ClInclude Include="..\editor-support\fairygui\GGraph.h" />
+    <ClInclude Include="..\editor-support\fairygui\GGroup.h" />
+    <ClInclude Include="..\editor-support\fairygui\GImage.h" />
+    <ClInclude Include="..\editor-support\fairygui\GLabel.h" />
+    <ClInclude Include="..\editor-support\fairygui\GList.h" />
+    <ClInclude Include="..\editor-support\fairygui\GLoader.h" />
+    <ClInclude Include="..\editor-support\fairygui\GMovieClip.h" />
+    <ClInclude Include="..\editor-support\fairygui\GObject.h" />
+    <ClInclude Include="..\editor-support\fairygui\GObjectPool.h" />
+    <ClInclude Include="..\editor-support\fairygui\GProgressBar.h" />
+    <ClInclude Include="..\editor-support\fairygui\GRichTextField.h" />
+    <ClInclude Include="..\editor-support\fairygui\GRoot.h" />
+    <ClInclude Include="..\editor-support\fairygui\GScrollBar.h" />
+    <ClInclude Include="..\editor-support\fairygui\GSlider.h" />
+    <ClInclude Include="..\editor-support\fairygui\GTextField.h" />
+    <ClInclude Include="..\editor-support\fairygui\GTextInput.h" />
+    <ClInclude Include="..\editor-support\fairygui\Margin.h" />
+    <ClInclude Include="..\editor-support\fairygui\PackageItem.h" />
+    <ClInclude Include="..\editor-support\fairygui\PopupMenu.h" />
+    <ClInclude Include="..\editor-support\fairygui\RelationItem.h" />
+    <ClInclude Include="..\editor-support\fairygui\Relations.h" />
+    <ClInclude Include="..\editor-support\fairygui\ScrollPane.h" />
+    <ClInclude Include="..\editor-support\fairygui\Transition.h" />
+    <ClInclude Include="..\editor-support\fairygui\TranslationHelper.h" />
+    <ClInclude Include="..\editor-support\fairygui\treeview\TreeNode.h" />
+    <ClInclude Include="..\editor-support\fairygui\treeview\TreeView.h" />
+    <ClInclude Include="..\editor-support\fairygui\tween\EaseManager.h" />
+    <ClInclude Include="..\editor-support\fairygui\tween\EaseType.h" />
+    <ClInclude Include="..\editor-support\fairygui\tween\GTween.h" />
+    <ClInclude Include="..\editor-support\fairygui\tween\GTweener.h" />
+    <ClInclude Include="..\editor-support\fairygui\tween\TweenManager.h" />
+    <ClInclude Include="..\editor-support\fairygui\tween\TweenPropType.h" />
+    <ClInclude Include="..\editor-support\fairygui\tween\TweenValue.h" />
+    <ClInclude Include="..\editor-support\fairygui\UIConfig.h" />
+    <ClInclude Include="..\editor-support\fairygui\UIObjectFactory.h" />
+    <ClInclude Include="..\editor-support\fairygui\UIPackage.h" />
+    <ClInclude Include="..\editor-support\fairygui\utils\ByteBuffer.h" />
+    <ClInclude Include="..\editor-support\fairygui\utils\ToolSet.h" />
+    <ClInclude Include="..\editor-support\fairygui\utils\UBBParser.h" />
+    <ClInclude Include="..\editor-support\fairygui\utils\WeakPtr.h" />
+    <ClInclude Include="..\editor-support\fairygui\Window.h" />
     <ClInclude Include="..\math\CCAffineTransform.h" />
-    <ClInclude Include="..\math\CCGeometry.h" />
     <ClInclude Include="..\math\CCMath.h" />
     <ClInclude Include="..\math\CCMathBase.h" />
     <ClInclude Include="..\math\CCVertex.h" />
@@ -1418,6 +1563,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
   </ItemGroup>
   <ItemGroup>
     <None Include="..\3d\CCAnimationCurve.inl" />
+    <None Include="..\editor-support\fairygui\LICENSE" />
+    <None Include="..\editor-support\fairygui\README.md" />
     <None Include="..\math\Mat4.inl" />
     <None Include="..\math\MathUtil.inl" />
     <None Include="..\math\MathUtilNeon.inl" />

@@ -11,7 +11,7 @@ class FUIXMLVisitor;
 class GLoader;
 class FUIRichElement;
 
-class FUIRichText : public cocos2d::Node
+class CC_DLL FUIRichText : public cocos2d::Node
 {
 public:
     FUIRichText();

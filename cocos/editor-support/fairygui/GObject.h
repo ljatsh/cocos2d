@@ -19,7 +19,7 @@ class ByteBuffer;
 class GRoot;
 class PackageItem;
 
-class GObject : public UIEventDispatcher
+class CC_DLL GObject : public UIEventDispatcher
 {
 public:
     static GObject* getDraggingObject() { return _draggingObject; }

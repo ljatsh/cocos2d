@@ -8,7 +8,7 @@
 
 NS_FGUI_BEGIN
 
-class GList : public GComponent
+class CC_DLL GList : public GComponent
 {
 public:
     typedef std::function<void(int, GObject*)> ListItemRenderer;

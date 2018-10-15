@@ -5,7 +5,7 @@
 
 NS_FGUI_BEGIN
 
-class ChangePageAction : public ControllerAction
+class CC_DLL ChangePageAction : public ControllerAction
 {
 public:
     virtual void setup(ByteBuffer * buffer) override;

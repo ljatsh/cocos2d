@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 
 class GObject;
 
-class GearText : public GearBase
+class CC_DLL GearText : public GearBase
 {
 public:
     GearText(GObject* owner);

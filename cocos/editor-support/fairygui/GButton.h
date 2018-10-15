@@ -9,7 +9,7 @@ NS_FGUI_BEGIN
 
 class GTextField;
 
-class GButton : public GComponent
+class CC_DLL GButton : public GComponent
 {
 public:
     static const std::string UP;

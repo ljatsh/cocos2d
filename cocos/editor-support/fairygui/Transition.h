@@ -12,7 +12,7 @@ class TransitionItem;
 class GTweener;
 class ByteBuffer;
 
-class Transition : public cocos2d::Ref
+class CC_DLL Transition : public cocos2d::Ref
 {
 public:
     typedef std::function<void()> PlayCompleteCallback;

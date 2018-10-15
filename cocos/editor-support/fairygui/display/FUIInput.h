@@ -10,7 +10,7 @@ NS_FGUI_BEGIN
 
 class GTextInput;
 
-class FUIInput : public cocos2d::ui::EditBox, cocos2d::ui::EditBoxDelegate
+class CC_DLL FUIInput : public cocos2d::ui::EditBox, cocos2d::ui::EditBoxDelegate
 {
 public:
     static FUIInput* create(GTextInput* owner);

@@ -6,7 +6,7 @@
 
 NS_FGUI_BEGIN
 
-class ToolSet
+class CC_DLL ToolSet
 {
 public:
     static cocos2d::Color4B convertFromHtmlColor(const char* str);
@@ -14,7 +14,7 @@ public:
     static int findInStringArray(const std::vector<std::string>& arr, const std::string& str);
 };
 
-class FastSplitter
+class CC_DLL FastSplitter
 {
 public:
     FastSplitter();
