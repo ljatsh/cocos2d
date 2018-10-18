@@ -1364,6 +1364,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Com
     <ClInclude Include="..\editor-support\fairygui\utils\WeakPtr.h" />
     <ClInclude Include="..\editor-support\fairygui\Window.h" />
     <ClInclude Include="..\math\CCAffineTransform.h" />
+    <ClInclude Include="..\math\CCGeometry.h" />
     <ClInclude Include="..\math\CCMath.h" />
     <ClInclude Include="..\math\CCMathBase.h" />
     <ClInclude Include="..\math\CCVertex.h" />

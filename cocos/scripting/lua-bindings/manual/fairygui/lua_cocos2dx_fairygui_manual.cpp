@@ -168,8 +168,7 @@ static int lua_cocos2dx_fairygui_addClickListener(lua_State *L)
 
         self->addClickListener([=](fairygui::EventContext *sender) {
             handleFairyguiEvent(handler, sender);
-        },
-                               fairygui::EventTag(tag));
+        }, fairygui::EventTag(tag));
         ScriptHandlerMgr::getInstance()->addCustomHandler((void *)self, handler);
 
         return 0;
@@ -1603,6 +1602,54 @@ int lua_cocos2dx_fairygui_Transition_setHook(lua_State* L)
     return 0;
 }
 
+int lua_cocos2dx_fairygui_EventContext_getGObjectData(lua_State* L)
+{
+    int argc = 0;
+    fairygui::EventContext* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(L,1,"fgui.EventContext",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::EventContext*)tolua_tousertype(L,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(L,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_EventContext_getGObjectData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(L)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(L,"invalid arguments in function 'lua_cocos2dx_fairygui_EventContext_getGObjectData'", nullptr);
+            return 0;
+        }
+        fairygui::GObject* ret = (fairygui::GObject*)cobj->getData();
+        object_to_luaval<fairygui::GObject>(L, "fgui.GObject", ret);
+        return 1;
+    }
+    luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.EventContext:getGObjectData",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(L,"#ferror in function 'lua_cocos2dx_fairygui_EventContext_getGObjectData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+
 static void extendUIEventDispatcher(lua_State *L)
 {
     lua_pushstring(L, "fgui.UIEventDispatcher");
@@ -1685,6 +1732,7 @@ static void extendEventContext(lua_State *L)
     lua_rawget(L, LUA_REGISTRYINDEX);
     if (lua_istable(L, -1))
     {
+      tolua_function(L, "getGObjectData", lua_cocos2dx_fairygui_EventContext_getGObjectData);
     }
     lua_pop(L, 1);
 }

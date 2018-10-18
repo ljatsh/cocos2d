@@ -139,6 +139,8 @@ function basicScene:runDemo(context)
       self:playDragDrop()
   elseif type == 'Popup' then
       self:playPopup()
+  elseif type == 'List' then
+      self:playList()
   end
 end
 
@@ -227,6 +229,24 @@ function basicScene:playPopup()
 
   object:addEventListener(fgui.UIEvent.RightClick, function(eventContext)
     self._pm:show()
+  end)
+end
+
+function basicScene:playList()
+  local object = self._demoObjects['List']
+  local single_column_list = object:getChild('n0')
+
+  for i=0, single_column_list:getNumItems()-1 do
+    local item = single_column_list:getChildAt(i)
+    item:setCustomData(string.format('this is %s', item:getTitle()))
+  end
+
+  single_column_list:addEventListener(fgui.UIEvent.ClickItem, function(context)
+    assert(context:getSender() == single_column_list)
+
+    local item = context:getGObjectData()
+    print(string.format('item %s was clicked', item:getTitle()))
+    print(string.format('custome data:%s', context:getDataValue()))
   end)
 end
 

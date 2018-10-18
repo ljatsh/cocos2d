@@ -682,7 +682,7 @@ void GList::onItemTouchBegin(EventContext * context)
 
 void GList::onClickItem(EventContext * context)
 {
-    GButton* item = (GButton*)context->getSender();
+    GObject* item = (GObject*)context->getSender();
     if (!_selectionHandled)
         setSelectionOnEvent(item, context->getInput());
     _selectionHandled = false;
@@ -690,7 +690,7 @@ void GList::onClickItem(EventContext * context)
     if (_scrollPane != nullptr && scrollItemToViewOnClick)
         _scrollPane->scrollToView(item, true);
 
-    dispatchEvent(context->getType() == UIEventType::Click ? UIEventType::ClickItem : UIEventType::RightClickItem, item);
+    dispatchEvent(context->getType() == UIEventType::Click ? UIEventType::ClickItem : UIEventType::RightClickItem, item, item->getCustomData());
 }
 
 void GList::setSelectionOnEvent(GObject * item, InputEvent * evt)
@@ -1076,7 +1076,7 @@ void GList::setNumItems(int value)
         if (_virtualListChanged != 0)
             CALL_LATER_CANCEL(GList, doRefreshVirtualList);
 
-        //Á¢¼´Ë¢ÐÂ
+        //ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½
         doRefreshVirtualList();
     }
     else

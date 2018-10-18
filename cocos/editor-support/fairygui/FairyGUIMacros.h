@@ -31,4 +31,7 @@ cocos2d::Director::getInstance()->getScheduler()->unschedule(CC_SCHEDULE_SELECTO
 
 #include "FieldTypes.h"
 
+#include "platform/CCPlatformConfig.h"
+#include "platform/CCPlatformMacros.h"
+
 #endif

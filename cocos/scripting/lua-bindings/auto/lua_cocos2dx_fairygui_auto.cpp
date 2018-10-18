@@ -1217,53 +1217,6 @@ int lua_cocos2dx_fairygui_EventContext_captureTouch(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cocos2dx_fairygui_EventContext_getData(lua_State* tolua_S)
-{
-    int argc = 0;
-    fairygui::EventContext* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"fgui.EventContext",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (fairygui::EventContext*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_EventContext_getData'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 0) 
-    {
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_EventContext_getData'", nullptr);
-            return 0;
-        }
-        void* ret = cobj->getData();
-        #pragma warning NO CONVERSION FROM NATIVE FOR void*;
-        return 1;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.EventContext:getData",argc, 0);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_EventContext_getData'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cocos2dx_fairygui_EventContext_stopPropagation(lua_State* tolua_S)
 {
     int argc = 0;
@@ -1367,7 +1320,6 @@ int lua_register_cocos2dx_fairygui_EventContext(lua_State* tolua_S)
         tolua_function(tolua_S,"getDataValue",lua_cocos2dx_fairygui_EventContext_getDataValue);
         tolua_function(tolua_S,"getInput",lua_cocos2dx_fairygui_EventContext_getInput);
         tolua_function(tolua_S,"captureTouch",lua_cocos2dx_fairygui_EventContext_captureTouch);
-        tolua_function(tolua_S,"getData",lua_cocos2dx_fairygui_EventContext_getData);
         tolua_function(tolua_S,"stopPropagation",lua_cocos2dx_fairygui_EventContext_stopPropagation);
     tolua_endmodule(tolua_S);
     std::string typeName = typeid(fairygui::EventContext).name();

@@ -53,12 +53,6 @@
         
 --------------------------------
 -- 
--- @function getData 
--- @param self
--- @return void#void ret (return value: void)
-        
---------------------------------
--- 
 -- @function stopPropagation 
 -- @param self
 -- @return EventContext#EventContext self (return value: fgui.EventContext)
