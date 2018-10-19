@@ -382,8 +382,9 @@ void GLoader::updateLayout()
     }
     else
     {
-        _content->setContentSize(_contentSourceSize);
-        _content->setScale(sx, sy);
+        // fixed by lj@sh
+        _content->setContentSize(_contentSize);
+        //_content->setScale(sx, sy);
         _content->setAnchorPoint(Vec2::ZERO);
     }
 

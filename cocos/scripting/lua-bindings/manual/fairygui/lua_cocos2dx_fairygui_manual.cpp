@@ -671,7 +671,7 @@ int lua_cocos2dx_fairygui_getMargin(lua_State* tolua_S)
 }
 */
 
-static int lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension(lua_State *tolua_S)
+static int lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension(lua_State* L)
 {
     int argc = 0;
     bool ok = true;
@@ -681,87 +681,58 @@ static int lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension(lua_Sta
 #endif
 
 #if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertable(tolua_S, 1, "fgui.UIObjectFactory", 0, &tolua_err))
+    if (!tolua_isusertable(L, 1, "fgui.UIObjectFactory", 0, &tolua_err))
         goto tolua_lerror;
 #endif
 
-    argc = lua_gettop(tolua_S) - 1;
+    argc = lua_gettop(L) - 1;
 
-    if (argc == 3 || argc == 4)
+    if (argc == 2)
     {
 #if COCOS2D_DEBUG >= 1
-        if (!toluafix_isfunction(tolua_S, 3, "LUA_FUNCTION", 0, &tolua_err))
+        if (!toluafix_isfunction(L, 3, "LUA_FUNCTION", 0, &tolua_err))
         {
             goto tolua_lerror;
         }
 #endif
 
-        LUA_FUNCTION handler = (toluafix_ref_function(tolua_S, 3, 0));
+        LUA_FUNCTION handler = (toluafix_ref_function(L, 3, 0));
 
-        bool ok = true;
+        ok = true;
         std::string url;
-        ok &= luaval_to_std_string(tolua_S, 2, &url, "lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension");
+        ok &= luaval_to_std_string(L, 2, &url, "lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension");
         if (!ok)
         {
-            tolua_error(tolua_S, "invalid arguments in function 'lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension'", nullptr);
-            return 0;
-        }
-
-        std::string retType;
-        ok &= luaval_to_std_string(tolua_S, 4, &retType, "lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension");
-        if (!ok)
-        {
-            tolua_error(tolua_S, "invalid arguments in function 'lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension'", nullptr);
+            tolua_error(L, "invalid arguments in function 'lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension'", nullptr);
             return 0;
         }
 
         fairygui::UIObjectFactory::setPackageItemExtension(url, [=]() -> fairygui::GComponent * {
             fairygui::GComponent *ret = nullptr;
-            if (retType == "GButton")
-                ret = fairygui::GButton::create();
-            else if (retType == "GLabel")
-                ret = fairygui::GLabel::create();
-            else if (retType == "GProgressBar")
-                ret = fairygui::GProgressBar::create();
-            else if (retType == "GSlider")
-                ret = fairygui::GSlider::create();
-            else if (retType == "GScrollBar")
-                ret = fairygui::GScrollBar::create();
-            else if (retType == "GComboBox")
-                ret = fairygui::GComboBox::create();
-            else
-                ret = fairygui::GComponent::create();
 
             LuaStack *stack = LuaEngine::getInstance()->getLuaStack();
-            stack->pushObject(ret, "fgui.GComponent");
-            stack->executeFunctionByHandler(handler, 1);
+            stack->executeFunction(handler, 0, 1, [&](lua_State* L2, int numReturn) {
+              CCASSERT(numReturn == 1, "setPackageItemExtenstion return count error");
+              ret = (fairygui::GComponent*)tolua_tousertype(L2, -1, nullptr);
+              CCASSERT(ret != nullptr, "setPackageItemExtension must return a component");
+              lua_pop(L2, 1);
+            });
 
+            stack->clean();
             return ret;
         });
 
-        cocos2d::Ref *self = nullptr;
-        if (argc == 4)
-        {
-            self = (cocos2d::Ref *)tolua_tousertype(tolua_S, 5, 0);
-        }
-        if (self)
-        {
-            ScriptHandlerMgr::getInstance()->addCustomHandler((void *)self, handler);
-        }
-        else
-        {
-            ScriptHandlerMgr::getInstance()->addCustomHandler((void *)Director::getInstance(), handler);
-        }
+        //ScriptHandlerMgr::getInstance()->addCustomHandler((void *)fairygui::UIObjectFactory::setPackageItemExtension, handler);
 
         return 0;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "fgui.UIObjectFactory:setPackageItemExtension", argc, 2);
+    luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d\n ", "fgui.UIObjectFactory:setPackageItemExtension", argc, 2);
     return 0;
 #if COCOS2D_DEBUG >= 1
 tolua_lerror:
-    tolua_error(tolua_S, "#ferror in function 'lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension'.", &tolua_err);
-#endif
+    tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension'.", &tolua_err);
     return 0;
+#endif
 }
 
 static int lua_cocos2dx_fairygui_GList_setItemRenderer(lua_State *L)
@@ -1187,6 +1158,48 @@ static int lua_cocos2dx_fairygui_UIConfig_set_modalLayerColor(lua_State *L)
 #if COCOS2D_DEBUG >= 1
 tolua_lerror:
     tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_UIConfig_set_modalLayerColor'.", &tolua_err);
+    return 0;
+#endif
+}
+
+static int lua_cocos2dx_fairygui_UIConfig_get_bringWindowToFrontOnClick(lua_State *L)
+{
+    lua_pushboolean(L, fairygui::UIConfig::bringWindowToFrontOnClick);
+    return 1;
+}
+
+static int lua_cocos2dx_fairygui_UIConfig_set_bringWindowToFrontOnClick(lua_State *L)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+    if (!tolua_isusertable(L, 1, "fgui.UIConfig", 0, &tolua_err))
+        goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(L) - 1;
+
+    if (argc == 1)
+    {
+        bool arg0;
+        ok &= luaval_to_boolean(L, 2, &arg0, "fgui.UIConfig.bringWindowToFrontOnClick");
+        if(!ok)
+        {
+            tolua_error(L, "invalid arguments in function 'bringWindowToFrontOnClick'", nullptr);
+            return 0;
+        }
+        fairygui::UIConfig::bringWindowToFrontOnClick = arg0;
+        return 0;
+    }
+
+    luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d\n ", "bringWindowToFrontOnClick", argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+tolua_lerror:
+    tolua_error(L, "#ferror in function 'bringWindowToFrontOnClick'.", &tolua_err);
     return 0;
 #endif
 }
@@ -1750,6 +1763,7 @@ static void extendUIConfig(lua_State *L)
         tolua_variable(L, "tooltipsWin", lua_cocos2dx_fairygui_UIConfig_get_tooltipsWin, lua_cocos2dx_fairygui_UIConfig_set_tooltipsWin);
         tolua_variable(L, "popupMenu", lua_cocos2dx_fairygui_UIConfig_get_popupMenu, lua_cocos2dx_fairygui_UIConfig_set_popupMenu);
         tolua_variable(L, "modalLayerColor", lua_cocos2dx_fairygui_UIConfig_get_modalLayerColor, lua_cocos2dx_fairygui_UIConfig_set_modalLayerColor);
+        tolua_variable(L, "bringWindowToFrontOnClick", lua_cocos2dx_fairygui_UIConfig_get_bringWindowToFrontOnClick, lua_cocos2dx_fairygui_UIConfig_set_bringWindowToFrontOnClick);
     }
     lua_pop(L, 1);
 }

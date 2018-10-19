@@ -18,12 +18,4 @@
 -- @param #fgui.PackageItem pi
 -- @return GObject#GObject ret (return value: fgui.GObject)
 
---------------------------------
--- 
--- @function setPackageItemExtension 
--- @param self
--- @param #string url
--- @param #function creator
--- @return UIObjectFactory#UIObjectFactory self (return value: fgui.UIObjectFactory)
-        
 return nil
