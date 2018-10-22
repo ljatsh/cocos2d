@@ -6,3 +6,8 @@ project.xcworkspace
 xcuserdata/
 .objs
 tools/tolua/userconf.ini
+.vscode
+Debug.win32
+Release.win32
+*.vcxproj.user
+tests/fairygui-tests/proj.win32/.vs

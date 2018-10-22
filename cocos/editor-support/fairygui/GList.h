@@ -72,6 +72,7 @@ public:
     void clearSelection();
     void selectAll();
     void selectReverse();
+    void supportIrregularItem(bool irregularItem);
 
     void handleArrowKey(int dir);
 
@@ -180,6 +181,7 @@ private:
         ItemInfo();
     };
     std::vector<ItemInfo> _virtualItems;
+    bool _support_irregular_item;
 };
 
 NS_FGUI_END

@@ -40,7 +40,8 @@ GList::GList() :
     _virtualListChanged(false),
     _eventLocked(false),
     _enterCounter(0),
-    _itemInfoVer(0)
+    _itemInfoVer(0),
+    _support_irregular_item(false)
 {
     _trackBounds = true;
     setOpaque(true);
@@ -491,6 +492,10 @@ void GList::selectReverse()
 
     if (last != -1)
         updateSelectionController(last);
+}
+
+void GList::supportIrregularItem(bool irregularItem) {
+  _support_irregular_item = irregularItem;
 }
 
 void GList::handleArrowKey(int dir)
@@ -1588,11 +1593,21 @@ void GList::handleScroll1(bool forceUpdate)
 
         curX += ii.size.x + _columnGap;
 
-        if (curIndex % _curLineItemCount == _curLineItemCount - 1)
-        {
+        // 应付不规则item
+        if (_support_irregular_item) {
+          if ((curX + _itemSize.x) > _scrollPane->getViewSize().width) {
             curX = 0;
             curY += ii.size.y + _lineGap;
+          }
         }
+        else {
+          if (curIndex % _curLineItemCount == _curLineItemCount - 1)
+          {
+              curX = 0;
+              curY += ii.size.y + _lineGap;
+          }
+        }
+
         curIndex++;
     }
 

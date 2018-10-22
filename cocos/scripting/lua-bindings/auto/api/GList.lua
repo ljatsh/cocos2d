@@ -208,6 +208,13 @@
         
 --------------------------------
 -- 
+-- @function supportIrregularItem 
+-- @param self
+-- @param #bool irregularItem
+-- @return GList#GList self (return value: fgui.GList)
+        
+--------------------------------
+-- 
 -- @function getItemPool 
 -- @param self
 -- @return GObjectPool#GObjectPool ret (return value: fgui.GObjectPool)
