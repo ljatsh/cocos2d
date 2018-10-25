@@ -32,6 +32,7 @@
 #include "scripting/lua-bindings/manual/ui/lua_cocos2dx_ui_manual.hpp"
 #include "scripting/lua-bindings/manual/spine/lua_cocos2dx_spine_manual.hpp"
 #include "scripting/lua-bindings/manual/fairygui/lua_cocos2dx_fairygui_manual.hpp"
+#include "scripting/lua-bindings/manual/dragonbones/lua_cocos2dx_dragonbones_manual.hpp"
 #include "scripting/lua-bindings/manual/3d/lua_cocos2dx_3d_manual.h"
 #include "scripting/lua-bindings/manual/audioengine/lua_cocos2dx_audioengine_manual.h"
 #include "scripting/lua-bindings/manual/physics3d/lua_cocos2dx_physics3d_manual.h"
@@ -49,6 +50,7 @@ int lua_module_register(lua_State* L)
     register_extension_module(L);
     register_spine_module(L);
     register_fairygui_module(L);
+    register_dragonbones_module(L);
     register_cocos3d_module(L);
     register_audioengine_module(L);
 #if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION

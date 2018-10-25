@@ -1,168 +1,403 @@
 
 --------------------------------
 -- @module Animation
--- @see Ref
--- @see cc
+-- @see BaseObject
+-- @see db
 
 --------------------------------
---  Gets the times the animation is going to loop. 0 means animation is not animated. 1, animation is executed one time, ... <br>
--- return The times the animation is going to loop.
--- @function getLoops 
--- @param self
--- @return unsigned int#unsigned int ret (return value: unsigned int)
-        
---------------------------------
---  Adds a SpriteFrame to a Animation.<br>
--- param frame The frame will be added with one "delay unit".
--- @function addSpriteFrame 
--- @param self
--- @param #cc.SpriteFrame frame
--- @return Animation#Animation self (return value: cc.Animation)
-        
---------------------------------
---  Sets whether to restore the original frame when animation finishes. <br>
--- param restoreOriginalFrame Whether to restore the original frame when animation finishes.
--- @function setRestoreOriginalFrame 
--- @param self
--- @param #bool restoreOriginalFrame
--- @return Animation#Animation self (return value: cc.Animation)
-        
---------------------------------
--- 
--- @function clone 
--- @param self
--- @return Animation#Animation ret (return value: cc.Animation)
-        
---------------------------------
---  Gets the duration in seconds of the whole animation. It is the result of totalDelayUnits * delayPerUnit.<br>
--- return Result of totalDelayUnits * delayPerUnit.
--- @function getDuration 
--- @param self
--- @return float#float ret (return value: float)
-        
---------------------------------
---  Initializes a Animation with AnimationFrame.<br>
--- since v2.0
--- @function initWithAnimationFrames 
--- @param self
--- @param #array_table arrayOfAnimationFrameNames
--- @param #float delayPerUnit
--- @param #unsigned int loops
--- @return bool#bool ret (return value: bool)
-        
---------------------------------
---  Initializes a Animation. 
+-- internal
 -- @function init 
 -- @param self
+-- @param #db.Armature armature
+-- @return Animation#Animation self (return value: db.Animation)
+        
+--------------------------------
+-- - Play a specific animation from the specific time.<br>
+-- param animationName - The name of animation data.<br>
+-- param time - The start time point of playing. (In seconds)<br>
+-- param playTimes - Playing repeat times. [-1: Use the default value of animation data, 0: No end loop playing, [1~N]: Repeat N times] (Default: -1)<br>
+-- returns The played animation state.<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 从指定时间开始播放指定的动画。<br>
+-- param animationName - 动画数据名称。<br>
+-- param time - 播放开始的时间。 (以秒为单位)<br>
+-- param playTimes - 循环播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次] （默认: -1）<br>
+-- returns 播放的动画状态。<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function gotoAndPlayByTime 
+-- @param self
+-- @param #string animationName
+-- @param #float time
+-- @param #int playTimes
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- - Fade in a specific animation.<br>
+-- param animationName - The name of animation data.<br>
+-- param fadeInTime - The fade in time. [-1: Use the default value of animation data, [0~N]: The fade in time (In seconds)] (Default: -1)<br>
+-- param playTimes - playing repeat times. [-1: Use the default value of animation data, 0: No end loop playing, [1~N]: Repeat N times] (Default: -1)<br>
+-- param layer - The blending layer, the animation states in high level layer will get the blending weights with high priority, when the total blending weights are more than 1.0, there will be no more weights can be allocated to the other animation states. (Default: 0)<br>
+-- param group - The blending group name, it is typically used to specify the substitution of multiple animation states blending. (Default: null)<br>
+-- param fadeOutMode - The fade out mode, which is typically used to specify alternate mode of multiple animation states blending. (Default: AnimationFadeOutMode.SameLayerAndGroup)<br>
+-- returns The playing animation state.<br>
+-- example<br>
+-- TypeScript style, for reference only.<br>
+-- <pre><br>
+-- armature.animation.fadeIn("walk", 0.3, 0, 0, "normalGroup").resetToPose = false;<br>
+-- armature.animation.fadeIn("attack", 0.3, 1, 0, "attackGroup").resetToPose = false;<br>
+-- </pre><br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 淡入播放指定的动画。<br>
+-- param animationName - 动画数据名称。<br>
+-- param fadeInTime - 淡入时间。 [-1: 使用动画数据默认值, [0~N]: 淡入时间 (以秒为单位)] （默认: -1）<br>
+-- param playTimes - 播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次] （默认: -1）<br>
+-- param layer - 混合图层，图层高的动画状态会优先获取混合权重，当混合权重分配总和超过 1.0 时，剩余的动画状态将不能再获得权重分配。 （默认: 0）<br>
+-- param group - 混合组名称，该属性通常用来指定多个动画状态混合时的相互替换关系。 （默认: null）<br>
+-- param fadeOutMode - 淡出模式，该属性通常用来指定多个动画状态混合时的相互替换模式。 （默认: AnimationFadeOutMode.SameLayerAndGroup）<br>
+-- returns 播放的动画状态。<br>
+-- example<br>
+-- TypeScript 风格，仅供参考。<br>
+-- <pre><br>
+-- armature.animation.fadeIn("walk", 0.3, 0, 0, "normalGroup").resetToPose = false;<br>
+-- armature.animation.fadeIn("attack", 0.3, 1, 0, "attackGroup").resetToPose = false;<br>
+-- </pre><br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function fadeIn 
+-- @param self
+-- @param #string animationName
+-- @param #float fadeInTime
+-- @param #int playTimes
+-- @param #int layer
+-- @param #string group
+-- @param #int fadeOutMode
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- - Play animation with a specific animation config.<br>
+-- The API is still in the experimental phase and may encounter bugs or stability or compatibility issues when used.<br>
+-- param animationConfig - The animation config.<br>
+-- returns The playing animation state.<br>
+-- see dragonBones.AnimationConfig<br>
+-- beta<br>
+-- version DragonBones 5.0<br>
+-- language en_US<br>
+-- - 通过指定的动画配置来播放动画。<br>
+-- 该 API 仍在实验阶段，使用时可能遭遇 bug 或稳定性或兼容性问题。<br>
+-- param animationConfig - 动画配置。<br>
+-- returns 播放的动画状态。<br>
+-- see dragonBones.AnimationConfig<br>
+-- beta<br>
+-- version DragonBones 5.0<br>
+-- language zh_CN
+-- @function playConfig 
+-- @param self
+-- @param #db.AnimationConfig animationConfig
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- - Check whether all the animation states' playing were finished.<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 检查是否所有的动画状态均已播放完毕。<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function isCompleted 
+-- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
---  Sets the array of AnimationFrames. <br>
--- param frames The array of AnimationFrames.
--- @function setFrames 
+-- - Play a specific animation.<br>
+-- param animationName - The name of animation data. (If not set, The default animation will be played, or resume the animation playing from pause status, or replay the last playing animation)<br>
+-- param playTimes - Playing repeat times. [-1: Use default value of the animation data, 0: No end loop playing, [1~N]: Repeat N times] (default: -1)<br>
+-- returns The playing animation state.<br>
+-- example<br>
+-- TypeScript style, for reference only.<br>
+-- <pre><br>
+-- armature.animation.play("walk");<br>
+-- </pre><br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 播放指定动画。<br>
+-- param animationName - 动画数据名称。 （如果未设置，则播放默认动画，或将暂停状态切换为播放状态，或重新播放之前播放的动画）<br>
+-- param playTimes - 循环播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次] （默认: -1）<br>
+-- returns 播放的动画状态。<br>
+-- example<br>
+-- TypeScript 风格，仅供参考。<br>
+-- <pre><br>
+-- armature.animation.play("walk");<br>
+-- </pre><br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function play 
 -- @param self
--- @param #array_table frames
--- @return Animation#Animation self (return value: cc.Animation)
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
         
 --------------------------------
---  Gets the array of AnimationFrames.<br>
--- return The array of AnimationFrames.
--- @function getFrames 
+-- - Get a specific animation state.<br>
+-- param animationName - The name of animation state.<br>
+-- example<br>
+-- TypeScript style, for reference only.<br>
+-- <pre><br>
+-- armature.animation.play("walk");<br>
+-- let walkState = armature.animation.getState("walk");<br>
+-- walkState.timeScale = 0.5;<br>
+-- </pre><br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 获取指定的动画状态<br>
+-- param animationName - 动画状态名称。<br>
+-- example<br>
+-- TypeScript 风格，仅供参考。<br>
+-- <pre><br>
+-- armature.animation.play("walk");<br>
+-- let walkState = armature.animation.getState("walk");<br>
+-- walkState.timeScale = 0.5;<br>
+-- </pre><br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getState 
+-- @param self
+-- @param #string animationName
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- - Pause a specific animation state.<br>
+-- param animationName - The name of animation state. (If not set, it will pause all animations)<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 暂停指定动画状态的播放。<br>
+-- param animationName - 动画状态名称。 （如果未设置，则暂停所有动画）<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function stop 
+-- @param self
+-- @param #string animationName
+-- @return Animation#Animation self (return value: db.Animation)
+        
+--------------------------------
+-- - The name of the last playing animation state.<br>
+-- see #lastAnimationState<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 上一个播放的动画状态名称<br>
+-- see #lastAnimationState<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getLastAnimationName 
+-- @param self
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+-- - The last playing animation state<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 上一个播放的动画状态<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getLastAnimationState 
+-- @param self
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- - The name of all animation data<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 所有动画数据的名称<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function getAnimationNames 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
---  Sets the times the animation is going to loop. 0 means animation is not animated. 1, animation is executed one time, ... <br>
--- param loops The times the animation is going to loop.
--- @function setLoops 
+-- internal
+-- @function advanceTime 
 -- @param self
--- @param #unsigned int loops
--- @return Animation#Animation self (return value: cc.Animation)
+-- @param #float passedTime
+-- @return Animation#Animation self (return value: db.Animation)
         
 --------------------------------
---  Sets the delay in seconds of the "delay unit".<br>
--- param delayPerUnit The delay in seconds of the "delay unit".
--- @function setDelayPerUnit 
--- @param self
--- @param #float delayPerUnit
--- @return Animation#Animation self (return value: cc.Animation)
-        
---------------------------------
---  Adds a frame with an image filename. Internally it will create a SpriteFrame and it will add it.<br>
--- The frame will be added with one "delay unit".<br>
--- Added to facilitate the migration from v0.8 to v0.9.<br>
--- param filename The path of SpriteFrame.
--- @function addSpriteFrameWithFile 
--- @param self
--- @param #string filename
--- @return Animation#Animation self (return value: cc.Animation)
-        
---------------------------------
---  Gets the total Delay units of the Animation. <br>
--- return The total Delay units of the Animation.
--- @function getTotalDelayUnits 
--- @param self
--- @return float#float ret (return value: float)
-        
---------------------------------
---  Gets the delay in seconds of the "delay unit".<br>
--- return The delay in seconds of the "delay unit".
--- @function getDelayPerUnit 
--- @param self
--- @return float#float ret (return value: float)
-        
---------------------------------
---  Initializes a Animation with frames and a delay between frames.<br>
--- since v0.99.5
--- @function initWithSpriteFrames 
--- @param self
--- @param #array_table arrayOfSpriteFrameNames
--- @param #float delay
--- @param #unsigned int loops
--- @return bool#bool ret (return value: bool)
-        
---------------------------------
---  Checks whether to restore the original frame when animation finishes. <br>
--- return Restore the original frame when animation finishes.
--- @function getRestoreOriginalFrame 
+-- - Check whether there is an animation state is playing<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 检查是否有动画状态正在播放<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function isPlaying 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
---  Adds a frame with a texture and a rect. Internally it will create a SpriteFrame and it will add it.<br>
--- The frame will be added with one "delay unit".<br>
--- Added to facilitate the migration from v0.8 to v0.9.<br>
--- param pobTexture A frame with a texture.<br>
--- param rect The Texture of rect.
--- @function addSpriteFrameWithTexture 
+-- - Play a specific animation from the specific progress.<br>
+-- param animationName - The name of animation data.<br>
+-- param progress - The start progress value of playing.<br>
+-- param playTimes - Playing repeat times. [-1: Use the default value of animation data, 0: No end loop playing, [1~N]: Repeat N times] (Default: -1)<br>
+-- returns The played animation state.<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 从指定进度开始播放指定的动画。<br>
+-- param animationName - 动画数据名称。<br>
+-- param progress - 开始播放的进度。<br>
+-- param playTimes - 播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次] （默认: -1）<br>
+-- returns 播放的动画状态。<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function gotoAndPlayByProgress 
 -- @param self
--- @param #cc.Texture2D pobTexture
--- @param #rect_table rect
--- @return Animation#Animation self (return value: cc.Animation)
+-- @param #string animationName
+-- @param #float progress
+-- @param #int playTimes
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
         
 --------------------------------
--- @overload self, array_table, float, unsigned int         
--- @overload self         
--- @function create
+-- - An AnimationConfig instance that can be used quickly.<br>
+-- see dragonBones.AnimationConfig<br>
+-- version DragonBones 5.0<br>
+-- language en_US<br>
+-- - 一个可以快速使用的动画配置实例。<br>
+-- see dragonBones.AnimationConfig<br>
+-- version DragonBones 5.0<br>
+-- language zh_CN
+-- @function getAnimationConfig 
 -- @param self
--- @param #array_table arrayOfAnimationFrameNames
--- @param #float delayPerUnit
--- @param #unsigned int loops
--- @return Animation#Animation ret (return value: cc.Animation)
-
+-- @return AnimationConfig#AnimationConfig ret (return value: db.AnimationConfig)
+        
+--------------------------------
+-- - Clear all animations states.<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 清除所有的动画状态。<br>
+-- see dragonBones.AnimationState<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function reset 
+-- @param self
+-- @return Animation#Animation self (return value: db.Animation)
+        
+--------------------------------
+-- - Check whether a specific animation data is included.<br>
+-- param animationName - The name of animation data.<br>
+-- see dragonBones.AnimationData<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 检查是否包含指定的动画数据<br>
+-- param animationName - 动画数据名称。<br>
+-- see dragonBones.AnimationData<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function hasAnimation 
+-- @param self
+-- @param #string animationName
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- - Stop a specific animation at the specific time.<br>
+-- param animationName - The name of animation data.<br>
+-- param time - The stop time. (In seconds)<br>
+-- returns The played animation state.<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 在指定时间停止指定动画播放<br>
+-- param animationName - 动画数据名称。<br>
+-- param time - 停止的时间。 (以秒为单位)<br>
+-- returns 播放的动画状态。<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function gotoAndStopByTime 
+-- @param self
+-- @param #string animationName
+-- @param #float time
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- - Stop a specific animation at the specific progress.<br>
+-- param animationName - The name of animation data.<br>
+-- param progress - The stop progress value.<br>
+-- returns The played animation state.<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 在指定的进度停止指定的动画播放。<br>
+-- param animationName - 动画数据名称。<br>
+-- param progress - 停止进度。<br>
+-- returns 播放的动画状态。<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function gotoAndStopByProgress 
+-- @param self
+-- @param #string animationName
+-- @param #float progress
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- - Play a specific animation from the specific frame.<br>
+-- param animationName - The name of animation data.<br>
+-- param frame - The start frame of playing.<br>
+-- param playTimes - Playing repeat times. [-1: Use the default value of animation data, 0: No end loop playing, [1~N]: Repeat N times] (Default: -1)<br>
+-- returns The played animation state.<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 从指定帧开始播放指定的动画。<br>
+-- param animationName - 动画数据名称。<br>
+-- param frame - 播放开始的帧数。<br>
+-- param playTimes - 播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次] （默认: -1）<br>
+-- returns 播放的动画状态。<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function gotoAndPlayByFrame 
+-- @param self
+-- @param #string animationName
+-- @param #unsigned int frame
+-- @param #int playTimes
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- - Stop a specific animation at the specific frame.<br>
+-- param animationName - The name of animation data.<br>
+-- param frame - The stop frame.<br>
+-- returns The played animation state.<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 在指定帧停止指定动画的播放<br>
+-- param animationName - 动画数据名称。<br>
+-- param frame - 停止的帧数。<br>
+-- returns 播放的动画状态。<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function gotoAndStopByFrame 
+-- @param self
+-- @param #string animationName
+-- @param #unsigned int frame
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
 --------------------------------
 -- 
--- @function createWithSpriteFrames 
+-- @function getTypeIndex 
 -- @param self
--- @param #array_table arrayOfSpriteFrameNames
--- @param #float delay
--- @param #unsigned int loops
--- @return Animation#Animation ret (return value: cc.Animation)
+-- @return unsigned int#unsigned int ret (return value: unsigned int)
+        
+--------------------------------
+-- 
+-- @function getClassTypeIndex 
+-- @param self
+-- @return unsigned int#unsigned int ret (return value: unsigned int)
         
 --------------------------------
 -- 
 -- @function Animation 
 -- @param self
--- @return Animation#Animation self (return value: cc.Animation)
+-- @return Animation#Animation self (return value: db.Animation)
         
 return nil

@@ -67,6 +67,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 #endif
     FileUtils::getInstance()->addSearchPath("src");
     FileUtils::getInstance()->addSearchPath("res");
+    FileUtils::getInstance()->addSearchPath("res/dragonbones");
     pEngine->executeScriptFile("controller.lua");
 
     return true;

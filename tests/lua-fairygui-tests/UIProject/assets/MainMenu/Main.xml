@@ -46,5 +46,8 @@
     <component id="n15_ogwr" name="n15" src="rftu4" fileName="Button.xml" xy="795,146" size="235,51">
       <Button title="lua-game"/>
     </component>
+    <component id="n16_ivpd" name="n16" src="rftu4" fileName="Button.xml" xy="794,216" size="235,51">
+      <Button title="dragonbones"/>
+    </component>
   </displayList>
 </component>

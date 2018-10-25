@@ -5,6 +5,7 @@ local virtualListScene = require('virtualListScene')
 local hittestScene = require('hittestScene')
 local transitionScene = require('transitionScene')
 local luaGameScene = require('luaGameScene')
+local dragonbonesScene = require('dragonbonesScene')
 
 local mainMenu = class('mainMenu', demoScene)
 
@@ -28,6 +29,9 @@ function mainMenu:init()
   end)
   self._view:getChild('n15'):addClickListener(function(context)
     director:replaceScene(luaGameScene.new())
+  end)
+  self._view:getChild('n16'):addClickListener(function(context)
+    director:replaceScene(dragonbonesScene.new())
   end)
 end
 
