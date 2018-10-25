@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		06CB5E95214F43D500857941 /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB5E90214F43C100857941 /* libcocos2d iOS.a */; };
 		06CB5E98214F43E000857941 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB5E8E214F43C100857941 /* libcocos2d Mac.a */; };
+		06FCA01521819C0E008271DB /* CoreElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA01121819C0E008271DB /* CoreElement.cpp */; };
+		06FCA01621819C0E008271DB /* CoreElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA01121819C0E008271DB /* CoreElement.cpp */; };
+		06FCA01721819C0E008271DB /* DragHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA01221819C0E008271DB /* DragHelper.cpp */; };
+		06FCA01821819C0E008271DB /* DragHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA01221819C0E008271DB /* DragHelper.cpp */; };
+		06FCA15D2181A257008271DB /* DragonboneScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA15B2181A257008271DB /* DragonboneScene.cpp */; };
+		06FCA15E2181A257008271DB /* DragonboneScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA15B2181A257008271DB /* DragonboneScene.cpp */; };
+		06FCA1602181A48F008271DB /* dragonbones in Resources */ = {isa = PBXBuildFile; fileRef = 06FCA15F2181A48F008271DB /* dragonbones */; };
+		06FCA1612181A48F008271DB /* dragonbones in Resources */ = {isa = PBXBuildFile; fileRef = 06FCA15F2181A48F008271DB /* dragonbones */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -153,6 +161,25 @@
 
 /* Begin PBXFileReference section */
 		06CB5E87214F43C100857941 /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../../../build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
+		06FCA00421819C0E008271DB /* ReplaceSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceSkin.h; sourceTree = "<group>"; };
+		06FCA00521819C0E008271DB /* CoreElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreElement.h; sourceTree = "<group>"; };
+		06FCA00621819C0E008271DB /* BoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundingBox.h; sourceTree = "<group>"; };
+		06FCA00721819C0E008271DB /* DragHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragHelper.h; sourceTree = "<group>"; };
+		06FCA00821819C0E008271DB /* ReplaceSlotDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceSlotDisplay.h; sourceTree = "<group>"; };
+		06FCA00921819C0E008271DB /* DragonBonesEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragonBonesEvent.h; sourceTree = "<group>"; };
+		06FCA00A21819C0E008271DB /* HelloDragonBones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloDragonBones.h; sourceTree = "<group>"; };
+		06FCA00B21819C0E008271DB /* AnimationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationLayer.h; sourceTree = "<group>"; };
+		06FCA00C21819C0E008271DB /* PerformanceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceTest.h; sourceTree = "<group>"; };
+		06FCA00D21819C0E008271DB /* BaseDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDemo.h; sourceTree = "<group>"; };
+		06FCA00E21819C0E008271DB /* ReplaceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceAnimation.h; sourceTree = "<group>"; };
+		06FCA00F21819C0E008271DB /* BoneOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoneOffset.h; sourceTree = "<group>"; };
+		06FCA01021819C0E008271DB /* AnimationBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationBase.h; sourceTree = "<group>"; };
+		06FCA01121819C0E008271DB /* CoreElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoreElement.cpp; sourceTree = "<group>"; };
+		06FCA01221819C0E008271DB /* DragHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DragHelper.cpp; sourceTree = "<group>"; };
+		06FCA01321819C0E008271DB /* InverseKinematics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InverseKinematics.h; sourceTree = "<group>"; };
+		06FCA15B2181A257008271DB /* DragonboneScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DragonboneScene.cpp; sourceTree = "<group>"; };
+		06FCA15C2181A257008271DB /* DragonboneScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragonboneScene.h; sourceTree = "<group>"; };
+		06FCA15F2181A48F008271DB /* dragonbones */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dragonbones; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* Examples-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Examples-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,6 +339,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		06FCA00321819C0E008271DB /* dragonbones */ = {
+			isa = PBXGroup;
+			children = (
+				06FCA00421819C0E008271DB /* ReplaceSkin.h */,
+				06FCA00521819C0E008271DB /* CoreElement.h */,
+				06FCA00621819C0E008271DB /* BoundingBox.h */,
+				06FCA00721819C0E008271DB /* DragHelper.h */,
+				06FCA00821819C0E008271DB /* ReplaceSlotDisplay.h */,
+				06FCA00921819C0E008271DB /* DragonBonesEvent.h */,
+				06FCA00A21819C0E008271DB /* HelloDragonBones.h */,
+				06FCA00B21819C0E008271DB /* AnimationLayer.h */,
+				06FCA00C21819C0E008271DB /* PerformanceTest.h */,
+				06FCA00D21819C0E008271DB /* BaseDemo.h */,
+				06FCA00E21819C0E008271DB /* ReplaceAnimation.h */,
+				06FCA00F21819C0E008271DB /* BoneOffset.h */,
+				06FCA01021819C0E008271DB /* AnimationBase.h */,
+				06FCA01121819C0E008271DB /* CoreElement.cpp */,
+				06FCA01221819C0E008271DB /* DragHelper.cpp */,
+				06FCA01321819C0E008271DB /* InverseKinematics.h */,
+			);
+			path = dragonbones;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +432,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				06FCA15F2181A48F008271DB /* dragonbones */,
 				44905A861FC4382300C33C88 /* icons */,
 				445403D91FB4571400869375 /* UI */,
 				521A8EA819F11F5000D177D7 /* fonts */,
@@ -395,6 +446,9 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				06FCA15B2181A257008271DB /* DragonboneScene.cpp */,
+				06FCA15C2181A257008271DB /* DragonboneScene.h */,
+				06FCA00321819C0E008271DB /* dragonbones */,
 				44905A941FC574CC00C33C88 /* TreeViewScene.cpp */,
 				44905A951FC574CC00C33C88 /* TreeViewScene.h */,
 				44905A6E1FC4369A00C33C88 /* BagScene.cpp */,
@@ -620,6 +674,7 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				06FCA1602181A48F008271DB /* dragonbones in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				44905A871FC4382300C33C88 /* icons in Resources */,
 			);
@@ -632,6 +687,7 @@
 				445403DA1FB4571400869375 /* UI in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
+				06FCA1612181A48F008271DB /* dragonbones in Resources */,
 				44905A881FC4382300C33C88 /* icons in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 			);
@@ -647,6 +703,7 @@
 				445403EC1FB59A9100869375 /* JoystickModule.cpp in Sources */,
 				44905A7A1FC4369A00C33C88 /* BagScene.cpp in Sources */,
 				445403EA1FB59A9100869375 /* DemoScene.cpp in Sources */,
+				06FCA01521819C0E008271DB /* CoreElement.cpp in Sources */,
 				44905A7D1FC4369A00C33C88 /* EmojiParser.cpp in Sources */,
 				44905A7B1FC4369A00C33C88 /* BagWindow.cpp in Sources */,
 				445401301FB3DE9700869375 /* HitTestScene.cpp in Sources */,
@@ -654,6 +711,7 @@
 				44905A961FC574CC00C33C88 /* TreeViewScene.cpp in Sources */,
 				445401381FB3DE9700869375 /* Window2.cpp in Sources */,
 				4454012F1FB3DE9700869375 /* BasicsScene.cpp in Sources */,
+				06FCA15D2181A257008271DB /* DragonboneScene.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				44905A7E1FC4369A00C33C88 /* ListEffectScene.cpp in Sources */,
@@ -668,6 +726,7 @@
 				445401311FB3DE9700869375 /* LoopListScene.cpp in Sources */,
 				445401351FB3DE9700869375 /* VirtualListScene.cpp in Sources */,
 				445401371FB3DE9700869375 /* Window1.cpp in Sources */,
+				06FCA01721819C0E008271DB /* DragHelper.cpp in Sources */,
 				445403EE1FB59A9100869375 /* ModalWaitingScene.cpp in Sources */,
 				445401331FB3DE9700869375 /* PullToRefreshScene.cpp in Sources */,
 			);
@@ -687,9 +746,11 @@
 				445403F01FB59E6900869375 /* GuideScene.cpp in Sources */,
 				445403F11FB59E6900869375 /* JoystickModule.cpp in Sources */,
 				445403F21FB59E6900869375 /* JoystickScene.cpp in Sources */,
+				06FCA15E2181A257008271DB /* DragonboneScene.cpp in Sources */,
 				445403F31FB59E6900869375 /* ModalWaitingScene.cpp in Sources */,
 				44905A971FC574CC00C33C88 /* TreeViewScene.cpp in Sources */,
 				445403AF1FB4563E00869375 /* BasicsScene.cpp in Sources */,
+				06FCA01821819C0E008271DB /* DragHelper.cpp in Sources */,
 				445403B01FB4563E00869375 /* HitTestScene.cpp in Sources */,
 				445403B11FB4563E00869375 /* LoopListScene.cpp in Sources */,
 				445403B21FB4563E00869375 /* MenuScene.cpp in Sources */,
@@ -698,6 +759,7 @@
 				445403B51FB4563E00869375 /* VirtualListScene.cpp in Sources */,
 				445403B61FB4563E00869375 /* MailItem.cpp in Sources */,
 				445403B71FB4563E00869375 /* Window1.cpp in Sources */,
+				06FCA01621819C0E008271DB /* CoreElement.cpp in Sources */,
 				445403B81FB4563E00869375 /* Window2.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
@@ -861,16 +923,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../cocos2d",
-					"$(SRCROOT)/../cocos2d/cocos/audio/include",
-					"$(SRCROOT)/../cocos2d/cocos",
-					"$(SRCROOT)/../cocos2d/extensions",
-					"$(SRCROOT)/../cocos2d/external",
-					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
-					"$(SRCROOT)/../cocos2d/cocos/editor-support",
-					"$(SRCROOT)/../../libfairygui/Classes",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../external";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = YES;
@@ -886,16 +939,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../cocos2d",
-					"$(SRCROOT)/../cocos2d/cocos/audio/include",
-					"$(SRCROOT)/../cocos2d/cocos",
-					"$(SRCROOT)/../cocos2d/extensions",
-					"$(SRCROOT)/../cocos2d/external",
-					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
-					"$(SRCROOT)/../cocos2d/cocos/editor-support",
-					"$(SRCROOT)/../../libfairygui/Classes",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../external";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

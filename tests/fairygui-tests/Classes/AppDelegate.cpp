@@ -100,6 +100,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     UIConfig::registerFont(UIConfig::defaultFont, "fonts/DroidSansFallback.ttf");
 #endif
 
+    FileUtils::getInstance()->addSearchPath("dragonbones");
+
     // create a scene. it's an autorelease object
     auto scene = MenuScene::create();
 
