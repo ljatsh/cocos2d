@@ -26,14 +26,6 @@
         
 --------------------------------
 -- inheritDoc
--- @function addDBEventListener 
--- @param self
--- @param #string type
--- @param #function listener
--- @return CCArmatureDisplay#CCArmatureDisplay self (return value: db.CCArmatureDisplay)
-        
---------------------------------
--- inheritDoc
 -- @function dbUpdate 
 -- @param self
 -- @return CCArmatureDisplay#CCArmatureDisplay self (return value: db.CCArmatureDisplay)
@@ -57,14 +49,6 @@
 -- @function getArmature 
 -- @param self
 -- @return Armature#Armature ret (return value: db.Armature)
-        
---------------------------------
--- inheritDoc
--- @function removeDBEventListener 
--- @param self
--- @param #string type
--- @param #function listener
--- @return CCArmatureDisplay#CCArmatureDisplay self (return value: db.CCArmatureDisplay)
         
 --------------------------------
 -- inheritDoc

@@ -2915,63 +2915,6 @@ int lua_cocos2dx_dragonbones_CCArmatureDisplay_dbInit(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cocos2dx_dragonbones_CCArmatureDisplay_addDBEventListener(lua_State* tolua_S)
-{
-    int argc = 0;
-    dragonBones::CCArmatureDisplay* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"db.CCArmatureDisplay",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (dragonBones::CCArmatureDisplay*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_CCArmatureDisplay_addDBEventListener'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 2) 
-    {
-        std::string arg0;
-        std::function<void (dragonBones::EventObject *)> arg1;
-
-        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.CCArmatureDisplay:addDBEventListener");
-
-        do {
-			// Lambda binding for lua is not supported.
-			assert(false);
-		} while(0)
-		;
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_CCArmatureDisplay_addDBEventListener'", nullptr);
-            return 0;
-        }
-        cobj->addDBEventListener(arg0, arg1);
-        lua_settop(tolua_S, 1);
-        return 1;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.CCArmatureDisplay:addDBEventListener",argc, 2);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_CCArmatureDisplay_addDBEventListener'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cocos2dx_dragonbones_CCArmatureDisplay_dbUpdate(lua_State* tolua_S)
 {
     int argc = 0;
@@ -3180,63 +3123,6 @@ int lua_cocos2dx_dragonbones_CCArmatureDisplay_getArmature(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cocos2dx_dragonbones_CCArmatureDisplay_removeDBEventListener(lua_State* tolua_S)
-{
-    int argc = 0;
-    dragonBones::CCArmatureDisplay* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"db.CCArmatureDisplay",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (dragonBones::CCArmatureDisplay*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_CCArmatureDisplay_removeDBEventListener'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 2) 
-    {
-        std::string arg0;
-        std::function<void (dragonBones::EventObject *)> arg1;
-
-        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.CCArmatureDisplay:removeDBEventListener");
-
-        do {
-			// Lambda binding for lua is not supported.
-			assert(false);
-		} while(0)
-		;
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_CCArmatureDisplay_removeDBEventListener'", nullptr);
-            return 0;
-        }
-        cobj->removeDBEventListener(arg0, arg1);
-        lua_settop(tolua_S, 1);
-        return 1;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.CCArmatureDisplay:removeDBEventListener",argc, 2);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_CCArmatureDisplay_removeDBEventListener'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cocos2dx_dragonbones_CCArmatureDisplay_dbClear(lua_State* tolua_S)
 {
     int argc = 0;
@@ -3371,12 +3257,10 @@ int lua_register_cocos2dx_dragonbones_CCArmatureDisplay(lua_State* tolua_S)
         tolua_function(tolua_S,"getAnimation",lua_cocos2dx_dragonbones_CCArmatureDisplay_getAnimation);
         tolua_function(tolua_S,"hasDBEventListener",lua_cocos2dx_dragonbones_CCArmatureDisplay_hasDBEventListener);
         tolua_function(tolua_S,"dbInit",lua_cocos2dx_dragonbones_CCArmatureDisplay_dbInit);
-        tolua_function(tolua_S,"addDBEventListener",lua_cocos2dx_dragonbones_CCArmatureDisplay_addDBEventListener);
         tolua_function(tolua_S,"dbUpdate",lua_cocos2dx_dragonbones_CCArmatureDisplay_dbUpdate);
         tolua_function(tolua_S,"dispatchDBEvent",lua_cocos2dx_dragonbones_CCArmatureDisplay_dispatchDBEvent);
         tolua_function(tolua_S,"dispose",lua_cocos2dx_dragonbones_CCArmatureDisplay_dispose);
         tolua_function(tolua_S,"getArmature",lua_cocos2dx_dragonbones_CCArmatureDisplay_getArmature);
-        tolua_function(tolua_S,"removeDBEventListener",lua_cocos2dx_dragonbones_CCArmatureDisplay_removeDBEventListener);
         tolua_function(tolua_S,"dbClear",lua_cocos2dx_dragonbones_CCArmatureDisplay_dbClear);
         tolua_function(tolua_S,"create", lua_cocos2dx_dragonbones_CCArmatureDisplay_create);
     tolua_endmodule(tolua_S);
