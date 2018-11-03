@@ -38,7 +38,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class CCFactory : public BaseFactory
+class CC_DLL CCFactory : public BaseFactory
 {
     DRAGONBONES_DISALLOW_COPY_AND_ASSIGN(CCFactory)
 

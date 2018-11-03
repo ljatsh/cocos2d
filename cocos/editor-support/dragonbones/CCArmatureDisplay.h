@@ -30,7 +30,7 @@ DRAGONBONES_NAMESPACE_BEGIN
 /**
  * @inheritDoc
  */
-class CCArmatureDisplay : public cocos2d::Node, public virtual IArmatureProxy
+class CC_DLL CCArmatureDisplay : public cocos2d::Node, public virtual IArmatureProxy
 {
     DRAGONBONES_DISALLOW_COPY_AND_ASSIGN(CCArmatureDisplay)
 

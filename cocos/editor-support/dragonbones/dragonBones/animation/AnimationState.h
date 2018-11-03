@@ -41,7 +41,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class AnimationState : public BaseObject
+class DB_DLL AnimationState : public BaseObject
 {
     BIND_CLASS_TYPE_B(AnimationState);
 

@@ -40,7 +40,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 4.5
  * @language zh_CN
  */
-class TransformObject : public BaseObject
+class DB_DLL TransformObject : public BaseObject
 {
     ABSTRACT_CLASS(TransformObject);
 

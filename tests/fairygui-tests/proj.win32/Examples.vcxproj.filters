@@ -10,6 +10,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\dragonbones">
+      <UniqueIdentifier>{b3c9806d-4668-4acf-9e69-17dd9bf4527f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -84,6 +87,12 @@
     <ClCompile Include="..\Classes\TreeViewScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\dragonbones\CoreElement.cpp">
+      <Filter>src\dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\dragonbones\DragHelper.cpp">
+      <Filter>src\dragonbones</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -157,6 +166,48 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TreeViewScene.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\AnimationBase.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\AnimationLayer.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\BaseDemo.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\BoneOffset.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\BoundingBox.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\CoreElement.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\DragHelper.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\DragonBonesEvent.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\HelloDragonBones.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\InverseKinematics.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\PerformanceTest.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\ReplaceAnimation.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\ReplaceSkin.h">
+      <Filter>src\dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dragonbones\ReplaceSlotDisplay.h">
+      <Filter>src\dragonbones</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -38,7 +38,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 4.5
  * @language zh_CN
  */
-class BaseObject
+class DB_DLL BaseObject
 {
 private:
     static unsigned _hashCode;
@@ -130,10 +130,7 @@ public:
     virtual ~BaseObject() {}
 
 protected:
-    BaseObject() :
-        hashCode(BaseObject::_hashCode++),
-        _isInPool(false)
-    {}
+	BaseObject();
 
     virtual void _onClear() = 0;
 

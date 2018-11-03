@@ -33,6 +33,15 @@
 #include <functional>
 #include <sstream>
 #include <assert.h>
+
+#ifndef DB_DLL
+#if _WIN32
+#define DB_DLL     __declspec(dllexport)
+#else
+#define DB_DLL
+#endif
+#endif
+
 // dragonBones assert
 #define DRAGONBONES_ASSERT(cond, msg) \
 do { \
@@ -447,7 +456,7 @@ class BuildArmaturePackage;
 /**
  * @private
  */
-class DragonBones 
+class DB_DLL DragonBones 
 {
     DRAGONBONES_DISALLOW_COPY_AND_ASSIGN(DragonBones)
 

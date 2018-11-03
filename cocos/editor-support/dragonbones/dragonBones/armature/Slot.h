@@ -53,7 +53,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class Slot : public TransformObject
+class DB_DLL Slot : public TransformObject
 {
 public:
     /**

@@ -79,6 +79,12 @@
     <Filter Include="manual\navmesh">
       <UniqueIdentifier>{fa8be49e-8b79-4dc5-8f28-febde1347eda}</UniqueIdentifier>
     </Filter>
+    <Filter Include="manual\fairygui">
+      <UniqueIdentifier>{d6a92a22-a599-40c4-9888-f26aab3b43ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="manual\dragonbones">
+      <UniqueIdentifier>{e2f94c6a-cb0f-45cb-87bd-a232b08045bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\auto\lua_cocos2dx_auto.cpp">
@@ -299,6 +305,21 @@
     </ClCompile>
     <ClCompile Include="..\manual\lua_module_register.cpp">
       <Filter>manual</Filter>
+    </ClCompile>
+    <ClCompile Include="..\auto\lua_cocos2dx_fairygui_auto.cpp">
+      <Filter>auto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\manual\fairygui\lua_cocos2dx_fairygui_manual.cpp">
+      <Filter>manual\fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\manual\fairygui\LuaBasicConversions_fairygui.cpp">
+      <Filter>manual\fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\auto\lua_cocos2dx_dragonbones_auto.cpp">
+      <Filter>auto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\manual\dragonbones\lua_cocos2dx_dragonbones_manual.cpp">
+      <Filter>manual\dragonbones</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -529,6 +550,21 @@
     </ClInclude>
     <ClInclude Include="..\manual\Lua-BindingsExport.h">
       <Filter>manual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\auto\lua_cocos2dx_fairygui_auto.hpp">
+      <Filter>auto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\manual\fairygui\lua_cocos2dx_fairygui_manual.hpp">
+      <Filter>manual\fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\manual\fairygui\LuaBasicConversions_fairygui.h">
+      <Filter>manual\fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\auto\lua_cocos2dx_dragonbones_auto.hpp">
+      <Filter>auto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\manual\dragonbones\lua_cocos2dx_dragonbones_manual.hpp">
+      <Filter>manual\dragonbones</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

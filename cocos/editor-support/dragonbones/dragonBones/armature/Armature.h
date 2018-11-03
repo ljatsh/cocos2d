@@ -47,7 +47,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class Armature : public virtual IAnimatable, public BaseObject
+class DB_DLL Armature : public virtual IAnimatable, public BaseObject
 {
     BIND_CLASS_TYPE_B(Armature);
 

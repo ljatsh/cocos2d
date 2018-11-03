@@ -37,7 +37,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class Transform final
+class DB_DLL Transform final
 {
 public:
     /**
@@ -68,13 +68,7 @@ public:
     /**
      * @private
      */
-    static float normalizeRadian(float value)
-    {
-        value = fmod(value + Transform::PI, Transform::PI * 2.0f);
-        value += value > 0.0f ? -Transform::PI : Transform::PI;
-
-        return value;
-    }
+    static float normalizeRadian(float value);
 
 public:
     /**

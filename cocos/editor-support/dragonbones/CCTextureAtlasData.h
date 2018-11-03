@@ -37,7 +37,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class CCTextureAtlasData : public TextureAtlasData
+class CC_DLL CCTextureAtlasData : public TextureAtlasData
 {
     BIND_CLASS_TYPE_B(CCTextureAtlasData);
 

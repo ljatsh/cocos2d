@@ -40,7 +40,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class Animation final : public BaseObject
+class DB_DLL Animation final : public BaseObject
 {
     BIND_CLASS_TYPE_B(Animation);
 

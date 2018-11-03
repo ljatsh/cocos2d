@@ -115,7 +115,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\chipmunk\prebuilt\win32\release-lib\*.*
 xcopy /Y /Q "$(ProjectDir)..\..\external\bullet\prebuilt\win32\debug\*.*" "$(OutDir)"
 xcopy /Y /Q "$(ProjectDir)..\..\external\Box2D\prebuilt\win32\debug\*.*" "$(OutDir)"
 xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
-xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Command>
+xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\..\external\lua-game\prebuilt\win32\*.*" "$(OutDir)"</Command>
     </PreLinkEvent>
     <Link>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
@@ -175,7 +176,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\chipmunk\prebuilt\win32\release-lib\*.*
 xcopy /Y /Q "$(ProjectDir)..\..\external\bullet\prebuilt\win32\release\*.*" "$(OutDir)"
 xcopy /Y /Q "$(ProjectDir)..\..\external\Box2D\prebuilt\win32\release\*.*" "$(OutDir)"
 xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
-xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Command>
+xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\..\external\lua-game\prebuilt\win32\*.*" "$(OutDir)"</Command>
     </PreLinkEvent>
     <Link>
       <AdditionalDependencies>sqlite3.lib;libcurl.lib;websockets.lib;libcrypto.lib;libssl.lib;libmpg123.lib;libogg.lib;libvorbis.lib;libvorbisfile.lib;OpenAL32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -586,6 +588,41 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Com
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\UserCameraReader\UserCameraReader.cpp" />
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\Particle3DReader\Particle3DReader.cpp" />
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\WidgetReader.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\CCArmatureDisplay.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\CCFactory.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\CCSlot.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\CCTextureAtlasData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\Animation.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\AnimationState.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\BaseTimelineState.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\TimelineState.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\WorldClock.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Armature.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Bone.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Constraint.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\DeformVertices.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Slot.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\TransformObject.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\core\BaseObject.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\core\DragonBones.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\event\EventObject.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\factory\BaseFactory.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\geom\Point.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\geom\Transform.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\AnimationConfig.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\AnimationData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\ArmatureData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\BoundingBoxData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\CanvasData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\ConstraintData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\DisplayData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\DragonBonesData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\SkinData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\TextureAtlasData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\UserData.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\BinaryDataParser.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\DataParser.cpp" />
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\JSONDataParser.cpp" />
     <ClCompile Include="..\editor-support\fairygui\Controller.cpp" />
     <ClCompile Include="..\editor-support\fairygui\controller_action\ChangePageAction.cpp" />
     <ClCompile Include="..\editor-support\fairygui\controller_action\ControllerAction.cpp" />
@@ -1289,6 +1326,49 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Com
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\Particle3DReader\Particle3DReader.h" />
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\WidgetReader.h" />
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\WidgetReaderProtocol.h" />
+    <ClInclude Include="..\editor-support\dragonbones\CCArmatureDisplay.h" />
+    <ClInclude Include="..\editor-support\dragonbones\CCDragonBonesHeaders.h" />
+    <ClInclude Include="..\editor-support\dragonbones\CCFactory.h" />
+    <ClInclude Include="..\editor-support\dragonbones\CCSlot.h" />
+    <ClInclude Include="..\editor-support\dragonbones\CCTextureAtlasData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\Animation.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\AnimationState.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\BaseTimelineState.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\IAnimatable.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\TimelineState.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\WorldClock.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Armature.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Bone.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Constraint.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\DeformVertices.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\IArmatureProxy.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Slot.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\TransformObject.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\core\BaseObject.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\core\DragonBones.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\DragonBonesHeaders.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\event\EventObject.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\event\IEventDispatcher.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\factory\BaseFactory.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\ColorTransform.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Matrix.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Point.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Rectangle.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Transform.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\AnimationConfig.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\AnimationData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\ArmatureData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\BoundingBoxData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\CanvasData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\ConstraintData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\DisplayData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\DragonBonesData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\SkinData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\TextureAtlasData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\UserData.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\BinaryDataParser.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\DataParser.h" />
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\JSONDataParser.h" />
     <ClInclude Include="..\editor-support\fairygui\Controller.h" />
     <ClInclude Include="..\editor-support\fairygui\controller_action\ChangePageAction.h" />
     <ClInclude Include="..\editor-support\fairygui\controller_action\ControllerAction.h" />

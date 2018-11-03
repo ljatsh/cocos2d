@@ -5,6 +5,16 @@ DRAGONBONES_NAMESPACE_BEGIN
 JSONDataParser BaseFactory::_jsonParser;
 BinaryDataParser BaseFactory::_binaryParser;
 
+BaseFactory::BaseFactory(DataParser* dataParser) :
+	autoSearch(false),
+	_dragonBonesDataMap(),
+	_textureAtlasDataMap(),
+	_dragonBones(nullptr),
+	_dataParser(nullptr)
+{
+	_dataParser = dataParser != nullptr ? dataParser : &BaseFactory::_jsonParser;
+}
+
 TextureData* BaseFactory::_getTextureData(const std::string& textureAtlasName, const std::string& textureName) const
 {
     const auto iterator = _textureAtlasDataMap.find(textureAtlasName);

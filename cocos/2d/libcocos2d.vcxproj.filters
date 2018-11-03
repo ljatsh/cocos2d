@@ -316,6 +316,36 @@
     <Filter Include="fairygui\utils">
       <UniqueIdentifier>{582c3bb1-0fb5-4845-b048-b17721ddd4d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="dragonbones">
+      <UniqueIdentifier>{18834259-c3b4-4996-8bd5-34933ec0d4a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones">
+      <UniqueIdentifier>{ec0d2214-0cb0-4172-80a5-7f0f5cbc9668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\animation">
+      <UniqueIdentifier>{729124ee-4495-4340-ad89-a5bbe6417f21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\armature">
+      <UniqueIdentifier>{c2f44b2d-b41a-4c7b-8f04-9527ac0bea28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\core">
+      <UniqueIdentifier>{f4083ba6-08fa-4bab-95e3-f580803f9684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\event">
+      <UniqueIdentifier>{1141e8df-e104-45ba-9189-cc7578faad47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\factory">
+      <UniqueIdentifier>{516583e6-0717-4b96-a8e4-ad4bebbc5463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\geom">
+      <UniqueIdentifier>{fe73331d-7776-4cdb-9f28-33b074d7d1fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\model">
+      <UniqueIdentifier>{7774b5ab-1d7a-484a-b245-12c5afc5fd80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\parser">
+      <UniqueIdentifier>{9779111c-ed72-4c73-bd78-05e096f8da8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\physics\CCPhysicsBody.cpp">
@@ -2231,6 +2261,111 @@
     </ClCompile>
     <ClCompile Include="..\editor-support\fairygui\treeview\TreeView.cpp">
       <Filter>fairygui\treeview</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\CCArmatureDisplay.cpp">
+      <Filter>dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\CCFactory.cpp">
+      <Filter>dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\CCSlot.cpp">
+      <Filter>dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\CCTextureAtlasData.cpp">
+      <Filter>dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\Animation.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\AnimationState.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\BaseTimelineState.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\TimelineState.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\WorldClock.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Armature.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Bone.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Constraint.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\DeformVertices.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Slot.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\TransformObject.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\core\BaseObject.cpp">
+      <Filter>dragonbones\dragonBones\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\core\DragonBones.cpp">
+      <Filter>dragonbones\dragonBones\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\event\EventObject.cpp">
+      <Filter>dragonbones\dragonBones\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\factory\BaseFactory.cpp">
+      <Filter>dragonbones\dragonBones\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\geom\Point.cpp">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\geom\Transform.cpp">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\AnimationConfig.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\AnimationData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\ArmatureData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\BoundingBoxData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\CanvasData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\ConstraintData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\DisplayData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\DragonBonesData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\SkinData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\TextureAtlasData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\UserData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\BinaryDataParser.cpp">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\DataParser.cpp">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\JSONDataParser.cpp">
+      <Filter>dragonbones\dragonBones\parser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -4365,6 +4500,135 @@
     </ClInclude>
     <ClInclude Include="..\editor-support\fairygui\treeview\TreeView.h">
       <Filter>fairygui\treeview</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCArmatureDisplay.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCDragonBonesHeaders.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCFactory.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCSlot.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCTextureAtlasData.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\DragonBonesHeaders.h">
+      <Filter>dragonbones\dragonBones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\Animation.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\AnimationState.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\BaseTimelineState.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\IAnimatable.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\TimelineState.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\WorldClock.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Armature.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Bone.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Constraint.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\DeformVertices.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\IArmatureProxy.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Slot.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\TransformObject.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\core\BaseObject.h">
+      <Filter>dragonbones\dragonBones\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\core\DragonBones.h">
+      <Filter>dragonbones\dragonBones\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\event\EventObject.h">
+      <Filter>dragonbones\dragonBones\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\event\IEventDispatcher.h">
+      <Filter>dragonbones\dragonBones\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\factory\BaseFactory.h">
+      <Filter>dragonbones\dragonBones\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\ColorTransform.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Matrix.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Point.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Rectangle.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Transform.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\AnimationConfig.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\AnimationData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\ArmatureData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\BoundingBoxData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\CanvasData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\ConstraintData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\DisplayData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\DragonBonesData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\SkinData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\TextureAtlasData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\UserData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\BinaryDataParser.h">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\DataParser.h">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\JSONDataParser.h">
+      <Filter>dragonbones\dragonBones\parser</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

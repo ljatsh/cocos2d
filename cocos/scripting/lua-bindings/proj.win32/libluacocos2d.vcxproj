@@ -37,10 +37,12 @@
     <ClCompile Include="..\auto\lua_cocos2dx_cocosbuilder_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_cocosdenshion_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_csloader_auto.cpp" />
+    <ClCompile Include="..\auto\lua_cocos2dx_dragonbones_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_experimental_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_experimental_video_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_experimental_webview_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_extension_auto.cpp" />
+    <ClCompile Include="..\auto\lua_cocos2dx_fairygui_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_navmesh_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_physics3d_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_physics_auto.cpp" />
@@ -68,7 +70,10 @@
     <ClCompile Include="..\manual\cocostudio\lua-cocos-studio-conversions.cpp" />
     <ClCompile Include="..\manual\cocostudio\lua_cocos2dx_coco_studio_manual.cpp" />
     <ClCompile Include="..\manual\cocostudio\lua_cocos2dx_csloader_manual.cpp" />
+    <ClCompile Include="..\manual\dragonbones\lua_cocos2dx_dragonbones_manual.cpp" />
     <ClCompile Include="..\manual\extension\lua_cocos2dx_extension_manual.cpp" />
+    <ClCompile Include="..\manual\fairygui\LuaBasicConversions_fairygui.cpp" />
+    <ClCompile Include="..\manual\fairygui\lua_cocos2dx_fairygui_manual.cpp" />
     <ClCompile Include="..\manual\LuaBasicConversions.cpp" />
     <ClCompile Include="..\manual\lua_module_register.cpp" />
     <ClCompile Include="..\manual\navmesh\lua_cocos2dx_navmesh_conversions.cpp" />
@@ -114,10 +119,12 @@
     <ClInclude Include="..\auto\lua_cocos2dx_cocosbuilder_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_cocosdenshion_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_csloader_auto.hpp" />
+    <ClInclude Include="..\auto\lua_cocos2dx_dragonbones_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_experimental_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_experimental_video_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_experimental_webview_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_extension_auto.hpp" />
+    <ClInclude Include="..\auto\lua_cocos2dx_fairygui_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_navmesh_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_physics3d_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_physics_auto.hpp" />
@@ -145,7 +152,10 @@
     <ClInclude Include="..\manual\cocostudio\lua-cocos-studio-conversions.h" />
     <ClInclude Include="..\manual\cocostudio\lua_cocos2dx_coco_studio_manual.hpp" />
     <ClInclude Include="..\manual\cocostudio\lua_cocos2dx_csloader_manual.hpp" />
+    <ClInclude Include="..\manual\dragonbones\lua_cocos2dx_dragonbones_manual.hpp" />
     <ClInclude Include="..\manual\extension\lua_cocos2dx_extension_manual.h" />
+    <ClInclude Include="..\manual\fairygui\LuaBasicConversions_fairygui.h" />
+    <ClInclude Include="..\manual\fairygui\lua_cocos2dx_fairygui_manual.hpp" />
     <ClInclude Include="..\manual\Lua-BindingsExport.h" />
     <ClInclude Include="..\manual\LuaBasicConversions.h" />
     <ClInclude Include="..\manual\lua_module_register.h" />
@@ -232,6 +242,7 @@
     <ProjectGuid>{9F2D6CE6-C893-4400-B50C-6DB70CC2562F}</ProjectGuid>
     <RootNamespace>libluacocos2d</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -288,7 +299,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(EngineRoot);$(EngineRoot)external;$(EngineRoot)external\lua;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\lua\luajit\include;$(EngineRoot)external\libwebsockets\win32\include;$(EngineRoot)extensions;$(EngineRoot)external\bullet\include;$(EngineRoot)external\bullet\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(EngineRoot);$(EngineRoot)external;$(EngineRoot)external\lua;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\lua\luajit\include;$(EngineRoot)external\libwebsockets\win32\include;$(EngineRoot)extensions;$(EngineRoot)external\bullet\include;$(EngineRoot)external\bullet\include\bullet;$(EngineRoot)external\lua-game\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_USRLUASTATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -320,7 +331,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\..\external\lua\luajit\prebuilt\win32\*.*" "$
     <ClCompile>
       <Optimization>MinSpace</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(EngineRoot);$(EngineRoot)cocos;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\lua\luajit\include;$(EngineRoot)external\lua;$(EngineRoot)extensions;$(EngineRoot)external\libwebsockets\win32\include;$(EngineRoot)external;$(EngineRoot)external\bullet\include;$(EngineRoot)external\bullet\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(EngineRoot);$(EngineRoot)cocos;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\lua\luajit\include;$(EngineRoot)external\lua;$(EngineRoot)extensions;$(EngineRoot)external\libwebsockets\win32\include;$(EngineRoot)external;$(EngineRoot)external\bullet\include;$(EngineRoot)external\bullet\include\bullet;$(EngineRoot)external\lua-game\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;LIBLUA_EXPORTS;_CRT_SECURE_NO_WARNINGS;_USRLUASTATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>

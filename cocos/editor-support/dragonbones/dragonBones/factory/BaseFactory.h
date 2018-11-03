@@ -54,7 +54,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class BaseFactory
+class DB_DLL BaseFactory
 {
 protected:
     static JSONDataParser _jsonParser;
@@ -83,15 +83,7 @@ public:
      * @version DragonBones 3.0
      * @language zh_CN
      */
-    BaseFactory(DataParser* dataParser = nullptr) :
-        autoSearch(false),
-        _dragonBonesDataMap(),
-        _textureAtlasDataMap(),
-        _dragonBones(nullptr),
-        _dataParser(nullptr)
-    {
-        _dataParser = dataParser != nullptr ? dataParser : &BaseFactory::_jsonParser;
-    }
+	BaseFactory(DataParser* dataParser = nullptr);
     virtual ~BaseFactory()
     {
         clear();

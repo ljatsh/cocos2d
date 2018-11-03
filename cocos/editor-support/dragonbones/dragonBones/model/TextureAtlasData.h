@@ -37,7 +37,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class TextureAtlasData : public BaseObject
+class DB_DLL TextureAtlasData : public BaseObject
 {
     ABSTRACT_CLASS(TextureAtlasData);
 
@@ -114,7 +114,7 @@ public: // For WebAssembly.
 /**
  * @internal
  */
-class TextureData : public BaseObject
+class DB_DLL TextureData : public BaseObject
 {
 public:
     static Rectangle* createRectangle();

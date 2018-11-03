@@ -6,6 +6,12 @@ unsigned BaseObject::_defaultMaxCount = 3000;
 std::map<std::size_t, unsigned> BaseObject::_maxCountMap;
 std::map<std::size_t, std::vector<BaseObject*>> BaseObject::_poolsMap;
 
+BaseObject::BaseObject()
+:hashCode(BaseObject::_hashCode++)
+,_isInPool(false)
+{
+}
+
 void BaseObject::_returnObject(BaseObject* object)
 {
     const auto classType = object->getClassTypeIndex();

@@ -37,7 +37,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class CCSlot : public Slot
+class CC_DLL CCSlot : public Slot
 {
     BIND_CLASS_TYPE_A(CCSlot);
 

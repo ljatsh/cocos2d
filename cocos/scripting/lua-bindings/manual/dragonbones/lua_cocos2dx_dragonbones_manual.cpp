@@ -1,9 +1,9 @@
 #include "lua_cocos2dx_dragonbones_manual.hpp"
 #include "scripting/lua-bindings/auto/lua_cocos2dx_dragonbones_auto.hpp"
-#include "tolua_fix.h"
-#include "LuaBasicConversions.h"
-#include "CCLuaValue.h"
-#include "CCLuaEngine.h"
+
+#include "scripting/lua-bindings/manual/tolua_fix.h"
+#include "scripting/lua-bindings/manual/LuaBasicConversions.h"
+#include "scripting/lua-bindings/manual/CCLuaEngine.h"
 
 TOLUA_API int register_all_cocos2dx_dragonbones_manual(lua_State* tolua_S)
 {
