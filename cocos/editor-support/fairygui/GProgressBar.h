@@ -25,6 +25,7 @@ public:
     void setValue(double value);
 
     void tweenValue(double value, float duration);
+    void setValueDuringTween(double value);
 
 protected:
     virtual void handleSizeChanged() override;

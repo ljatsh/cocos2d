@@ -36,11 +36,15 @@
 
 #ifndef DB_DLL
 #if _WIN32
+#if defined(_USRDLL)
 #define DB_DLL     __declspec(dllexport)
 #else
+#define DB_DLL     __declspec(dllimport)
+#endif // _usrdll
+#else
 #define DB_DLL
-#endif
-#endif
+#endif // _win32
+#endif // db_dll
 
 // dragonBones assert
 #define DRAGONBONES_ASSERT(cond, msg) \

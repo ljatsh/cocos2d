@@ -76,6 +76,15 @@ void GProgressBar::tweenValue(double value, float duration)
         ->onComplete([this]() { _tweening = false; });
 }
 
+void GProgressBar::setValueDuringTween(double value)
+{
+  if (_value != value)
+  {
+      _value = value;
+      update(_value);
+  }
+}
+
 void GProgressBar::update(double newValue)
 {
     float percent = _max != 0 ? MIN(newValue / _max, 1) : 0;
