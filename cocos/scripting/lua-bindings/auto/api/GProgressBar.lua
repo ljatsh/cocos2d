@@ -6,6 +6,13 @@
 
 --------------------------------
 -- 
+-- @function setValueDuringTween 
+-- @param self
+-- @param #double value
+-- @return GProgressBar#GProgressBar self (return value: fgui.GProgressBar)
+        
+--------------------------------
+-- 
 -- @function setValue 
 -- @param self
 -- @param #double value

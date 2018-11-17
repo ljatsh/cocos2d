@@ -21661,56 +21661,6 @@ int lua_cocos2dx_fairygui_GList_itemIndexToChildIndex(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cocos2dx_fairygui_GList_supportIrregularItem(lua_State* tolua_S)
-{
-    int argc = 0;
-    fairygui::GList* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"fgui.GList",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (fairygui::GList*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GList_supportIrregularItem'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 1) 
-    {
-        bool arg0;
-
-        ok &= luaval_to_boolean(tolua_S, 2,&arg0, "fgui.GList:supportIrregularItem");
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GList_supportIrregularItem'", nullptr);
-            return 0;
-        }
-        cobj->supportIrregularItem(arg0);
-        lua_settop(tolua_S, 1);
-        return 1;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GList:supportIrregularItem",argc, 1);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GList_supportIrregularItem'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cocos2dx_fairygui_GList_getItemPool(lua_State* tolua_S)
 {
     int argc = 0;
@@ -22742,7 +22692,6 @@ int lua_register_cocos2dx_fairygui_GList(lua_State* tolua_S)
         tolua_function(tolua_S,"getSelectedIndex",lua_cocos2dx_fairygui_GList_getSelectedIndex);
         tolua_function(tolua_S,"getSelection",lua_cocos2dx_fairygui_GList_getSelection);
         tolua_function(tolua_S,"itemIndexToChildIndex",lua_cocos2dx_fairygui_GList_itemIndexToChildIndex);
-        tolua_function(tolua_S,"supportIrregularItem",lua_cocos2dx_fairygui_GList_supportIrregularItem);
         tolua_function(tolua_S,"getItemPool",lua_cocos2dx_fairygui_GList_getItemPool);
         tolua_function(tolua_S,"getSelectionController",lua_cocos2dx_fairygui_GList_getSelectionController);
         tolua_function(tolua_S,"getLineGap",lua_cocos2dx_fairygui_GList_getLineGap);
@@ -23695,6 +23644,56 @@ int lua_register_cocos2dx_fairygui_GComboBox(lua_State* tolua_S)
     return 1;
 }
 
+int lua_cocos2dx_fairygui_GProgressBar_setValueDuringTween(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GProgressBar* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GProgressBar",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GProgressBar*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GProgressBar_setValueDuringTween'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        double arg0;
+
+        ok &= luaval_to_number(tolua_S, 2,&arg0, "fgui.GProgressBar:setValueDuringTween");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GProgressBar_setValueDuringTween'", nullptr);
+            return 0;
+        }
+        cobj->setValueDuringTween(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GProgressBar:setValueDuringTween",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GProgressBar_setValueDuringTween'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cocos2dx_fairygui_GProgressBar_setValue(lua_State* tolua_S)
 {
     int argc = 0;
@@ -24123,6 +24122,7 @@ int lua_register_cocos2dx_fairygui_GProgressBar(lua_State* tolua_S)
 
     tolua_beginmodule(tolua_S,"GProgressBar");
         tolua_function(tolua_S,"new",lua_cocos2dx_fairygui_GProgressBar_constructor);
+        tolua_function(tolua_S,"setValueDuringTween",lua_cocos2dx_fairygui_GProgressBar_setValueDuringTween);
         tolua_function(tolua_S,"setValue",lua_cocos2dx_fairygui_GProgressBar_setValue);
         tolua_function(tolua_S,"setMax",lua_cocos2dx_fairygui_GProgressBar_setMax);
         tolua_function(tolua_S,"getValue",lua_cocos2dx_fairygui_GProgressBar_getValue);

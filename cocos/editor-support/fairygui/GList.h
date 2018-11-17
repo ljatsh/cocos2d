@@ -72,7 +72,6 @@ public:
     void clearSelection();
     void selectAll();
     void selectReverse();
-    void supportIrregularItem(bool irregularItem);
 
     void handleArrowKey(int dir);
 
