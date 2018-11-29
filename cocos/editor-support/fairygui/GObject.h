@@ -147,6 +147,9 @@ public:
 
     template<typename T> T* as();
 
+    // for lua-binding
+    inline cocos2d::Size getSourceSize() const { return sourceSize; }
+
     std::string id;
     std::string name;
     cocos2d::Size sourceSize;
