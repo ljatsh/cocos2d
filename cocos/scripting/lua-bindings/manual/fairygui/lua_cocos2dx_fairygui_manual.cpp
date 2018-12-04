@@ -321,6 +321,130 @@ tolua_lerror:
     return 0;
 }
 
+int lua_cocos2dx_fairygui_GObject_get_sourceSize(lua_State* L)
+{
+    fairygui::GObject *cobj = nullptr;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+    if (!tolua_isusertype(L, 1, "fgui.GObject", 0, &tolua_err))
+        goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GObject *)tolua_tousertype(L, 1, 0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj)
+    {
+        tolua_error(L, "invalid 'cobj' in function 'lua_cocos2dx_fairygui_GObject_get_sourceSize'", nullptr);
+        return 0;
+    }
+#endif
+
+    size_to_luaval(L, cobj->sourceSize);
+    return 1;
+
+#if COCOS2D_DEBUG >= 1
+tolua_lerror:
+    tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_GObject_get_sourceSize'.", &tolua_err);
+#endif
+
+    return 0;
+}
+
+int lua_cocos2dx_fairygui_GObject_get_initSize(lua_State* L)
+{
+    fairygui::GObject *cobj = nullptr;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+    if (!tolua_isusertype(L, 1, "fgui.GObject", 0, &tolua_err))
+        goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GObject *)tolua_tousertype(L, 1, 0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj)
+    {
+        tolua_error(L, "invalid 'cobj' in function 'lua_cocos2dx_fairygui_GObject_get_initSize'", nullptr);
+        return 0;
+    }
+#endif
+
+    size_to_luaval(L, cobj->initSize);
+    return 1;
+
+#if COCOS2D_DEBUG >= 1
+tolua_lerror:
+    tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_GObject_get_initSize'.", &tolua_err);
+#endif
+
+    return 0;
+}
+
+int lua_cocos2dx_fairygui_GObject_get_minSize(lua_State* L)
+{
+    fairygui::GObject *cobj = nullptr;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+    if (!tolua_isusertype(L, 1, "fgui.GObject", 0, &tolua_err))
+        goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GObject *)tolua_tousertype(L, 1, 0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj)
+    {
+        tolua_error(L, "invalid 'cobj' in function 'lua_cocos2dx_fairygui_GObject_get_minSize'", nullptr);
+        return 0;
+    }
+#endif
+
+    size_to_luaval(L, cobj->minSize);
+    return 1;
+
+#if COCOS2D_DEBUG >= 1
+tolua_lerror:
+    tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_GObject_get_minSize'.", &tolua_err);
+#endif
+
+    return 0;
+}
+
+int lua_cocos2dx_fairygui_GObject_get_maxSize(lua_State* L)
+{
+    fairygui::GObject *cobj = nullptr;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+    if (!tolua_isusertype(L, 1, "fgui.GObject", 0, &tolua_err))
+        goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GObject *)tolua_tousertype(L, 1, 0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj)
+    {
+        tolua_error(L, "invalid 'cobj' in function 'lua_cocos2dx_fairygui_GObject_get_maxSize'", nullptr);
+        return 0;
+    }
+#endif
+
+    size_to_luaval(L, cobj->maxSize);
+    return 1;
+
+#if COCOS2D_DEBUG >= 1
+tolua_lerror:
+    tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_GObject_get_maxSize'.", &tolua_err);
+#endif
+
+    return 0;
+}
+
 static int lua_cocos2dx_fairygui_addEventListener(lua_State *L)
 {
     if (nullptr == L)
@@ -1685,6 +1809,10 @@ static void extendGObject(lua_State *L)
         tolua_function(L, "addClickListener", lua_cocos2dx_fairygui_addClickListener);
         tolua_function(L, "removeClickListener", lua_cocos2dx_fairygui_removeClickListener);
         tolua_variable(L, "name", lua_cocos2dx_fairygui_GObject_get_name, lua_cocos2dx_fairygui_GObject_set_name);
+        tolua_variable(L, "sourceSize", lua_cocos2dx_fairygui_GObject_get_sourceSize, nullptr);
+        tolua_variable(L, "initSize", lua_cocos2dx_fairygui_GObject_get_initSize, nullptr);
+        tolua_variable(L, "minSize", lua_cocos2dx_fairygui_GObject_get_minSize, nullptr);
+        tolua_variable(L, "maxSize", lua_cocos2dx_fairygui_GObject_get_maxSize, nullptr);
     }
     lua_pop(L, 1);
 }

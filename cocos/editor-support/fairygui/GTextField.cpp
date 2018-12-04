@@ -135,7 +135,15 @@ void GTextField::setup_afterAdd(ByteBuffer* buffer, int beginPos)
 {
     GObject::setup_afterAdd(buffer, beginPos);
 
-    applyTextFormat();
+    // disable italics format destory x and y rotation
+    float rotation = getRotation();
+    if (std::abs(rotation) > 1e-6) {
+      setRotation(rotation + 1);
+      applyTextFormat();
+      setRotation(rotation);
+    }
+    else
+      applyTextFormat();
 
     buffer->Seek(beginPos, 6);
 
