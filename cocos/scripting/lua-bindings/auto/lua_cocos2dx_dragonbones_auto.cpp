@@ -1134,6 +1134,312 @@ int lua_register_cocos2dx_dragonbones_AnimationState(lua_State* tolua_S)
     return 1;
 }
 
+int lua_cocos2dx_dragonbones_WorldClock_add(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::WorldClock* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.WorldClock",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::WorldClock*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_WorldClock_add'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        dragonBones::IAnimatable* arg0;
+
+        ok &= luaval_to_object<dragonBones::IAnimatable>(tolua_S, 2, "db.IAnimatable",&arg0, "db.WorldClock:add");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_WorldClock_add'", nullptr);
+            return 0;
+        }
+        cobj->add(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.WorldClock:add",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_WorldClock_add'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_WorldClock_contains(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::WorldClock* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.WorldClock",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::WorldClock*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_WorldClock_contains'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        const dragonBones::IAnimatable* arg0;
+
+        ok &= luaval_to_object<const dragonBones::IAnimatable>(tolua_S, 2, "db.IAnimatable",&arg0, "db.WorldClock:contains");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_WorldClock_contains'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->contains(arg0);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.WorldClock:contains",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_WorldClock_contains'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_WorldClock_clear(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::WorldClock* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.WorldClock",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::WorldClock*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_WorldClock_clear'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_WorldClock_clear'", nullptr);
+            return 0;
+        }
+        cobj->clear();
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.WorldClock:clear",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_WorldClock_clear'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_WorldClock_remove(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::WorldClock* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.WorldClock",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::WorldClock*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_WorldClock_remove'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        dragonBones::IAnimatable* arg0;
+
+        ok &= luaval_to_object<dragonBones::IAnimatable>(tolua_S, 2, "db.IAnimatable",&arg0, "db.WorldClock:remove");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_WorldClock_remove'", nullptr);
+            return 0;
+        }
+        cobj->remove(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.WorldClock:remove",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_WorldClock_remove'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_WorldClock_getStaticClock(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"db.WorldClock",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 0)
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_WorldClock_getStaticClock'", nullptr);
+            return 0;
+        }
+        dragonBones::WorldClock* ret = dragonBones::WorldClock::getStaticClock();
+        object_to_luaval<dragonBones::WorldClock>(tolua_S, "db.WorldClock",(dragonBones::WorldClock*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "db.WorldClock:getStaticClock",argc, 0);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_WorldClock_getStaticClock'.",&tolua_err);
+#endif
+    return 0;
+}
+int lua_cocos2dx_dragonbones_WorldClock_constructor(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::WorldClock* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_WorldClock_constructor'", nullptr);
+            return 0;
+        }
+        cobj = new dragonBones::WorldClock();
+        tolua_pushusertype(tolua_S,(void*)cobj,"db.WorldClock");
+        tolua_register_gc(tolua_S,lua_gettop(tolua_S));
+        return 1;
+    }
+    if (argc == 1) 
+    {
+        double arg0;
+
+        ok &= luaval_to_number(tolua_S, 2,&arg0, "db.WorldClock:WorldClock");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_WorldClock_constructor'", nullptr);
+            return 0;
+        }
+        cobj = new dragonBones::WorldClock(arg0);
+        tolua_pushusertype(tolua_S,(void*)cobj,"db.WorldClock");
+        tolua_register_gc(tolua_S,lua_gettop(tolua_S));
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.WorldClock:WorldClock",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_WorldClock_constructor'.",&tolua_err);
+#endif
+
+    return 0;
+}
+
+static int lua_cocos2dx_dragonbones_WorldClock_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (WorldClock)");
+    return 0;
+}
+
+int lua_register_cocos2dx_dragonbones_WorldClock(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"db.WorldClock");
+    tolua_cclass(tolua_S,"WorldClock","db.WorldClock","db.IAnimatable",nullptr);
+
+    tolua_beginmodule(tolua_S,"WorldClock");
+        tolua_function(tolua_S,"new",lua_cocos2dx_dragonbones_WorldClock_constructor);
+        tolua_function(tolua_S,"add",lua_cocos2dx_dragonbones_WorldClock_add);
+        tolua_function(tolua_S,"contains",lua_cocos2dx_dragonbones_WorldClock_contains);
+        tolua_function(tolua_S,"clear",lua_cocos2dx_dragonbones_WorldClock_clear);
+        tolua_function(tolua_S,"remove",lua_cocos2dx_dragonbones_WorldClock_remove);
+        tolua_function(tolua_S,"getStaticClock", lua_cocos2dx_dragonbones_WorldClock_getStaticClock);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(dragonBones::WorldClock).name();
+    g_luaType[typeName] = "db.WorldClock";
+    g_typeCast["WorldClock"] = "db.WorldClock";
+    return 1;
+}
+
 int lua_cocos2dx_dragonbones_Animation_init(lua_State* tolua_S)
 {
     int argc = 0;
@@ -3993,12 +4299,13 @@ TOLUA_API int register_all_cocos2dx_dragonbones(lua_State* tolua_S)
 	tolua_module(tolua_S,"db",0);
 	tolua_beginmodule(tolua_S,"db");
 
-	lua_register_cocos2dx_dragonbones_CCTextureAtlasData(tolua_S);
+	lua_register_cocos2dx_dragonbones_CCArmatureDisplay(tolua_S);
 	lua_register_cocos2dx_dragonbones_AnimationState(tolua_S);
 	lua_register_cocos2dx_dragonbones_Animation(tolua_S);
 	lua_register_cocos2dx_dragonbones_CCFactory(tolua_S);
 	lua_register_cocos2dx_dragonbones_CCSlot(tolua_S);
-	lua_register_cocos2dx_dragonbones_CCArmatureDisplay(tolua_S);
+	lua_register_cocos2dx_dragonbones_WorldClock(tolua_S);
+	lua_register_cocos2dx_dragonbones_CCTextureAtlasData(tolua_S);
 
 	tolua_endmodule(tolua_S);
 	return 1;

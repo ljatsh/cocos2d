@@ -8,6 +8,12 @@
 
 
 --------------------------------------------------------
+-- the db WorldClock
+-- @field WorldClock preloaded module
+-- @see WorldClock
+
+
+--------------------------------------------------------
 -- the db Animation
 -- @field Animation preloaded module
 -- @see Animation
