@@ -3,6 +3,175 @@
 #include "scripting/lua-bindings/manual/tolua_fix.h"
 #include "scripting/lua-bindings/manual/LuaBasicConversions.h"
 
+int lua_cocos2dx_dragonbones_IAnimatable_advanceTime(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::IAnimatable* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.IAnimatable",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::IAnimatable*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_IAnimatable_advanceTime'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        double arg0;
+
+        ok &= luaval_to_number(tolua_S, 2,&arg0, "db.IAnimatable:advanceTime");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_IAnimatable_advanceTime'", nullptr);
+            return 0;
+        }
+        cobj->advanceTime(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.IAnimatable:advanceTime",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_IAnimatable_advanceTime'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_IAnimatable_setClock(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::IAnimatable* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.IAnimatable",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::IAnimatable*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_IAnimatable_setClock'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        dragonBones::WorldClock* arg0;
+
+        ok &= luaval_to_object<dragonBones::WorldClock>(tolua_S, 2, "db.WorldClock",&arg0, "db.IAnimatable:setClock");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_IAnimatable_setClock'", nullptr);
+            return 0;
+        }
+        cobj->setClock(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.IAnimatable:setClock",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_IAnimatable_setClock'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_IAnimatable_getClock(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::IAnimatable* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.IAnimatable",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::IAnimatable*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_IAnimatable_getClock'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_IAnimatable_getClock'", nullptr);
+            return 0;
+        }
+        dragonBones::WorldClock* ret = cobj->getClock();
+        object_to_luaval<dragonBones::WorldClock>(tolua_S, "db.WorldClock",(dragonBones::WorldClock*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.IAnimatable:getClock",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_IAnimatable_getClock'.",&tolua_err);
+#endif
+
+    return 0;
+}
+static int lua_cocos2dx_dragonbones_IAnimatable_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (IAnimatable)");
+    return 0;
+}
+
+int lua_register_cocos2dx_dragonbones_IAnimatable(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"db.IAnimatable");
+    tolua_cclass(tolua_S,"IAnimatable","db.IAnimatable","",nullptr);
+
+    tolua_beginmodule(tolua_S,"IAnimatable");
+        tolua_function(tolua_S,"advanceTime",lua_cocos2dx_dragonbones_IAnimatable_advanceTime);
+        tolua_function(tolua_S,"setClock",lua_cocos2dx_dragonbones_IAnimatable_setClock);
+        tolua_function(tolua_S,"getClock",lua_cocos2dx_dragonbones_IAnimatable_getClock);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(dragonBones::IAnimatable).name();
+    g_luaType[typeName] = "db.IAnimatable";
+    g_typeCast["IAnimatable"] = "db.IAnimatable";
+    return 1;
+}
+
 int lua_cocos2dx_dragonbones_AnimationState_isCompleted(lua_State* tolua_S)
 {
     int argc = 0;
@@ -4300,6 +4469,7 @@ TOLUA_API int register_all_cocos2dx_dragonbones(lua_State* tolua_S)
 	tolua_beginmodule(tolua_S,"db");
 
 	lua_register_cocos2dx_dragonbones_CCArmatureDisplay(tolua_S);
+	lua_register_cocos2dx_dragonbones_IAnimatable(tolua_S);
 	lua_register_cocos2dx_dragonbones_AnimationState(tolua_S);
 	lua_register_cocos2dx_dragonbones_Animation(tolua_S);
 	lua_register_cocos2dx_dragonbones_CCFactory(tolua_S);

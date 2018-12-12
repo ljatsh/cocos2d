@@ -2,6 +2,12 @@
 -- @module db
 
 --------------------------------------------------------
+-- the db IAnimatable
+-- @field IAnimatable preloaded module
+-- @see IAnimatable
+
+
+--------------------------------------------------------
 -- the db AnimationState
 -- @field AnimationState preloaded module
 -- @see AnimationState
