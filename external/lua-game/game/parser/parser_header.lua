@@ -47,6 +47,7 @@ function parser_header:execute(chr)
       self.data = table.concat(self.datas)
       self.datas = {}
       self.offset, self.body_size, self.version = string.unpack(self.data, '>Ib')
+      self.body_size = self.body_size - 5
 
       -- version check
       if self.version ~= self.valid_version then
@@ -76,7 +77,7 @@ end
 -- @param data the binary msg
 -- @return the binary msg with header ahead
 function parser_header:pack(data)
-  return string.pack('>IbA', #data, self.valid_version, data)
+  return string.pack('>IbA', #data + 5, self.valid_version, data)
 end
 
 return parser_header

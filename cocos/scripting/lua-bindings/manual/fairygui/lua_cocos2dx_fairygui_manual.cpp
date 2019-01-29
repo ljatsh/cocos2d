@@ -846,6 +846,7 @@ static int lua_cocos2dx_fairygui_UIObjectFactory_setPackageItemExtension(lua_Sta
             return ret;
         });
 
+        // Potential resource leak here.
         //ScriptHandlerMgr::getInstance()->addCustomHandler((void *)fairygui::UIObjectFactory::setPackageItemExtension, handler);
 
         return 0;
@@ -1367,6 +1368,7 @@ int lua_cocos2dx_fairygui_GTweener_onComplete(lua_State* L)
             stack->clean();
         });
         object_to_luaval<fairygui::GTweener>(L, "fgui.GTweener",(fairygui::GTweener*)ret);
+        ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
         return 1;
     }
     luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTweener:onComplete",argc, 1);
@@ -1421,6 +1423,7 @@ int lua_cocos2dx_fairygui_GTweener_onComplete1(lua_State* L)
             stack->clean();
         });
         object_to_luaval<fairygui::GTweener>(L, "fgui.GTweener",(fairygui::GTweener*)ret);
+        ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
         return 1;
     }
     luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTweener:onComplete1",argc, 1);
@@ -1475,6 +1478,7 @@ int lua_cocos2dx_fairygui_GTweener_onUpdate(lua_State* L)
         });
 
         object_to_luaval<fairygui::GTweener>(L, "fgui.GTweener",(fairygui::GTweener*)ret);
+        ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
         return 1;
     }
     luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTweener:onUpdate",argc, 1);
@@ -1577,6 +1581,7 @@ int lua_cocos2dx_fairygui_Transition_play(lua_State* L)
               stack->executeFunctionByHandler(handler, 0);
               stack->clean();
             });
+            ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
             lua_settop(L, 1);
             return 1;
         }
@@ -1601,6 +1606,7 @@ int lua_cocos2dx_fairygui_Transition_play(lua_State* L)
               stack->executeFunctionByHandler(handler, 0);
               stack->clean();
             });
+            ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
 
             lua_settop(L, 1);
             return 1;
@@ -1659,6 +1665,7 @@ int lua_cocos2dx_fairygui_Transition_play(lua_State* L)
               stack->executeFunctionByHandler(handler, 0);
               stack->clean();
             });
+            ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
 
             lua_settop(L, 1);
             return 1;
@@ -1725,6 +1732,7 @@ int lua_cocos2dx_fairygui_Transition_setHook(lua_State* L)
           stack->executeFunctionByHandler(handler, 0);
           stack->clean();
         });
+        ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
         lua_settop(L, 1);
         return 1;
     }

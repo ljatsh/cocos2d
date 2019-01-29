@@ -77,6 +77,10 @@
 
 - (void)setTextInput:(NSView<CCUITextInput> *)textInput
 {
+    if (textInput == nil) {
+        return;
+    }
+    
     if (_textInput == textInput) {
         return;
     }

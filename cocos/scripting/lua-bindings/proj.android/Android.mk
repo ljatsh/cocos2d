@@ -21,7 +21,7 @@ LOCAL_EXPORT_LDLIBS := -lGLESv2 \
                        -llog \
                        -landroid
 
-LUA_STATIC_LIB := luajit_static
+LUA_STATIC_LIB := ext_luajit
 LUA_IMPORT_PATH := lua/luajit/prebuilt/android
 LUA_INCLUDE_PATH := $(LOCAL_PATH)/../../../../external/lua/luajit/include
 
@@ -137,6 +137,14 @@ LOCAL_SRC_FILES += ../manual/navmesh/lua_cocos2dx_navmesh_conversions.cpp \
                    ../manual/navmesh/lua_cocos2dx_navmesh_manual.cpp \
                    ../auto/lua_cocos2dx_navmesh_auto.cpp \
 
+# fairygui
+LOCAL_SRC_FILES += ../manual/fairygui/lua_cocos2dx_fairygui_manual.cpp \
+                   ../auto/lua_cocos2dx_fairygui_auto.cpp
+
+# dragonbones
+LOCAL_SRC_FILES += ../manual/dragonbones/lua_cocos2dx_dragonbones_manual.cpp \
+                   ../auto/lua_cocos2dx_dragonbones_auto.cpp
+
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LUA_INCLUDE_PATH) \
                     $(LOCAL_PATH)/../../../2d \
@@ -146,6 +154,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../../../editor-support/cocostudio \
                     $(LOCAL_PATH)/../../../editor-support/cocostudio/ActionTimeline \
                     $(LOCAL_PATH)/../../../editor-support/spine \
+                    $(LOCAL_PATH)/../../../editor-support/fairygui \
                     $(LOCAL_PATH)/../../../ui \
                     $(LOCAL_PATH)/../../../physics3d \
                     $(LOCAL_PATH)/../../../navmesh \
@@ -187,6 +196,8 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2d_lua_android_static
 
 LOCAL_STATIC_LIBRARIES := cocos2dx_static
+LOCAL_STATIC_LIBRARIES += ext_lua-game
+LOCAL_STATIC_LIBRARIES += ext_http_parser
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -194,3 +205,4 @@ $(call import-add-path,$(LOCAL_PATH)/../../../..)
 $(call import-add-path,$(LOCAL_PATH)/../../../../external)
 $(call import-module,$(LUA_IMPORT_PATH))
 $(call import-module, cocos)
+$(call import-module,lua-game/prebuilt/android)

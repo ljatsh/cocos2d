@@ -54,7 +54,6 @@ function M_.dump(obj)
 end
 
 function M_.hexdump(s)
-  local t = {}
   for offset=1, #s, 16 do
     io.write(string.format('%08x ', offset-1))
     local chunk = s:sub(offset, offset + 15)
@@ -63,6 +62,10 @@ function M_.hexdump(s)
     io.write(string.rep(' ',3*(16-#chunk)))
     io.write(string.format(' |%s|\n', chunk:gsub('%c', '.')))
   end
+end
+
+function M_.hex(s)
+  return (string.gsub(s, '.', function(c) return string.format('%02x', string.byte(c)) end))
 end
 
 return M_

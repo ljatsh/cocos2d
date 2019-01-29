@@ -100,6 +100,8 @@ function session:stop()
   self.stop_cond:wait()
 
   self.main_thread = nil
+  self.send_head = nil
+  self.send_tail = nil
 end
 
 --- send msg asynchronously in sequence order

@@ -41,7 +41,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  * @version DragonBones 3.0
  * @language zh_CN
  */
-class WorldClock : public IAnimatable
+class DB_DLL WorldClock : public IAnimatable
 {
     DRAGONBONES_DISALLOW_COPY_AND_ASSIGN(WorldClock)
 

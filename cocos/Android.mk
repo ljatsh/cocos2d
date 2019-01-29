@@ -267,16 +267,16 @@ LOCAL_EXPORT_LDLIBS := -lGLESv2 \
                        -llog \
                        -landroid
 
-LOCAL_STATIC_LIBRARIES := cocos_freetype2_static
-LOCAL_STATIC_LIBRARIES += cocos_png_static
-LOCAL_STATIC_LIBRARIES += cocos_jpeg_static
-LOCAL_STATIC_LIBRARIES += cocos_tiff_static
-LOCAL_STATIC_LIBRARIES += cocos_webp_static
-LOCAL_STATIC_LIBRARIES += cocos_chipmunk_static
-LOCAL_STATIC_LIBRARIES += cocos_zlib_static
-LOCAL_STATIC_LIBRARIES += cocos_ssl_static
-LOCAL_STATIC_LIBRARIES += recast_static
-LOCAL_STATIC_LIBRARIES += bullet_static
+LOCAL_STATIC_LIBRARIES := ext_freetype2
+LOCAL_STATIC_LIBRARIES += ext_png
+LOCAL_STATIC_LIBRARIES += ext_jpeg
+LOCAL_STATIC_LIBRARIES += ext_tiff
+LOCAL_STATIC_LIBRARIES += ext_webp
+LOCAL_STATIC_LIBRARIES += ext_chipmunk
+LOCAL_STATIC_LIBRARIES += ext_zlib
+LOCAL_STATIC_LIBRARIES += ext_ssl
+LOCAL_STATIC_LIBRARIES += ext_recast
+LOCAL_STATIC_LIBRARIES += ext_bullet
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dxandroid_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cpufeatures
@@ -307,6 +307,8 @@ LOCAL_STATIC_LIBRARIES := cocostudio_static
 LOCAL_STATIC_LIBRARIES += cocosbuilder_static
 LOCAL_STATIC_LIBRARIES += cocos3d_static
 LOCAL_STATIC_LIBRARIES += spine_static
+LOCAL_STATIC_LIBRARIES += fairygui_static
+LOCAL_STATIC_LIBRARIES += dragonbones_static
 LOCAL_STATIC_LIBRARIES += cocos_network_static
 LOCAL_STATIC_LIBRARIES += audioengine_static
 
@@ -328,6 +330,8 @@ $(call import-module,audio/android)
 $(call import-module,editor-support/cocosbuilder)
 $(call import-module,editor-support/cocostudio)
 $(call import-module,editor-support/spine)
+$(call import-module,editor-support/fairygui)
+$(call import-module,editor-support/dragonbones)
 $(call import-module,network)
 $(call import-module,ui)
 $(call import-module,extensions)
@@ -338,3 +342,4 @@ $(call import-module,recast)
 $(call import-module,websockets/prebuilt/android)
 $(call import-module,openssl/prebuilt/android)
 $(call import-module,flatbuffers)
+$(call import-module,uv/prebuilt/android)

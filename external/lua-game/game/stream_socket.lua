@@ -14,20 +14,40 @@ function socket:ctor(host, port)
 end
 
 --- connect to host
--- @param host host name
--- @param port port
+-- @param timeout in seconds. nil means no timeout
 -- @return socket if connected successfully, otherwise nil and error
-function socket:connect()
+function socket:connect(timeout)
   assert (coroutine.running() ~= nil)
 
-  -- TODO getaddrinfo crash issue
-  local ip = luv.net.getaddrinfo(self.host)
+  local ip, error = luv.net.getaddrinfo(self.host)
+  if ip == nil then
+    return nil, err
+  end
+
   local s = luv.net.tcp()
+
+  local connected = false
+
+  if timeout ~= nil then
+    luv.fiber.create(function()
+      local t = luv.timer.create()
+      t:start(timeout, 1)
+      t:wait()
+
+      if not connected then
+        s:close()
+      end
+
+      t:stop()
+    end):ready()
+  end
+
   local h, err = s:connect(ip, self.port)
   if h == nil then
     return nil, err
   end
 
+  connected = true
   s:nodelay(true)
 
   self.ip = ip

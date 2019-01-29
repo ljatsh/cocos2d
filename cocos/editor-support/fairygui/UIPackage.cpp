@@ -1,6 +1,6 @@
 #include "UIPackage.h"
 #include "UIObjectFactory.h"
-#include "utils/Bytebuffer.h"
+#include "utils/ByteBuffer.h"
 #include "utils/ToolSet.h"
 
 #include "display/BitmapFont.h"
@@ -399,6 +399,9 @@ bool UIPackage::loadPackage(ByteBuffer* buffer, const string& assetPath)
             pi->file = assetNamePrefix + pi->file;
             break;
         }
+
+        default:
+            break;
         }
         _items.push_back(pi);
         _itemsById[pi->id] = pi;

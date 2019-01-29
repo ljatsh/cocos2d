@@ -51,6 +51,7 @@ void Armature::_onClear()
     if (_proxy != nullptr)
     {
         _proxy->dbClear();
+        _proxy = nullptr;
     }
 
     if (_replaceTextureAtlasData != nullptr)

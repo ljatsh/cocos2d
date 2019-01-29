@@ -98,6 +98,6 @@ LOCAL_CFLAGS += -fexceptions
 
 LOCAL_STATIC_LIBRARIES := cocos_ui_static
 LOCAL_STATIC_LIBRARIES += cocosdenshion_static
-LOCAL_STATIC_LIBRARIES += cocos_flatbuffers_static
+LOCAL_STATIC_LIBRARIES += ext_flatbuffers
 
 include $(BUILD_STATIC_LIBRARY)

@@ -3,7 +3,7 @@
 #include "GRoot.h"
 #include "PackageItem.h"
 #include "utils/ToolSet.h"
-#include "utils/Bytebuffer.h"
+#include "utils/ByteBuffer.h"
 
 NS_FGUI_BEGIN
 USING_NS_CC;
@@ -44,8 +44,11 @@ void GComboBox::setTitle(const std::string & value)
 const cocos2d::Color3B& GComboBox::getTitleColor() const
 {
     GTextField* tf = getTextField();
-    if (tf)
-        return tf->getColor();
+    if (tf) {
+        static cocos2d::Color3B color;
+        color = tf->getColor();
+        return color;
+    }
     else
         return Color3B::BLACK;
 }

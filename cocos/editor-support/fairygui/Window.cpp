@@ -125,7 +125,9 @@ void Window::hide()
 
 void Window::hideImmediately()
 {
-    UIRoot->hideWindowImmediately(this);
+    auto root = UIRoot;
+    if (root != nullptr)
+        root->hideWindowImmediately(this);
 }
 
 void Window::toggleStatus()

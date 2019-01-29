@@ -12,7 +12,7 @@
 #include "gears/GearText.h"
 #include "gears/GearIcon.h"
 #include "utils/WeakPtr.h"
-#include "utils/Bytebuffer.h"
+#include "utils/ByteBuffer.h"
 
 NS_FGUI_BEGIN
 USING_NS_CC;

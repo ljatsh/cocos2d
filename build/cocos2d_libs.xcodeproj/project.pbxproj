@@ -7,15 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		062AE723215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6C6215A0933009FA3C6 /* libuv_a.a */; };
-		062AE726215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6C8215A0933009FA3C6 /* libuv_a.a */; };
-		062AE729215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CA215A0933009FA3C6 /* libuv_a.a */; };
-		062AE72C215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CB215A0933009FA3C6 /* libuv_a.a */; };
-		062AE72F215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CD215A0933009FA3C6 /* libuv_a.a */; };
-		062AE732215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CF215A0933009FA3C6 /* libuv_a.a */; };
-		062AE735215A0934009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6D1215A0933009FA3C6 /* libuv_a.a */; };
-		062AE758215A09D5009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE6CF215A0933009FA3C6 /* libuv_a.a */; };
 		062AE762215A0A2F009FA3C6 /* libuv_a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE75C215A0A1E009FA3C6 /* libuv_a.a */; };
+		0676FC4822007A7C003980BA /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0676FC4722007A7B003980BA /* libuv.a */; };
+		0676FC4A22007A8B003980BA /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0676FC4922007A8B003980BA /* libuv.a */; };
 		069C1EB8214CA776000CE1BE /* GTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 069C1E1F214CA775000CE1BE /* GTextField.h */; };
 		069C1EB9214CA776000CE1BE /* GTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 069C1E1F214CA775000CE1BE /* GTextField.h */; };
 		069C1EBA214CA776000CE1BE /* GTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 069C1E1F214CA775000CE1BE /* GTextField.h */; };
@@ -5138,13 +5132,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		062AE6C6215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
-		062AE6C8215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
-		062AE6CA215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
-		062AE6CB215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
-		062AE6CD215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
-		062AE6CF215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
-		062AE6D1215A0933009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
 		062AE75B215A0A1E009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
 		062AE75C215A0A1E009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
 		062AE75E215A0A1E009FA3C6 /* libuv_a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv_a.a; sourceTree = "<group>"; };
@@ -5157,6 +5144,8 @@
 		0634A4CD194B19E400E608AF /* CCTimeLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTimeLine.cpp; sourceTree = "<group>"; };
 		0634A4CE194B19E400E608AF /* CCTimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTimeLine.h; sourceTree = "<group>"; };
 		0634A4CF194B19E400E608AF /* CCTimelineMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTimelineMacro.h; sourceTree = "<group>"; };
+		0676FC4722007A7B003980BA /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
+		0676FC4922007A8B003980BA /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
 		069C1E1F214CA775000CE1BE /* GTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTextField.h; sourceTree = "<group>"; };
 		069C1E20214CA775000CE1BE /* GSlider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GSlider.cpp; sourceTree = "<group>"; };
 		069C1E21214CA775000CE1BE /* GLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLoader.cpp; sourceTree = "<group>"; };
@@ -6988,7 +6977,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				062AE758215A09D5009FA3C6 /* libuv_a.a in Frameworks */,
 				46BDE4A81FA32D3400104C05 /* libbox2d.a in Frameworks */,
 				46270FA41E1CC6A200AAA098 /* libcrypto.a in Frameworks */,
 				468A197D1EF3BA6500ECA675 /* libMiniCL.a in Frameworks */,
@@ -7009,6 +6997,7 @@
 				468A197B1EF3BA6500ECA675 /* libBulletMultiThreaded.a in Frameworks */,
 				468A19791EF3BA6500ECA675 /* libBulletCollision.a in Frameworks */,
 				468A197A1EF3BA6500ECA675 /* libBulletDynamics.a in Frameworks */,
+				0676FC4822007A7C003980BA /* libuv.a in Frameworks */,
 				1A57052B180BD31F0088DEC7 /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7035,18 +7024,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				062AE72C215A0934009FA3C6 /* libuv_a.a in Frameworks */,
 				46BDE4AA1FA3316A00104C05 /* libbox2d.a in Frameworks */,
 				466F05251EF7659300B80080 /* libBulletCollision.a in Frameworks */,
-				062AE732215A0934009FA3C6 /* libuv_a.a in Frameworks */,
-				062AE726215A0934009FA3C6 /* libuv_a.a in Frameworks */,
-				062AE723215A0934009FA3C6 /* libuv_a.a in Frameworks */,
-				062AE729215A0934009FA3C6 /* libuv_a.a in Frameworks */,
 				466F05261EF7659300B80080 /* libBulletDynamics.a in Frameworks */,
 				466F05271EF7659300B80080 /* libBulletMultiThreaded.a in Frameworks */,
+				0676FC4A22007A8B003980BA /* libuv.a in Frameworks */,
 				466F05281EF7659300B80080 /* libLinearMath.a in Frameworks */,
-				062AE735215A0934009FA3C6 /* libuv_a.a in Frameworks */,
-				062AE72F215A0934009FA3C6 /* libuv_a.a in Frameworks */,
 				466F05291EF7659300B80080 /* libMiniCL.a in Frameworks */,
 				46270FA81E1CC84500AAA098 /* libcrypto.a in Frameworks */,
 				46270FA91E1CC84500AAA098 /* libssl.a in Frameworks */,
@@ -7086,62 +7069,17 @@
 		062AE6C4215A0933009FA3C6 /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				062AE6C5215A0933009FA3C6 /* i386 */,
-				062AE6C7215A0933009FA3C6 /* armv7 */,
-				062AE6C9215A0933009FA3C6 /* arm64 */,
-				062AE6CB215A0933009FA3C6 /* libuv_a.a */,
-				062AE6CC215A0933009FA3C6 /* x86_64 */,
+				0676FC4922007A8B003980BA /* libuv.a */,
 			);
 			path = ios;
-			sourceTree = "<group>";
-		};
-		062AE6C5215A0933009FA3C6 /* i386 */ = {
-			isa = PBXGroup;
-			children = (
-				062AE6C6215A0933009FA3C6 /* libuv_a.a */,
-			);
-			path = i386;
-			sourceTree = "<group>";
-		};
-		062AE6C7215A0933009FA3C6 /* armv7 */ = {
-			isa = PBXGroup;
-			children = (
-				062AE6C8215A0933009FA3C6 /* libuv_a.a */,
-			);
-			path = armv7;
-			sourceTree = "<group>";
-		};
-		062AE6C9215A0933009FA3C6 /* arm64 */ = {
-			isa = PBXGroup;
-			children = (
-				062AE6CA215A0933009FA3C6 /* libuv_a.a */,
-			);
-			path = arm64;
-			sourceTree = "<group>";
-		};
-		062AE6CC215A0933009FA3C6 /* x86_64 */ = {
-			isa = PBXGroup;
-			children = (
-				062AE6CD215A0933009FA3C6 /* libuv_a.a */,
-			);
-			path = x86_64;
 			sourceTree = "<group>";
 		};
 		062AE6CE215A0933009FA3C6 /* mac */ = {
 			isa = PBXGroup;
 			children = (
-				062AE6CF215A0933009FA3C6 /* libuv_a.a */,
-				062AE6D0215A0933009FA3C6 /* x86_64 */,
+				0676FC4722007A7B003980BA /* libuv.a */,
 			);
 			path = mac;
-			sourceTree = "<group>";
-		};
-		062AE6D0215A0933009FA3C6 /* x86_64 */ = {
-			isa = PBXGroup;
-			children = (
-				062AE6D1215A0933009FA3C6 /* libuv_a.a */,
-			);
-			path = x86_64;
 			sourceTree = "<group>";
 		};
 		062AE759215A0A1E009FA3C6 /* tvos */ = {

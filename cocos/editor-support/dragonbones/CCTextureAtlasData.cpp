@@ -24,6 +24,22 @@ void CCTextureAtlasData::setRenderTexture(cocos2d::Texture2D* value)
         return;
     }
 
+    // Modified by lj@sh
+    // release retained memory
+    if (_renderTexture != nullptr) {
+        for (const auto& pair : textures)
+        {
+            const auto textureData = static_cast<CCTextureData*>(pair.second);
+
+            if (textureData->spriteFrame != nullptr)
+            {
+                textureData->spriteFrame->release();
+                textureData->spriteFrame = nullptr;
+            }
+        }
+        _renderTexture->release();
+    }
+
     _renderTexture = value;
 
     if (_renderTexture != nullptr) 

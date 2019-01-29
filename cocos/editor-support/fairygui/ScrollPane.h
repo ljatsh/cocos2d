@@ -97,6 +97,8 @@ public:
     void cancelDragging();
     static ScrollPane* getDraggingPane() { return _draggingPane; }
 
+    void forceRefresh();
+
 private:
 
     void onOwnerSizeChanged();

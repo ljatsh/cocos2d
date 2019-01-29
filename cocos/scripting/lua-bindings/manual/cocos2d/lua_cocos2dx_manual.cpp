@@ -2289,9 +2289,11 @@ static int lua_cocos2dx_Node_enumerateChildren(lua_State* tolua_S)
         LUA_FUNCTION handler = toluafix_ref_function(tolua_S,3,0);
 
         cobj->enumerateChildren(name, [=](Node* node)->bool{
+            // tolua_S can be different from the main lua_State
+            lua_State* L = LuaEngine::getInstance()->getLuaStack()->getLuaState();
             int id = node ? (int)node->_ID : -1;
             int* luaID = node ? &node->_luaID : nullptr;
-            toluafix_pushusertype_ccobject(tolua_S, id, luaID, (void*)node,"cc.Node");
+            toluafix_pushusertype_ccobject(L, id, luaID, (void*)node,"cc.Node");
             bool ret = LuaEngine::getInstance()->getLuaStack()->executeFunctionByHandler(handler, 1);
 
             return ret;
@@ -6955,9 +6957,11 @@ static int lua_cocos2dx_Console_addCommand(lua_State* tolua_S)
                 help,
                 [=](int fd, const std::string& args)
                 {
+                    // tolua_S can be different from the main lua_State
+                    lua_State* L = LuaEngine::getInstance()->getLuaStack()->getLuaState();
                     //lua-callback, the third param;
-                    tolua_pushnumber(tolua_S, fd);
-                    tolua_pushstring(tolua_S, args.c_str());
+                    tolua_pushnumber(L, fd);
+                    tolua_pushstring(L, args.c_str());
 
                     LuaEngine::getInstance()->getLuaStack()->executeFunctionByHandler(handler, 2);
                 }
@@ -7429,11 +7433,13 @@ static int lua_cocos2dx_TextureCache_addImageAsync(lua_State* tolua_S)
         const char* configFilePath = tolua_tostring(tolua_S, 2, "");
         LUA_FUNCTION handler = (  toluafix_ref_function(tolua_S, 3, 0));
 
-
         self->addImageAsync(configFilePath, [=](Texture2D* tex){
+            // tolua_S can be different from the main lua_State
+            lua_State* L = LuaEngine::getInstance()->getLuaStack()->getLuaState();
             int ID = (tex) ? (int)tex->_ID : -1;
             int* luaID = (tex) ? &tex->_luaID : nullptr;
-            toluafix_pushusertype_ccobject(tolua_S, ID, luaID, (void*)tex, "cc.Texture2D");
+            toluafix_pushusertype_ccobject(L, ID, luaID, (void*)tex, "cc.Texture2D");
+
             LuaEngine::getInstance()->getLuaStack()->executeFunctionByHandler(handler,1);
             LuaEngine::getInstance()->removeScriptHandler(handler);
         });
@@ -8032,9 +8038,10 @@ static int tolua_cocos2d_utils_captureScreen(lua_State* tolua_S)
         LUA_FUNCTION handler = toluafix_ref_function(tolua_S,2,0);
         std::string  fileName = tolua_tocppstring(tolua_S, 3, "");
         cocos2d::utils::captureScreen([=](bool succeed, const std::string& name ){
-
-            tolua_pushboolean(tolua_S, succeed);
-            tolua_pushstring(tolua_S, name.c_str());
+            // tolua_S can be different from the main lua_State
+            lua_State* L = LuaEngine::getInstance()->getLuaStack()->getLuaState();
+            tolua_pushboolean(L, succeed);
+            tolua_pushstring(L, name.c_str());
             LuaEngine::getInstance()->getLuaStack()->executeFunctionByHandler(handler, 2);
             LuaEngine::getInstance()->removeScriptHandler(handler);
         }, fileName);

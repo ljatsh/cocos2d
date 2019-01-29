@@ -235,6 +235,12 @@
         
 --------------------------------
 -- 
+-- @function forceRefresh 
+-- @param self
+-- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
+        
+--------------------------------
+-- 
 -- @function isMouseWheelEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)

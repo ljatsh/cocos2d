@@ -975,6 +975,12 @@ void ScrollPane::refresh2()
         updatePageController();
 }
 
+void ScrollPane::forceRefresh()
+{
+   _container->setPosition2(Vec2((int)-_xPos, (int)-_yPos - 10));
+   _container->setPosition2(Vec2((int)-_xPos, (int)-_yPos));
+}
+
 void ScrollPane::syncScrollBar(bool end)
 {
     if (_vtScrollBar != nullptr)

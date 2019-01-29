@@ -356,6 +356,12 @@ DragonBonesData* BaseFactory::parseDragonBonesData(const char* rawData, const st
 
 TextureAtlasData* BaseFactory::parseTextureAtlasData(const char* rawData, void* textureAtlas, const std::string& name, float scale)
 {
+    const auto iterator = _textureAtlasDataMap.find(name);
+    if (iterator != _textureAtlasDataMap.end() && !iterator->second.empty())
+    {
+        return iterator->second.at(0);
+    }
+
     const auto textureAtlasData = _buildTextureAtlasData(nullptr, nullptr);
     _dataParser->parseTextureAtlasData(rawData, *textureAtlasData, scale);
     _buildTextureAtlasData(textureAtlasData, textureAtlas);
