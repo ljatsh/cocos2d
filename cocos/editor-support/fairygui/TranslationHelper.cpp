@@ -205,6 +205,9 @@ void TranslationHelper::translateComponent(PackageItem * item)
 
             break;
         }
+
+        default:
+            break;
         }
 
         buffer->position = curPos + dataLen;

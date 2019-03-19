@@ -52,7 +52,8 @@ GObject::GObject() :
     _data(nullptr),
     _touchDisabled(false),
     _isAdoptiveChild(false),
-    _weakPtrRef(0)
+    _weakPtrRef(0),
+	_tag(0)
 {
     static uint64_t _gInstanceCounter = 1;
     _uid = _gInstanceCounter++;

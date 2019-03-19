@@ -196,6 +196,9 @@ bool Director::init(void)
     _renderer = new (std::nothrow) Renderer;
     RenderState::initialize();
 
+    m_cbPreRestart = nullptr;
+    m_cbRestartExe = nullptr;
+
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     EngineDataManager::init();
 #endif
@@ -1171,6 +1174,10 @@ void Director::purgeDirector()
 
 void Director::restartDirector()
 {
+    if (m_cbPreRestart != nullptr) {
+        m_cbPreRestart();
+    }
+
     reset();
     
     // RenderState need to be reinitialized
@@ -1187,6 +1194,11 @@ void Director::restartDirector()
 
     // Restart animation
     startAnimation();
+
+    if (m_cbRestartExe)
+    {
+        m_cbRestartExe();
+    }
     
     // Real restart in script level
 #if CC_ENABLE_SCRIPT_BINDING

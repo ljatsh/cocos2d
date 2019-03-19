@@ -42,7 +42,7 @@ GTweener* TweenManager::createTween()
         int newLen = _arrayLength + ceil(_arrayLength * 0.5f);
         GTweener** newArray = new GTweener*[newLen];
         memcpy(newArray, _activeTweens, _arrayLength * sizeof(GTweener*));
-        delete _activeTweens;
+        delete[] _activeTweens;
         _activeTweens = newArray;
         _arrayLength = newLen;
     }
@@ -165,6 +165,11 @@ void TweenManager::clean()
     for (auto it = _tweenerPool.begin(); it != _tweenerPool.end(); it++)
         delete *it;
     _tweenerPool.clear();
+
+    delete[] _activeTweens;
+    _activeTweens = nullptr;
+    _totalActiveTweens = 0;
+    _inited = false;
 }
 
 void TweenManager::init()

@@ -61,6 +61,9 @@ void TweenPropTypeUtils::setProps(GObject * target, TweenPropType propType, cons
     case TweenPropType::Progress:
         g->as<GProgressBar>()->setValueDuringTween(value.d);
         break;
+
+    default:
+        break;
     }
 }
 
@@ -118,6 +121,9 @@ void TweenPropTypeUtils::setProps(cocos2d::Node * target, TweenPropType propType
 
     case TweenPropType::Progress:
         g->as<GProgressBar>()->setValueDuringTween(value.d);
+        break;
+
+    default:
         break;
     }
 }

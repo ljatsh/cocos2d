@@ -9,7 +9,7 @@ FUIInput * FUIInput::create(GTextInput* owner)
 {
     FUIInput* pRet = new (std::nothrow) FUIInput();
 
-    if (pRet != nullptr && pRet->initWithSizeAndBackgroundSprite(Size(100, 100),
+    if (pRet != nullptr && pRet->initWithSizeAndBackgroundSprite(owner->getSize(),
         (ui::Scale9Sprite*)ui::Scale9Sprite::createWithTexture(UIPackage::getEmptyTexture())))
     {
         pRet->autorelease();

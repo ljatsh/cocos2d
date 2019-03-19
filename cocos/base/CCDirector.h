@@ -721,6 +721,15 @@ protected:
 
     // GLView will recreate stats labels to fit visible rect
     friend class GLView;
+
+private:
+    typedef void(*restartExe)();
+    restartExe  m_cbPreRestart;
+    restartExe	m_cbRestartExe;
+
+public:
+    void setPreRestartExeCallback(restartExe cb) { m_cbPreRestart = cb; }
+    void setRestartExeCallback(restartExe cb){ m_cbRestartExe = cb; }
 };
 
 // FIXME: Added for backward compatibility in case

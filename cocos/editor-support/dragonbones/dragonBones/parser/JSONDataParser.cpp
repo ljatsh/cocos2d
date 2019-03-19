@@ -577,6 +577,9 @@ DisplayData* JSONDataParser::_parseDisplay(const rapidjson::Value& rawData)
             }
             break;
         }
+
+        default:
+            break;
     }
 
     if (display != nullptr && rawData.HasMember(TRANSFORM))

@@ -30,6 +30,7 @@
 NS_CC_BEGIN
 
 const Data Data::Null;
+Data::DecryptFunc Data::DecryptImpl = nullptr;
 
 Data::Data() :
 _bytes(nullptr),
@@ -132,6 +133,21 @@ unsigned char* Data::takeBuffer(ssize_t* size)
         *size = getSize();
     fastSet(nullptr, 0);
     return buffer;
+}
+
+void Data::Decrypt() {
+    if (Data::DecryptImpl == nullptr)
+        return;
+
+    unsigned char* out = nullptr;
+    ssize_t out_length = 0;
+
+    Data::DecryptImpl(_bytes, &_size, &out, &out_length);
+    if (out != nullptr) {
+      clear();
+      _bytes = out;
+      _size = out_length;
+    }
 }
 
 NS_CC_END

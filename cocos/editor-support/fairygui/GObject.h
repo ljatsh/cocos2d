@@ -147,6 +147,9 @@ public:
 
     template<typename T> T* as();
 
+    inline void setTag(int tag) { _tag = tag; }
+    inline int getTag() { return _tag; }
+
     std::string id;
     std::string name;
     cocos2d::Size sourceSize;
@@ -232,6 +235,7 @@ private:
     cocos2d::Rect* _dragBounds;
     bool _dragTesting;
     bool _isAdoptiveChild;
+    int _tag;
 
     uint64_t _uid;
     size_t _weakPtrRef;

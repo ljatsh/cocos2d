@@ -624,9 +624,8 @@ void FileUtils::purgeCachedEntries()
 
 std::string FileUtils::getStringFromFile(const std::string& filename)
 {
-    std::string s;
-    getContents(filename, &s);
-    return s;
+    Data data = getDataFromFile(filename);
+    return std::string((char*)data.getBytes(), data.getSize());
 }
 
 void FileUtils::getStringFromFile(const std::string &path, std::function<void (std::string)> callback)
@@ -643,6 +642,7 @@ Data FileUtils::getDataFromFile(const std::string& filename)
 {
     Data d;
     getContents(filename, &d);
+    d.Decrypt();
     return d;
 }
 

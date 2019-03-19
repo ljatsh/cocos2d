@@ -1683,6 +1683,104 @@ int lua_cocos2dx_fairygui_Transition_play(lua_State* L)
     return 0;
 }
 
+int lua_cocos2dx_fairygui_Transition_playReverse(lua_State* L)
+{
+	int argc = 0;
+	fairygui::Transition* cobj = nullptr;
+	bool ok = true;
+	tolua_Error tolua_err;
+
+#if COCOS2D_DEBUG >= 1
+	if (!tolua_isusertype(L, 1, "fgui.Transition", 0, &tolua_err)) goto tolua_lerror;
+#endif
+	cobj = (fairygui::Transition*)tolua_tousertype(L, 1, 0);
+#if COCOS2D_DEBUG >= 1
+	if (!cobj)
+	{
+		tolua_error(L, "invalid 'cobj' in function 'lua_cocos2dx_fairygui_Transition_playReverse'", nullptr);
+		return 0;
+	}
+#endif
+	argc = lua_gettop(L) - 1;
+	do {
+		if (argc == 2) {
+			int arg0;
+			ok &= luaval_to_int32(L, 2, (int *)&arg0, "fgui.Transition:playReverse");
+
+			if (!ok) { break; }
+			double arg1;
+			ok &= luaval_to_number(L, 3, &arg1, "fgui.Transition:playReverse");
+
+			if (!ok) { break; }
+			cobj->playReverse(arg0, arg1);
+			lua_settop(L, 1);
+			return 1;
+		}
+	} while (0);
+	ok = true;
+	do {
+		if (argc == 3) {
+			int arg0;
+			ok &= luaval_to_int32(L, 2, (int *)&arg0, "fgui.Transition:playReverse");
+
+			if (!ok) { break; }
+			double arg1;
+			ok &= luaval_to_number(L, 3, &arg1, "fgui.Transition:playReverse");
+
+			if (!ok) { break; }
+
+			if (!toluafix_isfunction(L, 4, "LUA_FUNCTION", 0, &tolua_err))
+				break;
+
+			LUA_FUNCTION handler = toluafix_ref_function(L, 4, 0);
+			cobj->playReverse(arg0, arg1, [=]() {
+				LuaStack* stack = LuaEngine::getInstance()->getLuaStack();
+				stack->executeFunctionByHandler(handler, 0);
+				stack->clean();
+			});
+			ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
+			lua_settop(L, 1);
+			return 1;
+		}
+	} while (0);
+	ok = true;
+	do {
+		if (argc == 0) {
+			cobj->playReverse();
+			lua_settop(L, 1);
+			return 1;
+		}
+	} while (0);
+	ok = true;
+	do {
+		if (argc == 1) {
+			if (!toluafix_isfunction(L, 2, "LUA_FUNCTION", 0, &tolua_err))
+				break;
+
+			LUA_FUNCTION handler = toluafix_ref_function(L, 2, 0);
+			cobj->playReverse([=]() {
+				LuaStack* stack = LuaEngine::getInstance()->getLuaStack();
+				stack->executeFunctionByHandler(handler, 0);
+				stack->clean();
+			});
+			ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
+
+			lua_settop(L, 1);
+			return 1;
+		}
+	} while (0);
+	
+	luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.Transition:playReverse", argc, 2);
+	return 0;
+
+#if COCOS2D_DEBUG >= 1
+	tolua_lerror:
+				tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_Transition_playReverse'.", &tolua_err);
+#endif
+
+				return 0;
+}
+
 int lua_cocos2dx_fairygui_Transition_setHook(lua_State* L)
 {
     int argc = 0;
@@ -1847,6 +1945,7 @@ static void extendTransition(lua_State *L)
     if (lua_istable(L, -1))
     {
       tolua_function(L, "play", lua_cocos2dx_fairygui_Transition_play);
+	  tolua_function(L, "playReverse", lua_cocos2dx_fairygui_Transition_playReverse);
       tolua_function(L, "setHook", lua_cocos2dx_fairygui_Transition_setHook);
     }
     lua_pop(L, 1);

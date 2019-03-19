@@ -42,12 +42,14 @@ NS_CC_BEGIN
 class CC_DLL Data
 {
     friend class Properties;
+    typedef void (*DecryptFunc)(unsigned char* buffer, ssize_t* length, unsigned char** out, ssize_t* out_length);
 
 public:
     /**
      * This parameter is defined for convenient reference if a null Data object is needed.
      */
     static const Data Null;
+    static DecryptFunc DecryptImpl;
 
     /**
      * Constructor of Data.
@@ -142,6 +144,8 @@ public:
      * @return the internal data buffer, free it after use.
      */
     unsigned char* takeBuffer(ssize_t* size);
+
+    void Decrypt();
 private:
     void move(Data& other);
 
