@@ -290,6 +290,12 @@
         
 --------------------------------
 -- 
+-- @function stopScrolling 
+-- @param self
+-- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)
+        
+--------------------------------
+-- 
 -- @function cancelDragging 
 -- @param self
 -- @return ScrollPane#ScrollPane self (return value: fgui.ScrollPane)

@@ -766,6 +766,12 @@ public class Cocos2dxHelper {
             if (sActivity.getResources().getConfiguration().isScreenRound()) {
                 return true;
             }
+
+            // OPPO
+            if (Cocos2dxActivity.getContext().getPackageManager().hasSystemFeature("com.oppo.feature.screen.heteromorphism")) {
+                return true;
+            }
+            
         }
 
         return false;

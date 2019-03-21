@@ -433,7 +433,7 @@ void Transition::stopItem(TransitionItem * item, bool setToComplete)
         item->tweener->kill(setToComplete);
         item->tweener = nullptr;
 
-        if (item->type == TransitionActionType::Shake && !setToComplete) //Õð¶¯±ØÐë¹éÎ»£¬·ñÔòÏÂ´Î¾ÍÔ½ÕðÔ½Ô¶ÁË¡£
+        if (item->type == TransitionActionType::Shake && !setToComplete) //ï¿½ð¶¯±ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â´Î¾ï¿½Ô½ï¿½ï¿½Ô½Ô¶ï¿½Ë¡ï¿½
         {
             item->target->_gearLocked = true;
             item->target->setPosition(item->target->getX() - ((TValue_Shake*)item->value)->lastOffset.x, item->target->getY() - ((TValue_Shake*)item->value)->lastOffset.y);
@@ -983,7 +983,7 @@ void Transition::onTweenStart(GTweener* tweener)
 {
     TransitionItem* item = (TransitionItem*)tweener->getTarget();
 
-    if (item->type == TransitionActionType::XY || item->type == TransitionActionType::Size) //Î»ÖÃºÍ´óÐ¡Òªµ½start²Å×îÖÕÈ·ÈÏÆðÊ¼Öµ
+    if (item->type == TransitionActionType::XY || item->type == TransitionActionType::Size) //Î»ï¿½ÃºÍ´ï¿½Ð¡Òªï¿½ï¿½startï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½Ê¼Öµ
     {
         TValue* startValue;
         TValue* endValue;
@@ -1077,7 +1077,7 @@ void Transition::onTweenComplete(GTweener* tweener)
     item->tweener = nullptr;
     _totalTasks--;
 
-    if (tweener->allCompleted()) //µ±ÕûÌå²¥·Å½áÊøÊ±¼äÔÚÕâ¸ötweenµÄÖÐ¼äÊ±²»Ó¦¸Ãµ÷ÓÃ½áÎ²¹³×Ó
+    if (tweener->allCompleted()) //ï¿½ï¿½ï¿½ï¿½ï¿½å²¥ï¿½Å½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tweenï¿½ï¿½ï¿½Ð¼ï¿½Ê±ï¿½ï¿½Ó¦ï¿½Ãµï¿½ï¿½Ã½ï¿½Î²ï¿½ï¿½ï¿½ï¿½
         callHook(item, true);
 
     checkAllComplete();
