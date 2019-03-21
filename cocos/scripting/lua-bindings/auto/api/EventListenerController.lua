@@ -5,6 +5,13 @@
 -- @see cc
 
 --------------------------------
+--  Create a controller event listener.<br>
+-- return An autoreleased EventListenerController object.
+-- @function create 
+-- @param self
+-- @return EventListenerController#EventListenerController ret (return value: cc.EventListenerController)
+        
+--------------------------------
 -- 
 -- @function clone 
 -- @param self

@@ -981,6 +981,19 @@ void ScrollPane::forceRefresh()
    _container->setPosition2(Vec2((int)-_xPos, (int)-_yPos));
 }
 
+void fairygui::ScrollPane::stopScrolling()
+{
+	if (_tweening == 1)
+	{
+		Vec2 t = _tweenStart + _tweenChange;
+		_container->setPosition2(t);
+		_owner->dispatchEvent(UIEventType::Scroll);
+	}
+
+	_tweening = 0;
+	CALL_PER_FRAME_CANCEL(ScrollPane, tweenUpdate);
+}
+
 void ScrollPane::syncScrollBar(bool end)
 {
     if (_vtScrollBar != nullptr)
@@ -1744,8 +1757,16 @@ void ScrollPane::onTouchEnd(EventContext * context)
             alignPosition(endPos, true);
 
         _tweenChange = endPos - _tweenStart;
-        if (_tweenChange.x == 0 && _tweenChange.y == 0)
-            return;
+		if (_tweenChange.x == 0 && _tweenChange.y == 0) {
+			//点击拖动之后，如果不满足惯性的条件，也希望能有滚动结束的事件
+			context->captureTouch();
+			InputEvent* evt = context->getInput();
+			Vec2 pt = _owner->globalToLocal(evt->getPosition());
+			if (std::abs(pt.x - _beginTouchPos.x) >= 20 || std::abs(pt.y - _beginTouchPos.y) >= 20) {
+				_owner->dispatchEvent(UIEventType::ScrollEnd);
+			}
+			return;
+		}
 
         if (_pageMode || _snapToItem)
         {

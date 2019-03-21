@@ -338,12 +338,6 @@
 
 
 --------------------------------------------------------
--- the cc ZipFile
--- @field ZipFile preloaded module
--- @see ZipFile
-
-
---------------------------------------------------------
 -- the cc EventAcceleration
 -- @field EventAcceleration preloaded module
 -- @see EventAcceleration

@@ -19,6 +19,6 @@ if(WINDOWS)
   )
 else()
   set_target_properties(${target_name} PROPERTIES
-    IMPORTED_LOCATION "${platform_spec_path}/lib${lib_name}_a.a"
+    IMPORTED_LOCATION "${platform_spec_path}/lib${lib_name}.a"
   )
 endif()

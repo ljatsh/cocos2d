@@ -98,6 +98,7 @@ public:
     static ScrollPane* getDraggingPane() { return _draggingPane; }
 
     void forceRefresh();
+	void stopScrolling();
 
 private:
 

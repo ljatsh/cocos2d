@@ -79,6 +79,7 @@
     <ClCompile Include="..\manual\navmesh\lua_cocos2dx_navmesh_conversions.cpp" />
     <ClCompile Include="..\manual\navmesh\lua_cocos2dx_navmesh_manual.cpp" />
     <ClCompile Include="..\manual\network\lua_cocos2dx_network_manual.cpp" />
+    <ClCompile Include="..\manual\network\lua_downloader.cpp" />
     <ClCompile Include="..\manual\network\lua_extensions.c" />
     <ClCompile Include="..\manual\network\Lua_web_socket.cpp" />
     <ClCompile Include="..\manual\network\lua_xml_http_request.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="..\manual\navmesh\lua_cocos2dx_navmesh_conversions.h" />
     <ClInclude Include="..\manual\navmesh\lua_cocos2dx_navmesh_manual.h" />
     <ClInclude Include="..\manual\network\lua_cocos2dx_network_manual.h" />
+    <ClInclude Include="..\manual\network\lua_downloader.h" />
     <ClInclude Include="..\manual\network\lua_extensions.h" />
     <ClInclude Include="..\manual\network\Lua_web_socket.h" />
     <ClInclude Include="..\manual\network\lua_xml_http_request.h" />
