@@ -7,6 +7,7 @@ DRAGONBONES_NAMESPACE_BEGIN
 
 DragonBones* CCFactory::_dragonBonesInstance = nullptr;
 CCFactory* CCFactory::_factory = nullptr;
+CCArmatureDisplay* CCFactory::_dragonBonesEventManager = nullptr;
 
 TextureAtlasData* CCFactory::_buildTextureAtlasData(TextureAtlasData* textureAtlasData, void* textureAtlas) const
 {

@@ -45,6 +45,7 @@ class CC_DLL CCFactory : public BaseFactory
 private:
     static DragonBones* _dragonBonesInstance;
     static CCFactory* _factory;
+    static CCArmatureDisplay* _dragonBonesEventManager;
 
 public:
     /**
@@ -67,6 +68,15 @@ public:
         return CCFactory::_factory;
     }
 
+    static void purgeFactory()
+    {
+        if (CCFactory::_factory != nullptr)
+        {
+            delete CCFactory::_factory;
+            CCFactory::_factory = nullptr;
+        }
+    }
+
 protected:
     std::string _prevPath;
 
@@ -79,10 +89,10 @@ public:
     {
         if (_dragonBonesInstance == nullptr)
         {
-            const auto eventManager = CCArmatureDisplay::create();
-            eventManager->retain();
+            _dragonBonesEventManager = CCArmatureDisplay::create();
+            _dragonBonesEventManager->retain();
 
-            _dragonBonesInstance = new DragonBones(eventManager);
+            _dragonBonesInstance = new DragonBones(_dragonBonesEventManager);
             _dragonBonesInstance->yDown = false;
 
             cocos2d::Director::getInstance()->getScheduler()->schedule(
@@ -96,9 +106,16 @@ public:
 
         _dragonBones = _dragonBonesInstance;
     }
-    virtual ~CCFactory() 
+
+    virtual ~CCFactory()
     {
         clear();
+
+        cocos2d::Director::getInstance()->getScheduler()->unschedule("dragonBonesClock", this);
+        delete _dragonBonesInstance;
+        _dragonBonesInstance = nullptr;
+        delete _dragonBonesEventManager;
+        _dragonBonesEventManager = nullptr;
     }
 
 protected:
