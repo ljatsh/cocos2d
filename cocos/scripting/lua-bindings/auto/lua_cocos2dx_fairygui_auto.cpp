@@ -6281,6 +6281,53 @@ int lua_cocos2dx_fairygui_GObject_removeFromParent(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cocos2dx_fairygui_GObject_findParent(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GObject* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GObject",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GObject*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GObject_findParent'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GObject_findParent'", nullptr);
+            return 0;
+        }
+        fairygui::GObject* ret = cobj->findParent();
+        object_to_luaval<fairygui::GObject>(tolua_S, "fgui.GObject",(fairygui::GObject*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GObject:findParent",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GObject_findParent'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cocos2dx_fairygui_GObject_getYMin(lua_State* tolua_S)
 {
     int argc = 0;
@@ -6998,6 +7045,7 @@ int lua_register_cocos2dx_fairygui_GObject(lua_State* tolua_S)
         tolua_function(tolua_S,"setData",lua_cocos2dx_fairygui_GObject_setData);
         tolua_function(tolua_S,"transformRect",lua_cocos2dx_fairygui_GObject_transformRect);
         tolua_function(tolua_S,"removeFromParent",lua_cocos2dx_fairygui_GObject_removeFromParent);
+        tolua_function(tolua_S,"findParent",lua_cocos2dx_fairygui_GObject_findParent);
         tolua_function(tolua_S,"getYMin",lua_cocos2dx_fairygui_GObject_getYMin);
         tolua_function(tolua_S,"getScale",lua_cocos2dx_fairygui_GObject_getScale);
         tolua_function(tolua_S,"setX",lua_cocos2dx_fairygui_GObject_setX);
@@ -7677,6 +7725,156 @@ int lua_register_cocos2dx_fairygui_UIPackage(lua_State* tolua_S)
     return 1;
 }
 
+int lua_cocos2dx_fairygui_GImage_setFillMethod(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_setFillMethod'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        fairygui::FillMethod arg0;
+
+        ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0, "fgui.GImage:setFillMethod");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_setFillMethod'", nullptr);
+            return 0;
+        }
+        cobj->setFillMethod(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:setFillMethod",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_setFillMethod'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GImage_setFillClockwise(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_setFillClockwise'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        bool arg0;
+
+        ok &= luaval_to_boolean(tolua_S, 2,&arg0, "fgui.GImage:setFillClockwise");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_setFillClockwise'", nullptr);
+            return 0;
+        }
+        cobj->setFillClockwise(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:setFillClockwise",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_setFillClockwise'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GImage_setColor(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_setColor'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        cocos2d::Color3B arg0;
+
+        ok &= luaval_to_color3b(tolua_S, 2, &arg0, "fgui.GImage:setColor");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_setColor'", nullptr);
+            return 0;
+        }
+        cobj->setColor(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:setColor",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_setColor'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cocos2dx_fairygui_GImage_getColor(lua_State* tolua_S)
 {
     int argc = 0;
@@ -7771,7 +7969,7 @@ int lua_cocos2dx_fairygui_GImage_getFlip(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cocos2dx_fairygui_GImage_setColor(lua_State* tolua_S)
+int lua_cocos2dx_fairygui_GImage_getFillMethod(lua_State* tolua_S)
 {
     int argc = 0;
     fairygui::GImage* cobj = nullptr;
@@ -7791,32 +7989,29 @@ int lua_cocos2dx_fairygui_GImage_setColor(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     if (!cobj) 
     {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_setColor'", nullptr);
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_getFillMethod'", nullptr);
         return 0;
     }
 #endif
 
     argc = lua_gettop(tolua_S)-1;
-    if (argc == 1) 
+    if (argc == 0) 
     {
-        cocos2d::Color3B arg0;
-
-        ok &= luaval_to_color3b(tolua_S, 2, &arg0, "fgui.GImage:setColor");
         if(!ok)
         {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_setColor'", nullptr);
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_getFillMethod'", nullptr);
             return 0;
         }
-        cobj->setColor(arg0);
-        lua_settop(tolua_S, 1);
+        int ret = (int)cobj->getFillMethod();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:setColor",argc, 1);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:getFillMethod",argc, 0);
     return 0;
 
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_setColor'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_getFillMethod'.",&tolua_err);
 #endif
 
     return 0;
@@ -7867,6 +8062,294 @@ int lua_cocos2dx_fairygui_GImage_setFlip(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_setFlip'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GImage_setFillAmount(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_setFillAmount'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        double arg0;
+
+        ok &= luaval_to_number(tolua_S, 2,&arg0, "fgui.GImage:setFillAmount");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_setFillAmount'", nullptr);
+            return 0;
+        }
+        cobj->setFillAmount(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:setFillAmount",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_setFillAmount'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GImage_isFillClockwise(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_isFillClockwise'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_isFillClockwise'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->isFillClockwise();
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:isFillClockwise",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_isFillClockwise'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GImage_getFillAmount(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_getFillAmount'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_getFillAmount'", nullptr);
+            return 0;
+        }
+        double ret = cobj->getFillAmount();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:getFillAmount",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_getFillAmount'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GImage_getFillOrigin(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_getFillOrigin'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_getFillOrigin'", nullptr);
+            return 0;
+        }
+        int ret = (int)cobj->getFillOrigin();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:getFillOrigin",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_getFillOrigin'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GImage_setFillOrigin(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_setFillOrigin'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        fairygui::FillOrigin arg0;
+
+        ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0, "fgui.GImage:setFillOrigin");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_setFillOrigin'", nullptr);
+            return 0;
+        }
+        cobj->setFillOrigin(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:setFillOrigin",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_setFillOrigin'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GImage_setAliasTexParameters(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GImage* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GImage",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GImage*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GImage_setAliasTexParameters'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GImage_setAliasTexParameters'", nullptr);
+            return 0;
+        }
+        cobj->setAliasTexParameters();
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GImage:setAliasTexParameters",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GImage_setAliasTexParameters'.",&tolua_err);
 #endif
 
     return 0;
@@ -7955,10 +8438,19 @@ int lua_register_cocos2dx_fairygui_GImage(lua_State* tolua_S)
 
     tolua_beginmodule(tolua_S,"GImage");
         tolua_function(tolua_S,"new",lua_cocos2dx_fairygui_GImage_constructor);
+        tolua_function(tolua_S,"setFillMethod",lua_cocos2dx_fairygui_GImage_setFillMethod);
+        tolua_function(tolua_S,"setFillClockwise",lua_cocos2dx_fairygui_GImage_setFillClockwise);
+        tolua_function(tolua_S,"setColor",lua_cocos2dx_fairygui_GImage_setColor);
         tolua_function(tolua_S,"getColor",lua_cocos2dx_fairygui_GImage_getColor);
         tolua_function(tolua_S,"getFlip",lua_cocos2dx_fairygui_GImage_getFlip);
-        tolua_function(tolua_S,"setColor",lua_cocos2dx_fairygui_GImage_setColor);
+        tolua_function(tolua_S,"getFillMethod",lua_cocos2dx_fairygui_GImage_getFillMethod);
         tolua_function(tolua_S,"setFlip",lua_cocos2dx_fairygui_GImage_setFlip);
+        tolua_function(tolua_S,"setFillAmount",lua_cocos2dx_fairygui_GImage_setFillAmount);
+        tolua_function(tolua_S,"isFillClockwise",lua_cocos2dx_fairygui_GImage_isFillClockwise);
+        tolua_function(tolua_S,"getFillAmount",lua_cocos2dx_fairygui_GImage_getFillAmount);
+        tolua_function(tolua_S,"getFillOrigin",lua_cocos2dx_fairygui_GImage_getFillOrigin);
+        tolua_function(tolua_S,"setFillOrigin",lua_cocos2dx_fairygui_GImage_setFillOrigin);
+        tolua_function(tolua_S,"setAliasTexParameters",lua_cocos2dx_fairygui_GImage_setAliasTexParameters);
         tolua_function(tolua_S,"create", lua_cocos2dx_fairygui_GImage_create);
     tolua_endmodule(tolua_S);
     std::string typeName = typeid(fairygui::GImage).name();
@@ -10616,6 +11108,100 @@ int lua_cocos2dx_fairygui_GLoader_setTimeScale(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cocos2dx_fairygui_GLoader_getFillAmount(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_getFillAmount'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_getFillAmount'", nullptr);
+            return 0;
+        }
+        double ret = cobj->getFillAmount();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:getFillAmount",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_getFillAmount'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLoader_getFillOrigin(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_getFillOrigin'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_getFillOrigin'", nullptr);
+            return 0;
+        }
+        int ret = (int)cobj->getFillOrigin();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:getFillOrigin",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_getFillOrigin'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cocos2dx_fairygui_GLoader_setVerticalAlign(lua_State* tolua_S)
 {
     int argc = 0;
@@ -10662,6 +11248,56 @@ int lua_cocos2dx_fairygui_GLoader_setVerticalAlign(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_setVerticalAlign'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLoader_setFillMethod(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_setFillMethod'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        fairygui::FillMethod arg0;
+
+        ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0, "fgui.GLoader:setFillMethod");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_setFillMethod'", nullptr);
+            return 0;
+        }
+        cobj->setFillMethod(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:setFillMethod",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_setFillMethod'.",&tolua_err);
 #endif
 
     return 0;
@@ -10756,6 +11392,100 @@ int lua_cocos2dx_fairygui_GLoader_getFrame(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_getFrame'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLoader_getFillMethod(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_getFillMethod'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_getFillMethod'", nullptr);
+            return 0;
+        }
+        int ret = (int)cobj->getFillMethod();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:getFillMethod",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_getFillMethod'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLoader_isFillClockwise(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_isFillClockwise'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_isFillClockwise'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->isFillClockwise();
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:isFillClockwise",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_isFillClockwise'.",&tolua_err);
 #endif
 
     return 0;
@@ -10904,6 +11634,56 @@ int lua_cocos2dx_fairygui_GLoader_advance(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cocos2dx_fairygui_GLoader_setFillOrigin(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_setFillOrigin'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        fairygui::FillOrigin arg0;
+
+        ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0, "fgui.GLoader:setFillOrigin");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_setFillOrigin'", nullptr);
+            return 0;
+        }
+        cobj->setFillOrigin(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:setFillOrigin",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_setFillOrigin'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cocos2dx_fairygui_GLoader_getVerticalAlign(lua_State* tolua_S)
 {
     int argc = 0;
@@ -10947,6 +11727,53 @@ int lua_cocos2dx_fairygui_GLoader_getVerticalAlign(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_getVerticalAlign'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLoader_setAliasTexParameters(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_setAliasTexParameters'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_setAliasTexParameters'", nullptr);
+            return 0;
+        }
+        cobj->setAliasTexParameters();
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:setAliasTexParameters",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_setAliasTexParameters'.",&tolua_err);
 #endif
 
     return 0;
@@ -11144,6 +11971,56 @@ int lua_cocos2dx_fairygui_GLoader_setPlaying(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_setPlaying'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_fairygui_GLoader_setFillClockwise(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_setFillClockwise'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        bool arg0;
+
+        ok &= luaval_to_boolean(tolua_S, 2,&arg0, "fgui.GLoader:setFillClockwise");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_setFillClockwise'", nullptr);
+            return 0;
+        }
+        cobj->setFillClockwise(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:setFillClockwise",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_setFillClockwise'.",&tolua_err);
 #endif
 
     return 0;
@@ -11536,6 +12413,56 @@ int lua_cocos2dx_fairygui_GLoader_getFill(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cocos2dx_fairygui_GLoader_setFillAmount(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GLoader* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GLoader",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GLoader*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GLoader_setFillAmount'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        double arg0;
+
+        ok &= luaval_to_number(tolua_S, 2,&arg0, "fgui.GLoader:setFillAmount");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GLoader_setFillAmount'", nullptr);
+            return 0;
+        }
+        cobj->setFillAmount(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GLoader:setFillAmount",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GLoader_setFillAmount'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cocos2dx_fairygui_GLoader_getAutoSize(lua_State* tolua_S)
 {
     int argc = 0;
@@ -11719,17 +12646,25 @@ int lua_register_cocos2dx_fairygui_GLoader(lua_State* tolua_S)
         tolua_function(tolua_S,"new",lua_cocos2dx_fairygui_GLoader_constructor);
         tolua_function(tolua_S,"getURL",lua_cocos2dx_fairygui_GLoader_getURL);
         tolua_function(tolua_S,"setTimeScale",lua_cocos2dx_fairygui_GLoader_setTimeScale);
+        tolua_function(tolua_S,"getFillAmount",lua_cocos2dx_fairygui_GLoader_getFillAmount);
+        tolua_function(tolua_S,"getFillOrigin",lua_cocos2dx_fairygui_GLoader_getFillOrigin);
         tolua_function(tolua_S,"setVerticalAlign",lua_cocos2dx_fairygui_GLoader_setVerticalAlign);
+        tolua_function(tolua_S,"setFillMethod",lua_cocos2dx_fairygui_GLoader_setFillMethod);
         tolua_function(tolua_S,"getAlign",lua_cocos2dx_fairygui_GLoader_getAlign);
         tolua_function(tolua_S,"getFrame",lua_cocos2dx_fairygui_GLoader_getFrame);
+        tolua_function(tolua_S,"getFillMethod",lua_cocos2dx_fairygui_GLoader_getFillMethod);
+        tolua_function(tolua_S,"isFillClockwise",lua_cocos2dx_fairygui_GLoader_isFillClockwise);
         tolua_function(tolua_S,"getComponent",lua_cocos2dx_fairygui_GLoader_getComponent);
         tolua_function(tolua_S,"getContentSize",lua_cocos2dx_fairygui_GLoader_getContentSize);
         tolua_function(tolua_S,"advance",lua_cocos2dx_fairygui_GLoader_advance);
+        tolua_function(tolua_S,"setFillOrigin",lua_cocos2dx_fairygui_GLoader_setFillOrigin);
         tolua_function(tolua_S,"getVerticalAlign",lua_cocos2dx_fairygui_GLoader_getVerticalAlign);
+        tolua_function(tolua_S,"setAliasTexParameters",lua_cocos2dx_fairygui_GLoader_setAliasTexParameters);
         tolua_function(tolua_S,"setAlign",lua_cocos2dx_fairygui_GLoader_setAlign);
         tolua_function(tolua_S,"getColor",lua_cocos2dx_fairygui_GLoader_getColor);
         tolua_function(tolua_S,"setURL",lua_cocos2dx_fairygui_GLoader_setURL);
         tolua_function(tolua_S,"setPlaying",lua_cocos2dx_fairygui_GLoader_setPlaying);
+        tolua_function(tolua_S,"setFillClockwise",lua_cocos2dx_fairygui_GLoader_setFillClockwise);
         tolua_function(tolua_S,"isPlaying",lua_cocos2dx_fairygui_GLoader_isPlaying);
         tolua_function(tolua_S,"isShrinkOnly",lua_cocos2dx_fairygui_GLoader_isShrinkOnly);
         tolua_function(tolua_S,"getTimeScale",lua_cocos2dx_fairygui_GLoader_getTimeScale);
@@ -11738,6 +12673,7 @@ int lua_register_cocos2dx_fairygui_GLoader(lua_State* tolua_S)
         tolua_function(tolua_S,"setColor",lua_cocos2dx_fairygui_GLoader_setColor);
         tolua_function(tolua_S,"setFrame",lua_cocos2dx_fairygui_GLoader_setFrame);
         tolua_function(tolua_S,"getFill",lua_cocos2dx_fairygui_GLoader_getFill);
+        tolua_function(tolua_S,"setFillAmount",lua_cocos2dx_fairygui_GLoader_setFillAmount);
         tolua_function(tolua_S,"getAutoSize",lua_cocos2dx_fairygui_GLoader_getAutoSize);
         tolua_function(tolua_S,"setFill",lua_cocos2dx_fairygui_GLoader_setFill);
         tolua_function(tolua_S,"create", lua_cocos2dx_fairygui_GLoader_create);
@@ -23298,6 +24234,53 @@ int lua_cocos2dx_fairygui_GComboBox_getValue(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cocos2dx_fairygui_GComboBox_getDropdown(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GComboBox* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"fgui.GComboBox",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (fairygui::GComboBox*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GComboBox_getDropdown'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GComboBox_getDropdown'", nullptr);
+            return 0;
+        }
+        fairygui::GObject* ret = cobj->getDropdown();
+        object_to_luaval<fairygui::GObject>(tolua_S, "fgui.GObject",(fairygui::GObject*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GComboBox:getDropdown",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GComboBox_getDropdown'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cocos2dx_fairygui_GComboBox_getTitleColor(lua_State* tolua_S)
 {
     int argc = 0;
@@ -23822,6 +24805,7 @@ int lua_register_cocos2dx_fairygui_GComboBox(lua_State* tolua_S)
         tolua_function(tolua_S,"setTitle",lua_cocos2dx_fairygui_GComboBox_setTitle);
         tolua_function(tolua_S,"getTitleFontSize",lua_cocos2dx_fairygui_GComboBox_getTitleFontSize);
         tolua_function(tolua_S,"getValue",lua_cocos2dx_fairygui_GComboBox_getValue);
+        tolua_function(tolua_S,"getDropdown",lua_cocos2dx_fairygui_GComboBox_getDropdown);
         tolua_function(tolua_S,"getTitleColor",lua_cocos2dx_fairygui_GComboBox_getTitleColor);
         tolua_function(tolua_S,"getIcons",lua_cocos2dx_fairygui_GComboBox_getIcons);
         tolua_function(tolua_S,"getTitle",lua_cocos2dx_fairygui_GComboBox_getTitle);
@@ -31669,7 +32653,6 @@ TOLUA_API int register_all_cocos2dx_fairygui(lua_State* tolua_S)
 	lua_register_cocos2dx_fairygui_GRichTextField(tolua_S);
 	lua_register_cocos2dx_fairygui_UIConfig(tolua_S);
 	lua_register_cocos2dx_fairygui_GRoot(tolua_S);
-	lua_register_cocos2dx_fairygui_GLabel(tolua_S);
 	lua_register_cocos2dx_fairygui_GButton(tolua_S);
 	lua_register_cocos2dx_fairygui_GTweener(tolua_S);
 	lua_register_cocos2dx_fairygui_GTween(tolua_S);
@@ -31678,15 +32661,16 @@ TOLUA_API int register_all_cocos2dx_fairygui(lua_State* tolua_S)
 	lua_register_cocos2dx_fairygui_UIPackage(tolua_S);
 	lua_register_cocos2dx_fairygui_Transition(tolua_S);
 	lua_register_cocos2dx_fairygui_InputEvent(tolua_S);
+	lua_register_cocos2dx_fairygui_GProgressBar(tolua_S);
 	lua_register_cocos2dx_fairygui_GController(tolua_S);
 	lua_register_cocos2dx_fairygui_UIObjectFactory(tolua_S);
 	lua_register_cocos2dx_fairygui_PopupMenu(tolua_S);
 	lua_register_cocos2dx_fairygui_TweenValue(tolua_S);
+	lua_register_cocos2dx_fairygui_GLabel(tolua_S);
 	lua_register_cocos2dx_fairygui_GSlider(tolua_S);
 	lua_register_cocos2dx_fairygui_GTextInput(tolua_S);
 	lua_register_cocos2dx_fairygui_GLoader(tolua_S);
 	lua_register_cocos2dx_fairygui_ScrollPane(tolua_S);
-	lua_register_cocos2dx_fairygui_GProgressBar(tolua_S);
 	lua_register_cocos2dx_fairygui_DragDropManager(tolua_S);
 
 	tolua_endmodule(tolua_S);

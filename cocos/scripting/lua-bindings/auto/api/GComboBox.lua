@@ -57,6 +57,12 @@
         
 --------------------------------
 -- 
+-- @function getDropdown 
+-- @param self
+-- @return GObject#GObject ret (return value: fgui.GObject)
+        
+--------------------------------
+-- 
 -- @function getTitleColor 
 -- @param self
 -- @return color3b_table#color3b_table ret (return value: color3b_table)

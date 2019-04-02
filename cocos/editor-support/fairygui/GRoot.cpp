@@ -32,7 +32,8 @@ GRoot::GRoot() :
     _modalLayer(nullptr),
     _modalWaitPane(nullptr),
     _tooltipWin(nullptr),
-    _defaultTooltipWin(nullptr)
+    _defaultTooltipWin(nullptr),
+    _modalWaitingShownTimes(0)
 {
 }
 
@@ -178,13 +179,27 @@ void GRoot::showModalWait()
 {
     getModalWaitingPane();
     if (_modalWaitPane)
-        addChild(_modalWaitPane);
+    {
+        _modalWaitingShownTimes++;
+        if (_modalWaitPane->getParent() == nullptr)
+        {
+            CCASSERT(_modalWaitingShownTimes == 1, "Show Modal Waiting Layer first time");
+            addChild(_modalWaitPane);
+        }
+    }
 }
 
 void GRoot::closeModalWait()
 {
-    if (_modalWaitPane != nullptr && _modalWaitPane->getParent() != nullptr)
-        removeChild(_modalWaitPane);
+    if (_modalWaitPane != nullptr)
+    {
+        _modalWaitingShownTimes--;
+        if (_modalWaitingShownTimes == 0)
+        {
+            CCASSERT(_modalWaitPane->getParent() != nullptr, "Show Modal Waiting Layer the last time");
+            removeChild(_modalWaitPane);
+        }
+    }
 }
 
 GObject * GRoot::getModalWaitingPane()
@@ -334,7 +349,7 @@ void GRoot::checkPopups()
                 handled = true;
                 break;
             }
-            mc = mc->getParent();
+            mc = mc->findParent();
         }
 
         if (!handled)

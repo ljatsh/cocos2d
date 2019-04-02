@@ -19,7 +19,26 @@
         
 --------------------------------
 -- 
+-- @function getFillAmount 
+-- @param self
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- 
+-- @function getFillOrigin 
+-- @param self
+-- @return int#int ret (return value: int)
+        
+--------------------------------
+-- 
 -- @function setVerticalAlign 
+-- @param self
+-- @param #int value
+-- @return GLoader#GLoader self (return value: fgui.GLoader)
+        
+--------------------------------
+-- 
+-- @function setFillMethod 
 -- @param self
 -- @param #int value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
@@ -35,6 +54,18 @@
 -- @function getFrame 
 -- @param self
 -- @return int#int ret (return value: int)
+        
+--------------------------------
+-- 
+-- @function getFillMethod 
+-- @param self
+-- @return int#int ret (return value: int)
+        
+--------------------------------
+-- 
+-- @function isFillClockwise 
+-- @param self
+-- @return bool#bool ret (return value: bool)
         
 --------------------------------
 -- 
@@ -57,9 +88,22 @@
         
 --------------------------------
 -- 
+-- @function setFillOrigin 
+-- @param self
+-- @param #int value
+-- @return GLoader#GLoader self (return value: fgui.GLoader)
+        
+--------------------------------
+-- 
 -- @function getVerticalAlign 
 -- @param self
 -- @return int#int ret (return value: int)
+        
+--------------------------------
+-- 
+-- @function setAliasTexParameters 
+-- @param self
+-- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 
@@ -84,6 +128,13 @@
 --------------------------------
 -- 
 -- @function setPlaying 
+-- @param self
+-- @param #bool value
+-- @return GLoader#GLoader self (return value: fgui.GLoader)
+        
+--------------------------------
+-- 
+-- @function setFillClockwise 
 -- @param self
 -- @param #bool value
 -- @return GLoader#GLoader self (return value: fgui.GLoader)
@@ -139,6 +190,13 @@
 -- @function getFill 
 -- @param self
 -- @return int#int ret (return value: int)
+        
+--------------------------------
+-- 
+-- @function setFillAmount 
+-- @param self
+-- @param #float value
+-- @return GLoader#GLoader self (return value: fgui.GLoader)
         
 --------------------------------
 -- 

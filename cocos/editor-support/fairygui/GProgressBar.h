@@ -39,7 +39,6 @@ private:
     double _value;
     ProgressTitleType _titleType;
     bool _reverse;
-    bool _tweening;
 
     GObject* _titleObject;
     GObject* _barObjectH;
@@ -50,6 +49,8 @@ private:
     float _barMaxHeightDelta;
     float _barStartX;
     float _barStartY;
+
+    friend class TweenPropTypeUtils;
 };
 
 NS_FGUI_END

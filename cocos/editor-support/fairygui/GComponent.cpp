@@ -46,8 +46,11 @@ GComponent::~GComponent()
 
 void GComponent::handleInit()
 {
-    _displayObject = FUIContainer::create();
-    _displayObject->retain();
+    FUIContainer* c = FUIContainer::create();
+    c->retain();
+    c->gOwner = this;
+
+    _displayObject = c;
 
     _container = FUIInnerContainer::create();
     _container->retain();
@@ -341,13 +344,6 @@ bool GComponent::isAncestorOf(const GObject * obj) const
     return false;
 }
 
-void GComponent::addAdoptiveChild(GObject * child)
-{
-    child->_parent = this;
-    child->_isAdoptiveChild = true;
-    _displayObject->addChild(child->_displayObject);
-}
-
 bool GComponent::isChildInView(GObject * child)
 {
     if (_scrollPane != nullptr)
@@ -512,7 +508,7 @@ void GComponent::setMask(cocos2d::Node * value, bool inverted)
 {
     if (_maskOwner)
     {
-        _maskOwner->_isAdoptiveChild = false;
+        _maskOwner->_alignToBL = false;
         childStateChanged(_maskOwner);
         _maskOwner->handlePositionChanged();
         _maskOwner->release();
@@ -526,11 +522,11 @@ void GComponent::setMask(cocos2d::Node * value, bool inverted)
             if (child->_displayObject == value)
             {
                 _maskOwner = child;
-                if (value->getParent())
-                    value->getParent()->removeChild(value, false);
-                _maskOwner->_isAdoptiveChild = true;
-                _maskOwner->handlePositionChanged();
                 _maskOwner->retain();
+                _maskOwner->_alignToBL = true;
+                _maskOwner->handlePositionChanged();
+                if (value->getParent())
+                   value->getParent()->removeChild(value, false);
                 break;
             }
         }
@@ -691,13 +687,13 @@ void GComponent::childStateChanged(GObject* child)
             }
             else if (_childrenRenderOrder == ChildrenRenderOrder::DESCENT)
             {
-                ssize_t index = cnt - 1 - _children.getIndex(child);
-                _container->addChild(child->_displayObject, (int)index);
-                for (ssize_t i = index - 1; i >= 0; i--)
+                ssize_t index = _children.getIndex(child);
+                _container->addChild(child->_displayObject, (int)(cnt - 1 - index));
+                for (ssize_t i = 0; i < index; i++)
                 {
                     child = _children.at(i);
                     if (child->_displayObject->getParent() != nullptr)
-                        child->_displayObject->setLocalZOrder((int)(cnt - i - 1));
+                        child->_displayObject->setLocalZOrder((int)(cnt - 1 - i));
                 }
             }
             else

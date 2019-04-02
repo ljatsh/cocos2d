@@ -9,6 +9,7 @@ NS_FGUI_BEGIN
 
 class GComponent;
 class ActionMovieClip;
+class FUISprite;
 
 class CC_DLL GLoader : public GObject, public IColorGear, public IAnimationGear
 {
@@ -41,7 +42,7 @@ public:
 
     const cocos2d::Size& getContentSize() { return _contentSize; }
 
-    cocos2d::Color3B getColor() const override { return _content->getColor(); }
+    cocos2d::Color3B getColor() const override;
     void setColor(const cocos2d::Color3B& value) override;
 
     bool isPlaying() const override { return _playing; }
@@ -55,13 +56,27 @@ public:
 
     void advance(float time) override;
 
+    FillMethod getFillMethod() const;
+    void setFillMethod(FillMethod value);
+
+    FillOrigin getFillOrigin() const;
+    void setFillOrigin(FillOrigin value);
+
+    bool isFillClockwise() const;
+    void setFillClockwise(bool value);
+
+    float getFillAmount() const;
+    void setFillAmount(float value);
+
     GComponent* getComponent() const { return _content2; }
 
+	void setAliasTexParameters();
 protected:
     virtual void handleInit() override;
     virtual void handleSizeChanged() override;
     virtual void handleGrayedChanged() override;
     virtual void setup_beforeAdd(ByteBuffer* buffer, int beginPos) override;
+    virtual GObject* hitTest(const cocos2d::Vec2 & worldPoint, const cocos2d::Camera * camera);
 
     virtual void loadExternal();
     virtual void freeExternal(cocos2d::SpriteFrame* spriteFrame);
@@ -90,7 +105,7 @@ private:
     bool _playing;
     int _frame;
 
-    cocos2d::Sprite* _content;
+    FUISprite* _content;
     GComponent* _content2;
     ActionMovieClip* _playAction;
 };

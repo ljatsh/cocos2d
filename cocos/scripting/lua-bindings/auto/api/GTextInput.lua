@@ -1,7 +1,7 @@
 
 --------------------------------
 -- @module GTextInput
--- @see GTextField
+-- @see GTextField,EditBoxDelegate
 -- @see fgui
 
 --------------------------------

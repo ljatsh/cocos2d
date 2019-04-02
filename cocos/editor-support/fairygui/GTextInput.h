@@ -8,7 +8,7 @@
 
 NS_FGUI_BEGIN
 
-class CC_DLL GTextInput : public GTextField
+class CC_DLL GTextInput : public GTextField, cocos2d::ui::EditBoxDelegate
 {
 public:
     GTextInput();
@@ -36,6 +36,9 @@ protected:
     virtual void setup_beforeAdd(ByteBuffer* buffer, int beginPos) override;
 
     virtual void setTextFieldText() override;
+
+    virtual void editBoxReturn(cocos2d::ui::EditBox* editBox);
+    virtual void editBoxTextChanged(cocos2d::ui::EditBox* editBox, const std::string& text);
 
 private:
     FUIInput* _input;

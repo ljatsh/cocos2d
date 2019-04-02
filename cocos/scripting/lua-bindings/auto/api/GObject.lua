@@ -495,6 +495,12 @@
         
 --------------------------------
 -- 
+-- @function findParent 
+-- @param self
+-- @return GObject#GObject ret (return value: fgui.GObject)
+        
+--------------------------------
+-- 
 -- @function getYMin 
 -- @param self
 -- @return float#float ret (return value: float)

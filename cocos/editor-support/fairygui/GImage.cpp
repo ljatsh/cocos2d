@@ -57,9 +57,54 @@ void GImage::handleGrayedChanged()
     ((FUISprite*)_content)->setGrayed(_finalGrayed);
 }
 
+cocos2d::Color3B GImage::getColor() const
+{
+    return _content->getColor();
+}
+
 void GImage::setColor(const cocos2d::Color3B & value)
 {
     _content->setColor(value);
+}
+
+FillMethod GImage::getFillMethod() const
+{
+    return _content->getFillMethod();
+}
+
+void GImage::setFillMethod(FillMethod value)
+{
+    _content->setFillMethod(value);
+}
+
+FillOrigin GImage::getFillOrigin() const
+{
+    return _content->getFillOrigin();
+}
+
+void GImage::setFillOrigin(FillOrigin value)
+{
+    _content->setFillOrigin(value);
+}
+
+bool GImage::isFillClockwise() const
+{
+    return _content->isFillClockwise();
+}
+
+void GImage::setFillClockwise(bool value)
+{
+    _content->setFillClockwise(value);
+}
+
+float GImage::getFillAmount() const
+{
+    return _content->getFillAmount();
+}
+
+void GImage::setFillAmount(float value)
+{
+    _content->setFillAmount(value);
 }
 
 void GImage::constructFromResource()
@@ -77,6 +122,11 @@ void GImage::constructFromResource()
     setSize(sourceSize.width, sourceSize.height);
 }
 
+void fairygui::GImage::setAliasTexParameters()
+{
+	_content->getTexture()->setAliasTexParameters();
+}
+
 void GImage::setup_beforeAdd(ByteBuffer* buffer, int beginPos)
 {
     GObject::setup_beforeAdd(buffer, beginPos);
@@ -88,7 +138,12 @@ void GImage::setup_beforeAdd(ByteBuffer* buffer, int beginPos)
     setFlip((FlipType)buffer->ReadByte());
     int fillMethod = buffer->ReadByte();
     if (fillMethod != 0)
-        buffer->Skip(6);
+    {
+        _content->setFillMethod((FillMethod)fillMethod);
+        _content->setFillOrigin((FillOrigin)buffer->ReadByte());
+        _content->setFillClockwise(buffer->ReadBool());
+        _content->setFillAmount(buffer->ReadFloat());
+    }
 }
 
 NS_FGUI_END

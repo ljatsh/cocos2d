@@ -84,6 +84,7 @@ private:
     std::vector<WeakPtr> _justClosedPopups;
     GObject* _tooltipWin;
     GObject* _defaultTooltipWin;
+    int _modalWaitingShownTimes;
 
     static bool _soundEnabled;
     static float _soundVolumeScale;

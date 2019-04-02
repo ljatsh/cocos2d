@@ -309,6 +309,7 @@ bool UIPackage::loadPackage(ByteBuffer* buffer, const string& assetPath)
     buffer->ReadBool(); //compressed
     _id = buffer->ReadString();
     _name = buffer->ReadString();
+    _assetPath = assetPath;
     buffer->Skip(20);
     int indexTablePos = buffer->position;
     int cnt;
@@ -729,6 +730,7 @@ void UIPackage::loadFont(PackageItem * item)
 
                 if (fontSize == 0)
                     fontSize = bh;
+                lineHeight = MAX(fontSize, lineHeight);
             }
         }
 

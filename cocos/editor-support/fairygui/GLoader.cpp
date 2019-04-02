@@ -39,8 +39,11 @@ void GLoader::handleInit()
     _content->setAnchorPoint(Vec2::ZERO);
     _content->setCascadeOpacityEnabled(true);
 
-    _displayObject = Node::create();
-    _displayObject->retain();
+    FUIContainer* c = FUIContainer::create();
+    c->retain();
+    c->gOwner = this;
+
+    _displayObject = c;
     _displayObject->addChild(_content);
 }
 
@@ -99,6 +102,11 @@ void GLoader::setShrinkOnly(bool value)
     }
 }
 
+cocos2d::Color3B GLoader::getColor() const
+{
+    return _content->getColor();
+}
+
 void GLoader::setColor(const cocos2d::Color3B & value)
 {
     _content->setColor(value);
@@ -154,6 +162,51 @@ void GLoader::advance(float time)
 {
     if (_playAction)
         _playAction->advance(time);
+}
+
+FillMethod GLoader::getFillMethod() const
+{
+    return _content->getFillMethod();
+}
+
+void GLoader::setFillMethod(FillMethod value)
+{
+    _content->setFillMethod(value);
+}
+
+FillOrigin GLoader::getFillOrigin() const
+{
+    return _content->getFillOrigin();
+}
+
+void GLoader::setFillOrigin(FillOrigin value)
+{
+    _content->setFillOrigin(value);
+}
+
+bool GLoader::isFillClockwise() const
+{
+    return _content->isFillClockwise();
+}
+
+void GLoader::setFillClockwise(bool value)
+{
+    _content->setFillClockwise(value);
+}
+
+float GLoader::getFillAmount() const
+{
+    return _content->getFillAmount();
+}
+
+void GLoader::setFillAmount(float value)
+{
+    _content->setFillAmount(value);
+}
+
+void fairygui::GLoader::setAliasTexParameters()
+{
+	_content->getTexture()->setAliasTexParameters();
 }
 
 void GLoader::loadContent()
@@ -487,10 +540,36 @@ void GLoader::setup_beforeAdd(ByteBuffer* buffer, int beginPos)
         setColor((Color3B)buffer->ReadColor());
     int fillMethod = buffer->ReadByte();
     if (fillMethod != 0)
-        buffer->Skip(6);
+    {
+        _content->setFillMethod((FillMethod)fillMethod);
+        _content->setFillOrigin((FillOrigin)buffer->ReadByte());
+        _content->setFillClockwise(buffer->ReadBool());
+        _content->setFillAmount(buffer->ReadFloat());
+    }
 
     if (_url.length() > 0)
         loadContent();
+}
+
+GObject* GLoader::hitTest(const Vec2 &worldPoint, const Camera* camera)
+{
+    if (!_touchable || !_displayObject->isVisible() || !_displayObject->getParent())
+        return nullptr;
+
+    if (_content2 != nullptr)
+    {
+        GObject* obj = _content2->hitTest(worldPoint, camera);
+        if (obj != nullptr)
+            return obj;
+    }
+
+    Rect rect;
+    rect.size = _size;
+    //if (isScreenPointInRect(worldPoint, camera, _displayObject->getWorldToNodeTransform(), rect, nullptr))
+    if (rect.containsPoint(_displayObject->convertToNodeSpace(worldPoint)))
+        return this;
+    else
+        return nullptr;
 }
 
 NS_FGUI_END

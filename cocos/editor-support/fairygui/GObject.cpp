@@ -13,6 +13,7 @@
 #include "gears/GearIcon.h"
 #include "utils/WeakPtr.h"
 #include "utils/ByteBuffer.h"
+#include "display/FUISprite.h"
 
 NS_FGUI_BEGIN
 USING_NS_CC;
@@ -51,7 +52,7 @@ GObject::GObject() :
     _packageItem(nullptr),
     _data(nullptr),
     _touchDisabled(false),
-    _isAdoptiveChild(false),
+    _alignToBL(false),
     _weakPtrRef(0),
 	_tag(0)
 {
@@ -648,6 +649,27 @@ bool GObject::onStage() const
     return _displayObject->getScene() != nullptr;
 }
 
+GObject* GObject::findParent() const
+{
+    if (_parent != nullptr)
+        return _parent;
+
+    //可能有些不直接在children里，但node挂着的
+    Node* pn = _displayObject->getParent();
+    if (pn == nullptr)
+        return nullptr;
+
+    while (pn != nullptr) {
+        FUIContainer* fc = dynamic_cast<FUIContainer*>(pn);
+        if (fc != nullptr && fc->gOwner)
+            return fc->gOwner;
+
+        pn = pn->getParent();
+    }
+
+    return nullptr;
+}
+
 GRoot* GObject::getRoot() const
 {
     GObject* p = (GObject*)this;
@@ -712,7 +734,7 @@ void GObject::handlePositionChanged()
             pt.x += _size.width * _pivot.x;
             pt.y -= _size.height * _pivot.y;
         }
-        if (_isAdoptiveChild)
+        if (_alignToBL)
         {
             if (_displayObject->getParent())
                 pt.y += _displayObject->getParent()->getContentSize().height;
