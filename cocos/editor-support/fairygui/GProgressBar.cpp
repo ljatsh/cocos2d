@@ -99,15 +99,24 @@ void GProgressBar::update(double newValue)
             break;
 
         case ProgressTitleType::VALUE_MAX:
-            oss << round(newValue) << "/" << round(_max);
+            if (ValueFormatter != nullptr)
+                oss << ValueFormatter(newValue) << "/" << ValueFormatter(_max);
+            else
+                oss << round(newValue) << "/" << round(_max);
             break;
 
         case ProgressTitleType::VALUE:
-            oss << newValue;
+            if (ValueFormatter != nullptr)
+                oss << ValueFormatter(newValue);
+            else
+                oss << newValue;
             break;
 
         case ProgressTitleType::MAX:
-            oss << _max;
+            if (ValueFormatter != nullptr)
+                oss << ValueFormatter(_max);
+            else
+                oss << _max;
             break;
         }
         _titleObject->setText(oss.str());

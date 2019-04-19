@@ -27,6 +27,8 @@ public:
     void tweenValue(double value, float duration);
     void setValueDuringTween(double value);
 
+    std::function<std::string(double)> ValueFormatter;
+
 protected:
     virtual void handleSizeChanged() override;
     virtual void constructExtension(ByteBuffer* buffer) override;

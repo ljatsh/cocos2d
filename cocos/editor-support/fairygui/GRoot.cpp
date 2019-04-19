@@ -425,7 +425,11 @@ void GRoot::showTooltips(const std::string & msg)
     }
 
     _defaultTooltipWin->setText(msg);
-    showTooltipsWin(_defaultTooltipWin);
+    
+    hideTooltips();
+
+    _tooltipWin = _defaultTooltipWin;
+    CALL_LATER(GRoot, doShowTooltipsWin, 0.1f);
 }
 
 void GRoot::showTooltipsWin(GObject * tooltipWin)
@@ -433,7 +437,7 @@ void GRoot::showTooltipsWin(GObject * tooltipWin)
     hideTooltips();
 
     _tooltipWin = tooltipWin;
-    CALL_LATER(GRoot, doShowTooltipsWin, 0.1f);
+    doShowTooltipsWin();
 }
 
 void GRoot::doShowTooltipsWin()
@@ -442,22 +446,52 @@ void GRoot::doShowTooltipsWin()
         return;
 
     Vec2 pt = _inputProcessor->getRecentInput()->getPosition();
-    float xx = pt.x + 10;
-    float yy = pt.y + 20;
+    float xx = pt.x;
+    float yy = pt.y;
 
     pt = globalToLocal(Vec2(xx, yy));
     xx = pt.x;
     yy = pt.y;
 
-    if (xx + _tooltipWin->getWidth() > getWidth())
-        xx = xx - _tooltipWin->getWidth();
-    if (yy + _tooltipWin->getHeight() > getHeight())
+    if (_tooltipWin->isPivotAsAnchor())
     {
-        yy = yy - _tooltipWin->getHeight() - 1;
-        if (yy < 0)
-            yy = 0;
-    }
+        auto anchor = _tooltipWin->getPivot();
 
+        //check left
+        float check = xx - anchor.x * _tooltipWin->getWidth();
+        if (check < 0)
+            xx -= check;
+        else
+        {
+            //check right
+            check += _tooltipWin->getWidth();
+            if (check > getWidth())
+                xx -= check - getWidth();
+        }
+
+        //check up
+        check = yy - anchor.y * _tooltipWin->getHeight();
+        if (check < 0)
+            yy -= check;
+        else 
+        {
+            //check down
+            check += _tooltipWin->getHeight();
+            if (check > getHeight())
+                yy -= check - getHeight();
+        }
+    }
+    else
+    {
+        if (xx + _tooltipWin->getWidth() > getWidth())
+            xx = xx - _tooltipWin->getWidth();
+        if (yy + _tooltipWin->getHeight() > getHeight())
+        {
+            yy = yy - _tooltipWin->getHeight() - 1;
+            if (yy < 0)
+                yy = 0;
+        }
+    }
     _tooltipWin->setPosition(round(xx), round(yy));
     addChild(_tooltipWin);
 }

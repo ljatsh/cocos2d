@@ -203,9 +203,19 @@ std::string GTextField::parseTemplate(const char* text)
         attr.clear();
         repl.clear();
         pos2 = tag.find('=');
+        
+        // 过滤下空格
+        const char* pHead = tag.c_str();
+        while (*pHead != '\0' && isspace(*pHead))
+          pHead++;
+
         if (pos2 != -1)
         {
-            auto it = _templateVars->find(tag.substr(0, pos2));
+            const char* pTail = tag.c_str() + pos2 - 1;
+            while (pTail != pHead && isspace(*pTail))
+              pTail--;
+
+            auto it = _templateVars->find(std::string(pHead, pTail + 1));
             if (it != _templateVars->end())
                 out.append(it->second.asString());
             else
@@ -213,7 +223,10 @@ std::string GTextField::parseTemplate(const char* text)
         }
         else
         {
-            auto it = _templateVars->find(tag);
+            const char* pTail = pHead + tag.size() - 1;
+            while (pTail != pHead && isspace(*pTail))
+              pTail--;
+            auto it = _templateVars->find(std::string(pHead, pTail + 1));
             if (it != _templateVars->end())
                 out.append(it->second.asString());
         }

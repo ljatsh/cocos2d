@@ -1935,6 +1935,72 @@ int lua_cocos2dx_fairygui_EventContext_getGObjectData(lua_State* L)
     return 0;
 }
 
+static int lua_cocos2dx_fairygui_GProgressBar_setValueFormatter(lua_State *L)
+{
+    if (nullptr == L)
+        return 0;
+
+    int argc = 0;
+    fairygui::GProgressBar *self = nullptr;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+    if (!tolua_isusertype(L, 1, "fgui.GProgressBar", 0, &tolua_err))
+        goto tolua_lerror;
+#endif
+
+    self = static_cast<fairygui::GProgressBar *>(tolua_tousertype(L, 1, 0));
+
+#if COCOS2D_DEBUG >= 1
+    if (nullptr == self)
+    {
+        tolua_error(L, "invalid 'self' in function 'lua_cocos2dx_fairygui_GProgressBar_setValueFormatter'\n", NULL);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(L) - 1;
+
+    if (1 == argc)
+    {
+#if COCOS2D_DEBUG >= 1
+        if (!toluafix_isfunction(L, 2, "LUA_FUNCTION", 0, &tolua_err))
+        {
+            goto tolua_lerror;
+        }
+#endif
+
+        LUA_FUNCTION handler = (toluafix_ref_function(L, 2, 0));
+
+        self->ValueFormatter = [=](double value) {
+            LuaStack *stack = LuaEngine::getInstance()->getLuaStack();
+            stack->pushFloat(value);
+            std::string result;
+            stack->executeFunction(handler, 1, 1, [&](lua_State* L2, int numReturn) {
+              CCASSERT(numReturn == 1, "ValueFormatter return count error");
+              result = tolua_tostring(L2, -1, "");
+              lua_pop(L2, 1);
+            });
+            stack->clean();
+
+            return result;
+        };
+
+        ScriptHandlerMgr::getInstance()->addCustomHandler((void *)self, handler);
+
+        return 0;
+    }
+
+    luaL_error(L, "'valueFormatter' function of GProgressBar has wrong number of arguments: %d, was expecting %d\n", argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+tolua_lerror:
+    tolua_error(L, "#ferror in function 'lua_cocos2dx_fairygui_GProgressBar_setValueFormatter'.", &tolua_err);
+    return 0;
+#endif
+}
+
 static void extendUIEventDispatcher(lua_State *L)
 {
     lua_pushstring(L, "fgui.UIEventDispatcher");
@@ -2060,6 +2126,17 @@ static void extendTweener(lua_State *L)
   lua_pop(L, 1);
 }
 
+static void extendGProgressBar(lua_State *L)
+{
+  lua_pushstring(L, "fgui.GProgressBar");
+  lua_rawget(L, LUA_REGISTRYINDEX);
+  if (lua_istable(L, -1))
+  {
+      tolua_variable(L, "valueFormatter", nullptr, lua_cocos2dx_fairygui_GProgressBar_setValueFormatter);
+  }
+  lua_pop(L, 1);
+}
+
 int register_all_cocos2dx_fairygui_manual(lua_State *L)
 {
     extendUIEventDispatcher(L);
@@ -2071,6 +2148,7 @@ int register_all_cocos2dx_fairygui_manual(lua_State *L)
     extendGList(L);
     extendUIConfig(L);
     extendTweener(L);
+    extendGProgressBar(L);
 
     return 0;
 }

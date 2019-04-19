@@ -199,4 +199,10 @@
 -- @see GTween
 
 
+--------------------------------------------------------
+-- the fgui FUISprite
+-- @field FUISprite preloaded module
+-- @see FUISprite
+
+
 return nil
