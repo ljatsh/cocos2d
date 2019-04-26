@@ -1,12 +1,12 @@
 
 --------------------------------
 -- @module TMXLayer
--- @see Node
--- @see ccexp
+-- @see SpriteBatchNode
+-- @see cc
 
 --------------------------------
 --  Returns the position in points of a given tile coordinate.<br>
--- param tileCoordinate The tile Coordinate.<br>
+-- param tileCoordinate The tile coordinate.<br>
 -- return The position in points of a given tile coordinate.
 -- @function getPositionAt 
 -- @param self
@@ -14,12 +14,20 @@
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
---  Set Layer orientation, which is the same as the map orientation. <br>
--- param orientation Layer orientation, which is the same as the map orientation.
+--  Set layer orientation, which is the same as the map orientation.<br>
+-- param orientation Layer orientation,which is the same as the map orientation.
 -- @function setLayerOrientation 
 -- @param self
 -- @param #int orientation
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
+        
+--------------------------------
+--  Dealloc the map that contains the tile position from memory.<br>
+-- Unless you want to know at runtime the tiles positions, you can safely call this method.<br>
+-- If you are going to call layer->tileGIDAt() then, don't release the map.
+-- @function releaseMap 
+-- @param self
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
         
 --------------------------------
 --  Size of the layer in tiles.<br>
@@ -29,12 +37,12 @@
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
---  Set the size of the map's tile. <br>
--- param size The new size of the map's tile.
+--  Set the size of the map's tile.<br>
+-- param size The size of the map's tile.
 -- @function setMapTileSize 
 -- @param self
 -- @param #size_table size
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
         
 --------------------------------
 --  Layer orientation, which is the same as the map orientation.<br>
@@ -44,28 +52,104 @@
 -- @return int#int ret (return value: int)
         
 --------------------------------
---  Set the properties to the layer.<br>
--- param properties The properties to the layer.
+--  Set an Properties from to layer.<br>
+-- param properties It is used to set the layer Properties.
 -- @function setProperties 
 -- @param self
 -- @param #map_table properties
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
         
 --------------------------------
---  Set the tile layer name.<br>
--- param layerName The new layer name.
+--  Set the layer name.<br>
+-- param layerName The layer name.
 -- @function setLayerName 
 -- @param self
 -- @param #string layerName
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
         
 --------------------------------
---  Removes a tile at given tile coordinate.<br>
--- param tileCoordinate The tile Coordinate.
+--  Removes a tile at given tile coordinate. <br>
+-- param tileCoordinate The tile coordinate.
 -- @function removeTileAt 
 -- @param self
 -- @param #vec2_table tileCoordinate
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
+        
+--------------------------------
+--  Initializes a TMXLayer with a tileset info, a layer info and a map info.<br>
+-- param tilesetInfo An tileset info.<br>
+-- param layerInfo A layer info.<br>
+-- param mapInfo A map info.<br>
+-- return If initializes successfully, it will return true.
+-- @function initWithTilesetInfo 
+-- @param self
+-- @param #cc.TMXTilesetInfo tilesetInfo
+-- @param #cc.TMXLayerInfo layerInfo
+-- @param #cc.TMXMapInfo mapInfo
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+--  Creates the tiles. 
+-- @function setupTiles 
+-- @param self
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
+        
+--------------------------------
+-- @overload self, unsigned int, vec2_table, int         
+-- @overload self, unsigned int, vec2_table         
+-- @function setTileGID
+-- @param self
+-- @param #unsigned int gid
+-- @param #vec2_table tileCoordinate
+-- @param #int flags
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
+
+--------------------------------
+--  Size of the map's tile (could be different from the tile's size).<br>
+-- return The size of the map's tile.
+-- @function getMapTileSize 
+-- @param self
+-- @return size_table#size_table ret (return value: size_table)
+        
+--------------------------------
+--  Return the value for the specific property name.<br>
+-- param propertyName The specific property name.<br>
+-- return Return the value for the specific property name.
+-- @function getProperty 
+-- @param self
+-- @param #string propertyName
+-- @return Value#Value ret (return value: cc.Value)
+        
+--------------------------------
+--  Set size of the layer in tiles.<br>
+-- param size Size of the layer in tiles.
+-- @function setLayerSize 
+-- @param self
+-- @param #size_table size
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
+        
+--------------------------------
+--  Get the layer name. <br>
+-- return The layer name.
+-- @function getLayerName 
+-- @param self
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+--  Set tileset information for the layer.<br>
+-- param info The tileset information for the layer.<br>
+-- js NA
+-- @function setTileSet 
+-- @param self
+-- @param #cc.TMXTilesetInfo info
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
+        
+--------------------------------
+--  Tileset information for the layer. <br>
+-- return Tileset information for the layer.
+-- @function getTileSet 
+-- @param self
+-- @return TMXTilesetInfo#TMXTilesetInfo ret (return value: cc.TMXTilesetInfo)
         
 --------------------------------
 -- @overload self         
@@ -75,85 +159,13 @@
 -- @return map_table#map_table ret (return value: map_table)
 
 --------------------------------
---  Creates the tiles. 
--- @function setupTiles 
--- @param self
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
-        
---------------------------------
---  Set an sprite to the tile,with the tile coordinate and gid.<br>
--- param sprite A Sprite.<br>
--- param pos The tile coordinate.<br>
--- param gid The tile gid.
--- @function setupTileSprite 
--- @param self
--- @param #cc.Sprite sprite
--- @param #vec2_table pos
--- @param #unsigned int gid
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
-        
---------------------------------
--- @overload self, int, vec2_table, int         
--- @overload self, int, vec2_table         
--- @function setTileGID
--- @param self
--- @param #int gid
--- @param #vec2_table tileCoordinate
--- @param #int flags
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
-
---------------------------------
---  Size of the map's tile (could be different from the tile's size).<br>
--- return Size of the map's tile (could be different from the tile's size).
--- @function getMapTileSize 
--- @param self
--- @return size_table#size_table ret (return value: size_table)
-        
---------------------------------
---  Return the value for the specific property name.<br>
--- param propertyName The value for the specific property name.<br>
--- return The value for the specific property name.
--- @function getProperty 
--- @param self
--- @param #string propertyName
--- @return Value#Value ret (return value: cc.Value)
-        
---------------------------------
---  Set the size of the layer in tiles. <br>
--- param size The new size of the layer in tiles.
--- @function setLayerSize 
--- @param self
--- @param #size_table size
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
-        
---------------------------------
---  Get the tile layer name.<br>
--- return The tile layer name.
--- @function getLayerName 
--- @param self
--- @return string#string ret (return value: string)
-        
---------------------------------
---  Set the tileset information for the layer. <br>
--- param info The new tileset information for the layer.
--- @function setTileSet 
--- @param self
--- @param #cc.TMXTilesetInfo info
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
-        
---------------------------------
---  Tileset information for the layer.<br>
--- return Tileset information for the layer.
--- @function getTileSet 
--- @param self
--- @return TMXTilesetInfo#TMXTilesetInfo ret (return value: cc.TMXTilesetInfo)
-        
---------------------------------
 --  Returns the tile (Sprite) at a given a tile coordinate.<br>
 -- The returned Sprite will be already added to the TMXLayer. Don't add it again.<br>
 -- The Sprite can be treated like any other Sprite: rotated, scaled, translated, opacity, color, etc.<br>
 -- You can remove either by calling:<br>
 -- - layer->removeChild(sprite, cleanup);<br>
+-- - or layer->removeTileAt(Vec2(x,y));<br>
+-- param tileCoordinate A tile coordinate.<br>
 -- return Returns the tile (Sprite) at a given a tile coordinate.
 -- @function getTileAt 
 -- @param self
@@ -161,17 +173,32 @@
 -- @return Sprite#Sprite ret (return value: cc.Sprite)
         
 --------------------------------
---  Creates a FastTMXLayer with an tileset info, a layer info and a map info.<br>
+--  Creates a TMXLayer with an tileset info, a layer info and a map info.<br>
 -- param tilesetInfo An tileset info.<br>
 -- param layerInfo A layer info.<br>
 -- param mapInfo A map info.<br>
--- return Return an autorelease object.
+-- return An autorelease object.
 -- @function create 
 -- @param self
 -- @param #cc.TMXTilesetInfo tilesetInfo
 -- @param #cc.TMXLayerInfo layerInfo
 -- @param #cc.TMXMapInfo mapInfo
--- @return experimental::TMXLayer#experimental::TMXLayer ret (return value: cc.experimental::TMXLayer)
+-- @return TMXLayer#TMXLayer ret (return value: cc.TMXLayer)
+        
+--------------------------------
+-- 
+-- @function addChild 
+-- @param self
+-- @param #cc.Node child
+-- @param #int zOrder
+-- @param #int tag
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
+        
+--------------------------------
+-- js NA
+-- @function getDescription 
+-- @param self
+-- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
@@ -179,27 +206,12 @@
 -- @param self
 -- @param #cc.Node child
 -- @param #bool cleanup
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
-        
---------------------------------
--- 
--- @function draw 
--- @param self
--- @param #cc.Renderer renderer
--- @param #mat4_table transform
--- @param #unsigned int flags
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
-        
---------------------------------
--- 
--- @function getDescription 
--- @param self
--- @return string#string ret (return value: string)
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
         
 --------------------------------
 -- js ctor
 -- @function TMXLayer 
 -- @param self
--- @return experimental::TMXLayer#experimental::TMXLayer self (return value: cc.experimental::TMXLayer)
+-- @return TMXLayer#TMXLayer self (return value: cc.TMXLayer)
         
 return nil

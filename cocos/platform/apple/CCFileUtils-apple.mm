@@ -206,6 +206,16 @@ FileUtilsApple::FileUtilsApple() : pimpl_(new IMPL([NSBundle mainBundle])) {
 
 FileUtilsApple::~FileUtilsApple() = default;
 
+bool FileUtilsApple::init()
+{
+    NSString* fullpath = [[NSBundle mainBundle] resourcePath];
+    std::string strRet = [fullpath UTF8String];
+    strRet.append("/");
+    _defaultResRootPath = strRet;
+
+    return FileUtils::init();
+}
+
 #if CC_FILEUTILS_APPLE_ENABLE_OBJC
 void FileUtilsApple::setBundle(NSBundle* bundle) {
     pimpl_->setBundle(bundle);

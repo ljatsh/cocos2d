@@ -25,7 +25,8 @@ GComponent::GComponent() :
     _applyingController(nullptr),
     _buildingDisplayList(false),
     _maskOwner(nullptr),
-    _hitArea(nullptr)
+    _hitArea(nullptr),
+    _order_destroyed(false)
 {
 }
 
@@ -145,6 +146,7 @@ void GComponent::removeChildAt(int index)
         _container->removeChild(child->_displayObject, false);
         if (_childrenRenderOrder == ChildrenRenderOrder::ARCH)
             CALL_LATER(GComponent, buildNativeDisplayList);
+        _order_destroyed = true;
     }
 
     _children.erase(index);
@@ -673,28 +675,32 @@ void GComponent::childStateChanged(GObject* child)
     {
         if (child->_displayObject->getParent() == nullptr)
         {
+            cnt = (int)_children.size();
             if (_childrenRenderOrder == ChildrenRenderOrder::ASCENT)
             {
                 int index = (int)_children.getIndex(child);
                 _container->addChild(child->_displayObject, index);
-                size_t cnt = _children.size();
-                for (size_t i = index + 1; i < cnt; i++)
+                int from = _order_destroyed ? 0 : (index + 1);
+                for (size_t i = from; i < cnt; i++)
                 {
                     child = _children.at(i);
                     if (child->_displayObject->getParent() != nullptr)
                         child->_displayObject->setLocalZOrder((int)i);
                 }
+                _order_destroyed = false;
             }
             else if (_childrenRenderOrder == ChildrenRenderOrder::DESCENT)
             {
                 ssize_t index = _children.getIndex(child);
                 _container->addChild(child->_displayObject, (int)(cnt - 1 - index));
-                for (ssize_t i = 0; i < index; i++)
+                ssize_t to = _order_destroyed ? cnt : index + 1;
+                for (ssize_t i = 0; i < to; i++)
                 {
                     child = _children.at(i);
                     if (child->_displayObject->getParent() != nullptr)
                         child->_displayObject->setLocalZOrder((int)(cnt - 1 - i));
                 }
+                _order_destroyed = false;
             }
             else
             {
@@ -711,6 +717,7 @@ void GComponent::childStateChanged(GObject* child)
             {
                 CALL_LATER(GComponent, buildNativeDisplayList);
             }
+            _order_destroyed = true;
         }
     }
 }

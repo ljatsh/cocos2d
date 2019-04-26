@@ -49,6 +49,7 @@ public:
     FileUtilsApple();
     virtual ~FileUtilsApple();
     /* override functions */
+    bool init() override;
     virtual std::string getWritablePath() const override;
     virtual std::string getFullPathForFilenameWithinDirectory(const std::string& directory, const std::string& filename) const override;
 

@@ -43,6 +43,7 @@ THE SOFTWARE.
 #include "base/ccUTF8.h"
 #include "base/CCConfiguration.h"
 #include "platform/CCPlatformMacros.h"
+#include "platform/CCFileUtils.h"
 #include "base/CCDirector.h"
 #include "renderer/CCGLProgram.h"
 #include "renderer/ccGLStateCache.h"
@@ -447,6 +448,9 @@ Texture2D::Texture2D()
 , _ninePatchInfo(nullptr)
 , _valid(true)
 , _alphaTexture(nullptr)
+,_idleCount(0)
+,_isReleasedByOpt(false)
+,_openGLMemory( 0 )
 {
 }
 
@@ -468,15 +472,21 @@ Texture2D::~Texture2D()
     }
 }
 
-void Texture2D::releaseGLTexture()
+void Texture2D::releaseGLTexture(bool releaseByOpt /*= false */)
 {
     if(_name)
     {
         GL::deleteTexture(_name);
     }
     _name = 0;
-}
 
+    _isReleasedByOpt = releaseByOpt;
+    if(releaseByOpt)
+    {
+      CCASSERT(!_imageFullpath.empty(), "dynamic texture cannot be released");
+      CCLOG("OPT release texture(idle %d): %s", _idleCount, _imageFullpath.c_str());
+    }
+}
 
 Texture2D::PixelFormat Texture2D::getPixelFormat() const
 {
@@ -567,8 +577,6 @@ bool Texture2D::initWithData(const void *data, ssize_t dataLen, Texture2D::Pixel
 
 bool Texture2D::initWithMipmaps(MipmapInfo* mipmaps, int mipmapsNum, PixelFormat pixelFormat, int pixelsWide, int pixelsHigh)
 {
-
-
     //the pixelFormat must be a certain value 
     CCASSERT(pixelFormat != PixelFormat::NONE && pixelFormat != PixelFormat::AUTO, "the \"pixelFormat\" param must be a certain value!");
     CCASSERT(pixelsWide>0 && pixelsHigh>0, "Invalid size");
@@ -708,6 +716,9 @@ bool Texture2D::initWithMipmaps(MipmapInfo* mipmaps, int mipmapsNum, PixelFormat
 
     _hasPremultipliedAlpha = false;
     _hasMipmaps = mipmapsNum > 1;
+
+    _openGLMemory = _pixelsWide * _pixelsHigh * getBitsPerPixelForFormat() / 8;
+    _isReleasedByOpt = false;
 
     // shader
     setGLProgram(GLProgramCache::getInstance()->getGLProgram(GLProgram::SHADER_NAME_POSITION_TEXTURE));
@@ -1510,4 +1521,68 @@ Texture2D* Texture2D::getAlphaTexture() const
 {
     return _alphaTexture;
 }
+
+void Texture2D::assignImageFullPath(const std::string& path)
+{
+    CCASSERT(FileUtils::getInstance()->isFileExist(path), "invalid path");
+    _imageFullpath = path;
+}
+
+void Texture2D::prepareDraw()
+{
+    _idleCount = 0;
+
+    if(_isReleasedByOpt && 0 == _name)
+    {
+        Image* image = new (std::nothrow) Image();
+        if(nullptr == image)
+        {
+            CCLOG("failed to reload texture ---> alloc memory for image %s", _imageFullpath.c_str());
+            return;
+        }
+
+        bool ret = image->initWithImageFile(_imageFullpath);
+        if(!ret)
+        {
+            CCLOG("failed to reload texture ---> create image from file %s", _imageFullpath.c_str());
+            return;
+        }
+
+        initWithImage(image);
+        image->release();
+        _isReleasedByOpt = false;
+        CCLOG("OPT reload texture: %s", _imageFullpath.c_str());
+    }
+}
+
+void Texture2D::begin()
+{
+    if(!_imageFullpath.empty())
+    {
+        _idleCount++;
+    }
+}
+void Texture2D::end()
+{
+
+}
+
+int Texture2D::getIdleCnt() const
+{
+    return _idleCount;
+}
+
+int Texture2D::getOpenGLMemory() const
+{
+    return _openGLMemory;
+}
+
+bool Texture2D::canBeReleasedByOpt() const
+{
+    if (_isReleasedByOpt)
+        return false;
+
+    return _name != 0 && !_imageFullpath.empty();
+}
+
 NS_CC_END

@@ -78,7 +78,7 @@ THE SOFTWARE.
  Default: 0,0 (bottom-left corner)
  */
 #ifndef CC_DIRECTOR_STATS_POSITION
-#define CC_DIRECTOR_STATS_POSITION Director::getInstance()->getVisibleOrigin()
+#define CC_DIRECTOR_STATS_POSITION Director::getInstance()->getSafeAreaRect().origin + Vec2(0, Director::getInstance()->getSafeAreaRect().size.height)
 #endif // CC_DIRECTOR_STATS_POSITION
 
 using namespace std;
@@ -297,6 +297,8 @@ void Director::drawScene()
 #if (CC_USE_PHYSICS || (CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION) || CC_USE_NAVMESH)
         _runningScene->stepPhysicsAndNavigation(_deltaTime);
 #endif
+        _textureCache->begin();
+
         //clear draw stats
         _renderer->clearDrawStats();
         
@@ -305,6 +307,8 @@ void Director::drawScene()
             _openGLView->renderScene(_runningScene, _renderer);
         
         _eventDispatcher->dispatchEvent(_eventAfterVisit);
+
+         _textureCache->end();
     }
 
     // draw the notifications node
@@ -1398,9 +1402,9 @@ void Director::createStatsLabel()
     Texture2D::setDefaultAlphaPixelFormat(currentFormat);
 
     const int height_spacing = 22 / CC_CONTENT_SCALE_FACTOR();
-    _drawnVerticesLabel->setPosition(Vec2(0, height_spacing*2) + CC_DIRECTOR_STATS_POSITION);
-    _drawnBatchesLabel->setPosition(Vec2(0, height_spacing*1) + CC_DIRECTOR_STATS_POSITION);
-    _FPSLabel->setPosition(Vec2(0, height_spacing*0)+CC_DIRECTOR_STATS_POSITION);
+    _drawnVerticesLabel->setPosition(Vec2(0, -height_spacing*1) + CC_DIRECTOR_STATS_POSITION);
+    _drawnBatchesLabel->setPosition(Vec2(0, -height_spacing*2) + CC_DIRECTOR_STATS_POSITION);
+    _FPSLabel->setPosition(Vec2(0, -height_spacing*3)+CC_DIRECTOR_STATS_POSITION);
 }
 
 #endif // #if !CC_STRIP_FPS

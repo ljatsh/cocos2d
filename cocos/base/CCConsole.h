@@ -31,10 +31,10 @@
 #include <BaseTsd.h>
 #include <WinSock2.h>
 
-#ifndef __SSIZE_T
-#define __SSIZE_T
+#ifndef _SSIZE_T_
+#define _SSIZE_T_
 typedef SSIZE_T ssize_t;
-#endif // __SSIZE_T
+#endif // _SSIZE_T_
 
 #else
 #include <sys/select.h>

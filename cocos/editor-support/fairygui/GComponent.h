@@ -129,6 +129,7 @@ protected:
     bool _trackBounds;
     GObject* _maskOwner;
     IHitTest* _hitArea;
+    bool _order_destroyed;
 
 private:
     int getInsertPosForSortingChild(GObject * target);

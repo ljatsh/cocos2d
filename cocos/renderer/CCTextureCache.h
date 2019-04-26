@@ -219,7 +219,12 @@ public:
     */
     void renameTextureWithKey(const std::string& srcName, const std::string& dstName);
 
-
+    void begin();
+    void end();
+    void enableOpt(bool);
+    void setMemoryThreshold(unsigned int);
+    void setIdleThreshold(int);
+    unsigned int updateMemoryThreshold(unsigned int);
 private:
     void addImageAsyncCallBack(float dt);
     void loadImage();
@@ -244,6 +249,10 @@ protected:
     int _asyncRefCount;
 
     std::unordered_map<std::string, Texture2D*> _textures;
+
+    bool _enableOpt;
+    unsigned int _openGLMemoryThreshold;
+    int  _idleThreshold;
 
     static std::string s_etc1AlphaFileSuffix;
 };

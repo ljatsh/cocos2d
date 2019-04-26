@@ -190,6 +190,7 @@ void DBCCSprite::draw(cocos2d::Renderer* renderer, const cocos2d::Mat4& transfor
     if (_insideBounds)
 #endif
     {
+        _texture->prepareDraw();
         _trianglesCommand.init(_globalZOrder, _texture->getName(), getGLProgramState(), _blendFunc, _polyInfo.triangles, transform, flags);
         renderer->addCommand(&_trianglesCommand);
 

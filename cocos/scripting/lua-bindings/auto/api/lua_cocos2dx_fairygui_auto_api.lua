@@ -62,6 +62,12 @@
 
 
 --------------------------------------------------------
+-- the fgui GBasicTextField
+-- @field GBasicTextField preloaded module
+-- @see GBasicTextField
+
+
+--------------------------------------------------------
 -- the fgui GRichTextField
 -- @field GRichTextField preloaded module
 -- @see GRichTextField

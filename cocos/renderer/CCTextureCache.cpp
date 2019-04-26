@@ -71,6 +71,9 @@ TextureCache::TextureCache()
 : _loadingThread(nullptr)
 , _needQuit(false)
 , _asyncRefCount(0)
+, _enableOpt(false)
+, _openGLMemoryThreshold(0)
+, _idleThreshold(0)
 {
 }
 
@@ -114,6 +117,7 @@ public:
     {}
 
     std::string filename;
+    std::string filenameAlpha;
     std::function<void(Texture2D*)> callback;
     std::string callbackKey;
     Image image;
@@ -199,7 +203,7 @@ void TextureCache::addImageAsync(const std::string &path, const std::function<vo
     if (it != _textures.end())
         texture = it->second;
 
-    if (texture != nullptr)
+    if (texture != nullptr && !texture->isReleasedByOpt())
     {
         if (callback) callback(texture);
         return;
@@ -300,7 +304,10 @@ void TextureCache::loadImage()
         { // check whether alpha texture exists & load it
             auto alphaFile = asyncStruct->filename + s_etc1AlphaFileSuffix;
             if (FileUtils::getInstance()->isFileExist(alphaFile))
+            {
+                asyncStruct->filenameAlpha = alphaFile;
                 asyncStruct->imageAlpha.initWithImageFileThreadSafe(alphaFile);
+            }
         }
         // push the asyncStruct to response queue
         _responseMutex.lock();
@@ -338,7 +345,7 @@ void TextureCache::addImageAsyncCallBack(float /*dt*/)
 
         // check the image has been convert to texture or not
         auto it = _textures.find(asyncStruct->filename);
-        if (it != _textures.end())
+        if (it != _textures.end() && !it->second->isReleasedByOpt())
         {
             texture = it->second;
         }
@@ -349,7 +356,19 @@ void TextureCache::addImageAsyncCallBack(float /*dt*/)
             {
                 Image* image = &(asyncStruct->image);
                 // generate texture in render thread
-                texture = new (std::nothrow) Texture2D();
+                if (it == _textures.end())
+                {
+                    texture = new (std::nothrow) Texture2D();
+                    texture->assignImageFullPath(asyncStruct->filename);
+
+                    // cache the texture. retain it, since it is added in the map
+                    _textures.emplace(asyncStruct->filename, texture);
+                    texture->retain();
+
+                    texture->autorelease();
+                }
+                else
+                    texture = it->second;
 
                 texture->initWithImage(image, asyncStruct->pixelFormat);
                 //parse 9-patch info
@@ -358,18 +377,20 @@ void TextureCache::addImageAsyncCallBack(float /*dt*/)
                 // cache the texture file name
                 VolatileTextureMgr::addImageTexture(texture, asyncStruct->filename);
 #endif
-                // cache the texture. retain it, since it is added in the map
-                _textures.emplace(asyncStruct->filename, texture);
-                texture->retain();
-
-                texture->autorelease();
                 // ETC1 ALPHA supports.
                 if (asyncStruct->imageAlpha.getFileType() == Image::Format::ETC) {
-                    auto alphaTexture = new(std::nothrow) Texture2D();
-                    if(alphaTexture != nullptr && alphaTexture->initWithImage(&asyncStruct->imageAlpha, asyncStruct->pixelFormat)) {
-                        texture->setAlphaTexture(alphaTexture);
+                    Texture2D *alphaTexture = getTextureForKey(asyncStruct->filenameAlpha);
+                    if (alphaTexture == nullptr)
+                    {
+                        alphaTexture = new(std::nothrow) Texture2D();
+                        if(alphaTexture != nullptr && alphaTexture->initWithImage(&asyncStruct->imageAlpha, asyncStruct->pixelFormat)) {
+                            texture->setAlphaTexture(alphaTexture);
+                            alphaTexture->assignImageFullPath(asyncStruct->filenameAlpha);
+                        }
+                        CC_SAFE_RELEASE(alphaTexture);
                     }
-                    CC_SAFE_RELEASE(alphaTexture);
+                    else
+                        texture->setAlphaTexture(alphaTexture);
                 }
             }
             else {
@@ -433,19 +454,26 @@ Texture2D * TextureCache::addImage(const std::string &path)
 #endif
                 // texture already retained, no need to re-retain it
                 _textures.emplace(fullpath, texture);
+                texture->assignImageFullPath(fullpath);
 
                 //-- ANDROID ETC1 ALPHA SUPPORTS.
                 std::string alphaFullPath = path + s_etc1AlphaFileSuffix;
                 if (image->getFileType() == Image::Format::ETC && !s_etc1AlphaFileSuffix.empty() && FileUtils::getInstance()->isFileExist(alphaFullPath))
                 {
-                    Image alphaImage;
-                    if (alphaImage.initWithImageFile(alphaFullPath))
+                    Texture2D *pAlphaTexture = getTextureForKey(alphaFullPath);
+                    if (pAlphaTexture == nullptr)
                     {
-                        Texture2D *pAlphaTexture = new(std::nothrow) Texture2D;
-                        if(pAlphaTexture != nullptr && pAlphaTexture->initWithImage(&alphaImage)) {
-                            texture->setAlphaTexture(pAlphaTexture);
+                        Image alphaImage;
+                        if (alphaImage.initWithImageFile(alphaFullPath))
+                        {
+                            Texture2D *pAlphaTexture = new(std::nothrow) Texture2D;
+                            if(pAlphaTexture != nullptr && pAlphaTexture->initWithImage(&alphaImage)) {
+                                texture->setAlphaTexture(pAlphaTexture);
+                                _textures.emplace(alphaFullPath, pAlphaTexture);
+                                pAlphaTexture->assignImageFullPath(alphaFullPath);
+                            }
+                            CC_SAFE_RELEASE(pAlphaTexture);
                         }
-                        CC_SAFE_RELEASE(pAlphaTexture);
                     }
                 }
 
@@ -675,6 +703,9 @@ std::string TextureCache::getCachedTextureInfo() const
     unsigned int count = 0;
     unsigned int totalBytes = 0;
 
+    unsigned int optCount = 0;
+    unsigned int optBytes = 0;
+
     for (auto& texture : _textures) {
 
         memset(buftmp, 0, sizeof(buftmp));
@@ -683,22 +714,29 @@ std::string TextureCache::getCachedTextureInfo() const
         Texture2D* tex = texture.second;
         unsigned int bpp = tex->getBitsPerPixelForFormat();
         // Each texture takes up width * height * bytesPerPixel bytes.
-        auto bytes = tex->getPixelsWide() * tex->getPixelsHigh() * bpp / 8;
+        auto bytes = tex->getOpenGLMemory();
         totalBytes += bytes;
         count++;
-        snprintf(buftmp, sizeof(buftmp) - 1, "\"%s\" rc=%lu id=%lu %lu x %lu @ %ld bpp => %lu KB\n",
+        if (tex->isReleasedByOpt())
+        {
+            optCount++;
+            optBytes += bytes;
+        }
+        snprintf(buftmp, sizeof(buftmp) - 1, "\"%s\" rc=%lu id=%lu %lu x %lu @ %ld bpp => %lu KB(opt:%s)\n",
             texture.first.c_str(),
             (long)tex->getReferenceCount(),
             (long)tex->getName(),
             (long)tex->getPixelsWide(),
             (long)tex->getPixelsHigh(),
             (long)bpp,
-            (long)bytes / 1024);
+            (long)bytes / 1024,
+            tex->isReleasedByOpt() ? "yes" : "no");
 
         buffer += buftmp;
     }
 
-    snprintf(buftmp, sizeof(buftmp) - 1, "TextureCache dumpDebugInfo: %ld textures, for %lu KB (%.2f MB)\n", (long)count, (long)totalBytes / 1024, totalBytes / (1024.0f*1024.0f));
+    snprintf(buftmp, sizeof(buftmp) - 1, "TextureCache dumpDebugInfo: %ld textures, for %lu KB (%.2f MB), optimized %.2f MB(%.2f)\n", (long)count, (long)totalBytes / 1024, totalBytes / (1024.0f*1024.0f),
+                                          optBytes / (1024.0f * 1024.0f), optBytes * 1.0f / totalBytes);
     buffer += buftmp;
 
     return buffer;
@@ -731,6 +769,81 @@ void TextureCache::renameTextureWithKey(const std::string& srcName, const std::s
             CC_SAFE_DELETE(image);
         }
     }
+}
+
+void TextureCache::begin()
+{
+    if(!_enableOpt)
+        return;
+
+    for( auto it = _textures.begin(); it != _textures.end(); ++it ) {
+        Texture2D* tex = it->second;
+        tex->begin();
+    }
+}
+
+void TextureCache::end()
+{
+    if(!_enableOpt)
+        return;
+
+    int idleCnt = 0;
+    Texture2D* waitReleaseTexture = nullptr;
+    unsigned int totalMemory = 0;
+    for( auto it = _textures.begin(); it != _textures.end(); ++it ) {
+        Texture2D* tex = it->second;
+        tex->end();
+
+        int cnt = tex->getIdleCnt();
+        if(cnt > idleCnt && tex->canBeReleasedByOpt())
+        {
+            idleCnt = cnt;
+            waitReleaseTexture = tex;
+        }
+        if(0 != tex->getName())
+        {
+            totalMemory = totalMemory + tex->getOpenGLMemory();
+        }
+    }
+
+    if(totalMemory >= _openGLMemoryThreshold && idleCnt >= _idleThreshold && waitReleaseTexture != nullptr)
+    {
+        waitReleaseTexture->releaseGLTexture(true);
+    }
+}
+
+void TextureCache::enableOpt(bool b)
+{
+    _enableOpt = b;
+}
+
+void TextureCache::setMemoryThreshold(unsigned int mt)
+{
+    _openGLMemoryThreshold = mt;
+}
+
+void TextureCache::setIdleThreshold(int it)
+{
+    _idleThreshold = it;
+}
+
+unsigned int TextureCache::updateMemoryThreshold(unsigned int releasedBytes)
+{
+    unsigned int optBytes = 0;
+
+    for (auto& texture : _textures) {
+        Texture2D* tex = texture.second;
+        auto bytes = tex->getOpenGLMemory();
+        if (!tex->isReleasedByOpt())
+        {
+            optBytes += bytes;
+        }
+    }
+
+    if (optBytes > releasedBytes)
+        _openGLMemoryThreshold = optBytes - releasedBytes;
+
+    return _openGLMemoryThreshold;
 }
 
 #if CC_ENABLE_CACHE_TEXTURE_DATA

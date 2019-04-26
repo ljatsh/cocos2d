@@ -3054,6 +3054,1279 @@ int lua_register_cocos2dx_dragonbones_Animation(lua_State* tolua_S)
     return 1;
 }
 
+int lua_cocos2dx_dragonbones_BaseFactory_replaceSkin(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSkin'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        dragonBones::Armature* arg0;
+        dragonBones::SkinData* arg1;
+
+        ok &= luaval_to_object<dragonBones::Armature>(tolua_S, 2, "db.Armature",&arg0, "db.BaseFactory:replaceSkin");
+
+        ok &= luaval_to_object<dragonBones::SkinData>(tolua_S, 3, "db.SkinData",&arg1, "db.BaseFactory:replaceSkin");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSkin'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->replaceSkin(arg0, arg1);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    if (argc == 3) 
+    {
+        dragonBones::Armature* arg0;
+        dragonBones::SkinData* arg1;
+        bool arg2;
+
+        ok &= luaval_to_object<dragonBones::Armature>(tolua_S, 2, "db.Armature",&arg0, "db.BaseFactory:replaceSkin");
+
+        ok &= luaval_to_object<dragonBones::SkinData>(tolua_S, 3, "db.SkinData",&arg1, "db.BaseFactory:replaceSkin");
+
+        ok &= luaval_to_boolean(tolua_S, 4,&arg2, "db.BaseFactory:replaceSkin");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSkin'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->replaceSkin(arg0, arg1, arg2);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    if (argc == 4) 
+    {
+        dragonBones::Armature* arg0;
+        dragonBones::SkinData* arg1;
+        bool arg2;
+        const std::vector<std::string>* arg3;
+
+        ok &= luaval_to_object<dragonBones::Armature>(tolua_S, 2, "db.Armature",&arg0, "db.BaseFactory:replaceSkin");
+
+        ok &= luaval_to_object<dragonBones::SkinData>(tolua_S, 3, "db.SkinData",&arg1, "db.BaseFactory:replaceSkin");
+
+        ok &= luaval_to_boolean(tolua_S, 4,&arg2, "db.BaseFactory:replaceSkin");
+
+        ok &= luaval_to_object<const std::vector<std::string>>(tolua_S, 5, "std::vector<std::string>*",&arg3, "db.BaseFactory:replaceSkin");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSkin'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->replaceSkin(arg0, arg1, arg2, arg3);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:replaceSkin",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSkin'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_replaceAnimation(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceAnimation'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        dragonBones::Armature* arg0;
+        dragonBones::ArmatureData* arg1;
+
+        ok &= luaval_to_object<dragonBones::Armature>(tolua_S, 2, "db.Armature",&arg0, "db.BaseFactory:replaceAnimation");
+
+        ok &= luaval_to_object<dragonBones::ArmatureData>(tolua_S, 3, "db.ArmatureData",&arg1, "db.BaseFactory:replaceAnimation");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceAnimation'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->replaceAnimation(arg0, arg1);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    if (argc == 3) 
+    {
+        dragonBones::Armature* arg0;
+        dragonBones::ArmatureData* arg1;
+        bool arg2;
+
+        ok &= luaval_to_object<dragonBones::Armature>(tolua_S, 2, "db.Armature",&arg0, "db.BaseFactory:replaceAnimation");
+
+        ok &= luaval_to_object<dragonBones::ArmatureData>(tolua_S, 3, "db.ArmatureData",&arg1, "db.BaseFactory:replaceAnimation");
+
+        ok &= luaval_to_boolean(tolua_S, 4,&arg2, "db.BaseFactory:replaceAnimation");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceAnimation'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->replaceAnimation(arg0, arg1, arg2);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:replaceAnimation",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceAnimation'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplayList(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplayList'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 4) 
+    {
+        std::string arg0;
+        std::string arg1;
+        std::string arg2;
+        dragonBones::Slot* arg3;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:replaceSlotDisplayList");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:replaceSlotDisplayList");
+
+        ok &= luaval_to_std_string(tolua_S, 4,&arg2, "db.BaseFactory:replaceSlotDisplayList");
+
+        ok &= luaval_to_object<dragonBones::Slot>(tolua_S, 5, "db.Slot",&arg3, "db.BaseFactory:replaceSlotDisplayList");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplayList'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->replaceSlotDisplayList(arg0, arg1, arg2, arg3);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:replaceSlotDisplayList",argc, 4);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplayList'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_getClock(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_getClock'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_getClock'", nullptr);
+            return 0;
+        }
+        dragonBones::WorldClock* ret = cobj->getClock();
+        object_to_luaval<dragonBones::WorldClock>(tolua_S, "db.WorldClock",(dragonBones::WorldClock*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:getClock",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_getClock'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_removeDragonBonesData(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_removeDragonBonesData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:removeDragonBonesData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_removeDragonBonesData'", nullptr);
+            return 0;
+        }
+        cobj->removeDragonBonesData(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    if (argc == 2) 
+    {
+        std::string arg0;
+        bool arg1;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:removeDragonBonesData");
+
+        ok &= luaval_to_boolean(tolua_S, 3,&arg1, "db.BaseFactory:removeDragonBonesData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_removeDragonBonesData'", nullptr);
+            return 0;
+        }
+        cobj->removeDragonBonesData(arg0, arg1);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:removeDragonBonesData",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_removeDragonBonesData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_removeTextureAtlasData(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_removeTextureAtlasData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:removeTextureAtlasData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_removeTextureAtlasData'", nullptr);
+            return 0;
+        }
+        cobj->removeTextureAtlasData(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    if (argc == 2) 
+    {
+        std::string arg0;
+        bool arg1;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:removeTextureAtlasData");
+
+        ok &= luaval_to_boolean(tolua_S, 3,&arg1, "db.BaseFactory:removeTextureAtlasData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_removeTextureAtlasData'", nullptr);
+            return 0;
+        }
+        cobj->removeTextureAtlasData(arg0, arg1);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:removeTextureAtlasData",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_removeTextureAtlasData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_parseDragonBonesData(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_parseDragonBonesData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        const char* arg0;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "db.BaseFactory:parseDragonBonesData"); arg0 = arg0_tmp.c_str();
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_parseDragonBonesData'", nullptr);
+            return 0;
+        }
+        dragonBones::DragonBonesData* ret = cobj->parseDragonBonesData(arg0);
+        object_to_luaval<dragonBones::DragonBonesData>(tolua_S, "db.DragonBonesData",(dragonBones::DragonBonesData*)ret);
+        return 1;
+    }
+    if (argc == 2) 
+    {
+        const char* arg0;
+        std::string arg1;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "db.BaseFactory:parseDragonBonesData"); arg0 = arg0_tmp.c_str();
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:parseDragonBonesData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_parseDragonBonesData'", nullptr);
+            return 0;
+        }
+        dragonBones::DragonBonesData* ret = cobj->parseDragonBonesData(arg0, arg1);
+        object_to_luaval<dragonBones::DragonBonesData>(tolua_S, "db.DragonBonesData",(dragonBones::DragonBonesData*)ret);
+        return 1;
+    }
+    if (argc == 3) 
+    {
+        const char* arg0;
+        std::string arg1;
+        double arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "db.BaseFactory:parseDragonBonesData"); arg0 = arg0_tmp.c_str();
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:parseDragonBonesData");
+
+        ok &= luaval_to_number(tolua_S, 4,&arg2, "db.BaseFactory:parseDragonBonesData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_parseDragonBonesData'", nullptr);
+            return 0;
+        }
+        dragonBones::DragonBonesData* ret = cobj->parseDragonBonesData(arg0, arg1, arg2);
+        object_to_luaval<dragonBones::DragonBonesData>(tolua_S, "db.DragonBonesData",(dragonBones::DragonBonesData*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:parseDragonBonesData",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_parseDragonBonesData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_clear(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_clear'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_clear'", nullptr);
+            return 0;
+        }
+        cobj->clear();
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    if (argc == 1) 
+    {
+        bool arg0;
+
+        ok &= luaval_to_boolean(tolua_S, 2,&arg0, "db.BaseFactory:clear");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_clear'", nullptr);
+            return 0;
+        }
+        cobj->clear(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:clear",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_clear'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_addDragonBonesData(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_addDragonBonesData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        dragonBones::DragonBonesData* arg0;
+
+        ok &= luaval_to_object<dragonBones::DragonBonesData>(tolua_S, 2, "db.DragonBonesData",&arg0, "db.BaseFactory:addDragonBonesData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_addDragonBonesData'", nullptr);
+            return 0;
+        }
+        cobj->addDragonBonesData(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    if (argc == 2) 
+    {
+        dragonBones::DragonBonesData* arg0;
+        std::string arg1;
+
+        ok &= luaval_to_object<dragonBones::DragonBonesData>(tolua_S, 2, "db.DragonBonesData",&arg0, "db.BaseFactory:addDragonBonesData");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:addDragonBonesData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_addDragonBonesData'", nullptr);
+            return 0;
+        }
+        cobj->addDragonBonesData(arg0, arg1);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:addDragonBonesData",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_addDragonBonesData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_buildArmature(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_buildArmature'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:buildArmature");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_buildArmature'", nullptr);
+            return 0;
+        }
+        dragonBones::Armature* ret = cobj->buildArmature(arg0);
+        object_to_luaval<dragonBones::Armature>(tolua_S, "db.Armature",(dragonBones::Armature*)ret);
+        return 1;
+    }
+    if (argc == 2) 
+    {
+        std::string arg0;
+        std::string arg1;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:buildArmature");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:buildArmature");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_buildArmature'", nullptr);
+            return 0;
+        }
+        dragonBones::Armature* ret = cobj->buildArmature(arg0, arg1);
+        object_to_luaval<dragonBones::Armature>(tolua_S, "db.Armature",(dragonBones::Armature*)ret);
+        return 1;
+    }
+    if (argc == 3) 
+    {
+        std::string arg0;
+        std::string arg1;
+        std::string arg2;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:buildArmature");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:buildArmature");
+
+        ok &= luaval_to_std_string(tolua_S, 4,&arg2, "db.BaseFactory:buildArmature");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_buildArmature'", nullptr);
+            return 0;
+        }
+        dragonBones::Armature* ret = cobj->buildArmature(arg0, arg1, arg2);
+        object_to_luaval<dragonBones::Armature>(tolua_S, "db.Armature",(dragonBones::Armature*)ret);
+        return 1;
+    }
+    if (argc == 4) 
+    {
+        std::string arg0;
+        std::string arg1;
+        std::string arg2;
+        std::string arg3;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:buildArmature");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:buildArmature");
+
+        ok &= luaval_to_std_string(tolua_S, 4,&arg2, "db.BaseFactory:buildArmature");
+
+        ok &= luaval_to_std_string(tolua_S, 5,&arg3, "db.BaseFactory:buildArmature");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_buildArmature'", nullptr);
+            return 0;
+        }
+        dragonBones::Armature* ret = cobj->buildArmature(arg0, arg1, arg2, arg3);
+        object_to_luaval<dragonBones::Armature>(tolua_S, "db.Armature",(dragonBones::Armature*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:buildArmature",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_buildArmature'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_addTextureAtlasData(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_addTextureAtlasData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        dragonBones::TextureAtlasData* arg0;
+
+        ok &= luaval_to_object<dragonBones::TextureAtlasData>(tolua_S, 2, "db.TextureAtlasData",&arg0, "db.BaseFactory:addTextureAtlasData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_addTextureAtlasData'", nullptr);
+            return 0;
+        }
+        cobj->addTextureAtlasData(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    if (argc == 2) 
+    {
+        dragonBones::TextureAtlasData* arg0;
+        std::string arg1;
+
+        ok &= luaval_to_object<dragonBones::TextureAtlasData>(tolua_S, 2, "db.TextureAtlasData",&arg0, "db.BaseFactory:addTextureAtlasData");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:addTextureAtlasData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_addTextureAtlasData'", nullptr);
+            return 0;
+        }
+        cobj->addTextureAtlasData(arg0, arg1);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:addTextureAtlasData",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_addTextureAtlasData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_getArmatureData(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_getArmatureData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:getArmatureData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_getArmatureData'", nullptr);
+            return 0;
+        }
+        dragonBones::ArmatureData* ret = cobj->getArmatureData(arg0);
+        object_to_luaval<dragonBones::ArmatureData>(tolua_S, "db.ArmatureData",(dragonBones::ArmatureData*)ret);
+        return 1;
+    }
+    if (argc == 2) 
+    {
+        std::string arg0;
+        std::string arg1;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:getArmatureData");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:getArmatureData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_getArmatureData'", nullptr);
+            return 0;
+        }
+        dragonBones::ArmatureData* ret = cobj->getArmatureData(arg0, arg1);
+        object_to_luaval<dragonBones::ArmatureData>(tolua_S, "db.ArmatureData",(dragonBones::ArmatureData*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:getArmatureData",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_getArmatureData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplay(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplay'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 5) 
+    {
+        std::string arg0;
+        std::string arg1;
+        std::string arg2;
+        std::string arg3;
+        dragonBones::Slot* arg4;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_std_string(tolua_S, 4,&arg2, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_std_string(tolua_S, 5,&arg3, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_object<dragonBones::Slot>(tolua_S, 6, "db.Slot",&arg4, "db.BaseFactory:replaceSlotDisplay");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplay'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->replaceSlotDisplay(arg0, arg1, arg2, arg3, arg4);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    if (argc == 6) 
+    {
+        std::string arg0;
+        std::string arg1;
+        std::string arg2;
+        std::string arg3;
+        dragonBones::Slot* arg4;
+        int arg5;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_std_string(tolua_S, 4,&arg2, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_std_string(tolua_S, 5,&arg3, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_object<dragonBones::Slot>(tolua_S, 6, "db.Slot",&arg4, "db.BaseFactory:replaceSlotDisplay");
+
+        ok &= luaval_to_int32(tolua_S, 7,(int *)&arg5, "db.BaseFactory:replaceSlotDisplay");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplay'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->replaceSlotDisplay(arg0, arg1, arg2, arg3, arg4, arg5);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:replaceSlotDisplay",argc, 5);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplay'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_changeSkin(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_changeSkin'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        dragonBones::Armature* arg0;
+        dragonBones::SkinData* arg1;
+
+        ok &= luaval_to_object<dragonBones::Armature>(tolua_S, 2, "db.Armature",&arg0, "db.BaseFactory:changeSkin");
+
+        ok &= luaval_to_object<dragonBones::SkinData>(tolua_S, 3, "db.SkinData",&arg1, "db.BaseFactory:changeSkin");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_changeSkin'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->changeSkin(arg0, arg1);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    if (argc == 3) 
+    {
+        dragonBones::Armature* arg0;
+        dragonBones::SkinData* arg1;
+        const std::vector<std::string>* arg2;
+
+        ok &= luaval_to_object<dragonBones::Armature>(tolua_S, 2, "db.Armature",&arg0, "db.BaseFactory:changeSkin");
+
+        ok &= luaval_to_object<dragonBones::SkinData>(tolua_S, 3, "db.SkinData",&arg1, "db.BaseFactory:changeSkin");
+
+        ok &= luaval_to_object<const std::vector<std::string>>(tolua_S, 4, "std::vector<std::string>*",&arg2, "db.BaseFactory:changeSkin");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_changeSkin'", nullptr);
+            return 0;
+        }
+        bool ret = cobj->changeSkin(arg0, arg1, arg2);
+        tolua_pushboolean(tolua_S,(bool)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:changeSkin",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_changeSkin'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_replaceDisplay(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceDisplay'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        dragonBones::Slot* arg0;
+        dragonBones::DisplayData* arg1;
+        int arg2;
+
+        ok &= luaval_to_object<dragonBones::Slot>(tolua_S, 2, "db.Slot",&arg0, "db.BaseFactory:replaceDisplay");
+
+        ok &= luaval_to_object<dragonBones::DisplayData>(tolua_S, 3, "db.DisplayData",&arg1, "db.BaseFactory:replaceDisplay");
+
+        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2, "db.BaseFactory:replaceDisplay");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceDisplay'", nullptr);
+            return 0;
+        }
+        cobj->replaceDisplay(arg0, arg1, arg2);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:replaceDisplay",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_replaceDisplay'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_parseTextureAtlasData(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_parseTextureAtlasData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        const char* arg0;
+        void* arg1;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "db.BaseFactory:parseTextureAtlasData"); arg0 = arg0_tmp.c_str();
+
+        #pragma warning NO CONVERSION TO NATIVE FOR void*
+		ok = false;
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_parseTextureAtlasData'", nullptr);
+            return 0;
+        }
+        dragonBones::TextureAtlasData* ret = cobj->parseTextureAtlasData(arg0, arg1);
+        object_to_luaval<dragonBones::TextureAtlasData>(tolua_S, "db.TextureAtlasData",(dragonBones::TextureAtlasData*)ret);
+        return 1;
+    }
+    if (argc == 3) 
+    {
+        const char* arg0;
+        void* arg1;
+        std::string arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "db.BaseFactory:parseTextureAtlasData"); arg0 = arg0_tmp.c_str();
+
+        #pragma warning NO CONVERSION TO NATIVE FOR void*
+		ok = false;
+
+        ok &= luaval_to_std_string(tolua_S, 4,&arg2, "db.BaseFactory:parseTextureAtlasData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_parseTextureAtlasData'", nullptr);
+            return 0;
+        }
+        dragonBones::TextureAtlasData* ret = cobj->parseTextureAtlasData(arg0, arg1, arg2);
+        object_to_luaval<dragonBones::TextureAtlasData>(tolua_S, "db.TextureAtlasData",(dragonBones::TextureAtlasData*)ret);
+        return 1;
+    }
+    if (argc == 4) 
+    {
+        const char* arg0;
+        void* arg1;
+        std::string arg2;
+        double arg3;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "db.BaseFactory:parseTextureAtlasData"); arg0 = arg0_tmp.c_str();
+
+        #pragma warning NO CONVERSION TO NATIVE FOR void*
+		ok = false;
+
+        ok &= luaval_to_std_string(tolua_S, 4,&arg2, "db.BaseFactory:parseTextureAtlasData");
+
+        ok &= luaval_to_number(tolua_S, 5,&arg3, "db.BaseFactory:parseTextureAtlasData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_parseTextureAtlasData'", nullptr);
+            return 0;
+        }
+        dragonBones::TextureAtlasData* ret = cobj->parseTextureAtlasData(arg0, arg1, arg2, arg3);
+        object_to_luaval<dragonBones::TextureAtlasData>(tolua_S, "db.TextureAtlasData",(dragonBones::TextureAtlasData*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:parseTextureAtlasData",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_parseTextureAtlasData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cocos2dx_dragonbones_BaseFactory_getDragonBonesData(lua_State* tolua_S)
+{
+    int argc = 0;
+    dragonBones::BaseFactory* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"db.BaseFactory",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (dragonBones::BaseFactory*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_dragonbones_BaseFactory_getDragonBonesData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "db.BaseFactory:getDragonBonesData");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_dragonbones_BaseFactory_getDragonBonesData'", nullptr);
+            return 0;
+        }
+        dragonBones::DragonBonesData* ret = cobj->getDragonBonesData(arg0);
+        object_to_luaval<dragonBones::DragonBonesData>(tolua_S, "db.DragonBonesData",(dragonBones::DragonBonesData*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "db.BaseFactory:getDragonBonesData",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_dragonbones_BaseFactory_getDragonBonesData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+static int lua_cocos2dx_dragonbones_BaseFactory_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (BaseFactory)");
+    return 0;
+}
+
+int lua_register_cocos2dx_dragonbones_BaseFactory(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"db.BaseFactory");
+    tolua_cclass(tolua_S,"BaseFactory","db.BaseFactory","",nullptr);
+
+    tolua_beginmodule(tolua_S,"BaseFactory");
+        tolua_function(tolua_S,"replaceSkin",lua_cocos2dx_dragonbones_BaseFactory_replaceSkin);
+        tolua_function(tolua_S,"replaceAnimation",lua_cocos2dx_dragonbones_BaseFactory_replaceAnimation);
+        tolua_function(tolua_S,"replaceSlotDisplayList",lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplayList);
+        tolua_function(tolua_S,"getClock",lua_cocos2dx_dragonbones_BaseFactory_getClock);
+        tolua_function(tolua_S,"removeDragonBonesData",lua_cocos2dx_dragonbones_BaseFactory_removeDragonBonesData);
+        tolua_function(tolua_S,"removeTextureAtlasData",lua_cocos2dx_dragonbones_BaseFactory_removeTextureAtlasData);
+        tolua_function(tolua_S,"parseDragonBonesData",lua_cocos2dx_dragonbones_BaseFactory_parseDragonBonesData);
+        tolua_function(tolua_S,"clear",lua_cocos2dx_dragonbones_BaseFactory_clear);
+        tolua_function(tolua_S,"addDragonBonesData",lua_cocos2dx_dragonbones_BaseFactory_addDragonBonesData);
+        tolua_function(tolua_S,"buildArmature",lua_cocos2dx_dragonbones_BaseFactory_buildArmature);
+        tolua_function(tolua_S,"addTextureAtlasData",lua_cocos2dx_dragonbones_BaseFactory_addTextureAtlasData);
+        tolua_function(tolua_S,"getArmatureData",lua_cocos2dx_dragonbones_BaseFactory_getArmatureData);
+        tolua_function(tolua_S,"replaceSlotDisplay",lua_cocos2dx_dragonbones_BaseFactory_replaceSlotDisplay);
+        tolua_function(tolua_S,"changeSkin",lua_cocos2dx_dragonbones_BaseFactory_changeSkin);
+        tolua_function(tolua_S,"replaceDisplay",lua_cocos2dx_dragonbones_BaseFactory_replaceDisplay);
+        tolua_function(tolua_S,"parseTextureAtlasData",lua_cocos2dx_dragonbones_BaseFactory_parseTextureAtlasData);
+        tolua_function(tolua_S,"getDragonBonesData",lua_cocos2dx_dragonbones_BaseFactory_getDragonBonesData);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(dragonBones::BaseFactory).name();
+    g_luaType[typeName] = "db.BaseFactory";
+    g_typeCast["BaseFactory"] = "db.BaseFactory";
+    return 1;
+}
+
 int lua_cocos2dx_dragonbones_CCTextureAtlasData_setRenderTexture(lua_State* tolua_S)
 {
     int argc = 0;
@@ -4504,6 +5777,7 @@ TOLUA_API int register_all_cocos2dx_dragonbones(lua_State* tolua_S)
 	tolua_beginmodule(tolua_S,"db");
 
 	lua_register_cocos2dx_dragonbones_CCArmatureDisplay(tolua_S);
+	lua_register_cocos2dx_dragonbones_BaseFactory(tolua_S);
 	lua_register_cocos2dx_dragonbones_IAnimatable(tolua_S);
 	lua_register_cocos2dx_dragonbones_AnimationState(tolua_S);
 	lua_register_cocos2dx_dragonbones_Animation(tolua_S);

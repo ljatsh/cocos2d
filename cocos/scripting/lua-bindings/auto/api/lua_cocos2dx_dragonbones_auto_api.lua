@@ -26,6 +26,12 @@
 
 
 --------------------------------------------------------
+-- the db BaseFactory
+-- @field BaseFactory preloaded module
+-- @see BaseFactory
+
+
+--------------------------------------------------------
 -- the db CCTextureAtlasData
 -- @field CCTextureAtlasData preloaded module
 -- @see CCTextureAtlasData

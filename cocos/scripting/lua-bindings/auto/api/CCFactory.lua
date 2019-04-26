@@ -118,6 +118,12 @@
 -- @return CCFactory#CCFactory ret (return value: db.CCFactory)
         
 --------------------------------
+-- 
+-- @function purgeFactory 
+-- @param self
+-- @return CCFactory#CCFactory self (return value: db.CCFactory)
+        
+--------------------------------
 -- Deprecated, please refer to {@link #clock}.<br>
 -- deprecated<br>
 -- language en_US<br>

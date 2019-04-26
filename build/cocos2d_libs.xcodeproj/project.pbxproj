@@ -5175,7 +5175,6 @@
 		069C1E3A214CA775000CE1BE /* GRoot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GRoot.cpp; sourceTree = "<group>"; };
 		069C1E3B214CA775000CE1BE /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
 		069C1E3C214CA775000CE1BE /* RelationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelationItem.h; sourceTree = "<group>"; };
-		069C1E3D214CA775000CE1BE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		069C1E3E214CA775000CE1BE /* UIPackage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIPackage.cpp; sourceTree = "<group>"; };
 		069C1E3F214CA775000CE1BE /* GScrollBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GScrollBar.h; sourceTree = "<group>"; };
 		069C1E40214CA775000CE1BE /* PopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupMenu.h; sourceTree = "<group>"; };
@@ -5217,7 +5216,6 @@
 		069C1E67214CA775000CE1BE /* PlayTransitionAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayTransitionAction.h; sourceTree = "<group>"; };
 		069C1E68214CA775000CE1BE /* GObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GObject.cpp; sourceTree = "<group>"; };
 		069C1E69214CA775000CE1BE /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
-		069C1E6A214CA775000CE1BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		069C1E6B214CA775000CE1BE /* FairyGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FairyGUI.h; sourceTree = "<group>"; };
 		069C1E6C214CA775000CE1BE /* GLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLabel.h; sourceTree = "<group>"; };
 		069C1E6D214CA775000CE1BE /* GComboBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GComboBox.cpp; sourceTree = "<group>"; };
@@ -7149,7 +7147,6 @@
 				069C1E3A214CA775000CE1BE /* GRoot.cpp */,
 				069C1E3B214CA775000CE1BE /* Android.mk */,
 				069C1E3C214CA775000CE1BE /* RelationItem.h */,
-				069C1E3D214CA775000CE1BE /* LICENSE */,
 				069C1E3E214CA775000CE1BE /* UIPackage.cpp */,
 				069C1E3F214CA775000CE1BE /* GScrollBar.h */,
 				069C1E40214CA775000CE1BE /* PopupMenu.h */,
@@ -7176,7 +7173,6 @@
 				069C1E61214CA775000CE1BE /* controller_action */,
 				069C1E68214CA775000CE1BE /* GObject.cpp */,
 				069C1E69214CA775000CE1BE /* Controller.h */,
-				069C1E6A214CA775000CE1BE /* README.md */,
 				069C1E6B214CA775000CE1BE /* FairyGUI.h */,
 				069C1E6C214CA775000CE1BE /* GLabel.h */,
 				069C1E6D214CA775000CE1BE /* GComboBox.cpp */,

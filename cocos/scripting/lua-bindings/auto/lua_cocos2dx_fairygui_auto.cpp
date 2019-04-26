@@ -9932,53 +9932,6 @@ int lua_cocos2dx_fairygui_GTextField_flushVars(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cocos2dx_fairygui_GTextField_applyTextFormat(lua_State* tolua_S)
-{
-    int argc = 0;
-    fairygui::GTextField* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"fgui.GTextField",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (fairygui::GTextField*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GTextField_applyTextFormat'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 0) 
-    {
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GTextField_applyTextFormat'", nullptr);
-            return 0;
-        }
-        cobj->applyTextFormat();
-        lua_settop(tolua_S, 1);
-        return 1;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTextField:applyTextFormat",argc, 0);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GTextField_applyTextFormat'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cocos2dx_fairygui_GTextField_setOutlineColor(lua_State* tolua_S)
 {
     int argc = 0;
@@ -10025,53 +9978,6 @@ int lua_cocos2dx_fairygui_GTextField_setOutlineColor(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GTextField_setOutlineColor'.",&tolua_err);
-#endif
-
-    return 0;
-}
-int lua_cocos2dx_fairygui_GTextField_getTextFormat(lua_State* tolua_S)
-{
-    int argc = 0;
-    fairygui::GTextField* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"fgui.GTextField",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (fairygui::GTextField*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cocos2dx_fairygui_GTextField_getTextFormat'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 0) 
-    {
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GTextField_getTextFormat'", nullptr);
-            return 0;
-        }
-        fairygui::TextFormat* ret = cobj->getTextFormat();
-        object_to_luaval<fairygui::TextFormat>(tolua_S, "fgui.TextFormat",(fairygui::TextFormat*)ret);
-        return 1;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTextField:getTextFormat",argc, 0);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GTextField_getTextFormat'.",&tolua_err);
 #endif
 
     return 0;
@@ -10196,15 +10102,105 @@ int lua_register_cocos2dx_fairygui_GTextField(lua_State* tolua_S)
         tolua_function(tolua_S,"getAutoSize",lua_cocos2dx_fairygui_GTextField_getAutoSize);
         tolua_function(tolua_S,"setFontSize",lua_cocos2dx_fairygui_GTextField_setFontSize);
         tolua_function(tolua_S,"flushVars",lua_cocos2dx_fairygui_GTextField_flushVars);
-        tolua_function(tolua_S,"applyTextFormat",lua_cocos2dx_fairygui_GTextField_applyTextFormat);
         tolua_function(tolua_S,"setOutlineColor",lua_cocos2dx_fairygui_GTextField_setOutlineColor);
-        tolua_function(tolua_S,"getTextFormat",lua_cocos2dx_fairygui_GTextField_getTextFormat);
         tolua_function(tolua_S,"isSingleLine",lua_cocos2dx_fairygui_GTextField_isSingleLine);
         tolua_function(tolua_S,"getTextSize",lua_cocos2dx_fairygui_GTextField_getTextSize);
     tolua_endmodule(tolua_S);
     std::string typeName = typeid(fairygui::GTextField).name();
     g_luaType[typeName] = "fgui.GTextField";
     g_typeCast["GTextField"] = "fgui.GTextField";
+    return 1;
+}
+
+int lua_cocos2dx_fairygui_GBasicTextField_create(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"fgui.GBasicTextField",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 0)
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GBasicTextField_create'", nullptr);
+            return 0;
+        }
+        fairygui::GBasicTextField* ret = fairygui::GBasicTextField::create();
+        object_to_luaval<fairygui::GBasicTextField>(tolua_S, "fgui.GBasicTextField",(fairygui::GBasicTextField*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "fgui.GBasicTextField:create",argc, 0);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GBasicTextField_create'.",&tolua_err);
+#endif
+    return 0;
+}
+int lua_cocos2dx_fairygui_GBasicTextField_constructor(lua_State* tolua_S)
+{
+    int argc = 0;
+    fairygui::GBasicTextField* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_fairygui_GBasicTextField_constructor'", nullptr);
+            return 0;
+        }
+        cobj = new fairygui::GBasicTextField();
+        cobj->autorelease();
+        int ID =  (int)cobj->_ID ;
+        int* luaID =  &cobj->_luaID ;
+        toluafix_pushusertype_ccobject(tolua_S, ID, luaID, (void*)cobj,"fgui.GBasicTextField");
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GBasicTextField:GBasicTextField",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_fairygui_GBasicTextField_constructor'.",&tolua_err);
+#endif
+
+    return 0;
+}
+
+static int lua_cocos2dx_fairygui_GBasicTextField_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (GBasicTextField)");
+    return 0;
+}
+
+int lua_register_cocos2dx_fairygui_GBasicTextField(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"fgui.GBasicTextField");
+    tolua_cclass(tolua_S,"GBasicTextField","fgui.GBasicTextField","fgui.GTextField",nullptr);
+
+    tolua_beginmodule(tolua_S,"GBasicTextField");
+        tolua_function(tolua_S,"new",lua_cocos2dx_fairygui_GBasicTextField_constructor);
+        tolua_function(tolua_S,"create", lua_cocos2dx_fairygui_GBasicTextField_create);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(fairygui::GBasicTextField).name();
+    g_luaType[typeName] = "fgui.GBasicTextField";
+    g_typeCast["GBasicTextField"] = "fgui.GBasicTextField";
     return 1;
 }
 
@@ -33294,6 +33290,7 @@ TOLUA_API int register_all_cocos2dx_fairygui(lua_State* tolua_S)
 	lua_register_cocos2dx_fairygui_UIConfig(tolua_S);
 	lua_register_cocos2dx_fairygui_GRoot(tolua_S);
 	lua_register_cocos2dx_fairygui_GButton(tolua_S);
+	lua_register_cocos2dx_fairygui_GLabel(tolua_S);
 	lua_register_cocos2dx_fairygui_GTweener(tolua_S);
 	lua_register_cocos2dx_fairygui_GTween(tolua_S);
 	lua_register_cocos2dx_fairygui_GGraph(tolua_S);
@@ -33306,7 +33303,7 @@ TOLUA_API int register_all_cocos2dx_fairygui(lua_State* tolua_S)
 	lua_register_cocos2dx_fairygui_UIObjectFactory(tolua_S);
 	lua_register_cocos2dx_fairygui_PopupMenu(tolua_S);
 	lua_register_cocos2dx_fairygui_TweenValue(tolua_S);
-	lua_register_cocos2dx_fairygui_GLabel(tolua_S);
+	lua_register_cocos2dx_fairygui_GBasicTextField(tolua_S);
 	lua_register_cocos2dx_fairygui_GSlider(tolua_S);
 	lua_register_cocos2dx_fairygui_GTextInput(tolua_S);
 	lua_register_cocos2dx_fairygui_GLoader(tolua_S);

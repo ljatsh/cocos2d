@@ -492,23 +492,15 @@ void* UIPackage::getItemAsset(PackageItem * item)
 
 void UIPackage::loadAtlas(PackageItem * item)
 {
-    Image* image = new Image();
     Image::setPNGPremultipliedAlphaEnabled(false);
-    if (!image->initWithImageFile(item->file))
-    {
-        item->texture = _emptyTexture;
-        _emptyTexture->retain();
-        delete image;
-        Image::setPNGPremultipliedAlphaEnabled(true);
-        CCLOGWARN("FairyGUI: texture '%s' not found in %s", item->file.c_str(), _name.c_str());
-        return;
-    }
+    Texture2D* tex = Director::getInstance()->getTextureCache()->addImage(item->file);
     Image::setPNGPremultipliedAlphaEnabled(true);
-
-    Texture2D* tex = new Texture2D();
-    tex->initWithImage(image);
+    if (tex == nullptr)
+    {
+        tex = _emptyTexture;
+        CCLOGWARN("FairyGUI: texture '%s' not found in %s", item->file.c_str(), _name.c_str());
+    }
     item->texture = tex;
-    delete image;
 
     string alphaFilePath;
     string ext = FileUtils::getInstance()->getFileExtension(item->file);
@@ -524,18 +516,7 @@ void UIPackage::loadAtlas(PackageItem * item)
     FileUtils::getInstance()->setPopupNotify(tmp);
     if (hasAlphaTexture)
     {
-        image = new Image();
-        if (!image->initWithImageFile(alphaFilePath))
-        {
-            delete image;
-            return;
-        }
-
-        tex = new Texture2D();
-        tex->initWithImage(image);
-        item->texture->setAlphaTexture(tex);
-        tex->release();
-        delete image;
+        item->texture->setAlphaTexture(Director::getInstance()->getTextureCache()->addImage(alphaFilePath));
     }
 }
 
@@ -548,7 +529,7 @@ AtlasSprite * UIPackage::getSprite(const std::string & spriteId)
         return nullptr;
 }
 
-//note: SpriteFrame.ref=1£¬not autorelease.
+//note: SpriteFrame.ref=1ï¿½ï¿½not autorelease.
 SpriteFrame* UIPackage::createSpriteTexture(AtlasSprite * sprite)
 {
     getItemAsset(sprite->atlas);
@@ -564,7 +545,10 @@ void UIPackage::loadImage(PackageItem* item)
 {
     AtlasSprite * sprite = getSprite(item->id);
     if (sprite != nullptr)
-        item->spriteFrame = createSpriteTexture(sprite);
+    {
+        if (item->spriteFrame == nullptr)
+          item->spriteFrame = createSpriteTexture(sprite);
+    }
     else
     {
         item->spriteFrame = new (std::nothrow) SpriteFrame();

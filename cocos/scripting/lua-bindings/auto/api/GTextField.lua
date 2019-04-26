@@ -98,22 +98,10 @@
         
 --------------------------------
 -- 
--- @function applyTextFormat 
--- @param self
--- @return GTextField#GTextField self (return value: fgui.GTextField)
-        
---------------------------------
--- 
 -- @function setOutlineColor 
 -- @param self
 -- @param #color3b_table value
 -- @return GTextField#GTextField self (return value: fgui.GTextField)
-        
---------------------------------
--- 
--- @function getTextFormat 
--- @param self
--- @return TextFormat#TextFormat ret (return value: fgui.TextFormat)
         
 --------------------------------
 -- 

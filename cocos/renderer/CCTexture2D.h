@@ -216,7 +216,7 @@ public:
      * @js NA
      * @lua NA
      */
-    void releaseGLTexture();
+    void releaseGLTexture(bool releaseByOpt = false);
 
     /** Initializes with a texture2d with data.
      
@@ -415,6 +415,15 @@ public:
     Texture2D* getAlphaTexture() const;
 
     GLuint getAlphaTextureName() const;
+
+    void assignImageFullPath(const std::string& path);
+    void prepareDraw();
+    void begin();
+    void end();
+    int  getIdleCnt() const;
+    int  getOpenGLMemory() const;
+    bool canBeReleasedByOpt() const;
+    bool isReleasedByOpt() const { return _isReleasedByOpt; }
 public:
     /** Get pixel info map, the key-value pairs is PixelFormat and PixelFormatInfo.*/
     static const PixelFormatInfoMap& getPixelFormatInfoMap();
@@ -554,6 +563,11 @@ protected:
     std::string _filePath;
 
     Texture2D* _alphaTexture;
+
+    std::string _imageFullpath;
+    int  _idleCount;
+    bool _isReleasedByOpt;
+    int  _openGLMemory;
 };
 
 

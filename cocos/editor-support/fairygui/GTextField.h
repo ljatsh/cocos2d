@@ -61,7 +61,7 @@ protected:
     cocos2d::ValueMap* _templateVars;
 };
 
-class GBasicTextField : public GTextField
+class CC_DLL GBasicTextField : public GTextField
 {
 public:
     GBasicTextField();

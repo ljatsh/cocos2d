@@ -179,6 +179,7 @@ void TMXLayer::draw(Renderer *renderer, const Mat4& transform, uint32_t flags)
         {
             auto& cmd = _renderCommands[index++];
             auto blendfunc = _texture->hasPremultipliedAlpha() ? BlendFunc::ALPHA_PREMULTIPLIED : BlendFunc::ALPHA_NON_PREMULTIPLIED;
+            _texture->prepareDraw();
             cmd.init(iter.first, _texture->getName(), getGLProgramState(), blendfunc, iter.second, _modelViewTransform, flags);
             renderer->addCommand(&cmd);
         }

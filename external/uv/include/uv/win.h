@@ -23,8 +23,9 @@
 # define _WIN32_WINNT   0x0600
 #endif
 
-#if !defined(_SSIZE_T_) && !defined(_SSIZE_T_DEFINED) && !defined(__SSIZE_T)
+#if !defined(_SSIZE_T_) && !defined(_SSIZE_T_DEFINED)
 typedef intptr_t ssize_t;
+# define SSIZE_MAX INTPTR_MAX
 # define _SSIZE_T_
 # define _SSIZE_T_DEFINED
 #endif
@@ -85,6 +86,14 @@ typedef struct pollfd {
 #define SIGHUP                1
 #define SIGKILL               9
 #define SIGWINCH             28
+
+/* Redefine NSIG to take SIGWINCH into consideration */
+#if defined(NSIG) && NSIG <= SIGWINCH
+# undef NSIG
+#endif
+#ifndef NSIG
+# define NSIG SIGWINCH + 1
+#endif
 
 /* The CRT defines SIGABRT_COMPAT as 6, which equals SIGABRT on many unix-like
  * platforms. However MinGW doesn't define it, so we do. */
