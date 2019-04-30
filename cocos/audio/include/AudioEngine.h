@@ -307,7 +307,9 @@ public:
      * Check whether AudioEngine is enabled.
      */
     static bool isEnabled();
-    
+
+    static std::string dumpCacheInfo();
+
 protected:
     static void addTask(const std::function<void()>& task);
     static void remove(int audioID);

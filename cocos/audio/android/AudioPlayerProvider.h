@@ -66,6 +66,8 @@ public:
 
     void resume();
 
+    std::string dumpCachedPcmData() const;
+
 private:
 
     struct AudioFileInfo

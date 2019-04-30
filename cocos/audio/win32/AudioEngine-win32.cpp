@@ -523,4 +523,9 @@ void AudioEngineImpl::uncacheAll()
     }
 }
 
+std::string AudioEngineImpl::dumpCacheInfo()
+{
+    reutrn "Not Implemented on Windows Platform!";
+}
+
 #endif

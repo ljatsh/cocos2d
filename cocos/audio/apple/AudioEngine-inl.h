@@ -65,7 +65,7 @@ public:
     void uncacheAll();
     AudioCache* preload(const std::string& filePath, std::function<void(bool)> callback);
     void update(float dt);
-
+    std::string dumpCacheInfo();
 private:
     void _play2d(AudioCache *cache, int audioID);
     ALuint findValidSource();

@@ -46,16 +46,16 @@ using namespace cocos2d::experimental;
 using namespace CocosDenshion::android;
 
 AndroidJavaEngine::AndroidJavaEngine()
-    : _implementBaseOnAudioEngine(false)
+    : _implementBaseOnAudioEngine(true)
     , _effectVolume(1.f)
 {
     int sdkVer = getSDKVersion();
     if (sdkVer > 0)
     {
         __android_log_print(ANDROID_LOG_DEBUG, "cocos2d", "android SDK version:%d", sdkVer);
-        if (sdkVer == 21)
+        if (sdkVer < 17)
         {
-            _implementBaseOnAudioEngine = true;
+            _implementBaseOnAudioEngine = false;
         }
     }
     else

@@ -613,6 +613,7 @@ void TextureAtlas::drawNumberOfQuads(ssize_t numberOfQuads, ssize_t start)
     if(!numberOfQuads)
         return;
     
+    _texture->prepareDraw();
     GL::bindTexture2D(_texture);
 
     auto conf = Configuration::getInstance();

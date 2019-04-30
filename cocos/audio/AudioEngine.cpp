@@ -590,3 +590,11 @@ bool AudioEngine::isEnabled()
     return _isEnabled;
 }
 
+std::string AudioEngine::dumpCacheInfo()
+{
+    if(!_audioEngineImpl){
+        return "";
+    }
+
+    return _audioEngineImpl->dumpCacheInfo();
+}

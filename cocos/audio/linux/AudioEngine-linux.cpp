@@ -359,3 +359,8 @@ FMOD::Channel * AudioEngineImpl::getChannel(FMOD::Sound *sound)
     int id = static_cast<int>(reinterpret_cast<std::intptr_t>(data));
     return mapChannelInfo[id].channel;
 }
+
+std::string AudioEngineImpl::dumpCacheInfo()
+{
+    return "Not Implemented on Linux Platform!";
+}

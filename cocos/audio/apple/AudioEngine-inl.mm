@@ -718,4 +718,9 @@ void AudioEngineImpl::uncacheAll()
     }
 }
 
+std::string AudioEngineImpl::dumpCacheInfo()
+{
+    return "Not Implemented on Apple Platform!";
+}
+
 #endif

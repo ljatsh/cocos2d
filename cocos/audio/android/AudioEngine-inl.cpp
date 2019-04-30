@@ -492,4 +492,14 @@ void cocos_audioengine_focus_change(int focusChange)
     }
 }
 
+std::string AudioEngineImpl::dumpCacheInfo()
+{
+    if (_audioPlayerProvider != nullptr)
+    {
+        return _audioPlayerProvider->dumpCachedPcmData();
+    }
+
+    return "_audioPlayerProvider is NULL";
+}
+
 #endif

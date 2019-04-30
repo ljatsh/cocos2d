@@ -357,4 +357,9 @@ void AudioEngineImpl::uncacheAll()
     _audioCaches.clear();
 }
 
+std::string AudioEngineImpl::dumpCacheInfo()
+{
+    return "Not Implemented on WinRT Platform!";
+}
+
 #endif

@@ -30,6 +30,12 @@
 -- @return float#float ret (return value: float)
         
 --------------------------------
+-- 
+-- @function dumpCacheInfo 
+-- @param self
+-- @return string#string ret (return value: string)
+        
+--------------------------------
 -- Uncache the audio data from internal buffer.<br>
 -- AudioEngine cache audio data on ios,mac, and win32 platform.<br>
 -- warning This can lead to stop related audio first.<br>

@@ -48,7 +48,7 @@ extern "C" {
  */
 #ifndef LOG_NDEBUG
 #if defined(COCOS2D_DEBUG) && COCOS2D_DEBUG > 0
-#define LOG_NDEBUG 0
+//#define LOG_NDEBUG 0
 #else
 #define LOG_NDEBUG 1
 #endif

@@ -74,6 +74,8 @@ public:
     void preload(const std::string& filePath, const std::function<void(bool)>& callback);
 
     void setAudioFocusForAllPlayers(bool isFocus);
+
+    std::string dumpCacheInfo();
 private:
 
     void onEnterBackground(EventCustom* event);

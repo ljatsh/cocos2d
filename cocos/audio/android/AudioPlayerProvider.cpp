@@ -39,6 +39,7 @@ THE SOFTWARE.
 #include <sys/system_properties.h>
 #include <stdlib.h>
 #include <algorithm> // for std::find_if
+#include <sstream>
 
 namespace cocos2d { namespace experimental {
 
@@ -142,6 +143,7 @@ IAudioPlayer *AudioPlayerProvider::getAudioPlayer(const std::string &audioFilePa
         AudioFileInfo info = getFileInfo(audioFilePath);
         if (info.isValid())
         {
+            // Prepare Small File Asynchronously for future usage
             if (isSmallFile(info))
             {
                 // Put an empty lambda to preloadEffect since we only want the future object to get PcmData
@@ -163,38 +165,10 @@ IAudioPlayer *AudioPlayerProvider::getAudioPlayer(const std::string &audioFilePa
                     *isPreloadFinished = true;
                     ALOGV("FileInfo (%p), Set isSucceed flag: %d, path: %s", infoPtr, succeed, url.c_str());
                 }, true);
-
-                if (!*isReturnFromCache && !*isPreloadFinished)
-                {
-                    std::unique_lock<std::mutex> lk(_preloadWaitMutex);
-                    // Wait for 2 seconds for the decoding in sub thread finishes.
-                    ALOGV("FileInfo (%p), Waiting preload (%s) to finish ...", &info, audioFilePath.c_str());
-                    _preloadWaitCond.wait_for(lk, std::chrono::seconds(2));
-                    ALOGV("FileInfo (%p), Waitup preload (%s) ...", &info, audioFilePath.c_str());
-                }
-
-                if (*isSucceed)
-                {
-                    if (pcmData->isValid())
-                    {
-                        player = obtainPcmAudioPlayer(info.url, *pcmData);
-                        ALOGV_IF(player == nullptr, "%s, %d: player is nullptr, path: %s", __FUNCTION__, __LINE__, audioFilePath.c_str());
-                    }
-                    else
-                    {
-                        ALOGE("pcm data is invalid, path: %s", audioFilePath.c_str());
-                    }
-                }
-                else
-                {
-                    ALOGE("FileInfo (%p), preloadEffect (%s) failed", &info, audioFilePath.c_str());
-                }
             }
-            else
-            {
-                player = createUrlAudioPlayer(info);
-                ALOGV_IF(player == nullptr, "%s, %d: player is nullptr, path: %s", __FUNCTION__, __LINE__, audioFilePath.c_str());
-            }
+
+            player = createUrlAudioPlayer(info);
+            ALOGV_IF(player == nullptr, "%s, %d: player is nullptr, path: %s", __FUNCTION__, __LINE__, audioFilePath.c_str());
         }
         else
         {
@@ -514,6 +488,28 @@ void AudioPlayerProvider::resume()
     {
         _pcmAudioService->resume();
     }
+}
+
+std::string AudioPlayerProvider::dumpCachedPcmData() const
+{
+    std::ostringstream ss;
+    std::size_t totalSize = 0;
+    char buftmp[1024];
+
+    for (const auto& v : _pcmCache)
+    {
+        if (v.second.pcmBuffer != nullptr)
+        {
+            memset(buftmp, 0, sizeof(buftmp));
+            snprintf(buftmp, sizeof(buftmp) - 1,  "file %s ---> %.2fkb\n", v.first.c_str(), v.second.pcmBuffer->size() / 1024.0f);
+            totalSize += v.second.pcmBuffer->size();
+            ss << buftmp;
+        }
+    }
+    snprintf(buftmp, sizeof(buftmp) - 1, "Totally %d PCM caches, memory %.2fMB\n",
+            _pcmCache.size(), totalSize / 1024.0f / 1024.0f);
+    ss << buftmp;
+    return ss.str();
 }
 
 }} // namespace cocos2d { namespace experimental {

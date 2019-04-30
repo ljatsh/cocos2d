@@ -73,6 +73,8 @@ public:
      * used internally by ffmod callback 
      */ 
     void onSoundFinished(FMOD::Channel * channel); 
+
+    std::string dumpCacheInfo();
     
 private:
   
