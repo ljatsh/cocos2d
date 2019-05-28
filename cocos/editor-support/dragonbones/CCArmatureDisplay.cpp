@@ -15,6 +15,7 @@ CCArmatureDisplay* CCArmatureDisplay::create()
         CC_SAFE_DELETE(displayContainer);
     }
 
+    displayContainer->_fetchedBoundingBoxCache = false;
     return displayContainer;
 }
 
@@ -117,6 +118,72 @@ cocos2d::Rect CCArmatureDisplay::getBoundingBox() const
     return cocos2d::RectApplyTransform(rect, getNodeToParentTransform());
 }
 
+void CCArmatureDisplay::visit(cocos2d::Renderer *renderer, const cocos2d::Mat4 &parentTransform, uint32_t parentFlags)
+{
+    // quick return if not visible. children won't be drawn.
+    if (!_visible)
+    {
+        return;
+    }
+
+    uint32_t flags = processParentFlags(parentTransform, parentFlags);
+
+    if (isVisitableByVisitingCamera())
+    {
+        // IMPORTANT:
+        // To ease the migration to v3.0, we still support the Mat4 stack,
+        // but it is deprecated and your code should not rely on it
+        cocos2d::Director* director = cocos2d::Director::getInstance();
+        CCASSERT(nullptr != director, "Director is null when setting matrix stack");
+        director->pushMatrix(cocos2d::MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+        director->loadMatrix(cocos2d::MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW, _modelViewTransform);
+
+        sortAllChildren();
+        draw(renderer, _modelViewTransform, flags);
+        
+        // FIX ME: Why need to set _orderOfArrival to 0??
+        // Please refer to https://github.com/cocos2d/cocos2d-x/pull/6920
+        // setOrderOfArrival(0);
+        
+        director->popMatrix(cocos2d::MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+    }
+}
+
+void CCArmatureDisplay::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, uint32_t flags)
+{
+#if CC_USE_CULLING
+    // for performance purpose
+    if (!_fetchedBoundingBoxCache)
+    {
+        _boudingBoxCache = getBoundingBox();
+        _fetchedBoundingBoxCache = true;
+    }
+
+    // Don't calculate the culling if the transform was not updated
+    auto visitingCamera = cocos2d::Camera::getVisitingCamera();
+    auto defaultCamera = cocos2d::Camera::getDefaultCamera();
+    if (visitingCamera == nullptr) {
+        _insideBounds = true;
+    }
+    else if (visitingCamera == defaultCamera) {
+        _insideBounds = ((flags & FLAGS_TRANSFORM_DIRTY) || visitingCamera->isViewProjectionUpdated()) ? renderer->checkVisibility(transform, _boudingBoxCache.size) : _insideBounds;
+    }
+    else
+    {
+        // XXX: this always return true since
+        _insideBounds = renderer->checkVisibility(transform, _boudingBoxCache.size);
+    }
+
+    if(_insideBounds)
+#endif
+    {
+        for (auto& node : _children)
+        {
+            node->visit(renderer, transform, flags);
+        }
+    }
+}
+
 DBCCSprite* DBCCSprite::create()
 {
     DBCCSprite* sprite = new (std::nothrow) DBCCSprite();
@@ -133,89 +200,32 @@ DBCCSprite* DBCCSprite::create()
     return sprite;
 }
 
-bool DBCCSprite::_checkVisibility(const cocos2d::Mat4& transform, const cocos2d::Size& size, const cocos2d::Rect& rect)
-{
-    auto scene = cocos2d::Director::getInstance()->getRunningScene();
-
-    //If draw to Rendertexture, return true directly.
-    // only cull the default camera. The culling algorithm is valid for default camera.
-    if (!scene || (scene && scene->getDefaultCamera() != cocos2d::Camera::getVisitingCamera()))
-        return true;
-
-    auto director = cocos2d::Director::getInstance();
-    cocos2d::Rect visiableRect(director->getVisibleOrigin(), director->getVisibleSize());
-
-    // transform center point to screen space
-    float hSizeX = size.width / 2;
-    float hSizeY = size.height / 2;
-
-    cocos2d::Vec3 v3p(hSizeX, hSizeY, 0);
-
-    transform.transformPoint(&v3p);
-    cocos2d::Vec2 v2p = cocos2d::Camera::getVisitingCamera()->projectGL(v3p);
-
-    // convert content size to world coordinates
-    float wshw = std::max(fabsf(hSizeX * transform.m[0] + hSizeY * transform.m[4]), fabsf(hSizeX * transform.m[0] - hSizeY * transform.m[4]));
-    float wshh = std::max(fabsf(hSizeX * transform.m[1] + hSizeY * transform.m[5]), fabsf(hSizeX * transform.m[1] - hSizeY * transform.m[5]));
-
-    // enlarge visible rect half size in screen coord
-    visiableRect.origin.x -= wshw;
-    visiableRect.origin.y -= wshh;
-    visiableRect.size.width += wshw * 2;
-    visiableRect.size.height += wshh * 2;
-    bool ret = visiableRect.containsPoint(v2p);
-    return ret;
-}
-
 void DBCCSprite::draw(cocos2d::Renderer* renderer, const cocos2d::Mat4& transform, uint32_t flags)
 {
-#if CC_USE_CULLING
-#if COCOS2D_VERSION >= 0x00031400
-    const auto& rect = _polyInfo.getRect();
-#else
-    const auto& rect = _polyInfo.rect;
-#endif
-    
-    // Don't do calculate the culling if the transform was not updated
-    auto visitingCamera = cocos2d::Camera::getVisitingCamera();
-    auto defaultCamera = cocos2d::Camera::getDefaultCamera();
-    if (visitingCamera == defaultCamera) {
-        _insideBounds = ((flags & FLAGS_TRANSFORM_DIRTY) || visitingCamera->isViewProjectionUpdated()) ? _checkVisibility(transform, _contentSize, rect) : _insideBounds;
-    }
-    else
-    {
-        _insideBounds = _checkVisibility(transform, _contentSize, rect);
-    }
-
-    if (_insideBounds)
-#endif
-    {
-        _texture->prepareDraw();
-        _trianglesCommand.init(_globalZOrder, _texture->getName(), getGLProgramState(), _blendFunc, _polyInfo.triangles, transform, flags);
-        renderer->addCommand(&_trianglesCommand);
+    _trianglesCommand.init(_globalZOrder, _texture, getGLProgramState(), _blendFunc, _polyInfo.triangles, transform, flags);
+    renderer->addCommand(&_trianglesCommand);
 
 #if CC_SPRITE_DEBUG_DRAW
-        _debugDrawNode->clear();
-        auto count = _polyInfo.triangles.indexCount / 3;
-        auto indices = _polyInfo.triangles.indices;
-        auto verts = _polyInfo.triangles.verts;
-        for (ssize_t i = 0; i < count; i++)
-        {
-            //draw 3 lines
-            auto from = verts[indices[i * 3]].vertices;
-            auto to = verts[indices[i * 3 + 1]].vertices;
-            _debugDrawNode->drawLine(cocos2d::Vec2(from.x, from.y), cocos2d::Vec2(to.x, to.y), cocos2d::Color4F::WHITE);
+    _debugDrawNode->clear();
+    auto count = _polyInfo.triangles.indexCount / 3;
+    auto indices = _polyInfo.triangles.indices;
+    auto verts = _polyInfo.triangles.verts;
+    for (ssize_t i = 0; i < count; i++)
+    {
+        //draw 3 lines
+        auto from = verts[indices[i * 3]].vertices;
+        auto to = verts[indices[i * 3 + 1]].vertices;
+        _debugDrawNode->drawLine(cocos2d::Vec2(from.x, from.y), cocos2d::Vec2(to.x, to.y), cocos2d::Color4F::WHITE);
 
-            from = verts[indices[i * 3 + 1]].vertices;
-            to = verts[indices[i * 3 + 2]].vertices;
-            _debugDrawNode->drawLine(cocos2d::Vec2(from.x, from.y), cocos2d::Vec2(to.x, to.y), cocos2d::Color4F::WHITE);
+        from = verts[indices[i * 3 + 1]].vertices;
+        to = verts[indices[i * 3 + 2]].vertices;
+        _debugDrawNode->drawLine(cocos2d::Vec2(from.x, from.y), cocos2d::Vec2(to.x, to.y), cocos2d::Color4F::WHITE);
 
-            from = verts[indices[i * 3 + 2]].vertices;
-            to = verts[indices[i * 3]].vertices;
-            _debugDrawNode->drawLine(cocos2d::Vec2(from.x, from.y), cocos2d::Vec2(to.x, to.y), cocos2d::Color4F::WHITE);
-        }
-#endif //CC_SPRITE_DEBUG_DRAW
+        from = verts[indices[i * 3 + 2]].vertices;
+        to = verts[indices[i * 3]].vertices;
+        _debugDrawNode->drawLine(cocos2d::Vec2(from.x, from.y), cocos2d::Vec2(to.x, to.y), cocos2d::Color4F::WHITE);
     }
+#endif //CC_SPRITE_DEBUG_DRAW
 }
 
 cocos2d::PolygonInfo& DBCCSprite::getPolygonInfoModify()

@@ -40,42 +40,7 @@ DRAGONBONES_NAMESPACE_BEGIN
  */
 class DB_DLL BaseObject
 {
-private:
-    static unsigned _hashCode;
-    static unsigned _defaultMaxCount;
-    static std::map<std::size_t, unsigned> _maxCountMap;
-    static std::map<std::size_t, std::vector<BaseObject*>> _poolsMap;
-    static void _returnObject(BaseObject *object);
-
 public:
-    /**
-     * - Set the maximum cache count of the specify object pool.
-     * @param objectConstructor - The specify class. (Set all object pools max cache count if not set)
-     * @param maxCount - Max count.
-     * @version DragonBones 4.5
-     * @language en_US
-     */
-    /**
-     * - 设置特定对象池的最大缓存数量。
-     * @param objectConstructor - 特定的类。 (不设置则设置所有对象池的最大缓存数量)
-     * @param maxCount - 最大缓存数量。
-     * @version DragonBones 4.5
-     * @language zh_CN
-     */
-    static void setMaxCount(std::size_t classTypeIndex, unsigned maxCount);
-    /**
-     * - Clear the cached instances of a specify object pool.
-     * @param objectConstructor - Specify class. (Clear all cached instances if not set)
-     * @version DragonBones 4.5
-     * @language en_US
-     */
-    /**
-     * - 清除特定对象池的缓存实例。
-     * @param objectConstructor - 特定的类。 (不设置则清除所有缓存的实例)
-     * @version DragonBones 4.5
-     * @language zh_CN
-     */
-    static void clearPool(std::size_t classTypeIndex = 0);
     template<typename T>
     /**
      * - Get an instance of the specify class from object pool.
@@ -91,40 +56,8 @@ public:
      */
     static T* borrowObject() 
     {
-        const auto classTypeIndex = T::getTypeIndex();
-        const auto iterator = _poolsMap.find(classTypeIndex);
-        if (iterator != _poolsMap.end())
-        {
-            auto& pool = iterator->second;
-            if (!pool.empty())
-            {
-                const auto object = static_cast<T*>(pool.back());
-                pool.pop_back();
-                object->_isInPool = false;
-                return object;
-            }
-        }
-
-        const auto object = new (std::nothrow) T();
-
-        return object;
+        return T::getObjectPool().create();
     }
-
-public:
-    /**
-     * - A unique identification number assigned to the object.
-     * @version DragonBones 4.5
-     * @language en_US
-     */
-    /**
-     * - 分配给此实例的唯一标识号。
-     * @version DragonBones 4.5
-     * @language zh_CN
-     */
-    const unsigned hashCode;
-
-private:
-    bool _isInPool;
 
 public:
     virtual ~BaseObject() {}
@@ -135,7 +68,6 @@ protected:
     virtual void _onClear() = 0;
 
 public:
-    virtual std::size_t getClassTypeIndex() const = 0;
     /**
      * - Clear the object and return it back to object pool。
      * @version DragonBones 4.5
@@ -146,7 +78,7 @@ public:
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    void returnToPool();
+    virtual void returnToPool() = 0;
 };
 
 DRAGONBONES_NAMESPACE_END

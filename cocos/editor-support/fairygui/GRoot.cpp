@@ -1,6 +1,6 @@
 #include "GRoot.h"
 #include "UIPackage.h"
-#include "SimpleAudioEngine.h"
+#include "AudioEngine.h"
 #include "UIConfig.h"
 
 NS_FGUI_BEGIN
@@ -513,7 +513,7 @@ void GRoot::playSound(const std::string & url, float volumnScale)
 
     PackageItem* pi = UIPackage::getItemByURL(url);
     if (pi)
-        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(pi->file.c_str(), false, 1.0, 0.0, _soundVolumeScale * volumnScale);
+        experimental::AudioEngine::play2d(pi->file, false, _soundVolumeScale * volumnScale);
 }
 
 void GRoot::setSoundEnabled(bool value)

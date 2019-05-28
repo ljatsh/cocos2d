@@ -61,6 +61,7 @@ AudioCache::AudioCache()
 , _duration(0.0f)
 , _alBufferId(INVALID_AL_BUFFER_ID)
 , _pcmData(nullptr)
+, _pcmDataSize(0)
 , _queBufferFrames(0)
 , _state(State::INITIAL)
 , _isDestroyed(std::make_shared<bool>(false))
@@ -111,6 +112,7 @@ AudioCache::~AudioCache()
         }
 
         free(_pcmData);
+        _pcmDataSize = 0;
     }
 
     if (_queBufferFrames > 0)
@@ -194,6 +196,7 @@ void AudioCache::readDataTask(unsigned int selfId)
 
             _pcmData = (char*)malloc(dataSize);
             memset(_pcmData, 0x00, dataSize);
+            _pcmDataSize = dataSize;
 
             if (adjustFrames > 0)
             {

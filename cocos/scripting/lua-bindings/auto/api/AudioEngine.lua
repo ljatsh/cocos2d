@@ -127,15 +127,6 @@
 -- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
         
 --------------------------------
--- @overload self, string, function         
--- @overload self, string         
--- @function preload
--- @param self
--- @param #string filePath
--- @param #function callback
--- @return experimental::AudioEngine#experimental::AudioEngine self (return value: cc.experimental::AudioEngine)
-
---------------------------------
 -- Whether to enable playing audios<br>
 -- note If it's disabled, current playing audios will be stopped and the later 'preload', 'play2d' methods will take no effects.
 -- @function setEnabled 

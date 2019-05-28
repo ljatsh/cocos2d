@@ -1,230 +1,432 @@
 
 --------------------------------
 -- @module Armature
--- @see Node,BlendProtocol
--- @see ccs
+-- @see IAnimatable,BaseObject
+-- @see db
 
 --------------------------------
--- Get a bone with the specified name<br>
--- param name The bone's name you want to get
+-- - Get a specific bone.<br>
+-- param name - The bone name.<br>
+-- see dragonBones.Bone<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 获取特定的骨骼。<br>
+-- param name - 骨骼名称。<br>
+-- see dragonBones.Bone<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
 -- @function getBone 
 -- @param self
 -- @param #string name
--- @return Bone#Bone ret (return value: ccs.Bone)
+-- @return Bone#Bone ret (return value: db.Bone)
         
 --------------------------------
--- Change a bone's parent with the specified parent name.<br>
--- param bone The bone you want to change parent<br>
--- param parentName The new parent's name.
--- @function changeBoneParent 
+-- - Get a specific slot.<br>
+-- param name - The slot name.<br>
+-- see dragonBones.Slot<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 获取特定的插槽。<br>
+-- param name - 插槽名称。<br>
+-- see dragonBones.Slot<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getSlot 
 -- @param self
--- @param #ccs.Bone bone
--- @param #string parentName
--- @return Armature#Armature self (return value: ccs.Armature)
+-- @param #string name
+-- @return Slot#Slot ret (return value: db.Slot)
+        
+--------------------------------
+-- - The display container.<br>
+-- The display of the slot is displayed as the parent.<br>
+-- Depending on the rendering engine, the type will be different, usually the DisplayObjectContainer type.<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 显示容器实例。<br>
+-- 插槽的显示对象都会以此显示容器为父级。<br>
+-- 根据渲染引擎的不同，类型会不同，通常是 DisplayObjectContainer 类型。<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getDisplay 
+-- @param self
+-- @return void#void ret (return value: void)
+        
+--------------------------------
+-- internal
+-- @function _sortZOrder 
+-- @param self
+-- @param #short slotIndices
+-- @param #unsigned int offset
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- internal
+-- @function _bufferAction 
+-- @param self
+-- @param #db.EventObject action
+-- @param #bool append
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- internal
+-- @function _addBone 
+-- @param self
+-- @param #db.Bone value
+-- @return Armature#Armature self (return value: db.Armature)
         
 --------------------------------
 -- 
--- @function setAnimation 
+-- @function returnToPool 
 -- @param self
--- @param #ccs.ArmatureAnimation animation
--- @return Armature#Armature self (return value: ccs.Armature)
+-- @return Armature#Armature self (return value: db.Armature)
         
 --------------------------------
 -- 
--- @function getBoneAtPoint 
+-- @function getAnimatable 
+-- @param self
+-- @return IAnimatable#IAnimatable ret (return value: db.IAnimatable)
+        
+--------------------------------
+-- - The armature name.<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 骨架名称。<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getName 
+-- @param self
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+-- - Dispose the armature. (Return to the object pool)<br>
+-- example<br>
+-- TypeScript style, for reference only.<br>
+-- <pre><br>
+-- removeChild(armature.display);<br>
+-- armature.dispose();<br>
+-- </pre><br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 释放骨架。 （回收到对象池）<br>
+-- example<br>
+-- TypeScript 风格，仅供参考。<br>
+-- <pre><br>
+-- removeChild(armature.display);<br>
+-- armature.dispose();<br>
+-- </pre><br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function dispose 
+-- @param self
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- internal
+-- @function init 
+-- @param self
+-- @param #db.ArmatureData armatureData
+-- @param #db.IArmatureProxy proxy
+-- @param #void display
+-- @param #db.DragonBones dragonBones
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- - Forces a specific bone or its owning slot to update the transform or display property in the next frame.<br>
+-- param boneName - The bone name. (If not set, all bones will be update)<br>
+-- param updateSlot - Whether to update the bone's slots. (Default: false)<br>
+-- see dragonBones.Bone#invalidUpdate()<br>
+-- see dragonBones.Slot#invalidUpdate()<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 强制特定骨骼或其拥有的插槽在下一帧更新变换或显示属性。<br>
+-- param boneName - 骨骼名称。 （如果未设置，将更新所有骨骼）<br>
+-- param updateSlot - 是否更新骨骼的插槽。 （默认: false）<br>
+-- see dragonBones.Bone#invalidUpdate()<br>
+-- see dragonBones.Slot#invalidUpdate()<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function invalidUpdate 
+-- @param self
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- - The animation cache frame rate, which turns on the animation cache when the set value is greater than 0.<br>
+-- There is a certain amount of memory overhead to improve performance by caching animation data in memory.<br>
+-- The frame rate should not be set too high, usually with the frame rate of the animation is similar and lower than the program running frame rate.<br>
+-- When the animation cache is turned on, some features will fail, such as the offset property of bone.<br>
+-- example<br>
+-- TypeScript style, for reference only.<br>
+-- <pre><br>
+-- armature.cacheFrameRate = 24;<br>
+-- </pre><br>
+-- see dragonBones.DragonBonesData#frameRate<br>
+-- see dragonBones.ArmatureData#frameRate<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 动画缓存帧率，当设置的值大于 0 的时，将会开启动画缓存。<br>
+-- 通过将动画数据缓存在内存中来提高运行性能，会有一定的内存开销。<br>
+-- 帧率不宜设置的过高，通常跟动画的帧率相当且低于程序运行的帧率。<br>
+-- 开启动画缓存后，某些功能将会失效，比如骨骼的 offset 属性等。<br>
+-- example<br>
+-- TypeScript 风格，仅供参考。<br>
+-- <pre><br>
+-- armature.cacheFrameRate = 24;<br>
+-- </pre><br>
+-- see dragonBones.DragonBonesData#frameRate<br>
+-- see dragonBones.ArmatureData#frameRate<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function getCacheFrameRate 
+-- @param self
+-- @return unsigned int#unsigned int ret (return value: unsigned int)
+        
+--------------------------------
+-- - Whether to flip the armature vertically.<br>
+-- version DragonBones 5.5<br>
+-- language en_US<br>
+-- - 是否将骨架垂直翻转。<br>
+-- version DragonBones 5.5<br>
+-- language zh_CN
+-- @function getFlipY 
+-- @param self
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- - Whether to flip the armature horizontally.<br>
+-- version DragonBones 5.5<br>
+-- language en_US<br>
+-- - 是否将骨架水平翻转。<br>
+-- version DragonBones 5.5<br>
+-- language zh_CN
+-- @function getFlipX 
+-- @param self
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- - Check whether a specific segment intersects a custom bounding box for a slot in the armature.<br>
+-- The coordinate system of the segment and intersection is the inner coordinate system of the armature.<br>
+-- Custom bounding boxes need to be customized in Dragonbones Pro.<br>
+-- param xA - The horizontal coordinate of the beginning of the segment.<br>
+-- param yA - The vertical coordinate of the beginning of the segment.<br>
+-- param xB - The horizontal coordinate of the end point of the segment.<br>
+-- param yB - The vertical coordinate of the end point of the segment.<br>
+-- param intersectionPointA - The first intersection at which a line segment intersects the bounding box from the beginning to the end. (If not set, the intersection point will not calculated)<br>
+-- param intersectionPointB - The first intersection at which a line segment intersects the bounding box from the end to the beginning. (If not set, the intersection point will not calculated)<br>
+-- param normalRadians - The normal radians of the tangent of the intersection boundary box. [x: Normal radian of the first intersection tangent, y: Normal radian of the second intersection tangent] (If not set, the normal will not calculated)<br>
+-- returns The slot of the first custom bounding box where the segment intersects from the start point to the end point.<br>
+-- version DragonBones 5.0<br>
+-- language en_US<br>
+-- - 检查特定线段是否与骨架的某个插槽的自定义边界框相交。<br>
+-- 线段和交点的坐标系均为骨架内坐标系。<br>
+-- 自定义边界框需要在 DragonBones Pro 中自定义。<br>
+-- param xA - 线段起点的水平坐标。<br>
+-- param yA - 线段起点的垂直坐标。<br>
+-- param xB - 线段终点的水平坐标。<br>
+-- param yB - 线段终点的垂直坐标。<br>
+-- param intersectionPointA - 线段从起点到终点与边界框相交的第一个交点。 （如果未设置，则不计算交点）<br>
+-- param intersectionPointB - 线段从终点到起点与边界框相交的第一个交点。 （如果未设置，则不计算交点）<br>
+-- param normalRadians - 交点边界框切线的法线弧度。 [x: 第一个交点切线的法线弧度, y: 第二个交点切线的法线弧度] （如果未设置，则不计算法线）<br>
+-- returns 线段从起点到终点相交的第一个自定义边界框的插槽。<br>
+-- version DragonBones 5.0<br>
+-- language zh_CN
+-- @function intersectsSegment 
+-- @param self
+-- @param #float xA
+-- @param #float yA
+-- @param #float xB
+-- @param #float yB
+-- @param #db.Point intersectionPointA
+-- @param #db.Point intersectionPointB
+-- @param #db.Point normalRadians
+-- @return Slot#Slot ret (return value: db.Slot)
+        
+--------------------------------
+-- - Get a specific bone by the display.<br>
+-- param display - The display object.<br>
+-- see dragonBones.Bone<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 通过显示对象获取特定的骨骼。<br>
+-- param display - 显示对象。<br>
+-- see dragonBones.Bone<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getBoneByDisplay 
+-- @param self
+-- @param #void display
+-- @return Bone#Bone ret (return value: db.Bone)
+        
+--------------------------------
+-- 
+-- @function setCacheFrameRate 
+-- @param self
+-- @param #unsigned int value
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- internal
+-- @function _addConstraint 
+-- @param self
+-- @param #db.Constraint value
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- 
+-- @function setFlipY 
+-- @param self
+-- @param #bool value
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- 
+-- @function setFlipX 
+-- @param self
+-- @param #bool value
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- 
+-- @function setReplacedTexture 
+-- @param self
+-- @param #void value
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- - The armature data.<br>
+-- see dragonBones.ArmatureData<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 骨架数据。<br>
+-- see dragonBones.ArmatureData<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function getArmatureData 
+-- @param self
+-- @return ArmatureData#ArmatureData ret (return value: db.ArmatureData)
+        
+--------------------------------
+-- internal
+-- @function _addSlot 
+-- @param self
+-- @param #db.Slot value
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- private
+-- @function getReplacedTexture 
+-- @param self
+-- @return void#void ret (return value: void)
+        
+--------------------------------
+-- 
+-- @function getFrameRate 
+-- @param self
+-- @return unsigned int#unsigned int ret (return value: unsigned int)
+        
+--------------------------------
+-- - The animation player.<br>
+-- see dragonBones.Animation<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 动画播放器。<br>
+-- see dragonBones.Animation<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getAnimation 
+-- @param self
+-- @return Animation#Animation ret (return value: db.Animation)
+        
+--------------------------------
+-- - Get the parent slot which the armature belongs to.<br>
+-- see dragonBones.Slot<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 该骨架所属的父插槽。<br>
+-- see dragonBones.Slot<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function getParent 
+-- @param self
+-- @return Slot#Slot ret (return value: db.Slot)
+        
+--------------------------------
+-- - Get a specific slot by the display.<br>
+-- param display - The display object.<br>
+-- see dragonBones.Slot<br>
+-- version DragonBones 3.0<br>
+-- language en_US<br>
+-- - 通过显示对象获取特定的插槽。<br>
+-- param display - 显示对象。<br>
+-- see dragonBones.Slot<br>
+-- version DragonBones 3.0<br>
+-- language zh_CN
+-- @function getSlotByDisplay 
+-- @param self
+-- @param #void display
+-- @return Slot#Slot ret (return value: db.Slot)
+        
+--------------------------------
+-- - The EventDispatcher instance of the armature.<br>
+-- version DragonBones 4.5<br>
+-- language en_US<br>
+-- - 该骨架的 EventDispatcher 实例。<br>
+-- version DragonBones 4.5<br>
+-- language zh_CN
+-- @function getEventDispatcher 
+-- @param self
+-- @return IEventDispatcher#IEventDispatcher ret (return value: db.IEventDispatcher)
+        
+--------------------------------
+-- - Check whether a specific point is inside a custom bounding box in a slot.<br>
+-- The coordinate system of the point is the inner coordinate system of the armature.<br>
+-- Custom bounding boxes need to be customized in Dragonbones Pro.<br>
+-- param x - The horizontal coordinate of the point.<br>
+-- param y - The vertical coordinate of the point.<br>
+-- version DragonBones 5.0<br>
+-- language en_US<br>
+-- - 检查特定点是否在某个插槽的自定义边界框内。<br>
+-- 点的坐标系为骨架内坐标系。<br>
+-- 自定义边界框需要在 DragonBones Pro 中自定义。<br>
+-- param x - 点的水平坐标。<br>
+-- param y - 点的垂直坐标。<br>
+-- version DragonBones 5.0<br>
+-- language zh_CN
+-- @function containsPoint 
 -- @param self
 -- @param #float x
 -- @param #float y
--- @return Bone#Bone ret (return value: ccs.Bone)
+-- @return Slot#Slot ret (return value: db.Slot)
+        
+--------------------------------
+-- pivate
+-- @function getProxy 
+-- @param self
+-- @return IArmatureProxy#IArmatureProxy ret (return value: db.IArmatureProxy)
+        
+--------------------------------
+-- inheritDoc
+-- @function advanceTime 
+-- @param self
+-- @param #float passedTime
+-- @return Armature#Armature self (return value: db.Armature)
         
 --------------------------------
 -- 
--- @function getArmatureTransformDirty 
+-- @function setClock 
 -- @param self
--- @return bool#bool ret (return value: bool)
+-- @param #db.WorldClock value
+-- @return Armature#Armature self (return value: db.Armature)
+        
+--------------------------------
+-- inheritDoc
+-- @function getClock 
+-- @param self
+-- @return WorldClock#WorldClock ret (return value: db.WorldClock)
         
 --------------------------------
 -- 
--- @function setVersion 
--- @param self
--- @param #float version
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- Set contentsize and Calculate anchor point.
--- @function updateOffsetPoint 
--- @param self
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- 
--- @function getParentBone 
--- @param self
--- @return Bone#Bone ret (return value: ccs.Bone)
-        
---------------------------------
--- Remove a bone with the specified name. If recursion it will also remove child Bone recursionly.<br>
--- param bone The bone you want to remove<br>
--- param recursion Determine whether remove the bone's child  recursion.
--- @function removeBone 
--- @param self
--- @param #ccs.Bone bone
--- @param #bool recursion
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- 
--- @function getBatchNode 
--- @param self
--- @return BatchNode#BatchNode ret (return value: ccs.BatchNode)
-        
---------------------------------
--- @overload self, string, ccs.Bone         
--- @overload self, string         
--- @function init
--- @param self
--- @param #string name
--- @param #ccs.Bone parentBone
--- @return bool#bool ret (return value: bool)
-
---------------------------------
--- 
--- @function setParentBone 
--- @param self
--- @param #ccs.Bone parentBone
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- 
--- @function setBatchNode 
--- @param self
--- @param #ccs.BatchNode batchNode
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- js NA<br>
--- lua NA
--- @function getBlendFunc 
--- @param self
--- @return BlendFunc#BlendFunc ret (return value: cc.BlendFunc)
-        
---------------------------------
--- 
--- @function setArmatureData 
--- @param self
--- @param #ccs.ArmatureData armatureData
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- Add a Bone to this Armature,<br>
--- param bone  The Bone you want to add to Armature<br>
--- param parentName   The parent Bone's name you want to add to . If it's  nullptr, then set Armature to its parent
--- @function addBone 
--- @param self
--- @param #ccs.Bone bone
--- @param #string parentName
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- 
--- @function getArmatureData 
--- @param self
--- @return ArmatureData#ArmatureData ret (return value: ccs.ArmatureData)
-        
---------------------------------
--- 
--- @function getVersion 
--- @param self
--- @return float#float ret (return value: float)
-        
---------------------------------
--- 
--- @function getAnimation 
--- @param self
--- @return ArmatureAnimation#ArmatureAnimation ret (return value: ccs.ArmatureAnimation)
-        
---------------------------------
--- 
--- @function getOffsetPoints 
--- @param self
--- @return vec2_table#vec2_table ret (return value: vec2_table)
-        
---------------------------------
--- js NA<br>
--- lua NA
--- @function setBlendFunc 
--- @param self
--- @param #cc.BlendFunc blendFunc
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- Get Armature's bone dictionary<br>
--- return Armature's bone dictionary
--- @function getBoneDic 
--- @param self
--- @return map_table#map_table ret (return value: map_table)
-        
---------------------------------
--- @overload self, string         
--- @overload self         
--- @overload self, string, ccs.Bone         
--- @function create
--- @param self
--- @param #string name
--- @param #ccs.Bone parentBone
--- @return Armature#Armature ret (return value: ccs.Armature)
-
---------------------------------
--- 
--- @function setAnchorPoint 
--- @param self
--- @param #vec2_table point
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- 
--- @function draw 
--- @param self
--- @param #cc.Renderer renderer
--- @param #mat4_table transform
--- @param #unsigned int flags
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- 
--- @function getAnchorPointInPoints 
--- @param self
--- @return vec2_table#vec2_table ret (return value: vec2_table)
-        
---------------------------------
--- 
--- @function update 
--- @param self
--- @param #float dt
--- @return Armature#Armature self (return value: ccs.Armature)
-        
---------------------------------
--- Init the empty armature
--- @function init 
--- @param self
--- @return bool#bool ret (return value: bool)
-        
---------------------------------
--- 
--- @function getNodeToParentTransform 
--- @param self
--- @return mat4_table#mat4_table ret (return value: mat4_table)
-        
---------------------------------
--- This boundingBox will calculate all bones' boundingBox every time
--- @function getBoundingBox 
--- @param self
--- @return rect_table#rect_table ret (return value: rect_table)
-        
---------------------------------
--- js ctor
 -- @function Armature 
 -- @param self
--- @return Armature#Armature self (return value: ccs.Armature)
+-- @return Armature#Armature self (return value: db.Armature)
         
 return nil

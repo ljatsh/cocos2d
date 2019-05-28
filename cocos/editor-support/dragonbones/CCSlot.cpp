@@ -35,10 +35,10 @@ void CCSlot::_addDisplay()
     container->addChild(_renderDisplay);
 }
 
-void CCSlot::_replaceDisplay(void* value, bool isArmatureDisplay)
+void CCSlot::_replaceDisplay(void* value, bool /*isArmatureDisplay*/)
 {
     const auto container = static_cast<CCArmatureDisplay*>(_armature->getDisplay());
-    const auto prevDisplay = isArmatureDisplay ? static_cast<cocos2d::Node*>(value) : static_cast<cocos2d::Node*>(value);
+    const auto prevDisplay = static_cast<cocos2d::Node*>(value);
     container->addChild(_renderDisplay, prevDisplay->getLocalZOrder());
     container->removeChild(prevDisplay);
     _textureScale = 1.0f;

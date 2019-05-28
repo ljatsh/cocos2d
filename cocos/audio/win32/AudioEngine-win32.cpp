@@ -44,6 +44,7 @@
 #include "audio/win32/AudioDecoderManager.h"
 
 #include <windows.h>
+#include <sstream>
 
 // log, CCLOG aren't threadsafe, since we uses sub threads for parsing pcm data, threadsafe log output
 // is needed. Define the following macros (ALOGV, ALOGD, ALOGI, ALOGW, ALOGE) for threadsafe log output.
@@ -525,7 +526,26 @@ void AudioEngineImpl::uncacheAll()
 
 std::string AudioEngineImpl::dumpCacheInfo()
 {
-    reutrn "Not Implemented on Windows Platform!";
+    std::ostringstream ss;
+    std::size_t totalSize = 0;
+    uint32_t totalCount = 0;
+    char buftmp[1024];
+
+    for (const auto& v : _audioCaches)
+    {
+        if (v.second.pcmDataSize() > 0)
+        {
+            memset(buftmp, 0, sizeof(buftmp));
+            snprintf(buftmp, sizeof(buftmp) - 1,  "file %s ---> %.2fkb\n", v.first.c_str(), v.second.pcmDataSize() / 1024.0f);
+            totalSize +=  v.second.pcmDataSize();
+            totalCount += 1;
+            ss << buftmp;
+        }
+    }
+    snprintf(buftmp, sizeof(buftmp) - 1, "Totally %d PCM caches, memory %.2fMB\n",
+            totalCount, totalSize / 1024.0f / 1024.0f);
+    ss << buftmp;
+    return ss.str();
 }
 
 #endif

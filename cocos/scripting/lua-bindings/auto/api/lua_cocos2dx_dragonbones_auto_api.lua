@@ -8,6 +8,12 @@
 
 
 --------------------------------------------------------
+-- the db Armature
+-- @field Armature preloaded module
+-- @see Armature
+
+
+--------------------------------------------------------
 -- the db AnimationState
 -- @field AnimationState preloaded module
 -- @see AnimationState
@@ -23,12 +29,6 @@
 -- the db Animation
 -- @field Animation preloaded module
 -- @see Animation
-
-
---------------------------------------------------------
--- the db BaseFactory
--- @field BaseFactory preloaded module
--- @see BaseFactory
 
 
 --------------------------------------------------------

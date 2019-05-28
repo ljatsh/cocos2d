@@ -34,6 +34,8 @@
 #include <sstream>
 #include <assert.h>
 
+#include "ObjectPool.h"
+
 #ifndef DB_DLL
 #if _WIN32
 #if defined(_USRDLL)
@@ -65,28 +67,18 @@ public:\
     virtual ~CLASS(){};
 
 #define BIND_CLASS_TYPE(CLASS) \
-public:\
-    static std::size_t getTypeIndex()\
-    {\
-        static const auto typeIndex = typeid(CLASS).hash_code();\
-        return typeIndex;\
-    }\
-    virtual std::size_t getClassTypeIndex() const override\
-    {\
-        return CLASS::getTypeIndex();\
-    }\
+public:
 
 #define BIND_CLASS_TYPE_A(CLASS) \
 public:\
-    static std::size_t getTypeIndex()\
-    {\
-        static const auto typeIndex = typeid(CLASS).hash_code();\
-        return typeIndex;\
-    }\
-    virtual std::size_t getClassTypeIndex() const override\
-    {\
-        return CLASS::getTypeIndex();\
-    }\
+    static object_pool<CLASS>& getObjectPool() { \
+        static object_pool<CLASS> _pool; \
+        return _pool; \
+    };\
+    virtual void returnToPool() override { \
+        _onClear(); \
+        CLASS::getObjectPool().purge(this); \
+    } \
 public:\
     CLASS(){_onClear();}\
     ~CLASS(){_onClear();}\
@@ -96,15 +88,14 @@ private:\
 
 #define BIND_CLASS_TYPE_B(CLASS) \
 public:\
-    static std::size_t getTypeIndex()\
-    {\
-        static const auto typeIndex = typeid(CLASS).hash_code();\
-        return typeIndex;\
-    }\
-    virtual std::size_t getClassTypeIndex() const override\
-    {\
-        return CLASS::getTypeIndex();\
-    }\
+    static object_pool<CLASS>& getObjectPool() { \
+        static object_pool<CLASS> _pool; \
+        return _pool; \
+    };\
+    virtual void returnToPool() override { \
+        _onClear(); \
+        CLASS::getObjectPool().purge(this); \
+    } \
 private:\
     CLASS(const CLASS&);\
     void operator=(const CLASS&)

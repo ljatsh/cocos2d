@@ -484,7 +484,7 @@ void Armature::setCacheFrameRate(unsigned value)
         for (const auto & slot : _slots)
         {
             const auto childArmature = slot->getChildArmature();
-            if (childArmature != nullptr && childArmature->getCacheFrameRate() == 0) 
+            if (childArmature != nullptr) 
             {
                 childArmature->setCacheFrameRate(value);
             }

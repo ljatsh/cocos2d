@@ -48,7 +48,7 @@ using namespace std;
 
 NS_CC_BEGIN
 
-std::string TextureCache::s_etc1AlphaFileSuffix = "@alpha";
+std::string TextureCache::s_etc1AlphaFileSuffix = "_alpha";
 
 // implementation TextureCache
 
@@ -386,6 +386,7 @@ void TextureCache::addImageAsyncCallBack(float /*dt*/)
                         if(alphaTexture != nullptr && alphaTexture->initWithImage(&asyncStruct->imageAlpha, asyncStruct->pixelFormat)) {
                             texture->setAlphaTexture(alphaTexture);
                             alphaTexture->assignImageFullPath(asyncStruct->filenameAlpha);
+                            _textures.emplace(asyncStruct->filenameAlpha, alphaTexture);
                         }
                         CC_SAFE_RELEASE(alphaTexture);
                     }
@@ -460,6 +461,7 @@ Texture2D * TextureCache::addImage(const std::string &path)
                 std::string alphaFullPath = path + s_etc1AlphaFileSuffix;
                 if (image->getFileType() == Image::Format::ETC && !s_etc1AlphaFileSuffix.empty() && FileUtils::getInstance()->isFileExist(alphaFullPath))
                 {
+                    alphaFullPath = FileUtils::getInstance()->fullPathForFilename(alphaFullPath);
                     Texture2D *pAlphaTexture = getTextureForKey(alphaFullPath);
                     if (pAlphaTexture == nullptr)
                     {
@@ -827,21 +829,21 @@ void TextureCache::setIdleThreshold(int it)
     _idleThreshold = it;
 }
 
-unsigned int TextureCache::updateMemoryThreshold(unsigned int releasedBytes)
+unsigned int TextureCache::updateMemoryThreshold(unsigned int reservedBytes)
 {
-    unsigned int optBytes = 0;
+    unsigned int usedBytes = 0;
 
     for (auto& texture : _textures) {
         Texture2D* tex = texture.second;
         auto bytes = tex->getOpenGLMemory();
         if (!tex->isReleasedByOpt())
         {
-            optBytes += bytes;
+            usedBytes += bytes;
         }
     }
 
-    if (optBytes > releasedBytes)
-        _openGLMemoryThreshold = optBytes - releasedBytes;
+    if (usedBytes > reservedBytes)
+        _openGLMemoryThreshold = usedBytes - reservedBytes;
 
     return _openGLMemoryThreshold;
 }

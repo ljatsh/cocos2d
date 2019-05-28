@@ -39,6 +39,8 @@
 #include "base/CCScheduler.h"
 #include "base/ccUtils.h"
 
+#include <sstream>
+
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 #import <UIKit/UIKit.h>
 #endif
@@ -514,9 +516,9 @@ void AudioEngineImpl::setLoop(int audioID, bool loop)
             player->setLoop(loop);
         } else {
             if (loop) {
-                alSourcei(player->_alSource, AL_LOOPING, AL_TRUE);
+                alSourcei(player->_alSource, AL_LOOPING, AL_TRUE); CHECK_AL_ERROR_DEBUG();
             } else {
-                alSourcei(player->_alSource, AL_LOOPING, AL_FALSE);
+                alSourcei(player->_alSource, AL_LOOPING, AL_FALSE); CHECK_AL_ERROR_DEBUG();
             }
 
             auto error = alGetError();
@@ -720,7 +722,26 @@ void AudioEngineImpl::uncacheAll()
 
 std::string AudioEngineImpl::dumpCacheInfo()
 {
-    return "Not Implemented on Apple Platform!";
+    std::ostringstream ss;
+    std::size_t totalSize = 0;
+    uint32_t totalCount = 0;
+    char buftmp[1024];
+
+    for (const auto& v : _audioCaches)
+    {
+        if (v.second.pcmDataSize() > 0)
+        {
+            memset(buftmp, 0, sizeof(buftmp));
+            snprintf(buftmp, sizeof(buftmp) - 1,  "file %s ---> %.2fkb\n", v.first.c_str(), v.second.pcmDataSize() / 1024.0f);
+            totalSize +=  v.second.pcmDataSize();
+            totalCount += 1;
+            ss << buftmp;
+        }
+    }
+    snprintf(buftmp, sizeof(buftmp) - 1, "Totally %d PCM caches, memory %.2fMB\n",
+            totalCount, totalSize / 1024.0f / 1024.0f);
+    ss << buftmp;
+    return ss.str();
 }
 
 #endif

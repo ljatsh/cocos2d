@@ -183,6 +183,12 @@
 -- @return size_table#size_table ret (return value: size_table)
         
 --------------------------------
+-- 
+-- @function disableOpt 
+-- @param self
+-- @return Texture2D#Texture2D self (return value: cc.Texture2D)
+        
+--------------------------------
 --  Gets the width of the texture in pixels. 
 -- @function getPixelsWide 
 -- @param self
@@ -208,6 +214,12 @@
 -- @function hasMipmaps 
 -- @param self
 -- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- 
+-- @function enableOpt 
+-- @param self
+-- @return Texture2D#Texture2D self (return value: cc.Texture2D)
         
 --------------------------------
 --  Sets max S. 

@@ -450,7 +450,8 @@ Texture2D::Texture2D()
 , _alphaTexture(nullptr)
 ,_idleCount(0)
 ,_isReleasedByOpt(false)
-,_openGLMemory( 0 )
+,_openGLMemory(0)
+,_disableOpt(false)
 {
 }
 
@@ -1557,7 +1558,7 @@ void Texture2D::prepareDraw()
 
 void Texture2D::begin()
 {
-    if(!_imageFullpath.empty())
+    if(!_disableOpt && !_imageFullpath.empty())
     {
         _idleCount++;
     }

@@ -46,7 +46,7 @@
 do { \
     GLenum __error = alGetError(); \
     if (__error) { \
-        ALOGE("OpenAL error 0x%04X in %s %s %d\n", __error, __FILE__, __FUNCTION__, __LINE__); \
+        ALOGE("OpenAL error 0x%04X--->(%s) in %s %s %d\n", __error, alGetString(__error), __FILE__, __FUNCTION__, __LINE__); \
     } \
 } while (false)
 #else

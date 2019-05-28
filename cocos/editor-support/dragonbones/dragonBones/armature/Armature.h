@@ -547,6 +547,11 @@ public:
         return _parent;
     }
 
+    inline unsigned getFrameRate() const
+    {
+        return _armatureData->frameRate;
+    }
+
 public: // For WebAssembly.
     IAnimatable* getAnimatable() const { return (IAnimatable*)this; }
 };

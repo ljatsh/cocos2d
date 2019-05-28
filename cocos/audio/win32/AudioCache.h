@@ -67,6 +67,8 @@ public:
 
     void addLoadCallback(const std::function<void(bool)>& callback);
 
+    inline uint32_t pcmDataSize() const { return _pcmDataSize; }
+
 protected:
     void setSkipReadDataTask(bool isSkip) { _isSkipReadDataTask = isSkip; };
     void readDataTask(unsigned int selfId);
@@ -87,6 +89,7 @@ protected:
      */
     ALuint _alBufferId;
     char* _pcmData;
+    uint32_t _pcmDataSize;
 
     /*Queue buffer related stuff
      *  Streaming in OpenAL when sizeInBytes greater then PCMDATA_CACHEMAXSIZE

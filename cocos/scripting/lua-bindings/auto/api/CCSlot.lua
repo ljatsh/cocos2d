@@ -26,21 +26,9 @@
         
 --------------------------------
 -- 
--- @function getTypeIndex 
--- @param self
--- @return unsigned int#unsigned int ret (return value: unsigned int)
-        
---------------------------------
--- 
 -- @function _updateBlendMode 
 -- @param self
 -- @return CCSlot#CCSlot self (return value: db.CCSlot)
-        
---------------------------------
--- 
--- @function getClassTypeIndex 
--- @param self
--- @return unsigned int#unsigned int ret (return value: unsigned int)
         
 --------------------------------
 -- 
@@ -51,6 +39,12 @@
 --------------------------------
 -- 
 -- @function _updateColor 
+-- @param self
+-- @return CCSlot#CCSlot self (return value: db.CCSlot)
+        
+--------------------------------
+-- 
+-- @function returnToPool 
 -- @param self
 -- @return CCSlot#CCSlot self (return value: db.CCSlot)
         

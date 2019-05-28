@@ -424,6 +424,8 @@ public:
     int  getOpenGLMemory() const;
     bool canBeReleasedByOpt() const;
     bool isReleasedByOpt() const { return _isReleasedByOpt; }
+    void disableOpt() { _disableOpt = true; }
+    void enableOpt() { _disableOpt = false; }
 public:
     /** Get pixel info map, the key-value pairs is PixelFormat and PixelFormatInfo.*/
     static const PixelFormatInfoMap& getPixelFormatInfoMap();
@@ -568,6 +570,7 @@ protected:
     int  _idleCount;
     bool _isReleasedByOpt;
     int  _openGLMemory;
+    bool _disableOpt;
 };
 
 

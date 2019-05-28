@@ -115,6 +115,14 @@ public:
     * @inheritDoc
     */
     virtual cocos2d::Rect getBoundingBox() const override;
+    
+    virtual void visit(cocos2d::Renderer *renderer, const cocos2d::Mat4 &parentTransform, uint32_t parentFlags) override;
+    virtual void draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, uint32_t flags) override;
+
+private:
+    bool _insideBounds;                     /// whether or not the armature was inside bounds the previous frame
+    bool _fetchedBoundingBoxCache;
+    cocos2d::Rect _boudingBoxCache;
 };
 /**
  * @internal
@@ -129,10 +137,6 @@ public:
 protected:
     DBCCSprite() {}
     virtual ~DBCCSprite() {}
-    /**
-     * Modify for polyInfo rect
-     */
-    bool _checkVisibility(const cocos2d::Mat4& transform, const cocos2d::Size& size, const cocos2d::Rect& rect);
 
 public:
     /**

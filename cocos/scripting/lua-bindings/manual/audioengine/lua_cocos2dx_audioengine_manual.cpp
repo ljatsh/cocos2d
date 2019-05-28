@@ -288,6 +288,68 @@ tolua_lerror:
 #endif
     return 0;
 }
+int lua_cocos2dx_audioengine_AudioEngine_preload(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"ccexp.AudioEngine",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+
+    do 
+    {
+        if (argc == 2)
+        {
+            std::string arg0;
+            ok &= luaval_to_std_string(tolua_S, 2,&arg0, "ccexp.AudioEngine:preload");
+            if (!ok) { break; }
+
+#if COCOS2D_DEBUG >= 1
+            if (!toluafix_isfunction(tolua_S,3,"LUA_FUNCTION", 0, &tolua_err))
+            {
+                goto tolua_lerror;
+            }
+#endif
+      
+            LUA_FUNCTION handler = (  toluafix_ref_function(tolua_S,3,0));
+    
+            cocos2d::experimental::AudioEngine::preload(arg0, [handler](bool isSuccess){
+                LuaStack* stack = LuaEngine::getInstance()->getLuaStack();
+                stack->pushBoolean(isSuccess);
+
+                stack->executeFunctionByHandler(handler, 1);
+                LuaEngine::getInstance()->removeScriptHandler(handler);
+            });
+            return 0;
+        }
+    } while (0);
+    ok  = true;
+    do 
+    {
+        if (argc == 1)
+        {
+            std::string arg0;
+            ok &= luaval_to_std_string(tolua_S, 2,&arg0, "ccexp.AudioEngine:preload");
+            if (!ok) { break; }
+            cocos2d::experimental::AudioEngine::preload(arg0);
+            return 0;
+        }
+    } while (0);
+    ok  = true;
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d", "ccexp.AudioEngine:preload",argc, 1);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_audioengine_AudioEngine_preload'.",&tolua_err);
+#endif
+    return 0;
+}
 
 int register_audioengine_module(lua_State* L)
 {
@@ -312,6 +374,7 @@ int register_audioengine_module(lua_State* L)
             if (lua_istable(L,-1))
             {
                 tolua_function(L, "setFinishCallback", lua_cocos2dx_audioengine_AudioEngine_setFinishCallback);
+                tolua_function(L, "preload", lua_cocos2dx_audioengine_AudioEngine_preload);
             }
             lua_pop(L, 1);
         }

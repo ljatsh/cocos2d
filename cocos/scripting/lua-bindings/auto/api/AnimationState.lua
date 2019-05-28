@@ -235,15 +235,9 @@
         
 --------------------------------
 -- 
--- @function getTypeIndex 
+-- @function returnToPool 
 -- @param self
--- @return unsigned int#unsigned int ret (return value: unsigned int)
-        
---------------------------------
--- 
--- @function getClassTypeIndex 
--- @param self
--- @return unsigned int#unsigned int ret (return value: unsigned int)
+-- @return AnimationState#AnimationState self (return value: db.AnimationState)
         
 --------------------------------
 -- 

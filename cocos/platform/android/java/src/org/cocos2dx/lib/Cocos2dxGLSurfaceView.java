@@ -35,8 +35,9 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.view.Choreographer;
 
-public class Cocos2dxGLSurfaceView extends GLSurfaceView {
+public class Cocos2dxGLSurfaceView extends GLSurfaceView implements Choreographer.FrameCallback {
     // ===========================================================
     // Constants
     // ===========================================================
@@ -61,6 +62,11 @@ public class Cocos2dxGLSurfaceView extends GLSurfaceView {
 
     private boolean mSoftKeyboardShown = false;
     private boolean mMultipleTouchEnabled = true;
+
+    private long mDefaultDrawInterval = (long)(1.0f / 60f * 1000000000L);
+    private boolean mPaused = false;
+    private long mLastFrameTime;
+    private long mIdleDuration;
 
     public boolean isSoftKeyboardShown() {
         return mSoftKeyboardShown;
@@ -156,6 +162,10 @@ public class Cocos2dxGLSurfaceView extends GLSurfaceView {
     public void setCocos2dxRenderer(final Cocos2dxRenderer renderer) {
         this.mCocos2dxRenderer = renderer;
         this.setRenderer(this.mCocos2dxRenderer);
+        setRenderMode(RENDERMODE_WHEN_DIRTY);
+        this.mIdleDuration = 0L;
+
+        Choreographer.getInstance().postFrameCallback(this);
     }
 
     private String getContentText() {
@@ -181,7 +191,8 @@ public class Cocos2dxGLSurfaceView extends GLSurfaceView {
     @Override
     public void onResume() {
         super.onResume();
-        this.setRenderMode(RENDERMODE_CONTINUOUSLY);
+        //this.setRenderMode(RENDERMODE_CONTINUOUSLY);
+        this.mPaused = false;
         this.queueEvent(new Runnable() {
             @Override
             public void run() {
@@ -198,7 +209,8 @@ public class Cocos2dxGLSurfaceView extends GLSurfaceView {
                 Cocos2dxGLSurfaceView.this.mCocos2dxRenderer.handleOnPause();
             }
         });
-        this.setRenderMode(RENDERMODE_WHEN_DIRTY);
+        //this.setRenderMode(RENDERMODE_WHEN_DIRTY);
+        this.mPaused = true;
         //super.onPause();
     }
 
@@ -471,5 +483,32 @@ public class Cocos2dxGLSurfaceView extends GLSurfaceView {
         }
         sb.append("]");
         Log.d(Cocos2dxGLSurfaceView.TAG, sb.toString());
+    }
+
+    @Override
+    public void doFrame(long frameTimeNanos) {
+        Choreographer.getInstance().postFrameCallback(this);
+
+        long interval = Cocos2dxRenderer.getAnimationInterval();
+        if (mIdleDuration == 0) {
+            mLastFrameTime = frameTimeNanos - interval;
+        }
+        mIdleDuration += frameTimeNanos - mLastFrameTime;
+        mLastFrameTime = frameTimeNanos;
+
+        if (interval <= mDefaultDrawInterval) {
+            if (mPaused)
+                return;
+            requestRender();
+        }
+        else {
+            if (mIdleDuration >= interval) {
+                mIdleDuration -= interval;
+                if (mPaused)
+                    return;
+
+                requestRender();
+            }
+        }
     }
 }

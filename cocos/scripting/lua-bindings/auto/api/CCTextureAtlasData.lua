@@ -23,12 +23,6 @@
 -- @return Texture2D#Texture2D ret (return value: cc.Texture2D)
         
 --------------------------------
--- 
--- @function getTypeIndex 
--- @param self
--- @return unsigned int#unsigned int ret (return value: unsigned int)
-        
---------------------------------
 -- inheritDoc
 -- @function createTexture 
 -- @param self
@@ -36,9 +30,9 @@
         
 --------------------------------
 -- 
--- @function getClassTypeIndex 
+-- @function returnToPool 
 -- @param self
--- @return unsigned int#unsigned int ret (return value: unsigned int)
+-- @return CCTextureAtlasData#CCTextureAtlasData self (return value: db.CCTextureAtlasData)
         
 --------------------------------
 -- 
