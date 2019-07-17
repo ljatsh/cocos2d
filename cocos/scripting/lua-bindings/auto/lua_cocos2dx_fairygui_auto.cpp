@@ -7677,8 +7677,10 @@ int lua_cocos2dx_fairygui_UIPackage_constructor(lua_State* tolua_S)
             return 0;
         }
         cobj = new fairygui::UIPackage();
-        tolua_pushusertype(tolua_S,(void*)cobj,"fgui.UIPackage");
-        tolua_register_gc(tolua_S,lua_gettop(tolua_S));
+        cobj->autorelease();
+        int ID =  (int)cobj->_ID ;
+        int* luaID =  &cobj->_luaID ;
+        toluafix_pushusertype_ccobject(tolua_S, ID, luaID, (void*)cobj,"fgui.UIPackage");
         return 1;
     }
     luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.UIPackage:UIPackage",argc, 0);
@@ -7700,7 +7702,7 @@ static int lua_cocos2dx_fairygui_UIPackage_finalize(lua_State* tolua_S)
 int lua_register_cocos2dx_fairygui_UIPackage(lua_State* tolua_S)
 {
     tolua_usertype(tolua_S,"fgui.UIPackage");
-    tolua_cclass(tolua_S,"UIPackage","fgui.UIPackage","",nullptr);
+    tolua_cclass(tolua_S,"UIPackage","fgui.UIPackage","cc.Ref",nullptr);
 
     tolua_beginmodule(tolua_S,"UIPackage");
         tolua_function(tolua_S,"new",lua_cocos2dx_fairygui_UIPackage_constructor);
@@ -32106,8 +32108,10 @@ int lua_cocos2dx_fairygui_GTweener_constructor(lua_State* tolua_S)
             return 0;
         }
         cobj = new fairygui::GTweener();
-        tolua_pushusertype(tolua_S,(void*)cobj,"fgui.GTweener");
-        tolua_register_gc(tolua_S,lua_gettop(tolua_S));
+        cobj->autorelease();
+        int ID =  (int)cobj->_ID ;
+        int* luaID =  &cobj->_luaID ;
+        toluafix_pushusertype_ccobject(tolua_S, ID, luaID, (void*)cobj,"fgui.GTweener");
         return 1;
     }
     luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTweener:GTweener",argc, 0);
@@ -32129,7 +32133,7 @@ static int lua_cocos2dx_fairygui_GTweener_finalize(lua_State* tolua_S)
 int lua_register_cocos2dx_fairygui_GTweener(lua_State* tolua_S)
 {
     tolua_usertype(tolua_S,"fgui.GTweener");
-    tolua_cclass(tolua_S,"GTweener","fgui.GTweener","",nullptr);
+    tolua_cclass(tolua_S,"GTweener","fgui.GTweener","cc.Ref",nullptr);
 
     tolua_beginmodule(tolua_S,"GTweener");
         tolua_function(tolua_S,"new",lua_cocos2dx_fairygui_GTweener_constructor);
