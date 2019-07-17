@@ -414,6 +414,7 @@ AnimationState* Animation::play(const std::string& animationName, int playTimes)
     else
     {
         _animationConfig->animation = _lastAnimationState->name;
+        _animationConfig->playTimes = _lastAnimationState->playTimes;
         playConfig(_animationConfig);
     }
 

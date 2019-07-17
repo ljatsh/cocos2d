@@ -669,6 +669,7 @@ void Label::setString(const std::string& text)
 {
     if (text.compare(_utf8Text))
     {
+        std::u32string old32Text(_utf32Text);
         _utf8Text = text;
         _contentDirty = true;
 
@@ -683,6 +684,12 @@ void Label::setString(const std::string& text)
         {
             cocos2d::log("Error: Label text is too long %d > %d and it will be truncated!", _utf32Text.length(), CC_LABEL_MAX_LENGTH);
             _utf32Text = _utf32Text.substr(0, CC_LABEL_MAX_LENGTH);
+        }
+
+        if(_overflow == Overflow::SHRINK){
+            if (_originalFontSize > 0 && _utf32Text.length() < old32Text.length()) {
+                this->restoreFontSize();
+            }
         }
     }
 }
@@ -950,7 +957,7 @@ bool Label::updateQuads()
             }
 
             auto lineIndex = _lettersInfo[ctr].lineIndex;
-            auto px = _lettersInfo[ctr].positionX + letterDef.width/2 * _bmfontScale + _linesOffsetX[lineIndex];
+            auto px = _lettersInfo[ctr].positionX + letterDef.width * _bmfontScale;
 
             if(_labelWidth > 0.f){
                 if (this->isHorizontalClamped(px, lineIndex)) {

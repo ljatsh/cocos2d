@@ -506,7 +506,6 @@ void Mesh::bindMeshCommand()
         auto pass = _material->_currentTechnique->_passes.at(0);
         auto glprogramstate = pass->getGLProgramState();
         auto texture = pass->getTexture();
-        texture->prepareDraw();
         auto textureid = texture ? texture->getName() : 0;
         // XXX
 //        auto blend = pass->getStateBlock()->getBlendFunc();

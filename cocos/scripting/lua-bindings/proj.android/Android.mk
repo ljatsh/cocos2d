@@ -2,14 +2,14 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := cocos2d_lua_android_static
+LOCAL_MODULE := cclua_android
 
-LOCAL_MODULE_FILENAME := libluacocos2dandroid
+LOCAL_MODULE_FILENAME := libluaccandroid
 
 LOCAL_ARM_MODE := arm
 
 LOCAL_SRC_FILES := ../manual/platform/android/CCLuaJavaBridge.cpp \
-                   ../manual/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxLuaJavaBridge.cpp
+                   ../manual/platform/android/jni/Cocos2dxLuaJavaBridge.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../.. \
                     $(LOCAL_PATH)/../manual \
@@ -35,7 +35,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE    := cocos2d_lua_static
 
-LOCAL_MODULE_FILENAME := libluacocos2d
+LOCAL_MODULE_FILENAME := libluacc
 
 LOCAL_ARM_MODE := arm
 
@@ -63,7 +63,11 @@ LOCAL_SRC_FILES := ../manual/CCLuaBridge.cpp \
           ../../../../external/lua/tolua/tolua_to.c \
           ../../../../external/xxtea/xxtea.cpp \
           ../auto/lua_cocos2dx_audioengine_auto.cpp \
-          ../manual/audioengine/lua_cocos2dx_audioengine_manual.cpp
+          ../manual/audioengine/lua_cocos2dx_audioengine_manual.cpp \
+		  ../../../../plugin/luabindings/auto/lua_cocos2dx_pluginx_auto.cpp \
+		  ../../../../plugin/luabindings/manual/lua_pluginx_basic_conversions.cpp \
+		  ../../../../plugin/luabindings/manual/lua_pluginx_manual_callback.cpp \
+	      ../../../../plugin/luabindings/manual/lua_pluginx_manual_protocols.cpp \
 
 #Component
 LOCAL_SRC_FILES += ../manual/CCComponentLua.cpp \
@@ -79,6 +83,7 @@ LOCAL_SRC_FILES += ../manual/cocosdenshion/lua_cocos2dx_cocosdenshion_manual.cpp
 #network
 LOCAL_SRC_FILES += ../manual/network/lua_cocos2dx_network_manual.cpp \
                    ../manual/network/lua_extensions.c \
+                   ../manual/network/lua_downloader.cpp \
                    ../manual/network/Lua_web_socket.cpp \
                    ../manual/network/lua_xml_http_request.cpp \
                    ../../../../external/lua/luasocket/auxiliar.c \
@@ -174,7 +179,11 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../manual/navmesh \
                     $(LOCAL_PATH)/../../../../external/xxtea \
                     $(LOCAL_PATH)/../../../.. \
-                    $(LOCAL_PATH)/../../../../external/lua
+                    $(LOCAL_PATH)/../../../../external/lua \
+					$(LOCAL_PATH)/../../../../plugin/protocols/include \
+                    $(LOCAL_PATH)/../../../../plugin/protocols/platform/android \
+                    $(LOCAL_PATH)/../../../../plugin/luabindings/auto \
+                    $(LOCAL_PATH)/../../../../plugin/luabindings/manual
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
 						   $(LUA_INCLUDE_PATH) \
@@ -193,9 +202,10 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                            $(LOCAL_PATH)/../manual/navmesh \
                            $(LOCAL_PATH)/../../../..
 
-LOCAL_WHOLE_STATIC_LIBRARIES := cocos2d_lua_android_static
+LOCAL_WHOLE_STATIC_LIBRARIES := cclua_android
 
-LOCAL_STATIC_LIBRARIES := cocos2dx_static
+LOCAL_STATIC_LIBRARIES := cc_static
+
 LOCAL_STATIC_LIBRARIES += ext_lua-game
 LOCAL_STATIC_LIBRARIES += ext_http_parser
 

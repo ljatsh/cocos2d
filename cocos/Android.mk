@@ -2,9 +2,9 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := cocos2dx_internal_static
+LOCAL_MODULE := cc_core
 
-LOCAL_MODULE_FILENAME := libcocos2dxinternal
+LOCAL_MODULE_FILENAME := libcc_core
 
 LOCAL_ARM_MODE := arm
 
@@ -89,6 +89,7 @@ cocos2d.cpp \
 2d/CCAutoPolygon.cpp \
 3d/CCFrustum.cpp \
 3d/CCPlane.cpp \
+platform/CCDataManager.cpp \
 platform/CCFileUtils.cpp \
 platform/CCGLView.cpp \
 platform/CCImage.cpp \
@@ -274,13 +275,13 @@ LOCAL_STATIC_LIBRARIES += ext_png
 LOCAL_STATIC_LIBRARIES += ext_jpeg
 LOCAL_STATIC_LIBRARIES += ext_tiff
 LOCAL_STATIC_LIBRARIES += ext_webp
-LOCAL_STATIC_LIBRARIES += ext_chipmunk
+LOCAL_STATIC_LIBRARIES += ext_chipmunk 
 LOCAL_STATIC_LIBRARIES += ext_zlib
 LOCAL_STATIC_LIBRARIES += ext_ssl
 LOCAL_STATIC_LIBRARIES += ext_recast
 LOCAL_STATIC_LIBRARIES += ext_bullet
 
-LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dxandroid_static
+LOCAL_WHOLE_STATIC_LIBRARIES := ccandroid
 LOCAL_WHOLE_STATIC_LIBRARIES += cpufeatures
 
 # define the macro to compile through support/zip_support/ioapi.c
@@ -302,13 +303,16 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := cocos2dx_static
-LOCAL_MODULE_FILENAME := libcocos2d
+LOCAL_MODULE := cc_static
+LOCAL_MODULE_FILENAME := libcc
 
-LOCAL_STATIC_LIBRARIES := cocostudio_static
-LOCAL_STATIC_LIBRARIES += cocosbuilder_static
-LOCAL_STATIC_LIBRARIES += cocos3d_static
-LOCAL_STATIC_LIBRARIES += spine_static
+LOCAL_STATIC_LIBRARIES := ccs
+LOCAL_STATIC_LIBRARIES += ccb
+LOCAL_STATIC_LIBRARIES += cc3d
+LOCAL_STATIC_LIBRARIES += ccnet
+LOCAL_STATIC_LIBRARIES += audio
+LOCAL_STATIC_LIBRARIES += spine
+
 LOCAL_STATIC_LIBRARIES += fairygui_static
 LOCAL_STATIC_LIBRARIES += dragonbones_static
 LOCAL_STATIC_LIBRARIES += cocos_network_static

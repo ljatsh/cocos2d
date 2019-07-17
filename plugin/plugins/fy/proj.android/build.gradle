@@ -1,0 +1,76 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion PROP_COMPILE_SDK_VERSION.toInteger()
+    buildToolsVersion PROP_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion PROP_MIN_SDK_VERSION
+        targetSdkVersion PROP_TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+    }
+    
+    sourceSets.main {
+        java.srcDir "src"
+        res.srcDir "res"
+        jniLibs.srcDir "libs"
+        manifest.srcFile "AndroidManifest.xml"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+
+    /*
+    fileTree(dir: 'libs', include: ['*.aar']).each { file ->
+        api(name: file.name.lastIndexOf('.').with {
+            it != -1 ? file.name[0..<it] : file.name
+        }, ext: 'aar')
+    }
+    */
+
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+    implementation 'com.google.api-client:google-api-client:1.22.0'
+    implementation('com.google.api-client:google-api-client-android:1.22.0') {
+        force = true
+    }
+    api('com.facebook.android:facebook-login:[4,5)') {
+        exclude group: 'com.android.support', module: 'support-v4'
+        //exclude group: 'com.android.support', module: 'cardview-v7'
+        exclude group: 'com.android.support', module: 'customtabs'
+    }
+    implementation 'com.google.apis:google-api-services-people:v1-rev139-1.22.0'
+
+    api 'com.adjust.sdk:adjust-android:4.13.0'
+    api 'com.android.installreferrer:installreferrer:1.0'
+    api 'com.google.android.gms:play-services-analytics:16.0.8'
+
+    //api 'com.android.support:support-v4:26.0.2'
+    //api 'com.google.android.gms:play-services-gcm:15.0.1'
+    //api 'com.google.android.gms:play-services-base:15.0.1'
+    //api 'com.google.android.gms:play-services-basement:15.0.1'
+    //api 'com.google.android.gms:play-services-iid:15.0.1'
+
+    implementation project(':libplugin')
+}

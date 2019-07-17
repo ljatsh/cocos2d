@@ -126,6 +126,23 @@ void AudioEngineInterruptionListenerCallback(void* user_data, UInt32 interruptio
     return self;
 }
 
+// https://developer.apple.com/documentation/avfoundation/avaudiosessioninterruptionnotification?language=objc
+// AVAudioSessionInterruptionOptions options = [[notification userInfo] [AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
+// if (options == AVAudioSessionInterruptionOptionShouldResume)
+// {
+//     isAudioSessionInterrupted = false;
+
+//     ALOGD("AVAudioSessionInterruptionTypeEnded, alcMakeContextCurrent(s_ALContext)");
+//     NSError *error = nil;
+//     [[AVAudioSession sharedInstance] setActive:YES error:&error];
+//     if(error != nil){
+//         ALOGE("AVAudioSessionInterruptionTypeEnded, AVAudioSession setActive fail, %d",(int)error.code);
+//         return;
+//     }
+    
+//     alcMakeContextCurrent(s_ALContext);
+// }
+
 -(void)handleInterruption:(NSNotification*)notification
 {
     static bool isAudioSessionInterrupted = false;
@@ -166,11 +183,11 @@ void AudioEngineInterruptionListenerCallback(void* user_data, UInt32 interruptio
                 }
                 
                 alcMakeContextCurrent(s_ALContext);
-                if (Director::getInstance()->isPaused())
-                {
-                    ALOGD("AVAudioSessionInterruptionTypeEnded, director was paused, try to resume it.");
-                    Director::getInstance()->resume();
-                }
+                // if (Director::getInstance()->isPaused())
+                // {
+                //     ALOGD("AVAudioSessionInterruptionTypeEnded, director was paused, try to resume it.");
+                //     Director::getInstance()->resume();
+                // }
             }
             else
             {
@@ -209,11 +226,11 @@ void AudioEngineInterruptionListenerCallback(void* user_data, UInt32 interruptio
             }
             alcMakeContextCurrent(s_ALContext);
         }
-        else if (isAudioSessionInterrupted)
-        {
-            ALOGD("Audio session is still interrupted, pause director!");
-            Director::getInstance()->pause();
-        }
+        // else if (isAudioSessionInterrupted)
+        // {
+        //     ALOGD("Audio session is still interrupted, pause director!");
+        //     Director::getInstance()->pause();
+        // }
     }
 }
 

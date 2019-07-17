@@ -39,6 +39,13 @@
 #include "scripting/lua-bindings/manual/navmesh/lua_cocos2dx_navmesh_manual.h"
 #include "lua-game.h"
 
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_WIN32 && CC_TARGET_PLATFORM != CC_PLATFORM_LINUX && CC_TARGET_PLATFORM != CC_PLATFORM_MAC)
+#include "plugin/luabindings/auto/lua_cocos2dx_pluginx_auto.hpp"
+#include "plugin/luabindings/manual/lua_pluginx_manual_callback.h"
+#include "plugin/luabindings/manual/lua_pluginx_manual_protocols.h"
+#include "plugin/luabindings/manual/lua_pluginx_basic_conversions.h"
+#endif
+
 int lua_module_register(lua_State* L)
 {
     // Don't change the module register order unless you know what your are doing
@@ -60,6 +67,13 @@ int lua_module_register(lua_State* L)
     register_navmesh_module(L);
 #endif
     luaopen_lua_game(L);
+
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_WIN32 && CC_TARGET_PLATFORM != CC_PLATFORM_LINUX && CC_TARGET_PLATFORM != CC_PLATFORM_MAC)
+	register_all_pluginx_protocols(L);
+	register_all_pluginx_manual_callback(L);
+	register_all_pluginx_manual_protocols(L);
+#endif
+
     return 1;
 }
 

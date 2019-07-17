@@ -1145,6 +1145,7 @@ bool Image::initWithPngData(const unsigned char * data, ssize_t dataLen)
         png_read_end(png_ptr, nullptr);
 
         // premultiplied alpha for RGBA8888
+        // Modified by lj@sh. Changes in 3.17.2 confilicts with FairyGUI UIPackage. Keep the orgin performance behavior.
         if (PNG_PREMULTIPLIED_ALPHA_ENABLED && color_type == PNG_COLOR_TYPE_RGB_ALPHA)
         {
             premultipliedAlpha();

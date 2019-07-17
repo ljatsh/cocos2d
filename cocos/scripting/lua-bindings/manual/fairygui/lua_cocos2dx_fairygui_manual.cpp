@@ -5,11 +5,7 @@
 
 #include "scripting/lua-bindings/manual/tolua_fix.h"
 #include "scripting/lua-bindings/manual/LuaBasicConversions.h"
-#include "scripting/lua-bindings/manual/cocos2d/LuaScriptHandlerMgr.h"
-
 #include "scripting/lua-bindings/manual/CCLuaEngine.h"
-
-//using namespace fairygui;
 
 static int handleFairyguiEvent(int handler, fairygui::EventContext *sender)
 {
@@ -906,8 +902,6 @@ static int lua_cocos2dx_fairygui_GList_setItemRenderer(lua_State *L)
             stack->clean();
         };
 
-        ScriptHandlerMgr::getInstance()->addCustomHandler((void *)self, handler);
-
         return 0;
     }
 
@@ -977,8 +971,6 @@ static int lua_cocos2dx_fairygui_GList_setItemProvider(lua_State *L)
 
             return url;
         };
-
-        ScriptHandlerMgr::getInstance()->addCustomHandler((void *)self, handler);
 
         return 0;
     }
@@ -1410,7 +1402,6 @@ int lua_cocos2dx_fairygui_GTweener_onComplete(lua_State* L)
             stack->clean();
         });
         object_to_luaval<fairygui::GTweener>(L, "fgui.GTweener",(fairygui::GTweener*)ret);
-        ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
         return 1;
     }
     luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTweener:onComplete",argc, 1);
@@ -1465,7 +1456,6 @@ int lua_cocos2dx_fairygui_GTweener_onComplete1(lua_State* L)
             stack->clean();
         });
         object_to_luaval<fairygui::GTweener>(L, "fgui.GTweener",(fairygui::GTweener*)ret);
-        ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
         return 1;
     }
     luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTweener:onComplete1",argc, 1);
@@ -1520,7 +1510,6 @@ int lua_cocos2dx_fairygui_GTweener_onUpdate(lua_State* L)
         });
 
         object_to_luaval<fairygui::GTweener>(L, "fgui.GTweener",(fairygui::GTweener*)ret);
-        ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
         return 1;
     }
     luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d \n", "fgui.GTweener:onUpdate",argc, 1);
@@ -1623,7 +1612,6 @@ int lua_cocos2dx_fairygui_Transition_play(lua_State* L)
               stack->executeFunctionByHandler(handler, 0);
               stack->clean();
             });
-            ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
             lua_settop(L, 1);
             return 1;
         }
@@ -1648,7 +1636,6 @@ int lua_cocos2dx_fairygui_Transition_play(lua_State* L)
               stack->executeFunctionByHandler(handler, 0);
               stack->clean();
             });
-            ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
 
             lua_settop(L, 1);
             return 1;
@@ -1707,7 +1694,6 @@ int lua_cocos2dx_fairygui_Transition_play(lua_State* L)
               stack->executeFunctionByHandler(handler, 0);
               stack->clean();
             });
-            ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
 
             lua_settop(L, 1);
             return 1;
@@ -1780,7 +1766,6 @@ int lua_cocos2dx_fairygui_Transition_playReverse(lua_State* L)
 				stack->executeFunctionByHandler(handler, 0);
 				stack->clean();
 			});
-			ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
 			lua_settop(L, 1);
 			return 1;
 		}
@@ -1805,7 +1790,6 @@ int lua_cocos2dx_fairygui_Transition_playReverse(lua_State* L)
 				stack->executeFunctionByHandler(handler, 0);
 				stack->clean();
 			});
-			ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
 
 			lua_settop(L, 1);
 			return 1;
@@ -1872,7 +1856,6 @@ int lua_cocos2dx_fairygui_Transition_setHook(lua_State* L)
           stack->executeFunctionByHandler(handler, 0);
           stack->clean();
         });
-        ScriptHandlerMgr::getInstance()->addCustomHandler(cobj, handler);
         lua_settop(L, 1);
         return 1;
     }
@@ -1985,8 +1968,6 @@ static int lua_cocos2dx_fairygui_GProgressBar_setValueFormatter(lua_State *L)
 
             return result;
         };
-
-        ScriptHandlerMgr::getInstance()->addCustomHandler((void *)self, handler);
 
         return 0;
     }

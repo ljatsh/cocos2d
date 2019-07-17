@@ -71,12 +71,12 @@ void GRoot::hideWindowImmediately(Window * win)
 void GRoot::bringToFront(Window * win)
 {
     int cnt = numChildren();
-    int i;
-    if (_modalLayer->getParent() != nullptr && !win->isModal())
+    int i = cnt - 1;
+    /*if (_modalLayer->getParent() != nullptr && !win->isModal())
         i = getChildIndex(_modalLayer) - 1;
     else
         i = cnt - 1;
-
+    */
     for (; i >= 0; i--)
     {
         GObject* g = getChildAt(i);
@@ -88,6 +88,8 @@ void GRoot::bringToFront(Window * win)
 
     if (i >= 0)
         setChildIndex(win, i);
+
+    adjustModalLayer();
 }
 
 void GRoot::closeAllExceptModals()

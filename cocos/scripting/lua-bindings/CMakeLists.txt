@@ -165,6 +165,30 @@ set(lua_bindings_headers
     ${lua_bindings_manual_headers}
     ${lua_bindings_auto_headers}
     )
+	
+if(IOS OR ANDROID)
+	set(plugin_protocol_luabindings_headers
+		${cocos_root}/plugin/luabindings/manual/lua_pluginx_basic_conversions.h
+		${cocos_root}/plugin/luabindings/manual/lua_pluginx_manual_callback.h
+		${cocos_root}/plugin/luabindings/manual/lua_pluginx_manual_protocols.h
+		${cocos_root}/plugin/luabindings/auto/lua_cocos2dx_pluginx_auto.hpp
+	)
+	set(plugin_protocol_luabindings_files
+		${cocos_root}/plugin/luabindings/manual/lua_pluginx_basic_conversions.cpp
+		${cocos_root}/plugin/luabindings/manual/lua_pluginx_manual_callback.cpp
+		${cocos_root}/plugin/luabindings/manual/lua_pluginx_manual_protocols.cpp
+		${cocos_root}/plugin/luabindings/auto/lua_cocos2dx_pluginx_auto.cpp
+	)
+	
+	set(lua_bindings_files
+		${lua_bindings_files}
+		${plugin_protocol_luabindings_files}
+    )
+	set(lua_bindings_headers
+		${lua_bindings_headers}
+		${plugin_protocol_luabindings_headers}
+    )
+endif()
 
 list(APPEND lua_bindings_files ${lua_bindings_headers})
 
@@ -178,8 +202,11 @@ target_link_libraries(luacocos2d ${lua_ext_depend})
 target_include_directories(luacocos2d
     PRIVATE manual/platform/android
     PRIVATE manual/platform/android/jni
-    INTERFACE ${cocos_root}/cocos/scripting/lua-bindings/auto
-    INTERFACE ${cocos_root}/cocos/scripting/lua-bindings/manual
+    PUBLIC ${cocos_root}/cocos/scripting/lua-bindings/auto
+    PUBLIC ${cocos_root}/cocos/scripting/lua-bindings/manual
+    PRIVATE ${cocos_root}/plugin/protocols/include
+    PRIVATE ${cocos_root}/plugin/luabindings/auto
+    PRIVATE ${cocos_root}/plugin/luabindings/manual
 )
 
 if(WINDOWS)

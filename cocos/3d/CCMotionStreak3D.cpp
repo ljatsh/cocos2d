@@ -409,7 +409,6 @@ void MotionStreak3D::draw(Renderer *renderer, const Mat4 &transform, uint32_t fl
 {
     if(_nuPoints <= 1)
         return;
-    _texture->prepareDraw();
     _customCommand.init(_globalZOrder, transform, flags);
     _customCommand.func = CC_CALLBACK_0(MotionStreak3D::onDraw, this, transform, flags);
     renderer->addCommand(&_customCommand);

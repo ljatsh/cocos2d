@@ -738,8 +738,8 @@ void GObject::handlePositionChanged()
         {
             if (_displayObject->getParent())
                 pt.y += _displayObject->getParent()->getContentSize().height;
-            else if (_parent)
-                pt.y += _parent->_size.height;
+            else if (_parent != nullptr)
+                pt.y += _parent->_displayObject->getContentSize().height;
         }
         if (_pixelSnapping)
         {

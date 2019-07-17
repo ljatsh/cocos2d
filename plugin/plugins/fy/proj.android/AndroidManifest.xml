@@ -1,0 +1,39 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.plugin.fy">
+    <application>
+        <meta-data android:name="FY_PLATFORM_ACTIVITY" android:value="org.cocos2dx.lua.AppActivity"/>
+        <meta-data android:name="FY_PLATFORM_NAME" android:value="oversea"/>
+        <meta-data android:name="FY_PLATFORM_PUBLISH_COMPANY" android:value="feiyu"/>
+        <meta-data android:name="FY_PLATFORM_SERVER_VERSION" android:value=""/>
+        <meta-data android:name="FY_PLATFORM_APPID" android:value="20036"/>
+        <meta-data android:name="FY_PLATFORM_APPKEY" android:value="glkdTgiHI4myGMFCBoa5FNb8GtcikAvlaoVnawf45CBdjoQ/5TD5gkZWdUorOCjx"/>
+        <meta-data android:name="FY_PLATFORM_PAYID" android:value=""/>
+        <meta-data android:name="FY_PLATFORM_PAYKEY" android:value=""/>
+        <meta-data android:name="FY_PLATFORM_HAS_SPLASH" android:value="1"/>
+        <meta-data android:name="FY_PLATFORM_EXTRA_JSON" android:value="{'google_appid':'367341601923-vt0l0jf6hs35mnqe4u8h2l69spgc3rda.apps.googleusercontent.com','server_client_id':'367341601923-vt0l0jf6hs35mnqe4u8h2l69spgc3rda.apps.googleusercontent.com'}"/>
+        <meta-data android:name="FY_PLATFORM_TYPE" android:value=""/>
+
+        <meta-data android:name="FY_GAME_COMPANYID" android:value="1"/>
+        <meta-data android:name="FY_GAME_APPID" android:value="20036"/>
+        <meta-data android:name="FY_GAME_APPKEY" android:value="cTF/hYsXWqWofzqaRhKiBGTVHPY91QRVgM/+W22HjRMmTkBjkhZ1chgc9CRJA4At"/>
+        <meta-data android:name="FY_GAME_ORIENTATION" android:value="1"/>
+        <meta-data android:name="FY_GAME_DEBUG" android:value="0"/>
+        <meta-data android:name="FY_GAME_CHANNELID" android:value="1000"/>
+        <meta-data android:name="FY_GAME_EXTRA_JSON" android:value=""/>
+
+        <receiver
+            android:name="com.adjust.sdk.AdjustReferrerReceiver"
+            android:permission="android.permission.INSTALL_PACKAGES"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+</manifest>

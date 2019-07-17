@@ -292,6 +292,60 @@
     <Filter Include="external\md5">
       <UniqueIdentifier>{d3d38486-e13f-47b4-96b0-51a7c78e6d69}</UniqueIdentifier>
     </Filter>
+    <Filter Include="fairygui">
+      <UniqueIdentifier>{7242fd86-aa9c-4f6f-9b43-33566e899722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fairygui\controller_action">
+      <UniqueIdentifier>{7f50822a-8df8-473e-bea6-7fe9c5736207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fairygui\display">
+      <UniqueIdentifier>{1df2b790-fac2-4409-96be-6d4bd77dcf54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fairygui\event">
+      <UniqueIdentifier>{391ae94a-28b5-4019-ad8b-6cb4bf005f35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fairygui\gears">
+      <UniqueIdentifier>{8134e742-f0cc-4d96-bad2-f86dd443ae17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fairygui\treeview">
+      <UniqueIdentifier>{e9552e0b-d116-46d8-a04d-c03a3d1ca1f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fairygui\tween">
+      <UniqueIdentifier>{a539e96f-5fde-463b-8675-a7e226b359f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fairygui\utils">
+      <UniqueIdentifier>{582c3bb1-0fb5-4845-b048-b17721ddd4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones">
+      <UniqueIdentifier>{18834259-c3b4-4996-8bd5-34933ec0d4a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones">
+      <UniqueIdentifier>{ec0d2214-0cb0-4172-80a5-7f0f5cbc9668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\animation">
+      <UniqueIdentifier>{729124ee-4495-4340-ad89-a5bbe6417f21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\armature">
+      <UniqueIdentifier>{c2f44b2d-b41a-4c7b-8f04-9527ac0bea28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\core">
+      <UniqueIdentifier>{f4083ba6-08fa-4bab-95e3-f580803f9684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\event">
+      <UniqueIdentifier>{1141e8df-e104-45ba-9189-cc7578faad47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\factory">
+      <UniqueIdentifier>{516583e6-0717-4b96-a8e4-ad4bebbc5463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\geom">
+      <UniqueIdentifier>{fe73331d-7776-4cdb-9f28-33b074d7d1fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\model">
+      <UniqueIdentifier>{7774b5ab-1d7a-484a-b245-12c5afc5fd80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dragonbones\dragonBones\parser">
+      <UniqueIdentifier>{9779111c-ed72-4c73-bd78-05e096f8da8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\physics\CCPhysicsBody.cpp">
@@ -2001,6 +2055,318 @@
     <ClCompile Include="..\base\CCEventController.cpp" />
     <ClCompile Include="..\base\CCEventListenerController.cpp" />
     <ClCompile Include="..\precheader.cpp" />
+    <ClCompile Include="..\editor-support\fairygui\Controller.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\DragDropManager.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GButton.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GComboBox.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GComponent.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GGraph.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GGroup.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GImage.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GLabel.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GList.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GLoader.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GMovieClip.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GObject.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GObjectPool.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GProgressBar.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GRichTextField.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GRoot.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GScrollBar.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GSlider.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GTextField.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\GTextInput.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\Margin.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\PackageItem.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\PopupMenu.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\RelationItem.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\Relations.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\ScrollPane.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\Transition.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\TranslationHelper.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\UIConfig.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\UIObjectFactory.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\UIPackage.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\Window.cpp">
+      <Filter>fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\controller_action\ChangePageAction.cpp">
+      <Filter>fairygui\controller_action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\controller_action\ControllerAction.cpp">
+      <Filter>fairygui\controller_action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\controller_action\PlayTransitionAction.cpp">
+      <Filter>fairygui\controller_action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\display\BitmapFont.cpp">
+      <Filter>fairygui\display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\display\FUIContainer.cpp">
+      <Filter>fairygui\display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\display\FUIInput.cpp">
+      <Filter>fairygui\display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\display\FUILabel.cpp">
+      <Filter>fairygui\display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\display\FUIRichText.cpp">
+      <Filter>fairygui\display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\display\FUISprite.cpp">
+      <Filter>fairygui\display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\display\TextFormat.cpp">
+      <Filter>fairygui\display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\event\EventContext.cpp">
+      <Filter>fairygui\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\event\HitTest.cpp">
+      <Filter>fairygui\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\event\InputEvent.cpp">
+      <Filter>fairygui\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\event\InputProcessor.cpp">
+      <Filter>fairygui\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\event\UIEventDispatcher.cpp">
+      <Filter>fairygui\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearAnimation.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearBase.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearColor.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearDisplay.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearIcon.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearLook.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearSize.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearText.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\gears\GearXY.cpp">
+      <Filter>fairygui\gears</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\utils\ByteBuffer.cpp">
+      <Filter>fairygui\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\utils\ToolSet.cpp">
+      <Filter>fairygui\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\utils\UBBParser.cpp">
+      <Filter>fairygui\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\utils\WeakPtr.cpp">
+      <Filter>fairygui\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\tween\EaseManager.cpp">
+      <Filter>fairygui\tween</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\tween\GTween.cpp">
+      <Filter>fairygui\tween</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\tween\GTweener.cpp">
+      <Filter>fairygui\tween</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\tween\TweenManager.cpp">
+      <Filter>fairygui\tween</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\tween\TweenPropType.cpp">
+      <Filter>fairygui\tween</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\tween\TweenValue.cpp">
+      <Filter>fairygui\tween</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\treeview\TreeNode.cpp">
+      <Filter>fairygui\treeview</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\fairygui\treeview\TreeView.cpp">
+      <Filter>fairygui\treeview</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\CCArmatureDisplay.cpp">
+      <Filter>dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\CCFactory.cpp">
+      <Filter>dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\CCSlot.cpp">
+      <Filter>dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\CCTextureAtlasData.cpp">
+      <Filter>dragonbones</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\Animation.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\AnimationState.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\BaseTimelineState.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\TimelineState.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\animation\WorldClock.cpp">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Armature.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Bone.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Constraint.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\DeformVertices.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\Slot.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\armature\TransformObject.cpp">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\core\BaseObject.cpp">
+      <Filter>dragonbones\dragonBones\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\core\DragonBones.cpp">
+      <Filter>dragonbones\dragonBones\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\event\EventObject.cpp">
+      <Filter>dragonbones\dragonBones\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\factory\BaseFactory.cpp">
+      <Filter>dragonbones\dragonBones\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\geom\Point.cpp">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\geom\Transform.cpp">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\AnimationConfig.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\AnimationData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\ArmatureData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\BoundingBoxData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\CanvasData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\ConstraintData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\DisplayData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\DragonBonesData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\SkinData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\TextureAtlasData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\model\UserData.cpp">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\BinaryDataParser.cpp">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\DataParser.cpp">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\editor-support\dragonbones\dragonBones\parser\JSONDataParser.cpp">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\physics\CCPhysicsBody.h">
@@ -3913,6 +4279,357 @@
     <ClInclude Include="..\base\CCEventController.h" />
     <ClInclude Include="..\base\CCEventListenerController.h" />
     <ClInclude Include="..\precheader.h" />
+    <ClInclude Include="..\editor-support\fairygui\Controller.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\DragDropManager.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\FairyGUI.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\FairyGUIMacros.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\FieldTypes.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GButton.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GComboBox.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GComponent.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GGraph.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GGroup.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GImage.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GLabel.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GList.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GLoader.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GMovieClip.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GObject.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GObjectPool.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GProgressBar.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GRichTextField.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GRoot.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GScrollBar.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GSlider.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GTextField.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\GTextInput.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\Margin.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\PackageItem.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\PopupMenu.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\RelationItem.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\Relations.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\ScrollPane.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\Transition.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\TranslationHelper.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\UIConfig.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\UIObjectFactory.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\UIPackage.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\Window.h">
+      <Filter>fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\controller_action\ChangePageAction.h">
+      <Filter>fairygui\controller_action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\controller_action\ControllerAction.h">
+      <Filter>fairygui\controller_action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\controller_action\PlayTransitionAction.h">
+      <Filter>fairygui\controller_action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\display\BitmapFont.h">
+      <Filter>fairygui\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\display\FUIContainer.h">
+      <Filter>fairygui\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\display\FUIInput.h">
+      <Filter>fairygui\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\display\FUILabel.h">
+      <Filter>fairygui\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\display\FUIRichText.h">
+      <Filter>fairygui\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\display\FUISprite.h">
+      <Filter>fairygui\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\display\TextFormat.h">
+      <Filter>fairygui\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\event\EventContext.h">
+      <Filter>fairygui\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\event\HitTest.h">
+      <Filter>fairygui\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\event\InputEvent.h">
+      <Filter>fairygui\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\event\InputProcessor.h">
+      <Filter>fairygui\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\event\UIEventDispatcher.h">
+      <Filter>fairygui\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\event\UIEventType.h">
+      <Filter>fairygui\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearAnimation.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearBase.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearColor.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearDisplay.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearIcon.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearLook.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearSize.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearText.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\gears\GearXY.h">
+      <Filter>fairygui\gears</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\utils\ByteBuffer.h">
+      <Filter>fairygui\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\utils\ToolSet.h">
+      <Filter>fairygui\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\utils\UBBParser.h">
+      <Filter>fairygui\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\utils\WeakPtr.h">
+      <Filter>fairygui\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\tween\EaseManager.h">
+      <Filter>fairygui\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\tween\EaseType.h">
+      <Filter>fairygui\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\tween\GTween.h">
+      <Filter>fairygui\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\tween\GTweener.h">
+      <Filter>fairygui\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\tween\TweenManager.h">
+      <Filter>fairygui\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\tween\TweenPropType.h">
+      <Filter>fairygui\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\tween\TweenValue.h">
+      <Filter>fairygui\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\treeview\TreeNode.h">
+      <Filter>fairygui\treeview</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\fairygui\treeview\TreeView.h">
+      <Filter>fairygui\treeview</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCArmatureDisplay.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCDragonBonesHeaders.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCFactory.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCSlot.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\CCTextureAtlasData.h">
+      <Filter>dragonbones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\DragonBonesHeaders.h">
+      <Filter>dragonbones\dragonBones</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\Animation.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\AnimationState.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\BaseTimelineState.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\IAnimatable.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\TimelineState.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\animation\WorldClock.h">
+      <Filter>dragonbones\dragonBones\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Armature.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Bone.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Constraint.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\DeformVertices.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\IArmatureProxy.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\Slot.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\armature\TransformObject.h">
+      <Filter>dragonbones\dragonBones\armature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\core\BaseObject.h">
+      <Filter>dragonbones\dragonBones\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\core\DragonBones.h">
+      <Filter>dragonbones\dragonBones\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\event\EventObject.h">
+      <Filter>dragonbones\dragonBones\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\event\IEventDispatcher.h">
+      <Filter>dragonbones\dragonBones\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\factory\BaseFactory.h">
+      <Filter>dragonbones\dragonBones\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\ColorTransform.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Matrix.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Point.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Rectangle.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\geom\Transform.h">
+      <Filter>dragonbones\dragonBones\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\AnimationConfig.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\AnimationData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\ArmatureData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\BoundingBoxData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\CanvasData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\ConstraintData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\DisplayData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\DragonBonesData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\SkinData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\TextureAtlasData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\model\UserData.h">
+      <Filter>dragonbones\dragonBones\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\BinaryDataParser.h">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\DataParser.h">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\editor-support\dragonbones\dragonBones\parser\JSONDataParser.h">
+      <Filter>dragonbones\dragonBones\parser</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\math\Mat4.inl">
@@ -3939,6 +4656,12 @@
     <None Include="cocos2d.def" />
     <None Include="..\3d\CCAnimationCurve.inl">
       <Filter>3d</Filter>
+    </None>
+    <None Include="..\editor-support\fairygui\LICENSE">
+      <Filter>fairygui</Filter>
+    </None>
+    <None Include="..\editor-support\fairygui\README.md">
+      <Filter>fairygui</Filter>
     </None>
   </ItemGroup>
 </Project>

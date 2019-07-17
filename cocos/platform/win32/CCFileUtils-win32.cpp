@@ -364,7 +364,7 @@ string FileUtilsWin32::getWritablePath() const
             }
         }
     }
-    if (retPath.empty())
+    if (true)//retPath.empty()
 //#endif // not defined _DEBUG
     {
         // If fetching of local app data directory fails, use the executable one

@@ -1064,7 +1064,6 @@ void Transition::onTweenUpdate(GTweener* tweener)
     case TransitionActionType::Shake:
         ((TValue_Shake*)item->value)->offset = tweener->deltaValue.getVec2();
         break;
-
     default:
         break;
     }
@@ -1270,7 +1269,6 @@ void Transition::applyValue(TransitionItem* item)
     case TransitionActionType::Icon:
         item->target->setIcon(((TValue_Text*)item->value)->text);
         break;
-
     default:
         break;
     }
