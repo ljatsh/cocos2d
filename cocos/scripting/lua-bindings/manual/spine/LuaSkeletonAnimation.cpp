@@ -30,6 +30,8 @@
 #include "scripting/lua-bindings/manual/CCLuaStack.h"
 #include "scripting/lua-bindings/manual/CCLuaEngine.h"
 
+#include <spine/spine-cocos2dx.h>
+
 using namespace spine;
 USING_NS_CC;
 
@@ -48,8 +50,9 @@ LuaSkeletonAnimation::~LuaSkeletonAnimation()
 LuaSkeletonAnimation* LuaSkeletonAnimation::createWithFile (const char* skeletonDataFile, const char* atlasFile, float scale)
 {
 	LuaSkeletonAnimation* node = new (std::nothrow) LuaSkeletonAnimation();
-    spAtlas* atlas = spAtlas_createFromFile(atlasFile, nullptr);
-    node->initWithJsonFile(skeletonDataFile, atlas, scale);
+  static Cocos2dTextureLoader textureLoader;
+  spine::Atlas* atlas = new spine::Atlas(atlasFile, &textureLoader);
+  node->initWithJsonFile(skeletonDataFile, atlas, scale);
 	node->autorelease();
 	return node;
 }

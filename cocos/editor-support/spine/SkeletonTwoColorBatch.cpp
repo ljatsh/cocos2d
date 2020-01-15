@@ -1,34 +1,36 @@
 /******************************************************************************
- * Spine Runtimes Software License v2.5
+ * Spine Runtimes License Agreement
+ * Last updated May 1, 2019. Replaces all prior versions.
  *
- * Copyright (c) 2013-2016, Esoteric Software
- * All rights reserved.
+ * Copyright (c) 2013-2019, Esoteric Software LLC
  *
- * You are granted a perpetual, non-exclusive, non-sublicensable, and
- * non-transferable license to use, install, execute, and perform the Spine
- * Runtimes software and derivative works solely for personal or internal
- * use. Without the written permission of Esoteric Software (see Section 2 of
- * the Spine Software License Agreement), you may not (a) modify, translate,
- * adapt, or develop new applications using the Spine Runtimes or otherwise
- * create derivative works or improvements of the Spine Runtimes or (b) remove,
- * delete, alter, or obscure any trademarks or any copyright, trademark, patent,
- * or other intellectual property or proprietary rights notices on or in the
- * Software, including any copy thereof. Redistributions in binary or source
- * form must include this license and terms.
+ * Integration of the Spine Runtimes into software or otherwise creating
+ * derivative works of the Spine Runtimes is permitted under the terms and
+ * conditions of Section 2 of the Spine Editor License Agreement:
+ * http://esotericsoftware.com/spine-editor-license
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
- * EVENT SHALL ESOTERIC SOFTWARE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS INTERRUPTION, OR LOSS OF
- * USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
- * IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- * POSSIBILITY OF SUCH DAMAGE.
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software
+ * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * "Products"), provided that each user of the Products must obtain their own
+ * Spine Editor license and redistribution of the Products in any form must
+ * include this license and copyright notice.
+ *
+ * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
+ * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
+ * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
+ * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
-#include "spine/SkeletonTwoColorBatch.h"
-#include "spine/extension.h"
+
+#include <spine/spine-cocos2dx.h>
+#if COCOS2D_VERSION < 0x00040000
+
+#include <spine/Extension.h>
 #include <algorithm>
 
 USING_NS_CC;
@@ -83,7 +85,7 @@ void TwoColorTrianglesCommand::generateMaterialID() {
 		setSkipBatching(true);
 	}
 	else {
-		int glProgram = (int)_glProgram->getProgram();		
+		int glProgram = (int)_glProgram->getProgram();
 		_materialID = glProgram + (int)_textureID + (int)_blendType.src + (int)_blendType.dst;
 	}
 }
@@ -91,17 +93,17 @@ void TwoColorTrianglesCommand::generateMaterialID() {
 void TwoColorTrianglesCommand::useMaterial() const {
 	//Set texture
 	GL::bindTexture2D(_textureID);
-	
+
 	if (_alphaTextureID > 0) {
 		// ANDROID ETC1 ALPHA supports.
 		GL::bindTexture2DN(1, _alphaTextureID);
 	}
 	//set blend mode
 	GL::blendFunc(_blendType.src, _blendType.dst);
-	
+
 	_glProgramState->apply(_mv);
 }
-	
+
 void TwoColorTrianglesCommand::draw() {
 	SkeletonTwoColorBatch::getInstance()->batch(this);
 }
@@ -144,7 +146,7 @@ void main() {
 	vec4 texColor = texture2D(CC_Texture0, v_texCoord);
 	float alpha = texColor.a * v_light.a;
 	gl_FragColor.a = alpha;
-	gl_FragColor.rgb = (1.0 - texColor.rgb) * v_dark.rgb * alpha + texColor.rgb * v_light.rgb;	
+	gl_FragColor.rgb = ((texColor.a - 1.0) * v_dark.a + 1.0 - texColor.rgb) * v_dark.rgb + texColor.rgb * v_light.rgb;
 }
 );
 
@@ -163,25 +165,23 @@ void SkeletonTwoColorBatch::destroyInstance () {
 	}
 }
 
-SkeletonTwoColorBatch::SkeletonTwoColorBatch () {
+SkeletonTwoColorBatch::SkeletonTwoColorBatch () : _vertexBuffer(0), _indexBuffer(0) {
 	for (unsigned int i = 0; i < INITIAL_SIZE; i++) {
 		_commandsPool.push_back(new TwoColorTrianglesCommand());
 	}
-	
-	_indices = spUnsignedShortArray_create(8);
-	
+
 	reset ();
-	
+
 	// callback after drawing is finished so we can clear out the batch state
 	// for the next frame
 	Director::getInstance()->getEventDispatcher()->addCustomEventListener(EVENT_AFTER_DRAW_RESET_POSITION, [this](EventCustom* eventCustom){
 		this->update(0);
-	});;
-	
+	});
+
 	_twoColorTintShader = cocos2d::GLProgram::createWithByteArrays(TWO_COLOR_TINT_VERTEX_SHADER, TWO_COLOR_TINT_FRAGMENT_SHADER);
 	_twoColorTintShaderState = GLProgramState::getOrCreateWithGLProgram(_twoColorTintShader);
 	_twoColorTintShaderState->retain();
-	
+
 	glGenBuffers(1, &_vertexBufferHandle);
 	_vertexBuffer = new V3F_C4B_C4B_T2F[MAX_VERTICES];
 	glGenBuffers(1, &_indexBufferHandle);
@@ -194,19 +194,17 @@ SkeletonTwoColorBatch::SkeletonTwoColorBatch () {
 
 SkeletonTwoColorBatch::~SkeletonTwoColorBatch () {
 	Director::getInstance()->getEventDispatcher()->removeCustomEventListeners(EVENT_AFTER_DRAW_RESET_POSITION);
-	
-	spUnsignedShortArray_dispose(_indices);
-	
+
 	for (unsigned int i = 0; i < _commandsPool.size(); i++) {
 		delete _commandsPool[i];
 		_commandsPool[i] = nullptr;
 	}
 	_twoColorTintShader->release();
-	delete _vertexBuffer;
-	delete _indexBuffer;
+	delete[] _vertexBuffer;
+	delete[] _indexBuffer;
 }
 
-void SkeletonTwoColorBatch::update (float delta) {	
+void SkeletonTwoColorBatch::update (float delta) {
 	reset();
 }
 
@@ -221,24 +219,24 @@ V3F_C4B_C4B_T2F* SkeletonTwoColorBatch::allocateVertices(uint32_t numVertices) {
 			triangles.verts = newData + (triangles.verts - oldData);
 		}
 	}
-	
+
 	V3F_C4B_C4B_T2F* vertices = _vertices.data() + _numVertices;
 	_numVertices += numVertices;
 	return vertices;
 }
-	
-	
+
+
 void SkeletonTwoColorBatch::deallocateVertices(uint32_t numVertices) {
 	_numVertices -= numVertices;
 }
 
 
 unsigned short* SkeletonTwoColorBatch::allocateIndices(uint32_t numIndices) {
-	if (_indices->capacity - _indices->size < numIndices) {
-		unsigned short* oldData = _indices->items;
-		int oldSize =_indices->size;
-		spUnsignedShortArray_ensureCapacity(_indices, _indices->size + numIndices);
-		unsigned short* newData = _indices->items;
+	if (_indices.getCapacity() - _indices.size() < numIndices) {
+		unsigned short* oldData = _indices.buffer();
+		int oldSize =_indices.size();
+		_indices.ensureCapacity(_indices.size() + numIndices);
+		unsigned short* newData = _indices.buffer();
 		for (uint32_t i = 0; i < this->_nextFreeCommand; i++) {
 			TwoColorTrianglesCommand* command = _commandsPool[i];
 			TwoColorTriangles& triangles = (TwoColorTriangles&)command->getTriangles();
@@ -247,78 +245,81 @@ unsigned short* SkeletonTwoColorBatch::allocateIndices(uint32_t numIndices) {
 			}
 		}
 	}
-	
-	unsigned short* indices = _indices->items + _indices->size;
-	_indices->size += numIndices;
+
+	unsigned short* indices = _indices.buffer() + _indices.size();
+	_indices.setSize(_indices.size() + numIndices, 0);
 	return indices;
 }
 
 void SkeletonTwoColorBatch::deallocateIndices(uint32_t numIndices) {
-	_indices->size -= numIndices;
+	_indices.setSize(_indices.size() - numIndices, 0);
 }
 
 TwoColorTrianglesCommand* SkeletonTwoColorBatch::addCommand(cocos2d::Renderer* renderer, float globalOrder, GLuint textureID, cocos2d::GLProgramState* glProgramState, cocos2d::BlendFunc blendType, const TwoColorTriangles& triangles, const cocos2d::Mat4& mv, uint32_t flags) {
 	TwoColorTrianglesCommand* command = nextFreeCommand();
 	command->init(globalOrder, textureID, glProgramState, blendType, triangles, mv, flags);
-	renderer->addCommand(command);	
+	renderer->addCommand(command);
 	return command;
 }
-	
+
 void SkeletonTwoColorBatch::batch (TwoColorTrianglesCommand* command) {
 	if (_numVerticesBuffer + command->getTriangles().vertCount >= MAX_VERTICES || _numIndicesBuffer + command->getTriangles().indexCount >= MAX_INDICES) {
 		flush(_lastCommand);
 	}
-	
+
+	uint32_t materialID = command->getMaterialID();
+	if (_lastCommand && _lastCommand->getMaterialID() != materialID) {
+		flush(_lastCommand);
+	}
+
 	memcpy(_vertexBuffer + _numVerticesBuffer, command->getTriangles().verts, sizeof(V3F_C4B_C4B_T2F) * command->getTriangles().vertCount);
 	const Mat4& modelView = command->getModelView();
 	for (int i = _numVerticesBuffer; i < _numVerticesBuffer + command->getTriangles().vertCount; i++) {
 		modelView.transformPoint(&_vertexBuffer[i].position);
 	}
-	
+
 	unsigned short vertexOffset = (unsigned short)_numVerticesBuffer;
 	unsigned short* indices = command->getTriangles().indices;
 	for (int i = 0, j = _numIndicesBuffer; i < command->getTriangles().indexCount; i++, j++) {
 		_indexBuffer[j] = indices[i] + vertexOffset;
 	}
-	
+
 	_numVerticesBuffer += command->getTriangles().vertCount;
 	_numIndicesBuffer += command->getTriangles().indexCount;
-	
-	uint32_t materialID = command->getMaterialID();
-	
-	if ((_lastCommand && _lastCommand->getMaterialID() != materialID) || command->isForceFlush()) {
-		flush(_lastCommand);
+
+	if (command->isForceFlush()) {
+		flush(command);
 	}
 	_lastCommand = command;
 }
-	
+
 void SkeletonTwoColorBatch::flush (TwoColorTrianglesCommand* materialCommand) {
 	if (!materialCommand)
 		return;
-	
+
 	materialCommand->useMaterial();
-	
+
 	glBindBuffer(GL_ARRAY_BUFFER, _vertexBufferHandle);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(V3F_C4B_C4B_T2F) * _numVerticesBuffer , _vertexBuffer, GL_DYNAMIC_DRAW);
-	
+
 	glEnableVertexAttribArray(_positionAttributeLocation);
 	glEnableVertexAttribArray(_colorAttributeLocation);
 	glEnableVertexAttribArray(_color2AttributeLocation);
 	glEnableVertexAttribArray(_texCoordsAttributeLocation);
-	
+
 	glVertexAttribPointer(_positionAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(V3F_C4B_C4B_T2F), (GLvoid*)offsetof(V3F_C4B_C4B_T2F, position));
 	glVertexAttribPointer(_colorAttributeLocation, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(V3F_C4B_C4B_T2F), (GLvoid*)offsetof(V3F_C4B_C4B_T2F, color));
 	glVertexAttribPointer(_color2AttributeLocation, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(V3F_C4B_C4B_T2F), (GLvoid*)offsetof(V3F_C4B_C4B_T2F, color2));
 	glVertexAttribPointer(_texCoordsAttributeLocation, 2, GL_FLOAT, GL_FALSE, sizeof(V3F_C4B_C4B_T2F), (GLvoid*)offsetof(V3F_C4B_C4B_T2F, texCoords));
-	
+
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBufferHandle);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned short) * _numIndicesBuffer, _indexBuffer, GL_STATIC_DRAW);
-	
+
 	glDrawElements(GL_TRIANGLES, (GLsizei)_numIndicesBuffer, GL_UNSIGNED_SHORT, 0);
-	
+
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-	
+
 	_numVerticesBuffer = 0;
 	_numIndicesBuffer = 0;
 	_numBatches++;
@@ -327,7 +328,7 @@ void SkeletonTwoColorBatch::flush (TwoColorTrianglesCommand* materialCommand) {
 void SkeletonTwoColorBatch::reset() {
 	_nextFreeCommand = 0;
 	_numVertices = 0;
-	_indices->size = 0;
+	_indices.setSize(0, 0);
 	_numVerticesBuffer = 0;
 	_numIndicesBuffer = 0;
 	_lastCommand = nullptr;
@@ -336,8 +337,8 @@ void SkeletonTwoColorBatch::reset() {
 
 TwoColorTrianglesCommand* SkeletonTwoColorBatch::nextFreeCommand() {
 	if (_commandsPool.size() <= _nextFreeCommand) {
-		size_t newSize = _commandsPool.size() * 2 + 1;
-		for (size_t i = _commandsPool.size();  i < newSize; i++) {
+		unsigned int newSize = _commandsPool.size() * 2 + 1;
+		for (int i = _commandsPool.size();  i < newSize; i++) {
 			_commandsPool.push_back(new TwoColorTrianglesCommand());
 		}
 	}
@@ -346,3 +347,5 @@ TwoColorTrianglesCommand* SkeletonTwoColorBatch::nextFreeCommand() {
 	return command;
 }
 }
+
+#endif
