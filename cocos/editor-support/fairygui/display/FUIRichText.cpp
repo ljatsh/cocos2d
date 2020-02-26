@@ -437,9 +437,12 @@ void FUIRichText::setDimensions(float width, float height)
 
 void FUIRichText::setText(const std::string & value)
 {
-    _formatTextDirty = true;
-    _textChanged = true;
-    _text = value;
+    if (_text != value)
+    {
+      _formatTextDirty = true;
+      _textChanged = true;
+      _text = value;
+    }
 }
 
 void FUIRichText::applyTextFormat()
@@ -512,6 +515,8 @@ void FUIRichText::formatText()
     if (_textChanged)
     {
         _textChanged = false;
+        for (auto &it : _richElements)
+          delete it;
         _richElements.clear();
         _numLines = 0;
 
